@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "benchmark-slms-inct"
+version = "0.1.0"
+description = "Protocolo experimental de benchmark de SLMs para MathIA"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "psutil>=5.9",
+    "llama-cpp-python>=0.2.0",
+    "huggingface_hub>=0.23",
+]
+
+[project.optional-dependencies]
+safetensors = ["transformers>=4.40", "torch>=2.0"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+benchmark-slms = "benchmark_slms.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["benchmark_slms*"]
+
+[tool.setuptools.package-data]
+benchmark_slms = ["data/model_catalog.json", "data/datasets/*.jsonl"]
