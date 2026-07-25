@@ -333,7 +333,9 @@ Raiz:
   eliminado, motivo_eliminacao   — espelho do veredito
 
 tasks.<cenario_x>:
-  json_valido, json_erro         — passou no schema Pydantic?
+  json_valido, json_erro         — passou no schema? (validação por questão)
+  agregado.questoes_invalidas    — questões descartadas com motivo
+  agregado.questoes_validas      — quantas passaram no schema
   parsed                         — JSON validado (questões BNCC)
   viabilidade                    — RAM, TPS, tempos, crash
   agregado                       — métricas resumidas do cenário

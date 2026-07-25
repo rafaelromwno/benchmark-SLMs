@@ -11,20 +11,31 @@ def avaliar_predicao(
     pred: Prediction,
     quantidade_esperada: int = 1,
 ) -> EvalResult:
-    valido, parsed, erro = extrair_e_validar(pred.raw_output)
+    extracao = extrair_e_validar(pred.raw_output)
     qtd_ok, qtd_erro = (True, None)
-    if valido and parsed:
-        qtd_ok, qtd_erro = validar_quantidade(parsed, quantidade_esperada)
+    if extracao.ok and extracao.parsed:
+        qtd_ok, qtd_erro = validar_quantidade(extracao.parsed, quantidade_esperada)
+
+    erro = extracao.erro or qtd_erro
+    if extracao.questoes_invalidas and extracao.ok and qtd_ok:
+        # Sucesso parcial: quantidade ok, mas houve descarte — registra aviso
+        n_inv = len(extracao.questoes_invalidas)
+        erro = f"{n_inv} questão(ões) inválida(s) descartada(s)"
 
     return EvalResult(
         task_id=pred.task_id,
         modelo=pred.modelo,
-        json_valido=valido and qtd_ok,
-        json_erro=erro or qtd_erro,
+        json_valido=extracao.ok and qtd_ok,
+        json_erro=erro,
         quantidade_ok=qtd_ok,
         quantidade_erro=qtd_erro,
-        parsed=parsed,
+        parsed=extracao.parsed,
         viabilidade=pred.metrics.model_dump(),
+        agregado={
+            "questoes_validas": extracao.questoes_validas,
+            "questoes_geradas": extracao.questoes_geradas,
+            "questoes_invalidas": extracao.questoes_invalidas,
+        },
         predictions=[pred],
     )
 
