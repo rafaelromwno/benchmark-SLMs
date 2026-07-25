@@ -6,13 +6,11 @@ from typing import Any
 
 
 def fleiss_kappa(matriz: list[list[int]]) -> float:
-    """Stub — Kappa de Fleiss para concordância inter-anotador.
+    """Stub — concordância inter-anotador (Cenário E).
 
-    Args:
-        matriz: matriz N subjects × k categorias com contagens de raters.
-
-    Returns:
-        Coeficiente kappa (implementação real em M8).
+    Nota: prioridade baixa para o 1º artigo. Questões de matemática com gabarito
+    objetivo favorecem Exact Match / Pass@1; Kappa faz sentido para revisão de
+    *conteúdo pedagógico* com 2+ revisores, não para correção de alternativa.
     """
     raise NotImplementedError(
         "Kappa de Fleiss será implementado em M8 com avaliação humana (Cenário E)."

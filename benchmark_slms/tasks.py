@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import random
 
-from benchmark_slms.core.contracts import EvalResult, Prompt
+from benchmark_slms.core.contracts import EvalResult, Prediction
 from benchmark_slms.core.registry import register_task
 from benchmark_slms.data.loader import load_for_cenario
 from benchmark_slms.data.preprocess import (
@@ -23,6 +23,17 @@ def _sample_cenario_b(seed: int) -> list:
     ds = load_for_cenario("B")
     rng = random.Random(seed)
     return [rng.choice(list(ds)) for _ in range(10)]
+
+
+def _viabilidade_de_rodadas(
+    metricas: MetricasInferencia,
+    preds: list[Prediction],
+) -> dict:
+    """Agrega RAM/TPS/tempo de inferência (sem carga do modelo) + crashes."""
+    agg = metricas.media_rodadas
+    agg["tps_por_rodada"] = list(metricas.TPS_por_rodada)
+    agg["crashes_oom"] = sum(1 for p in preds if p.metrics.crash)
+    return agg
 
 
 @register_task("cenario_a")
@@ -100,7 +111,8 @@ def task_cenario_c(backend: ModelBackend, modelo: str, seed: int = 42, **_kwargs
     execucoes = 0
     tentativas = 0
     json_valido = False
-    preds: list = []
+    preds: list[Prediction] = []
+    metricas = MetricasInferencia()
 
     while tentativas < 3 and not json_valido:
         execucoes += 1
@@ -111,8 +123,11 @@ def task_cenario_c(backend: ModelBackend, modelo: str, seed: int = 42, **_kwargs
             sufixo_resolucao=RESOLUCAO_NUMERADA,
             generation={"max_tokens": 1024, "temperature": 0.7, "top_p": 0.9, "repeat_penalty": 1.1},
         )
-        metricas = MetricasInferencia()
-        pred = executar_prompt(backend, prompt, modelo, metricas=metricas)
+        # Modelo já carregado em A — mede só tempo de inferência por tentativa
+        metricas.iniciar_rodada()
+        pred = executar_prompt(
+            backend, prompt, modelo, metricas=metricas, rodada=execucoes - 1
+        )
         preds.append(pred)
         ev = avaliar_predicao(pred, sample.quantity)
 
@@ -121,18 +136,24 @@ def task_cenario_c(backend: ModelBackend, modelo: str, seed: int = 42, **_kwargs
         else:
             tentativas += 1
 
+    viab = _viabilidade_de_rodadas(metricas, preds)
     return EvalResult(
         task_id="cenario_c",
         modelo=modelo,
         json_valido=json_valido,
+        viabilidade=viab,
         agregado={
             "execucoes": execucoes,
             "quantidade_de_questoes": sample.quantity,
-            "tentativas": tentativas if not json_valido else (tentativas),
+            "tentativas": tentativas,
             "valido_primeira_tentativa": json_valido and execucoes == 1,
             "precisou_retry": json_valido and execucoes > 1,
             "falhou_com_3_tentativas": not json_valido,
             "aprovado": json_valido,
+            "ram_pico_mb": viab["ram_pico_mb"],
+            "tps_medio": viab["tps_medio"],
+            "tempo_medio_segundos": viab["tempo_medio_segundos"],
+            "crashes_oom": viab["crashes_oom"],
         },
         predictions=preds,
     )
@@ -142,11 +163,12 @@ def task_cenario_c(backend: ModelBackend, modelo: str, seed: int = 42, **_kwargs
 def task_cenario_d(backend: ModelBackend, modelo: str, **_kwargs) -> EvalResult:
     """Sem contexto BNCC — habilidades sem exemplos."""
     samples = list(load_for_cenario("D"))
-    preds = []
+    preds: list[Prediction] = []
     outputs = {}
     json_flags = {}
+    metricas = MetricasInferencia()
 
-    for sample in samples:
+    for i, sample in enumerate(samples):
         prompt = sample_to_prompt(
             sample,
             "cenario_d",
@@ -154,7 +176,9 @@ def task_cenario_d(backend: ModelBackend, modelo: str, **_kwargs) -> EvalResult:
             sufixo_resolucao=RESOLUCAO_NUMERADA,
             generation={"max_tokens": 1024, "temperature": 0.7, "top_p": 0.9, "repeat_penalty": 1.1},
         )
-        pred = executar_prompt(backend, prompt, modelo)
+        # Modelo já carregado em A — mede só tempo de inferência por habilidade
+        metricas.iniciar_rodada()
+        pred = executar_prompt(backend, prompt, modelo, metricas=metricas, rodada=i)
         preds.append(pred)
         ev = avaliar_predicao(pred, sample.quantity)
         json_flags[sample.habilidade_id] = ev.json_valido
@@ -162,15 +186,26 @@ def task_cenario_d(backend: ModelBackend, modelo: str, **_kwargs) -> EvalResult:
             ev.parsed.model_dump() if ev.parsed else {"erro": ev.json_erro, "output_bruto": pred.raw_output[:500]}
         )
 
+    viab = _viabilidade_de_rodadas(metricas, preds)
     all_valid = all(json_flags.values()) if json_flags else False
     return EvalResult(
         task_id="cenario_d",
         modelo=modelo,
         json_valido=all_valid,
+        viabilidade=viab,
         agregado={
             "habilidades_testadas": list(json_flags.keys()),
             "outputs": outputs,
             "json_valido_por_habilidade": json_flags,
+            "ram_pico_mb": viab["ram_pico_mb"],
+            "tps_medio": viab["tps_medio"],
+            "tempo_medio_segundos": viab["tempo_medio_segundos"],
+            "crashes_oom": viab["crashes_oom"],
+            "taxa_json_valido_percent": (
+                round(sum(1 for v in json_flags.values() if v) / len(json_flags) * 100, 1)
+                if json_flags
+                else 0.0
+            ),
         },
         predictions=preds,
     )

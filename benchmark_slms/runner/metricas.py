@@ -153,8 +153,10 @@ class MetricasInferencia:
         }
 
     def to_inference_metrics(self) -> InferenceMetrics:
+        # Carga só entra quando foi cronometrada (cenário A); B–D omitem o campo.
+        load_medido = self.tempo_load_final > 0.0
         return InferenceMetrics(
-            tempo_carregamento_s=self.tempo_carregamento_modelo,
+            tempo_carregamento_s=self.tempo_carregamento_modelo if load_medido else None,
             tempo_prefill_s=self.tempo_prefill,
             tempo_decode_s=self.tempo_decode,
             tempo_resposta_s=self.tempo_resposta_modelo,
