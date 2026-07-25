@@ -126,6 +126,39 @@ def _baixar_modelo(mid: str, base: Path) -> bool:
         return False
 
 
+def _perguntar_generation() -> dict:
+    """Pergunta parâmetros de inferência. Enter mantém o default do cenário."""
+    print("\nConfigurar parâmetros de inferência? [s/N]: ", end="")
+    if input().strip().upper() != "S":
+        return {}
+
+    print(
+        "\nParâmetros (Enter = default do cenário):\n"
+        "  A: temperature=0, top_p=1, max_tokens=1024, repeat_penalty=1.1\n"
+        "  B/C/D: temperature=0.7, top_p=0.9, max_tokens=1024, repeat_penalty=1.1"
+    )
+    campos: list[tuple[str, type]] = [
+        ("temperature", float),
+        ("top_p", float),
+        ("repeat_penalty", float),
+        ("max_tokens", int),
+    ]
+    overrides: dict = {}
+    for nome, conv in campos:
+        raw = input(f"  {nome}: ").strip()
+        if not raw:
+            continue
+        try:
+            overrides[nome] = conv(raw)
+        except ValueError:
+            print(f"  ✗ Valor inválido para {nome} — ignorado.")
+    if overrides:
+        print(f"\nOverrides ativos: {overrides}")
+    else:
+        print("\nNenhum override — usando defaults por cenário.")
+    return overrides
+
+
 def _executar_benchmark(model_id: str, modo: ModoExecucao, models_dir: Path) -> None:
     from benchmark_slms.runner.calling import executar_matriz
 
@@ -153,6 +186,8 @@ def _executar_benchmark(model_id: str, modo: ModoExecucao, models_dir: Path) -> 
             pausar()
             return
 
+    generation_overrides = _perguntar_generation()
+
     entrada = load_catalog()[model_id]
     config = RunConfig(
         modelos=[repo_id],
@@ -160,6 +195,7 @@ def _executar_benchmark(model_id: str, modo: ModoExecucao, models_dir: Path) -> 
         backend=BackendTipo.GGUF,
         modelo_paths={repo_id: str(gguf_path)},
         quantizacao=entrada.get("Quantizacao"),
+        generation_overrides=generation_overrides,
     )
 
     print(f"\nExecutando {repo_id} [{modo.value}]...")
@@ -289,7 +325,9 @@ Um arquivo JSON por modelo: resultados/<repo-id-normalizado>-gguf.json
 
 Raiz:
   modelo, formato, data          — identificação da execução
-  run_config                     — parâmetros (seed, n_ctx, tasks, modo…)
+  run_config                     — parâmetros brutos da run (seed, n_ctx, tasks, modo…)
+  inferencia                     — params efetivos por cenário + overrides + backend
+  ambiente                       — máquina (CPU, RAM, SO, Python)
   tasks                          — resultado bruto por cenário (A–D)
   veredito                       — apto_mathia derivado (nunca manual)
   eliminado, motivo_eliminacao   — espelho do veredito

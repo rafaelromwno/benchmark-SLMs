@@ -158,6 +158,8 @@ class RunConfig(BaseModel):
     n_ctx: int = 2048
     n_threads: int = 8
     n_gpu_layers: int = 0
+    # Sobrescreve defaults por cenário (só chaves presentes). Persistido no JSON.
+    generation_overrides: dict[str, Any] = Field(default_factory=dict)
     resultados_dir: str = "resultados"
     logs_dir: str = "logs"
     offline: bool = True
@@ -204,6 +206,9 @@ class ModelRunResult(BaseModel):
     formato: str
     data: str
     run_config: RunConfig
+    # Header legível: params efetivos + máquina que rodou o teste
+    inferencia: dict[str, Any] = Field(default_factory=dict)
+    ambiente: dict[str, Any] = Field(default_factory=dict)
     tasks: dict[str, EvalResult] = Field(default_factory=dict)
     veredito: Veredito | None = None
     eliminado: bool = False

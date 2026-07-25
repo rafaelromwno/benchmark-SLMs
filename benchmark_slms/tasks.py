@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import random
+from typing import Any
 
 from benchmark_slms.core.contracts import EvalResult, Prediction
 from benchmark_slms.core.registry import register_task
@@ -18,12 +19,55 @@ from benchmark_slms.runner.backends import ModelBackend
 from benchmark_slms.runner.executor import executar_prompt, executar_rodadas
 from benchmark_slms.runner.metricas import MetricasInferencia
 
+# Defaults por cenário. CLI pode sobrescrever via generation_overrides (merge).
+_GEN_A = {"max_tokens": 1024, "temperature": 0.0, "top_p": 1.0, "repeat_penalty": 1.1}
+_GEN_SERIE = {"max_tokens": 1024, "temperature": 0.7, "top_p": 0.9, "repeat_penalty": 1.1}
+
 
 def _sample_cenario_b(seed: int) -> list:
     ds = load_for_cenario("B")
     rng = random.Random(seed)
     return [rng.choice(list(ds)) for _ in range(10)]
 
+
+def _generation(base: dict[str, Any], overrides: dict[str, Any] | None) -> dict[str, Any]:
+    gen = dict(base)
+    if overrides:
+        gen.update(overrides)
+    return gen
+
+
+def snapshot_inferencia(
+    overrides: dict[str, Any] | None = None,
+    *,
+    n_ctx: int = 2048,
+    n_threads: int = 8,
+    n_gpu_layers: int = 0,
+    quantizacao: str | None = None,
+    seed: int = 42,
+) -> dict[str, Any]:
+    """Parâmetros efetivos de inferência (header do JSON de resultado)."""
+    ov = dict(overrides or {})
+    return {
+        "overrides": ov,
+        "backend": {
+            "n_ctx": n_ctx,
+            "n_threads": n_threads,
+            "n_gpu_layers": n_gpu_layers,
+            "quantizacao": quantizacao,
+            "seed": seed,
+        },
+        "por_cenario": {
+            "cenario_a": _generation(_GEN_A, ov),
+            "cenario_b": _generation(_GEN_SERIE, ov),
+            "cenario_c": _generation(_GEN_SERIE, ov),
+            "cenario_d": _generation(_GEN_SERIE, ov),
+        },
+        "defaults_cenario": {
+            "cenario_a": dict(_GEN_A),
+            "cenario_b_c_d": dict(_GEN_SERIE),
+        },
+    }
 
 def _viabilidade_de_rodadas(
     metricas: MetricasInferencia,
@@ -42,6 +86,7 @@ def task_cenario_a(
     modelo: str,
     seed: int = 42,
     metricas_load: MetricasInferencia | None = None,
+    generation_overrides: dict[str, Any] | None = None,
     **_kwargs,
 ) -> EvalResult:
     """Cold start — 1 questão, mede RAM/tempo de carga."""
@@ -53,7 +98,7 @@ def task_cenario_a(
         "cenario_a",
         modelo,
         sufixo_resolucao=RESOLUCAO_CORRIDA,
-        generation={"max_tokens": 1024, "temperature": 0, "top_p": 1, "repeat_penalty": 1.1},
+        generation=_generation(_GEN_A, generation_overrides),
     )
 
     # Reutiliza metricas_load (monitor ligado antes do load do GGUF em calling.py)
@@ -79,16 +124,23 @@ def task_cenario_a(
 
 
 @register_task("cenario_b")
-def task_cenario_b(backend: ModelBackend, modelo: str, seed: int = 42, **_kwargs) -> EvalResult:
+def task_cenario_b(
+    backend: ModelBackend,
+    modelo: str,
+    seed: int = 42,
+    generation_overrides: dict[str, Any] | None = None,
+    **_kwargs,
+) -> EvalResult:
     """Geração em série — 10 rodadas, JSON + viabilidade."""
     samples = _sample_cenario_b(seed)
+    gen = _generation(_GEN_SERIE, generation_overrides)
     prompts = [
         sample_to_prompt(
             s,
             "cenario_b",
             modelo,
             sufixo_resolucao=RESOLUCAO_NUMERADA,
-            generation={"max_tokens": 1024, "temperature": 0.7, "top_p": 0.9, "repeat_penalty": 1.1},
+            generation=gen,
         )
         for s in samples
     ]
@@ -101,7 +153,13 @@ def task_cenario_b(backend: ModelBackend, modelo: str, seed: int = 42, **_kwargs
 
 
 @register_task("cenario_c")
-def task_cenario_c(backend: ModelBackend, modelo: str, seed: int = 42, **_kwargs) -> EvalResult:
+def task_cenario_c(
+    backend: ModelBackend,
+    modelo: str,
+    seed: int = 42,
+    generation_overrides: dict[str, Any] | None = None,
+    **_kwargs,
+) -> EvalResult:
     """Pressão de JSON — até 3 tentativas para 5 questões."""
     ds = load_for_cenario("C")
     sample = list(ds)[0] if len(ds) > 0 else None
@@ -113,6 +171,7 @@ def task_cenario_c(backend: ModelBackend, modelo: str, seed: int = 42, **_kwargs
     json_valido = False
     preds: list[Prediction] = []
     metricas = MetricasInferencia()
+    gen = _generation(_GEN_SERIE, generation_overrides)
 
     while tentativas < 3 and not json_valido:
         execucoes += 1
@@ -121,7 +180,7 @@ def task_cenario_c(backend: ModelBackend, modelo: str, seed: int = 42, **_kwargs
             "cenario_c",
             modelo,
             sufixo_resolucao=RESOLUCAO_NUMERADA,
-            generation={"max_tokens": 1024, "temperature": 0.7, "top_p": 0.9, "repeat_penalty": 1.1},
+            generation=gen,
         )
         # Modelo já carregado em A — mede só tempo de inferência por tentativa
         metricas.iniciar_rodada()
@@ -160,13 +219,19 @@ def task_cenario_c(backend: ModelBackend, modelo: str, seed: int = 42, **_kwargs
 
 
 @register_task("cenario_d")
-def task_cenario_d(backend: ModelBackend, modelo: str, **_kwargs) -> EvalResult:
+def task_cenario_d(
+    backend: ModelBackend,
+    modelo: str,
+    generation_overrides: dict[str, Any] | None = None,
+    **_kwargs,
+) -> EvalResult:
     """Sem contexto BNCC — habilidades sem exemplos."""
     samples = list(load_for_cenario("D"))
     preds: list[Prediction] = []
     outputs = {}
     json_flags = {}
     metricas = MetricasInferencia()
+    gen = _generation(_GEN_SERIE, generation_overrides)
 
     for i, sample in enumerate(samples):
         prompt = sample_to_prompt(
@@ -174,7 +239,7 @@ def task_cenario_d(backend: ModelBackend, modelo: str, **_kwargs) -> EvalResult:
             "cenario_d",
             modelo,
             sufixo_resolucao=RESOLUCAO_NUMERADA,
-            generation={"max_tokens": 1024, "temperature": 0.7, "top_p": 0.9, "repeat_penalty": 1.1},
+            generation=gen,
         )
         # Modelo já carregado em A — mede só tempo de inferência por habilidade
         metricas.iniciar_rodada()
