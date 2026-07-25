@@ -6,7 +6,7 @@ from datetime import datetime
 from enum import Enum
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_serializer
 
 
 # --- Schema JSON (migrado de schema_json.py) ---
@@ -78,7 +78,14 @@ class UsageStats(BaseModel):
 
 
 class InferenceMetrics(BaseModel):
-    tempo_carregamento_s: float = 0.0
+    """Métricas de uma inferência.
+
+    ``tempo_carregamento_s`` só é preenchido quando a carga do GGUF foi
+    medida (cenário A / cold start). Em B–D o campo fica ``None`` e é
+    omitido na serialização — o modelo já está em memória.
+    """
+
+    tempo_carregamento_s: float | None = None
     tempo_prefill_s: float = 0.0
     tempo_decode_s: float = 0.0
     tempo_resposta_s: float = 0.0
@@ -91,6 +98,15 @@ class InferenceMetrics(BaseModel):
     ram_usada_mb: float = 0.0
     crash: bool = False
     crash_motivo: str | None = None
+
+    @model_serializer(mode="wrap")
+    def _omitir_carregamento_nao_medido(self, handler):
+        data = handler(self)
+        carga = data.get("tempo_carregamento_s")
+        # Omitir se não medido (None) ou irrelevante (0.0 em B–D)
+        if carga is None or carga == 0 or carga == 0.0:
+            data.pop("tempo_carregamento_s", None)
+        return data
 
 
 class Prediction(BaseModel):
@@ -142,6 +158,8 @@ class RunConfig(BaseModel):
     n_ctx: int = 2048
     n_threads: int = 8
     n_gpu_layers: int = 0
+    # Sobrescreve defaults por cenário (só chaves presentes). Persistido no JSON.
+    generation_overrides: dict[str, Any] = Field(default_factory=dict)
     resultados_dir: str = "resultados"
     logs_dir: str = "logs"
     offline: bool = True
@@ -188,6 +206,9 @@ class ModelRunResult(BaseModel):
     formato: str
     data: str
     run_config: RunConfig
+    # Header legível: params efetivos + máquina que rodou o teste
+    inferencia: dict[str, Any] = Field(default_factory=dict)
+    ambiente: dict[str, Any] = Field(default_factory=dict)
     tasks: dict[str, EvalResult] = Field(default_factory=dict)
     veredito: Veredito | None = None
     eliminado: bool = False

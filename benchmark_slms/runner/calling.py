@@ -15,10 +15,12 @@ from benchmark_slms.core.logging import BenchmarkLogger
 from benchmark_slms.core.registry import get_task, list_tasks
 from benchmark_slms.evaluation.veredito import veredito
 from benchmark_slms.runner.backends import criar_backend
+from benchmark_slms.runner.ambiente import coletar_ambiente
 from benchmark_slms.runner.metricas import MetricasInferencia
 
 # Import registra tasks
 import benchmark_slms.tasks  # noqa: F401
+from benchmark_slms.tasks import snapshot_inferencia
 
 
 def _nome_arquivo(modelo: str, formato: str) -> str:
@@ -82,6 +84,15 @@ def executar_modelo(
         formato=formato,
         data=datetime.now().strftime("%d/%m/%Y"),
         run_config=config,
+        inferencia=snapshot_inferencia(
+            config.generation_overrides,
+            n_ctx=config.n_ctx,
+            n_threads=config.n_threads,
+            n_gpu_layers=config.n_gpu_layers,
+            quantizacao=config.quantizacao,
+            seed=config.seed,
+        ),
+        ambiente=coletar_ambiente(),
     )
 
     tps_por_rodada: list[float] = []
@@ -106,6 +117,7 @@ def executar_modelo(
             modelo=modelo,
             seed=config.seed,
             metricas_load=metricas_load,
+            generation_overrides=config.generation_overrides or None,
         )
         result.tasks[task_id] = eval_result
 

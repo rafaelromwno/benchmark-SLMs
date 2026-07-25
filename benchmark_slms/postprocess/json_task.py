@@ -4,8 +4,12 @@ from __future__ import annotations
 
 import json
 import re
+from dataclasses import dataclass, field
+from typing import Any
 
-from benchmark_slms.core.contracts import GeneratedQuestionsResponse
+from pydantic import ValidationError
+
+from benchmark_slms.core.contracts import GeneratedQuestionsResponse, Questao
 from benchmark_slms.core.registry import register_postprocessor
 
 
@@ -19,9 +23,74 @@ def remover_think(texto: str) -> str:
     return sem.strip()
 
 
-def extrair_e_validar(texto: str) -> tuple[bool, GeneratedQuestionsResponse | None, str | None]:
+def _resumo_erro_pydantic(exc: ValidationError) -> str:
+    partes = []
+    for err in exc.errors()[:3]:
+        loc = ".".join(str(x) for x in err.get("loc", ()))
+        msg = err.get("msg", "inválido")
+        partes.append(f"{loc}: {msg}" if loc else msg)
+    return "; ".join(partes) if partes else "schema inválido"
+
+
+def validar_questoes_individuais(
+    dados: Any,
+) -> tuple[GeneratedQuestionsResponse | None, list[dict[str, Any]], str | None]:
+    """Valida cada questão isoladamente; mantém as válidas e reporta as inválidas."""
+    if not isinstance(dados, dict):
+        return None, [], "Raiz do JSON não é um objeto"
+
+    raw_list = dados.get("questoes")
+    if raw_list is None:
+        return None, [], "Campo 'questoes' ausente"
+    if not isinstance(raw_list, list):
+        return None, [], "Campo 'questoes' não é uma lista"
+    if len(raw_list) == 0:
+        return None, [], "Lista 'questoes' vazia"
+
+    validas: list[Questao] = []
+    invalidas: list[dict[str, Any]] = []
+
+    for i, item in enumerate(raw_list):
+        try:
+            validas.append(Questao.model_validate(item))
+        except ValidationError as exc:
+            invalidas.append({"indice": i, "erro": _resumo_erro_pydantic(exc)})
+        except Exception as exc:
+            invalidas.append({"indice": i, "erro": str(exc)})
+
+    if not validas:
+        return (
+            None,
+            invalidas,
+            f"Nenhuma questão válida ({len(invalidas)} inválida(s))",
+        )
+
+    return GeneratedQuestionsResponse(questoes=validas), invalidas, None
+
+
+@dataclass
+class ExtracaoJson:
+    """Resultado da extração/validação JSON (questão a questão)."""
+
+    ok: bool
+    parsed: GeneratedQuestionsResponse | None
+    erro: str | None
+    questoes_invalidas: list[dict[str, Any]] = field(default_factory=list)
+    questoes_geradas: int = 0
+
+    @property
+    def questoes_validas(self) -> int:
+        return len(self.parsed.questoes) if self.parsed else 0
+
+
+def extrair_e_validar(texto: str) -> ExtracaoJson:
+    """Extrai JSON da resposta e valida cada questão individualmente.
+
+    Questões com schema inválido são reportadas em ``questoes_invalidas`` e
+    descartadas; as válidas permanecem em ``parsed`` (não invalida o conjunto).
+    """
     texto = remover_think(texto)
-    candidatos = []
+    candidatos: list[str] = []
 
     matches_markdown = re.findall(r"```json\s*(.*?)\s*```", texto, re.DOTALL)
     candidatos.extend([m.strip() for m in matches_markdown])
@@ -30,21 +99,48 @@ def extrair_e_validar(texto: str) -> tuple[bool, GeneratedQuestionsResponse | No
     candidatos.extend([m.strip() for m in matches_chaves])
 
     if not candidatos:
-        return False, None, "JSON não encontrado na resposta"
+        return ExtracaoJson(ok=False, parsed=None, erro="JSON não encontrado na resposta")
 
-    ultimo_erro = None
+    ultimo_erro = "Nenhum candidato de JSON válido encontrado"
+    melhor: ExtracaoJson | None = None
 
     for json_str in candidatos:
         try:
             dados = json.loads(json_str)
-            resultado = GeneratedQuestionsResponse.model_validate(dados)
-            return True, resultado, None
         except json.JSONDecodeError:
             ultimo_erro = "JSON inválido"
-        except Exception:
-            ultimo_erro = "Schema inválido"
+            continue
 
-    return False, None, ultimo_erro or "Nenhum candidato de JSON válido encontrado"
+        parsed, invalidas, erro = validar_questoes_individuais(dados)
+        geradas = len(dados["questoes"]) if isinstance(dados, dict) and isinstance(dados.get("questoes"), list) else 0
+
+        if parsed is not None:
+            resultado = ExtracaoJson(
+                ok=True,
+                parsed=parsed,
+                erro=None,
+                questoes_invalidas=invalidas,
+                questoes_geradas=geradas,
+            )
+            # Prefere o candidato com mais questões válidas
+            if melhor is None or resultado.questoes_validas > melhor.questoes_validas:
+                melhor = resultado
+        else:
+            ultimo_erro = erro or "Schema inválido"
+            if melhor is None and invalidas:
+                melhor = ExtracaoJson(
+                    ok=False,
+                    parsed=None,
+                    erro=ultimo_erro,
+                    questoes_invalidas=invalidas,
+                    questoes_geradas=geradas,
+                )
+
+    if melhor and melhor.ok:
+        return melhor
+    if melhor:
+        return melhor
+    return ExtracaoJson(ok=False, parsed=None, erro=ultimo_erro)
 
 
 def parsear_json_bruto(texto: str) -> dict | str:
@@ -63,21 +159,32 @@ def validar_quantidade(
 ) -> tuple[bool, str | None]:
     quantidade_real = len(resultado.questoes)
     if quantidade_real != quantidade_esperada:
-        return False, f"Esperado {quantidade_esperada} questões, modelo gerou {quantidade_real}"
+        return (
+            False,
+            f"Esperado {quantidade_esperada} questões válidas, restaram {quantidade_real}",
+        )
     return True, None
 
 
 @register_postprocessor("json_task")
 def processar_json_task(texto: str, quantidade_esperada: int = 1) -> dict:
-    valido, resultado, erro = extrair_e_validar(texto)
+    extracao = extrair_e_validar(texto)
     qtd_ok, qtd_erro = (True, None)
-    if valido and resultado:
-        qtd_ok, qtd_erro = validar_quantidade(resultado, quantidade_esperada)
+    if extracao.ok and extracao.parsed:
+        qtd_ok, qtd_erro = validar_quantidade(extracao.parsed, quantidade_esperada)
+
+    erro = extracao.erro or qtd_erro
+    if extracao.questoes_invalidas and not erro:
+        n_inv = len(extracao.questoes_invalidas)
+        erro = f"{n_inv} questão(ões) inválida(s) descartada(s)"
 
     return {
-        "json_valido": valido and qtd_ok,
-        "json_erro": erro or qtd_erro,
+        "json_valido": extracao.ok and qtd_ok,
+        "json_erro": erro,
         "quantidade_ok": qtd_ok,
         "quantidade_erro": qtd_erro,
-        "parsed": resultado.model_dump() if resultado else None,
+        "parsed": extracao.parsed.model_dump() if extracao.parsed else None,
+        "questoes_validas": extracao.questoes_validas,
+        "questoes_geradas": extracao.questoes_geradas,
+        "questoes_invalidas": extracao.questoes_invalidas,
     }
