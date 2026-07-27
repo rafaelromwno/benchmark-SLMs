@@ -227,7 +227,7 @@ def _executar_benchmark(model_id: str, modo: ModoExecucao, models_dir: Path) -> 
     pausar()
 
 
-def _fluxo_completo(base: Path) -> None:
+def _fluxo_completo_com_reprovacao(base: Path) -> None:
     """Baixar (se necessário) + testar em selection — fluxo guiado."""
     print("\n--- Fluxo completo: baixar + testar ---")
     mid = _escolher_id("modelo", base)
@@ -244,6 +244,24 @@ def _fluxo_completo(base: Path) -> None:
 
     print("\n[2/2] Benchmark (modo selection)...")
     _executar_benchmark(mid, ModoExecucao.SELECTION, base)
+
+def _fluxo_completo_sem_reprovacao(base: Path) -> None:
+    """Baixar (se necessário) + testar benchmark em — fluxo guiado."""
+    print("\n--- Fluxo completo: baixar + testar ---")
+    mid = _escolher_id("modelo", base)
+    if not mid:
+        return
+
+    entrada = load_catalog()[mid]
+    if not caminho_gguf_local(entrada["Modelo"], entrada["Arquivo"], base):
+        print("\n[1/2] Download...")
+        if not _baixar_modelo(mid, base):
+            return
+    else:
+        print(f"\n[1/2] Modelo id={mid} já baixado — pulando download.")
+
+    print("\n[2/2] Benchmark (modo benchmark)...")
+    _executar_benchmark(mid, ModoExecucao.BENCHMARK, base)
 
 
 def _login_hf_menu() -> None:
@@ -386,10 +404,11 @@ def menu_interativo(models_dir: Path | None = None) -> int:
         print("  6  Listar tasks (cenários A–D)")
         print("  7  Login Hugging Face (hf auth login)")
         print("  8  Remover token HF inválido")
-        print("  9  Fluxo completo: baixar + testar")
-        print("  10 Verificar ambiente")
-        print("  11 Limpar arquivos temporários")
-        print("  12 Explicar estrutura dos resultados")
+        print("  9  Fluxo completo: baixar + testar (Com Reprovação)")
+        print("  10  Fluxo completo: baixar + testar (Sem Reprovação)")
+        print("  11 Verificar ambiente")
+        print("  12 Limpar arquivos temporários")
+        print("  13 Explicar estrutura dos resultados")
         print("  0  Sair")
         print("-" * 52)
 
@@ -440,16 +459,19 @@ def menu_interativo(models_dir: Path | None = None) -> int:
                 _remover_token_menu()
 
             elif opcao == "9":
-                _fluxo_completo(base)
+                _fluxo_completo_com_reprovacao(base)
 
             elif opcao == "10":
+                _fluxo_completo_sem_reprovacao(base)
+
+            elif opcao == "11":
                 imprimir_status_ambiente(base)
                 pausar()
 
-            elif opcao == "11":
+            elif opcao == "12":
                 _limpar_temporarios_menu(base)
 
-            elif opcao == "12":
+            elif opcao == "13":
                 _explicar_resultados()
 
             else:
