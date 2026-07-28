@@ -227,9 +227,13 @@ def _executar_benchmark(model_id: str, modo: ModoExecucao, models_dir: Path) -> 
     pausar()
 
 
-def _fluxo_completo_com_reprovacao(base: Path) -> None:
-    """Baixar (se necessário) + testar em selection — fluxo guiado."""
-    print("\n--- Fluxo completo: baixar + testar ---")
+def _fluxo_completo(base: Path, modo: ModoExecucao) -> None:
+    """Baixar (se necessário) + testar no modo informado — fluxo guiado."""
+    if modo == ModoExecucao.SELECTION:
+        print("\n--- Fluxo completo: baixar + testar [selection — para ao reprovar] ---")
+    else:
+        print("\n--- Fluxo completo: baixar + testar [benchmark — roda tudo] ---")
+
     mid = _escolher_id("modelo", base)
     if not mid:
         return
@@ -242,26 +246,8 @@ def _fluxo_completo_com_reprovacao(base: Path) -> None:
     else:
         print(f"\n[1/2] Modelo id={mid} já baixado — pulando download.")
 
-    print("\n[2/2] Benchmark (modo selection)...")
-    _executar_benchmark(mid, ModoExecucao.SELECTION, base)
-
-def _fluxo_completo_sem_reprovacao(base: Path) -> None:
-    """Baixar (se necessário) + testar benchmark em — fluxo guiado."""
-    print("\n--- Fluxo completo: baixar + testar ---")
-    mid = _escolher_id("modelo", base)
-    if not mid:
-        return
-
-    entrada = load_catalog()[mid]
-    if not caminho_gguf_local(entrada["Modelo"], entrada["Arquivo"], base):
-        print("\n[1/2] Download...")
-        if not _baixar_modelo(mid, base):
-            return
-    else:
-        print(f"\n[1/2] Modelo id={mid} já baixado — pulando download.")
-
-    print("\n[2/2] Benchmark (modo benchmark)...")
-    _executar_benchmark(mid, ModoExecucao.BENCHMARK, base)
+    print(f"\n[2/2] Benchmark (modo {modo.value})...")
+    _executar_benchmark(mid, modo, base)
 
 
 def _login_hf_menu() -> None:
@@ -404,8 +390,8 @@ def menu_interativo(models_dir: Path | None = None) -> int:
         print("  6  Listar tasks (cenários A–D)")
         print("  7  Login Hugging Face (hf auth login)")
         print("  8  Remover token HF inválido")
-        print("  9  Fluxo completo: baixar + testar (Com Reprovação)")
-        print("  10  Fluxo completo: baixar + testar (Sem Reprovação)")
+        print("  9  Fluxo completo: baixar + testar [selection — para ao reprovar]")
+        print("  10 Fluxo completo: baixar + testar [benchmark — roda tudo]")
         print("  11 Verificar ambiente")
         print("  12 Limpar arquivos temporários")
         print("  13 Explicar estrutura dos resultados")
@@ -459,10 +445,10 @@ def menu_interativo(models_dir: Path | None = None) -> int:
                 _remover_token_menu()
 
             elif opcao == "9":
-                _fluxo_completo_com_reprovacao(base)
+                _fluxo_completo(base, ModoExecucao.SELECTION)
 
             elif opcao == "10":
-                _fluxo_completo_sem_reprovacao(base)
+                _fluxo_completo(base, ModoExecucao.BENCHMARK)
 
             elif opcao == "11":
                 imprimir_status_ambiente(base)
