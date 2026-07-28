@@ -216,7 +216,10 @@ def _executar_benchmark(model_id: str, modo: ModoExecucao, models_dir: Path) -> 
         print(f"apto_mathia: {'SIM ✓' if apto else 'NÃO ✗'}")
         if r.motivo_eliminacao:
             print(f"Motivo: {r.motivo_eliminacao}")
-        print(f"Resultado: resultados/{r.modelo.replace('/', '--')}-gguf.json")
+        slug = r.modelo.replace("/", "--")
+        if r.formato == "gguf":
+            slug += "-gguf"
+        print(f"Resultado: resultados/{slug}/")
 
     print("\n  Ver leaderboard agora? [S/n]: ", end="")
     if input().strip().upper() != "N":
@@ -296,7 +299,7 @@ def _limpar_temporarios_menu(base: Path) -> None:
     from benchmark_slms.cleanup import limpar_temporarios, resumo_limpeza
 
     print("\n--- Limpar arquivos temporários ---")
-    print("  a) Resultados (resultados/*.json)")
+    print("  a) Resultados (resultados/<modelo>/execucao_*.json)")
     print("  b) Logs (logs/*.jsonl, *.log)")
     print("  c) Cache Python (__pycache__)")
     print("  d) Cache HF (.cache em modelos_local_gguf/)")
@@ -339,9 +342,12 @@ def _explicar_resultados() -> None:
         """
 --- Estrutura de resultados/ ---
 
-Um arquivo JSON por modelo: resultados/<repo-id-normalizado>-gguf.json
+Uma pasta por modelo, com execuções sequenciais:
+  resultados/<repo-id-normalizado>-gguf/execucao_1.json
+  resultados/<repo-id-normalizado>-gguf/execucao_2.json
+  ...
 
-Raiz:
+Cada execucao_N.json:
   modelo, formato, data          — identificação da execução
   run_config                     — parâmetros brutos da run (seed, n_ctx, tasks, modo…)
   inferencia                     — params efetivos por cenário + overrides + backend
