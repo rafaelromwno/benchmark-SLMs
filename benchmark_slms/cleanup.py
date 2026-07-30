@@ -58,8 +58,12 @@ def limpar_temporarios(
     relatorio: dict = {"removidos": {}, "total": 0}
 
     if limpar_resultados:
-        n, files = _remover_glob(resultados_dir, "*.json")
-        relatorio["removidos"]["resultados_json"] = {"count": n, "files": files}
+        n_raiz, files_raiz = _remover_glob(resultados_dir, "*.json")
+        n_nested, files_nested = _remover_glob(resultados_dir, "*/execucao_*.json")
+        relatorio["removidos"]["resultados_json"] = {
+            "count": n_raiz + n_nested,
+            "files": files_raiz + files_nested,
+        }
 
     if limpar_logs:
         n, files = _remover_glob(logs_dir, "*.jsonl")
@@ -86,7 +90,7 @@ def limpar_temporarios(
 def resumo_limpeza(relatorio: dict) -> str:
     linhas = [f"Total removido: {relatorio['total']} item(ns)\n"]
     rotulos = {
-        "resultados_json": "Resultados (resultados/*.json)",
+        "resultados_json": "Resultados (resultados/<modelo>/execucao_*.json)",
         "logs": "Logs (logs/*.jsonl, *.log)",
         "pycache": "Cache Python (__pycache__)",
         "hf_cache": "Cache HF (.cache em modelos_local_gguf/)",

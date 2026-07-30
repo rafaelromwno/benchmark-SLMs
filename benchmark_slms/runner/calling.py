@@ -23,25 +23,75 @@ import benchmark_slms.tasks  # noqa: F401
 from benchmark_slms.tasks import snapshot_inferencia
 
 
-def _nome_arquivo(modelo: str, formato: str) -> str:
+def _slug_modelo(modelo: str, formato: str) -> str:
     nome = modelo.replace("/", "--")
     if formato == "gguf":
         nome += "-gguf"
-    return f"{nome}.json"
+    return nome
+
+
+def _pasta_modelo(resultados_dir: Path, modelo: str, formato: str) -> Path:
+    return resultados_dir / _slug_modelo(modelo, formato)
+
+
+def contar_execucoes(pasta_modelo: Path) -> int:
+    """Conta arquivos execucao_*.json já existentes na pasta do modelo."""
+    if not pasta_modelo.exists():
+        return 0
+    return sum(1 for p in pasta_modelo.glob("execucao_*.json") if p.is_file())
+
+
+def _proxima_execucao(pasta_modelo: Path) -> int:
+    return contar_execucoes(pasta_modelo) + 1
+
+
+def migrar_resultados_legados(resultados_dir: Path | str) -> list[Path]:
+    """Move resultados/<slug>.json → resultados/<slug>/execucao_N.json.
+
+    Preserva o conteúdo e numera a partir das execuções já existentes na pasta.
+    """
+    pasta = Path(resultados_dir)
+    if not pasta.exists():
+        return []
+
+    movidos: list[Path] = []
+    for legado in sorted(p for p in pasta.glob("*.json") if p.is_file()):
+        destino_dir = pasta / legado.stem
+        destino_dir.mkdir(parents=True, exist_ok=True)
+        destino = destino_dir / f"execucao_{_proxima_execucao(destino_dir)}.json"
+        legado.rename(destino)
+        movidos.append(destino)
+    return movidos
 
 
 def _salvar_resultado(result: ModelRunResult, resultados_dir: Path) -> Path:
-    resultados_dir.mkdir(parents=True, exist_ok=True)
-    path = resultados_dir / _nome_arquivo(result.modelo, result.formato)
+    migrar_resultados_legados(resultados_dir)
+    pasta = _pasta_modelo(resultados_dir, result.modelo, result.formato)
+    pasta.mkdir(parents=True, exist_ok=True)
+    n = _proxima_execucao(pasta)
+    path = pasta / f"execucao_{n}.json"
     with open(path, "w", encoding="utf-8") as f:
         json.dump(result.model_dump(mode="json"), f, indent=2, ensure_ascii=False, default=str)
     return path
 
 
 def _carregar_resultado(resultados_dir: Path, modelo: str, formato: str) -> ModelRunResult | None:
-    path = resultados_dir / _nome_arquivo(modelo, formato)
-    if not path.exists():
+    """Carrega a execução mais recente do modelo (maior número)."""
+    migrar_resultados_legados(resultados_dir)
+    pasta = _pasta_modelo(resultados_dir, modelo, formato)
+    if not pasta.exists():
         return None
+    arquivos = [p for p in pasta.glob("execucao_*.json") if p.is_file()]
+    if not arquivos:
+        return None
+
+    def _num(p: Path) -> int:
+        try:
+            return int(p.stem.split("_", 1)[1])
+        except (IndexError, ValueError):
+            return -1
+
+    path = max(arquivos, key=_num)
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
     return ModelRunResult.model_validate(data)

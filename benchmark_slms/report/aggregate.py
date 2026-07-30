@@ -8,12 +8,18 @@ from pathlib import Path
 
 
 def carregar_resultados(resultados_dir: str | Path) -> list[dict]:
+    """Carrega execuções em resultados/<modelo>/execucao_N.json."""
+    from benchmark_slms.runner.calling import migrar_resultados_legados
+
     pasta = Path(resultados_dir)
     if not pasta.exists():
         return []
 
+    migrar_resultados_legados(pasta)
+    arquivos = sorted(pasta.glob("*/execucao_*.json"))
+
     resultados = []
-    for arquivo in sorted(pasta.glob("*.json")):
+    for arquivo in arquivos:
         with open(arquivo, encoding="utf-8") as f:
             resultados.append(json.load(f))
     return resultados
