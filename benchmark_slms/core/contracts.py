@@ -6,7 +6,7 @@ from datetime import datetime
 from enum import Enum
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field, field_validator, model_serializer
+from pydantic import BaseModel, Field, field_serializer, field_validator, model_serializer
 
 
 # --- Schema JSON (migrado de schema_json.py) ---
@@ -146,6 +146,23 @@ class BackendTipo(str, Enum):
     SAFETENSORS = "safetensors"
 
 
+class InferenceProfile(BaseModel):
+    """Parâmetros de amostragem reutilizáveis para comparar modelos."""
+
+    # Também é usado como nome de diretório de resultados.
+    name: str = Field(min_length=1, pattern=r"^[A-Za-z0-9][A-Za-z0-9_-]*$")
+    temperature: float = Field(ge=0)
+    top_p: float = Field(gt=0, le=1)
+    repeat_penalty: float = Field(gt=0)
+
+    def generation_overrides(self) -> dict[str, float]:
+        return {
+            "temperature": self.temperature,
+            "top_p": self.top_p,
+            "repeat_penalty": self.repeat_penalty,
+        }
+
+
 class RunConfig(BaseModel):
     """Configuração de uma execução matriz N modelos × M tasks."""
 
@@ -160,6 +177,9 @@ class RunConfig(BaseModel):
     n_gpu_layers: int = 0
     # Sobrescreve defaults por cenário (só chaves presentes). Persistido no JSON.
     generation_overrides: dict[str, Any] = Field(default_factory=dict)
+    # Perfis selecionados para a matriz. ``inference_profile`` identifica a run atual.
+    inference_profiles: list[InferenceProfile] = Field(default_factory=list)
+    inference_profile: InferenceProfile | None = None
     resultados_dir: str = "resultados"
     logs_dir: str = "logs"
     offline: bool = True
@@ -213,3 +233,11 @@ class ModelRunResult(BaseModel):
     veredito: Veredito | None = None
     eliminado: bool = False
     motivo_eliminacao: str | None = None
+
+    @field_serializer("run_config")
+    def _snapshot_run_config(self, config: RunConfig) -> dict[str, Any]:
+        """Exclui estado transitório de orquestração do resultado persistido."""
+        snapshot = config.model_dump(mode="json")
+        snapshot.pop("inference_profiles", None)
+        snapshot.pop("inference_profile", None)
+        return snapshot

@@ -5,7 +5,7 @@ from __future__ import annotations
 import random
 from typing import Any
 
-from benchmark_slms.core.contracts import EvalResult, Prediction
+from benchmark_slms.core.contracts import EvalResult, InferenceProfile, Prediction
 from benchmark_slms.core.registry import register_task
 from benchmark_slms.data.loader import load_for_cenario
 from benchmark_slms.data.preprocess import (
@@ -40,6 +40,7 @@ def _generation(base: dict[str, Any], overrides: dict[str, Any] | None) -> dict[
 def snapshot_inferencia(
     overrides: dict[str, Any] | None = None,
     *,
+    profile: InferenceProfile | None = None,
     n_ctx: int = 2048,
     n_threads: int = 8,
     n_gpu_layers: int = 0,
@@ -49,7 +50,7 @@ def snapshot_inferencia(
     """Parâmetros efetivos de inferência (header do JSON de resultado)."""
     ov = dict(overrides or {})
     return {
-        "overrides": ov,
+        "perfil": profile.model_dump() if profile else None,
         "backend": {
             "n_ctx": n_ctx,
             "n_threads": n_threads,

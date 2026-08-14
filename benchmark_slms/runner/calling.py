@@ -34,6 +34,11 @@ def _pasta_modelo(resultados_dir: Path, modelo: str, formato: str) -> Path:
     return resultados_dir / _slug_modelo(modelo, formato)
 
 
+def _pasta_resultado(resultados_dir: Path, modelo: str, formato: str, profile_name: str | None) -> Path:
+    pasta_modelo = _pasta_modelo(resultados_dir, modelo, formato)
+    return pasta_modelo / profile_name if profile_name else pasta_modelo
+
+
 def contar_execucoes(pasta_modelo: Path) -> int:
     """Conta arquivos execucao_*.json já existentes na pasta do modelo."""
     if not pasta_modelo.exists():
@@ -66,7 +71,8 @@ def migrar_resultados_legados(resultados_dir: Path | str) -> list[Path]:
 
 def _salvar_resultado(result: ModelRunResult, resultados_dir: Path) -> Path:
     migrar_resultados_legados(resultados_dir)
-    pasta = _pasta_modelo(resultados_dir, result.modelo, result.formato)
+    profile_name = result.run_config.inference_profile.name if result.run_config.inference_profile else None
+    pasta = _pasta_resultado(resultados_dir, result.modelo, result.formato, profile_name)
     pasta.mkdir(parents=True, exist_ok=True)
     n = _proxima_execucao(pasta)
     path = pasta / f"execucao_{n}.json"
@@ -75,10 +81,12 @@ def _salvar_resultado(result: ModelRunResult, resultados_dir: Path) -> Path:
     return path
 
 
-def _carregar_resultado(resultados_dir: Path, modelo: str, formato: str) -> ModelRunResult | None:
+def _carregar_resultado(
+    resultados_dir: Path, modelo: str, formato: str, profile_name: str | None = None
+) -> ModelRunResult | None:
     """Carrega a execução mais recente do modelo (maior número)."""
     migrar_resultados_legados(resultados_dir)
-    pasta = _pasta_modelo(resultados_dir, modelo, formato)
+    pasta = _pasta_resultado(resultados_dir, modelo, formato, profile_name)
     if not pasta.exists():
         return None
     arquivos = [p for p in pasta.glob("execucao_*.json") if p.is_file()]
@@ -136,6 +144,7 @@ def executar_modelo(
         run_config=config,
         inferencia=snapshot_inferencia(
             config.generation_overrides,
+            profile=config.inference_profile,
             n_ctx=config.n_ctx,
             n_threads=config.n_threads,
             n_gpu_layers=config.n_gpu_layers,
@@ -228,9 +237,24 @@ def executar_matriz(config: RunConfig) -> list[ModelRunResult]:
     logger.log("calling", "matriz_inicio", extra={"modelos": config.modelos, "tasks": config.tasks})
 
     resultados = []
-    for modelo in config.modelos:
-        result = executar_modelo(config, modelo, logger=logger)
-        resultados.append(result)
+    perfis = config.inference_profiles or [None]
+    for perfil in perfis:
+        config_perfil = config
+        if perfil is not None:
+            # Perfis vencem parâmetros de amostragem avulsos; max_tokens continua global.
+            config_perfil = config.model_copy(
+                update={
+                    "generation_overrides": {
+                        **config.generation_overrides,
+                        **perfil.generation_overrides(),
+                    },
+                    "inference_profiles": [],
+                    "inference_profile": perfil,
+                }
+            )
+        for modelo in config_perfil.modelos:
+            result = executar_modelo(config_perfil, modelo, logger=logger)
+            resultados.append(result)
 
     logger.log("calling", "matriz_concluida", extra={"total": len(resultados)})
     return resultados

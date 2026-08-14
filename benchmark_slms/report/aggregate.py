@@ -16,7 +16,8 @@ def carregar_resultados(resultados_dir: str | Path) -> list[dict]:
         return []
 
     migrar_resultados_legados(pasta)
-    arquivos = sorted(pasta.glob("*/execucao_*.json"))
+    # Layout legado: <modelo>/execucao_N.json. Novo: <modelo>/<perfil>/execucao_N.json.
+    arquivos = sorted({*pasta.glob("*/execucao_*.json"), *pasta.glob("*/*/execucao_*.json")})
 
     resultados = []
     for arquivo in arquivos:
@@ -35,6 +36,19 @@ def _ram_pico_de_tasks(tasks: dict) -> float | None:
             if ram and ram > 0:
                 picos.append(ram)
     return max(picos) if picos else None
+
+
+def _nome_perfil(resultado: dict) -> str | None:
+    """Lê o contrato novo e os dois formatos persistidos anteriormente."""
+    inferencia = resultado.get("inferencia") or {}
+    perfil_novo = inferencia.get("perfil")
+    if isinstance(perfil_novo, dict) and perfil_novo.get("name"):
+        return perfil_novo["name"]
+
+    profile_atual = (resultado.get("run_config") or {}).get("inference_profile") or {}
+    if isinstance(profile_atual, dict) and profile_atual.get("name"):
+        return profile_atual["name"]
+    return inferencia.get("profile")
 
 
 def gerar_leaderboard(resultados_dir: str | Path = "resultados") -> dict:
@@ -65,6 +79,7 @@ def gerar_leaderboard(resultados_dir: str | Path = "resultados") -> dict:
         linhas.append(
             {
                 "modelo": r.get("modelo"),
+                "profile": _nome_perfil(r),
                 "formato": r.get("formato"),
                 "apto_mathia": apto,
                 "categoria_falha": cat if not apto else None,
@@ -95,7 +110,8 @@ def imprimir_leaderboard(resultados_dir: str | Path = "resultados") -> None:
 
     for i, row in enumerate(lb["leaderboard"], 1):
         status = "✓ APTO" if row["apto_mathia"] else "✗ REPROVADO"
-        print(f"{i:2}. [{status}] {row['modelo']} ({row['formato']})")
+        perfil = f" | perfil: {row['profile']}" if row.get("profile") else ""
+        print(f"{i:2}. [{status}] {row['modelo']} ({row['formato']}){perfil}")
         if not row["apto_mathia"]:
             print(f"     categoria: {row['categoria_falha']} — {row['motivo_eliminacao']}")
         if row.get("tps_medio") or row.get("ram_pico_mb"):
