@@ -28,6 +28,7 @@ from benchmark_slms.data.models import (
     load_catalog,
     resolver_modelo,
 )
+from benchmark_slms.inference_profiles import DEFAULT_INFERENCE_PROFILES
 
 
 def limpar_tela() -> None:
@@ -72,6 +73,42 @@ def _escolher_id(
         pausar()
         return None
     return escolha
+
+
+def _escolher_ids(rotulo: str, base_dir: Path, *, apenas_baixados: bool = False) -> list[str]:
+    """Seleciona um ou mais modelos por ids separados por vírgula."""
+    primeiro = _escolher_id(rotulo, base_dir, apenas_baixados=apenas_baixados)
+    if not primeiro:
+        return []
+    resto = input("Outros ids (separados por vírgula; Enter = nenhum): ").strip()
+    if not resto:
+        return [primeiro]
+    catalogo = load_catalog()
+    ids = [primeiro, *[item.strip() for item in resto.split(",") if item.strip()]]
+    invalidos = [mid for mid in ids if mid not in catalogo]
+    if invalidos:
+        print(f"✗ Id(s) inválido(s): {', '.join(invalidos)}.")
+        return []
+    return list(dict.fromkeys(ids))
+
+
+def _escolher_perfis() -> list:
+    print("\nPerfis de inferência:")
+    for i, perfil in enumerate(DEFAULT_INFERENCE_PROFILES, 1):
+        print(
+            f"  {i}. {perfil.name}: temperature={perfil.temperature}, "
+            f"top_p={perfil.top_p}, repeat_penalty={perfil.repeat_penalty}"
+        )
+    raw = input("Perfis (números separados por vírgula; Enter = balanceado): ").strip()
+    if not raw:
+        return [DEFAULT_INFERENCE_PROFILES[1]]
+    try:
+        indices = [int(item.strip()) for item in raw.split(",")]
+        perfis = [DEFAULT_INFERENCE_PROFILES[i - 1] for i in indices]
+    except (IndexError, ValueError):
+        print("✗ Seleção de perfis inválida.")
+        return []
+    return list({perfil.name: perfil for perfil in perfis}.values())
 
 
 def _listar_catalogo(base: Path) -> None:
@@ -159,7 +196,7 @@ def _perguntar_generation() -> dict:
     return overrides
 
 
-def _executar_benchmark(model_id: str, modo: ModoExecucao, models_dir: Path) -> None:
+def _executar_benchmark(model_ids: list[str], modo: ModoExecucao, models_dir: Path) -> None:
     from benchmark_slms.runner.calling import executar_matriz
 
     ok, faltando = dependencias_ok()
@@ -172,34 +209,34 @@ def _executar_benchmark(model_id: str, modo: ModoExecucao, models_dir: Path) -> 
         pausar()
         return
 
-    try:
-        repo_id, gguf_path = resolver_modelo(model_id=model_id, base_dir=models_dir)
-    except FileNotFoundError as exc:
-        imprimir_erro(classificar_erro_execucao(exc))
-        print("\n  Baixar agora? [S/n]: ", end="")
-        if input().strip().upper() != "N":
-            if _baixar_modelo(model_id, models_dir):
-                repo_id, gguf_path = resolver_modelo(model_id=model_id, base_dir=models_dir)
-            else:
+    modelo_paths: dict[str, str] = {}
+    modelos: list[str] = []
+    for model_id in model_ids:
+        try:
+            repo_id, gguf_path = resolver_modelo(model_id=model_id, base_dir=models_dir)
+        except FileNotFoundError as exc:
+            imprimir_erro(classificar_erro_execucao(exc))
+            print("\n  Baixar agora? [S/n]: ", end="")
+            if input().strip().upper() == "N" or not _baixar_modelo(model_id, models_dir):
                 return
-        else:
-            pausar()
-            return
+            repo_id, gguf_path = resolver_modelo(model_id=model_id, base_dir=models_dir)
+        modelos.append(repo_id)
+        modelo_paths[repo_id] = str(gguf_path)
 
-    generation_overrides = _perguntar_generation()
+    perfis = _escolher_perfis()
+    if not perfis:
+        pausar()
+        return
 
-    entrada = load_catalog()[model_id]
     config = RunConfig(
-        modelos=[repo_id],
+        modelos=modelos,
         modo=modo,
         backend=BackendTipo.GGUF,
-        modelo_paths={repo_id: str(gguf_path)},
-        quantizacao=entrada.get("Quantizacao"),
-        generation_overrides=generation_overrides,
+        modelo_paths=modelo_paths,
+        inference_profiles=perfis,
     )
 
-    print(f"\nExecutando {repo_id} [{modo.value}]...")
-    print(f"Arquivo: {gguf_path}")
+    print(f"\nExecutando {len(modelos)} modelo(s) × {len(perfis)} perfil(is) [{modo.value}]...")
     print("Aguarde — cenário B pode levar vários minutos...\n")
 
     try:
@@ -219,7 +256,8 @@ def _executar_benchmark(model_id: str, modo: ModoExecucao, models_dir: Path) -> 
         slug = r.modelo.replace("/", "--")
         if r.formato == "gguf":
             slug += "-gguf"
-        print(f"Resultado: resultados/{slug}/")
+        perfil = r.run_config.inference_profile.name if r.run_config.inference_profile else None
+        print(f"Resultado: resultados/{slug}/{perfil or ''}")
 
     print("\n  Ver leaderboard agora? [S/n]: ", end="")
     if input().strip().upper() != "N":
@@ -250,7 +288,7 @@ def _fluxo_completo(base: Path, modo: ModoExecucao) -> None:
         print(f"\n[1/2] Modelo id={mid} já baixado — pulando download.")
 
     print(f"\n[2/2] Benchmark (modo {modo.value})...")
-    _executar_benchmark(mid, modo, base)
+    _executar_benchmark([mid], modo, base)
 
 
 def _login_hf_menu() -> None:
@@ -421,14 +459,14 @@ def menu_interativo(models_dir: Path | None = None) -> int:
                     _baixar_modelo(mid, base)
 
             elif opcao == "3":
-                mid = _escolher_id("modelo para testar", base, apenas_baixados=False)
-                if mid:
-                    _executar_benchmark(mid, ModoExecucao.SELECTION, base)
+                ids = _escolher_ids("modelo para testar", base, apenas_baixados=False)
+                if ids:
+                    _executar_benchmark(ids, ModoExecucao.SELECTION, base)
 
             elif opcao == "4":
-                mid = _escolher_id("modelo para testar", base, apenas_baixados=False)
-                if mid:
-                    _executar_benchmark(mid, ModoExecucao.BENCHMARK, base)
+                ids = _escolher_ids("modelo para testar", base, apenas_baixados=False)
+                if ids:
+                    _executar_benchmark(ids, ModoExecucao.BENCHMARK, base)
 
             elif opcao == "5":
                 from benchmark_slms.report.aggregate import imprimir_leaderboard

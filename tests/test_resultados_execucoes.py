@@ -4,8 +4,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from benchmark_slms.core.contracts import ModelRunResult, RunConfig
-from benchmark_slms.report.aggregate import carregar_resultados
+from benchmark_slms.core.contracts import InferenceProfile, ModelRunResult, RunConfig
+from benchmark_slms.report.aggregate import carregar_resultados, gerar_leaderboard
+import benchmark_slms.runner.calling as calling
+from benchmark_slms.tasks import snapshot_inferencia
 from benchmark_slms.runner.calling import (
     _carregar_resultado,
     _pasta_modelo,
@@ -127,3 +129,104 @@ def test_carregar_resultados_migra_legado_automaticamente(tmp_path: Path) -> Non
     assert len(dados) == 1
     assert dados[0]["modelo"] == "a/x"
     assert (resultados / "a--x-gguf" / "execucao_1.json").exists()
+
+
+def test_perfis_sao_persistidos_em_subpastas_e_exibidos_no_leaderboard(tmp_path: Path) -> None:
+    resultados = tmp_path / "resultados"
+    deterministico = InferenceProfile(
+        name="deterministico", temperature=0, top_p=1, repeat_penalty=1.1
+    )
+    balanceado = InferenceProfile(
+        name="balanceado", temperature=0.7, top_p=0.9, repeat_penalty=1.1
+    )
+    for perfil in (deterministico, balanceado):
+        result = _result()
+        result.run_config.inference_profile = perfil
+        result.inferencia = snapshot_inferencia(profile=perfil)
+        _salvar_resultado(result, resultados)
+
+    assert (resultados / "org--phi-2-gguf" / "deterministico" / "execucao_1.json").exists()
+    assert (resultados / "org--phi-2-gguf" / "balanceado" / "execucao_1.json").exists()
+    assert len(carregar_resultados(resultados)) == 2
+    assert {row["profile"] for row in gerar_leaderboard(resultados)["leaderboard"]} == {
+        "deterministico",
+        "balanceado",
+    }
+
+
+def test_resultado_persiste_perfil_autocontido_sem_campos_de_orquestracao(tmp_path: Path) -> None:
+    perfil = InferenceProfile(
+        name="balanceado", temperature=0.7, top_p=0.9, repeat_penalty=1.1
+    )
+    result = _result()
+    result.run_config.inference_profiles = [perfil]
+    result.run_config.inference_profile = perfil
+    result.inferencia = snapshot_inferencia(profile=perfil)
+
+    path = _salvar_resultado(result, tmp_path / "resultados")
+    data = __import__("json").loads(path.read_text(encoding="utf-8"))
+
+    assert "inference_profiles" not in data["run_config"]
+    assert "inference_profile" not in data["run_config"]
+    assert "profile" not in data["inferencia"]
+    assert "overrides" not in data["inferencia"]
+    assert data["inferencia"]["perfil"] == perfil.model_dump()
+
+
+def test_leaderboard_prefere_perfil_novo_e_aceita_layouts_anteriores(tmp_path: Path) -> None:
+    resultados = tmp_path / "resultados"
+    novo = _result("novo/modelo")
+    novo.inferencia = {"perfil": {"name": "novo"}}
+    _salvar_resultado(novo, resultados)
+
+    legado = resultados / "legado--modelo-gguf" / "execucao_1.json"
+    legado.parent.mkdir(parents=True)
+    legado.write_text(
+        '{"modelo":"legado/modelo","formato":"gguf",'
+        '"run_config":{"inference_profile":{"name":"intermediario"}},'
+        '"inferencia":{"profile":"antigo"},"tasks":{}}',
+        encoding="utf-8",
+    )
+    antigo = resultados / "antigo--modelo-gguf" / "execucao_1.json"
+    antigo.parent.mkdir(parents=True)
+    antigo.write_text(
+        '{"modelo":"antigo/modelo","formato":"gguf",'
+        '"run_config":{},"inferencia":{"profile":"legado"},"tasks":{}}',
+        encoding="utf-8",
+    )
+
+    perfis = {row["modelo"]: row["profile"] for row in gerar_leaderboard(resultados)["leaderboard"]}
+    assert perfis == {
+        "novo/modelo": "novo",
+        "legado/modelo": "intermediario",
+        "antigo/modelo": "legado",
+    }
+
+
+def test_matriz_executa_cada_modelo_para_cada_perfil(monkeypatch, tmp_path: Path) -> None:
+    perfis = [
+        InferenceProfile(name="p1", temperature=0, top_p=1, repeat_penalty=1.1),
+        InferenceProfile(name="p2", temperature=0.8, top_p=0.9, repeat_penalty=1.2),
+    ]
+    config = RunConfig(
+        modelos=["a/x", "b/y"],
+        inference_profiles=perfis,
+        generation_overrides={"max_tokens": 64},
+        logs_dir=str(tmp_path / "logs"),
+    )
+    chamadas: list[tuple[str, str | None, dict]] = []
+
+    def fake_executar_modelo(config_atual, modelo, logger=None):
+        profile = config_atual.inference_profile
+        chamadas.append((modelo, profile.name if profile else None, config_atual.generation_overrides))
+        return _result(modelo)
+
+    monkeypatch.setattr(calling, "executar_modelo", fake_executar_modelo)
+    calling.executar_matriz(config)
+
+    assert [(modelo, perfil) for modelo, perfil, _ in chamadas] == [
+        ("a/x", "p1"), ("b/y", "p1"), ("a/x", "p2"), ("b/y", "p2"),
+    ]
+    assert chamadas[0][2] == {
+        "max_tokens": 64, "temperature": 0, "top_p": 1, "repeat_penalty": 1.1,
+    }

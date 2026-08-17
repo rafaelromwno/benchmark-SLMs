@@ -62,6 +62,15 @@ Modelos ficam em `modelos_local_gguf/` (gitignored).
 
 Logging JSONL em `logs/`. Resultados em `resultados/`.
 
+## Perfis de inferência
+
+Nas opções de benchmark, selecione um ou mais modelos e perfis nomeados.
+Cada perfil fixa `temperature`, `top_p` e `repeat_penalty`; `max_tokens`
+permanece como parâmetro do protocolo. A execução percorre cada perfil para
+todos os modelos selecionados, preservando o prompt. Os resultados ficam em
+`resultados/<modelo>/<perfil>/execucao_N.json`; execuções legadas, sem perfil,
+continuam em `resultados/<modelo>/execucao_N.json`.
+
 ## Critérios apto_mathia
 
 RAM < 2 GB · TPS ≥ 5 · crash/OOM = 0 · offline · JSON válido conforme task.
