@@ -18,8 +18,16 @@ def catalog_path() -> Path:
 
 
 def load_catalog() -> dict[str, dict]:
+    """Carrega apenas entradas ativas (ignora chaves `_…`, ex. exclusões documentadas)."""
     with open(_CATALOG, encoding="utf-8") as f:
-        return json.load(f)
+        raw = json.load(f)
+    return {
+        mid: entrada
+        for mid, entrada in raw.items()
+        if not str(mid).startswith("_")
+        and isinstance(entrada, dict)
+        and "Modelo" in entrada
+    }
 
 
 def pasta_modelo(repo_id: str, base_dir: Path | None = None) -> Path:

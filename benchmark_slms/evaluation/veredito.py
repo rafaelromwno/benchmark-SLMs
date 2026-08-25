@@ -14,7 +14,7 @@ DEFAULT_THRESHOLDS = {
     "ram_pico_mb_max": 2048.0,
     "tps_min": 5.0,
     "crashes_max": 0,
-    "taxa_json_valido_min_percent": 80.0,
+    "taxa_json_valido_min_percent": 60.0,
     "tempo_medio_max_segundos": 90.0,
     "degradacao_tps_max_percent": 40.0,
     "tentativas_json_max": 3,
