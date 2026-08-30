@@ -232,9 +232,22 @@ def executar_modelo(
 
 
 def executar_matriz(config: RunConfig) -> list[ModelRunResult]:
-    """Loop N modelos × M tasks."""
+    """Loop perfis × seeds × modelos (unidade de réplica = seed)."""
+    from benchmark_slms.protocol import PROTOCOL_SEEDS
+
+    seeds = tuple(PROTOCOL_SEEDS) if config.multi_seed else (config.seed,)
     logger = BenchmarkLogger(logs_dir=config.logs_dir, seed=config.seed)
-    logger.log("calling", "matriz_inicio", extra={"modelos": config.modelos, "tasks": config.tasks})
+    logger.log(
+        "calling",
+        "matriz_inicio",
+        extra={
+            "modelos": config.modelos,
+            "tasks": config.tasks,
+            "seeds": list(seeds),
+            "unidade_replicacao": "modelo × perfil × seed",
+            "n_seeds": len(seeds),
+        },
+    )
 
     resultados = []
     perfis = config.inference_profiles or [None]
@@ -252,9 +265,19 @@ def executar_matriz(config: RunConfig) -> list[ModelRunResult]:
                     "inference_profile": perfil,
                 }
             )
-        for modelo in config_perfil.modelos:
-            result = executar_modelo(config_perfil, modelo, logger=logger)
-            resultados.append(result)
+        for seed in seeds:
+            config_seed = config_perfil.model_copy(
+                update={
+                    "seed": seed,
+                    "generation_overrides": {
+                        **config_perfil.generation_overrides,
+                        "seed": seed,
+                    },
+                }
+            )
+            for modelo in config_seed.modelos:
+                result = executar_modelo(config_seed, modelo, logger=logger)
+                resultados.append(result)
 
     logger.log("calling", "matriz_concluida", extra={"total": len(resultados)})
     return resultados

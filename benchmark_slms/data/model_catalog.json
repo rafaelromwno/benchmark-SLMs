@@ -45,172 +45,206 @@
         "Quantizacao": "Q4_K_M"
     },
     "9": {
-        "Modelo": "google/gemma-2-2b-it-GGUF",
-        "Arquivo": "2b_it_v2.gguf",
-        "Quantizacao": "F32/verificar"
-    },
-    "10": {
-        "Modelo": "microsoft/Phi-3-mini-4k-instruct-gguf",
-        "Arquivo": "Phi-3-mini-4k-instruct-q4.gguf",
-        "Quantizacao": "Q4"
-    },
-    "11": {
         "Modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
         "Arquivo": "HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf",
         "Quantizacao": "Q4_K_M"
     },
-    "12": {
-        "Modelo": "bartowski/google_gemma-3-4b-it-GGUF",
-        "Arquivo": "google_gemma-3-4b-it-Q4_K_M.gguf",
-        "Quantizacao": "Q4_K_M"
-    },
-    "13": {
-        "Modelo": "bartowski/Phi-3.5-mini-instruct-GGUF",
-        "Arquivo": "Phi-3.5-mini-instruct-Q4_K_M.gguf",
-        "Quantizacao": "Q4_K_M"
-    },
-    "14": {
+    "10": {
         "Modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
         "Arquivo": "qwen1_5-1_8b-chat-q4_k_m.gguf",
         "Quantizacao": "Q4_K_M"
     },
-    "15": {
+    "11": {
         "Modelo": "TheBloke/phi-2-GGUF",
         "Arquivo": "phi-2.Q4_K_M.gguf",
         "Quantizacao": "Q4_K_M"
     },
-    "16": {
+    "12": {
         "Modelo": "BafS/gemma-2-2b-it-Q4_K_M-GGUF",
         "Arquivo": "gemma-2-2b-it-q4_k_m.gguf",
         "Quantizacao": "Q4_K_M"
     },
-    "17": {
-        "Modelo": "tensorblock/togethercomputer_RedPajama-INCITE-Chat-3B-v1-GGUF",
-        "Arquivo": "RedPajama-INCITE-Chat-3B-v1-Q4_K_M.gguf",
-        "Quantizacao": "Q4_K_M"
-    },
-    "18": {
+    "13": {
         "Modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
         "Arquivo": "SmolLM2-135M-Instruct-Q4_K_M.gguf",
         "Quantizacao": "Q4_K_M"
     },
-    "19": {
+    "14": {
         "Modelo": "bartowski/Qwen_Qwen3-0.6B-GGUF",
         "Arquivo": "Qwen_Qwen3-0.6B-Q4_K_M.gguf",
         "Quantizacao": "Q4_K_M"
     },
-    "20": {
-        "Modelo": "bartowski/Qwen2-Math-1.5B-Instruct-GGUF",
-        "Arquivo": "Qwen2-Math-1.5B-Instruct-Q4_K_M.gguf",
-        "Quantizacao": "Q4_K_M"
-    },
-    "21": {
-        "Modelo": "bartowski/microsoft_Phi-4-mini-reasoning-GGUF",
-        "Arquivo": "microsoft_Phi-4-mini-reasoning-Q4_K_M.gguf",
-        "Quantizacao": "Q4_K_M"
-    },
-    "22": {
+    "15": {
         "Modelo": "ggml-org/Qwen3-1.7B-GGUF",
         "Arquivo": "Qwen3-1.7B-Q4_K_M.gguf",
         "Quantizacao": "Q4_K_M"
     },
-    "23": {
+    "16": {
         "Modelo": "eltonsarmanho/qwen3-1.7b-questoes-matematica",
         "Arquivo": "gguf/qwen3-1.7b.Q4_K_M.gguf",
         "Quantizacao": "Q4_K_M"
     },
     "_excluidos_corte_literatura": {
-        "_nota": "Excluídos pelo corte C1–C3 (selecao-modelos-corte-literatura). Mantidos só como referência; load_catalog() ignora esta chave. IdAnterior = índice no catálogo antes do corte.",
+        "_nota": "Excluídos pelos cortes C1–C3 (corte 1) e pelo pacote leve C4–C6+C8 (corte 2). C7 (piso ≥0,5B) e C9 (anti-legado) NÃO entram neste pacote — SmolLM2-135M, Qwen1.5 e phi-2 permanecem ativos. load_catalog() ignora esta chave. IdAnterior no corte 1 = índice no catálogo de 37; no corte 2 = índice no catálogo de 24 (após C1–C3).",
         "0": {
             "IdAnterior": "14",
             "Modelo": "bartowski/granite-3.0-2b-instruct-GGUF",
             "Arquivo": "granite-3.0-2b-instruct-Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "família sem precedente explícito na literatura lida"
+            "Motivo": "família sem precedente explícito na literatura lida",
+            "Corte": "C1-C3"
         },
         "1": {
             "IdAnterior": "15",
             "Modelo": "bartowski/Mistral-7B-Instruct-v0.3-GGUF",
             "Arquivo": "Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "tamanho 7B ≥ 5B; família sem precedente explícito na literatura lida"
+            "Motivo": "tamanho 7B ≥ 5B; família sem precedente explícito na literatura lida",
+            "Corte": "C1-C3"
         },
         "2": {
             "IdAnterior": "16",
             "Modelo": "bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
             "Arquivo": "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "tamanho 8B ≥ 5B (corte Mathia)"
+            "Motivo": "tamanho 8B ≥ 5B (corte Mathia)",
+            "Corte": "C1-C3"
         },
         "3": {
             "IdAnterior": "17",
             "Modelo": "ibm-granite/granite-3.0-8b-instruct-GGUF",
             "Arquivo": "granite-3.0-8b-instruct-Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "tamanho 8B ≥ 5B; família sem precedente explícito na literatura lida"
+            "Motivo": "tamanho 8B ≥ 5B; família sem precedente explícito na literatura lida",
+            "Corte": "C1-C3"
         },
         "4": {
             "IdAnterior": "18",
             "Modelo": "bartowski/WizardLMTeam_WizardMath-7B-V1.0-GGUF",
             "Arquivo": "WizardMath-7B-V1.0-Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "tamanho 7B ≥ 5B; família sem precedente explícito na literatura lida"
+            "Motivo": "tamanho 7B ≥ 5B; família sem precedente explícito na literatura lida",
+            "Corte": "C1-C3"
         },
         "5": {
             "IdAnterior": "19",
             "Modelo": "bartowski/gemma-7b-it-GGUF",
             "Arquivo": "gemma-7b-it-Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "tamanho 7B ≥ 5B (corte Mathia)"
+            "Motivo": "tamanho 7B ≥ 5B (corte Mathia)",
+            "Corte": "C1-C3"
         },
         "6": {
             "IdAnterior": "20",
             "Modelo": "Qwen/Qwen2.5-7B-Instruct-GGUF",
             "Arquivo": "qwen2.5-7b-instruct-q4_k_m.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "tamanho 7B ≥ 5B (corte Mathia)"
+            "Motivo": "tamanho 7B ≥ 5B (corte Mathia)",
+            "Corte": "C1-C3"
         },
         "7": {
             "IdAnterior": "22",
             "Modelo": "TheBloke/stablelm-zephyr-3b-GGUF",
             "Arquivo": "stablelm-zephyr-3b.Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "família sem precedente explícito na literatura lida"
+            "Motivo": "família sem precedente explícito na literatura lida",
+            "Corte": "C1-C3"
         },
         "8": {
             "IdAnterior": "25",
             "Modelo": "MuffinMich/MiniCPM-2B-dpo-bf16-Q4_K_M-GGUF",
             "Arquivo": "minicpm-2b-dpo-bf16-q4_k_m.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "família sem precedente explícito na literatura lida"
+            "Motivo": "família sem precedente explícito na literatura lida",
+            "Corte": "C1-C3"
         },
         "9": {
             "IdAnterior": "26",
             "Modelo": "tensorblock/bloom-1b1-GGUF",
             "Arquivo": "bloom-1b1-Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "família sem precedente explícito na literatura lida"
+            "Motivo": "família sem precedente explícito na literatura lida",
+            "Corte": "C1-C3"
         },
         "10": {
             "IdAnterior": "27",
             "Modelo": "tensorblock/bloom-3b-GGUF",
             "Arquivo": "bloom-3b-Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "família sem precedente explícito na literatura lida"
+            "Motivo": "família sem precedente explícito na literatura lida",
+            "Corte": "C1-C3"
         },
         "11": {
             "IdAnterior": "28",
             "Modelo": "tiiuae/Falcon3-1B-Instruct-GGUF",
             "Arquivo": "Falcon3-1B-Instruct-Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "família sem precedente explícito na literatura lida"
+            "Motivo": "família sem precedente explícito na literatura lida",
+            "Corte": "C1-C3"
         },
         "12": {
             "IdAnterior": "34",
             "Modelo": "mradermacher/rho-math-1b-v0.1-GGUF",
             "Arquivo": "rho-math-1b-v0.1.Q4_K_M.gguf",
             "Quantizacao": "Q4_K_M",
-            "Motivo": "família sem precedente explícito na literatura lida"
+            "Motivo": "família sem precedente explícito na literatura lida",
+            "Corte": "C1-C3"
+        },
+        "13": {
+            "IdAnterior": "9",
+            "Modelo": "google/gemma-2-2b-it-GGUF",
+            "Arquivo": "2b_it_v2.gguf",
+            "Quantizacao": "F32/verificar",
+            "Motivo": "C5 quantização atípica (F32); C6 duplicata de Gemma-2-2B (fica variante Q4_K_M)",
+            "Corte": "C4-C6+C8"
+        },
+        "14": {
+            "IdAnterior": "10",
+            "Modelo": "microsoft/Phi-3-mini-4k-instruct-gguf",
+            "Arquivo": "Phi-3-mini-4k-instruct-q4.gguf",
+            "Quantizacao": "Q4",
+            "Motivo": "C4 disco GGUF >2,0 GB; C5 quantização Q4 (não Q4_K_M)",
+            "Corte": "C4-C6+C8"
+        },
+        "15": {
+            "IdAnterior": "12",
+            "Modelo": "bartowski/google_gemma-3-4b-it-GGUF",
+            "Arquivo": "google_gemma-3-4b-it-Q4_K_M.gguf",
+            "Quantizacao": "Q4_K_M",
+            "Motivo": "C4 disco GGUF >2,0 GB",
+            "Corte": "C4-C6+C8"
+        },
+        "16": {
+            "IdAnterior": "13",
+            "Modelo": "bartowski/Phi-3.5-mini-instruct-GGUF",
+            "Arquivo": "Phi-3.5-mini-instruct-Q4_K_M.gguf",
+            "Quantizacao": "Q4_K_M",
+            "Motivo": "C4 disco GGUF >2,0 GB",
+            "Corte": "C4-C6+C8"
+        },
+        "17": {
+            "IdAnterior": "17",
+            "Modelo": "tensorblock/togethercomputer_RedPajama-INCITE-Chat-3B-v1-GGUF",
+            "Arquivo": "RedPajama-INCITE-Chat-3B-v1-Q4_K_M.gguf",
+            "Quantizacao": "Q4_K_M",
+            "Motivo": "C8 fraqueza em PT-BR documentada (Evaluating-large)",
+            "Corte": "C4-C6+C8"
+        },
+        "18": {
+            "IdAnterior": "20",
+            "Modelo": "bartowski/Qwen2-Math-1.5B-Instruct-GGUF",
+            "Arquivo": "Qwen2-Math-1.5B-Instruct-Q4_K_M.gguf",
+            "Quantizacao": "Q4_K_M",
+            "Motivo": "C6 duplicata de especialização Math (fica Qwen2.5-Math-1.5B)",
+            "Corte": "C4-C6+C8"
+        },
+        "19": {
+            "IdAnterior": "21",
+            "Modelo": "bartowski/microsoft_Phi-4-mini-reasoning-GGUF",
+            "Arquivo": "microsoft_Phi-4-mini-reasoning-Q4_K_M.gguf",
+            "Quantizacao": "Q4_K_M",
+            "Motivo": "C4 disco GGUF >2,0 GB",
+            "Corte": "C4-C6+C8"
         }
     }
 }
