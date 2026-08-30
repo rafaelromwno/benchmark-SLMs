@@ -15,3 +15,15 @@ PROTOCOL_SAMPLING_FREEZE: dict[str, float | int | bool] = {
     "frequency_penalty": 0.0,
     "enable_thinking": False,
 }
+
+# Timeout wall-clock (s) por cenário — falha vira codigo_falha="timeout".
+PROTOCOL_TIMEOUTS_S: dict[str, float] = {
+    "cenario_a": 180.0,
+    "cenario_b": 120.0,
+    "cenario_c": 120.0,
+    "cenario_d": 120.0,
+}
+PROTOCOL_TIMEOUT_DEFAULT_S: float = 120.0
+
+# Unidade de análise do quadro principal (parecer v4).
+ANALYSIS_UNIT = "execucao"  # modelo × perfil × seed (= 1 JSON em resultados/)

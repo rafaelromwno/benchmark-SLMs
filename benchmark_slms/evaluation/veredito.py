@@ -79,9 +79,17 @@ def veredito(
         agg = er.agregado
         ram_pico = max(ram_pico, viab.get("ram_pico_mb", agg.get("ram_pico_mb", 0)))
         tps = viab.get("tps_medio", viab.get("tps", float("inf")))
-        if tps < tps_medio:
-            tps_medio = tps
-        crashes += agg.get("crashes_oom", 0)
+        if isinstance(tps, dict):
+            tps = tps.get("media", float("inf"))
+        if isinstance(tps, (int, float)) and tps < tps_medio:
+            tps_medio = float(tps)
+        falhas = agg.get("contagem_falhas") or {}
+        if falhas:
+            crashes += sum(
+                int(falhas.get(c, 0)) for c in ("oom", "timeout", "crash_motor")
+            )
+        else:
+            crashes += int(agg.get("crashes_oom", 0)) + int(agg.get("falhas_infra", 0))
         if agg.get("tempo_medio_segundos"):
             tempo_medio = max(tempo_medio, agg["tempo_medio_segundos"])
         if "taxa_json_valido_percent" in agg:

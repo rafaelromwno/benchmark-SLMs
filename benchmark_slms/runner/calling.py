@@ -177,6 +177,7 @@ def executar_modelo(
             seed=config.seed,
             metricas_load=metricas_load,
             generation_overrides=config.generation_overrides or None,
+            timeout_s=config.timeout_s,
         )
         result.tasks[task_id] = eval_result
 

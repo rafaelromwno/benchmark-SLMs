@@ -77,12 +77,19 @@ class UsageStats(BaseModel):
     total_tokens: int = 0
 
 
+CodigoFalha = Literal["oom", "timeout", "json_invalido", "crash_motor", "ok"]
+
+
 class InferenceMetrics(BaseModel):
     """Métricas de uma inferência.
 
     ``tempo_carregamento_s`` só é preenchido quando a carga do GGUF foi
     medida (cenário A / cold start). Em B–D o campo fica ``None`` e é
     omitido na serialização — o modelo já está em memória.
+
+    ``codigo_falha`` classifica o desfecho operacional da execução
+    (pareceres v1/v3/v4). ``crash`` permanece como atalho legado
+    (True se codigo ∈ {oom, timeout, crash_motor}).
     """
 
     tempo_carregamento_s: float | None = None
@@ -98,6 +105,7 @@ class InferenceMetrics(BaseModel):
     ram_usada_mb: float = 0.0
     crash: bool = False
     crash_motivo: str | None = None
+    codigo_falha: CodigoFalha = "ok"
 
     @model_serializer(mode="wrap")
     def _omitir_carregamento_nao_medido(self, handler):
@@ -130,6 +138,12 @@ class EvalResult(BaseModel):
     json_erro: str | None = None
     quantidade_ok: bool = True
     quantidade_erro: str | None = None
+    # Consistência interna do gabarito gerado (A–E ∈ alternativas + resolução).
+    # Não substitui ground-truth curado (M8); alimenta a coluna Gabarito % do quadro.
+    gabarito_ok: bool | None = None
+    # Desfecho primário por execução: JSON ∧ gabarito ∧ codigo_falha==ok.
+    utilizavel: bool = False
+    codigo_falha: CodigoFalha = "ok"
     parsed: GeneratedQuestionsResponse | None = None
     viabilidade: dict[str, Any] = Field(default_factory=dict)
     agregado: dict[str, Any] = Field(default_factory=dict)
@@ -183,6 +197,8 @@ class RunConfig(BaseModel):
     n_ctx: int = 2048
     n_threads: int = 8
     n_gpu_layers: int = 0
+    # Timeout wall-clock (s). None → PROTOCOL_TIMEOUTS_S / default do protocolo.
+    timeout_s: float | None = None
     # Sobrescreve defaults por cenário (só chaves presentes). Persistido no JSON.
     generation_overrides: dict[str, Any] = Field(default_factory=dict)
     # Perfis selecionados para a matriz. ``inference_profile`` identifica a run atual.
