@@ -202,14 +202,28 @@ def veredito(
     apto = len(hard_falhas) == 0
     motivos = [c.motivo for c in criterios if not c.passou and c.motivo]
 
+    # Todas as categorias hard que falharam (dedup, ordem estável)
+    categorias: list[CategoriaFalha] = []
+    for c in hard_falhas:
+        if c.categoria_falha != CategoriaFalha.NENHUMA and c.categoria_falha not in categorias:
+            categorias.append(c.categoria_falha)
+
+    # Primária: hardware > formato > performance > qualidade > primeira
+    _prio = {
+        CategoriaFalha.HARDWARE: 0,
+        CategoriaFalha.FORMATO: 1,
+        CategoriaFalha.PERFORMANCE: 2,
+        CategoriaFalha.QUALIDADE_CONTEUDO: 3,
+    }
     categoria = CategoriaFalha.NENHUMA
-    if hard_falhas:
-        categoria = hard_falhas[0].categoria_falha
+    if categorias:
+        categoria = sorted(categorias, key=lambda x: _prio.get(x, 99))[0]
 
     return Veredito(
         apto_mathia=apto,
         criterios=criterios,
         motivos_reprovacao=motivos,
         categoria_falha=categoria,
+        categorias_falha=categorias,
         modelo=modelo,
     )

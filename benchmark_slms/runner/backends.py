@@ -25,6 +25,10 @@ class ModelBackend(ABC):
     def unload(self) -> None:
         """Libera recursos do modelo."""
 
+    def definir_metricas(self, metricas) -> None:
+        """Associa o monitor de métricas da rodada atual (TTFT/RAM)."""
+        self._metricas = metricas
+
 
 class GGUDBackend(ModelBackend):
     def __init__(
@@ -57,9 +61,7 @@ class GGUDBackend(ModelBackend):
     def gerar(self, prompt: Prompt) -> GenerationResult:
         messages = [{"role": m.role, "content": m.content} for m in prompt.messages]
         gen = prompt.generation
-
-        if self._metricas:
-            self._metricas.marcar_inicio_resposta()
+        m = self._metricas
 
         kwargs: dict[str, Any] = {
             "messages": messages,
@@ -74,19 +76,92 @@ class GGUDBackend(ModelBackend):
         if "min_p" in gen:
             kwargs["min_p"] = float(gen["min_p"])
 
-        resposta = self._llm.create_chat_completion(**kwargs)
+        if m:
+            m.marcar_inicio_resposta()
 
-        if self._metricas:
-            self._metricas.marcar_primeiro_token()
+        try:
+            return self._gerar_stream(kwargs, m)
+        except Exception as exc_stream:
+            # Stream do llama-cpp pode falhar ou voltar vazio sob carga —
+            # tenta uma vez em modo bloqueante antes de propagar.
+            try:
+                if m:
+                    m.marcar_inicio_resposta()
+                return self._gerar_bloqueante(kwargs, m)
+            except Exception as exc_block:
+                raise RuntimeError(
+                    f"GGUF falhou no stream ({type(exc_stream).__name__}: "
+                    f"{str(exc_stream).strip() or repr(exc_stream)}) e no "
+                    f"fallback ({type(exc_block).__name__}: "
+                    f"{str(exc_block).strip() or repr(exc_block)})"
+                ) from exc_block
 
-        usage_data = resposta.get("usage", {})
-        usage = UsageStats(
-            prompt_tokens=usage_data.get("prompt_tokens", 0),
-            completion_tokens=usage_data.get("completion_tokens", 0),
-            total_tokens=usage_data.get("total_tokens", 0),
+    def _gerar_stream(self, kwargs: dict[str, Any], m) -> GenerationResult:
+        partes: list[str] = []
+        usage_data: dict[str, Any] = {}
+        primeiro = True
+        for chunk in self._llm.create_chat_completion(**kwargs, stream=True):
+            if primeiro and m is not None:
+                m.marcar_primeiro_token()
+                primeiro = False
+            choice = (chunk.get("choices") or [{}])[0]
+            delta = choice.get("delta") or {}
+            conteudo = delta.get("content")
+            if conteudo:
+                partes.append(conteudo)
+            if chunk.get("usage"):
+                usage_data = chunk["usage"]
+
+        if primeiro and m is not None:
+            m.marcar_primeiro_token()
+
+        texto = "".join(partes)
+        if not texto.strip():
+            raise RuntimeError(
+                "stream_vazio: create_chat_completion(stream=True) sem conteúdo"
+            )
+        return self._montar_resultado(texto, usage_data)
+
+    def _gerar_bloqueante(self, kwargs: dict[str, Any], m) -> GenerationResult:
+        resposta = self._llm.create_chat_completion(**kwargs, stream=False)
+        if m is not None:
+            m.marcar_primeiro_token()
+        texto = (
+            ((resposta.get("choices") or [{}])[0].get("message") or {}).get("content")
+            or ""
         )
-        text = resposta["choices"][0]["message"]["content"]
-        return GenerationResult(text=text, usage=usage, raw=resposta)
+        if not texto.strip():
+            raise RuntimeError("resposta_vazia: create_chat_completion sem conteúdo")
+        return self._montar_resultado(texto, resposta.get("usage") or {}, raw=resposta)
+
+    def _montar_resultado(
+        self,
+        texto: str,
+        usage_data: dict[str, Any],
+        raw: dict[str, Any] | None = None,
+    ) -> GenerationResult:
+        prompt_tokens = int(usage_data.get("prompt_tokens", 0))
+        completion_tokens = int(usage_data.get("completion_tokens", 0))
+        if completion_tokens == 0 and texto:
+            try:
+                completion_tokens = max(
+                    1, len(self._llm.tokenize(texto.encode("utf-8"), add_bos=False))
+                )
+            except Exception:
+                completion_tokens = max(1, len(texto) // 4)
+        total_tokens = int(usage_data.get("total_tokens", 0)) or (
+            prompt_tokens + completion_tokens
+        )
+        usage = UsageStats(
+            prompt_tokens=prompt_tokens,
+            completion_tokens=completion_tokens,
+            total_tokens=total_tokens,
+        )
+        return GenerationResult(
+            text=texto,
+            usage=usage,
+            raw=raw if raw is not None else {"streamed": True, "usage": usage_data},
+        )
 
     def unload(self) -> None:
         del self._llm
@@ -103,7 +178,9 @@ class SafetensorsBackend(ModelBackend):
             metricas.tempo_load_modelo_inicial()
 
         self._tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True)
-        self._model = AutoModelForCausalLM.from_pretrained(model_path, local_files_only=True)
+        self._model = AutoModelForCausalLM.from_pretrained(
+            model_path, local_files_only=True
+        )
         self._model.eval()
 
         if metricas:

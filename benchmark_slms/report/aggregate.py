@@ -63,18 +63,26 @@ def _agg_b(resultado: dict) -> dict:
 
 
 def _proporcao(execs: list[dict], chave_taxa: str, chave_ok: str, chave_n: str) -> dict[str, Any]:
+    """Agrega contagens entre seeds. `taxa_*=None` (ex.: gabarito sem JSON) não entra no float()."""
     ok = n = 0
     for r in execs:
         agg = _agg_b(r)
-        if chave_ok in agg and chave_n in agg and agg[chave_n]:
-            ok += int(agg[chave_ok])
-            n += int(agg[chave_n])
-        elif chave_taxa in agg and agg.get("rodadas"):
-            rodadas = int(agg["rodadas"])
-            ok += int(round(float(agg[chave_taxa]) / 100.0 * rodadas))
-            n += rodadas
-        else:
-            n += 1
+        if chave_n in agg:
+            n_i = int(agg.get(chave_n) or 0)
+            if n_i <= 0:
+                continue
+            ok += int(agg.get(chave_ok) or 0)
+            n += n_i
+            continue
+        taxa = agg.get(chave_taxa)
+        rodadas = agg.get("rodadas")
+        if taxa is not None and rodadas:
+            n_i = int(rodadas)
+            ok += int(round(float(taxa) / 100.0 * n_i))
+            n += n_i
+            continue
+        # Sem denominador explícito: conta 1 tentativa (falha/ausência)
+        n += 1
     return wilson_ic95(ok, n)
 
 
@@ -189,71 +197,157 @@ def gerar_leaderboard(resultados_dir: str | Path = "resultados") -> dict:
     }
 
 
-def gerar_quadro_principal(resultados_dir: str | Path = "resultados") -> dict:
-    dados = carregar_resultados(resultados_dir)
-    por_modelo: dict[str, list[dict]] = defaultdict(list)
-    for r in dados:
-        por_modelo[r.get("modelo") or "desconhecido"].append(r)
+def _slug_modelo(modelo: str) -> str:
+    return (
+        modelo.replace("/", "--")
+        .replace(":", "-")
+        .replace(" ", "-")
+        .lower()
+    )
 
-    linhas = []
-    for modelo, execs in sorted(por_modelo.items()):
-        utilizavel = _proporcao(execs, "taxa_utilizavel_percent", "utilizaveis", "rodadas")
-        json_prop = _proporcao(execs, "taxa_json_valido_percent", "json_validos", "rodadas")
-        gabarito = _proporcao(execs, "taxa_gabarito_percent", "gabarito_ok", "gabarito_avaliados")
-        estaveis = _estaveis(execs)
 
-        tps_vals = _lista(execs, "tps", "tps_por_rodada")
-        ttft_vals = _lista(execs, "ttft", "ttft_por_rodada")
-        ram_vals = _lista(execs, "ram_pico", "ram_por_rodada")
-        if not ram_vals:
-            for r in execs:
-                pico = _ram_pico(r.get("tasks") or {})
-                if pico:
-                    ram_vals.append(pico)
+def _linha_quadro(modelo: str, perfil: str | None, execs: list[dict]) -> dict[str, Any]:
+    """Uma linha do artigo: agrega todas as seeds de (modelo × perfil)."""
+    utilizavel = _proporcao(execs, "taxa_utilizavel_percent", "utilizaveis", "rodadas")
+    json_prop = _proporcao(execs, "taxa_json_valido_percent", "json_validos", "rodadas")
+    gabarito = _proporcao(execs, "taxa_gabarito_percent", "gabarito_ok", "gabarito_avaliados")
+    estaveis = _estaveis(execs)
 
-        tps = resumo_continuo(tps_vals)
-        ttft = resumo_continuo(ttft_vals)
-        ram = resumo_continuo(ram_vals)
-
-        falhas: Counter[str] = Counter()
+    tps_vals = _lista(execs, "tps", "tps_por_rodada")
+    ttft_vals = _lista(execs, "ttft", "ttft_por_rodada")
+    ram_vals = _lista(execs, "ram_pico", "ram_por_rodada")
+    if not ram_vals:
         for r in execs:
-            for k, v in (_agg_b(r).get("contagem_falhas") or {}).items():
-                falhas[k] += int(v)
+            pico = _ram_pico(r.get("tasks") or {})
+            if pico:
+                ram_vals.append(pico)
 
-        linhas.append(
-            {
-                "modelo": modelo,
-                "n_execucoes": len(execs),
-                "utilizaveis": utilizavel,
-                "json": json_prop,
-                "gabarito": gabarito,
-                "estaveis": estaveis,
-                "tps": {**tps, "ic95_mediana": bootstrap_ic_mediana(tps_vals)},
-                "ttft": {**ttft, "ic95_mediana": bootstrap_ic_mediana(ttft_vals)},
-                "ram_pico": ram,
-                "contagem_falhas": dict(falhas),
-                "utilizaveis_fmt": utilizavel.get("formato"),
-                "json_fmt": json_prop.get("formato"),
-                "gabarito_fmt": gabarito.get("formato"),
-                "estaveis_fmt": estaveis.get("formato"),
-                "tps_mediana": tps.get("mediana"),
-                "tps_p95": tps.get("p95"),
-                "ttft_mediana": ttft.get("mediana"),
-                "ttft_p95": ttft.get("p95"),
-                "ram_pico_mb": ram.get("max") or ram.get("mediana"),
-            }
+    tps = resumo_continuo(tps_vals)
+    ttft = resumo_continuo(ttft_vals)
+    ram = resumo_continuo(ram_vals)
+
+    falhas: Counter[str] = Counter()
+    for r in execs:
+        for k, v in (_agg_b(r).get("contagem_falhas") or {}).items():
+            falhas[k] += int(v)
+
+    seeds = sorted({s for s in (_seed(r) for r in execs) if s is not None})
+    return {
+        "modelo": modelo,
+        "perfil": perfil,
+        "n_execucoes": len(execs),
+        "seeds": seeds,
+        "utilizaveis": utilizavel,
+        "json": json_prop,
+        "gabarito": gabarito,
+        "estaveis": estaveis,
+        "tps": {**tps, "ic95_mediana": bootstrap_ic_mediana(tps_vals)},
+        "ttft": {**ttft, "ic95_mediana": bootstrap_ic_mediana(ttft_vals)},
+        "ram_pico": ram,
+        "contagem_falhas": dict(falhas),
+        "utilizaveis_fmt": utilizavel.get("formato"),
+        "json_fmt": json_prop.get("formato"),
+        "gabarito_fmt": gabarito.get("formato"),
+        "estaveis_fmt": estaveis.get("formato"),
+        "tps_mediana": tps.get("mediana"),
+        "tps_media": tps.get("media"),
+        "tps_p95": tps.get("p95"),
+        "ttft_mediana": ttft.get("mediana"),
+        "ttft_media": ttft.get("media"),
+        "ttft_p95": ttft.get("p95"),
+        "ram_pico_mb": ram.get("max") or ram.get("mediana"),
+    }
+
+
+def gerar_quadro_principal(resultados_dir: str | Path = "resultados") -> dict:
+    """1 linha por (modelo × perfil), agregando seeds — JSON único da issue #26."""
+    from datetime import datetime, timezone
+
+    dados = carregar_resultados(resultados_dir)
+    por_celula: dict[tuple[str, str | None], list[dict]] = defaultdict(list)
+    for r in dados:
+        modelo = r.get("modelo") or "desconhecido"
+        por_celula[(modelo, _perfil(r))].append(r)
+
+    linhas = [
+        _linha_quadro(modelo, perfil, execs)
+        for (modelo, perfil), execs in sorted(
+            por_celula.items(), key=lambda kv: (kv[0][0], kv[0][1] or "")
         )
+    ]
 
     return {
+        "schema": "benchmark_slms.quadro_principal.v1",
+        "gerado_em": datetime.now(timezone.utc).isoformat(),
         "quadro_principal": linhas,
         "unidade_analise": "execucao",
+        "unidade_linha": "modelo × perfil",
         "nota": (
             "Utilizável = JSON ∧ gabarito estrutural ∧ codigo_falha=ok. "
             "Gabarito é consistência interna (proxy até GT curado em M8). "
+            "Proporções: Wilson IC95% sobre rodadas/seeds; "
+            "TPS/TTFT: mediana+IQR+p95 e bootstrap IC95% da mediana. "
             "Não ranquear modelos quando ICs de utilizáveis se sobrepõem."
         ),
-        "total_modelos": len(linhas),
+        "total_linhas": len(linhas),
+        "total_modelos": len({row["modelo"] for row in linhas}),
     }
+
+
+def salvar_quadro_principal(
+    resultados_dir: str | Path = "resultados",
+    *,
+    quadro: dict | None = None,
+) -> Path:
+    """Persiste o JSON único + `resumo.json` por pasta modelo/perfil."""
+    pasta = Path(resultados_dir)
+    pasta.mkdir(parents=True, exist_ok=True)
+    quadro = quadro or gerar_quadro_principal(pasta)
+    destino = pasta / "quadro_principal.json"
+    destino.write_text(
+        json.dumps(quadro, indent=2, ensure_ascii=False, default=str),
+        encoding="utf-8",
+    )
+    for row in quadro.get("quadro_principal") or []:
+        perfil = row.get("perfil") or "sem_perfil"
+        celula = pasta / _slug_modelo(row["modelo"]) / perfil
+        # se a pasta da célula ainda não existe (slug divergente), grava só o global
+        if not celula.exists():
+            # tenta localizar pasta existente do modelo
+            candidatos = [
+                p for p in pasta.iterdir()
+                if p.is_dir() and row["modelo"].replace("/", "--") in p.name
+            ] if pasta.exists() else []
+            celula = (candidatos[0] / perfil) if candidatos else celula
+        celula.mkdir(parents=True, exist_ok=True)
+        resumo = {
+            "schema": "benchmark_slms.resumo_celula.v1",
+            "modelo": row["modelo"],
+            "perfil": row.get("perfil"),
+            "n_execucoes": row["n_execucoes"],
+            "seeds": row.get("seeds") or [],
+            "metricas": {
+                "utilizaveis": row["utilizaveis"],
+                "json": row["json"],
+                "gabarito": row["gabarito"],
+                "estaveis": row["estaveis"],
+                "tps": row["tps"],
+                "ttft": row["ttft"],
+                "ram_pico": row["ram_pico"],
+                "contagem_falhas": row["contagem_falhas"],
+            },
+            "formatos": {
+                "utilizaveis": row.get("utilizaveis_fmt"),
+                "json": row.get("json_fmt"),
+                "gabarito": row.get("gabarito_fmt"),
+                "estaveis": row.get("estaveis_fmt"),
+            },
+        }
+        (celula / "resumo.json").write_text(
+            json.dumps(resumo, indent=2, ensure_ascii=False, default=str),
+            encoding="utf-8",
+        )
+    return destino
 
 
 def imprimir_leaderboard(resultados_dir: str | Path = "resultados") -> None:
@@ -276,12 +370,15 @@ def imprimir_leaderboard(resultados_dir: str | Path = "resultados") -> None:
 
 def imprimir_quadro_principal(resultados_dir: str | Path = "resultados") -> None:
     quadro = gerar_quadro_principal(resultados_dir)
+    caminho = salvar_quadro_principal(resultados_dir, quadro=quadro)
     print(f"\n{'='*72}")
-    print("QUADRO PRINCIPAL (1 linha/modelo) — unidade: execução")
+    print("QUADRO PRINCIPAL (1 linha / modelo × perfil) — unidade: execução")
     print(f"{'='*72}")
     print(quadro["nota"])
+    print(f"JSON: {caminho}")
     for row in quadro["quadro_principal"]:
-        print(f"\n{row['modelo']} (n={row['n_execucoes']})")
+        perfil = row.get("perfil") or "?"
+        print(f"\n{row['modelo']} [{perfil}] (n={row['n_execucoes']} seeds={row.get('seeds')})")
         print(f"  Utilizáveis: {row['utilizaveis_fmt']}")
         print(f"  JSON:        {row['json_fmt']}")
         print(f"  Gabarito:    {row['gabarito_fmt']}")

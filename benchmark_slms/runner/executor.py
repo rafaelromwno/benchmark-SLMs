@@ -20,16 +20,19 @@ def resolver_timeout_s(task_id: str | None, override: float | None = None) -> fl
 
 
 def classificar_excecao(exc: BaseException) -> tuple[CodigoFalha, str]:
+    nome = type(exc).__name__
+    detalhe = str(exc).strip() or repr(exc)
     if isinstance(exc, MemoryError):
-        return "oom", f"OOM: {exc}"
+        return "oom", f"OOM: {detalhe}"
     if isinstance(exc, TimeoutError):
-        return "timeout", str(exc) or "timeout"
-    msg = str(exc).lower()
+        return "timeout", detalhe if detalhe not in {"", "TimeoutError()"} else "timeout"
+    msg = detalhe.lower()
     if "timed out" in msg or "timeout" in msg:
-        return "timeout", f"timeout: {exc}"
+        return "timeout", f"timeout: {detalhe}"
     if "out of memory" in msg or msg.startswith("oom") or "cannot allocate memory" in msg:
-        return "oom", f"OOM: {exc}"
-    return "crash_motor", str(exc)
+        return "oom", f"OOM: {detalhe}"
+    # Sempre inclui o tipo — evita crash_motivo="" quando str(exc) é vazio
+    return "crash_motor", f"{nome}: {detalhe}"
 
 
 def executar_prompt(
@@ -47,6 +50,9 @@ def executar_prompt(
     crash_motivo: str | None = None
     result: GenerationResult | None = None
     limite = resolver_timeout_s(prompt.task_id, timeout_s)
+
+    if metricas is not None and hasattr(backend, "definir_metricas"):
+        backend.definir_metricas(metricas)
 
     try:
         with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
@@ -78,6 +84,16 @@ def executar_prompt(
                 metricas.finalizar_rodada(0)
             else:
                 metricas.finalizar(0)
+
+    # Stream/backend às vezes “conclui” sem texto — trata como falha explícita
+    if (
+        not crash
+        and result is not None
+        and not (result.text or "").strip()
+    ):
+        crash = True
+        codigo = "crash_motor"
+        crash_motivo = "resposta_vazia: backend retornou texto vazio"
 
     metrics = metricas.to_inference_metrics() if metricas else InferenceMetrics()
     metrics.crash = crash

@@ -174,8 +174,11 @@ def test_quadro_principal_preenche_colunas_do_artigo(tmp_path: Path) -> None:
 
     quadro = gerar_quadro_principal(tmp_path)
     assert quadro["unidade_analise"] == "execucao"
+    assert quadro["unidade_linha"] == "modelo × perfil"
     assert quadro["total_modelos"] == 1
+    assert quadro["total_linhas"] == 1
     row = quadro["quadro_principal"][0]
+    assert row["perfil"] == "balanceado"
     assert row["utilizaveis_fmt"] and "%" in row["utilizaveis_fmt"] and "[" in row["utilizaveis_fmt"]
     assert row["json_fmt"]
     assert row["gabarito_fmt"]
@@ -188,3 +191,70 @@ def test_quadro_principal_preenche_colunas_do_artigo(tmp_path: Path) -> None:
     assert lb["total"] == 1
     assert lb["leaderboard"][0]["tps_mediana"] is not None
     assert lb["leaderboard"][0]["utilizavel_ic95"] is not None
+
+
+def test_proporcao_tolera_taxa_gabarito_none() -> None:
+    from benchmark_slms.report.aggregate import _proporcao
+
+    execs = [
+        {
+            "tasks": {
+                "cenario_b": {
+                    "agregado": {
+                        "rodadas": 10,
+                        "taxa_gabarito_percent": None,
+                        "gabarito_ok": 0,
+                        "gabarito_avaliados": 0,
+                    }
+                }
+            }
+        },
+        {
+            "tasks": {
+                "cenario_b": {
+                    "agregado": {
+                        "rodadas": 10,
+                        "taxa_gabarito_percent": 100.0,
+                        "gabarito_ok": 1,
+                        "gabarito_avaliados": 1,
+                    }
+                }
+            }
+        },
+    ]
+    out = _proporcao(execs, "taxa_gabarito_percent", "gabarito_ok", "gabarito_avaliados")
+    assert out["denominador"] == 1
+    assert out["numerador"] == 1
+    assert out["formato"]
+
+
+def test_quadro_separa_perfis_e_persiste_json(tmp_path: Path) -> None:
+    from benchmark_slms.report.aggregate import salvar_quadro_principal
+
+    agg = avaliar_rodadas([_pred(JSON_OK, tps=10)] * 5, quantidade_esperada=1).agregado
+    for perfil, seed in (("balanceado", 42), ("criativo", 7)):
+        pasta = tmp_path / "org--m-gguf" / perfil
+        pasta.mkdir(parents=True)
+        (pasta / "execucao_1.json").write_text(
+            json.dumps(
+                {
+                    "modelo": "org/m",
+                    "formato": "gguf",
+                    "eliminado": False,
+                    "veredito": {"apto_mathia": True, "categoria_falha": "nenhuma"},
+                    "run_config": {"seed": seed},
+                    "inferencia": {"perfil": {"name": perfil}},
+                    "tasks": {"cenario_b": {"agregado": agg, "predictions": []}},
+                }
+            ),
+            encoding="utf-8",
+        )
+
+    quadro = gerar_quadro_principal(tmp_path)
+    assert quadro["total_linhas"] == 2
+    assert {r["perfil"] for r in quadro["quadro_principal"]} == {"balanceado", "criativo"}
+
+    path = salvar_quadro_principal(tmp_path, quadro=quadro)
+    assert path.exists()
+    assert (tmp_path / "org--m-gguf" / "balanceado" / "resumo.json").exists()
+    assert (tmp_path / "org--m-gguf" / "criativo" / "resumo.json").exists()
