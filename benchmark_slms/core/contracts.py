@@ -154,12 +154,18 @@ class InferenceProfile(BaseModel):
     temperature: float = Field(ge=0)
     top_p: float = Field(gt=0, le=1)
     repeat_penalty: float = Field(gt=0)
+    top_k: int = Field(default=20, ge=0)
+    exploratory: bool = False
 
-    def generation_overrides(self) -> dict[str, float]:
+    def generation_overrides(self) -> dict[str, Any]:
+        from benchmark_slms.protocol import PROTOCOL_SAMPLING_FREEZE
+
         return {
+            **PROTOCOL_SAMPLING_FREEZE,
             "temperature": self.temperature,
             "top_p": self.top_p,
             "repeat_penalty": self.repeat_penalty,
+            "top_k": self.top_k,
         }
 
 
@@ -172,6 +178,8 @@ class RunConfig(BaseModel):
     backend: BackendTipo = BackendTipo.GGUF
     modelo_paths: dict[str, str] = Field(default_factory=dict)
     seed: int = 42
+    # Se True (padrão do protocolo), a matriz itera PROTOCOL_SEEDS (10 réplicas).
+    multi_seed: bool = True
     n_ctx: int = 2048
     n_threads: int = 8
     n_gpu_layers: int = 0
@@ -184,7 +192,7 @@ class RunConfig(BaseModel):
     logs_dir: str = "logs"
     offline: bool = True
     quantizacao: str | None = None
-    versao_protocolo: str = "0.1.0"
+    versao_protocolo: str = "0.2.0"
 
 
 class CriterioTipo(str, Enum):

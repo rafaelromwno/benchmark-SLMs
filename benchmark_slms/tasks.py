@@ -48,6 +48,8 @@ def snapshot_inferencia(
     seed: int = 42,
 ) -> dict[str, Any]:
     """Parâmetros efetivos de inferência (header do JSON de resultado)."""
+    from benchmark_slms.protocol import PROTOCOL_SAMPLING_FREEZE, PROTOCOL_SEEDS
+
     ov = dict(overrides or {})
     return {
         "perfil": profile.model_dump() if profile else None,
@@ -57,6 +59,11 @@ def snapshot_inferencia(
             "n_gpu_layers": n_gpu_layers,
             "quantizacao": quantizacao,
             "seed": seed,
+        },
+        "protocolo": {
+            "unidade_replicacao": "modelo × perfil × seed",
+            "seeds_protocolo": list(PROTOCOL_SEEDS),
+            "amostragem_congelada": dict(PROTOCOL_SAMPLING_FREEZE),
         },
         "por_cenario": {
             "cenario_a": _generation(_GEN_A, ov),

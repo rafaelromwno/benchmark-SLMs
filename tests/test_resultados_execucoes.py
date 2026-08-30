@@ -213,6 +213,7 @@ def test_matriz_executa_cada_modelo_para_cada_perfil(monkeypatch, tmp_path: Path
         inference_profiles=perfis,
         generation_overrides={"max_tokens": 64},
         logs_dir=str(tmp_path / "logs"),
+        multi_seed=False,
     )
     chamadas: list[tuple[str, str | None, dict]] = []
 
@@ -227,6 +228,67 @@ def test_matriz_executa_cada_modelo_para_cada_perfil(monkeypatch, tmp_path: Path
     assert [(modelo, perfil) for modelo, perfil, _ in chamadas] == [
         ("a/x", "p1"), ("b/y", "p1"), ("a/x", "p2"), ("b/y", "p2"),
     ]
-    assert chamadas[0][2] == {
-        "max_tokens": 64, "temperature": 0, "top_p": 1, "repeat_penalty": 1.1,
-    }
+    assert chamadas[0][2]["max_tokens"] == 64
+    assert chamadas[0][2]["temperature"] == 0
+    assert chamadas[0][2]["top_p"] == 1
+    assert chamadas[0][2]["repeat_penalty"] == 1.1
+    assert chamadas[0][2]["top_k"] == 20
+    assert chamadas[0][2]["seed"] == config.seed
+
+
+def test_matriz_protocolo_gera_10_seeds_por_celula(monkeypatch, tmp_path: Path) -> None:
+    from benchmark_slms.protocol import PROTOCOL_SEEDS
+
+    perfil = InferenceProfile(
+        name="balanceado", temperature=0.7, top_p=0.8, top_k=20, repeat_penalty=1.0
+    )
+    config = RunConfig(
+        modelos=["a/x"],
+        inference_profiles=[perfil],
+        logs_dir=str(tmp_path / "logs"),
+        multi_seed=True,
+    )
+    seeds_vistas: list[int] = []
+
+    def fake_executar_modelo(config_atual, modelo, logger=None):
+        seeds_vistas.append(config_atual.seed)
+        assert config_atual.generation_overrides.get("seed") == config_atual.seed
+        return _result(modelo)
+
+    monkeypatch.setattr(calling, "executar_modelo", fake_executar_modelo)
+    resultados = calling.executar_matriz(config)
+
+    assert len(resultados) == 10
+    assert seeds_vistas == list(PROTOCOL_SEEDS)
+
+
+def test_perfis_protocolo_balanceado_e_criativo() -> None:
+    from benchmark_slms.inference_profiles import DEFAULT_INFERENCE_PROFILES
+
+    assert [p.name for p in DEFAULT_INFERENCE_PROFILES] == ["balanceado", "criativo"]
+    bal, cri = DEFAULT_INFERENCE_PROFILES
+    assert (bal.temperature, bal.top_p, bal.top_k, bal.repeat_penalty) == (0.7, 0.8, 20, 1.0)
+    assert (cri.temperature, cri.top_p, cri.top_k, cri.repeat_penalty) == (1.3, 0.8, 20, 1.0)
+
+
+def test_catalogo_corte_leve_tem_17_ativos() -> None:
+    import json
+    from pathlib import Path
+
+    from benchmark_slms.data.models import load_catalog
+
+    ativos = load_catalog()
+    assert len(ativos) == 17
+    nomes = {e["Modelo"] for e in ativos.values()}
+    assert any("SmolLM2-135M" in n for n in nomes)
+    assert any("Qwen1.5" in n for n in nomes)
+    assert any("phi-2" in n for n in nomes)
+
+    raw = json.loads(Path("benchmark_slms/data/model_catalog.json").read_text(encoding="utf-8"))
+    excl = raw["_excluidos_corte_literatura"]
+    corte2 = [
+        v for v in excl.values()
+        if isinstance(v, dict) and str(v.get("Corte", "")).startswith("C4")
+    ]
+    assert len(corte2) == 7
+    assert all(v["Corte"] == "C4-C6+C8" for v in corte2)

@@ -61,13 +61,20 @@ class GGUDBackend(ModelBackend):
         if self._metricas:
             self._metricas.marcar_inicio_resposta()
 
-        resposta = self._llm.create_chat_completion(
-            messages=messages,
-            max_tokens=gen.get("max_tokens", 1024),
-            temperature=gen.get("temperature", 0.7),
-            top_p=gen.get("top_p", 0.9),
-            repeat_penalty=gen.get("repeat_penalty", 1.1),
-        )
+        kwargs: dict[str, Any] = {
+            "messages": messages,
+            "max_tokens": gen.get("max_tokens", 1024),
+            "temperature": gen.get("temperature", 0.7),
+            "top_p": gen.get("top_p", 0.9),
+            "repeat_penalty": gen.get("repeat_penalty", 1.1),
+            "top_k": int(gen.get("top_k", 20)),
+        }
+        if "seed" in gen and gen["seed"] is not None:
+            kwargs["seed"] = int(gen["seed"])
+        if "min_p" in gen:
+            kwargs["min_p"] = float(gen["min_p"])
+
+        resposta = self._llm.create_chat_completion(**kwargs)
 
         if self._metricas:
             self._metricas.marcar_primeiro_token()
@@ -115,15 +122,20 @@ class SafetensorsBackend(ModelBackend):
         if self._metricas:
             self._metricas.iniciar(n_input)
 
+        if "seed" in gen and gen["seed"] is not None:
+            self._torch.manual_seed(int(gen["seed"]))
+
+        gen_kwargs: dict[str, Any] = {
+            "max_new_tokens": gen.get("max_tokens", 1024),
+            "do_sample": gen.get("temperature", 0.7) > 0,
+            "temperature": gen.get("temperature") if gen.get("temperature", 0) > 0 else None,
+            "top_p": gen.get("top_p"),
+            "top_k": int(gen.get("top_k", 20)),
+            "repetition_penalty": gen.get("repeat_penalty", 1.1),
+        }
+
         with self._torch.no_grad():
-            saida = self._model.generate(
-                **inputs,
-                max_new_tokens=gen.get("max_tokens", 1024),
-                do_sample=gen.get("temperature", 0.7) > 0,
-                temperature=gen.get("temperature") if gen.get("temperature", 0) > 0 else None,
-                top_p=gen.get("top_p"),
-                repetition_penalty=gen.get("repeat_penalty", 1.1),
-            )
+            saida = self._model.generate(**inputs, **gen_kwargs)
 
         tokens_gerados = saida[0][n_input:]
         n_output = int(len(tokens_gerados))

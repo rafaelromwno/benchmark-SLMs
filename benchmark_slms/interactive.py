@@ -93,15 +93,18 @@ def _escolher_ids(rotulo: str, base_dir: Path, *, apenas_baixados: bool = False)
 
 
 def _escolher_perfis() -> list:
-    print("\nPerfis de inferência:")
+    print("\nPerfis de inferência (protocolo):")
     for i, perfil in enumerate(DEFAULT_INFERENCE_PROFILES, 1):
         print(
             f"  {i}. {perfil.name}: temperature={perfil.temperature}, "
-            f"top_p={perfil.top_p}, repeat_penalty={perfil.repeat_penalty}"
+            f"top_p={perfil.top_p}, top_k={perfil.top_k}, "
+            f"repeat_penalty={perfil.repeat_penalty}"
         )
-    raw = input("Perfis (números separados por vírgula; Enter = balanceado): ").strip()
+    raw = input(
+        "Perfis (números separados por vírgula; Enter = balanceado+criativo): "
+    ).strip()
     if not raw:
-        return [DEFAULT_INFERENCE_PROFILES[1]]
+        return list(DEFAULT_INFERENCE_PROFILES)
     try:
         indices = [int(item.strip()) for item in raw.split(",")]
         perfis = [DEFAULT_INFERENCE_PROFILES[i - 1] for i in indices]
@@ -236,7 +239,14 @@ def _executar_benchmark(model_ids: list[str], modo: ModoExecucao, models_dir: Pa
         inference_profiles=perfis,
     )
 
-    print(f"\nExecutando {len(modelos)} modelo(s) × {len(perfis)} perfil(is) [{modo.value}]...")
+    from benchmark_slms.protocol import PROTOCOL_SEEDS
+
+    n_seeds = len(PROTOCOL_SEEDS)
+    print(
+        f"\nExecutando {len(modelos)} modelo(s) × {len(perfis)} perfil(is) "
+        f"× {n_seeds} seeds [{modo.value}]..."
+    )
+    print(f"Seeds do protocolo: {list(PROTOCOL_SEEDS)}")
     print("Aguarde — cenário B pode levar vários minutos...\n")
 
     try:
