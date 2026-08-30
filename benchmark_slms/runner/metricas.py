@@ -133,24 +133,49 @@ class MetricasInferencia:
     def ram_usada_mb(self) -> float:
         return self.ram_pico_mb - self.ram_inicio_mb
 
+
     @property
     def media_rodadas(self) -> dict:
+        from benchmark_slms.report.stats import resumo_continuo
+
         n = len(self.TPS_por_rodada)
         if n == 0:
+            vazio = resumo_continuo([])
             return {
                 "tps_medio": 0.0,
                 "ram_media_mb": 0.0,
                 "ram_pico_mb": 0.0,
                 "tempo_medio_segundos": 0.0,
                 "ttft_medio_segundos": 0.0,
+                "tps": vazio,
+                "ttft": vazio,
+                "tempo": vazio,
+                "ram_pico": vazio,
+                "tps_por_rodada": [],
+                "ttft_por_rodada": [],
+                "tempo_por_rodada": [],
+                "ram_por_rodada": [],
             }
+        tps_r = resumo_continuo(self.TPS_por_rodada)
+        ttft_r = resumo_continuo(self.ttft_por_rodada)
+        tempo_r = resumo_continuo(self.tempo_total_por_rodada)
+        ram_r = resumo_continuo(self.ram_por_rodada)
         return {
-            "tps_medio": sum(self.TPS_por_rodada) / n,
-            "ram_media_mb": sum(self.ram_por_rodada) / n,
-            "ram_pico_mb": max(self.ram_por_rodada),
-            "tempo_medio_segundos": sum(self.tempo_total_por_rodada) / n,
-            "ttft_medio_segundos": sum(self.ttft_por_rodada) / n if self.ttft_por_rodada else 0.0,
+            "tps_medio": tps_r["media"] or 0.0,
+            "ram_media_mb": ram_r["media"] or 0.0,
+            "ram_pico_mb": ram_r["max"] or 0.0,
+            "tempo_medio_segundos": tempo_r["media"] or 0.0,
+            "ttft_medio_segundos": ttft_r["media"] or 0.0,
+            "tps": tps_r,
+            "ttft": ttft_r,
+            "tempo": tempo_r,
+            "ram_pico": ram_r,
+            "tps_por_rodada": list(self.TPS_por_rodada),
+            "ttft_por_rodada": list(self.ttft_por_rodada),
+            "tempo_por_rodada": list(self.tempo_total_por_rodada),
+            "ram_por_rodada": list(self.ram_por_rodada),
         }
+
 
     def to_inference_metrics(self) -> InferenceMetrics:
         # Carga só entra quando foi cronometrada (cenário A); B–D omitem o campo.

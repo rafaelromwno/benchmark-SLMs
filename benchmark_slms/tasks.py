@@ -48,7 +48,13 @@ def snapshot_inferencia(
     seed: int = 42,
 ) -> dict[str, Any]:
     """Parâmetros efetivos de inferência (header do JSON de resultado)."""
-    from benchmark_slms.protocol import PROTOCOL_SAMPLING_FREEZE, PROTOCOL_SEEDS
+    from benchmark_slms.protocol import (
+        ANALYSIS_UNIT,
+        PROTOCOL_SAMPLING_FREEZE,
+        PROTOCOL_SEEDS,
+        PROTOCOL_TIMEOUT_DEFAULT_S,
+        PROTOCOL_TIMEOUTS_S,
+    )
 
     ov = dict(overrides or {})
     return {
@@ -62,8 +68,11 @@ def snapshot_inferencia(
         },
         "protocolo": {
             "unidade_replicacao": "modelo × perfil × seed",
+            "unidade_analise": ANALYSIS_UNIT,
             "seeds_protocolo": list(PROTOCOL_SEEDS),
             "amostragem_congelada": dict(PROTOCOL_SAMPLING_FREEZE),
+            "timeouts_s": dict(PROTOCOL_TIMEOUTS_S),
+            "timeout_default_s": PROTOCOL_TIMEOUT_DEFAULT_S,
         },
         "por_cenario": {
             "cenario_a": _generation(_GEN_A, ov),
@@ -81,10 +90,20 @@ def _viabilidade_de_rodadas(
     metricas: MetricasInferencia,
     preds: list[Prediction],
 ) -> dict:
-    """Agrega RAM/TPS/tempo de inferência (sem carga do modelo) + crashes."""
-    agg = metricas.media_rodadas
-    agg["tps_por_rodada"] = list(metricas.TPS_por_rodada)
-    agg["crashes_oom"] = sum(1 for p in preds if p.metrics.crash)
+    """Agrega RAM/TPS/tempo + taxonomia de falhas (pareceres v3/v4)."""
+    from collections import Counter
+
+    agg = dict(metricas.media_rodadas)
+    contagem = Counter(
+        (p.metrics.codigo_falha or ("oom" if p.metrics.crash else "ok")) for p in preds
+    )
+    agg["contagem_falhas"] = dict(contagem)
+    agg["crashes_oom"] = int(contagem.get("oom", 0))
+    agg["falhas_infra"] = (
+        int(contagem.get("oom", 0))
+        + int(contagem.get("timeout", 0))
+        + int(contagem.get("crash_motor", 0))
+    )
     return agg
 
 
@@ -114,11 +133,16 @@ def task_cenario_a(
     if metricas_load is None:
         metricas.iniciar()
 
+    timeout_s = _kwargs.get("timeout_s")
     metricas.marcar_inicio_resposta()
-    pred = executar_prompt(backend, prompt, modelo, metricas=metricas)
+    pred = executar_prompt(
+        backend, prompt, modelo, metricas=metricas, timeout_s=timeout_s
+    )
     ev = avaliar_predicao(pred, sample.quantity)
     viab = metricas.to_inference_metrics().model_dump()
     viab["tempo_carregamento_s"] = metricas.tempo_carregamento_modelo
+    codigo = pred.metrics.codigo_falha or ("oom" if pred.metrics.crash else "ok")
+    contagem = {codigo: 1}
     ev.viabilidade = viab
     ev.agregado = {
         "cold_start_segundos": metricas.tempo_total,
@@ -127,6 +151,12 @@ def task_cenario_a(
         "ram_pico_mb": metricas.ram_pico_mb,
         "ram_inicio_mb": metricas.ram_inicio_mb,
         "ttft_segundos": metricas.tempo_prefill,
+        "rodadas": 1,
+        "utilizaveis": int(bool(ev.utilizavel)),
+        "json_validos": int(bool(ev.json_valido)),
+        "contagem_falhas": contagem,
+        "crashes_oom": int(contagem.get("oom", 0)),
+        "codigo_falha": codigo,
     }
     return ev
 
@@ -153,7 +183,10 @@ def task_cenario_b(
         for s in samples
     ]
 
-    preds, metricas = executar_rodadas(backend, prompts, modelo)
+    timeout_s = _kwargs.get("timeout_s")
+    preds, metricas = executar_rodadas(
+        backend, prompts, modelo, timeout_s=timeout_s
+    )
     agg = metricas.media_rodadas
     agg["tps_por_rodada"] = metricas.TPS_por_rodada
     ev = avaliar_rodadas(preds, quantidade_esperada=3, metricas_agregadas=agg)
@@ -193,7 +226,12 @@ def task_cenario_c(
         # Modelo já carregado em A — mede só tempo de inferência por tentativa
         metricas.iniciar_rodada()
         pred = executar_prompt(
-            backend, prompt, modelo, metricas=metricas, rodada=execucoes - 1
+            backend,
+            prompt,
+            modelo,
+            metricas=metricas,
+            rodada=execucoes - 1,
+            timeout_s=_kwargs.get("timeout_s"),
         )
         preds.append(pred)
         ev = avaliar_predicao(pred, sample.quantity)
@@ -251,7 +289,14 @@ def task_cenario_d(
         )
         # Modelo já carregado em A — mede só tempo de inferência por habilidade
         metricas.iniciar_rodada()
-        pred = executar_prompt(backend, prompt, modelo, metricas=metricas, rodada=i)
+        pred = executar_prompt(
+            backend,
+            prompt,
+            modelo,
+            metricas=metricas,
+            rodada=i,
+            timeout_s=_kwargs.get("timeout_s"),
+        )
         preds.append(pred)
         ev = avaliar_predicao(pred, sample.quantity)
         json_flags[sample.habilidade_id] = ev.json_valido

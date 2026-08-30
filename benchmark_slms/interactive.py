@@ -275,6 +275,12 @@ def _executar_benchmark(model_ids: list[str], modo: ModoExecucao, models_dir: Pa
 
         imprimir_leaderboard()
 
+    print("  Ver quadro principal (artigo)? [S/n]: ", end="")
+    if input().strip().upper() != "N":
+        from benchmark_slms.report.aggregate import imprimir_quadro_principal
+
+        imprimir_quadro_principal()
+
     pausar()
 
 
@@ -449,6 +455,7 @@ def menu_interativo(models_dir: Path | None = None) -> int:
         print("  11 Verificar ambiente")
         print("  12 Limpar arquivos temporários")
         print("  13 Explicar estrutura dos resultados")
+        print("  14 Ver quadro principal (tabela do artigo)")
         print("  0  Sair")
         print("-" * 52)
 
@@ -482,6 +489,12 @@ def menu_interativo(models_dir: Path | None = None) -> int:
                 from benchmark_slms.report.aggregate import imprimir_leaderboard
 
                 imprimir_leaderboard()
+                pausar()
+
+            elif opcao == "14":
+                from benchmark_slms.report.aggregate import imprimir_quadro_principal
+
+                imprimir_quadro_principal()
                 pausar()
 
             elif opcao == "6":
