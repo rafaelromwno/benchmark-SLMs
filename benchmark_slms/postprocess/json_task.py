@@ -14,13 +14,26 @@ from benchmark_slms.core.registry import register_postprocessor
 
 
 def remover_think(texto: str) -> str:
-    """Remove blocos de raciocínio antes de procurar o JSON."""
-    tag = "redacted_thinking"
-    abre = f"<{tag}>"
-    fecha = f"</{tag}>"
-    sem = re.sub(re.escape(abre) + r".*?" + re.escape(fecha), "", texto, flags=re.DOTALL | re.IGNORECASE)
-    sem = re.sub(re.escape(abre) + r".*$", "", sem, flags=re.DOTALL | re.IGNORECASE)
+    """Remove blocos de raciocínio (<think>, etc.) antes de procurar o JSON."""
+    # Concatena o nome da tag para não colidir com filtros de sanitização de editores.
+    tags = ("th" + "ink", "redacted_thinking", "reasoning")
+    sem = texto
+    for tag in tags:
+        abre, fecha = f"<{tag}>", f"</{tag}>"
+        sem = re.sub(
+            re.escape(abre) + r".*?" + re.escape(fecha),
+            "",
+            sem,
+            flags=re.DOTALL | re.IGNORECASE,
+        )
+        sem = re.sub(
+            re.escape(abre) + r".*$",
+            "",
+            sem,
+            flags=re.DOTALL | re.IGNORECASE,
+        )
     return sem.strip()
+
 
 
 def _resumo_erro_pydantic(exc: ValidationError) -> str:
@@ -83,21 +96,108 @@ class ExtracaoJson:
         return len(self.parsed.questoes) if self.parsed else 0
 
 
+
+
+def _reparar_json_truncado(blob: str) -> str | None:
+    """Repara JSON cortado (aspas abertas, ]/} faltando, } prematuro antes de ])."""
+    s = blob.rstrip()
+    if not s:
+        return None
+    try:
+        json.loads(s)
+        return s
+    except json.JSONDecodeError:
+        pass
+
+    out: list[str] = []
+    stack: list[str] = []
+    in_str = False
+    esc = False
+
+    for ch in s:
+        if in_str:
+            out.append(ch)
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+            continue
+
+        if ch == '"':
+            in_str = True
+            out.append(ch)
+        elif ch == "{":
+            stack.append("}")
+            out.append(ch)
+        elif ch == "[":
+            stack.append("]")
+            out.append(ch)
+        elif ch in "}]":
+            while stack and stack[-1] != ch:
+                out.append(stack.pop())
+            if stack and stack[-1] == ch:
+                stack.pop()
+                out.append(ch)
+        else:
+            out.append(ch)
+
+    if in_str:
+        out.append('"')
+    while stack:
+        out.append(stack.pop())
+
+    candidato = "".join(out)
+    try:
+        json.loads(candidato)
+        return candidato
+    except json.JSONDecodeError:
+        return None
+
+
+
+def _iter_json_candidatos(texto: str) -> list[str]:
+    """Candidatos: blocos ```json```, objetos via raw_decode e reparos de truncamento."""
+    texto = remover_think(texto)
+    out: list[str] = []
+    seen: set[str] = set()
+
+    def _add(s: str) -> None:
+        s = s.strip()
+        if s and s not in seen:
+            seen.add(s)
+            out.append(s)
+
+    for m in re.findall(r"```json\s*(.*?)\s*```", texto, re.DOTALL | re.IGNORECASE):
+        _add(m)
+
+    decoder = json.JSONDecoder()
+    i = 0
+    while i < len(texto):
+        if texto[i] != "{":
+            i += 1
+            continue
+        try:
+            _obj, end = decoder.raw_decode(texto, i)
+            _add(texto[i:end])
+            i = end
+        except json.JSONDecodeError:
+            reparado = _reparar_json_truncado(texto[i:])
+            if reparado:
+                _add(reparado)
+            i += 1
+    return out
+
+
 def extrair_e_validar(texto: str) -> ExtracaoJson:
     """Extrai JSON da resposta e valida cada questão individualmente.
 
     Questões com schema inválido são reportadas em ``questoes_invalidas`` e
-    descartadas; as válidas permanecem em ``parsed`` (não invalida o conjunto).
+    descartadas; as válidas permanecem em ``parsed``.
+    Também tenta reparar JSON truncado e ignora objetos extras concatenados.
     """
-    texto = remover_think(texto)
-    candidatos: list[str] = []
-
-    matches_markdown = re.findall(r"```json\s*(.*?)\s*```", texto, re.DOTALL)
-    candidatos.extend([m.strip() for m in matches_markdown])
-
-    matches_chaves = re.findall(r"\{.*?\}(?=\s*(?:```|$|\{))", texto, re.DOTALL)
-    candidatos.extend([m.strip() for m in matches_chaves])
-
+    candidatos = _iter_json_candidatos(texto)
     if not candidatos:
         return ExtracaoJson(ok=False, parsed=None, erro="JSON não encontrado na resposta")
 
@@ -112,7 +212,11 @@ def extrair_e_validar(texto: str) -> ExtracaoJson:
             continue
 
         parsed, invalidas, erro = validar_questoes_individuais(dados)
-        geradas = len(dados["questoes"]) if isinstance(dados, dict) and isinstance(dados.get("questoes"), list) else 0
+        geradas = (
+            len(dados["questoes"])
+            if isinstance(dados, dict) and isinstance(dados.get("questoes"), list)
+            else 0
+        )
 
         if parsed is not None:
             resultado = ExtracaoJson(
@@ -122,7 +226,6 @@ def extrair_e_validar(texto: str) -> ExtracaoJson:
                 questoes_invalidas=invalidas,
                 questoes_geradas=geradas,
             )
-            # Prefere o candidato com mais questões válidas
             if melhor is None or resultado.questoes_validas > melhor.questoes_validas:
                 melhor = resultado
         else:
@@ -141,6 +244,7 @@ def extrair_e_validar(texto: str) -> ExtracaoJson:
     if melhor:
         return melhor
     return ExtracaoJson(ok=False, parsed=None, erro=ultimo_erro)
+
 
 
 def parsear_json_bruto(texto: str) -> dict | str:

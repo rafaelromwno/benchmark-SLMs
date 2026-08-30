@@ -239,6 +239,7 @@ class Veredito(BaseModel):
     criterios: list[Criterio] = Field(default_factory=list)
     motivos_reprovacao: list[str] = Field(default_factory=list)
     categoria_falha: CategoriaFalha = CategoriaFalha.NENHUMA
+    categorias_falha: list[CategoriaFalha] = Field(default_factory=list)
     modelo: str
     gerado_em: datetime = Field(default_factory=datetime.now)
 
@@ -261,7 +262,16 @@ class ModelRunResult(BaseModel):
     @field_serializer("run_config")
     def _snapshot_run_config(self, config: RunConfig) -> dict[str, Any]:
         """Exclui estado transitório de orquestração do resultado persistido."""
+        from benchmark_slms.protocol import PROTOCOL_TIMEOUT_DEFAULT_S, PROTOCOL_TIMEOUTS_S
+
         snapshot = config.model_dump(mode="json")
         snapshot.pop("inference_profiles", None)
         snapshot.pop("inference_profile", None)
+        # Sempre documenta timeouts efetivos (override ou protocolo)
+        snapshot["timeouts_por_cenario_s"] = dict(PROTOCOL_TIMEOUTS_S)
+        snapshot["timeout_default_s"] = (
+            float(config.timeout_s)
+            if config.timeout_s is not None and config.timeout_s > 0
+            else float(PROTOCOL_TIMEOUT_DEFAULT_S)
+        )
         return snapshot

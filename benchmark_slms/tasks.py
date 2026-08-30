@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import random
+from collections import Counter
 from typing import Any
 
 from benchmark_slms.core.contracts import EvalResult, InferenceProfile, Prediction
@@ -105,6 +106,19 @@ def _viabilidade_de_rodadas(
         + int(contagem.get("crash_motor", 0))
     )
     return agg
+
+
+def _codigo_falha_dominante(preds: list[Prediction]) -> str:
+    """Código da task: ok só se todas ok; senão o mais frequente entre falhas (nunca empata com ok)."""
+    codigos = [(p.metrics.codigo_falha or "ok") for p in preds]
+    if not codigos:
+        return "ok"
+    if all(c == "ok" for c in codigos):
+        return "ok"
+    falhas = Counter(c for c in codigos if c != "ok")
+    return falhas.most_common(1)[0][0]
+
+
 
 
 @register_task("cenario_a")
@@ -242,10 +256,14 @@ def task_cenario_c(
             tentativas += 1
 
     viab = _viabilidade_de_rodadas(metricas, preds)
+    contagem = Counter((p.metrics.codigo_falha or "ok") for p in preds)
+    codigo_task = _codigo_falha_dominante(preds)
     return EvalResult(
         task_id="cenario_c",
         modelo=modelo,
         json_valido=json_valido,
+        utilizavel=json_valido,
+        codigo_falha=codigo_task,
         viabilidade=viab,
         agregado={
             "execucoes": execucoes,
@@ -259,6 +277,7 @@ def task_cenario_c(
             "tps_medio": viab["tps_medio"],
             "tempo_medio_segundos": viab["tempo_medio_segundos"],
             "crashes_oom": viab["crashes_oom"],
+            "contagem_falhas": dict(contagem),
         },
         predictions=preds,
     )
@@ -275,7 +294,8 @@ def task_cenario_d(
     samples = list(load_for_cenario("D"))
     preds: list[Prediction] = []
     outputs = {}
-    json_flags = {}
+    json_flags: dict[str, bool] = {}
+    util_flags: dict[str, bool] = {}
     metricas = MetricasInferencia()
     gen = _generation(_GEN_SERIE, generation_overrides)
 
@@ -300,30 +320,40 @@ def task_cenario_d(
         preds.append(pred)
         ev = avaliar_predicao(pred, sample.quantity)
         json_flags[sample.habilidade_id] = ev.json_valido
+        util_flags[sample.habilidade_id] = bool(ev.utilizavel)
         outputs[sample.habilidade_id] = (
             ev.parsed.model_dump() if ev.parsed else {"erro": ev.json_erro, "output_bruto": pred.raw_output[:500]}
         )
 
     viab = _viabilidade_de_rodadas(metricas, preds)
     all_valid = all(json_flags.values()) if json_flags else False
+    all_util = all(util_flags.values()) if util_flags else False
+    n = len(json_flags)
+    contagem = Counter((p.metrics.codigo_falha or "ok") for p in preds)
+    codigo_task = _codigo_falha_dominante(preds)
     return EvalResult(
         task_id="cenario_d",
         modelo=modelo,
         json_valido=all_valid,
+        utilizavel=all_util,
+        codigo_falha=codigo_task,
         viabilidade=viab,
         agregado={
             "habilidades_testadas": list(json_flags.keys()),
             "outputs": outputs,
             "json_valido_por_habilidade": json_flags,
+            "utilizavel_por_habilidade": util_flags,
             "ram_pico_mb": viab["ram_pico_mb"],
             "tps_medio": viab["tps_medio"],
             "tempo_medio_segundos": viab["tempo_medio_segundos"],
             "crashes_oom": viab["crashes_oom"],
             "taxa_json_valido_percent": (
-                round(sum(1 for v in json_flags.values() if v) / len(json_flags) * 100, 1)
-                if json_flags
-                else 0.0
+                round(sum(1 for v in json_flags.values() if v) / n * 100, 1) if n else 0.0
             ),
+            "taxa_utilizavel_percent": (
+                round(sum(1 for v in util_flags.values() if v) / n * 100, 1) if n else 0.0
+            ),
+            "contagem_falhas": dict(contagem),
         },
         predictions=preds,
     )
