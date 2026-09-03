@@ -1,0 +1,141 @@
+{
+  "schema": "benchmark_slms.quadro_principal.v1",
+  "gerado_em": "2026-08-31T21:35:00.219727+00:00",
+  "quadro_principal": [
+    {
+      "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+      "perfil": "balanceado",
+      "n_execucoes": 10,
+      "seeds": [
+        7,
+        13,
+        21,
+        33,
+        42,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "utilizaveis": {
+        "numerador": 59,
+        "denominador": 100,
+        "ponto": 0.59,
+        "ic95": [
+          0.492014,
+          0.681327
+        ],
+        "formato": "59.0% [49.2–68.1]",
+        "unidade_analise": "execucao"
+      },
+      "json": {
+        "numerador": 59,
+        "denominador": 100,
+        "ponto": 0.59,
+        "ic95": [
+          0.492014,
+          0.681327
+        ],
+        "formato": "59.0% [49.2–68.1]",
+        "unidade_analise": "execucao"
+      },
+      "gabarito": {
+        "numerador": 59,
+        "denominador": 59,
+        "ponto": 1.0,
+        "ic95": [
+          0.938871,
+          1.0
+        ],
+        "formato": "100.0% [93.9–100.0]",
+        "unidade_analise": "execucao"
+      },
+      "estaveis": {
+        "numerador": 0,
+        "denominador": 10,
+        "ponto": 0.0,
+        "ic95": [
+          0.0,
+          0.277533
+        ],
+        "formato": "0.0% [0.0–27.8]",
+        "unidade_analise": "execucao"
+      },
+      "tps": {
+        "n": 100,
+        "mediana": 7.201016,
+        "iqr": 1.461861,
+        "p25": 6.112601,
+        "p75": 7.574462,
+        "p95": 8.292285,
+        "p99": 8.615526,
+        "max": 8.630683,
+        "media": 6.455853,
+        "ic95_mediana": {
+          "n": 100,
+          "mediana": 7.201016,
+          "ic95": [
+            7.000494,
+            7.399044
+          ],
+          "formato": "7.201 [7–7.399]",
+          "unidade_analise": "execucao"
+        }
+      },
+      "ttft": {
+        "n": 100,
+        "mediana": 5.032227,
+        "iqr": 5.580226,
+        "p25": 0.411398,
+        "p75": 5.991624,
+        "p95": 7.73929,
+        "p99": 9.289665,
+        "max": 11.336137,
+        "media": 4.334314,
+        "ic95_mediana": {
+          "n": 100,
+          "mediana": 5.032227,
+          "ic95": [
+            4.848306,
+            5.302424
+          ],
+          "formato": "5.032 [4.848–5.302]",
+          "unidade_analise": "execucao"
+        }
+      },
+      "ram_pico": {
+        "n": 100,
+        "mediana": 1977.914062,
+        "iqr": 305.270508,
+        "p25": 1962.466797,
+        "p75": 2267.737305,
+        "p95": 2596.284961,
+        "p99": 2740.847031,
+        "max": 2827.796875,
+        "media": 2116.847031
+      },
+      "contagem_falhas": {
+        "json_invalido": 33,
+        "ok": 59,
+        "timeout": 8
+      },
+      "utilizaveis_fmt": "59.0% [49.2–68.1]",
+      "json_fmt": "59.0% [49.2–68.1]",
+      "gabarito_fmt": "100.0% [93.9–100.0]",
+      "estaveis_fmt": "0.0% [0.0–27.8]",
+      "tps_mediana": 7.201016,
+      "tps_media": 6.455853,
+      "tps_p95": 8.292285,
+      "ttft_mediana": 5.032227,
+      "ttft_media": 4.334314,
+      "ttft_p95": 7.73929,
+      "ram_pico_mb": 2827.796875
+    }
+  ],
+  "unidade_analise": "execucao",
+  "unidade_linha": "modelo × perfil",
+  "nota": "Utilizável = JSON ∧ gabarito estrutural ∧ codigo_falha=ok. Gabarito é consistência interna (proxy até GT curado em M8). Proporções: Wilson IC95% sobre rodadas/seeds; TPS/TTFT: mediana+IQR+p95 e bootstrap IC95% da mediana. Não ranquear modelos quando ICs de utilizáveis se sobrepõem.",
+  "total_linhas": 1,
+  "total_modelos": 1
+}

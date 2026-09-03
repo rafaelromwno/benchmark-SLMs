@@ -1,0 +1,1131 @@
+{
+  "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "03/09/2026",
+  "run_config": {
+    "modelos": [
+      "Qwen/Qwen2.5-1.5B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "Qwen/Qwen2.5-1.5B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\Qwen--Qwen2.5-1.5B-Instruct-GGUF\\qwen2.5-1.5b-instruct-q4_k_m.gguf"
+    },
+    "seed": 123,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 123
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 123
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.42,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": "Campo 'questoes' ausente",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 0.9022411000332795,
+        "tempo_prefill_s": 10.847287599986885,
+        "tempo_decode_s": 15.177587700018194,
+        "tempo_resposta_s": 26.02487530000508,
+        "tempo_total_s": 26.927116400038358,
+        "tokens_entrada": 0,
+        "tokens_saida": 243,
+        "tps": 9.337220532232582,
+        "ram_inicio_mb": 63.12890625,
+        "ram_pico_mb": 1751.0390625,
+        "ram_usada_mb": 1687.91015625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 26.927116400038358,
+        "tempo_carregamento_s": 0.9022411000332795,
+        "tempo_resposta_s": 26.02487530000508,
+        "ram_pico_mb": 1751.0390625,
+        "ram_inicio_mb": 63.12890625,
+        "ttft_segundos": 10.847287599986885,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"3/4\",\n                \"C\": \"5/6\",\n                \"D\": \"7/8\",\n                \"E\": \"11/12\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1. Primeiro, identifique os números que são possíveis em fração (a/b com a e b inteiros, b≠0).\"\n                           \"2. Em seguida, identifique os números que não podem ser escritos em fração a/b (com a e b inteiros, b≠0).\"\n                           \"3. Apenas o número C não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0).\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 243,
+            "total_tokens": 243
+          },
+          "metrics": {
+            "tempo_carregamento_s": 0.9022411000332795,
+            "tempo_prefill_s": 10.847287599986885,
+            "tempo_decode_s": 15.177587700018194,
+            "tempo_resposta_s": 26.02487530000508,
+            "tempo_total_s": 26.927116400038358,
+            "tokens_entrada": 0,
+            "tokens_saida": 243,
+            "tps": 9.337220532232582,
+            "ram_inicio_mb": 63.12890625,
+            "ram_pico_mb": 1751.0390625,
+            "ram_usada_mb": 1687.91015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 14.573859,
+          "iqr": 0.931822,
+          "p25": 14.42832,
+          "p75": 15.360142,
+          "p95": 15.815115,
+          "p99": 15.954577,
+          "max": 15.989442,
+          "media": 14.861587
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.189096,
+          "iqr": 1.693464,
+          "p25": 0.581905,
+          "p75": 2.275369,
+          "p95": 2.886965,
+          "p99": 3.259339,
+          "max": 3.352433,
+          "media": 1.691145
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 26.89934,
+          "iqr": 8.929777,
+          "p25": 26.027496,
+          "p75": 34.957274,
+          "p95": 40.232142,
+          "p99": 43.500291,
+          "max": 44.317329,
+          "media": 29.115987
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1753.994141,
+          "iqr": 4.573242,
+          "p25": 1751.71875,
+          "p75": 1756.291992,
+          "p95": 1759.470313,
+          "p99": 1760.100313,
+          "max": 1760.257812,
+          "media": 1753.982812
+        },
+        "tps_medio": 14.861587,
+        "ttft_medio_segundos": 1.691145,
+        "tempo_medio_segundos": 29.115987,
+        "ram_pico_mb": 1760.257812
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 6,
+        "json_invalidos": 4,
+        "taxa_json_valido_percent": 60.0,
+        "json_valido_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 6,
+        "gabarito_avaliados": 6,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 6,
+          "denominador": 6,
+          "ponto": 1.0,
+          "ic95": [
+            0.609666,
+            1.0
+          ],
+          "formato": "100.0% [61.0–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 6,
+        "taxa_utilizavel_percent": 60.0,
+        "utilizavel_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 6,
+          "json_invalido": 4
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 14.573859,
+          "iqr": 0.931822,
+          "p25": 14.42832,
+          "p75": 15.360142,
+          "p95": 15.815115,
+          "p99": 15.954577,
+          "max": 15.989442,
+          "media": 14.861587
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.189096,
+          "iqr": 1.693464,
+          "p25": 0.581905,
+          "p75": 2.275369,
+          "p95": 2.886965,
+          "p99": 3.259339,
+          "max": 3.352433,
+          "media": 1.691145
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 26.89934,
+          "iqr": 8.929777,
+          "p25": 26.027496,
+          "p75": 34.957274,
+          "p95": 40.232142,
+          "p99": 43.500291,
+          "max": 44.317329,
+          "media": 29.115987
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1753.994141,
+          "iqr": 4.573242,
+          "p25": 1751.71875,
+          "p75": 1756.291992,
+          "p95": 1759.470313,
+          "p99": 1760.100313,
+          "max": 1760.257812,
+          "media": 1753.982812
+        },
+        "tps_medio": 14.861587,
+        "ttft_medio_segundos": 1.691145,
+        "tempo_medio_segundos": 29.115987,
+        "ram_pico_mb": 1760.257812,
+        "tps_por_rodada": [
+          14.328480949265208,
+          14.424229692160004,
+          14.69956555434231,
+          14.440591106708883,
+          15.577992416206708,
+          14.706590251640476,
+          15.602048038987954,
+          14.448151693317245,
+          14.398778249271071,
+          15.989441987499221
+        ],
+        "ttft_por_rodada": [
+          3.352432999992743,
+          2.2817883999668993,
+          2.128096700005699,
+          2.318059200013522,
+          0.06514520000200719,
+          2.178549500007648,
+          0.06650720001198351,
+          2.256109000009019,
+          2.199643299973104,
+          0.06511910003609955
+        ],
+        "tempo_por_rodada": [
+          44.31732869998086,
+          26.067249899962917,
+          35.23913669999456,
+          26.037715299986303,
+          27.73142960004043,
+          35.222304499999154,
+          34.162181699997745,
+          26.024089999962598,
+          22.224107799993362,
+          14.134326900006272
+        ],
+        "ram_por_rodada": [
+          1753.0546875,
+          1754.91796875,
+          1756.75,
+          1758.5078125,
+          1760.2578125,
+          1747.66796875,
+          1749.41015625,
+          1751.2734375,
+          1753.109375,
+          1754.87890625
+        ],
+        "ram_media_mb": 1753.982812
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/2 = 1 ÷ 2 = 0,5\\n2/3 = 2 ÷ 3 = 0,666...\\n3/4 = 3 ÷ 4 = 0,75\\n4/5 = 4 ÷ 5 = 0,8\\n5/6 = 5 ÷ 6 = 0,833...\"\n        },\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1/2 = 1 ÷ 2 = 0,5\\n2/3 = 2 ÷ 3 = 0,666...\\n3/4 = 3 ÷ 4 = 0,75\\n4/5 = 4 ÷ 5 = 0,8\\n5/6 = 5 ÷ 6 = 0,833...\"\n        },\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1/2 = 1 ÷ 2 = 0,5\\n2/3 = 2 ÷ 3 = 0,666...\\n3/4 = 3 ÷ 4 = 0,75\\n4/5 = 4 ÷ 5 = 0,8\\n5/6 = 5 ÷ 6 = 0,833...\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 635,
+            "total_tokens": 635
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.352432999992743,
+            "tempo_decode_s": 40.96489569998812,
+            "tempo_resposta_s": 44.31732869998086,
+            "tempo_total_s": 44.31732869998086,
+            "tokens_entrada": 0,
+            "tokens_saida": 635,
+            "tps": 14.328480949265208,
+            "ram_inicio_mb": 1751.00390625,
+            "ram_pico_mb": 1753.0546875,
+            "ram_usada_mb": 2.05078125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 7\\nx = 7 - 3\\nx = 4\"\n        },\n        {\n            \"enunciado\": \"Se 4x = 16, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4x = 16\\nx = 16 / 4\\nx = 4\"\n        },\n        {\n            \"enunciado\": \"Se 3x - 2 = 5, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3x - 2 = 5\\n3x = 5 + 2\\n3x = 7\\nx = 7 / 3\\nx = 2.333\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 376,
+            "total_tokens": 376
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.2817883999668993,
+            "tempo_decode_s": 23.785461499996018,
+            "tempo_resposta_s": 26.067249899962917,
+            "tempo_total_s": 26.067249899962917,
+            "tokens_entrada": 0,
+            "tokens_saida": 376,
+            "tps": 14.424229692160004,
+            "ram_inicio_mb": 1753.00390625,
+            "ram_pico_mb": 1754.91796875,
+            "ram_usada_mb": 1.9140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine a soma de todos os números pares menores que 10.\",\n            \"alternativas\": {\n                \"A\": \"55\",\n                \"B\": \"50\",\n                \"C\": \"45\",\n                \"D\": \"40\",\n                \"E\": \"35\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1. Identificar os números pares menores que 10: 2, 4, 6, 8, 10.\"\n                \"2. Soma a todos esses números: 2 + 4 + 6 + 8 + 10 = 30.\"\n                \"3. O resultado é 30, então a alternativa correta é D.\"\n        },\n        {\n            \"enunciado\": \"Determine o número que, quando subtraído de 25, dá como resultado 17.\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"12\",\n                \"C\": \"17\",\n                \"D\": \"32\",\n                \"E\": \"40\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1. Identificar o número que, quando subtraído de 25, dá como resultado 17: 25 - 17 = 8.\"\n                \"2. O resultado é 8, então a alternativa correta é A.\"\n        },\n        {\n            \"enunciado\": \"Determine qual número é maior: 7/2 e 11/3.\",\n            \"alternativas\": {\n                \"A\": \"7/2\",\n                \"B\": \"11/3\",\n                \"C\": \"11/2\",\n                \"D\": \"11/3\",\n                \"E\": \"11/2\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1. Comparar 7/2 e 11/3: 7/2 = 3.5 e 11/3 = 3.66.\"\n                \"2. O resultado é 3.66, então a alternativa correta é B.\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 518,
+            "total_tokens": 518
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.128096700005699,
+            "tempo_decode_s": 33.11103999998886,
+            "tempo_resposta_s": 35.23913669999456,
+            "tempo_total_s": 35.23913669999456,
+            "tokens_entrada": 0,
+            "tokens_saida": 518,
+            "tps": 14.69956555434231,
+            "ram_inicio_mb": 1754.8984375,
+            "ram_pico_mb": 1756.75,
+            "ram_usada_mb": 1.8515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 7\\nx = 7 - 3\\nx = 4\"\n        },\n        {\n            \"enunciado\": \"Se 4x = 16, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4x = 16\\nx = 16 / 4\\nx = 4\"\n        },\n        {\n            \"enunciado\": \"Se 3x - 2 = 5, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3x - 2 = 5\\n3x = 5 + 2\\n3x = 7\\nx = 7 / 3\\nx = 2.333\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 376,
+            "total_tokens": 376
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.318059200013522,
+            "tempo_decode_s": 23.71965609997278,
+            "tempo_resposta_s": 26.037715299986303,
+            "tempo_total_s": 26.037715299986303,
+            "tokens_entrada": 0,
+            "tokens_saida": 376,
+            "tps": 14.440591106708883,
+            "ram_inicio_mb": 1756.6640625,
+            "ram_pico_mb": 1758.5078125,
+            "ram_usada_mb": 1.84375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x + 4 = 14, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1. 3x + 4 = 14 \\n2. 3x = 10 \\n3. x = 10 / 3 \\n4. x = 3,33\"\n        },\n        {\n            \"enunciado\": \"Se 2x - 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1. 2x - 3 = 7 \\n2. 2x = 10 \\n3. x = 10 / 2 \\n4. x = 5\"\n        },\n        {\n            \"enunciado\": \"Se 4x + 1 = 13, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1. 4x + 1 = 13 \\n2. 4x = 12 \\n3. x = 12 / 4 \\n4. x = 3\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 432,
+            "total_tokens": 432
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06514520000200719,
+            "tempo_decode_s": 27.66628440003842,
+            "tempo_resposta_s": 27.73142960004043,
+            "tempo_total_s": 27.73142960004043,
+            "tokens_entrada": 0,
+            "tokens_saida": 432,
+            "tps": 15.577992416206708,
+            "ram_inicio_mb": 1758.4140625,
+            "ram_pico_mb": 1760.2578125,
+            "ram_usada_mb": 1.84375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine a soma de todos os números pares menores que 10.\",\n            \"alternativas\": {\n                \"A\": \"55\",\n                \"B\": \"50\",\n                \"C\": \"45\",\n                \"D\": \"40\",\n                \"E\": \"35\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1. Identificar os números pares menores que 10: 2, 4, 6, 8, 10.\"\n                \"2. Soma a todos esses números: 2 + 4 + 6 + 8 + 10 = 30.\"\n                \"3. O resultado é 30, então a alternativa correta é D.\"\n        },\n        {\n            \"enunciado\": \"Determine o número que, quando subtraído de 25, dá como resultado 17.\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"12\",\n                \"C\": \"17\",\n                \"D\": \"32\",\n                \"E\": \"40\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1. Identificar o número que, quando subtraído de 25, dá como resultado 17: 25 - 17 = 8.\"\n                \"2. O resultado é 8, então a alternativa correta é A.\"\n        },\n        {\n            \"enunciado\": \"Determine qual número é maior: 7/2 e 11/3.\",\n            \"alternativas\": {\n                \"A\": \"7/2\",\n                \"B\": \"11/3\",\n                \"C\": \"11/2\",\n                \"D\": \"11/3\",\n                \"E\": \"11/2\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1. Comparar 7/2 e 11/3: 7/2 = 3.5 e 11/3 = 3.66.\"\n                \"2. O resultado é 3.66, então a alternativa correta é B.\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 518,
+            "total_tokens": 518
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.178549500007648,
+            "tempo_decode_s": 33.043754999991506,
+            "tempo_resposta_s": 35.222304499999154,
+            "tempo_total_s": 35.222304499999154,
+            "tokens_entrada": 0,
+            "tokens_saida": 518,
+            "tps": 14.706590251640476,
+            "ram_inicio_mb": 1745.27734375,
+            "ram_pico_mb": 1747.66796875,
+            "ram_usada_mb": 2.390625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/2 = 0,5, 2/3 = 0,66, 3/4 = 0,75, 4/5 = 0,8, 5/6 = 0,83\"\n        },\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1/2 = 0,5, 2/3 = 0,66, 3/4 = 0,75, 4/5 = 0,8, 5/6 = 0,83\"\n        },\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1/2 = 0,5, 2/3 = 0,66, 3/4 = 0,75, 4/5 = 0,8, 5/6 = 0,83\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 533,
+            "total_tokens": 533
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06650720001198351,
+            "tempo_decode_s": 34.09567449998576,
+            "tempo_resposta_s": 34.162181699997745,
+            "tempo_total_s": 34.162181699997745,
+            "tokens_entrada": 0,
+            "tokens_saida": 533,
+            "tps": 15.602048038987954,
+            "ram_inicio_mb": 1747.58203125,
+            "ram_pico_mb": 1749.41015625,
+            "ram_usada_mb": 1.828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 7\\nx = 7 - 3\\nx = 4\"\n        },\n        {\n            \"enunciado\": \"Se 4x = 16, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4x = 16\\nx = 16 / 4\\nx = 4\"\n        },\n        {\n            \"enunciado\": \"Se 3x - 2 = 5, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3x - 2 = 5\\n3x = 5 + 2\\n3x = 7\\nx = 7 / 3\\nx = 2.333\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 376,
+            "total_tokens": 376
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.256109000009019,
+            "tempo_decode_s": 23.76798099995358,
+            "tempo_resposta_s": 26.024089999962598,
+            "tempo_total_s": 26.024089999962598,
+            "tokens_entrada": 0,
+            "tokens_saida": 376,
+            "tps": 14.448151693317245,
+            "ram_inicio_mb": 1749.32421875,
+            "ram_pico_mb": 1751.2734375,
+            "ram_usada_mb": 1.94921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 18 e 22?\",\n            \"alternativas\": {\n                \"A\": \"17\",\n                \"B\": \"19\",\n                \"C\": \"20\",\n                \"D\": \"21\",\n                \"E\": \"23\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1. Identifique o intervalo entre 18 e 22.\\n2. O número central do intervalo 18 e 22 é 20.\\n3. Portanto, o número que está entre 18 e 22 é 19.\"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 30 e 34?\",\n            \"alternativas\": {\n                \"A\": \"31\",\n                \"B\": \"32\",\n                \"C\": \"33\",\n                \"D\": \"34\",\n                \"E\": \"35\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1. Identifique o intervalo entre 30 e 34.\\n2. O número central do intervalo 30 e 34 é 32.\\n3. Portanto, o número que está entre 30 e 34 é 31.\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 320,
+            "total_tokens": 320
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.199643299973104,
+            "tempo_decode_s": 20.024464500020258,
+            "tempo_resposta_s": 22.224107799993362,
+            "tempo_total_s": 22.224107799993362,
+            "tokens_entrada": 0,
+            "tokens_saida": 320,
+            "tps": 14.398778249271071,
+            "ram_inicio_mb": 1751.1875,
+            "ram_pico_mb": 1753.109375,
+            "ram_usada_mb": 1.921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 25 e 27?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"26\",\n                \"C\": \"28\",\n                \"D\": \"25\",\n                \"E\": \"27\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"25 < 26 < 27\"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 23 e 27?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"25\",\n                \"C\": \"28\",\n                \"D\": \"23\",\n                \"E\": \"27\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"23 < 24 < 25 < 26 < 27\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 226,
+            "total_tokens": 226
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06511910003609955,
+            "tempo_decode_s": 14.069207799970172,
+            "tempo_resposta_s": 14.134326900006272,
+            "tempo_total_s": 14.134326900006272,
+            "tokens_entrada": 0,
+            "tokens_saida": 226,
+            "tps": 15.989441987499221,
+            "ram_inicio_mb": 1753.0234375,
+            "ram_pico_mb": 1754.87890625,
+            "ram_usada_mb": 1.85546875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 14.495667,
+        "ram_media_mb": 1761.167969,
+        "ram_pico_mb": 1761.167969,
+        "tempo_medio_segundos": 52.015545,
+        "ttft_medio_segundos": 2.602654,
+        "tps": {
+          "n": 1,
+          "mediana": 14.495667,
+          "iqr": 0.0,
+          "p25": 14.495667,
+          "p75": 14.495667,
+          "p95": 14.495667,
+          "p99": 14.495667,
+          "max": 14.495667,
+          "media": 14.495667
+        },
+        "ttft": {
+          "n": 1,
+          "mediana": 2.602654,
+          "iqr": 0.0,
+          "p25": 2.602654,
+          "p75": 2.602654,
+          "p95": 2.602654,
+          "p99": 2.602654,
+          "max": 2.602654,
+          "media": 2.602654
+        },
+        "tempo": {
+          "n": 1,
+          "mediana": 52.015545,
+          "iqr": 0.0,
+          "p25": 52.015545,
+          "p75": 52.015545,
+          "p95": 52.015545,
+          "p99": 52.015545,
+          "max": 52.015545,
+          "media": 52.015545
+        },
+        "ram_pico": {
+          "n": 1,
+          "mediana": 1761.167969,
+          "iqr": 0.0,
+          "p25": 1761.167969,
+          "p75": 1761.167969,
+          "p95": 1761.167969,
+          "p99": 1761.167969,
+          "max": 1761.167969,
+          "media": 1761.167969
+        },
+        "tps_por_rodada": [
+          14.495666604088665
+        ],
+        "ttft_por_rodada": [
+          2.602654100046493
+        ],
+        "tempo_por_rodada": [
+          52.015545100031886
+        ],
+        "ram_por_rodada": [
+          1761.16796875
+        ],
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 1,
+        "quantidade_de_questoes": 5,
+        "tentativas": 0,
+        "valido_primeira_tentativa": true,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 1761.167969,
+        "tps_medio": 14.495667,
+        "tempo_medio_segundos": 52.015545,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/2 = 1/2, 2/3 = 2/3, 3/4 = 3/4, 4/5 = 4/5, 5/6 = 5/6\"\n        },\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"2/3 = 2/3, 3/4 = 3/4, 4/5 = 4/5, 5/6 = 5/6\"\n        },\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3/4 = 3/4, 4/5 = 4/5, 5/6 = 5/6\"\n        },\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"4/5 = 4/5\"\n        },\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"5/6 = 5/6\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 754,
+            "total_tokens": 754
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.602654100046493,
+            "tempo_decode_s": 49.41289099998539,
+            "tempo_resposta_s": 52.015545100031886,
+            "tempo_total_s": 52.015545100031886,
+            "tokens_entrada": 0,
+            "tokens_saida": 754,
+            "tps": 14.495666604088665,
+            "ram_inicio_mb": 1754.9296875,
+            "ram_pico_mb": 1761.16796875,
+            "ram_usada_mb": 6.23828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 14.103791,
+        "ram_media_mb": 1764.0,
+        "ram_pico_mb": 1764.929688,
+        "tempo_medio_segundos": 17.366137,
+        "ttft_medio_segundos": 1.970638,
+        "tps": {
+          "n": 2,
+          "mediana": 14.103791,
+          "iqr": 0.522508,
+          "p25": 13.842537,
+          "p75": 14.365045,
+          "p95": 14.574049,
+          "p99": 14.615849,
+          "max": 14.626299,
+          "media": 14.103791
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 1.970638,
+          "iqr": 0.219075,
+          "p25": 1.861101,
+          "p75": 2.080176,
+          "p95": 2.167806,
+          "p99": 2.185332,
+          "max": 2.189713,
+          "media": 1.970638
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 17.366137,
+          "iqr": 2.050941,
+          "p25": 16.340666,
+          "p75": 18.391608,
+          "p95": 19.211984,
+          "p99": 19.376059,
+          "max": 19.417078,
+          "media": 17.366137
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1764.0,
+          "iqr": 0.929688,
+          "p25": 1763.535156,
+          "p75": 1764.464844,
+          "p95": 1764.836719,
+          "p99": 1764.911094,
+          "max": 1764.929688,
+          "media": 1764.0
+        },
+        "tps_por_rodada": [
+          13.581282631499292,
+          14.62629943981854
+        ],
+        "ttft_por_rodada": [
+          2.189713300031144,
+          1.7515629000263289
+        ],
+        "tempo_por_rodada": [
+          15.315195599978324,
+          19.41707820002921
+        ],
+        "ram_por_rodada": [
+          1763.0703125,
+          1764.9296875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "Campo 'questoes' ausente",
+            "output_bruto": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine o número de diagonais de um polígono pentagonal.\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"10\",\n                \"C\": \"15\",\n                \"D\": \"20\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1. Identificar que um polígono pentagonal tem 5 lados.\"\n                2. O número de diagonais de um polígono com n lados é da"
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Qual é a medida do ângulo que resulta da soma dos ângulos internos de um triângulo equilátero?",
+                "alternativas": {
+                  "A": "180°",
+                  "B": "270°",
+                  "C": "360°",
+                  "D": "540°",
+                  "E": "0°"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "1. Definimos o ângulo interno de um triângulo como sendo igual a 180° menos a medida do ângulo externo.\n2. Um triângulo equilátero tem três ângulos internos iguais.\n3. Portanto, a medida do ângulo interno de um triângulo equilátero é 180°.\n4. A soma dos ângulos internos de um triângulo é igual a 180°.\n5. Portanto, a medida do ângulo que resulta da soma dos ângulos internos de um triângulo equilátero é 180°."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 1764.929688,
+        "tps_medio": 14.103791,
+        "tempo_medio_segundos": 17.366137,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 50.0,
+        "taxa_utilizavel_percent": 50.0,
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine o número de diagonais de um polígono pentagonal.\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"10\",\n                \"C\": \"15\",\n                \"D\": \"20\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1. Identificar que um polígono pentagonal tem 5 lados.\"\n                2. O número de diagonais de um polígono com n lados é dado por: n(n-3)/2.\"\n                3. Substituir n por 5 na fórmula: 5(5-3)/2 = 5(2)/2 = 10.\"\n                4. Conclusão: Um polígono pentagonal tem 10 diagonais.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 208,
+            "total_tokens": 208
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.189713300031144,
+            "tempo_decode_s": 13.12548229994718,
+            "tempo_resposta_s": 15.315195599978324,
+            "tempo_total_s": 15.315195599978324,
+            "tokens_entrada": 0,
+            "tokens_saida": 208,
+            "tps": 13.581282631499292,
+            "ram_inicio_mb": 1761.09375,
+            "ram_pico_mb": 1763.0703125,
+            "ram_usada_mb": 1.9765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é a medida do ângulo que resulta da soma dos ângulos internos de um triângulo equilátero?\",\n            \"alternativas\": {\n                \"A\": \"180°\",\n                \"B\": \"270°\",\n                \"C\": \"360°\",\n                \"D\": \"540°\",\n                \"E\": \"0°\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1. Definimos o ângulo interno de um triângulo como sendo igual a 180° menos a medida do ângulo externo.\\n2. Um triângulo equilátero tem três ângulos internos iguais.\\n3. Portanto, a medida do ângulo interno de um triângulo equilátero é 180°.\\n4. A soma dos ângulos internos de um triângulo é igual a 180°.\\n5. Portanto, a medida do ângulo que resulta da soma dos ângulos internos de um triângulo equilátero é 180°.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 284,
+            "total_tokens": 284
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.7515629000263289,
+            "tempo_decode_s": 17.66551530000288,
+            "tempo_resposta_s": 19.41707820002921,
+            "tempo_total_s": 19.41707820002921,
+            "tokens_entrada": 0,
+            "tokens_saida": 284,
+            "tps": 14.62629943981854,
+            "ram_inicio_mb": 1762.9765625,
+            "ram_pico_mb": 1764.9296875,
+            "ram_usada_mb": 1.953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1764.9,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 9.34,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 50.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 50.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 52.02,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -11.6,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Taxa JSON válido 50.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+    "gerado_em": "2026-09-03T13:16:00.617863"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Taxa JSON válido 50.0% abaixo de 60.0%"
+}

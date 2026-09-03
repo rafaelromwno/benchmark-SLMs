@@ -1,0 +1,1157 @@
+{
+  "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "01/09/2026",
+  "run_config": {
+    "modelos": [
+      "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\HuggingFaceTB--SmolLM2-1.7B-Instruct-GGUF\\smollm2-1.7b-instruct-q4_k_m.gguf"
+    },
+    "seed": 7,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 7
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 7
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 7
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 7
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 7
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 7
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.41,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Dentre os seguintes números, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?",
+            "alternativas": {
+              "A": "1000",
+              "B": "1001",
+              "C": "1002",
+              "D": "1003",
+              "E": "1004"
+            },
+            "resposta_correta": "B",
+            "resolucao_passo_a_passo": "Você pode verificar que ao escrever 1000 em uma fração, o denominador é 100, que é uma divisão inteira. Por exemplo, 1000 = 1000/100. Além disso, 1001 é um número ímpar, pois 1001 = 500 * 2 + 1. Portanto, 1001 pode ser escrito na forma de uma fração a/b, onde a e b são inteiros e b≠0. Portanto, a resposta correta é B."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 1.2552958000160288,
+        "tempo_prefill_s": 19.25855450000381,
+        "tempo_decode_s": 25.919267199991737,
+        "tempo_resposta_s": 45.17782169999555,
+        "tempo_total_s": 46.433117500011576,
+        "tokens_entrada": 0,
+        "tokens_saida": 321,
+        "tps": 7.105256250104499,
+        "ram_inicio_mb": 29.15625,
+        "ram_pico_mb": 2253.3203125,
+        "ram_usada_mb": 2224.1640625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 46.433117500011576,
+        "tempo_carregamento_s": 1.2552958000160288,
+        "tempo_resposta_s": 45.17782169999555,
+        "ram_pico_mb": 2253.3203125,
+        "ram_inicio_mb": 29.15625,
+        "ttft_segundos": 19.25855450000381,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os seguintes números, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1000\",\n                \"B\": \"1001\",\n                \"C\": \"1002\",\n                \"D\": \"1003\",\n                \"E\": \"1004\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Você pode verificar que ao escrever 1000 em uma fração, o denominador é 100, que é uma divisão inteira. Por exemplo, 1000 = 1000/100. Além disso, 1001 é um número ímpar, pois 1001 = 500 * 2 + 1. Portanto, 1001 pode ser escrito na forma de uma fração a/b, onde a e b são inteiros e b≠0. Portanto, a resposta correta é B.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 321,
+            "total_tokens": 321
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.2552958000160288,
+            "tempo_prefill_s": 19.25855450000381,
+            "tempo_decode_s": 25.919267199991737,
+            "tempo_resposta_s": 45.17782169999555,
+            "tempo_total_s": 46.433117500011576,
+            "tokens_entrada": 0,
+            "tokens_saida": 321,
+            "tps": 7.105256250104499,
+            "ram_inicio_mb": 29.15625,
+            "ram_pico_mb": 2253.3203125,
+            "ram_usada_mb": 2224.1640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 10.993138,
+          "iqr": 0.275747,
+          "p25": 10.799748,
+          "p75": 11.075495,
+          "p95": 11.40485,
+          "p99": 11.611709,
+          "max": 11.663423,
+          "media": 10.946999
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.13237,
+          "iqr": 0.658069,
+          "p25": 3.929103,
+          "p75": 4.587172,
+          "p95": 5.347075,
+          "p99": 5.682102,
+          "max": 5.765859,
+          "media": 3.960337
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 48.907155,
+          "iqr": 11.772594,
+          "p25": 47.151546,
+          "p75": 58.92414,
+          "p95": 79.857052,
+          "p99": 91.608845,
+          "max": 94.546793,
+          "media": 55.342209
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1798.148438,
+          "iqr": 448.983398,
+          "p25": 1709.853516,
+          "p75": 2158.836914,
+          "p95": 2256.133203,
+          "p99": 2256.389141,
+          "max": 2256.453125,
+          "media": 1923.645313
+        },
+        "tps_medio": 10.946999,
+        "ttft_medio_segundos": 3.960337,
+        "tempo_medio_segundos": 55.342209,
+        "ram_pico_mb": 2256.453125
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 6,
+        "json_invalidos": 4,
+        "taxa_json_valido_percent": 60.0,
+        "json_valido_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 6,
+        "gabarito_avaliados": 6,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 6,
+          "denominador": 6,
+          "ponto": 1.0,
+          "ic95": [
+            0.609666,
+            1.0
+          ],
+          "formato": "100.0% [61.0–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 6,
+        "taxa_utilizavel_percent": 60.0,
+        "utilizavel_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 6,
+          "json_invalido": 4
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 10.993138,
+          "iqr": 0.275747,
+          "p25": 10.799748,
+          "p75": 11.075495,
+          "p95": 11.40485,
+          "p99": 11.611709,
+          "max": 11.663423,
+          "media": 10.946999
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.13237,
+          "iqr": 0.658069,
+          "p25": 3.929103,
+          "p75": 4.587172,
+          "p95": 5.347075,
+          "p99": 5.682102,
+          "max": 5.765859,
+          "media": 3.960337
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 48.907155,
+          "iqr": 11.772594,
+          "p25": 47.151546,
+          "p75": 58.92414,
+          "p95": 79.857052,
+          "p99": 91.608845,
+          "max": 94.546793,
+          "media": 55.342209
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1798.148438,
+          "iqr": 448.983398,
+          "p25": 1709.853516,
+          "p75": 2158.836914,
+          "p95": 2256.133203,
+          "p99": 2256.389141,
+          "max": 2256.453125,
+          "media": 1923.645313
+        },
+        "tps_medio": 10.946999,
+        "ttft_medio_segundos": 3.960337,
+        "tempo_medio_segundos": 55.342209,
+        "ram_pico_mb": 2256.453125,
+        "tps_por_rodada": [
+          10.480868500293287,
+          10.830615939020136,
+          11.088817049035047,
+          10.491663202654543,
+          10.943174171959482,
+          11.663423163457697,
+          11.057309966978483,
+          10.789458086579996,
+          11.043101379205366,
+          11.081556412010734
+        ],
+        "ttft_por_rodada": [
+          5.765859100007219,
+          3.8871693999972194,
+          3.921583399991505,
+          4.133770100015681,
+          4.727023899991764,
+          0.08248430001549423,
+          4.1309693999937735,
+          4.835227400006261,
+          3.9516623000090476,
+          4.167616599996109
+        ],
+        "tempo_por_rodada": [
+          39.97760300000664,
+          94.54679270001361,
+          48.33698649998405,
+          49.27722040002118,
+          58.30118299997412,
+          61.90292419999605,
+          46.756399300007615,
+          59.131792800006224,
+          48.53708949999418,
+          46.654096300015226
+        ],
+        "ram_por_rodada": [
+          2255.7421875,
+          2256.453125,
+          2158.546875,
+          2158.93359375,
+          1797.83984375,
+          1798.45703125,
+          1709.70703125,
+          1710.29296875,
+          1694.93359375,
+          1695.546875
+        ],
+        "ram_media_mb": 1923.645313
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x = 3, qual é o valor de x²?\",\n            \"alternativas\": {\n                \"A\": \"9\",\n                \"B\": \"10\",\n                \"C\": \"11\",\n                \"D\": \"12\",\n                \"E\": \"13\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Se x = 3, então x² = 3² = 9\"\n        },\n        {\n            \"enunciado\": \"Existe um número que, quando elevado a 3 potências, dá 256?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"O número que, quando elevado a 3 potências, dá 256 é o cubo de 4\"\n        },\n        {\n            \"enunciado\": \"Existe um número que, quando elevado ao quadrado, dá 100?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"O número que, quando elevado ao quadrado, dá 100 é o cubo de 5\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 419,
+            "total_tokens": 419
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.765859100007219,
+            "tempo_decode_s": 34.21174389999942,
+            "tempo_resposta_s": 39.97760300000664,
+            "tempo_total_s": 39.97760300000664,
+            "tokens_entrada": 0,
+            "tokens_saida": 419,
+            "tps": 10.480868500293287,
+            "ram_inicio_mb": 2254.3515625,
+            "ram_pico_mb": 2255.7421875,
+            "ram_usada_mb": 1.390625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números 1, 2, 3, 4, 5, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"O número 1 pode ser escrito como 1/1, 2/2, 3/3, 4/4, 5/5. O número 5 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 3 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 4 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 2 pode ser escrito como 1/1, 2/2. O número 5 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 3 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 2 pode ser escrito como 1/1, 2/2. O número 5 pode ser escrito como 1/1, 2/2, 3/3, 4/4.\"\n        },\n        {\n            \"enunciado\": \"Dentre os números 1, 2, 3, 4, 5, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"O número 1 pode ser escrito como 1/1, 2/2, 3/3, 4/4, 5/5. O número 5 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 3 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 4 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 2 pode ser escrito como 1/1, 2/2. O número 5 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 3 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 2 pode ser escrito como 1/1, 2/2. O número 5 pode ser escrito como 1/1, 2/2, 3/3, 4/4. O número 3 pode ser escrito como 1/1, 2/2, 3/3, 4/4.\"\n        },\n        {\n            \"enunciado\": \"Dentre os números 1, 2, 3, 4, 5, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.8871693999972194,
+            "tempo_decode_s": 90.65962330001639,
+            "tempo_resposta_s": 94.54679270001361,
+            "tempo_total_s": 94.54679270001361,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 10.830615939020136,
+            "ram_inicio_mb": 2255.7265625,
+            "ram_pico_mb": 2256.453125,
+            "ram_usada_mb": 0.7265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x = 7, qual é o valor de x²?\",\n            \"alternativas\": {\n                \"A\": \"49\",\n                \"B\": \"12\",\n                \"C\": \"10\",\n                \"D\": \"28\",\n                \"E\": \"4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x = 7; x² = 7² = 49\"\n        },\n        {\n            \"enunciado\": \"O número médio de alunos que possuem uma máquina especial é 12. Se uma turma tem 5 alunos, quantos alunos possuem máquinas especiais?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"5\",\n                \"C\": \"10\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"média = 12; turma = 5; máquinas especiais = (5 × 12) ÷ 5 = 12\"\n        },\n        {\n            \"enunciado\": \"O número médio de alunos que possuem uma máquina especial é 12. Se uma turma tem 5 alunos e 2 das 5 possuem máquinas especiais, quantos alunos possuem máquinas especiais?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"5\",\n                \"C\": \"10\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"média = 12; turma = 5; máquinas especiais = (5 × 12) ÷ 5 = 12; máquinas especiais = (2 × 12) ÷ 5 = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 536,
+            "total_tokens": 536
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.921583399991505,
+            "tempo_decode_s": 44.415403099992545,
+            "tempo_resposta_s": 48.33698649998405,
+            "tempo_total_s": 48.33698649998405,
+            "tokens_entrada": 0,
+            "tokens_saida": 536,
+            "tps": 11.088817049035047,
+            "ram_inicio_mb": 2157.3359375,
+            "ram_pico_mb": 2158.546875,
+            "ram_usada_mb": 1.2109375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual o número que está entre 23 e 27, utilizando a reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"25\",\n                \"C\": \"26\",\n                \"D\": \"28\",\n                \"E\": \"29\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Você pode utilizar a reta numérica para determinar o intervalo [23, 27]. A altura da reta numérica entre 23 e 27 é 4. Para encontrar o número que está entre 23 e 27, verifica a altura que corresponde a um número em um intervalo de comprimento de 4 em relação à reta numérica. Portanto, o número que está entre 23 e 27 é 25.\"\n        },\n        {\n            \"enunciado\": \"Qual o número que está entre 23 e 27, utilizando a reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"26\",\n                \"C\": \"28\",\n                \"D\": \"30\",\n                \"E\": \"32\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Você pode utilizar a reta numérica para determinar o intervalo [23, 27]. A altura da reta numérica entre 23 e 27 é 4. Para encontrar o número que está entre 23 e 27, verifica a altura que corresponde a um número em um intervalo de comprimento de 4 em relação à reta numérica. Portanto, o número que está entre 23 e 27 é 25.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 517,
+            "total_tokens": 517
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.133770100015681,
+            "tempo_decode_s": 45.1434503000055,
+            "tempo_resposta_s": 49.27722040002118,
+            "tempo_total_s": 49.27722040002118,
+            "tokens_entrada": 0,
+            "tokens_saida": 517,
+            "tps": 10.491663202654543,
+            "ram_inicio_mb": 2158.53125,
+            "ram_pico_mb": 2158.93359375,
+            "ram_usada_mb": 0.40234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números a/b (com a e b inteiros, b≠0), qual NÃO pode ser escrito como uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"10/11\",\n                \"B\": \"100/110\",\n                \"C\": \"1000/1100\",\n                \"D\": \"10000/11000\",\n                \"E\": \"100000/110000\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"100000/110000 = 10/11\"\n        },\n        {\n            \"enunciado\": \"Dentre os números a/b (com a e b inteiros, b≠0), qual NÃO pode ser escrito como uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"3/4\",\n                \"B\": \"1/2\",\n                \"C\": \"2/3\",\n                \"D\": \"3/5\",\n                \"E\": \"7/9\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"3/4 = 0,75; 1/2 = 0,5; 2/3 = 0,6666666666666667; 3/5 = 0,6; 7/9 = 0,7\"\n        },\n        {\n            \"enunciado\": \"Dentre os números a/b (com a e b inteiros, b≠0), qual NÃO pode ser escrito como uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"5/6\",\n                \"B\": \"2/5\",\n                \"C\": \"3/7\",\n                \"D\": \"1/2\",\n                \"E\": \"6/7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"5/6 = 0,8333333333333333; 2/5 = 0,4; 3/7 = 0,4285714285714286; 1/2 = 0,5; 6/7 = 0,8571428571428571\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 638,
+            "total_tokens": 638
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.727023899991764,
+            "tempo_decode_s": 53.57415909998235,
+            "tempo_resposta_s": 58.30118299997412,
+            "tempo_total_s": 58.30118299997412,
+            "tokens_entrada": 0,
+            "tokens_saida": 638,
+            "tps": 10.943174171959482,
+            "ram_inicio_mb": 1797.12890625,
+            "ram_pico_mb": 1797.83984375,
+            "ram_usada_mb": 0.7109375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números 1, 2, 3, 4, 5, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"O número 1 pode ser escrito na forma de uma fração 1/1, mas a forma de uma fração que não é inteiro é 2/1, 3/1, 4/1 e 5/1. Portanto, o número 1 NÃO pode ser escrito na forma de uma fração a/b.\"\n        },\n        {\n            \"enunciado\": \"Dentre os números 1, 2, 3, 4, 5, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"O número 1 pode ser escrito na forma de uma fração 1/1, mas a forma de uma fração que não é inteiro é 2/1, 3/1, 4/1 e 5/1. Portanto, o número 1 NÃO pode ser escrito na forma de uma fração a/b.\"\n        },\n        {\n            \"enunciado\": \"Dentre os números 1, 2, 3, 4, 5, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"O número 5 pode ser escrito na forma de uma fração 5/1, mas a forma de uma fração que não é inteiro é 1/1, 2/1, 3/1, 4/1. Portanto, o número 5 NÃO pode ser escrito na forma de uma fração a/b.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 722,
+            "total_tokens": 722
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08248430001549423,
+            "tempo_decode_s": 61.820439899980556,
+            "tempo_resposta_s": 61.90292419999605,
+            "tempo_total_s": 61.90292419999605,
+            "tokens_entrada": 0,
+            "tokens_saida": 722,
+            "tps": 11.663423163457697,
+            "ram_inicio_mb": 1797.7578125,
+            "ram_pico_mb": 1798.45703125,
+            "ram_usada_mb": 0.69921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual o número que está entre 23 e 27, utilizando a reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"25\",\n                \"C\": \"26\",\n                \"D\": \"28\",\n                \"E\": \"29\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Você pode utilizar a reta numérica para determinar o intervalo [23, 27]. A altura da reta numérica entre 23 e 27 é 4. Para encontrar o número que está entre 23 e 27, verifica a altura que corresponde a um número em um intervalo de comprimento de 4 em relação à reta numérica. Portanto, o número que está entre 23 e 27 é 25.\"\n        },\n        {\n            \"enunciado\": \"Qual o número que está entre 23 e 27, utilizando a reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"26\",\n                \"C\": \"28\",\n                \"D\": \"30\",\n                \"E\": \"32\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Você pode utilizar a reta numérica para determinar o intervalo [23, 27]. A altura da reta numérica entre 23 e 27 é 4. Para encontrar o número que está entre 23 e 27, verifica a altura que corresponde a um número em um intervalo de comprimento de 4 em relação à reta numérica. Portanto, o número que está entre 23 e 27 é 25.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 517,
+            "total_tokens": 517
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.1309693999937735,
+            "tempo_decode_s": 42.62542990001384,
+            "tempo_resposta_s": 46.756399300007615,
+            "tempo_total_s": 46.756399300007615,
+            "tokens_entrada": 0,
+            "tokens_saida": 517,
+            "tps": 11.057309966978483,
+            "ram_inicio_mb": 1709.0,
+            "ram_pico_mb": 1709.70703125,
+            "ram_usada_mb": 0.70703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números a/b (com a e b inteiros, b≠0), qual NÃO pode ser escrito como uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"10/11\",\n                \"B\": \"100/110\",\n                \"C\": \"1000/1100\",\n                \"D\": \"10000/11000\",\n                \"E\": \"100000/110000\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"100000/110000 = 10/11\"\n        },\n        {\n            \"enunciado\": \"Dentre os números a/b (com a e b inteiros, b≠0), qual NÃO pode ser escrito como uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"3/4\",\n                \"B\": \"1/2\",\n                \"C\": \"2/3\",\n                \"D\": \"3/5\",\n                \"E\": \"7/9\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"3/4 = 0,75; 1/2 = 0,5; 2/3 = 0,6666666666666667; 3/5 = 0,6; 7/9 = 0,7\"\n        },\n        {\n            \"enunciado\": \"Dentre os números a/b (com a e b inteiros, b≠0), qual NÃO pode ser escrito como uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"5/6\",\n                \"B\": \"2/5\",\n                \"C\": \"3/7\",\n                \"D\": \"1/2\",\n                \"E\": \"6/7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"5/6 = 0,8333333333333333; 2/5 = 0,4; 3/7 = 0,4285714285714286; 1/2 = 0,5; 6/7 = 0,8571428571428571\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 638,
+            "total_tokens": 638
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.835227400006261,
+            "tempo_decode_s": 54.29656539999996,
+            "tempo_resposta_s": 59.131792800006224,
+            "tempo_total_s": 59.131792800006224,
+            "tokens_entrada": 0,
+            "tokens_saida": 638,
+            "tps": 10.789458086579996,
+            "ram_inicio_mb": 1709.62109375,
+            "ram_pico_mb": 1710.29296875,
+            "ram_usada_mb": 0.671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x = 7, qual é o valor de x²?\",\n            \"alternativas\": {\n                \"A\": \"49\",\n                \"B\": \"12\",\n                \"C\": \"10\",\n                \"D\": \"28\",\n                \"E\": \"4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x = 7; x² = 7² = 49\"\n        },\n        {\n            \"enunciado\": \"O número médio de alunos que possuem uma máquina especial é 12. Se uma turma tem 5 alunos, quantos alunos possuem máquinas especiais?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"5\",\n                \"C\": \"10\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"média = 12; turma = 5; máquinas especiais = (5 × 12) ÷ 5 = 12\"\n        },\n        {\n            \"enunciado\": \"O número médio de alunos que possuem uma máquina especial é 12. Se uma turma tem 5 alunos e 2 das 5 possuem máquinas especiais, quantos alunos possuem máquinas especiais?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"5\",\n                \"C\": \"10\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"média = 12; turma = 5; máquinas especiais = (5 × 12) ÷ 5 = 12; máquinas especiais = (2 × 12) ÷ 5 = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 536,
+            "total_tokens": 536
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.9516623000090476,
+            "tempo_decode_s": 44.58542719998513,
+            "tempo_resposta_s": 48.53708949999418,
+            "tempo_total_s": 48.53708949999418,
+            "tokens_entrada": 0,
+            "tokens_saida": 536,
+            "tps": 11.043101379205366,
+            "ram_inicio_mb": 1694.21875,
+            "ram_pico_mb": 1694.93359375,
+            "ram_usada_mb": 0.71484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual o número que está entre 23 e 27, utilizando a reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"25\",\n                \"C\": \"26\",\n                \"D\": \"28\",\n                \"E\": \"29\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Você pode utilizar a reta numérica para determinar o intervalo [23, 27]. A altura da reta numérica entre 23 e 27 é 4. Para encontrar o número que está entre 23 e 27, verifica a altura que corresponde a um número em um intervalo de comprimento de 4 em relação à reta numérica. Portanto, o número que está entre 23 e 27 é 25.\"\n        },\n        {\n            \"enunciado\": \"Qual o número que está entre 23 e 27, utilizando a reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"26\",\n                \"C\": \"28\",\n                \"D\": \"30\",\n                \"E\": \"32\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Você pode utilizar a reta numérica para determinar o intervalo [23, 27]. A altura da reta numérica entre 23 e 27 é 4. Para encontrar o número que está entre 23 e 27, verifica a altura que corresponde a um número em um intervalo de comprimento de 4 em relação à reta numérica. Portanto, o número que está entre 23 e 27 é 25.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 517,
+            "total_tokens": 517
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.167616599996109,
+            "tempo_decode_s": 42.48647970001912,
+            "tempo_resposta_s": 46.654096300015226,
+            "tempo_total_s": 46.654096300015226,
+            "tokens_entrada": 0,
+            "tokens_saida": 517,
+            "tps": 11.081556412010734,
+            "ram_inicio_mb": 1694.84765625,
+            "ram_pico_mb": 1695.546875,
+            "ram_usada_mb": 0.69921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 10.890802,
+        "ram_media_mb": 1696.0625,
+        "ram_pico_mb": 1696.0625,
+        "tempo_medio_segundos": 94.024296,
+        "ttft_medio_segundos": 4.744816,
+        "tps": {
+          "n": 1,
+          "mediana": 10.890802,
+          "iqr": 0.0,
+          "p25": 10.890802,
+          "p75": 10.890802,
+          "p95": 10.890802,
+          "p99": 10.890802,
+          "max": 10.890802,
+          "media": 10.890802
+        },
+        "ttft": {
+          "n": 1,
+          "mediana": 4.744816,
+          "iqr": 0.0,
+          "p25": 4.744816,
+          "p75": 4.744816,
+          "p95": 4.744816,
+          "p99": 4.744816,
+          "max": 4.744816,
+          "media": 4.744816
+        },
+        "tempo": {
+          "n": 1,
+          "mediana": 94.024296,
+          "iqr": 0.0,
+          "p25": 94.024296,
+          "p75": 94.024296,
+          "p95": 94.024296,
+          "p99": 94.024296,
+          "max": 94.024296,
+          "media": 94.024296
+        },
+        "ram_pico": {
+          "n": 1,
+          "mediana": 1696.0625,
+          "iqr": 0.0,
+          "p25": 1696.0625,
+          "p75": 1696.0625,
+          "p95": 1696.0625,
+          "p99": 1696.0625,
+          "max": 1696.0625,
+          "media": 1696.0625
+        },
+        "tps_por_rodada": [
+          10.890802096511377
+        ],
+        "ttft_por_rodada": [
+          4.7448156000173185
+        ],
+        "tempo_por_rodada": [
+          94.02429600001778
+        ],
+        "ram_por_rodada": [
+          1696.0625
+        ],
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 1,
+        "quantidade_de_questoes": 5,
+        "tentativas": 0,
+        "valido_primeira_tentativa": true,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 1696.0625,
+        "tps_medio": 10.890802,
+        "tempo_medio_segundos": 94.024296,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números 1, 2, 3, 4, 5, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Não pode ser escrito na forma de uma fração pois é um número ímpar.\"\n        },\n        {\n            \"enunciado\": \"Qual NÚmero entre 1 e 100, que, quando escrito na forma de uma fração, NÃO pode ser escrita como a/b, com a e b inteiros, b≠0?\",\n            \"alternativas\": {\n                \"A\": \"33\",\n                \"B\": \"66\",\n                \"C\": \"99\",\n                \"D\": \"100\",\n                \"E\": \"150\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Não pode ser escrito na forma de uma fração pois é um número divisor ímpar.\"\n        },\n        {\n            \"enunciado\": \"Qual NÚmero entre 1 e 100, que, quando escrito na forma de uma fração, NÃO pode ser escrita como a/b, com a e b inteiros, b≠0? Seguindo a regra de que a número deve ser menor que 100 e a divisão deve ser possível, qual é o número?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Não pode ser escrito como a/b pois é um número par e a divisão 1/2 é possível.\"\n        },\n        {\n            \"enunciado\": \"Qual NÚmero entre 1 e 100, que, quando escrito na forma de uma fração, NÃO pode ser escrita como a/b, com a e b inteiros, b≠0? Seguindo a regra de que a número deve ser menor que 100 e a divisão deve ser possível, qual é o número?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Não pode ser escrito como a/b pois é um número par e a divisão 1/3 é possível.\"\n        },\n        {\n            \"enunciado\": \"Qual NÚmero entre 1 e 100, que, quando escrito na forma de uma fração, NÃO pode ser escrita como a/b, com a e b inteiros, b≠0? Seguindo a regra de que a número deve ser menor que 100 e a divisão deve ser possível, qual é o número?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Não pode ser escrito como a/b pois é um número ímpar e a divis",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.7448156000173185,
+            "tempo_decode_s": 89.27948040000047,
+            "tempo_resposta_s": 94.02429600001778,
+            "tempo_total_s": 94.02429600001778,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 10.890802096511377,
+            "ram_inicio_mb": 1695.86328125,
+            "ram_pico_mb": 1696.0625,
+            "ram_usada_mb": 0.19921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 11.003508,
+        "ram_media_mb": 1649.875,
+        "ram_pico_mb": 1665.441406,
+        "tempo_medio_segundos": 46.277252,
+        "ttft_medio_segundos": 3.684311,
+        "tps": {
+          "n": 2,
+          "mediana": 11.003508,
+          "iqr": 0.014349,
+          "p25": 10.996334,
+          "p75": 11.010683,
+          "p95": 11.016423,
+          "p99": 11.017571,
+          "max": 11.017858,
+          "media": 11.003508
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 3.684311,
+          "iqr": 0.461549,
+          "p25": 3.453537,
+          "p75": 3.915086,
+          "p95": 4.099705,
+          "p99": 4.136629,
+          "max": 4.14586,
+          "media": 3.684311
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 46.277252,
+          "iqr": 14.782926,
+          "p25": 38.885789,
+          "p75": 53.668715,
+          "p95": 59.581885,
+          "p99": 60.764519,
+          "max": 61.060178,
+          "media": 46.277252
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1649.875,
+          "iqr": 15.566406,
+          "p25": 1642.091797,
+          "p75": 1657.658203,
+          "p95": 1663.884766,
+          "p99": 1665.130078,
+          "max": 1665.441406,
+          "media": 1649.875
+        },
+        "tps_por_rodada": [
+          10.989158924493196,
+          11.01785752439274
+        ],
+        "ttft_por_rodada": [
+          4.145859999989625,
+          3.2227626999956556
+        ],
+        "tempo_por_rodada": [
+          61.060178000014275,
+          31.494326299987733
+        ],
+        "ram_por_rodada": [
+          1665.44140625,
+          1634.30859375
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "A seguinte figura mostra um triângulo equilátero. Determine o comprimento da diagonal ˆC que se encontra em ˆ, ˆA e ˆB, respectivamente.",
+                "alternativas": {
+                  "A": "ˆC = 2²ˆA",
+                  "B": "ˆC = 2²ˆB",
+                  "C": "ˆC = 3²ˆA",
+                  "D": "ˆC = 3²ˆB",
+                  "E": "ˆC = 3²ˆB"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "Utilizando a propriedade da equilátero, a equação que representa o triângulo é αx² + αy² = 1, onde x e y são os comprimentos dos lados do triângulo. Como é um triângulo equilátero, os lados ˆA, ˆB e ˆC são iguais, αx² + αx² = 1, ou α(x² + x²) = 1. Simplificando, α(2x²) = 1, ou 2x² = 1, pois α = 1/2, α(2x²) = 1 significa que x² = 1/2, pois 2x² = 1 e x² = 1/2. Portanto, o comprimento da diagonal ˆC é 1/2 ou 0,2. A resposta correta é ¿sim, pois a diagonal ˆC se encontra em ˆ, ˆA e ˆB, e o comprimento desta diagonal é 0,2. A resposta correta é A."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "A equipe de pesquisa deseja identificar a correlação entre a temperatura e a precipitação de uma amostra de águja. Utilize os dados de uma amostra de águja para identificar a correlação entre as variáveis. Utilize a fórmula de correlação de Pearson para identificar a correlação entre as variáveis e escreva o resultado em um intervalo de confiança de 95%.",
+                "alternativas": {
+                  "A": "0,98",
+                  "B": "0,99",
+                  "C": "0,97",
+                  "D": "0,96",
+                  "E": "0,95"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "Utilize a fórmula de correlação de Pearson para identificar a correlação entre as variáveis. O intervalo de confiança de 95% indica que a correlação pode variar de 0,98 a 0,99. A correlação entre a temperatura e a precipitação é muito alta (0,98). A correlação entre a temperatura e a precipitação é muito alta (0,99)."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 1665.441406,
+        "tps_medio": 11.003508,
+        "tempo_medio_segundos": 46.277252,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 50.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"A seguinte figura mostra um triângulo equilátero. Determine o comprimento da diagonal \\u02c6C que se encontra em \\u02c6, \\u02c6A e \\u02c6B, respectivamente.\",\n            \"alternativas\": {\n                \"A\": \"\\u02c6C = 2\\u00b2\\u02c6A\",\n                \"B\": \"\\u02c6C = 2\\u00b2\\u02c6B\",\n                \"C\": \"\\u02c6C = 3\\u00b2\\u02c6A\",\n                \"D\": \"\\u02c6C = 3\\u00b2\\u02c6B\",\n                \"E\": \"\\u02c6C = 3\\u00b2\\u02c6B\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Utilizando a propriedade da equilátero, a equação que representa o triângulo é \\u03b1x\\u00b2 + \\u03b1y\\u00b2 = 1, onde x e y são os comprimentos dos lados do triângulo. Como é um triângulo equilátero, os lados \\u02c6A, \\u02c6B e \\u02c6C são iguais, \\u03b1x\\u00b2 + \\u03b1x\\u00b2 = 1, ou \\u03b1(x\\u00b2 + x\\u00b2) = 1. Simplificando, \\u03b1(2x\\u00b2) = 1, ou 2x\\u00b2 = 1, pois \\u03b1 = 1/2, \\u03b1(2x\\u00b2) = 1 significa que x\\u00b2 = 1/2, pois 2x\\u00b2 = 1 e x\\u00b2 = 1/2. Portanto, o comprimento da diagonal \\u02c6C é 1/2 ou 0,2. A resposta correta é \\u00bfsim, pois a diagonal \\u02c6C se encontra em \\u02c6, \\u02c6A e \\u02c6B, e o comprimento desta diagonal é 0,2. A resposta correta é A.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 671,
+            "total_tokens": 671
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.145859999989625,
+            "tempo_decode_s": 56.91431800002465,
+            "tempo_resposta_s": 61.060178000014275,
+            "tempo_total_s": 61.060178000014275,
+            "tokens_entrada": 0,
+            "tokens_saida": 671,
+            "tps": 10.989158924493196,
+            "ram_inicio_mb": 1664.6484375,
+            "ram_pico_mb": 1665.44140625,
+            "ram_usada_mb": 0.79296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"A equipe de pesquisa deseja identificar a correlação entre a temperatura e a precipitação de uma amostra de águja. Utilize os dados de uma amostra de águja para identificar a correlação entre as variáveis. Utilize a fórmula de correlação de Pearson para identificar a correlação entre as variáveis e escreva o resultado em um intervalo de confiança de 95%.\",\n            \"alternativas\": {\n                \"A\": \"0,98\",\n                \"B\": \"0,99\",\n                \"C\": \"0,97\",\n                \"D\": \"0,96\",\n                \"E\": \"0,95\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Utilize a fórmula de correlação de Pearson para identificar a correlação entre as variáveis. O intervalo de confiança de 95% indica que a correlação pode variar de 0,98 a 0,99. A correlação entre a temperatura e a precipitação é muito alta (0,98). A correlação entre a temperatura e a precipitação é muito alta (0,99).\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 347,
+            "total_tokens": 347
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.2227626999956556,
+            "tempo_decode_s": 28.271563599992078,
+            "tempo_resposta_s": 31.494326299987733,
+            "tempo_total_s": 31.494326299987733,
+            "tokens_entrada": 0,
+            "tokens_saida": 347,
+            "tps": 11.01785752439274,
+            "ram_inicio_mb": 1633.515625,
+            "ram_pico_mb": 1634.30859375,
+            "ram_usada_mb": 0.79296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2256.5,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2256.5 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 7.11,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 60.0,
+        "limite": 60.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 94.02,
+        "limite": 90.0,
+        "motivo": "Tempo médio 94.0s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -5.7,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "RAM pico 2256.5 MB — limite 2048.0 MB",
+      "Tempo médio 94.0s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "hardware"
+    ],
+    "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+    "gerado_em": "2026-09-01T08:43:43.927699"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "RAM pico 2256.5 MB — limite 2048.0 MB; Tempo médio 94.0s acima de 90.0s"
+}

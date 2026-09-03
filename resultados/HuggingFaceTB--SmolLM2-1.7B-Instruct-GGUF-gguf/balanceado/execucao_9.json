@@ -1,0 +1,1221 @@
+{
+  "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "01/09/2026",
+  "run_config": {
+    "modelos": [
+      "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\HuggingFaceTB--SmolLM2-1.7B-Instruct-GGUF\\smollm2-1.7b-instruct-q4_k_m.gguf"
+    },
+    "seed": 256,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 256
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 256
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.05,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Dentre os números abaixo, qual não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?",
+            "alternativas": {
+              "A": "1/3",
+              "B": "1/4",
+              "C": "1/5",
+              "D": "1/6",
+              "E": "1/7"
+            },
+            "resposta_correta": "D",
+            "resolucao_passo_a_passo": "Para cada alternativa, verifique se a fração é divisível pelo número inteiro correspondente ao número específico do b. Se a divisibilidade não possui um número inteiro correspondente, então a alternativa é correta."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 1.4934518999943975,
+        "tempo_prefill_s": 21.981645699997898,
+        "tempo_decode_s": 18.965445599984378,
+        "tempo_resposta_s": 40.947091299982276,
+        "tempo_total_s": 42.44054319997667,
+        "tokens_entrada": 0,
+        "tokens_saida": 228,
+        "tps": 5.568161077172744,
+        "ram_inicio_mb": 35.109375,
+        "ram_pico_mb": 2227.65234375,
+        "ram_usada_mb": 2192.54296875,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 42.44054319997667,
+        "tempo_carregamento_s": 1.4934518999943975,
+        "tempo_resposta_s": 40.947091299982276,
+        "ram_pico_mb": 2227.65234375,
+        "ram_inicio_mb": 35.109375,
+        "ttft_segundos": 21.981645699997898,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/3\",\n                \"B\": \"1/4\",\n                \"C\": \"1/5\",\n                \"D\": \"1/6\",\n                \"E\": \"1/7\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Para cada alternativa, verifique se a fração é divisível pelo número inteiro correspondente ao número específico do b. Se a divisibilidade não possui um número inteiro correspondente, então a alternativa é correta.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 228,
+            "total_tokens": 228
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.4934518999943975,
+            "tempo_prefill_s": 21.981645699997898,
+            "tempo_decode_s": 18.965445599984378,
+            "tempo_resposta_s": 40.947091299982276,
+            "tempo_total_s": 42.44054319997667,
+            "tokens_entrada": 0,
+            "tokens_saida": 228,
+            "tps": 5.568161077172744,
+            "ram_inicio_mb": 35.109375,
+            "ram_pico_mb": 2227.65234375,
+            "ram_usada_mb": 2192.54296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 11.30255,
+          "iqr": 0.847271,
+          "p25": 10.913849,
+          "p75": 11.76112,
+          "p95": 11.885814,
+          "p99": 11.903753,
+          "max": 11.908238,
+          "media": 11.257471
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.030415,
+          "iqr": 4.121247,
+          "p25": 0.082495,
+          "p75": 4.203742,
+          "p95": 5.373185,
+          "p99": 6.013674,
+          "max": 6.173796,
+          "media": 2.326214
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 56.426582,
+          "iqr": 14.488798,
+          "p25": 54.408573,
+          "p75": 68.897371,
+          "p95": 73.824455,
+          "p99": 74.371051,
+          "max": 74.5077,
+          "media": 57.307793
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1954.800781,
+          "iqr": 304.839844,
+          "p25": 1739.158203,
+          "p75": 2043.998047,
+          "p95": 2124.281641,
+          "p99": 2124.537578,
+          "max": 2124.601562,
+          "media": 1914.172656
+        },
+        "tps_medio": 11.257471,
+        "ttft_medio_segundos": 2.326214,
+        "tempo_medio_segundos": 57.307793,
+        "ram_pico_mb": 2124.601562
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 8,
+        "json_invalidos": 2,
+        "taxa_json_valido_percent": 80.0,
+        "json_valido_ic95": {
+          "numerador": 8,
+          "denominador": 10,
+          "ponto": 0.8,
+          "ic95": [
+            0.490162,
+            0.943318
+          ],
+          "formato": "80.0% [49.0–94.3]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 3,
+        "gabarito_avaliados": 8,
+        "taxa_gabarito_percent": 37.5,
+        "gabarito_ic95": {
+          "numerador": 3,
+          "denominador": 8,
+          "ponto": 0.375,
+          "ic95": [
+            0.136844,
+            0.694258
+          ],
+          "formato": "37.5% [13.7–69.4]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 3,
+        "taxa_utilizavel_percent": 30.0,
+        "utilizavel_ic95": {
+          "numerador": 3,
+          "denominador": 10,
+          "ponto": 0.3,
+          "ic95": [
+            0.107791,
+            0.603222
+          ],
+          "formato": "30.0% [10.8–60.3]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 8,
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 11.30255,
+          "iqr": 0.847271,
+          "p25": 10.913849,
+          "p75": 11.76112,
+          "p95": 11.885814,
+          "p99": 11.903753,
+          "max": 11.908238,
+          "media": 11.257471
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.030415,
+          "iqr": 4.121247,
+          "p25": 0.082495,
+          "p75": 4.203742,
+          "p95": 5.373185,
+          "p99": 6.013674,
+          "max": 6.173796,
+          "media": 2.326214
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 56.426582,
+          "iqr": 14.488798,
+          "p25": 54.408573,
+          "p75": 68.897371,
+          "p95": 73.824455,
+          "p99": 74.371051,
+          "max": 74.5077,
+          "media": 57.307793
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1954.800781,
+          "iqr": 304.839844,
+          "p25": 1739.158203,
+          "p75": 2043.998047,
+          "p95": 2124.281641,
+          "p99": 2124.537578,
+          "max": 2124.601562,
+          "media": 1914.172656
+        },
+        "tps_medio": 11.257471,
+        "ttft_medio_segundos": 2.326214,
+        "tempo_medio_segundos": 57.307793,
+        "ram_pico_mb": 2124.601562,
+        "tps_por_rodada": [
+          10.259853019528716,
+          11.727234335654668,
+          11.660027614606282,
+          11.772415242384493,
+          11.858407481054748,
+          10.945072982404481,
+          10.602930958006121,
+          11.908237901490516,
+          10.933097824725682,
+          10.907432089014
+        ],
+        "ttft_por_rodada": [
+          6.173795599985169,
+          0.08004960001562722,
+          0.0839304999972228,
+          0.08201700000790879,
+          0.0812335999798961,
+          4.254673099989304,
+          3.9745899999979883,
+          0.08624080001027323,
+          4.0509502000059,
+          4.3946615000022575
+        ],
+        "tempo_por_rodada": [
+          41.22866079999949,
+          56.5350688000035,
+          56.86092879998614,
+          56.31809499999508,
+          55.9096995999862,
+          72.90951840000344,
+          74.50770009998814,
+          31.910682600020664,
+          72.98937709999154,
+          53.90819719998399
+        ],
+        "ram_por_rodada": [
+          2123.890625,
+          2124.6015625,
+          2073.37890625,
+          1953.88671875,
+          1954.45703125,
+          1955.14453125,
+          1955.85546875,
+          1665.97265625,
+          1666.95703125,
+          1667.58203125
+        ],
+        "ram_media_mb": 1914.172656
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine o valor de x, se x = 5 - 5/3\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"10\",\n                \"C\": \"15\",\n                \"D\": \"20\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Expressão = 5 - (5/3) = (15/3) - (5/3) = 10/3 = 3 1/3\"\n        },\n        {\n            \"enunciado\": \"Se x + 5 = 12, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"10\",\n                \"C\": \"15\",\n                \"D\": \"20\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressão = x + 5 = 12 → x = 12 - 5 = 7\"\n        },\n        {\n            \"enunciado\": \"Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"10\",\n                \"C\": \"15\",\n                \"D\": \"20\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Expressão = 2x = 10 → x = 10/2 = 5\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 423,
+            "total_tokens": 423
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.173795599985169,
+            "tempo_decode_s": 35.05486520001432,
+            "tempo_resposta_s": 41.22866079999949,
+            "tempo_total_s": 41.22866079999949,
+            "tokens_entrada": 0,
+            "tokens_saida": 423,
+            "tps": 10.259853019528716,
+            "ram_inicio_mb": 2112.56640625,
+            "ram_pico_mb": 2123.890625,
+            "ram_usada_mb": 11.32421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando x + 5 = 12\",\n            \"alternativas\": {\n                \"A\": \"x = 12 - 5\",\n                \"B\": \"x = 12 / 5\",\n                \"C\": \"x = 5 - 12\",\n                \"D\": \"x = 5 + 12\",\n                \"E\": \"x = 5 * 12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando x + 5 = 12; resolva para x: x = 12 - 5; x = 7. A alternativa correta é A.\"\n        },\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10\",\n            \"alternativas\": {\n                \"A\": \"x = 10 / 2\",\n                \"B\": \"x = 10 - 2\",\n                \"C\": \"x = 2 / 10\",\n                \"D\": \"x = 2 - 10\",\n                \"E\": \"x = 2 * 10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10; resolva para x: x = 10 / 2; x = 5. A alternativa correta é A.\"\n        },\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando 2x = 10, quando x = 5\",\n            \"alternativas\": {\n                \"A\": \"x = 5 * 2\",\n                \"B\": \"x = 2 / 5\",\n                \"C\": \"x = 5 / 2\",\n                \"D\": \"x = 5 * 2\",\n                \"E\": \"x = 2 * 5\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10; resolva para x: x = 10 / 2; x = 5. A alternativa correta é B.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 663,
+            "total_tokens": 663
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08004960001562722,
+            "tempo_decode_s": 56.45501919998787,
+            "tempo_resposta_s": 56.5350688000035,
+            "tempo_total_s": 56.5350688000035,
+            "tokens_entrada": 0,
+            "tokens_saida": 663,
+            "tps": 11.727234335654668,
+            "ram_inicio_mb": 2123.83984375,
+            "ram_pico_mb": 2124.6015625,
+            "ram_usada_mb": 0.76171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando x + 5 = 12\",\n            \"alternativas\": {\n                \"A\": \"x = 12 - 5\",\n                \"B\": \"x = 12 / 5\",\n                \"C\": \"x = 5 - 12\",\n                \"D\": \"x = 5 + 12\",\n                \"E\": \"x = 5 * 12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando x + 5 = 12; resolva para x: x = 12 - 5; x = 7. A alternativa correta é A.\"\n        },\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10\",\n            \"alternativas\": {\n                \"A\": \"x = 10 / 2\",\n                \"B\": \"x = 10 - 2\",\n                \"C\": \"x = 2 / 10\",\n                \"D\": \"x = 2 - 10\",\n                \"E\": \"x = 2 * 10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10; resolva para x: x = 10 / 2; x = 5. A alternativa correta é A.\"\n        },\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando 2x = 10, quando x = 5\",\n            \"alternativas\": {\n                \"A\": \"x = 5 * 2\",\n                \"B\": \"x = 2 / 5\",\n                \"C\": \"x = 5 / 2\",\n                \"D\": \"x = 5 * 2\",\n                \"E\": \"x = 2 * 5\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10; resolva para x: x = 10 / 2; x = 5. A alternativa correta é B.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 663,
+            "total_tokens": 663
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0839304999972228,
+            "tempo_decode_s": 56.77699829998892,
+            "tempo_resposta_s": 56.86092879998614,
+            "tempo_total_s": 56.86092879998614,
+            "tokens_entrada": 0,
+            "tokens_saida": 663,
+            "tps": 11.660027614606282,
+            "ram_inicio_mb": 2072.71875,
+            "ram_pico_mb": 2073.37890625,
+            "ram_usada_mb": 0.66015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando x + 5 = 12\",\n            \"alternativas\": {\n                \"A\": \"x = 12 - 5\",\n                \"B\": \"x = 12 / 5\",\n                \"C\": \"x = 5 - 12\",\n                \"D\": \"x = 5 + 12\",\n                \"E\": \"x = 5 * 12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando x + 5 = 12; resolva para x: x = 12 - 5; x = 7. A alternativa correta é A.\"\n        },\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10\",\n            \"alternativas\": {\n                \"A\": \"x = 10 / 2\",\n                \"B\": \"x = 10 - 2\",\n                \"C\": \"x = 2 / 10\",\n                \"D\": \"x = 2 - 10\",\n                \"E\": \"x = 2 * 10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10; resolva para x: x = 10 / 2; x = 5. A alternativa correta é A.\"\n        },\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando 2x = 10, quando x = 5\",\n            \"alternativas\": {\n                \"A\": \"x = 5 * 2\",\n                \"B\": \"x = 2 / 5\",\n                \"C\": \"x = 5 / 2\",\n                \"D\": \"x = 5 * 2\",\n                \"E\": \"x = 2 * 5\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10; resolva para x: x = 10 / 2; x = 5. A alternativa correta é B.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 663,
+            "total_tokens": 663
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08201700000790879,
+            "tempo_decode_s": 56.236077999987174,
+            "tempo_resposta_s": 56.31809499999508,
+            "tempo_total_s": 56.31809499999508,
+            "tokens_entrada": 0,
+            "tokens_saida": 663,
+            "tps": 11.772415242384493,
+            "ram_inicio_mb": 1953.140625,
+            "ram_pico_mb": 1953.88671875,
+            "ram_usada_mb": 0.74609375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando x + 5 = 12\",\n            \"alternativas\": {\n                \"A\": \"x = 12 - 5\",\n                \"B\": \"x = 12 / 5\",\n                \"C\": \"x = 5 - 12\",\n                \"D\": \"x = 5 + 12\",\n                \"E\": \"x = 5 * 12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando x + 5 = 12; resolva para x: x = 12 - 5; x = 7. A alternativa correta é A.\"\n        },\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10\",\n            \"alternativas\": {\n                \"A\": \"x = 10 / 2\",\n                \"B\": \"x = 10 - 2\",\n                \"C\": \"x = 2 / 10\",\n                \"D\": \"x = 2 - 10\",\n                \"E\": \"x = 2 * 10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10; resolva para x: x = 10 / 2; x = 5. A alternativa correta é A.\"\n        },\n        {\n            \"enunciado\": \"Expressa como expressão equa o valor de x em relação ao valor de 5, quando 2x = 10, quando x = 5\",\n            \"alternativas\": {\n                \"A\": \"x = 5 * 2\",\n                \"B\": \"x = 2 / 5\",\n                \"C\": \"x = 5 / 2\",\n                \"D\": \"x = 5 * 2\",\n                \"E\": \"x = 2 * 5\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Expressa como expressão equa o valor de x em relação ao valor de 2, quando 2x = 10; resolva para x: x = 10 / 2; x = 5. A alternativa correta é B.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 663,
+            "total_tokens": 663
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0812335999798961,
+            "tempo_decode_s": 55.8284660000063,
+            "tempo_resposta_s": 55.9096995999862,
+            "tempo_total_s": 55.9096995999862,
+            "tokens_entrada": 0,
+            "tokens_saida": 663,
+            "tps": 11.858407481054748,
+            "ram_inicio_mb": 1953.796875,
+            "ram_pico_mb": 1954.45703125,
+            "ram_usada_mb": 0.66015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Qual dos seguintes números pode não ser representado como uma fração a/b, onde a e b são inteiros e b não é zero?\",\n      \"alternativas\": {\n        \"A\": \"1,2\",\n        \"B\": \"1,3\",\n        \"C\": \"1,4\",\n        \"D\": \"1,5\",\n        \"E\": \"1,6\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": \"Para cada alternativa, verificar se a/b é uma fração, ou seja, a divisão de dois números inteiros que tem como resto 0. Por exemplo, 1/2 é uma fração pois 1 ÷ 2 = 0,5, mas 1/3 não é uma fração pois 1 ÷ 3 = 0,33... É necessário que a divisão de dois números inteiros possa ser feita com 0 como resto.\"\n    },\n    {\n      \"enunciado\": \"Qual dos seguintes números pode não ser representado como uma fração a/b, onde a e b são inteiros e b não é zero?\",\n      \"alternativas\": {\n        \"A\": \"2,3\",\n        \"B\": \"2,4\",\n        \"C\": \"2,5\",\n        \"D\": \"2,6\",\n        \"E\": \"2,7\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": \"Para cada alternativa, verificar se a/b é uma fração, ou seja, a divisão de dois números inteiros que tem como resto 0. Por exemplo, 2/3 é uma fração pois 2 ÷ 3 = 0,66... Este exemplo pode ser verificado de outra forma, verificando se a divisão de dois números inteiros tem como resto 0, mas isso não é o mesmo que verificar se a/b tem como resto 0.\"\n    },\n    {\n      \"enunciado\": \"Qual dos seguintes números pode não ser representado como uma fração a/b, onde a e b são inteiros e b não é zero?\",\n      \"alternativas\": {\n        \"A\": \"3,4\",\n        \"B\": \"3,5\",\n        \"C\": \"3,6\",\n        \"D\": \"3,7\",\n        \"E\": \"3,8\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": \"Para cada alternativa, verificar se a/b é uma fração, ou seja, a divisão de dois números inteiros que tem como resto 0. Por exemplo, 3/4 é uma fração pois 3 ÷ 4 = 0,75 e 3/5 é uma fração pois 3 ÷ 5 = 0,6.\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 798,
+            "total_tokens": 798
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.254673099989304,
+            "tempo_decode_s": 68.65484530001413,
+            "tempo_resposta_s": 72.90951840000344,
+            "tempo_total_s": 72.90951840000344,
+            "tokens_entrada": 0,
+            "tokens_saida": 798,
+            "tps": 10.945072982404481,
+            "ram_inicio_mb": 1954.37109375,
+            "ram_pico_mb": 1955.14453125,
+            "ram_usada_mb": 0.7734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Expressando a expressão (2x + 3)(x - 4) como uma função de x, determine o valor de x para a equação: (2x + 3)(x - 4) = 0.\",\n            \"alternativas\": {\n                \"A\": \"2x + 3\",\n                \"B\": \"x - 4\",\n                \"C\": \"(2x + 3)(x - 4)\",\n                \"D\": \"2x + 3\",\n                \"E\": \"x - 4\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Usando o método de resolução passo a passo, resolvemos o sistema: 2x + 3 = 0 e x - 4 = 0. Substituindo x = 4 em x - 4, obtemos 2x + 3 = 0. Como 2x = 0, 2x + 3 = 0 é claro que x = -3/2 não é um aluno, portanto, x = 4 é a resposta correta.\"\n        },\n        {\n            \"enunciado\": \"Sabemos que 3x^2 + 7x - 6 = 0 é uma equação quadratica. Determine o valor de x para a equação: (3x^2 + 7x - 6) = 0.\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"-2\",\n                \"C\": \"3\",\n                \"D\": \"-6\",\n                \"E\": \"2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Usando o método de resolução passo a passo, resolvemos o sistema: 3x^2 + 7x - 6 = 0. A equação não possui raízes reais simples, portanto, é uma equação irreduzível. Portanto, a resposta é A. Como 3x^2 + 7x - 6 = 0 é uma equação quadratica, o número de soluções é impossível de determinar. Portanto, a resposta é A.\"\n        },\n        {\n            \"enunciado\": \"Sabemos que 2x^2 + 5x - 3 = 0 é uma equação quadratica. Determine o valor de x para a equação: (2x^2 + 5x - 3) = 0.\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"-2\",\n                \"C\": \"3\",\n                \"D\": \"-6\",\n                \"E\": \"2\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Usando o método de resolução passo a passo, resolvemos o sistema: 2x^2 + 5x - 3 = 0. A equação não possui raízes reais simples, portanto, é uma equação irreduzível. Portanto, a resposta é D.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 790,
+            "total_tokens": 790
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.9745899999979883,
+            "tempo_decode_s": 70.53311009999015,
+            "tempo_resposta_s": 74.50770009998814,
+            "tempo_total_s": 74.50770009998814,
+            "tokens_entrada": 0,
+            "tokens_saida": 790,
+            "tps": 10.602930958006121,
+            "ram_inicio_mb": 1955.17578125,
+            "ram_pico_mb": 1955.85546875,
+            "ram_usada_mb": 0.6796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"A equação é: x + 5 = 12. Qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"12\",\n                \"C\": \"17\",\n                \"D\": \"22\",\n                \"E\": \"27\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1. Subtraia 5 do lado da equação. 2. O resultado é 7. 3. O valor de x é 7.\"\n        },\n        {\n            \"enunciado\": \"Se 2x = 10, qual é o valor de x? 1. Multiplica 2 por x. 2. O resultado é 10. 3. Divida o resultado por 2. 4. O valor de x é 5.\"\n        },\n        {\n            \"enunciado\": \"A equação é: 3x = 15. Qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"6\",\n                \"C\": \"9\",\n                \"D\": \"12\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1. Multiplica 3 por x. 2. O resultado é 15. 3. Divida o resultado por 3. 4. O valor de x é 5.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 380,
+            "total_tokens": 380
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08624080001027323,
+            "tempo_decode_s": 31.82444180001039,
+            "tempo_resposta_s": 31.910682600020664,
+            "tempo_total_s": 31.910682600020664,
+            "tokens_entrada": 0,
+            "tokens_saida": 380,
+            "tps": 11.908237901490516,
+            "ram_inicio_mb": 1664.84765625,
+            "ram_pico_mb": 1665.97265625,
+            "ram_usada_mb": 1.125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Qual dos seguintes números pode não ser representado como uma fração a/b, onde a e b são inteiros e b não é zero?\",\n      \"alternativas\": {\n        \"A\": \"1,2\",\n        \"B\": \"1,3\",\n        \"C\": \"1,4\",\n        \"D\": \"1,5\",\n        \"E\": \"1,6\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": \"Para cada alternativa, verificar se a/b é uma fração, ou seja, a divisão de dois números inteiros que tem como resto 0. Por exemplo, 1/2 é uma fração pois 1 ÷ 2 = 0,5, mas 1/3 não é uma fração pois 1 ÷ 3 = 0,33... É necessário que a divisão de dois números inteiros possa ser feita com 0 como resto.\"\n    },\n    {\n      \"enunciado\": \"Qual dos seguintes números pode não ser representado como uma fração a/b, onde a e b são inteiros e b não é zero?\",\n      \"alternativas\": {\n        \"A\": \"2,3\",\n        \"B\": \"2,4\",\n        \"C\": \"2,5\",\n        \"D\": \"2,6\",\n        \"E\": \"2,7\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": \"Para cada alternativa, verificar se a/b é uma fração, ou seja, a divisão de dois números inteiros que tem como resto 0. Por exemplo, 2/3 é uma fração pois 2 ÷ 3 = 0,66... Este exemplo pode ser verificado de outra forma, verificando se a divisão de dois números inteiros tem como resto 0, mas isso não é o mesmo que verificar se a/b tem como resto 0.\"\n    },\n    {\n      \"enunciado\": \"Qual dos seguintes números pode não ser representado como uma fração a/b, onde a e b são inteiros e b não é zero?\",\n      \"alternativas\": {\n        \"A\": \"3,4\",\n        \"B\": \"3,5\",\n        \"C\": \"3,6\",\n        \"D\": \"3,7\",\n        \"E\": \"3,8\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": \"Para cada alternativa, verificar se a/b é uma fração, ou seja, a divisão de dois números inteiros que tem como resto 0. Por exemplo, 3/4 é uma fração pois 3 ÷ 4 = 0,75 e 3/5 é uma fração pois 3 ÷ 5 = 0,6.\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 798,
+            "total_tokens": 798
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.0509502000059,
+            "tempo_decode_s": 68.93842689998564,
+            "tempo_resposta_s": 72.98937709999154,
+            "tempo_total_s": 72.98937709999154,
+            "tokens_entrada": 0,
+            "tokens_saida": 798,
+            "tps": 10.933097824725682,
+            "ram_inicio_mb": 1665.8984375,
+            "ram_pico_mb": 1666.95703125,
+            "ram_usada_mb": 1.05859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 23 e 27?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"23\",\n                \"C\": \"25\",\n                \"D\": \"26\",\n                \"E\": \"28\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Usando a reta numérica, buscaremos o intervalo que separa 23 e 27. A reta numérica é a linha que contém todos os números inteiros, como 23, 24, 25, 26, 27, 28, etc. A primeira linha que contém 23 e a última que contém 27 é a linha que contém 24 e 26, pois a altura do número 24 é menor que a altura do número 26. Portanto, o número que está entre 23 e 27 é 24.\"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 23 e 27 usando a reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"23\",\n                \"C\": \"25\",\n                \"D\": \"26\",\n                \"E\": \"28\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Usando a reta numérica, buscaremos o intervalo que separa 23 e 27. A reta numérica é a linha que contém todos os números inteiros, como 23, 24, 25, 26, 27, 28, etc. A primeira linha que contém 23 e a última que contém 27 é a linha que contém 24 e 26, pois a altura do número 24 é menor que a altura do número 26. Portanto, o número que está entre 23 e 27 é 24.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 588,
+            "total_tokens": 588
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.3946615000022575,
+            "tempo_decode_s": 49.51353569998173,
+            "tempo_resposta_s": 53.90819719998399,
+            "tempo_total_s": 53.90819719998399,
+            "tokens_entrada": 0,
+            "tokens_saida": 588,
+            "tps": 10.907432089014,
+            "ram_inicio_mb": 1666.8828125,
+            "ram_pico_mb": 1667.58203125,
+            "ram_usada_mb": 0.69921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 11.143535,
+        "ram_media_mb": 1677.132812,
+        "ram_pico_mb": 1692.421875,
+        "tempo_medio_segundos": 91.93418,
+        "ttft_medio_segundos": 1.676248,
+        "tps": {
+          "n": 3,
+          "mediana": 11.287542,
+          "iqr": 0.262609,
+          "p25": 11.048232,
+          "p75": 11.310841,
+          "p95": 11.329481,
+          "p99": 11.333209,
+          "max": 11.334141,
+          "media": 11.143535
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.084497,
+          "iqr": 2.387791,
+          "p25": 0.084415,
+          "p75": 2.472206,
+          "p95": 4.382373,
+          "p99": 4.764407,
+          "max": 4.859915,
+          "media": 1.676248
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 90.719484,
+          "iqr": 2.195022,
+          "p25": 90.532995,
+          "p75": 92.728017,
+          "p95": 94.334843,
+          "p99": 94.656209,
+          "max": 94.73655,
+          "media": 91.93418
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1677.140625,
+          "iqr": 15.292969,
+          "p25": 1669.488281,
+          "p75": 1684.78125,
+          "p95": 1690.89375,
+          "p99": 1692.11625,
+          "max": 1692.421875,
+          "media": 1677.132812
+        },
+        "tps_por_rodada": [
+          10.80892221639889,
+          11.28754218065783,
+          11.334140606022178
+        ],
+        "ttft_por_rodada": [
+          4.859915100008948,
+          0.08449690000270493,
+          0.0843332999793347
+        ],
+        "tempo_por_rodada": [
+          94.73655000000144,
+          90.71948379999958,
+          90.34650580000016
+        ],
+        "ram_por_rodada": [
+          1692.421875,
+          1677.140625,
+          1661.8359375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1692.421875,
+        "tps_medio": 11.143535,
+        "tempo_medio_segundos": 91.93418,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"3, 15\",\n        \"B\": \"5, 25\",\n        \"C\": \"7, 35\",\n        \"D\": \"9, 45\",\n        \"E\": \"11, 55\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": \"Para cada alternativa, verifique se ao multiplicar a por b, ao menos uma das variáveis a ou b é zero. Existem variáveis a ou b que são zero em cada alternativa, por exemplo, 3, 5, 7, 11, 15, 25, 35, 45, 55. Portanto, cada alternativa é invalida.\"\n    },\n    {\n      \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"10, 18\",\n        \"B\": \"12, 20\",\n        \"C\": \"13, 22\",\n        \"D\": \"15, 25\",\n        \"E\": \"17, 30\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": \"Para cada alternativa, verifique se ao multiplicar a por b, ao menos uma das variáveis a ou b é zero. Existem variáveis a ou b que são zero em cada alternativa, por exemplo, 10, 12, 13, 15, 17, 20, 22, 25, 30. Portanto, cada alternativa é invalida.\"\n    },\n    {\n      \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"21, 35\",\n        \"B\": \"24, 40\",\n        \"C\": \"27, 45\",\n        \"D\": \"29, 50\",\n        \"E\": \"31, 55\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": \"Para cada alternativa, verifique se ao multiplicar a por b, ao menos uma das variáveis a ou b é zero. Existem variáveis a ou b que são zero em cada alternativa, por exemplo, 21, 24, 27, 29, 31, 35, 40, 45, 50. Portanto, cada alternativa é invalida.\"\n    },\n    {\n      \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"36, 48\",\n        \"B\": \"40, 60\",\n        \"C\": \"42, 66\",\n        \"D\": \"44, 70\",\n        \"E\": \"45, 75\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": \"Para cada alternativa, verifique se ao multiplicar a por b, ao menos uma das variáveis a ou b é zero. Existem variáveis a ou b que são zero em cada alternativa, por exemplo, 36, 40, 42, ",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.859915100008948,
+            "tempo_decode_s": 89.8766348999925,
+            "tempo_resposta_s": 94.73655000000144,
+            "tempo_total_s": 94.73655000000144,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 10.80892221639889,
+            "ram_inicio_mb": 1667.83984375,
+            "ram_pico_mb": 1692.421875,
+            "ram_usada_mb": 24.58203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"0.5\",\n                \"B\": \"2.5\",\n                \"C\": \"100\",\n                \"D\": \"1000\",\n                \"E\": \"10000\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"A 0.5 é uma fração, pois a/b = 0,5/1 = 0,5. B 2,5 é uma fração, pois a/b = 2,5/1 = 2,5. C 100 é uma fração, pois a/b = 100/1 = 100. D 1000 é uma fração, pois a/b = 1000/1 = 1000. E 10000 é uma fração, pois a/b = 10000/1 = 10000. Portanto, D é a alternativa correta.\"\n        },\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"0.5\",\n                \"B\": \"2.5\",\n                \"C\": \"100\",\n                \"D\": \"1000\",\n                \"E\": \"10000\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"A 0.5 é uma fração, pois a/b = 0,5/1 = 0,5. B 2,5 é uma fração, pois a/b = 2,5/1 = 2,5. C 100 é uma fração, pois a/b = 100/1 = 100. D 1000 é uma fração, pois a/b = 1000/1 = 1000. E 10000 é uma fração, pois a/b = 10000/1 = 10000. Portanto, A é a alternativa correta.\"\n        },\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"0.5\",\n                \"B\": \"2.5\",\n                \"C\": \"100\",\n                \"D\": \"1000\",\n                \"E\": \"10000\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"A 0.5 é uma fração, pois a/b = 0,5/1 = 0,5. B 2,5 é uma fração, pois a/b = 2,5/1 = 2,5. C 100 é uma fração, pois a/b = 100/1 = 100. D 1000 é uma fração, pois a/b = 1000/1 = 1000. E 10000 é uma fração, pois a/b = 10000/1 = 10000. Portanto, B é a alternativa correta.\"\n        },\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"0.5\",\n                \"B\": \"2.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08449690000270493,
+            "tempo_decode_s": 90.63498689999687,
+            "tempo_resposta_s": 90.71948379999958,
+            "tempo_total_s": 90.71948379999958,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 11.28754218065783,
+            "ram_inicio_mb": 1676.4765625,
+            "ram_pico_mb": 1677.140625,
+            "ram_usada_mb": 0.6640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"0.5\",\n                \"B\": \"2.5\",\n                \"C\": \"100\",\n                \"D\": \"1000\",\n                \"E\": \"10000\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"A 0.5 é uma fração, pois a/b = 0,5/1 = 0,5. B 2,5 é uma fração, pois a/b = 2,5/1 = 2,5. C 100 é uma fração, pois a/b = 100/1 = 100. D 1000 é uma fração, pois a/b = 1000/1 = 1000. E 10000 é uma fração, pois a/b = 10000/1 = 10000. Portanto, D é a alternativa correta.\"\n        },\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"0.5\",\n                \"B\": \"2.5\",\n                \"C\": \"100\",\n                \"D\": \"1000\",\n                \"E\": \"10000\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"A 0.5 é uma fração, pois a/b = 0,5/1 = 0,5. B 2,5 é uma fração, pois a/b = 2,5/1 = 2,5. C 100 é uma fração, pois a/b = 100/1 = 100. D 1000 é uma fração, pois a/b = 1000/1 = 1000. E 10000 é uma fração, pois a/b = 10000/1 = 10000. Portanto, A é a alternativa correta.\"\n        },\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"0.5\",\n                \"B\": \"2.5\",\n                \"C\": \"100\",\n                \"D\": \"1000\",\n                \"E\": \"10000\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"A 0.5 é uma fração, pois a/b = 0,5/1 = 0,5. B 2,5 é uma fração, pois a/b = 2,5/1 = 2,5. C 100 é uma fração, pois a/b = 100/1 = 100. D 1000 é uma fração, pois a/b = 1000/1 = 1000. E 10000 é uma fração, pois a/b = 10000/1 = 10000. Portanto, B é a alternativa correta.\"\n        },\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"0.5\",\n                \"B\": \"2.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0843332999793347,
+            "tempo_decode_s": 90.26217250002082,
+            "tempo_resposta_s": 90.34650580000016,
+            "tempo_total_s": 90.34650580000016,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 11.334140606022178,
+            "ram_inicio_mb": 1661.1328125,
+            "ram_pico_mb": 1661.8359375,
+            "ram_usada_mb": 0.703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 10.559415,
+        "ram_media_mb": 1662.332031,
+        "ram_pico_mb": 1662.636719,
+        "tempo_medio_segundos": 27.249241,
+        "ttft_medio_segundos": 3.741836,
+        "tps": {
+          "n": 2,
+          "mediana": 10.559415,
+          "iqr": 0.165921,
+          "p25": 10.476454,
+          "p75": 10.642375,
+          "p95": 10.708743,
+          "p99": 10.722017,
+          "max": 10.725336,
+          "media": 10.559415
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 3.741836,
+          "iqr": 0.457529,
+          "p25": 3.513071,
+          "p75": 3.9706,
+          "p95": 4.153612,
+          "p99": 4.190215,
+          "max": 4.199365,
+          "media": 3.741836
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 27.249241,
+          "iqr": 1.422543,
+          "p25": 26.537969,
+          "p75": 27.960512,
+          "p95": 28.529529,
+          "p99": 28.643333,
+          "max": 28.671784,
+          "media": 27.249241
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1662.332031,
+          "iqr": 0.304688,
+          "p25": 1662.179688,
+          "p75": 1662.484375,
+          "p95": 1662.60625,
+          "p99": 1662.630625,
+          "max": 1662.636719,
+          "media": 1662.332031
+        },
+        "tps_por_rodada": [
+          10.393493622767638,
+          10.725335506394913
+        ],
+        "ttft_por_rodada": [
+          4.1993651000084355,
+          3.2843065000197385
+        ],
+        "tempo_por_rodada": [
+          28.671783600002527,
+          25.82669790001819
+        ],
+        "ram_por_rodada": [
+          1662.02734375,
+          1662.63671875
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "O triângulo ABC tem os catetos AB e AC de comprimento 5cm e 6cm, respectivamente. Se a hipotenusa tem comprimento de 7cm, determine a medida da hipotenusa hipóteusa.",
+                "alternativas": {
+                  "A": "5cm",
+                  "B": "6cm",
+                  "C": "7cm",
+                  "D": "8cm",
+                  "E": "9cm"
+                },
+                "resposta_correta": "C",
+                "resolucao_passo_a_passo": "Para encontrar a medida da hipotenusa, utilize a fórmula de Pythagoras: H^2 = A^2 + B^2, onde H é a hipotenusa, A e B são os catetos. Substitua os valores A = 5cm e B = 6cm no cálculo: H^2 = 5^2 + 6^2 = 25 + 36 = 61, pois 61 é a hipotenusa. Portanto, a medida da hipotenusa hipóteusa é 7cm."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Para o triângulo ABC, os catetos AB e AC têm valores correspondentes aos valores da hipotenusa ao quadrado: AB² = 10² e AC² = 6². Determine a medida da hipotenusa.",
+                "alternativas": {
+                  "A": "10",
+                  "B": "6",
+                  "C": "10 ou 6",
+                  "D": "20",
+                  "E": "10 ou 6 ou 20"
+                },
+                "resposta_correta": "E",
+                "resolucao_passo_a_passo": "Usando a propriedade de cateto adiante, AB² = AC² + BC², resolva para BC. Sabemos que BC = √(AB² - AC²) = √(10² - 6²) = √(100 - 36) = √64 = 8. Então, a medida da hipotenusa é a soma AB + BC = 10 + 8 = 18."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 1662.636719,
+        "tps_medio": 10.559415,
+        "tempo_medio_segundos": 27.249241,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 100.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n  \"questoes\": [\n    {\n      \"enunciado\": \"O triângulo ABC tem os catetos AB e AC de comprimento 5cm e 6cm, respectivamente. Se a hipotenusa tem comprimento de 7cm, determine a medida da hipotenusa hipóteusa.\",\n      \"alternativas\": {\n        \"A\": \"5cm\",\n        \"B\": \"6cm\",\n        \"C\": \"7cm\",\n        \"D\": \"8cm\",\n        \"E\": \"9cm\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": \"Para encontrar a medida da hipotenusa, utilize a fórmula de Pythagoras: H^2 = A^2 + B^2, onde H é a hipotenusa, A e B são os catetos. Substitua os valores A = 5cm e B = 6cm no cálculo: H^2 = 5^2 + 6^2 = 25 + 36 = 61, pois 61 é a hipotenusa. Portanto, a medida da hipotenusa hipóteusa é 7cm.\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 298,
+            "total_tokens": 298
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.1993651000084355,
+            "tempo_decode_s": 24.47241849999409,
+            "tempo_resposta_s": 28.671783600002527,
+            "tempo_total_s": 28.671783600002527,
+            "tokens_entrada": 0,
+            "tokens_saida": 298,
+            "tps": 10.393493622767638,
+            "ram_inicio_mb": 1661.84765625,
+            "ram_pico_mb": 1662.02734375,
+            "ram_usada_mb": 0.1796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Para o triângulo ABC, os catetos AB e AC têm valores correspondentes aos valores da hipotenusa ao quadrado: AB² = 10² e AC² = 6². Determine a medida da hipotenusa.\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"6\",\n                \"C\": \"10 ou 6\",\n                \"D\": \"20\",\n                \"E\": \"10 ou 6 ou 20\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Usando a propriedade de cateto adiante, AB² = AC² + BC², resolva para BC. Sabemos que BC = √(AB² - AC²) = √(10² - 6²) = √(100 - 36) = √64 = 8. Então, a medida da hipotenusa é a soma AB + BC = 10 + 8 = 18.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 277,
+            "total_tokens": 277
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.2843065000197385,
+            "tempo_decode_s": 22.54239139999845,
+            "tempo_resposta_s": 25.82669790001819,
+            "tempo_total_s": 25.82669790001819,
+            "tokens_entrada": 0,
+            "tokens_saida": 277,
+            "tps": 10.725335506394913,
+            "ram_inicio_mb": 1661.97265625,
+            "ram_pico_mb": 1662.63671875,
+            "ram_usada_mb": 0.6640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2227.7,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2227.7 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 5.57,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 80.0,
+        "limite": 60.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 91.93,
+        "limite": 90.0,
+        "motivo": "Tempo médio 91.9s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -6.3,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "RAM pico 2227.7 MB — limite 2048.0 MB",
+      "Tempo médio 91.9s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "formato",
+      "hardware"
+    ],
+    "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+    "gerado_em": "2026-09-01T10:27:28.612994"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; RAM pico 2227.7 MB — limite 2048.0 MB; Tempo médio 91.9s acima de 90.0s"
+}

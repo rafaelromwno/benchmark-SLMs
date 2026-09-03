@@ -1,0 +1,1212 @@
+{
+  "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "01/09/2026",
+  "run_config": {
+    "modelos": [
+      "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\HuggingFaceTB--SmolLM2-1.7B-Instruct-GGUF\\smollm2-1.7b-instruct-q4_k_m.gguf"
+    },
+    "seed": 13,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 13
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 13
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.23,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?",
+            "alternativas": {
+              "A": "3",
+              "B": "2",
+              "C": "1",
+              "D": "7",
+              "E": "4"
+            },
+            "resposta_correta": "D",
+            "resolucao_passo_a_passo": "Para cada número (A, B, C, D, E), verifique se é possível escrever-o como uma fração a/b. Por exemplo, para o número 3, podemos escrever-lo como 3/1. 3 é um número inteiro, portanto, não pode ser escrito como uma fração a/b, pois a e b não são inteiros."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 1.73737779998919,
+        "tempo_prefill_s": 20.493205799983116,
+        "tempo_decode_s": 21.53092290001223,
+        "tempo_resposta_s": 42.024128699995345,
+        "tempo_total_s": 43.761506499984534,
+        "tokens_entrada": 0,
+        "tokens_saida": 258,
+        "tps": 6.139330141543865,
+        "ram_inicio_mb": 35.9921875,
+        "ram_pico_mb": 2062.24609375,
+        "ram_usada_mb": 2026.25390625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 43.761506499984534,
+        "tempo_carregamento_s": 1.73737779998919,
+        "tempo_resposta_s": 42.024128699995345,
+        "ram_pico_mb": 2062.24609375,
+        "ram_inicio_mb": 35.9921875,
+        "ttft_segundos": 20.493205799983116,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"2\",\n                \"C\": \"1\",\n                \"D\": \"7\",\n                \"E\": \"4\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Para cada número (A, B, C, D, E), verifique se é possível escrever-o como uma fração a/b. Por exemplo, para o número 3, podemos escrever-lo como 3/1. 3 é um número inteiro, portanto, não pode ser escrito como uma fração a/b, pois a e b não são inteiros.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 258,
+            "total_tokens": 258
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.73737779998919,
+            "tempo_prefill_s": 20.493205799983116,
+            "tempo_decode_s": 21.53092290001223,
+            "tempo_resposta_s": 42.024128699995345,
+            "tempo_total_s": 43.761506499984534,
+            "tokens_entrada": 0,
+            "tokens_saida": 258,
+            "tps": 6.139330141543865,
+            "ram_inicio_mb": 35.9921875,
+            "ram_pico_mb": 2062.24609375,
+            "ram_usada_mb": 2026.25390625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 10.904104,
+          "iqr": 0.818372,
+          "p25": 10.867762,
+          "p75": 11.686134,
+          "p95": 12.123686,
+          "p99": 12.198297,
+          "max": 12.216949,
+          "media": 11.156203
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.247686,
+          "iqr": 3.695496,
+          "p25": 1.110305,
+          "p75": 4.805801,
+          "p95": 5.467684,
+          "p99": 5.872132,
+          "max": 5.973244,
+          "media": 3.335224
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 41.270736,
+          "iqr": 33.240027,
+          "p25": 40.459651,
+          "p75": 73.699678,
+          "p95": 82.264749,
+          "p99": 82.280133,
+          "max": 82.283979,
+          "media": 52.9752
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2068.048828,
+          "iqr": 57.926758,
+          "p25": 2011.90332,
+          "p75": 2069.830078,
+          "p95": 2070.929883,
+          "p99": 2071.001602,
+          "max": 2071.019531,
+          "media": 2043.466797
+        },
+        "tps_medio": 11.156203,
+        "ttft_medio_segundos": 3.335224,
+        "tempo_medio_segundos": 52.9752,
+        "ram_pico_mb": 2071.019531
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 6,
+        "json_invalidos": 4,
+        "taxa_json_valido_percent": 60.0,
+        "json_valido_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 6,
+        "gabarito_avaliados": 6,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 6,
+          "denominador": 6,
+          "ponto": 1.0,
+          "ic95": [
+            0.609666,
+            1.0
+          ],
+          "formato": "100.0% [61.0–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 6,
+        "taxa_utilizavel_percent": 60.0,
+        "utilizavel_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 6,
+          "json_invalido": 4
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 10.904104,
+          "iqr": 0.818372,
+          "p25": 10.867762,
+          "p75": 11.686134,
+          "p95": 12.123686,
+          "p99": 12.198297,
+          "max": 12.216949,
+          "media": 11.156203
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.247686,
+          "iqr": 3.695496,
+          "p25": 1.110305,
+          "p75": 4.805801,
+          "p95": 5.467684,
+          "p99": 5.872132,
+          "max": 5.973244,
+          "media": 3.335224
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 41.270736,
+          "iqr": 33.240027,
+          "p25": 40.459651,
+          "p75": 73.699678,
+          "p95": 82.264749,
+          "p99": 82.280133,
+          "max": 82.283979,
+          "media": 52.9752
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2068.048828,
+          "iqr": 57.926758,
+          "p25": 2011.90332,
+          "p75": 2069.830078,
+          "p95": 2070.929883,
+          "p99": 2071.001602,
+          "max": 2071.019531,
+          "media": 2043.466797
+        },
+        "tps_medio": 11.156203,
+        "ttft_medio_segundos": 3.335224,
+        "tempo_medio_segundos": 52.9752,
+        "ram_pico_mb": 2071.019531,
+        "tps_por_rodada": [
+          10.38331698220431,
+          12.009698137080978,
+          10.859832321530071,
+          12.21694948817867,
+          10.906935932007743,
+          10.516748924259225,
+          10.941321640811877,
+          10.891551617782486,
+          10.901271545337721,
+          11.93440449246597
+        ],
+        "ttft_por_rodada": [
+          5.9732438000210095,
+          0.08363629999803379,
+          4.258008900011191,
+          0.08730879999347962,
+          4.791096100001596,
+          4.1792928999930155,
+          4.849778400006471,
+          4.237363699998241,
+          4.810702299990226,
+          0.08181090001016855
+        ],
+        "tempo_por_rodada": [
+          40.44950190000236,
+          40.21749710000586,
+          40.60836179999751,
+          30.695060199999716,
+          82.24124590001884,
+          41.933110999991186,
+          81.98278319998644,
+          40.49009869998554,
+          82.28397910000058,
+          48.85036370001035
+        ],
+        "ram_por_rodada": [
+          2067.65625,
+          2068.44140625,
+          2069.30859375,
+          2070.00390625,
+          2071.01953125,
+          2070.8203125,
+          2023.40234375,
+          2008.0703125,
+          1992.6796875,
+          1993.265625
+        ],
+        "ram_media_mb": 2043.466797
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o valor de x, se x + 5 = 12?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"6\",\n                \"C\": \"9\",\n                \"D\": \"12\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Expressão: x + 5 = 12; Subtrai 5 da equação; X = 12 - 5; X = 7\"\n        },\n        {\n            \"enunciado\": \"Qual é o valor de x, se 2x = 10?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"3\",\n                \"C\": \"2\",\n                \"D\": \"10\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Expressão: 2x = 10; Divida 2 por 2; X = 10 / 2; X = 5\"\n        },\n        {\n            \"enunciado\": \"Qual é o valor de x, se x - 5 = 0?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"6\",\n                \"C\": \"9\",\n                \"D\": \"12\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressão: x - 5 = 0; Só que 5; X = 0 + 5; X = 5\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 420,
+            "total_tokens": 420
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.9732438000210095,
+            "tempo_decode_s": 34.47625809998135,
+            "tempo_resposta_s": 40.44950190000236,
+            "tempo_total_s": 40.44950190000236,
+            "tokens_entrada": 0,
+            "tokens_saida": 420,
+            "tps": 10.38331698220431,
+            "ram_inicio_mb": 2064.5703125,
+            "ram_pico_mb": 2067.65625,
+            "ram_usada_mb": 3.0859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"O valor de x é 4 se x = 12 + 5, ou seja, x = 9.\",\n            \"alternativas\": {\n                \"A\": \"9\",\n                \"B\": \"14\",\n                \"C\": \"15\",\n                \"D\": \"16\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Expressão: x + 5 = 12. Subtrai 5 da expressão, obtemos x = 12 - 5 = 7. Portanto, a resposta correta é A.\"\n        },\n        {\n            \"enunciado\": \"O valor de x é 2 se 2x = 10, ou seja, x = 5.\",\n            \"alternativas\": {\n                \"A\": \"9\",\n                \"B\": \"10\",\n                \"C\": \"12\",\n                \"D\": \"14\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Expressão: 2x = 10. Divida 2 por 2 na expressão, obtemos x = 5. Portanto, a resposta correta é E.\"\n        },\n        {\n            \"enunciado\": \"O valor de x é 3 se x = 10 ou x = 10, ou seja, x = 10 ou x = 3.\",\n            \"alternativas\": {\n                \"A\": \"9\",\n                \"B\": \"10\",\n                \"C\": \"12\",\n                \"D\": \"14\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Expressão: x = 10 ou x = 3. Portanto, a resposta correta é C.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 483,
+            "total_tokens": 483
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08363629999803379,
+            "tempo_decode_s": 40.133860800007824,
+            "tempo_resposta_s": 40.21749710000586,
+            "tempo_total_s": 40.21749710000586,
+            "tokens_entrada": 0,
+            "tokens_saida": 483,
+            "tps": 12.009698137080978,
+            "ram_inicio_mb": 2067.6171875,
+            "ram_pico_mb": 2068.44140625,
+            "ram_usada_mb": 0.82421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Uma reta numérica vai de 1 a 100. Qual número está entre 23 e 27?\\n\\nA. 100\\n\\nB. 23\\n\\nC. 25\\n\\nD. 27\\n\\nE. 10\",\n            \"alternativas\": {\n                \"A\": \"100\",\n                \"B\": \"23\",\n                \"C\": \"25\",\n                \"D\": \"27\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Você pode usar a reta numérica de 1 a 100 para encontrar o número que está entre 23 e 27.\"\n        },\n        {\n            \"enunciado\": \"Uma reta numérica vai de 1 a 100. Qual número está entre 23 e 27?\\n\\nA. 100\\n\\nB. 23\\n\\nC. 25\\n\\nD. 27\\n\\nE. 10\",\n            \"alternativas\": {\n                \"A\": \"100\",\n                \"B\": \"23\",\n                \"C\": \"25\",\n                \"D\": \"27\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Você pode usar a reta numérica de 1 a 100 para encontrar o número que está entre 23 e 27.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 441,
+            "total_tokens": 441
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.258008900011191,
+            "tempo_decode_s": 36.35035289998632,
+            "tempo_resposta_s": 40.60836179999751,
+            "tempo_total_s": 40.60836179999751,
+            "tokens_entrada": 0,
+            "tokens_saida": 441,
+            "tps": 10.859832321530071,
+            "ram_inicio_mb": 2068.41015625,
+            "ram_pico_mb": 2069.30859375,
+            "ram_usada_mb": 0.8984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 23 e 27?\",\n            \"alternativas\": {\n                \"A\": \"25\",\n                \"B\": \"26\",\n                \"C\": \"27\",\n                \"D\": \"23\",\n                \"E\": \"28\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Para encontrar o número que está entre 23 e 27, precisamos encontrar o número que está à direita da vertical em uma reta numérica que passa pelos números 23 e 27.\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 23 e 27?\",\n            \"alternativas\": {\n                \"A\": \"25\",\n                \"B\": \"26\",\n                \"C\": \"27\",\n                \"D\": \"23\",\n                \"E\": \"28\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Para encontrar o número que está entre 23 e 27, precisamos encontrar o número que está à direita da vertical em uma reta numérica que passa pelos números 23 e 27.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 375,
+            "total_tokens": 375
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08730879999347962,
+            "tempo_decode_s": 30.607751400006237,
+            "tempo_resposta_s": 30.695060199999716,
+            "tempo_total_s": 30.695060199999716,
+            "tokens_entrada": 0,
+            "tokens_saida": 375,
+            "tps": 12.21694948817867,
+            "ram_inicio_mb": 2069.265625,
+            "ram_pico_mb": 2070.00390625,
+            "ram_usada_mb": 0.73828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual do abaixo não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/1\",\n                \"B\": \"2/4\",\n                \"C\": \"3/6\",\n                \"D\": \"1/2\",\n                \"E\": \"2/2\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Expressões que podemos escrever como frações a/b são aquelas que possuem dois números inteiros, onde a e b são inteiros e b não é zero. Por exemplo, 1/1, 2/4, 3/6, 2/2 são todas formadas por dois números inteiros, onde a e b são inteiros e b não é zero. Por outro lado, 1/2 é uma fração que só pode ser escrita como 1/2, não pode ser escrita como uma divisão de dois números inteiros.\"\n        },\n        {\n            \"enunciado\": \"Qual do abaixo não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"5/5\",\n                \"B\": \"10/10\",\n                \"C\": \"15/15\",\n                \"D\": \"1/3\",\n                \"E\": \"1/10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Expressões que podemos escrever como frações a/b são aquelas que possuem dois números inteiros, onde a e b são inteiros e b não é zero. Por exemplo, 5/5, 10/10, 15/15, 1/3 são todas formadas por dois números inteiros, onde a e b são inteiros e b não é zero. Por outro lado, 1/3 é uma fração que só pode ser escrita como uma divisão de dois números inteiros.\"\n        },\n        {\n            \"enunciado\": \"Qual do abaixo não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/10\",\n                \"B\": \"1/1\",\n                \"C\": \"2/4\",\n                \"D\": \"1/2\",\n                \"E\": \"3/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Expressões que podemos escrever como frações a/b são aquelas que possuem dois números inteiros, onde a e b são inteiros e b não é zero. Por exemplo, 1/1, 2/4, 3/6, 1/2 são todas formadas por dois números inteiros, onde a e b são inteiros e b não é zero. Por outro lado, 1/2 é uma fração que só pode ser escrita como uma divisão de dois números inteiros.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 897,
+            "total_tokens": 897
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.791096100001596,
+            "tempo_decode_s": 77.45014980001724,
+            "tempo_resposta_s": 82.24124590001884,
+            "tempo_total_s": 82.24124590001884,
+            "tokens_entrada": 0,
+            "tokens_saida": 897,
+            "tps": 10.906935932007743,
+            "ram_inicio_mb": 2069.9453125,
+            "ram_pico_mb": 2071.01953125,
+            "ram_usada_mb": 1.07421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Uma reta numérica vai de 1 a 100. Qual número está entre 23 e 27?\\n\\nA. 100\\n\\nB. 23\\n\\nC. 25\\n\\nD. 27\\n\\nE. 10\",\n            \"alternativas\": {\n                \"A\": \"100\",\n                \"B\": \"23\",\n                \"C\": \"25\",\n                \"D\": \"27\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Você pode usar a reta numérica de 1 a 100 para encontrar o número que está entre 23 e 27.\"\n        },\n        {\n            \"enunciado\": \"Uma reta numérica vai de 1 a 100. Qual número está entre 23 e 27?\\n\\nA. 100\\n\\nB. 23\\n\\nC. 25\\n\\nD. 27\\n\\nE. 10\",\n            \"alternativas\": {\n                \"A\": \"100\",\n                \"B\": \"23\",\n                \"C\": \"25\",\n                \"D\": \"27\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Você pode usar a reta numérica de 1 a 100 para encontrar o número que está entre 23 e 27.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 441,
+            "total_tokens": 441
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.1792928999930155,
+            "tempo_decode_s": 37.75381809999817,
+            "tempo_resposta_s": 41.933110999991186,
+            "tempo_total_s": 41.933110999991186,
+            "tokens_entrada": 0,
+            "tokens_saida": 441,
+            "tps": 10.516748924259225,
+            "ram_inicio_mb": 2069.5546875,
+            "ram_pico_mb": 2070.8203125,
+            "ram_usada_mb": 1.265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual do abaixo não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/1\",\n                \"B\": \"2/4\",\n                \"C\": \"3/6\",\n                \"D\": \"1/2\",\n                \"E\": \"2/2\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Expressões que podemos escrever como frações a/b são aquelas que possuem dois números inteiros, onde a e b são inteiros e b não é zero. Por exemplo, 1/1, 2/4, 3/6, 2/2 são todas formadas por dois números inteiros, onde a e b são inteiros e b não é zero. Por outro lado, 1/2 é uma fração que só pode ser escrita como 1/2, não pode ser escrita como uma divisão de dois números inteiros.\"\n        },\n        {\n            \"enunciado\": \"Qual do abaixo não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"5/5\",\n                \"B\": \"10/10\",\n                \"C\": \"15/15\",\n                \"D\": \"1/3\",\n                \"E\": \"1/10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Expressões que podemos escrever como frações a/b são aquelas que possuem dois números inteiros, onde a e b são inteiros e b não é zero. Por exemplo, 5/5, 10/10, 15/15, 1/3 são todas formadas por dois números inteiros, onde a e b são inteiros e b não é zero. Por outro lado, 1/3 é uma fração que só pode ser escrita como uma divisão de dois números inteiros.\"\n        },\n        {\n            \"enunciado\": \"Qual do abaixo não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/10\",\n                \"B\": \"1/1\",\n                \"C\": \"2/4\",\n                \"D\": \"1/2\",\n                \"E\": \"3/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Expressões que podemos escrever como frações a/b são aquelas que possuem dois números inteiros, onde a e b são inteiros e b não é zero. Por exemplo, 1/1, 2/4, 3/6, 1/2 são todas formadas por dois números inteiros, onde a e b são inteiros e b não é zero. Por outro lado, 1/2 é uma fração que só pode ser escrita como uma divisão de dois números inteiros.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 897,
+            "total_tokens": 897
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.849778400006471,
+            "tempo_decode_s": 77.13300479997997,
+            "tempo_resposta_s": 81.98278319998644,
+            "tempo_total_s": 81.98278319998644,
+            "tokens_entrada": 0,
+            "tokens_saida": 897,
+            "tps": 10.941321640811877,
+            "ram_inicio_mb": 2022.734375,
+            "ram_pico_mb": 2023.40234375,
+            "ram_usada_mb": 0.66796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Uma reta numérica vai de 1 a 100. Qual número está entre 23 e 27?\\n\\nA. 100\\n\\nB. 23\\n\\nC. 25\\n\\nD. 27\\n\\nE. 10\",\n            \"alternativas\": {\n                \"A\": \"100\",\n                \"B\": \"23\",\n                \"C\": \"25\",\n                \"D\": \"27\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Você pode usar a reta numérica de 1 a 100 para encontrar o número que está entre 23 e 27.\"\n        },\n        {\n            \"enunciado\": \"Uma reta numérica vai de 1 a 100. Qual número está entre 23 e 27?\\n\\nA. 100\\n\\nB. 23\\n\\nC. 25\\n\\nD. 27\\n\\nE. 10\",\n            \"alternativas\": {\n                \"A\": \"100\",\n                \"B\": \"23\",\n                \"C\": \"25\",\n                \"D\": \"27\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Você pode usar a reta numérica de 1 a 100 para encontrar o número que está entre 23 e 27.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 441,
+            "total_tokens": 441
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.237363699998241,
+            "tempo_decode_s": 36.2527349999873,
+            "tempo_resposta_s": 40.49009869998554,
+            "tempo_total_s": 40.49009869998554,
+            "tokens_entrada": 0,
+            "tokens_saida": 441,
+            "tps": 10.891551617782486,
+            "ram_inicio_mb": 2007.40234375,
+            "ram_pico_mb": 2008.0703125,
+            "ram_usada_mb": 0.66796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual do abaixo não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/1\",\n                \"B\": \"2/4\",\n                \"C\": \"3/6\",\n                \"D\": \"1/2\",\n                \"E\": \"2/2\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Expressões que podemos escrever como frações a/b são aquelas que possuem dois números inteiros, onde a e b são inteiros e b não é zero. Por exemplo, 1/1, 2/4, 3/6, 2/2 são todas formadas por dois números inteiros, onde a e b são inteiros e b não é zero. Por outro lado, 1/2 é uma fração que só pode ser escrita como 1/2, não pode ser escrita como uma divisão de dois números inteiros.\"\n        },\n        {\n            \"enunciado\": \"Qual do abaixo não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"5/5\",\n                \"B\": \"10/10\",\n                \"C\": \"15/15\",\n                \"D\": \"1/3\",\n                \"E\": \"1/10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Expressões que podemos escrever como frações a/b são aquelas que possuem dois números inteiros, onde a e b são inteiros e b não é zero. Por exemplo, 5/5, 10/10, 15/15, 1/3 são todas formadas por dois números inteiros, onde a e b são inteiros e b não é zero. Por outro lado, 1/3 é uma fração que só pode ser escrita como uma divisão de dois números inteiros.\"\n        },\n        {\n            \"enunciado\": \"Qual do abaixo não pode ser escrito na forma de fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/10\",\n                \"B\": \"1/1\",\n                \"C\": \"2/4\",\n                \"D\": \"1/2\",\n                \"E\": \"3/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Expressões que podemos escrever como frações a/b são aquelas que possuem dois números inteiros, onde a e b são inteiros e b não é zero. Por exemplo, 1/1, 2/4, 3/6, 1/2 são todas formadas por dois números inteiros, onde a e b são inteiros e b não é zero. Por outro lado, 1/2 é uma fração que só pode ser escrita como uma divisão de dois números inteiros.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 897,
+            "total_tokens": 897
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.810702299990226,
+            "tempo_decode_s": 77.47327680001035,
+            "tempo_resposta_s": 82.28397910000058,
+            "tempo_total_s": 82.28397910000058,
+            "tokens_entrada": 0,
+            "tokens_saida": 897,
+            "tps": 10.901271545337721,
+            "ram_inicio_mb": 1991.9765625,
+            "ram_pico_mb": 1992.6796875,
+            "ram_usada_mb": 0.703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"7\",\n                \"C\": \"10\",\n                \"D\": \"12\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"A não pode ser expressa como uma divisão inteira, pois a divisão 3/1 não tem um resto zero. A divisão 10/1 também não tem resto zero.\"\n        },\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"4\",\n                \"D\": \"8\",\n                \"E\": \"16\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"A divisão 8/2 tem resto zero, e a divisão 16/4 tem resto zero.\"\n        },\n        {\n            \"enunciado\": \"Entre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"13\",\n                \"C\": \"17\",\n                \"D\": \"19\",\n                \"E\": \"23\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"11 é impar, pois ao elevar 11 ao quadrado, obtemos 121 que é par, e ao elevar 121 ao quadrado, obtemos 14641 que é par. Portanto, 11 pode ser expressa como uma divisão inteira.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 583,
+            "total_tokens": 583
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08181090001016855,
+            "tempo_decode_s": 48.76855280000018,
+            "tempo_resposta_s": 48.85036370001035,
+            "tempo_total_s": 48.85036370001035,
+            "tokens_entrada": 0,
+            "tokens_saida": 583,
+            "tps": 11.93440449246597,
+            "ram_inicio_mb": 1992.65625,
+            "ram_pico_mb": 1993.265625,
+            "ram_usada_mb": 0.609375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 11.28833,
+        "ram_media_mb": 1989.75,
+        "ram_pico_mb": 1995.078125,
+        "tempo_medio_segundos": 91.238117,
+        "ttft_medio_segundos": 1.662353,
+        "tps": {
+          "n": 3,
+          "mediana": 11.472979,
+          "iqr": 0.316824,
+          "p25": 11.17608,
+          "p75": 11.492904,
+          "p95": 11.508844,
+          "p99": 11.512032,
+          "max": 11.512829,
+          "media": 11.28833
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.08586,
+          "iqr": 2.366027,
+          "p25": 0.085216,
+          "p75": 2.451243,
+          "p95": 4.343549,
+          "p99": 4.722011,
+          "max": 4.816626,
+          "media": 1.662353
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 89.950482,
+          "iqr": 2.242802,
+          "p25": 89.794807,
+          "p75": 92.037609,
+          "p95": 93.707311,
+          "p99": 94.041252,
+          "max": 94.124737,
+          "media": 91.238117
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1994.285156,
+          "iqr": 7.595703,
+          "p25": 1987.085938,
+          "p75": 1994.681641,
+          "p95": 1994.998828,
+          "p99": 1995.062266,
+          "max": 1995.078125,
+          "media": 1989.75
+        },
+        "tps_por_rodada": [
+          10.879180476093824,
+          11.51282894051737,
+          11.47297909976919
+        ],
+        "ttft_por_rodada": [
+          4.816625900013605,
+          0.08457259999704547,
+          0.08586039999499917
+        ],
+        "tempo_por_rodada": [
+          94.12473690000479,
+          89.63913259998662,
+          89.95048199998564
+        ],
+        "ram_por_rodada": [
+          1994.28515625,
+          1995.078125,
+          1979.88671875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1995.078125,
+        "tps_medio": 11.28833,
+        "tempo_medio_segundos": 91.238117,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre os números a e b, qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"3/5\",\n                \"B\": \"7/9\",\n                \"C\": \"11/20\",\n                \"D\": \"15/17\",\n                \"E\": \"21/23\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"A e b são inteiros, e a/b é uma fração. Se a/b for 3/5, a é 3 e b é 5, ou se a/b for 7/9, a é 7 e b é 9. Então, a fração 7/9 pode ser escrita. Porém, 15/17 é uma fração, então este não pode ser escrito como uma fração a/b com a e b inteiros, b≠0.\"\n        },\n        {\n            \"enunciado\": \"Entre os números a e b, qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"20/25\",\n                \"B\": \"40/45\",\n                \"C\": \"60/65\",\n                \"D\": \"80/85\",\n                \"E\": \"100/105\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"A e b são inteiros, e a/b é uma fração. Se a/b for 20/25, a é 20 e b é 25, ou se a/b for 40/45, a é 40 e b é 45. Então, a fração 40/45 pode ser escrita. Porém, 60/65 é uma fração, então este não pode ser escrito como uma fração a/b com a e b inteiros, b≠0.\"\n        },\n        {\n            \"enunciado\": \"Entre os números a e b, qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"50/55\",\n                \"B\": \"60/65\",\n                \"C\": \"70/75\",\n                \"D\": \"80/85\",\n                \"E\": \"90/95\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"A e b são inteiros, e a/b é uma fração. Se a/b for 50/55, a é 50 e b é 55, ou se a/b for 60/65, a é 60 e b é 65. Então, a fração 60/65 pode ser escrita. Porém, 70/75 é uma fração, então este não pode ser escrito como uma fração a/b com a e b inteiros, b≠0.\"\n        },\n        {\n            \"enunciado\": \"Entre os números a e b, qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"120/125\",\n                \"B\": \"130/135\",\n                \"C\": \"140/145\",\n                \"D\": \"150/155\",\n                \"E\": \"160/165\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"A e b são inteiros, e a/b é",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.816625900013605,
+            "tempo_decode_s": 89.30811099999119,
+            "tempo_resposta_s": 94.12473690000479,
+            "tempo_total_s": 94.12473690000479,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 10.879180476093824,
+            "ram_inicio_mb": 1993.4765625,
+            "ram_pico_mb": 1994.28515625,
+            "ram_usada_mb": 0.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Sabemos que não podemos expressar números como frações. Por exemplo, 2 pode ser expresso como 1/1, mas não podemos expressar 2 como uma fração. Então, 6 não pode ser expresso como uma fração, pois ele é o múltiplo mais alto de 2 que não é igual a 2 mesmo. Portanto, D é a resposta correta.\"\n        },\n        {\n            \"enunciado\": \"Qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"12\",\n                \"C\": \"15\",\n                \"D\": \"18\",\n                \"E\": \"20\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Sabemos que não podemos expressar números como frações. Por exemplo, 10 pode ser expresso como 1/10, mas não podemos expressar 10 como uma fração. Então, 18 não pode ser expresso como uma fração, pois ele é o múltiplo mais alto de 10 que não é igual a 10. Portanto, D é a resposta correta.\"\n        },\n        {\n            \"enunciado\": \"Qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"13\",\n                \"C\": \"16\",\n                \"D\": \"19\",\n                \"E\": \"21\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Sabemos que não podemos expressar números como frações. Por exemplo, 11 pode ser expresso como 1/11, mas não podemos expressar 11 como uma fração. Então, 19 não pode ser expresso como uma fração, pois ele é o múltiplo mais alto de 11 que não é igual a 11. Portanto, D é a resposta correta.\"\n        },\n        {\n            \"enunciado\": \"Qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"14\",\n                \"B\": \"17\",\n                \"C\": \"22\",\n                \"D\": \"25\",\n                \"E\": \"28\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Sabemos que não podemos expressar números como frações. Por exemplo, 14 pode ser expresso como 1/14, mas não podemos expressar 14 como uma fração. Então, 25 não pode ser expresso como uma fração, pois ele é o múltiplo mais alto de 14 que não é igual a 14. Portanto, D é a resposta correta.\"\n        },\n        {\n            \"enunciado\": \"Qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1032,
+            "total_tokens": 1032
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08457259999704547,
+            "tempo_decode_s": 89.55455999998958,
+            "tempo_resposta_s": 89.63913259998662,
+            "tempo_total_s": 89.63913259998662,
+            "tokens_entrada": 0,
+            "tokens_saida": 1032,
+            "tps": 11.51282894051737,
+            "ram_inicio_mb": 1994.328125,
+            "ram_pico_mb": 1995.078125,
+            "ram_usada_mb": 0.75,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Sabemos que não podemos expressar números como frações. Por exemplo, 2 pode ser expresso como 1/1, mas não podemos expressar 2 como uma fração. Então, 6 não pode ser expresso como uma fração, pois ele é o múltiplo mais alto de 2 que não é igual a 2 mesmo. Portanto, D é a resposta correta.\"\n        },\n        {\n            \"enunciado\": \"Qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"12\",\n                \"C\": \"15\",\n                \"D\": \"18\",\n                \"E\": \"20\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Sabemos que não podemos expressar números como frações. Por exemplo, 10 pode ser expresso como 1/10, mas não podemos expressar 10 como uma fração. Então, 18 não pode ser expresso como uma fração, pois ele é o múltiplo mais alto de 10 que não é igual a 10. Portanto, D é a resposta correta.\"\n        },\n        {\n            \"enunciado\": \"Qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"13\",\n                \"C\": \"16\",\n                \"D\": \"19\",\n                \"E\": \"21\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Sabemos que não podemos expressar números como frações. Por exemplo, 11 pode ser expresso como 1/11, mas não podemos expressar 11 como uma fração. Então, 19 não pode ser expresso como uma fração, pois ele é o múltiplo mais alto de 11 que não é igual a 11. Portanto, D é a resposta correta.\"\n        },\n        {\n            \"enunciado\": \"Qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"14\",\n                \"B\": \"17\",\n                \"C\": \"22\",\n                \"D\": \"25\",\n                \"E\": \"28\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Sabemos que não podemos expressar números como frações. Por exemplo, 14 pode ser expresso como 1/14, mas não podemos expressar 14 como uma fração. Então, 25 não pode ser expresso como uma fração, pois ele é o múltiplo mais alto de 14 que não é igual a 14. Portanto, D é a resposta correta.\"\n        },\n        {\n            \"enunciado\": \"Qual NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1032,
+            "total_tokens": 1032
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08586039999499917,
+            "tempo_decode_s": 89.86462159999064,
+            "tempo_resposta_s": 89.95048199998564,
+            "tempo_total_s": 89.95048199998564,
+            "tokens_entrada": 0,
+            "tokens_saida": 1032,
+            "tps": 11.47297909976919,
+            "ram_inicio_mb": 1979.1796875,
+            "ram_pico_mb": 1979.88671875,
+            "ram_usada_mb": 0.70703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 10.804716,
+        "ram_media_mb": 1981.146484,
+        "ram_pico_mb": 1981.535156,
+        "tempo_medio_segundos": 32.950849,
+        "ttft_medio_segundos": 3.766674,
+        "tps": {
+          "n": 2,
+          "mediana": 10.804716,
+          "iqr": 0.064722,
+          "p25": 10.772355,
+          "p75": 10.837078,
+          "p95": 10.862966,
+          "p99": 10.868144,
+          "max": 10.869439,
+          "media": 10.804716
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 3.766674,
+          "iqr": 0.43338,
+          "p25": 3.549984,
+          "p75": 3.983363,
+          "p95": 4.156715,
+          "p99": 4.191386,
+          "max": 4.200053,
+          "media": 3.766674
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 32.950849,
+          "iqr": 7.34562,
+          "p25": 29.278038,
+          "p75": 36.623659,
+          "p95": 39.561907,
+          "p99": 40.149557,
+          "max": 40.296469,
+          "media": 32.950849
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1981.146484,
+          "iqr": 0.388672,
+          "p25": 1980.952148,
+          "p75": 1981.34082,
+          "p95": 1981.496289,
+          "p99": 1981.527383,
+          "max": 1981.535156,
+          "media": 1981.146484
+        },
+        "tps_por_rodada": [
+          10.869438709383456,
+          10.739994065976427
+        ],
+        "ttft_por_rodada": [
+          4.200053199980175,
+          3.333293899981072
+        ],
+        "tempo_por_rodada": [
+          40.29646899999352,
+          25.605228300002636
+        ],
+        "ram_por_rodada": [
+          1980.7578125,
+          1981.53515625
+        ],
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "Campo 'questoes' ausente",
+            "output_bruto": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Considera a equação 4x^2 + 12x - 9 = 0. Determine a raíz correspondente ao coeficiente de x como um número real.\",\n            \"alternativas\": {\n                \"A\": \"1/3\",\n                \"B\": \"-1/3\",\n                \"C\": \"3\",\n                \"D\": \"-3\",\n                \"E\": \"3/2\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Vamos resolver a equação 4x^2 + 12x - 9 = 0. Preenchemos a tabela de c"
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Considera o triângulo $ABC$ de arestas $AB = 2$, $BC = 3$, $CA = 4$. Considere também o triângulo $DEF$ com arestas $DE = 5$, $DF = 6$, $EF = 7$. Determine se os triângulos $ABC$ e $DEF$ podem formar um triângulo equilátero.",
+                "alternativas": {
+                  "A": "Sim",
+                  "B": "Não",
+                  "C": "Não conferivel",
+                  "D": "Não definido",
+                  "E": "Não é possível"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "1. Verifique se $ABC$ e $DEF$ são triângulos isóscelos. 2. Use a regra dos triângulos isóscelos: se $a < b$ e $c < d$, então $a + c < b + d$."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 1981.535156,
+        "tps_medio": 10.804716,
+        "tempo_medio_segundos": 32.950849,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 50.0,
+        "taxa_utilizavel_percent": 50.0,
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Considera a equação 4x^2 + 12x - 9 = 0. Determine a raíz correspondente ao coeficiente de x como um número real.\",\n            \"alternativas\": {\n                \"A\": \"1/3\",\n                \"B\": \"-1/3\",\n                \"C\": \"3\",\n                \"D\": \"-3\",\n                \"E\": \"3/2\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Vamos resolver a equação 4x^2 + 12x - 9 = 0. Preenchemos a tabela de coeficientes:\n \n| Coeficiente  | 1 | 2 | -9 |\n|-------------|---|---|----|\n| Multiplicar  | 4 | 12 | -9 |\n| Resultado    | 0 | 0 | 0 |\n\nVamos resolver a equação 4x^2 + 12x - 9 = 0. Preenchemos a tabela de coeficientes novamente:\n \n| Coeficiente  | 1 | 2 | -9 |\n|-------------|---|---|----|\n| Multiplicar  | 4 | 12 | -9 |\n| Resultado    | 0 | 0 | 0 |\n\nPara resolver a equação, precisamos verificar se o coeficiente de x é um número real. Em nosso caso, o coeficiente de x é -9 e este é um número real. Portanto, a raíz correspondente ao coeficiente de x como um número real é -3.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 438,
+            "total_tokens": 438
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.200053199980175,
+            "tempo_decode_s": 36.09641580001335,
+            "tempo_resposta_s": 40.29646899999352,
+            "tempo_total_s": 40.29646899999352,
+            "tokens_entrada": 0,
+            "tokens_saida": 438,
+            "tps": 10.869438709383456,
+            "ram_inicio_mb": 1979.94140625,
+            "ram_pico_mb": 1980.7578125,
+            "ram_usada_mb": 0.81640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Considera o triângulo $ABC$ de arestas $AB = 2$, $BC = 3$, $CA = 4$. Considere também o triângulo $DEF$ com arestas $DE = 5$, $DF = 6$, $EF = 7$. Determine se os triângulos $ABC$ e $DEF$ podem formar um triângulo equilátero.\",\n            \"alternativas\": {\n                \"A\": \"Sim\",\n                \"B\": \"Não\",\n                \"C\": \"Não conferivel\",\n                \"D\": \"Não definido\",\n                \"E\": \"Não é possível\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1. Verifique se $ABC$ e $DEF$ são triângulos isóscelos. 2. Use a regra dos triângulos isóscelos: se $a < b$ e $c < d$, então $a + c < b + d$.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 275,
+            "total_tokens": 275
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.333293899981072,
+            "tempo_decode_s": 22.271934400021564,
+            "tempo_resposta_s": 25.605228300002636,
+            "tempo_total_s": 25.605228300002636,
+            "tokens_entrada": 0,
+            "tokens_saida": 275,
+            "tps": 10.739994065976427,
+            "ram_inicio_mb": 1980.78515625,
+            "ram_pico_mb": 1981.53515625,
+            "ram_usada_mb": 0.75,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2071.0,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2071.0 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 6.14,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 50.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 50.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 91.24,
+        "limite": 90.0,
+        "motivo": "Tempo médio 91.2s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -14.9,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "RAM pico 2071.0 MB — limite 2048.0 MB",
+      "Taxa JSON válido 50.0% abaixo de 60.0%",
+      "Tempo médio 91.2s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "formato",
+      "hardware"
+    ],
+    "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+    "gerado_em": "2026-09-01T08:58:58.425049"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; RAM pico 2071.0 MB — limite 2048.0 MB; Taxa JSON válido 50.0% abaixo de 60.0%; Tempo médio 91.2s acima de 90.0s"
+}

@@ -1,0 +1,1177 @@
+{
+  "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "01/09/2026",
+  "run_config": {
+    "modelos": [
+      "Qwen/Qwen2.5-3B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "Qwen/Qwen2.5-3B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\Qwen--Qwen2.5-3B-Instruct-GGUF\\qwen2.5-3b-instruct-q4_k_m.gguf"
+    },
+    "seed": 777,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 777
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "criativo",
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 777
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.4,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": "Campo 'questoes' ausente",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 7.947827700001653,
+        "tempo_prefill_s": 25.02741700000479,
+        "tempo_decode_s": 30.025397199991858,
+        "tempo_resposta_s": 55.05281419999665,
+        "tempo_total_s": 63.0006418999983,
+        "tokens_entrada": 0,
+        "tokens_saida": 240,
+        "tps": 4.3594501659465505,
+        "ram_inicio_mb": 24.55078125,
+        "ram_pico_mb": 2276.9921875,
+        "ram_usada_mb": 2252.44140625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 63.0006418999983,
+        "tempo_carregamento_s": 7.947827700001653,
+        "tempo_resposta_s": 55.05281419999665,
+        "ram_pico_mb": 2276.9921875,
+        "ram_inicio_mb": 24.55078125,
+        "ttft_segundos": 25.02741700000479,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número entre 3, 4, 5, 6, 7, 8, 9, 10 é a soma de dois números ímpares?\"\n\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Um número ímpar somado a outro número ímpar resulta em um número ímpar. Entre os números dada, os números ímpares são 3, 5, 7, 9. Então, a soma de dois números ímpares pode ser 5 (3 + 2), 7 (3 + 4), 9 (3 + 6) ou 11 (5 + 6). Portanto, 3 e 4 não podem ser a soma de dois números ímpares. Resposta: C\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 240,
+            "total_tokens": 240
+          },
+          "metrics": {
+            "tempo_carregamento_s": 7.947827700001653,
+            "tempo_prefill_s": 25.02741700000479,
+            "tempo_decode_s": 30.025397199991858,
+            "tempo_resposta_s": 55.05281419999665,
+            "tempo_total_s": 63.0006418999983,
+            "tokens_entrada": 0,
+            "tokens_saida": 240,
+            "tps": 4.3594501659465505,
+            "ram_inicio_mb": 24.55078125,
+            "ram_pico_mb": 2276.9921875,
+            "ram_usada_mb": 2252.44140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 7.288937,
+          "iqr": 1.10148,
+          "p25": 6.900749,
+          "p75": 8.002229,
+          "p95": 8.329461,
+          "p99": 8.416424,
+          "max": 8.438164,
+          "media": 7.388269
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.688216,
+          "iqr": 3.977493,
+          "p25": 1.267453,
+          "p75": 5.244946,
+          "p95": 7.844782,
+          "p99": 9.383031,
+          "max": 9.767593,
+          "media": 3.982927
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 59.459809,
+          "iqr": 4.747328,
+          "p25": 56.927426,
+          "p75": 61.674753,
+          "p95": 81.931733,
+          "p99": 91.001707,
+          "max": 93.2692,
+          "media": 61.153149
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1967.205078,
+          "iqr": 9.339844,
+          "p25": 1959.707031,
+          "p75": 1969.046875,
+          "p95": 2009.201953,
+          "p99": 2034.168516,
+          "max": 2040.410156,
+          "media": 1965.366797
+        },
+        "tps_medio": 7.388269,
+        "ttft_medio_segundos": 3.982927,
+        "tempo_medio_segundos": 61.153149,
+        "ram_pico_mb": 2040.410156
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 8,
+        "json_invalidos": 2,
+        "taxa_json_valido_percent": 80.0,
+        "json_valido_ic95": {
+          "numerador": 8,
+          "denominador": 10,
+          "ponto": 0.8,
+          "ic95": [
+            0.490162,
+            0.943318
+          ],
+          "formato": "80.0% [49.0–94.3]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 8,
+        "gabarito_avaliados": 8,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 8,
+          "denominador": 8,
+          "ponto": 1.0,
+          "ic95": [
+            0.675592,
+            1.0
+          ],
+          "formato": "100.0% [67.6–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 8,
+        "taxa_utilizavel_percent": 80.0,
+        "utilizavel_ic95": {
+          "numerador": 8,
+          "denominador": 10,
+          "ponto": 0.8,
+          "ic95": [
+            0.490162,
+            0.943318
+          ],
+          "formato": "80.0% [49.0–94.3]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 8,
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 7.288937,
+          "iqr": 1.10148,
+          "p25": 6.900749,
+          "p75": 8.002229,
+          "p95": 8.329461,
+          "p99": 8.416424,
+          "max": 8.438164,
+          "media": 7.388269
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.688216,
+          "iqr": 3.977493,
+          "p25": 1.267453,
+          "p75": 5.244946,
+          "p95": 7.844782,
+          "p99": 9.383031,
+          "max": 9.767593,
+          "media": 3.982927
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 59.459809,
+          "iqr": 4.747328,
+          "p25": 56.927426,
+          "p75": 61.674753,
+          "p95": 81.931733,
+          "p99": 91.001707,
+          "max": 93.2692,
+          "media": 61.153149
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1967.205078,
+          "iqr": 9.339844,
+          "p25": 1959.707031,
+          "p75": 1969.046875,
+          "p95": 2009.201953,
+          "p99": 2034.168516,
+          "max": 2040.410156,
+          "media": 1965.366797
+        },
+        "tps_medio": 7.388269,
+        "ttft_medio_segundos": 3.982927,
+        "tempo_medio_segundos": 61.153149,
+        "ram_pico_mb": 2040.410156,
+        "tps_por_rodada": [
+          6.057733944200068,
+          6.771959671232684,
+          7.919874337025477,
+          8.43816428303151,
+          6.856097362017026,
+          7.4309482359019645,
+          8.196600532312127,
+          7.034703780848867,
+          7.146926410820564,
+          8.029680430005866
+        ],
+        "ttft_por_rodada": [
+          9.767593099997612,
+          4.759514700010186,
+          0.14518520000274293,
+          0.1126419999927748,
+          4.616917500010459,
+          5.494680300005712,
+          0.16212260001339018,
+          4.583442599978298,
+          5.396303799992893,
+          4.790871600009268
+        ],
+        "tempo_por_rodada": [
+          93.26920020001126,
+          68.07482949999394,
+          60.480757599987555,
+          56.76590120000765,
+          47.840627500001574,
+          62.03784299999825,
+          58.43886110000312,
+          46.6259859999991,
+          60.58548459998565,
+          57.41199839999899
+        ],
+        "ram_por_rodada": [
+          2040.41015625,
+          1966.08984375,
+          1924.171875,
+          1926.1171875,
+          1959.578125,
+          1968.3203125,
+          1969.1796875,
+          1968.6484375,
+          1971.05859375,
+          1960.09375
+        ],
+        "ram_media_mb": 1965.366797
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Seja o número N = 25/7. Qual é a forma mais simples do N?\",\n            \"alternativas\": {\n                \"A\": \"5/14\",\n                \"B\": \"5/7\",\n                \"C\": \"10/14\",\n                \"D\": \"25/14\",\n                \"E\": \"25/7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1. N = 25/7. \\n2. Para reduzir a fração, encontramos o máximo divisor comum (MDC) entre 25 e 7, que é 1. \\n3. Portanto, a forma mais simples de N é 5/7.\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números não pode ser escrito como uma fração a/b, onde a e b são inteiros, b≠0?\",\n            \"alternativas\": {\n                \"A\": \"1.2\",\n                \"B\": \"1.5\",\n                \"C\": \"2.0\",\n                \"D\": \"2.5\",\n                \"E\": \"3.0\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1.1.2 não pode ser escrito como uma fração a/b com a e b inteiros, b≠0.\\n2.1.5 pode ser escrito como 3/2.\\n3.2.0 pode ser escrito como 2/1.\\n4.2.5 pode ser escrito como 5/2.\\n5.3.0 pode ser escrito como 3/1.\"\n        },\n        {\n            \"enunciado\": \"Seja N = 10/2. Qual é o resultado da simplificação de N?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/1\",\n                \"C\": \"5/1\",\n                \"D\": \"10/2\",\n                \"E\": \"20/4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1. N = 10/2. \\n2. Simplificamos a fração: 10 ÷ 2 = 5, 2 ÷ 2 = 1. \\n3. Portanto, a forma mais simples de N é 5/1.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 565,
+            "total_tokens": 565
+          },
+          "metrics": {
+            "tempo_prefill_s": 9.767593099997612,
+            "tempo_decode_s": 83.50160710001364,
+            "tempo_resposta_s": 93.26920020001126,
+            "tempo_total_s": 93.26920020001126,
+            "tokens_entrada": 0,
+            "tokens_saida": 565,
+            "tps": 6.057733944200068,
+            "ram_inicio_mb": 2039.5234375,
+            "ram_pico_mb": 2040.41015625,
+            "ram_usada_mb": 0.88671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 11, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 4\",\n                \"B\": \"x = 5\",\n                \"C\": \"x = 6\",\n                \"D\": \"x = 7\",\n                \"E\": \"x = 8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 11\\n3x = 11 + 7\\n3x = 18\\nx = 18 / 3\\nx = 6\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 3 = 17, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 2\",\n                \"B\": \"x = 5\",\n                \"C\": \"x = 7\",\n                \"D\": \"x = 8\",\n                \"E\": \"x = 10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"2x + 3 = 17\\n2x = 17 - 3\\n2x = 14\\nx = 14 / 2\\nx = 7\"\n        },\n        {\n            \"enunciado\": \"Se 5x - 4 = 21, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 2\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 5\",\n                \"D\": \"x = 6\",\n                \"E\": \"x = 7\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"5x - 4 = 21\\n5x = 21 + 4\\n5x = 25\\nx = 25 / 5\\nx = 5\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 461,
+            "total_tokens": 461
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.759514700010186,
+            "tempo_decode_s": 63.31531479998375,
+            "tempo_resposta_s": 68.07482949999394,
+            "tempo_total_s": 68.07482949999394,
+            "tokens_entrada": 0,
+            "tokens_saida": 461,
+            "tps": 6.771959671232684,
+            "ram_inicio_mb": 1924.9453125,
+            "ram_pico_mb": 1966.08984375,
+            "ram_usada_mb": 41.14453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 11, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 4\",\n                \"B\": \"x = 5\",\n                \"C\": \"x = 6\",\n                \"D\": \"x = 7\",\n                \"E\": \"x = 8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 11\\n3x = 11 + 7\\n3x = 18\\nx = 18 / 3\\nx = 6\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 4 = 16, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"x = 3\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 5\",\n                \"D\": \"x = 6\",\n                \"E\": \"x = 7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"2x + 4 = 16\\n2x = 16 - 4\\n2x = 12\\nx = 12 / 2\\nx = 6\"\n        },\n        {\n            \"enunciado\": \"Se 4x - 3 = 2x + 9, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 1\",\n                \"B\": \"x = 2\",\n                \"C\": \"x = 3\",\n                \"D\": \"x = 4\",\n                \"E\": \"x = 5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"4x - 3 = 2x + 9\\n4x - 2x = 9 + 3\\n2x = 12\\nx = 12 / 2\\nx = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 479,
+            "total_tokens": 479
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.14518520000274293,
+            "tempo_decode_s": 60.33557239998481,
+            "tempo_resposta_s": 60.480757599987555,
+            "tempo_total_s": 60.480757599987555,
+            "tokens_entrada": 0,
+            "tokens_saida": 479,
+            "tps": 7.919874337025477,
+            "ram_inicio_mb": 1912.046875,
+            "ram_pico_mb": 1924.171875,
+            "ram_usada_mb": 12.125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 11, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 4\",\n                \"B\": \"x = 5\",\n                \"C\": \"x = 6\",\n                \"D\": \"x = 7\",\n                \"E\": \"x = 8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 11\\n3x = 11 + 7\\n3x = 18\\nx = 18 / 3\\nx = 6\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 4 = 16, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"x = 3\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 5\",\n                \"D\": \"x = 6\",\n                \"E\": \"x = 7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"2x + 4 = 16\\n2x = 16 - 4\\n2x = 12\\nx = 12 / 2\\nx = 6\"\n        },\n        {\n            \"enunciado\": \"Se 4x - 3 = 2x + 9, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 1\",\n                \"B\": \"x = 2\",\n                \"C\": \"x = 3\",\n                \"D\": \"x = 4\",\n                \"E\": \"x = 5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"4x - 3 = 2x + 9\\n4x - 2x = 9 + 3\\n2x = 12\\nx = 12 / 2\\nx = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 479,
+            "total_tokens": 479
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.1126419999927748,
+            "tempo_decode_s": 56.65325920001487,
+            "tempo_resposta_s": 56.76590120000765,
+            "tempo_total_s": 56.76590120000765,
+            "tokens_entrada": 0,
+            "tokens_saida": 479,
+            "tps": 8.43816428303151,
+            "ram_inicio_mb": 1924.14453125,
+            "ram_pico_mb": 1926.1171875,
+            "ram_usada_mb": 1.97265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 45 e 49?\",\n            \"alternativas\": {\n                \"A\": \"44\",\n                \"B\": \"45\",\n                \"C\": \"46\",\n                \"D\": \"47\",\n                \"E\": \"48\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"45 + 1 = 46\\n46 + 1 = 47\\n47 + 1 = 48\\n48 + 1 = 49\\nEntão, o número entre 45 e 49 é 47.\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 32 e 36?\",\n            \"alternativas\": {\n                \"A\": \"31\",\n                \"B\": \"32\",\n                \"C\": \"33\",\n                \"D\": \"34\",\n                \"E\": \"35\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"32 + 1 = 33\\n33 + 1 = 34\\n34 + 1 = 35\\n35 + 1 = 36\\nEntão, o número entre 32 e 36 é 34.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 328,
+            "total_tokens": 328
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.616917500010459,
+            "tempo_decode_s": 43.223709999991115,
+            "tempo_resposta_s": 47.840627500001574,
+            "tempo_total_s": 47.840627500001574,
+            "tokens_entrada": 0,
+            "tokens_saida": 328,
+            "tps": 6.856097362017026,
+            "ram_inicio_mb": 1926.06640625,
+            "ram_pico_mb": 1959.578125,
+            "ram_usada_mb": 33.51171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 11, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 4\",\n                \"B\": \"x = 5\",\n                \"C\": \"x = 6\",\n                \"D\": \"x = 7\",\n                \"E\": \"x = 8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 11\\n3x = 11 + 7\\n3x = 18\\nx = 18 / 3\\nx = 6\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 3 = 17, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 2\",\n                \"B\": \"x = 5\",\n                \"C\": \"x = 7\",\n                \"D\": \"x = 8\",\n                \"E\": \"x = 10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"2x + 3 = 17\\n2x = 17 - 3\\n2x = 14\\nx = 14 / 2\\nx = 7\"\n        },\n        {\n            \"enunciado\": \"Se 5x - 4 = 21, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 2\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 5\",\n                \"D\": \"x = 6\",\n                \"E\": \"x = 7\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"5x - 4 = 21\\n5x = 21 + 4\\n5x = 25\\nx = 25 / 5\\nx = 5\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 461,
+            "total_tokens": 461
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.494680300005712,
+            "tempo_decode_s": 56.543162699992536,
+            "tempo_resposta_s": 62.03784299999825,
+            "tempo_total_s": 62.03784299999825,
+            "tokens_entrada": 0,
+            "tokens_saida": 461,
+            "tps": 7.4309482359019645,
+            "ram_inicio_mb": 1959.55078125,
+            "ram_pico_mb": 1968.3203125,
+            "ram_usada_mb": 8.76953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 11, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 4\",\n                \"B\": \"x = 5\",\n                \"C\": \"x = 6\",\n                \"D\": \"x = 7\",\n                \"E\": \"x = 8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 11\\n3x = 11 + 7\\n3x = 18\\nx = 18 / 3\\nx = 6\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 4 = 16, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"x = 3\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 5\",\n                \"D\": \"x = 6\",\n                \"E\": \"x = 7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"2x + 4 = 16\\n2x = 16 - 4\\n2x = 12\\nx = 12 / 2\\nx = 6\"\n        },\n        {\n            \"enunciado\": \"Se 4x - 3 = 2x + 9, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 1\",\n                \"B\": \"x = 2\",\n                \"C\": \"x = 3\",\n                \"D\": \"x = 4\",\n                \"E\": \"x = 5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"4x - 3 = 2x + 9\\n4x - 2x = 9 + 3\\n2x = 12\\nx = 12 / 2\\nx = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 479,
+            "total_tokens": 479
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.16212260001339018,
+            "tempo_decode_s": 58.27673849998973,
+            "tempo_resposta_s": 58.43886110000312,
+            "tempo_total_s": 58.43886110000312,
+            "tokens_entrada": 0,
+            "tokens_saida": 479,
+            "tps": 8.196600532312127,
+            "ram_inicio_mb": 1967.28125,
+            "ram_pico_mb": 1969.1796875,
+            "ram_usada_mb": 1.8984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 45 e 49?\",\n            \"alternativas\": {\n                \"A\": \"44\",\n                \"B\": \"45\",\n                \"C\": \"46\",\n                \"D\": \"47\",\n                \"E\": \"48\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"45 + 1 = 46\\n46 + 1 = 47\\n47 + 1 = 48\\n48 + 1 = 49\\nEntão, o número entre 45 e 49 é 47.\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 32 e 36?\",\n            \"alternativas\": {\n                \"A\": \"31\",\n                \"B\": \"32\",\n                \"C\": \"33\",\n                \"D\": \"34\",\n                \"E\": \"35\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"32 + 1 = 33\\n33 + 1 = 34\\n34 + 1 = 35\\n35 + 1 = 36\\nEntão, o número entre 32 e 36 é 34.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 328,
+            "total_tokens": 328
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.583442599978298,
+            "tempo_decode_s": 42.042543400020804,
+            "tempo_resposta_s": 46.6259859999991,
+            "tempo_total_s": 46.6259859999991,
+            "tokens_entrada": 0,
+            "tokens_saida": 328,
+            "tps": 7.034703780848867,
+            "ram_inicio_mb": 1966.5078125,
+            "ram_pico_mb": 1968.6484375,
+            "ram_usada_mb": 2.140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Seja o número x = 3.25. Qual das opções abaixo é o representante de x como fração a/b, com a e b inteiros e b≠0?\",\n            \"alternativas\": {\n                \"A\": \"3/2\",\n                \"B\": \"13/4\",\n                \"C\": \"25/10\",\n                \"D\": \"45/16\",\n                \"E\": \"50/20\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3.25 = 13/4 = expressão = resultado\"\n        },\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"1/3\",\n                \"C\": \"1/4\",\n                \"D\": \"2/3\",\n                \"E\": \"3/4\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"3/4 ≠ expressão = resultado\"\n        },\n        {\n            \"enunciado\": \"Seja o número y = 2.5. Qual das opções abaixo é o representante de y como fração a/b, com a e b inteiros e b≠0?\",\n            \"alternativas\": {\n                \"A\": \"2/5\",\n                \"B\": \"5/2\",\n                \"C\": \"10/5\",\n                \"D\": \"5/10\",\n                \"E\": \"10/2\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"2.5 = 5/2 = expressão = resultado\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 433,
+            "total_tokens": 433
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.396303799992893,
+            "tempo_decode_s": 55.189180799992755,
+            "tempo_resposta_s": 60.58548459998565,
+            "tempo_total_s": 60.58548459998565,
+            "tokens_entrada": 0,
+            "tokens_saida": 433,
+            "tps": 7.146926410820564,
+            "ram_inicio_mb": 1968.55859375,
+            "ram_pico_mb": 1971.05859375,
+            "ram_usada_mb": 2.5,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 11, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 4\",\n                \"B\": \"x = 5\",\n                \"C\": \"x = 6\",\n                \"D\": \"x = 7\",\n                \"E\": \"x = 8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 11\\n3x = 11 + 7\\n3x = 18\\nx = 18 / 3\\nx = 6\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 3 = 17, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 2\",\n                \"B\": \"x = 5\",\n                \"C\": \"x = 7\",\n                \"D\": \"x = 8\",\n                \"E\": \"x = 10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"2x + 3 = 17\\n2x = 17 - 3\\n2x = 14\\nx = 14 / 2\\nx = 7\"\n        },\n        {\n            \"enunciado\": \"Se 5x - 4 = 21, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"x = 2\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 5\",\n                \"D\": \"x = 6\",\n                \"E\": \"x = 7\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"5x - 4 = 21\\n5x = 21 + 4\\n5x = 25\\nx = 25 / 5\\nx = 5\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 461,
+            "total_tokens": 461
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.790871600009268,
+            "tempo_decode_s": 52.621126799989725,
+            "tempo_resposta_s": 57.41199839999899,
+            "tempo_total_s": 57.41199839999899,
+            "tokens_entrada": 0,
+            "tokens_saida": 461,
+            "tps": 8.029680430005866,
+            "ram_inicio_mb": 1943.35546875,
+            "ram_pico_mb": 1960.09375,
+            "ram_usada_mb": 16.73828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 8.331706,
+        "ram_media_mb": 1977.681641,
+        "ram_pico_mb": 1980.792969,
+        "tempo_medio_segundos": 90.967976,
+        "ttft_medio_segundos": 3.170518,
+        "tps": {
+          "n": 2,
+          "mediana": 8.331706,
+          "iqr": 0.26394,
+          "p25": 8.199736,
+          "p75": 8.463677,
+          "p95": 8.569253,
+          "p99": 8.590368,
+          "max": 8.595647,
+          "media": 8.331706
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 3.170518,
+          "iqr": 3.054817,
+          "p25": 1.643109,
+          "p75": 4.697926,
+          "p95": 5.919853,
+          "p99": 6.164238,
+          "max": 6.225335,
+          "media": 3.170518
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 90.967976,
+          "iqr": 9.780694,
+          "p25": 86.077629,
+          "p75": 95.858324,
+          "p95": 99.770601,
+          "p99": 100.553057,
+          "max": 100.748671,
+          "media": 90.967976
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1977.681641,
+          "iqr": 3.111328,
+          "p25": 1976.125977,
+          "p75": 1979.237305,
+          "p95": 1980.481836,
+          "p99": 1980.730742,
+          "max": 1980.792969,
+          "media": 1977.681641
+        },
+        "tps_por_rodada": [
+          8.067766071944506,
+          8.595646901576197
+        ],
+        "ttft_por_rodada": [
+          6.2253347000223584,
+          0.1157007000001613
+        ],
+        "tempo_por_rodada": [
+          81.18728210002882,
+          100.74867080000695
+        ],
+        "ram_por_rodada": [
+          1974.5703125,
+          1980.79296875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 2,
+        "quantidade_de_questoes": 5,
+        "tentativas": 1,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": true,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 1980.792969,
+        "tps_medio": 8.331706,
+        "tempo_medio_segundos": 90.967976,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Sejam os números 1/4 e 2/3. Qual é o resultado de 1/4 + 2/3?\",\n            \"alternativas\": {\n                \"A\": \"1/7\",\n                \"B\": \"5/7\",\n                \"C\": \"5/12\",\n                \"D\": \"1/12\",\n                \"E\": \"1\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1/4 + 2/3 = (3 + 8)/12 = 11/12\"\n        },\n        {\n            \"enunciado\": \"Qual é a forma de escrita de 1.5 na base 10 convertida para a base 2?\",\n            \"alternativas\": {\n                \"A\": \"10.1\",\n                \"B\": \"11.1\",\n                \"C\": \"10.01\",\n                \"D\": \"11.01\",\n                \"E\": \"10.001\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1.5 = 1.1 (base 2)\"\n        },\n        {\n            \"enunciado\": \"A soma de quatro números inteiros consecutivos é 40. Qual é o valor do maior número?\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"12\",\n                \"C\": \"11\",\n                \"D\": \"13\",\n                \"E\": \"14\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"x + x + 1 + x + 2 = 40\"\n        },\n        {\n            \"enunciado\": \"Qual é o produto de dois números inteiros, se a soma dos quadrados deles é 100?\",\n            \"alternativas\": {\n                \"A\": \"20\",\n                \"B\": \"25\",\n                \"C\": \"10\",\n                \"D\": \"15\",\n                \"E\": \"20\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"x² + y² = 100\"\n        },\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\"\n\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"0.5\",\n                \"C\": \"0.05\",\n                \"D\": \"0.15\",\n                \"E\": \"0.12\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"0.5 = 1/2\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 655,
+            "total_tokens": 655
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.2253347000223584,
+            "tempo_decode_s": 74.96194740000647,
+            "tempo_resposta_s": 81.18728210002882,
+            "tempo_total_s": 81.18728210002882,
+            "tokens_entrada": 0,
+            "tokens_saida": 655,
+            "tps": 8.067766071944506,
+            "ram_inicio_mb": 1962.796875,
+            "ram_pico_mb": 1974.5703125,
+            "ram_usada_mb": 11.7734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Seja o número 20. A qual das seguintes expressões NÃO pode ser a soma de dois números primos diferentes, com um sendo múltiplo de 4?\",\n            \"alternativas\": {\n                \"A\": \"20\",\n                \"B\": \"24\",\n                \"C\": \"28\",\n                \"D\": \"32\",\n                \"E\": \"36\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"2 + 19 = 21, 3 + 17 = 20, 5 + 15 = 20, 7 + 13 = 20, 11 + 19 = 30, 13 + 17 = 30, 17 + 13 = 30, 19 + 11 = 30, 20 + 7 = 27, 23 + 7 = 30, 29 + 7 = 36\"\n        },\n        {\n            \"enunciado\": \"Qual é a expressão correta para a seguinte igualdade de frações, a / b = c / d, onde a, b, c, e d são números inteiros e b ≠ 0 e d ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"a * d = b * c\",\n                \"B\": \"a / d = b / c\",\n                \"C\": \"a * d = b * d\",\n                \"D\": \"a / b = c / d\",\n                \"E\": \"a * b = c * d\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"a * d = b * c\"\n        },\n        {\n            \"enunciado\": \"Sejam a = 5, b = 3, c = 10, d = 4. Qual é a soma de a² + b² + c² + d²?\",\n            \"alternativas\": {\n                \"A\": \"140\",\n                \"B\": \"144\",\n                \"C\": \"146\",\n                \"D\": \"150\",\n                \"E\": \"154\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"5² + 3² + 10² + 4² = 25 + 9 + 100 + 16 = 140\"\n        },\n        {\n            \"enunciado\": \"Determine a raiz quadrada de 144, considerando apenas os valores inteiros.\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"12\",\n                \"C\": \"13\",\n                \"D\": \"14\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"12² = 144\"\n        },\n        {\n            \"enunciado\": \"Determine a soma dos divisores próprios de 30.\",\n            \"alternativas\": {\n                \"A\": \"48\",\n                \"B\": \"50\",\n                \"C\": \"52\",\n                \"D\": \"54\",\n                \"E\": \"56\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1 + 2 + 3 + 5 + 6 + 10 + 15 = 42, 42 + 2 + 3 = 50, 42 + 2 + 3 + 5 = 50, 42 + 2 + 3 + 5 + 6 = 56\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 866,
+            "total_tokens": 866
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.1157007000001613,
+            "tempo_decode_s": 100.63297010000679,
+            "tempo_resposta_s": 100.74867080000695,
+            "tempo_total_s": 100.74867080000695,
+            "tokens_entrada": 0,
+            "tokens_saida": 866,
+            "tps": 8.595646901576197,
+            "ram_inicio_mb": 1974.9453125,
+            "ram_pico_mb": 1980.79296875,
+            "ram_usada_mb": 5.84765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 7.546484,
+        "ram_media_mb": 1984.955078,
+        "ram_pico_mb": 1986.164062,
+        "tempo_medio_segundos": 27.036682,
+        "ttft_medio_segundos": 4.086768,
+        "tps": {
+          "n": 2,
+          "mediana": 7.546484,
+          "iqr": 0.360143,
+          "p25": 7.366413,
+          "p75": 7.726555,
+          "p95": 7.870613,
+          "p99": 7.899424,
+          "max": 7.906627,
+          "media": 7.546484
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 4.086768,
+          "iqr": 0.563509,
+          "p25": 3.805014,
+          "p75": 4.368523,
+          "p95": 4.593927,
+          "p99": 4.639007,
+          "max": 4.650277,
+          "media": 4.086768
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 27.036682,
+          "iqr": 4.076459,
+          "p25": 24.998453,
+          "p75": 29.074912,
+          "p95": 30.705496,
+          "p99": 31.031613,
+          "max": 31.113142,
+          "media": 27.036682
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1984.955078,
+          "iqr": 1.208984,
+          "p25": 1984.350586,
+          "p75": 1985.55957,
+          "p95": 1986.043164,
+          "p99": 1986.139883,
+          "max": 1986.164062,
+          "media": 1984.955078
+        },
+        "tps_por_rodada": [
+          7.186341289573164,
+          7.906626774674087
+        ],
+        "ttft_por_rodada": [
+          4.6502774999826215,
+          3.523258999979589
+        ],
+        "tempo_por_rodada": [
+          22.960223200003384,
+          31.113141799985897
+        ],
+        "ram_por_rodada": [
+          1983.74609375,
+          1986.1640625
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Qual das opções abaixo representa o valor de um ângulo agudo no ângulo rectângulo dado, considerando-se que a soma dos ângulos adjacentes é 90°?",
+                "alternativas": {
+                  "A": "20°",
+                  "B": "30°",
+                  "C": "40°",
+                  "D": "50°",
+                  "E": "60°"
+                },
+                "resposta_correta": "B",
+                "resolucao_passo_a_passo": "90° - 50° = 40°, então ângulo agudo = 40°."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Qual das figuras abaixo não pertence ao conjunto dos quadrados cujos lados medem igual a 5 unidades de medida? A figura é mostrada abaixo, mas não está inclusa na descrição. Se a figura for um quadrado com lado de 5 unidades, qual é a alternativa que descreve a figura errada?",
+                "alternativas": {
+                  "A": "Quadrado com lado de 5 unidades.",
+                  "B": "Retângulo com lados de 5 e 2 unidades.",
+                  "C": "Quadrado com lado de 4 unidades.",
+                  "D": "Quadrado com lado de 3 unidades.",
+                  "E": "Círculo com raio de 5 unidades."
+                },
+                "resposta_correta": "E",
+                "resolucao_passo_a_passo": "5² = 25\n4² = 16\n3² = 9\n2² = 4\nCírculo não possui lados cuja medida seja 5 unidades."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 1986.164062,
+        "tps_medio": 7.546484,
+        "tempo_medio_segundos": 27.036682,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 100.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual das opções abaixo representa o valor de um ângulo agudo no ângulo rectângulo dado, considerando-se que a soma dos ângulos adjacentes é 90°?\",\n            \"alternativas\": {\n                \"A\": \"20°\",\n                \"B\": \"30°\",\n                \"C\": \"40°\",\n                \"D\": \"50°\",\n                \"E\": \"60°\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"90° - 50° = 40°, então ângulo agudo = 40°.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 165,
+            "total_tokens": 165
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.6502774999826215,
+            "tempo_decode_s": 18.309945700020762,
+            "tempo_resposta_s": 22.960223200003384,
+            "tempo_total_s": 22.960223200003384,
+            "tokens_entrada": 0,
+            "tokens_saida": 165,
+            "tps": 7.186341289573164,
+            "ram_inicio_mb": 1980.9375,
+            "ram_pico_mb": 1983.74609375,
+            "ram_usada_mb": 2.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual das figuras abaixo não pertence ao conjunto dos quadrados cujos lados medem igual a 5 unidades de medida? A figura é mostrada abaixo, mas não está inclusa na descrição. Se a figura for um quadrado com lado de 5 unidades, qual é a alternativa que descreve a figura errada?\",\n            \"alternativas\": {\n                \"A\": \"Quadrado com lado de 5 unidades.\",\n                \"B\": \"Retângulo com lados de 5 e 2 unidades.\",\n                \"C\": \"Quadrado com lado de 4 unidades.\",\n                \"D\": \"Quadrado com lado de 3 unidades.\",\n                \"E\": \"Círculo com raio de 5 unidades.\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"5² = 25\\n4² = 16\\n3² = 9\\n2² = 4\\nCírculo não possui lados cuja medida seja 5 unidades.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 246,
+            "total_tokens": 246
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.523258999979589,
+            "tempo_decode_s": 27.589882800006308,
+            "tempo_resposta_s": 31.113141799985897,
+            "tempo_total_s": 31.113141799985897,
+            "tokens_entrada": 0,
+            "tokens_saida": 246,
+            "tps": 7.906626774674087,
+            "ram_inicio_mb": 1983.9375,
+            "ram_pico_mb": 1986.1640625,
+            "ram_usada_mb": 2.2265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2277.0,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2277.0 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 4.36,
+        "limite": 5.0,
+        "motivo": "TPS 4.36 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 80.0,
+        "limite": 60.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 90.97,
+        "limite": 90.0,
+        "motivo": "Tempo médio 91.0s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -32.6,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "RAM pico 2277.0 MB — limite 2048.0 MB",
+      "TPS 4.36 abaixo do mínimo 5.0",
+      "Tempo médio 91.0s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "hardware",
+      "performance"
+    ],
+    "modelo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+    "gerado_em": "2026-09-01T07:32:34.971451"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "RAM pico 2277.0 MB — limite 2048.0 MB; TPS 4.36 abaixo do mínimo 5.0; Tempo médio 91.0s acima de 90.0s"
+}

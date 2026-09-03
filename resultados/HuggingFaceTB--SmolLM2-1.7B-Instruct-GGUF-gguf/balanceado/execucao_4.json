@@ -1,0 +1,1146 @@
+{
+  "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "01/09/2026",
+  "run_config": {
+    "modelos": [
+      "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\HuggingFaceTB--SmolLM2-1.7B-Instruct-GGUF\\smollm2-1.7b-instruct-q4_k_m.gguf"
+    },
+    "seed": 21,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 21
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 21
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.3,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Entre os números abaixo, qual não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?",
+            "alternativas": {
+              "A": "5",
+              "B": "7",
+              "C": "12",
+              "D": "15",
+              "E": "18"
+            },
+            "resposta_correta": "D",
+            "resolucao_passo_a_passo": "Para cada número, verifique se pode ser representado como uma fração a/b, onde a e b são inteiros e b≠0. Se o número não possuir divisível por um número inteiro maior que ele, então ele não pode ser escrito como uma fração a/b. Por exemplo, 5 pode ser escrito como uma fração 1/2, pois é divisível por 2. 7 não pode ser escrito como uma fração, pois não é divisível por nenhum número inteiro maior que ele. 12 é divisível por 3, pois 12 = 3 * 4, e 3 é uma divisível inteiro. 15 não pode ser escrito como uma fração, pois não é divisível por nenhum número inteiro maior que ele. 18 pode ser escrito como uma fração 3/2, pois é divisível por 2 e 3 é uma divisível inteiro."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 1.6795433000079356,
+        "tempo_prefill_s": 20.85557929999777,
+        "tempo_decode_s": 37.09330140001839,
+        "tempo_resposta_s": 57.94888070001616,
+        "tempo_total_s": 59.6284240000241,
+        "tokens_entrada": 0,
+        "tokens_saida": 439,
+        "tps": 7.575642440318568,
+        "ram_inicio_mb": 35.23828125,
+        "ram_pico_mb": 2033.85546875,
+        "ram_usada_mb": 1998.6171875,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 59.6284240000241,
+        "tempo_carregamento_s": 1.6795433000079356,
+        "tempo_resposta_s": 57.94888070001616,
+        "ram_pico_mb": 2033.85546875,
+        "ram_inicio_mb": 35.23828125,
+        "ttft_segundos": 20.85557929999777,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre os números abaixo, qual não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"7\",\n                \"C\": \"12\",\n                \"D\": \"15\",\n                \"E\": \"18\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Para cada número, verifique se pode ser representado como uma fração a/b, onde a e b são inteiros e b≠0. Se o número não possuir divisível por um número inteiro maior que ele, então ele não pode ser escrito como uma fração a/b. Por exemplo, 5 pode ser escrito como uma fração 1/2, pois é divisível por 2. 7 não pode ser escrito como uma fração, pois não é divisível por nenhum número inteiro maior que ele. 12 é divisível por 3, pois 12 = 3 * 4, e 3 é uma divisível inteiro. 15 não pode ser escrito como uma fração, pois não é divisível por nenhum número inteiro maior que ele. 18 pode ser escrito como uma fração 3/2, pois é divisível por 2 e 3 é uma divisível inteiro.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 439,
+            "total_tokens": 439
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.6795433000079356,
+            "tempo_prefill_s": 20.85557929999777,
+            "tempo_decode_s": 37.09330140001839,
+            "tempo_resposta_s": 57.94888070001616,
+            "tempo_total_s": 59.6284240000241,
+            "tokens_entrada": 0,
+            "tokens_saida": 439,
+            "tps": 7.575642440318568,
+            "ram_inicio_mb": 35.23828125,
+            "ram_pico_mb": 2033.85546875,
+            "ram_usada_mb": 1998.6171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 10.807911,
+          "iqr": 0.594525,
+          "p25": 10.349399,
+          "p75": 10.943924,
+          "p95": 11.557749,
+          "p99": 11.850079,
+          "max": 11.923161,
+          "media": 10.756584
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.216631,
+          "iqr": 0.752544,
+          "p25": 3.942836,
+          "p75": 4.69538,
+          "p95": 5.439983,
+          "p99": 5.903437,
+          "max": 6.0193,
+          "media": 4.041302
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 45.854997,
+          "iqr": 22.869484,
+          "p25": 29.27733,
+          "p75": 52.146815,
+          "p95": 79.383247,
+          "p99": 92.522178,
+          "max": 95.806911,
+          "media": 46.661847
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1946.976562,
+          "iqr": 37.810547,
+          "p25": 1933.205078,
+          "p75": 1971.015625,
+          "p95": 1972.2,
+          "p99": 1972.430625,
+          "max": 1972.488281,
+          "media": 1951.073437
+        },
+        "tps_medio": 10.756584,
+        "ttft_medio_segundos": 4.041302,
+        "tempo_medio_segundos": 46.661847,
+        "ram_pico_mb": 1972.488281
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 6,
+        "json_invalidos": 4,
+        "taxa_json_valido_percent": 60.0,
+        "json_valido_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 6,
+        "gabarito_avaliados": 6,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 6,
+          "denominador": 6,
+          "ponto": 1.0,
+          "ic95": [
+            0.609666,
+            1.0
+          ],
+          "formato": "100.0% [61.0–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 6,
+        "taxa_utilizavel_percent": 60.0,
+        "utilizavel_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 4,
+          "ok": 6
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 10.807911,
+          "iqr": 0.594525,
+          "p25": 10.349399,
+          "p75": 10.943924,
+          "p95": 11.557749,
+          "p99": 11.850079,
+          "max": 11.923161,
+          "media": 10.756584
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.216631,
+          "iqr": 0.752544,
+          "p25": 3.942836,
+          "p75": 4.69538,
+          "p95": 5.439983,
+          "p99": 5.903437,
+          "max": 6.0193,
+          "media": 4.041302
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 45.854997,
+          "iqr": 22.869484,
+          "p25": 29.27733,
+          "p75": 52.146815,
+          "p95": 79.383247,
+          "p99": 92.522178,
+          "max": 95.806911,
+          "media": 46.661847
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1946.976562,
+          "iqr": 37.810547,
+          "p25": 1933.205078,
+          "p75": 1971.015625,
+          "p95": 1972.2,
+          "p99": 1972.430625,
+          "max": 1972.488281,
+          "media": 1951.073437
+        },
+        "tps_medio": 10.756584,
+        "ttft_medio_segundos": 4.041302,
+        "tempo_medio_segundos": 46.661847,
+        "ram_pico_mb": 1972.488281,
+        "tps_por_rodada": [
+          10.688164227849342,
+          10.961982852290449,
+          10.236476896836026,
+          10.747128826609368,
+          9.941498495233171,
+          10.868692804248909,
+          11.92316106517308,
+          11.111133760512194,
+          10.889746001498224,
+          10.19785864356436
+        ],
+        "ttft_por_rodada": [
+          6.019300300016766,
+          3.8801559999992605,
+          4.163517700013472,
+          4.7014424999943,
+          4.731928200024413,
+          4.67719250000664,
+          0.07848039999953471,
+          3.9400438999873586,
+          3.9512129000213463,
+          4.269743400014704
+        ],
+        "tempo_por_rodada": [
+          95.80691110002226,
+          45.70341030001873,
+          23.738636099995347,
+          52.29303649999201,
+          24.44299520002096,
+          51.70815020002192,
+          43.78033619999769,
+          59.3098791000084,
+          46.00658270000713,
+          23.82853190001333
+        ],
+        "ram_por_rodada": [
+          1970.40625,
+          1971.21875,
+          1971.84765625,
+          1972.48828125,
+          1959.73046875,
+          1931.75390625,
+          1932.35546875,
+          1933.0546875,
+          1933.65625,
+          1934.22265625
+        ],
+        "ram_media_mb": 1951.073437
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Entre os números 1, 2, 3, 4, 5, qual não pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"1\",\n        \"B\": \"2\",\n        \"C\": \"3\",\n        \"D\": \"4\",\n        \"E\": \"5\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": \"Então, para cada número, vamos comparar se ele pode ser escrito como uma fração a/b, onde a e b são inteiros e b≠0. Para o número 1, a/b = 1, que é uma fração simples, pois a é 1 e b é 1. Para o número 2, a/b = 1/2, que é uma fração com b = 2, pois a é 1 e b é 2. Para o número 3, a/b = 1/3, que é uma fração com b = 3, pois a é 1 e b é 3. Para o número 4, a/b = 1/2, que é uma fração com b = 2, pois a é 4 e b é 2. Para o número 5, a/b = 1/5, que é uma fração com b = 5, pois a é 5 e b é 5. Portanto, o número 1 não pode ser escrito como uma fração a/b, pois ele é um número único e não é possível expressá-lo como uma fração.\"\n    },\n    {\n      \"enunciado\": \"Entre os números 1, 2, 3, 4, 5, qual não pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"1\",\n        \"B\": \"2\",\n        \"C\": \"3\",\n        \"D\": \"4\",\n        \"E\": \"5\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": \"Então, para cada número, vamos comparar se ele pode ser escrito como uma fração a/b, onde a e b são inteiros e b≠0. Para o número 1, a/b = 1, que é uma fração simples, pois a é 1 e b é 1. Para o número 2, a/b = 1/2, que é uma fração com b = 2, pois a é 2 e b é 2. Para o número 3, a/b = 1/3, que é uma fração com b = 3, pois a é 3 e b é 3. Para o número 4, a/b = 1/2, que é uma fração com b = 2, pois a é 4 e b é 2. Para o número 5, a/b = 1/5, que é uma fração com b = 5, pois a é 5 e b é 5. Portanto, o número 4 não pode ser escrito como uma fração a/b, pois ele é um número único e não é possível expressá-lo como uma fração.\"\n    },\n    {\n      \"enunciado\": \"Entre os números 1, 2, 3, 4, 5, qual não pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"1\",\n        \"B\": \"2\",\n        \"C\": \"3\",\n        \"D\": \"4\",\n        \"E\": \"",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.019300300016766,
+            "tempo_decode_s": 89.7876108000055,
+            "tempo_resposta_s": 95.80691110002226,
+            "tempo_total_s": 95.80691110002226,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 10.688164227849342,
+            "ram_inicio_mb": 1966.5390625,
+            "ram_pico_mb": 1970.40625,
+            "ram_usada_mb": 3.8671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"A equação é 4x - 3 = 2x + 7, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"1. Subtraia 2x de ambas as esquinas; 2. Subtraia 7 de ambas as esquinas; 3. A equação fica 2 = 2x, então x = 1.\"\n        },\n        {\n            \"enunciado\": \"A equação é 2x + 1 = 3x + 5, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1. Subtraia 2x de ambas as esquinas; 2. Subtraia 5 de ambas as esquinas; 3. A equação fica 1 = 1, então x = 1.\"\n        },\n        {\n            \"enunciado\": \"A equação é 3x - 1 = 5x + 2, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1. Subtraia 3x de ambas as esquinas; 2. Subtraia 2 de ambas as esquinas; 3. A equação fica -1 = 2, então x = -1.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 501,
+            "total_tokens": 501
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.8801559999992605,
+            "tempo_decode_s": 41.82325430001947,
+            "tempo_resposta_s": 45.70341030001873,
+            "tempo_total_s": 45.70341030001873,
+            "tokens_entrada": 0,
+            "tokens_saida": 501,
+            "tps": 10.961982852290449,
+            "ram_inicio_mb": 1970.3984375,
+            "ram_pico_mb": 1971.21875,
+            "ram_usada_mb": 0.8203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre qualquer número entre 23 e 27, qual número está? (Selecione um número entre A e E)\",\n            \"alternativas\": {\n                \"A\": \"23\",\n                \"B\": \"24\",\n                \"C\": \"25\",\n                \"D\": \"26\",\n                \"E\": \"27\"\n            },\n            \"resposta_correta\": \"B\"\n        },\n        {\n            \"enunciado\": \"Entre qualquer número entre 23 e 27, qual número está? (Selecione um número entre A e E)\",\n            \"alternativas\": {\n                \"A\": \"23\",\n                \"B\": \"24\",\n                \"C\": \"25\",\n                \"D\": \"26\",\n                \"E\": \"27\"\n            },\n            \"resposta_correta\": \"A\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 243,
+            "total_tokens": 243
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.163517700013472,
+            "tempo_decode_s": 19.575118399981875,
+            "tempo_resposta_s": 23.738636099995347,
+            "tempo_total_s": 23.738636099995347,
+            "tokens_entrada": 0,
+            "tokens_saida": 243,
+            "tps": 10.236476896836026,
+            "ram_inicio_mb": 1971.22265625,
+            "ram_pico_mb": 1971.84765625,
+            "ram_usada_mb": 0.625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"A equação 4x - 3 = 2x + 10 pode ser solucionada como (x - 5) = ?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"7\",\n                \"C\": \"10\",\n                \"D\": \"13\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Subtrai 2x de ambas as águas da equação: 4x - 3 - 2x = 2x + 10 - 2x; 2x - 3 = 10; 2x = 13; x = 13 / 2\"\n        },\n        {\n            \"enunciado\": \"A equação 3x - 2 = 2x + 5 pode ser solucionada como (x - 7) = ?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"5\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Subtrai 2x de ambas as águas da equação: 3x - 2 - 2x = 2x + 5 - 2x; x - 2 = 5; x = 7\"\n        },\n        {\n            \"enunciado\": \"A equação 5x - 3 = 2x + 4 pode ser solucionada como (x + 7) = ?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Subtrai 2x de ambas as águas da equação: 5x - 3 - 2x = 2x + 4 - 2x; 3x - 3 = 4; 3x = 7; x = 7 / 3\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 562,
+            "total_tokens": 562
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.7014424999943,
+            "tempo_decode_s": 47.59159399999771,
+            "tempo_resposta_s": 52.29303649999201,
+            "tempo_total_s": 52.29303649999201,
+            "tokens_entrada": 0,
+            "tokens_saida": 562,
+            "tps": 10.747128826609368,
+            "ram_inicio_mb": 1971.83984375,
+            "ram_pico_mb": 1972.48828125,
+            "ram_usada_mb": 0.6484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre qualquer número entre 23 e 27, qual número está? (Selecione um número entre A e E)\",\n            \"alternativas\": {\n                \"A\": \"23\",\n                \"B\": \"24\",\n                \"C\": \"25\",\n                \"D\": \"26\",\n                \"E\": \"27\"\n            },\n            \"resposta_correta\": \"B\"\n        },\n        {\n            \"enunciado\": \"Entre qualquer número entre 23 e 27, qual número está? (Selecione um número entre A e E)\",\n            \"alternativas\": {\n                \"A\": \"23\",\n                \"B\": \"24\",\n                \"C\": \"25\",\n                \"D\": \"26\",\n                \"E\": \"27\"\n            },\n            \"resposta_correta\": \"A\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 243,
+            "total_tokens": 243
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.731928200024413,
+            "tempo_decode_s": 19.711066999996547,
+            "tempo_resposta_s": 24.44299520002096,
+            "tempo_total_s": 24.44299520002096,
+            "tokens_entrada": 0,
+            "tokens_saida": 243,
+            "tps": 9.941498495233171,
+            "ram_inicio_mb": 1959.015625,
+            "ram_pico_mb": 1959.73046875,
+            "ram_usada_mb": 0.71484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"A equação 4x - 3 = 2x + 10 pode ser solucionada como (x - 5) = ?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"7\",\n                \"C\": \"10\",\n                \"D\": \"13\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Subtrai 2x de ambas as águas da equação: 4x - 3 - 2x = 2x + 10 - 2x; 2x - 3 = 10; 2x = 13; x = 13 / 2\"\n        },\n        {\n            \"enunciado\": \"A equação 3x - 2 = 2x + 5 pode ser solucionada como (x - 7) = ?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"5\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Subtrai 2x de ambas as águas da equação: 3x - 2 - 2x = 2x + 5 - 2x; x - 2 = 5; x = 7\"\n        },\n        {\n            \"enunciado\": \"A equação 5x - 3 = 2x + 4 pode ser solucionada como (x + 7) = ?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Subtrai 2x de ambas as águas da equação: 5x - 3 - 2x = 2x + 4 - 2x; 3x - 3 = 4; 3x = 7; x = 7 / 3\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 562,
+            "total_tokens": 562
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.67719250000664,
+            "tempo_decode_s": 47.03095770001528,
+            "tempo_resposta_s": 51.70815020002192,
+            "tempo_total_s": 51.70815020002192,
+            "tokens_entrada": 0,
+            "tokens_saida": 562,
+            "tps": 10.868692804248909,
+            "ram_inicio_mb": 1930.95703125,
+            "ram_pico_mb": 1931.75390625,
+            "ram_usada_mb": 0.796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o valor de x, se x = 12 - 5?\",\n            \"alternativas\": {\n                \"A\": \"17\",\n                \"B\": \"18\",\n                \"C\": \"19\",\n                \"D\": \"20\",\n                \"E\": \"21\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Expressão: 12 - 5 = 7. Substituindo x pela expressão, obtemos x = 7. Como x = 7, a alternativa C é a correta.\"\n        },\n        {\n            \"enunciado\": \"Qual é o valor de x, se x = 10 / (2 * 2)?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Expressão: x = 10 / (2 * 2). Substituindo 2 * 2 pela expressão, obtemos x = 10 / 4. Simplificando, x = 2. Como x = 2, a alternativa B é a correta.\"\n        },\n        {\n            \"enunciado\": \"Qual é o valor de x, se x = 10 * (2 * 2)?\",\n            \"alternativas\": {\n                \"A\": \"18\",\n                \"B\": \"19\",\n                \"C\": \"20\",\n                \"D\": \"21\",\n                \"E\": \"22\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Expressão: x = 10 * (2 * 2). Substituindo 2 * 2 pela expressão, obtemos x = 10 * 4. Simplificando, x = 40. Como x = 40, a alternativa D é a correta.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 522,
+            "total_tokens": 522
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07848039999953471,
+            "tempo_decode_s": 43.70185579999816,
+            "tempo_resposta_s": 43.78033619999769,
+            "tempo_total_s": 43.78033619999769,
+            "tokens_entrada": 0,
+            "tokens_saida": 522,
+            "tps": 11.92316106517308,
+            "ram_inicio_mb": 1931.671875,
+            "ram_pico_mb": 1932.35546875,
+            "ram_usada_mb": 0.68359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número NÃO pode ser escrito como uma fração a/b, onde a e b são inteiros, b≠0, se a corresponde ao número 0,245?\",\n            \"alternativas\": {\n                \"A\": \"0,245\",\n                \"B\": \"0,246\",\n                \"C\": \"0,247\",\n                \"D\": \"0,248\",\n                \"E\": \"0,249\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Nesse caso, a corresponde a 0,245, pois 0,245 = 51/200, que é uma fração inteira.\"\n        },\n        {\n            \"enunciado\": \"Qual número NÃO pode ser escrito como uma fração a/b, onde a e b são inteiros, b≠0, se a corresponde ao número 0,0002?\",\n            \"alternativas\": {\n                \"A\": \"0,0002\",\n                \"B\": \"0,0003\",\n                \"C\": \"0,0004\",\n                \"D\": \"0,0005\",\n                \"E\": \"0,0006\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Nesse caso, a corresponde a 0,0002, pois 0,0002 = 2/10000, que é uma fração inteira.\"\n        },\n        {\n            \"enunciado\": \"Qual número NÃO pode ser escrito como uma fração a/b, onde a e b são inteiros, b≠0, se a corresponde ao número 0,000001?\",\n            \"alternativas\": {\n                \"A\": \"0,000001\",\n                \"B\": \"0,000002\",\n                \"C\": \"0,000003\",\n                \"D\": \"0,000004\",\n                \"E\": \"0,000005\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Nesse caso, a corresponde a 0,000001, pois 0,000001 = 1/1000000, que é uma fração inteira.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 659,
+            "total_tokens": 659
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.9400438999873586,
+            "tempo_decode_s": 55.36983520002104,
+            "tempo_resposta_s": 59.3098791000084,
+            "tempo_total_s": 59.3098791000084,
+            "tokens_entrada": 0,
+            "tokens_saida": 659,
+            "tps": 11.111133760512194,
+            "ram_inicio_mb": 1932.3046875,
+            "ram_pico_mb": 1933.0546875,
+            "ram_usada_mb": 0.75,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"A equação é 4x - 3 = 2x + 7, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"1. Subtraia 2x de ambas as esquinas; 2. Subtraia 7 de ambas as esquinas; 3. A equação fica 2 = 2x, então x = 1.\"\n        },\n        {\n            \"enunciado\": \"A equação é 2x + 1 = 3x + 5, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1. Subtraia 2x de ambas as esquinas; 2. Subtraia 5 de ambas as esquinas; 3. A equação fica 1 = 1, então x = 1.\"\n        },\n        {\n            \"enunciado\": \"A equação é 3x - 1 = 5x + 2, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1. Subtraia 3x de ambas as esquinas; 2. Subtraia 2 de ambas as esquinas; 3. A equação fica -1 = 2, então x = -1.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 501,
+            "total_tokens": 501
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.9512129000213463,
+            "tempo_decode_s": 42.05536979998578,
+            "tempo_resposta_s": 46.00658270000713,
+            "tempo_total_s": 46.00658270000713,
+            "tokens_entrada": 0,
+            "tokens_saida": 501,
+            "tps": 10.889746001498224,
+            "ram_inicio_mb": 1933.0,
+            "ram_pico_mb": 1933.65625,
+            "ram_usada_mb": 0.65625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre qualquer número entre 23 e 27, qual número está? (Selecione um número entre A e E)\",\n            \"alternativas\": {\n                \"A\": \"23\",\n                \"B\": \"24\",\n                \"C\": \"25\",\n                \"D\": \"26\",\n                \"E\": \"27\"\n            },\n            \"resposta_correta\": \"B\"\n        },\n        {\n            \"enunciado\": \"Entre qualquer número entre 23 e 27, qual número está? (Selecione um número entre A e E)\",\n            \"alternativas\": {\n                \"A\": \"23\",\n                \"B\": \"24\",\n                \"C\": \"25\",\n                \"D\": \"26\",\n                \"E\": \"27\"\n            },\n            \"resposta_correta\": \"A\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 243,
+            "total_tokens": 243
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.269743400014704,
+            "tempo_decode_s": 19.558788499998627,
+            "tempo_resposta_s": 23.82853190001333,
+            "tempo_total_s": 23.82853190001333,
+            "tokens_entrada": 0,
+            "tokens_saida": 243,
+            "tps": 10.19785864356436,
+            "ram_inicio_mb": 1933.5625,
+            "ram_pico_mb": 1934.22265625,
+            "ram_usada_mb": 0.66015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 10.94381,
+        "ram_media_mb": 1935.296875,
+        "ram_pico_mb": 1935.296875,
+        "tempo_medio_segundos": 81.415885,
+        "ttft_medio_segundos": 4.784776,
+        "tps": {
+          "n": 1,
+          "mediana": 10.94381,
+          "iqr": 0.0,
+          "p25": 10.94381,
+          "p75": 10.94381,
+          "p95": 10.94381,
+          "p99": 10.94381,
+          "max": 10.94381,
+          "media": 10.94381
+        },
+        "ttft": {
+          "n": 1,
+          "mediana": 4.784776,
+          "iqr": 0.0,
+          "p25": 4.784776,
+          "p75": 4.784776,
+          "p95": 4.784776,
+          "p99": 4.784776,
+          "max": 4.784776,
+          "media": 4.784776
+        },
+        "tempo": {
+          "n": 1,
+          "mediana": 81.415885,
+          "iqr": 0.0,
+          "p25": 81.415885,
+          "p75": 81.415885,
+          "p95": 81.415885,
+          "p99": 81.415885,
+          "max": 81.415885,
+          "media": 81.415885
+        },
+        "ram_pico": {
+          "n": 1,
+          "mediana": 1935.296875,
+          "iqr": 0.0,
+          "p25": 1935.296875,
+          "p75": 1935.296875,
+          "p95": 1935.296875,
+          "p99": 1935.296875,
+          "max": 1935.296875,
+          "media": 1935.296875
+        },
+        "tps_por_rodada": [
+          10.943810289602034
+        ],
+        "ttft_por_rodada": [
+          4.784775699983584
+        ],
+        "tempo_por_rodada": [
+          81.41588499999489
+        ],
+        "ram_por_rodada": [
+          1935.296875
+        ],
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 1,
+        "quantidade_de_questoes": 5,
+        "tentativas": 0,
+        "valido_primeira_tentativa": true,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 1935.296875,
+        "tps_medio": 10.94381,
+        "tempo_medio_segundos": 81.415885,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"7\",\n                \"E\": \"11\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Para cada alternativa, identifica o número que não pode ser expresso como uma fração, ou mostra que cada número pode ser expresso como uma fração\"\n        },\n        {\n            \"enunciado\": \"Qual número NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"4\",\n                \"D\": \"8\",\n                \"E\": \"16\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Para cada alternativa, identifica o número que pode ser expresso como uma fração, ou mostra que cada número não pode ser expresso como uma fração\"\n        },\n        {\n            \"enunciado\": \"Qual número NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"7\",\n                \"E\": \"13\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para cada alternativa, identifica o número que pode ser expresso como uma fração, ou mostra que cada número não pode ser expresso como uma fração\"\n        },\n        {\n            \"enunciado\": \"Qual número NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"4\",\n                \"D\": \"8\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Para cada alternativa, identifica o número que pode ser expresso como uma fração, ou mostra que cada número não pode ser expresso como uma fração\"\n        },\n        {\n            \"enunciado\": \"Qual número NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"4\",\n                \"D\": \"8\",\n                \"E\": \"19\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Para cada alternativa, identifica o número que pode ser expresso como uma fração, ou mostra que cada número não pode ser expresso como uma fração\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 891,
+            "total_tokens": 891
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.784775699983584,
+            "tempo_decode_s": 76.6311093000113,
+            "tempo_resposta_s": 81.41588499999489,
+            "tempo_total_s": 81.41588499999489,
+            "tokens_entrada": 0,
+            "tokens_saida": 891,
+            "tps": 10.943810289602034,
+            "ram_inicio_mb": 1934.56640625,
+            "ram_pico_mb": 1935.296875,
+            "ram_usada_mb": 0.73046875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 10.920828,
+        "ram_media_mb": 1833.923828,
+        "ram_pico_mb": 1834.265625,
+        "tempo_medio_segundos": 67.783283,
+        "ttft_medio_segundos": 3.783056,
+        "tps": {
+          "n": 2,
+          "mediana": 10.920828,
+          "iqr": 0.029161,
+          "p25": 10.906248,
+          "p75": 10.935409,
+          "p95": 10.947074,
+          "p99": 10.949406,
+          "max": 10.94999,
+          "media": 10.920828
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 3.783056,
+          "iqr": 0.464467,
+          "p25": 3.550822,
+          "p75": 4.01529,
+          "p95": 4.201077,
+          "p99": 4.238234,
+          "max": 4.247523,
+          "media": 3.783056
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 67.783283,
+          "iqr": 25.732788,
+          "p25": 54.916889,
+          "p75": 80.649676,
+          "p95": 90.942792,
+          "p99": 93.001415,
+          "max": 93.51607,
+          "media": 67.783283
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1833.923828,
+          "iqr": 0.341797,
+          "p25": 1833.75293,
+          "p75": 1834.094727,
+          "p95": 1834.231445,
+          "p99": 1834.258789,
+          "max": 1834.265625,
+          "media": 1833.923828
+        },
+        "tps_por_rodada": [
+          10.891667319928478,
+          10.949989618042691
+        ],
+        "ttft_por_rodada": [
+          4.247523300000466,
+          3.318588499998441
+        ],
+        "tempo_por_rodada": [
+          42.050494800001616,
+          93.51607039998635
+        ],
+        "ram_por_rodada": [
+          1833.58203125,
+          1834.265625
+        ],
+        "contagem_falhas": {
+          "ok": 1,
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Saber se um polígono é regular ou não, seguindo os padrões de geometria.",
+                "alternativas": {
+                  "A": "Sim, ele é regular, pois possui todos os seus vértices correspondentes ao mesmo número de lados.",
+                  "B": "Sim, ele é regular, pois possui todos os seus vértices correspondentes ao mesmo número de lados, mas ao lado do que aí o que aí no lado, ele não é regular.",
+                  "C": "Não, ele não é regular, pois possui vértices correspondentes ao mesmo número de lados, mas ao lado do que aí o que aí no lado, ele não é regular.",
+                  "D": "Não, ele não é regular, pois possui vértices correspondentes ao mesmo número de lados, mas ao lado do que aí o que aí no lado, ele não é regular.",
+                  "E": "Sim, ele é regular, pois possui todos os seus vértices correspondentes ao mesmo número de lados, mas ao lado do que aí o que aí no lado, ele não é regular."
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "Primeiro, identificamos o número de lados do polígono. Se ele possuir 3 lados, ele é equilátero, se ele possuir 4 lados, ele é isóceles, se ele possuir 5 lados, ele é scaleno. Em todos os casos, verificamos se o polígono é regular ou não."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "erro": "Nenhuma questão válida (1 inválida(s))",
+            "output_bruto": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Soma os segmentos $AB$ e $CD$ de um polígono convexo, cujos vértices $(0,0)$, $(2,0)$, $(2,3)$, e $(1,3)$ são dois exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemp"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 1834.265625,
+        "tps_medio": 10.920828,
+        "tempo_medio_segundos": 67.783283,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 50.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "ok": 1,
+          "json_invalido": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Saber se um polígono é regular ou não, seguindo os padrões de geometria.\",\n      \"alternativas\": {\n        \"A\": \"Sim, ele é regular, pois possui todos os seus vértices correspondentes ao mesmo número de lados.\",\n        \"B\": \"Sim, ele é regular, pois possui todos os seus vértices correspondentes ao mesmo número de lados, mas ao lado do que aí o que aí no lado, ele não é regular.\",\n        \"C\": \"Não, ele não é regular, pois possui vértices correspondentes ao mesmo número de lados, mas ao lado do que aí o que aí no lado, ele não é regular.\",\n        \"D\": \"Não, ele não é regular, pois possui vértices correspondentes ao mesmo número de lados, mas ao lado do que aí o que aí no lado, ele não é regular.\",\n        \"E\": \"Sim, ele é regular, pois possui todos os seus vértices correspondentes ao mesmo número de lados, mas ao lado do que aí o que aí no lado, ele não é regular.\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": \"Primeiro, identificamos o número de lados do polígono. Se ele possuir 3 lados, ele é equilátero, se ele possuir 4 lados, ele é isóceles, se ele possuir 5 lados, ele é scaleno. Em todos os casos, verificamos se o polígono é regular ou não.\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 458,
+            "total_tokens": 458
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.247523300000466,
+            "tempo_decode_s": 37.80297150000115,
+            "tempo_resposta_s": 42.050494800001616,
+            "tempo_total_s": 42.050494800001616,
+            "tokens_entrada": 0,
+            "tokens_saida": 458,
+            "tps": 10.891667319928478,
+            "ram_inicio_mb": 1832.875,
+            "ram_pico_mb": 1833.58203125,
+            "ram_usada_mb": 0.70703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Soma os segmentos $AB$ e $CD$ de um polígono convexo, cujos vértices $(0,0)$, $(2,0)$, $(2,3)$, e $(1,3)$ são dois exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exemplos de exempl",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.318588499998441,
+            "tempo_decode_s": 90.1974818999879,
+            "tempo_resposta_s": 93.51607039998635,
+            "tempo_total_s": 93.51607039998635,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 10.949989618042691,
+            "ram_inicio_mb": 1833.59765625,
+            "ram_pico_mb": 1834.265625,
+            "ram_usada_mb": 0.66796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 2033.9,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 7.58,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 50.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 50.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 81.42,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 4.6,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Taxa JSON válido 50.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+    "gerado_em": "2026-09-01T09:11:22.900361"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Taxa JSON válido 50.0% abaixo de 60.0%"
+}
