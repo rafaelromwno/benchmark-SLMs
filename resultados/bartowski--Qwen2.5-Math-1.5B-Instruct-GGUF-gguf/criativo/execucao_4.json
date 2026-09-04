@@ -1,0 +1,1169 @@
+{
+  "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "04/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--Qwen2.5-Math-1.5B-Instruct-GGUF\\Qwen2.5-Math-1.5B-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 21,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 21
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "criativo",
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 21
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.3,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": "JSON não encontrado na resposta",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 0.9172727000550367,
+        "tempo_prefill_s": 10.940050000033807,
+        "tempo_decode_s": 30.55770720000146,
+        "tempo_resposta_s": 41.49775720003527,
+        "tempo_total_s": 42.4150299000903,
+        "tokens_entrada": 0,
+        "tokens_saida": 476,
+        "tps": 11.470499422546997,
+        "ram_inicio_mb": 57.4921875,
+        "ram_pico_mb": 1742.05078125,
+        "ram_usada_mb": 1684.55859375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 42.4150299000903,
+        "tempo_carregamento_s": 0.9172727000550367,
+        "tempo_resposta_s": 41.49775720003527,
+        "ram_pico_mb": 1742.05078125,
+        "ram_inicio_mb": 57.4921875,
+        "ttft_segundos": 10.940050000033807,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's solve the problem step-by-step, ensuring that the question and the solution are clear and well- structured.\n\n### Problem Statement:\nGere 1 question (answering) for the following skills (calculating ability):\nEF09MA01: Perform operations with fractions.\nEF08MA01: Calculate with positive and negative integers.\n\n### Steps to Solve:\n1. Ensure the question is clear and the skills being tested are appropriate.\n2. Create a question that requires students to perform operations with fractions and positive/negative integers.\n3. Use a variety of problems to ensure the student is tested on their understanding of these skills.\n\n### Question:\nCalculate the value of the expression \\(\\frac{3}{4} + (-2) \\times \\frac{1}{2}\\).\n\n### Solution:\nLet's break down the problem step-by-step and solve it using Python and SymPy.\n\n1. **Expression Analysis**: The expression to evaluate is \\(\\frac{3}{4} + (-2) \\times \\frac{1}{2}\\).\n2. **Step-by-Step Solution**:\n   - First, evaluate the multiplication \\((-2) \\times \\frac{1}{2} = -1\\).\n   - Then, add the result to \\(\\frac{3}{4}\\): \\(\\frac{3}{4} + (-1) = \\frac{3}{4} - 1 = \\frac{3}{4} - \\frac{4}{4} = -\\frac{1}{4}\\).\n\nLet's implement this in Python using SymPy.\n\n```python\nimport sympy as sp\n\n# Define the expression\nexpression = sp.Rational(3, 4) + (-2) * sp.Rational(1, 2)\n\n# Simplify the expression\nsimplified_expression = sp.simplify(expression)\n\nprint(simplified_expression)\n```\n```output\n-1/4\n```\nThe value of the expression \\(\\frac{3}{4} + (-2) \\times \\frac{1}{2}\\) is \\(\\boxed{-\\frac{1}{4}}\\).\n\nThis problem tests the student's understanding of performing operations with fractions and positive/negative integers. The solution involves basic arithmetic operations, which are fundamental skills for students at the primary school level.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 476,
+            "total_tokens": 476
+          },
+          "metrics": {
+            "tempo_carregamento_s": 0.9172727000550367,
+            "tempo_prefill_s": 10.940050000033807,
+            "tempo_decode_s": 30.55770720000146,
+            "tempo_resposta_s": 41.49775720003527,
+            "tempo_total_s": 42.4150299000903,
+            "tokens_entrada": 0,
+            "tokens_saida": 476,
+            "tps": 11.470499422546997,
+            "ram_inicio_mb": 57.4921875,
+            "ram_pico_mb": 1742.05078125,
+            "ram_usada_mb": 1684.55859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 13.906375,
+          "iqr": 1.840805,
+          "p25": 12.877152,
+          "p75": 14.717957,
+          "p95": 14.933967,
+          "p99": 15.038919,
+          "max": 15.065156,
+          "media": 13.80676
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.243826,
+          "iqr": 0.339952,
+          "p25": 2.216108,
+          "p75": 2.55606,
+          "p95": 3.062617,
+          "p99": 3.299354,
+          "max": 3.358538,
+          "media": 2.212878
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 28.148455,
+          "iqr": 22.096853,
+          "p25": 15.401219,
+          "p75": 37.498072,
+          "p95": 69.155289,
+          "p99": 69.930189,
+          "max": 70.123913,
+          "media": 33.019944
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1751.113281,
+          "iqr": 6.193359,
+          "p25": 1747.917969,
+          "p75": 1754.111328,
+          "p95": 1757.335352,
+          "p99": 1757.963945,
+          "max": 1758.121094,
+          "media": 1751.032422
+        },
+        "tps_medio": 13.80676,
+        "ttft_medio_segundos": 2.212878,
+        "tempo_medio_segundos": 33.019944,
+        "ram_pico_mb": 1758.121094
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 13.906375,
+          "iqr": 1.840805,
+          "p25": 12.877152,
+          "p75": 14.717957,
+          "p95": 14.933967,
+          "p99": 15.038919,
+          "max": 15.065156,
+          "media": 13.80676
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.243826,
+          "iqr": 0.339952,
+          "p25": 2.216108,
+          "p75": 2.55606,
+          "p95": 3.062617,
+          "p99": 3.299354,
+          "max": 3.358538,
+          "media": 2.212878
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 28.148455,
+          "iqr": 22.096853,
+          "p25": 15.401219,
+          "p75": 37.498072,
+          "p95": 69.155289,
+          "p99": 69.930189,
+          "max": 70.123913,
+          "media": 33.019944
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1751.113281,
+          "iqr": 6.193359,
+          "p25": 1747.917969,
+          "p75": 1754.111328,
+          "p95": 1757.335352,
+          "p99": 1757.963945,
+          "max": 1758.121094,
+          "media": 1751.032422
+        },
+        "tps_medio": 13.80676,
+        "ttft_medio_segundos": 2.212878,
+        "tempo_medio_segundos": 33.019944,
+        "ram_pico_mb": 1758.121094,
+        "tps_por_rodada": [
+          13.210029062502796,
+          13.027629836770645,
+          14.68219780636815,
+          12.618352503943731,
+          14.773625347544206,
+          12.531019683392161,
+          15.06515632295861,
+          14.602721794757104,
+          12.826992350449453,
+          14.729876900983752
+        ],
+        "ttft_por_rodada": [
+          3.3585378999705426,
+          2.2434140000259504,
+          2.2073480000253767,
+          2.657730199978687,
+          2.2442376000108197,
+          2.700936199980788,
+          0.06456510000862181,
+          2.158572099986486,
+          2.2423873999505304,
+          2.251047900004778
+        ],
+        "tempo_por_rodada": [
+          19.000715199974366,
+          14.89142709999578,
+          37.52844140003435,
+          15.374431799980812,
+          37.296194199996535,
+          15.481581299973186,
+          67.97141549998196,
+          70.12391349999234,
+          15.124356099986471,
+          37.40696569997817
+        ],
+        "ram_por_rodada": [
+          1743.88671875,
+          1745.67578125,
+          1747.47265625,
+          1749.25390625,
+          1750.9921875,
+          1752.74609375,
+          1754.56640625,
+          1756.375,
+          1758.12109375,
+          1751.234375
+        ],
+        "ram_media_mb": 1751.032422
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Here's the final answer in a structured format:\n\n1. ** question 1:**\n   - **encontrad clothes:** 15, 12, 18, 10, 20\n   - **number of choices:** A, B, C, D, E\n   - **correct answer:** A\n   - **step-by-step solution:** Calculate the average of the numbers.\n\n2. ** question 2:**\n   - **encontrad clothes:** 16, 14, 17, 13, 19\n   - **number of choices:** A, B, C, D, E\n   - **correct answer:** B\n   - **step-by-step solution:** Find the median of the numbers.\n\n3. ** question 3:**\n   - **encontrad clothes:** 18, 15, 20, 12, 17\n   - **number of choices:** A, B, C, D, E\n   - **correct answer:** C\n   - **step-by-step solution:** Calculate the mode of the numbers.\n\nThe final answer is \\boxed{A, B, C}.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 251,
+            "total_tokens": 251
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.3585378999705426,
+            "tempo_decode_s": 15.642177300003823,
+            "tempo_resposta_s": 19.000715199974366,
+            "tempo_total_s": 19.000715199974366,
+            "tokens_entrada": 0,
+            "tokens_saida": 251,
+            "tps": 13.210029062502796,
+            "ram_inicio_mb": 1741.94140625,
+            "ram_pico_mb": 1743.88671875,
+            "ram_usada_mb": 1.9453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "O que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nO que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nO que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nThe final answer is \\(\\boxed{3}\\).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 194,
+            "total_tokens": 194
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.2434140000259504,
+            "tempo_decode_s": 12.64801309996983,
+            "tempo_resposta_s": 14.89142709999578,
+            "tempo_total_s": 14.89142709999578,
+            "tokens_entrada": 0,
+            "tokens_saida": 194,
+            "tps": 13.027629836770645,
+            "ram_inicio_mb": 1743.86328125,
+            "ram_pico_mb": 1745.67578125,
+            "ram_usada_mb": 1.8125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Given the problem, we need to create two questions with the options A, B, C, D, and E, ensuring that the questions are clear, consistent, and cover the required content.\n\n** questions:**\n\n1. **Question 1:** Using the number line, which number is between 23 and 27?\n\nA. 22\nB. 24\nC. 25\nD. 26\nE. 28\n\n**Question 2:** Solve the equation: \\( 3x + 5 = 14 \\)\n\nA. 3\nB. 4\nC. 5\nD. 6\nE. 7\n\n**Solution:**\n\n**Question 1:** Using the number line, which number is between 23 and 27?\n\nTo determine which number is between 23 and 27, we need to find a number that is greater than 23 and less than 27. The options are:\n\nA. 22 (not between 23 and 27)\nB. 24 (between 23 and 27)\nC. 25 (between 23 and 27)\nD. 26 (between 23 and 27)\nE. 28 (not between 23 and 27)\n\nThe correct answer is B, C, or D. Since we need only one correct answer, we can choose one of them. Let's choose B for this question.\n\n**Question 2:** Solve the equation: \\( 3x + 5 = 14 \\)\n\nTo solve the equation \\( 3x + 5 = 14 \\), we need to isolate \\( x \\).\n\n1. Subtract 5 from both sides of the equation:\n   \\[\n   3x + 5 - 5 = 14 - 5\n   \\]\n   \\[\n   3x = 9\n   \\]\n\n2. Divide both sides by 3:\n   \\[\n   \\frac{3x}{3} = \\frac{9}{3}\n   \\]\n   \\[\n   x = 3\n   \\]\n\nThe correct answer is A.\n\nTherefore, the questions and their options are:\n\n**Question 1:**\nA. 22\nB. 24\nC. 25\nD. 26\nE. 28\n\n**Question 2:**\nA. 3\nB. 4\nC. 5\nD. 6\nE. 7\n\nThe final answer is \\boxed{A}.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 551,
+            "total_tokens": 551
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.2073480000253767,
+            "tempo_decode_s": 35.32109340000898,
+            "tempo_resposta_s": 37.52844140003435,
+            "tempo_total_s": 37.52844140003435,
+            "tokens_entrada": 0,
+            "tokens_saida": 551,
+            "tps": 14.68219780636815,
+            "ram_inicio_mb": 1745.58984375,
+            "ram_pico_mb": 1747.47265625,
+            "ram_usada_mb": 1.8828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "O que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nO que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nO que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nThe final answer is \\(\\boxed{3}\\).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 194,
+            "total_tokens": 194
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.657730199978687,
+            "tempo_decode_s": 12.716701600002125,
+            "tempo_resposta_s": 15.374431799980812,
+            "tempo_total_s": 15.374431799980812,
+            "tokens_entrada": 0,
+            "tokens_saida": 194,
+            "tps": 12.618352503943731,
+            "ram_inicio_mb": 1747.4765625,
+            "ram_pico_mb": 1749.25390625,
+            "ram_usada_mb": 1.77734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Given the problem, we need to create two questions with the options A, B, C, D, and E, ensuring that the questions are clear, consistent, and cover the required content.\n\n** questions:**\n\n1. **Question 1:** Using the number line, which number is between 23 and 27?\n\nA. 22\nB. 24\nC. 25\nD. 26\nE. 28\n\n**Question 2:** Solve the equation: \\( 3x + 5 = 14 \\)\n\nA. 3\nB. 4\nC. 5\nD. 6\nE. 7\n\n**Solution:**\n\n**Question 1:** Using the number line, which number is between 23 and 27?\n\nTo determine which number is between 23 and 27, we need to find a number that is greater than 23 and less than 27. The options are:\n\nA. 22 (not between 23 and 27)\nB. 24 (between 23 and 27)\nC. 25 (between 23 and 27)\nD. 26 (between 23 and 27)\nE. 28 (not between 23 and 27)\n\nThe correct answer is B, C, or D. Since we need only one correct answer, we can choose one of them. Let's choose B for this question.\n\n**Question 2:** Solve the equation: \\( 3x + 5 = 14 \\)\n\nTo solve the equation \\( 3x + 5 = 14 \\), we need to isolate \\( x \\).\n\n1. Subtract 5 from both sides of the equation:\n   \\[\n   3x + 5 - 5 = 14 - 5\n   \\]\n   \\[\n   3x = 9\n   \\]\n\n2. Divide both sides by 3:\n   \\[\n   \\frac{3x}{3} = \\frac{9}{3}\n   \\]\n   \\[\n   x = 3\n   \\]\n\nThe correct answer is A.\n\nTherefore, the questions and their options are:\n\n**Question 1:**\nA. 22\nB. 24\nC. 25\nD. 26\nE. 28\n\n**Question 2:**\nA. 3\nB. 4\nC. 5\nD. 6\nE. 7\n\nThe final answer is \\boxed{A}.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 551,
+            "total_tokens": 551
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.2442376000108197,
+            "tempo_decode_s": 35.051956599985715,
+            "tempo_resposta_s": 37.296194199996535,
+            "tempo_total_s": 37.296194199996535,
+            "tokens_entrada": 0,
+            "tokens_saida": 551,
+            "tps": 14.773625347544206,
+            "ram_inicio_mb": 1749.16015625,
+            "ram_pico_mb": 1750.9921875,
+            "ram_usada_mb": 1.83203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "O que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nO que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nO que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nThe final answer is \\(\\boxed{3}\\).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 194,
+            "total_tokens": 194
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.700936199980788,
+            "tempo_decode_s": 12.780645099992398,
+            "tempo_resposta_s": 15.481581299973186,
+            "tempo_total_s": 15.481581299973186,
+            "tokens_entrada": 0,
+            "tokens_saida": 194,
+            "tps": 12.531019683392161,
+            "ram_inicio_mb": 1750.91796875,
+            "ram_pico_mb": 1752.74609375,
+            "ram_usada_mb": 1.828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "O que deves performar:\n\n1. Gere 3 Questiones(Respostes) de Sistma de Equacions do 1° Grada(Variaes de 1° Grada)\n2. Gere 3 Questiones(Respostes) de Sistma de Equacions do 2° Grada(Variaes de 2° Grada)\n\nTrocada: O question者 devia substit universalis 1° e 2° Grada. A question者 devia substit universalis 1° e 2° Grada.\n\n question 1:\n 1. A equaiao 2x + 3y = 12 e 4x - y = 5, determine o val Horne 1° Grada de x.\n2. A equaiao 3x + 2y = 14 e x - y = 2, determine o val Horne 1° Grada de y.\n\n question 2:\n 1. A equaiao 3x + 2y = 14 e 2x - y = 5, determine o val Horne 1° Grada de x.\n2. A equaiao 4x + 3y = 16 e x - y = 2, determine o val Horne 1° Grada de y.\n\n question 3:\n 1. A equaiao 2x + 3y = 12 e 3x - y = 5, determine o val Horne 1° Grada de y.\n2. A equaiao 4x + 3y = 16 e 2x - y = 5, determine o val Horne 1° Grada de x.\n\n question 4:\n 1. A equaiao 2x + 3y = 12 e 3x - y = 5, determine o val Horne 1° Grada de y.\n2. A equaiao 4x + 3y = 16 e 2x - y = 5, determine o val Horne 1° Grada de x.\n\n question 5:\n 1. A equaiao 2x + 3y = 12 e 3x - y = 5, determine o val Horne 1° Grada de x.\n2. A equaiao 4x + 3y = 16 e 2x - y = 5, determine o val Horne 1° Grada de y.\n\n question 6:\n 1. A equaiao 2x + 3y = 12 e 3x - y = 5, determine o val Horne 1° Grada de y.\n2. A equaiao 4x + 3y = 16 e 2x - y = 5, determine o val Horne 1° Grada de x.\n\n question 7:\n 1. A equaiao 2x + 3y = 12 e 3x - y = 5, determine o val Horne 1° Grada de x.\n2. A equaiao 4x + 3y = 16 e 2x - y = 5, determine o val Horne 1° Grada de y.\n\n question 8:\n 1. A equaiao 2x + 3y = 12 e 3x - y = 5, determine o val Horne 1° Grada de y.\n2. A equaiao 4x + 3y = 16 e 2x - y = 5, determine o val Horne 1° Grada de x.\n\n question 9:\n 1. A equaiao 2x + 3y = 12 e 3x - y = 5, determine o val Horne 1° Grada de x.\n2. A equaiao 4x + 3y = 16 e 2x - y = 5, determine o val Horne 1° Grada de y.\n\n question 10:\n 1. A equaiao 2x + 3y = 12 e 3x - y = 5, determine o val Horne 1° Grada de y.\n2. A equaiao 4x + 3y = 16 e 2x - y = 5, determine o val Horne 1° Grada de x.\n\n question 11:\n 1. A equaiao 2x + 3y = 12 e 3x - y = 5, determine o val Horne 1° Grada de x.\n2. A equaiao 4",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06456510000862181,
+            "tempo_decode_s": 67.90685039997334,
+            "tempo_resposta_s": 67.97141549998196,
+            "tempo_total_s": 67.97141549998196,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 15.06515632295861,
+            "ram_inicio_mb": 1752.65234375,
+            "ram_pico_mb": 1754.56640625,
+            "ram_usada_mb": 1.9140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "O falso assume the question and answer format as requested. The assistant's response should be in a similar format. Here's the response again:\n\n**Hizes: EF09MA01**\n\n**Reais: 5**\n\n** question: \n\n \"Eles are both integers, b ≠ 0, and a/b is an integer. Which of the following is true about a and b? (a) a is divisible by b (b) b is divisible by a (c) a and b are both even (d) a and b are both odd (e) a and b are consecutive integers.\"\n\n** answers: \n\n (a) 100% (b) 50% (c) 50% (d) 0% (e) 0%\"\n\n** question: \n\n \"Consider the following numbers: 12, 18, 24, 30, 36. Which of these numbers are divisible by 6 and have exactly three positive divisors? (a) 12 (b) 18 (c) 24 (d) 30 (e) 36.\"\n\n** answers: \n\n (a) 50% (b) 0% (c) 50% (d) 50% (e) 50%\"\n\n** question: \n\n \"Consider the following numbers: 12, 18, 24, 30, 36. Which of these numbers are divisible by 6 and have exactly three positive divisors? (a) 12 (b) 18 (c) 24 (d) 30 (e) 36.\"\n\n** answers: \n\n (a) 100% (b) 50% (c) 50% (d) 50% (e) 0%\"\n\n** question: \n\n \"Consider the following numbers: 12, 18, 24, 30, 36. Which of these numbers are divisible by 6 and have exactly three positive divisors? (a) 12 (b) 18 (c) 24 (d) 30 (e) 36.\"\n\n** answers: \n\n (a) 100% (b) 50% (c) 50% (d) 50% (e) 50%\"\n\n** question: \n\n \"Consider the following numbers: 12, 18, 24, 30, 36. Which of these numbers are divisible by 6 and have exactly three positive divisors? (a) 12 (b) 18 (c) 24 (d) 30 (e) 36.\"\n\n** answers: \n\n (a) 100% (b) 50% (c) 50% (d) 50% (e) 50%\"\n\n** question: \n\n \"Consider the following numbers: 12, 18, 24, 30, 36. Which of these numbers are divisible by 6 and have exactly three positive divisors? (a) 12 (b) 18 (c) 24 (d) 30 (e) 36.\"\n\n** answers: \n\n (a) 100% (b) 50% (c) 50% (d) 50% (e) 50%\"\n\n** question: \n\n \"Consider the following numbers: 12, 18, 24, 30, 36. Which of these numbers are divisible by 6 and have exactly three positive divisors? (a) 12 (b) 18 (c) 24 (d) 30 (e) 36.\"\n\n** answers: \n\n (a) 100% (b) 50% (c) 50% (d) 50% (e) 50%\"\n\n** question: \n\n \"Consider the following numbers: 12, 18, 24, 30, 36. Which of these numbers are divisible by 6 and have exactly three positive divisors? (a) 12 (b) 18 (c) 24 (d) 30 (e) 36.\"\n\n** answers: \n\n (a) 100% (b) 50% (c) 50% (d) 50% (e) 50%\"\n\n** question: \n\n \"Consider the following numbers: 12, 18, 24, 30, 36.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.158572099986486,
+            "tempo_decode_s": 67.96534140000585,
+            "tempo_resposta_s": 70.12391349999234,
+            "tempo_total_s": 70.12391349999234,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.602721794757104,
+            "ram_inicio_mb": 1754.58984375,
+            "ram_pico_mb": 1756.375,
+            "ram_usada_mb": 1.78515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "O que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nO que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nO que deviain fare:\n\n1. Gere 3 pergeis de seashellas.\n2. use as pergeis de seashellas em pergeis de c signe.\n3. use as pergeis de seashellas em pergeis de c signe.\n\nThe final answer is \\(\\boxed{3}\\).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 194,
+            "total_tokens": 194
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.2423873999505304,
+            "tempo_decode_s": 12.88196870003594,
+            "tempo_resposta_s": 15.124356099986471,
+            "tempo_total_s": 15.124356099986471,
+            "tokens_entrada": 0,
+            "tokens_saida": 194,
+            "tps": 12.826992350449453,
+            "ram_inicio_mb": 1756.28125,
+            "ram_pico_mb": 1758.12109375,
+            "ram_usada_mb": 1.83984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Given the problem, we need to create two questions with the options A, B, C, D, and E, ensuring that the questions are clear, consistent, and cover the required content.\n\n** questions:**\n\n1. **Question 1:** Using the number line, which number is between 23 and 27?\n\nA. 22\nB. 24\nC. 25\nD. 26\nE. 28\n\n**Question 2:** Solve the equation: \\( 3x + 5 = 14 \\)\n\nA. 3\nB. 4\nC. 5\nD. 6\nE. 7\n\n**Solution:**\n\n**Question 1:** Using the number line, which number is between 23 and 27?\n\nTo determine which number is between 23 and 27, we need to find a number that is greater than 23 and less than 27. The options are:\n\nA. 22 (not between 23 and 27)\nB. 24 (between 23 and 27)\nC. 25 (between 23 and 27)\nD. 26 (between 23 and 27)\nE. 28 (not between 23 and 27)\n\nThe correct answer is B, C, or D. Since we need only one correct answer, we can choose one of them. Let's choose B for this question.\n\n**Question 2:** Solve the equation: \\( 3x + 5 = 14 \\)\n\nTo solve the equation \\( 3x + 5 = 14 \\), we need to isolate \\( x \\).\n\n1. Subtract 5 from both sides of the equation:\n   \\[\n   3x + 5 - 5 = 14 - 5\n   \\]\n   \\[\n   3x = 9\n   \\]\n\n2. Divide both sides by 3:\n   \\[\n   \\frac{3x}{3} = \\frac{9}{3}\n   \\]\n   \\[\n   x = 3\n   \\]\n\nThe correct answer is A.\n\nTherefore, the questions and their options are:\n\n**Question 1:**\nA. 22\nB. 24\nC. 25\nD. 26\nE. 28\n\n**Question 2:**\nA. 3\nB. 4\nC. 5\nD. 6\nE. 7\n\nThe final answer is \\boxed{A}.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 551,
+            "total_tokens": 551
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.251047900004778,
+            "tempo_decode_s": 35.155917799973395,
+            "tempo_resposta_s": 37.40696569997817,
+            "tempo_total_s": 37.40696569997817,
+            "tokens_entrada": 0,
+            "tokens_saida": 551,
+            "tps": 14.729876900983752,
+            "ram_inicio_mb": 1748.640625,
+            "ram_pico_mb": 1751.234375,
+            "ram_usada_mb": 2.59375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 14.076019,
+        "ram_media_mb": 1755.841146,
+        "ram_pico_mb": 1758.152344,
+        "tempo_medio_segundos": 40.521558,
+        "ttft_medio_segundos": 0.912017,
+        "tps": {
+          "n": 3,
+          "mediana": 15.048118,
+          "iqr": 1.680537,
+          "p25": 13.478776,
+          "p75": 15.159312,
+          "p95": 15.248268,
+          "p99": 15.266059,
+          "max": 15.270507,
+          "media": 14.076019
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.062915,
+          "iqr": 1.274813,
+          "p25": 0.062335,
+          "p75": 1.337148,
+          "p95": 2.356534,
+          "p99": 2.560411,
+          "max": 2.611381,
+          "media": 0.912017
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 55.335426,
+          "iqr": 23.038578,
+          "p25": 32.705736,
+          "p75": 55.744314,
+          "p95": 56.071424,
+          "p99": 56.136846,
+          "max": 56.153201,
+          "media": 40.521558
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1756.367188,
+          "iqr": 2.574219,
+          "p25": 1754.685547,
+          "p75": 1757.259766,
+          "p95": 1757.973828,
+          "p99": 1758.116641,
+          "max": 1758.152344,
+          "media": 1755.841146
+        },
+        "tps_por_rodada": [
+          11.909433403641104,
+          15.048117959947382,
+          15.270506817819061
+        ],
+        "ttft_por_rodada": [
+          2.6113805000204593,
+          0.06291469995630905,
+          0.0617544999695383
+        ],
+        "tempo_por_rodada": [
+          10.076046100002714,
+          56.153201499953866,
+          55.3354260000051
+        ],
+        "ram_por_rodada": [
+          1753.00390625,
+          1756.3671875,
+          1758.15234375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1758.152344,
+        "tps_medio": 14.076019,
+        "tempo_medio_segundos": 40.521558,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "As questiones da outa opiao:\n\n1. D纠正 o falso e circle o falso do questione do gueime.\n2. D纠正 o falso e circle o falso do gueime.\n3. D纠正 o falso e circle o falso do gueime.\n4. D纠正 o falso e circle o falso do gueime.\n5. D纠正 o falso e circle o falso do gueime.\n\nThe final answer is \\(\\boxed{1, 2, 3, 4, 5}\\).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 120,
+            "total_tokens": 120
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6113805000204593,
+            "tempo_decode_s": 7.464665599982254,
+            "tempo_resposta_s": 10.076046100002714,
+            "tempo_total_s": 10.076046100002714,
+            "tokens_entrada": 0,
+            "tokens_saida": 120,
+            "tps": 11.909433403641104,
+            "ram_inicio_mb": 1751.16796875,
+            "ram_pico_mb": 1753.00390625,
+            "ram_usada_mb": 1.8359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Given the problem, we need to create a test with 5 questions that cover the topics of fractions and mixed numbers. Let's start by listing the required topics and then create the questions step-by-step.\n\n1. ** topics to be covered:**\n   - Fractions\n   - Mixed numbers\n   - Conversion between fractions and mixed numbers\n   - Arithmetic operations with fractions and mixed numbers\n\n2. **Example questions:**\n   - **Question 1:** Simplify the mixed number \\(3 \\frac{2}{5}\\) to an improper fraction.\n   - **Question 2:** Convert the improper fraction \\(\\frac{17}{4}\\) to a mixed number.\n   - **Question 3:** Add the fractions \\(\\frac{3}{4}\\) and \\(\\frac{5}{6}\\).\n   - **Question 4:** Subtract the mixed number \\(2 \\frac{1}{3}\\) from the mixed number \\(4 \\frac{2}{3}\\).\n   - **Question 5:** Multiply the improper fraction \\(\\frac{7}{2}\\) by the mixed number \\(3 \\frac{1}{4}\\).\n\n3. ** answers:**\n   - **Question 1:** The mixed number \\(3 \\frac{2}{5}\\) is equivalent to the improper fraction \\(\\frac{17}{5}\\).\n   - **Question 2:** The improper fraction \\(\\frac{17}{4}\\) is equivalent to the mixed number \\(4 \\frac{1}{4}\\).\n   - **Question 3:** The sum of \\(\\frac{3}{4}\\) and \\(\\frac{5}{6}\\) is \\(\\frac{9}{12} + \\frac{10}{12} = \\frac{19}{12}\\), which can be written as the mixed number \\(1 \\frac{7}{12}\\).\n   - **Question 4:** The difference between \\(4 \\frac{2}{3}\\) and \\(2 \\frac{1}{3}\\) is \\(2\\).\n   - **Question 5:** The product of \\(\\frac{7}{2}\\) and \\(3 \\frac{1}{4}\\) is \\(\\frac{7}{2} \\times \\frac{13}{4} = \\frac{91}{8}\\), which can be written as the mixed number \\(11 \\frac{3}{8}\\).\n\nThe answers to the questions are:\n1. \\(\\frac{17}{5}\\)\n2. \\(4 \\frac{1}{4}\\)\n3. \\(1 \\frac{7}{12}\\)\n4. \\(2\\)\n5. \\(11 \\frac{3}{8}\\)\n\nThus, the final test with the required questions is:\n\\[\n\\boxed{\n\\begin{array}{l}\n\\text{Question 1: Simplify the mixed number } 3 \\frac{2}{5} \\text{ to an improper fraction.} \\\\\n\\text{Answer: } \\frac{17}{5} \\\\\n\\text{Question 2: Convert the improper fraction } \\frac{17}{4} \\text{ to a mixed number.} \\\\\n\\text{Answer: } 4 \\frac{1}{4} \\\\\n\\text{Question 3: Add the fractions } \\frac{3}{4} \\text{ and } \\frac{5}{6}. \\\\\n\\text{Answer: } 1 \\frac{7}{12} \\\\\n\\text{Question 4: Subtract the mixed number } 2 \\frac{1}{3} \\text{ from the mixed number } 4 \\frac{2}{3}. \\\\\n\\text{Answer: } 2 \\\\\n\\text{Question 5: Multiply the improper fraction } \\frac{7}{2} \\text{ by the mixed number } 3 \\frac{1}{4}. \\\\\n\\text{Answer: } 11 \\frac{3}{8} \\\\\n\\end{array}\n}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 845,
+            "total_tokens": 845
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06291469995630905,
+            "tempo_decode_s": 56.09028679999756,
+            "tempo_resposta_s": 56.153201499953866,
+            "tempo_total_s": 56.153201499953866,
+            "tokens_entrada": 0,
+            "tokens_saida": 845,
+            "tps": 15.048117959947382,
+            "ram_inicio_mb": 1752.91015625,
+            "ram_pico_mb": 1756.3671875,
+            "ram_usada_mb": 3.45703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Given the problem, we need to create a test with 5 questions that cover the topics of fractions and mixed numbers. Let's start by listing the required topics and then create the questions step-by-step.\n\n1. ** topics to be covered:**\n   - Fractions\n   - Mixed numbers\n   - Conversion between fractions and mixed numbers\n   - Arithmetic operations with fractions and mixed numbers\n\n2. **Example questions:**\n   - **Question 1:** Simplify the mixed number \\(3 \\frac{2}{5}\\) to an improper fraction.\n   - **Question 2:** Convert the improper fraction \\(\\frac{17}{4}\\) to a mixed number.\n   - **Question 3:** Add the fractions \\(\\frac{3}{4}\\) and \\(\\frac{5}{6}\\).\n   - **Question 4:** Subtract the mixed number \\(2 \\frac{1}{3}\\) from the mixed number \\(4 \\frac{2}{3}\\).\n   - **Question 5:** Multiply the improper fraction \\(\\frac{7}{2}\\) by the mixed number \\(3 \\frac{1}{4}\\).\n\n3. ** answers:**\n   - **Question 1:** The mixed number \\(3 \\frac{2}{5}\\) is equivalent to the improper fraction \\(\\frac{17}{5}\\).\n   - **Question 2:** The improper fraction \\(\\frac{17}{4}\\) is equivalent to the mixed number \\(4 \\frac{1}{4}\\).\n   - **Question 3:** The sum of \\(\\frac{3}{4}\\) and \\(\\frac{5}{6}\\) is \\(\\frac{9}{12} + \\frac{10}{12} = \\frac{19}{12}\\), which can be written as the mixed number \\(1 \\frac{7}{12}\\).\n   - **Question 4:** The difference between \\(4 \\frac{2}{3}\\) and \\(2 \\frac{1}{3}\\) is \\(2\\).\n   - **Question 5:** The product of \\(\\frac{7}{2}\\) and \\(3 \\frac{1}{4}\\) is \\(\\frac{7}{2} \\times \\frac{13}{4} = \\frac{91}{8}\\), which can be written as the mixed number \\(11 \\frac{3}{8}\\).\n\nThe answers to the questions are:\n1. \\(\\frac{17}{5}\\)\n2. \\(4 \\frac{1}{4}\\)\n3. \\(1 \\frac{7}{12}\\)\n4. \\(2\\)\n5. \\(11 \\frac{3}{8}\\)\n\nThus, the final test with the required questions is:\n\\[\n\\boxed{\n\\begin{array}{l}\n\\text{Question 1: Simplify the mixed number } 3 \\frac{2}{5} \\text{ to an improper fraction.} \\\\\n\\text{Answer: } \\frac{17}{5} \\\\\n\\text{Question 2: Convert the improper fraction } \\frac{17}{4} \\text{ to a mixed number.} \\\\\n\\text{Answer: } 4 \\frac{1}{4} \\\\\n\\text{Question 3: Add the fractions } \\frac{3}{4} \\text{ and } \\frac{5}{6}. \\\\\n\\text{Answer: } 1 \\frac{7}{12} \\\\\n\\text{Question 4: Subtract the mixed number } 2 \\frac{1}{3} \\text{ from the mixed number } 4 \\frac{2}{3}. \\\\\n\\text{Answer: } 2 \\\\\n\\text{Question 5: Multiply the improper fraction } \\frac{7}{2} \\text{ by the mixed number } 3 \\frac{1}{4}. \\\\\n\\text{Answer: } 11 \\frac{3}{8} \\\\\n\\end{array}\n}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 845,
+            "total_tokens": 845
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0617544999695383,
+            "tempo_decode_s": 55.27367150003556,
+            "tempo_resposta_s": 55.3354260000051,
+            "tempo_total_s": 55.3354260000051,
+            "tokens_entrada": 0,
+            "tokens_saida": 845,
+            "tps": 15.270506817819061,
+            "ram_inicio_mb": 1756.28515625,
+            "ram_pico_mb": 1758.15234375,
+            "ram_usada_mb": 1.8671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 13.693255,
+        "ram_media_mb": 1760.787109,
+        "ram_pico_mb": 1761.683594,
+        "tempo_medio_segundos": 43.256804,
+        "ttft_medio_segundos": 1.987484,
+        "tps": {
+          "n": 2,
+          "mediana": 13.693255,
+          "iqr": 0.296598,
+          "p25": 13.544956,
+          "p75": 13.841554,
+          "p95": 13.960194,
+          "p99": 13.983922,
+          "max": 13.989854,
+          "media": 13.693255
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 1.987484,
+          "iqr": 0.193018,
+          "p25": 1.890975,
+          "p75": 2.083993,
+          "p95": 2.161201,
+          "p99": 2.176642,
+          "max": 2.180503,
+          "media": 1.987484
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 43.256804,
+          "iqr": 26.387435,
+          "p25": 30.063086,
+          "p75": 56.450522,
+          "p95": 67.005496,
+          "p99": 69.116491,
+          "max": 69.644239,
+          "media": 43.256804
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1760.787109,
+          "iqr": 0.896484,
+          "p25": 1760.338867,
+          "p75": 1761.235352,
+          "p95": 1761.593945,
+          "p99": 1761.665664,
+          "max": 1761.683594,
+          "media": 1760.787109
+        },
+        "tps_por_rodada": [
+          13.989853609680752,
+          13.396657163585354
+        ],
+        "ttft_por_rodada": [
+          2.1805025000358,
+          1.7944655999890529
+        ],
+        "tempo_por_rodada": [
+          16.86936880002031,
+          69.64423949999036
+        ],
+        "ram_por_rodada": [
+          1759.890625,
+          1761.68359375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "Let's create a problem that asks the student to solve a geometry problem and ensure the solution is clear, well- structured, and consistent with the given criteria.\n\nHere's the problem statement:\nYou need to create a problem where the student has to find the area of a rectangle with given dimensions. The problem should be clear, well- structure, and consistent with the given criteria. Here's an example of such a problem:\n\n**Hitude:** EF08MA05\n**units:** Geometry\n\n**Prerelations that the student "
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "Sob as regras da BNCC, a per tiled e 1 per tiled de 5 alternately de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per t likelihood 10 itens de 5 per t li"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 1761.683594,
+        "tps_medio": 13.693255,
+        "tempo_medio_segundos": 43.256804,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's create a problem that asks the student to solve a geometry problem and ensure the solution is clear, well- structured, and consistent with the given criteria.\n\nHere's the problem statement:\nYou need to create a problem where the student has to find the area of a rectangle with given dimensions. The problem should be clear, well- structure, and consistent with the given criteria. Here's an example of such a problem:\n\n**Hitude:** EF08MA05\n**units:** Geometry\n\n**Prerelations that the student already needs to know (calibrahedometry):**\n Carla\n\n**Example of a question with examples of problems consistent with this test (example is invalid)**\n\nLet's create the problem and solution using Python and sympy.\n\n```python\nimport sympy as sp\n\n# Define the dimensions of the rectangle\nlength = 5\nwidth = 3\n\n# Calculate the area of the rectangle\narea = length * width\n\n# Print the area\nprint(area)\n```\n```output\n15\n```\nThe area of the rectangle with length 5 and width 3 is \\(\\boxed{15}\\).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 236,
+            "total_tokens": 236
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.1805025000358,
+            "tempo_decode_s": 14.688866299984511,
+            "tempo_resposta_s": 16.86936880002031,
+            "tempo_total_s": 16.86936880002031,
+            "tokens_entrada": 0,
+            "tokens_saida": 236,
+            "tps": 13.989853609680752,
+            "ram_inicio_mb": 1758.05859375,
+            "ram_pico_mb": 1759.890625,
+            "ram_usada_mb": 1.83203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Sob as regras da BNCC, a per tiled e 1 per tiled de 5 alternately de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per tiled de 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t likelihood 10 itens de 5 per t",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 933,
+            "total_tokens": 933
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.7944655999890529,
+            "tempo_decode_s": 67.84977390000131,
+            "tempo_resposta_s": 69.64423949999036,
+            "tempo_total_s": 69.64423949999036,
+            "tokens_entrada": 0,
+            "tokens_saida": 933,
+            "tps": 13.396657163585354,
+            "ram_inicio_mb": 1759.796875,
+            "ram_pico_mb": 1761.68359375,
+            "ram_usada_mb": 1.88671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1761.7,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 11.47,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 43.26,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -11.5,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+    "gerado_em": "2026-09-04T12:37:48.507666"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}

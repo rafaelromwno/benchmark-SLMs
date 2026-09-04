@@ -1,0 +1,1169 @@
+{
+  "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "04/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--Qwen2.5-Math-1.5B-Instruct-GGUF\\Qwen2.5-Math-1.5B-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 777,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 777
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "criativo",
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 777
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 2.4,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": "JSON não encontrado na resposta",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 1.269726900034584,
+        "tempo_prefill_s": 11.599611799989361,
+        "tempo_decode_s": 14.575138899963349,
+        "tempo_resposta_s": 26.17475069995271,
+        "tempo_total_s": 27.444477599987295,
+        "tokens_entrada": 0,
+        "tokens_saida": 223,
+        "tps": 8.51966089596425,
+        "ram_inicio_mb": 28.84375,
+        "ram_pico_mb": 1736.94140625,
+        "ram_usada_mb": 1708.09765625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 27.444477599987295,
+        "tempo_carregamento_s": 1.269726900034584,
+        "tempo_resposta_s": 26.17475069995271,
+        "ram_pico_mb": 1736.94140625,
+        "ram_inicio_mb": 28.84375,
+        "ttft_segundos": 11.599611799989361,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's create a question and solution that covers the expected performance for the given tasks. Here is the Python code to solve the problem:\n\n```python\nimport sympy as sp\n\n# Define the variables\na, b = sp.symbols('a b')\n\n# Define the expression\nexpression = a / b\n\n# Simplify the expression\nsimplified_expression = sp.simplify(expression)\n\n# Print the simplified expression\nprint(simplified_expression)\n```\n```output\na/b\n```\nThe output of the code is \\( \\frac{a}{b} \\), which is the simplified form of the expression \\( \\frac{a}{b} \\).\n\nThis means that the number \\( a \\) can be divided by the number \\( b \\) (with \\( b \\neq 0 \\)) without any remainder. The simplified expression is simply \\( \\frac{a}{b} \\).\n\nTherefore, the answer to the question \"Determine the simplified form of the expression \\( \\frac{a}{b} \\)\" is:\n\n\\[\n\\boxed{\\frac{a}{b}}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 223,
+            "total_tokens": 223
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.269726900034584,
+            "tempo_prefill_s": 11.599611799989361,
+            "tempo_decode_s": 14.575138899963349,
+            "tempo_resposta_s": 26.17475069995271,
+            "tempo_total_s": 27.444477599987295,
+            "tokens_entrada": 0,
+            "tokens_saida": 223,
+            "tps": 8.51966089596425,
+            "ram_inicio_mb": 28.84375,
+            "ram_pico_mb": 1736.94140625,
+            "ram_usada_mb": 1708.09765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 14.212818,
+          "iqr": 0.407624,
+          "p25": 13.977917,
+          "p75": 14.385541,
+          "p95": 14.614117,
+          "p99": 14.623784,
+          "max": 14.626201,
+          "media": 13.48094
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.355523,
+          "iqr": 1.970979,
+          "p25": 0.629652,
+          "p75": 2.600631,
+          "p95": 3.132705,
+          "p99": 3.38598,
+          "max": 3.449299,
+          "media": 1.848602
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 45.242883,
+          "iqr": 30.190839,
+          "p25": 39.917092,
+          "p75": 70.107931,
+          "p95": 71.88134,
+          "p99": 72.298308,
+          "max": 72.402551,
+          "media": 46.828206
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1741.423828,
+          "iqr": 4.275391,
+          "p25": 1739.234375,
+          "p75": 1743.509766,
+          "p95": 1746.546289,
+          "p99": 1747.174883,
+          "max": 1747.332031,
+          "media": 1741.617969
+        },
+        "tps_medio": 13.48094,
+        "ttft_medio_segundos": 1.848602,
+        "tempo_medio_segundos": 46.828206,
+        "ram_pico_mb": 1747.332031
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 14.212818,
+          "iqr": 0.407624,
+          "p25": 13.977917,
+          "p75": 14.385541,
+          "p95": 14.614117,
+          "p99": 14.623784,
+          "max": 14.626201,
+          "media": 13.48094
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.355523,
+          "iqr": 1.970979,
+          "p25": 0.629652,
+          "p75": 2.600631,
+          "p95": 3.132705,
+          "p99": 3.38598,
+          "max": 3.449299,
+          "media": 1.848602
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 45.242883,
+          "iqr": 30.190839,
+          "p25": 39.917092,
+          "p75": 70.107931,
+          "p95": 71.88134,
+          "p99": 72.298308,
+          "max": 72.402551,
+          "media": 46.828206
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1741.423828,
+          "iqr": 4.275391,
+          "p25": 1739.234375,
+          "p75": 1743.509766,
+          "p95": 1746.546289,
+          "p99": 1747.174883,
+          "max": 1747.332031,
+          "media": 1741.617969
+        },
+        "tps_medio": 13.48094,
+        "ttft_medio_segundos": 1.848602,
+        "tempo_medio_segundos": 46.828206,
+        "ram_pico_mb": 1747.332031,
+        "tps_por_rodada": [
+          13.92284015520801,
+          14.250938513840065,
+          14.373078682391757,
+          14.59934612379017,
+          10.145213296235701,
+          14.174698338127035,
+          14.626201461560825,
+          10.184242850544045,
+          14.143148155887635,
+          14.389694700340266
+        ],
+        "ttft_por_rodada": [
+          3.4492990999715403,
+          2.3204731000005268,
+          0.06459870003163815,
+          0.06551179999951273,
+          2.393671199970413,
+          2.745755599986296,
+          0.06604450003942475,
+          2.3593844999559224,
+          2.6696177999838255,
+          2.3516615999978967
+        ],
+        "tempo_por_rodada": [
+          50.06162479997147,
+          40.207878199988045,
+          71.2443048999994,
+          70.14012760005426,
+          6.998374299961142,
+          40.42414069996448,
+          70.01134250004543,
+          6.971554099989589,
+          72.40255060000345,
+          39.82016380003188
+        ],
+        "ram_por_rodada": [
+          1738.89453125,
+          1740.76171875,
+          1742.53125,
+          1736.38671875,
+          1738.51171875,
+          1740.25390625,
+          1742.0859375,
+          1743.8359375,
+          1745.5859375,
+          1747.33203125
+        ],
+        "ram_media_mb": 1741.617969
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's create three questions ( solutions) in the order of \"EF09MA01\", which requires understanding of numerical operations. We will ensure that the questions are clear and consistent with the requirements, and the solutions will be detailed and consistent. Here are the questions and solutions:\n\n1. ** Question 1:**\n   ** Question:**\n   D between the numbers 8 and 12. What is the value of a fraction \\( \\frac{a}{b} \\) (with a and b as integers, b ≠ 0)?\n\n   **Solution:**\n   To determine the value of the fraction \\( \\frac{a}{b} \\), we need to find a fraction that lies between 8 and 12. One possible fraction is \\( \\frac{10}{1} = 10 \\), which is between 8 and 12.\n\n2. ** Question 2:**\n   ** Question:**\n   Find the value of \\( x \\) if \\( \\frac{3x + 2}{4} = 5 \\).\n\n   **Solution:**\n   To solve for \\( x \\), we start with the equation:\n   \\[\n   \\frac{3x + 2}{4} = 5\n   \\]\n   Multiply both sides by 4 to eliminate the denominator:\n   \\[\n   3x + 2 = 20\n   \\]\n   Subtract 2 from both sides:\n   \\[\n   3x = 18\n   \\]\n   Divide both sides by 3:\n   \\[\n   x = 6\n   \\]\n   So, the value of \\( x \\) is 6.\n\n3. ** Question 3:**\n   ** Question:**\n   If \\( \\frac{a}{b} = \\frac{3}{4} \\) and \\( a + b = 28 \\), find the values of \\( a \\) and \\( b \\).\n\n   **Solution:**\n   We know that \\( \\frac{a}{b} = \\frac{3}{4} \\), so we can write \\( a = \\frac{3}{4}b \\). Substitute this into the equation \\( a + b = 28 \\):\n   \\[\n   \\frac{3}{4}b + b = 28\n   \\]\n   Combine the terms on the left side:\n   \\[\n   \\frac{3}{4}b + \\frac{4}{4}b = 28\n   \\]\n   \\[\n   \\frac{7}{4}b = 28\n   \\]\n   Multiply both sides by 4:\n   \\[\n   7b = 112\n   \\]\n   Divide both sides by 7:\n   \\[\n   b = 16\n   \\]\n   Now substitute \\( b = 16 \\) back into the equation \\( a = \\frac{3}{4}b \\):\n   \\[\n   a = \\frac{3}{4} \\times 16 = 12\n   \\]\n   So, the values of \\( a \\) and \\( b \\) are 12 and 16, respectively.\n\nTherefore, the final answer is:\n\\boxed{10, 6, 12 \\text{ and } 16}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 697,
+            "total_tokens": 697
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.4492990999715403,
+            "tempo_decode_s": 46.61232569999993,
+            "tempo_resposta_s": 50.06162479997147,
+            "tempo_total_s": 50.06162479997147,
+            "tokens_entrada": 0,
+            "tokens_saida": 697,
+            "tps": 13.92284015520801,
+            "ram_inicio_mb": 1736.93359375,
+            "ram_pico_mb": 1738.89453125,
+            "ram_usada_mb": 1.9609375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "A below are the examples of questions that must be familiar with the given requirements (calibration of the speed of response):\n1. Solve for \\( x \\) in the equation \\( x + 5 = 12 \\).\n2. Solve for \\( x \\) in the equation \\( 2x = 10 \\) by applying the properties of equality.\n\nNow, let's create three new questions that align with the given requirement (cal refatoria do time of response). We'll also ensure that the questions are well- structures and clear.\n\nThe questions are as follows:\n\n**Question 1:**\nSolve for \\( x \\) in the equation \\( x + 5 = 12 \\).\n\n**Solution:**\nTo solve for \\( x \\) in the equation \\( x + 5 = 12 \\), we need to isolate \\( x \\). We can do this by subtracting 5 from both sides of the equation:\n\\[\nx + 5 - 5 = 12 - 5\n\\]\nSimplifying both sides, we get:\n\\[\nx = 7\n\\]\nSo, the value of \\( x \\) is \\( \\boxed{7} \\).\n\n**Question 2:**\nSolve for \\( x \\) in the equation \\( 2x = 10 \\).\n\n**Solution:**\nTo solve for \\( x \\) in the equation \\( 2x = 10 \\), we need to isolate \\( x \\). We can do this by dividing both sides of the equation by 2:\n\\[\n\\frac{2x}{2} = \\frac{10}{2}\n\\]\nSimplifying both sides, we get:\n\\[\nx = 5\n\\]\nSo, the value of \\( x \\) is \\( \\boxed{5} \\).\n\n**Question 3:**\nSolve for \\( x \\) in the equation \\( 3x - 6 = 15 \\).\n\n**Solution:**\nTo solve for \\( x \\) in the equation \\( 3x - 6 = 15 \\), we need to isolate \\( x \\). We can do this by first adding 6 to both sides of the equation:\n\\[\n3x - 6 + 6 = 15 + 6\n\\]\nSimplifying both sides, we get:\n\\[\n3x = 21\n\\]\nNext, we divide both sides of the equation by 3:\n\\[\n\\frac{3x}{3} = \\frac{21}{3}\n\\]\nSimplifying both sides, we get:\n\\[\nx = 7\n\\]\nSo, the value of \\( x \\) is \\( \\boxed{7} \\).\n\nI hope this helps!",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 573,
+            "total_tokens": 573
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.3204731000005268,
+            "tempo_decode_s": 37.88740509998752,
+            "tempo_resposta_s": 40.207878199988045,
+            "tempo_total_s": 40.207878199988045,
+            "tokens_entrada": 0,
+            "tokens_saida": 573,
+            "tps": 14.250938513840065,
+            "ram_inicio_mb": 1738.90234375,
+            "ram_pico_mb": 1740.76171875,
+            "ram_usada_mb": 1.859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "A1:\n- question1: Q1: Se x + 5 = 12, determine o值 de x.\n- answer1: \\( x = 12 - 5 = 7 \\)\n- solution1: \\( x + 5 = 12 \\)\n- solution1: \\( x = 12 - 5 \\)\n- solution1: \\( x = 7 \\)\n\nA2:\n- question1: Q2: Se 2x = 10, determine o值 de x.\n- answer1: \\( x = \\frac{10}{2} = 5 \\)\n- solution1: \\( 2x = 10 \\)\n- solution1: \\( x = \\frac{10}{2} \\)\n- solution1: \\( x = 5 \\)\n\nA3:\n- question1: Q3: Se 3x - 4 = 11, determine o值 de x.\n- answer1: \\( 3x = 11 + 4 \\)\n- answer1: \\( 3x = 15 \\)\n- answer1: \\( x = \\frac{15}{3} \\)\n- answer1: \\( x = 5 \\)\n- solution1: \\( 3x - 4 = 11 \\)\n- solution1: \\( 3x = 11 + 4 \\)\n- solution1: \\( 3x = 15 \\)\n- solution1: \\( x = \\frac{15}{3} \\)\n- solution1: \\( x = 5 \\)\n\nG total:\n\\boxed{\n\\begin{array}{l}\n\\text{ Question 1: } \\text{Q1: } \\text{ \"x + 5 = 12, determine o value de x.\" } \\\\\n\\text{ Question 1: } \\text{ A1: } \\text{ \\( x = 7 \\) } \\\\\n\\text{ Question 1: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 1: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 2: } \\text{ Q2: } \\text{ \"2x = 10, determine o value de x.\" } \\\\\n\\text{ Question 2: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 2: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 2: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q3: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q4: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q5: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q6: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) }",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06459870003163815,
+            "tempo_decode_s": 71.17970619996777,
+            "tempo_resposta_s": 71.2443048999994,
+            "tempo_total_s": 71.2443048999994,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.373078682391757,
+            "ram_inicio_mb": 1740.6875,
+            "ram_pico_mb": 1742.53125,
+            "ram_usada_mb": 1.84375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "A1:\n- question1: Q1: Se x + 5 = 12, determine o值 de x.\n- answer1: \\( x = 12 - 5 = 7 \\)\n- solution1: \\( x + 5 = 12 \\)\n- solution1: \\( x = 12 - 5 \\)\n- solution1: \\( x = 7 \\)\n\nA2:\n- question1: Q2: Se 2x = 10, determine o值 de x.\n- answer1: \\( x = \\frac{10}{2} = 5 \\)\n- solution1: \\( 2x = 10 \\)\n- solution1: \\( x = \\frac{10}{2} \\)\n- solution1: \\( x = 5 \\)\n\nA3:\n- question1: Q3: Se 3x - 4 = 11, determine o值 de x.\n- answer1: \\( 3x = 11 + 4 \\)\n- answer1: \\( 3x = 15 \\)\n- answer1: \\( x = \\frac{15}{3} \\)\n- answer1: \\( x = 5 \\)\n- solution1: \\( 3x - 4 = 11 \\)\n- solution1: \\( 3x = 11 + 4 \\)\n- solution1: \\( 3x = 15 \\)\n- solution1: \\( x = \\frac{15}{3} \\)\n- solution1: \\( x = 5 \\)\n\nG total:\n\\boxed{\n\\begin{array}{l}\n\\text{ Question 1: } \\text{Q1: } \\text{ \"x + 5 = 12, determine o value de x.\" } \\\\\n\\text{ Question 1: } \\text{ A1: } \\text{ \\( x = 7 \\) } \\\\\n\\text{ Question 1: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 1: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 2: } \\text{ Q2: } \\text{ \"2x = 10, determine o value de x.\" } \\\\\n\\text{ Question 2: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 2: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 2: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q3: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q4: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q5: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q6: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) }",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06551179999951273,
+            "tempo_decode_s": 70.07461580005474,
+            "tempo_resposta_s": 70.14012760005426,
+            "tempo_total_s": 70.14012760005426,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.59934612379017,
+            "ram_inicio_mb": 1734.11328125,
+            "ram_pico_mb": 1736.38671875,
+            "ram_usada_mb": 2.2734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "S列出 as primeira dois Questiones ( answer choices) e as situação da f式a da Reta numérica. \n\n** Question 1: Use a Reta num Sara,capaz de identi specificar o_between 23 e 27?**\n\nGere 2 Questiones ( answer choices) and put them in order.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 71,
+            "total_tokens": 71
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.393671199970413,
+            "tempo_decode_s": 4.604703099990729,
+            "tempo_resposta_s": 6.998374299961142,
+            "tempo_total_s": 6.998374299961142,
+            "tokens_entrada": 0,
+            "tokens_saida": 71,
+            "tps": 10.145213296235701,
+            "ram_inicio_mb": 1736.3125,
+            "ram_pico_mb": 1738.51171875,
+            "ram_usada_mb": 2.19921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "A below are the examples of questions that must be familiar with the given requirements (calibration of the speed of response):\n1. Solve for \\( x \\) in the equation \\( x + 5 = 12 \\).\n2. Solve for \\( x \\) in the equation \\( 2x = 10 \\) by applying the properties of equality.\n\nNow, let's create three new questions that align with the given requirement (cal refatoria do time of response). We'll also ensure that the questions are well- structures and clear.\n\nThe questions are as follows:\n\n**Question 1:**\nSolve for \\( x \\) in the equation \\( x + 5 = 12 \\).\n\n**Solution:**\nTo solve for \\( x \\) in the equation \\( x + 5 = 12 \\), we need to isolate \\( x \\). We can do this by subtracting 5 from both sides of the equation:\n\\[\nx + 5 - 5 = 12 - 5\n\\]\nSimplifying both sides, we get:\n\\[\nx = 7\n\\]\nSo, the value of \\( x \\) is \\( \\boxed{7} \\).\n\n**Question 2:**\nSolve for \\( x \\) in the equation \\( 2x = 10 \\).\n\n**Solution:**\nTo solve for \\( x \\) in the equation \\( 2x = 10 \\), we need to isolate \\( x \\). We can do this by dividing both sides of the equation by 2:\n\\[\n\\frac{2x}{2} = \\frac{10}{2}\n\\]\nSimplifying both sides, we get:\n\\[\nx = 5\n\\]\nSo, the value of \\( x \\) is \\( \\boxed{5} \\).\n\n**Question 3:**\nSolve for \\( x \\) in the equation \\( 3x - 6 = 15 \\).\n\n**Solution:**\nTo solve for \\( x \\) in the equation \\( 3x - 6 = 15 \\), we need to isolate \\( x \\). We can do this by first adding 6 to both sides of the equation:\n\\[\n3x - 6 + 6 = 15 + 6\n\\]\nSimplifying both sides, we get:\n\\[\n3x = 21\n\\]\nNext, we divide both sides of the equation by 3:\n\\[\n\\frac{3x}{3} = \\frac{21}{3}\n\\]\nSimplifying both sides, we get:\n\\[\nx = 7\n\\]\nSo, the value of \\( x \\) is \\( \\boxed{7} \\).\n\nI hope this helps!",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 573,
+            "total_tokens": 573
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.745755599986296,
+            "tempo_decode_s": 37.678385099978186,
+            "tempo_resposta_s": 40.42414069996448,
+            "tempo_total_s": 40.42414069996448,
+            "tokens_entrada": 0,
+            "tokens_saida": 573,
+            "tps": 14.174698338127035,
+            "ram_inicio_mb": 1738.41796875,
+            "ram_pico_mb": 1740.25390625,
+            "ram_usada_mb": 1.8359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "A1:\n- question1: Q1: Se x + 5 = 12, determine o值 de x.\n- answer1: \\( x = 12 - 5 = 7 \\)\n- solution1: \\( x + 5 = 12 \\)\n- solution1: \\( x = 12 - 5 \\)\n- solution1: \\( x = 7 \\)\n\nA2:\n- question1: Q2: Se 2x = 10, determine o值 de x.\n- answer1: \\( x = \\frac{10}{2} = 5 \\)\n- solution1: \\( 2x = 10 \\)\n- solution1: \\( x = \\frac{10}{2} \\)\n- solution1: \\( x = 5 \\)\n\nA3:\n- question1: Q3: Se 3x - 4 = 11, determine o值 de x.\n- answer1: \\( 3x = 11 + 4 \\)\n- answer1: \\( 3x = 15 \\)\n- answer1: \\( x = \\frac{15}{3} \\)\n- answer1: \\( x = 5 \\)\n- solution1: \\( 3x - 4 = 11 \\)\n- solution1: \\( 3x = 11 + 4 \\)\n- solution1: \\( 3x = 15 \\)\n- solution1: \\( x = \\frac{15}{3} \\)\n- solution1: \\( x = 5 \\)\n\nG total:\n\\boxed{\n\\begin{array}{l}\n\\text{ Question 1: } \\text{Q1: } \\text{ \"x + 5 = 12, determine o value de x.\" } \\\\\n\\text{ Question 1: } \\text{ A1: } \\text{ \\( x = 7 \\) } \\\\\n\\text{ Question 1: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 1: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 2: } \\text{ Q2: } \\text{ \"2x = 10, determine o value de x.\" } \\\\\n\\text{ Question 2: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 2: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 2: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q3: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q4: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q5: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A3: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ Q6: } \\text{ \"3x - 4 = 11, determine o value de x.\" } \\\\\n\\text{ Question 3: } \\text{ A1: } \\text{ \\( x = 5 \\) } \\\\\n\\text{ Question 3: } \\text{ A2: } \\text{ \\( x = 5 \\) }",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06604450003942475,
+            "tempo_decode_s": 69.945298000006,
+            "tempo_resposta_s": 70.01134250004543,
+            "tempo_total_s": 70.01134250004543,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.626201461560825,
+            "ram_inicio_mb": 1740.16015625,
+            "ram_pico_mb": 1742.0859375,
+            "ram_usada_mb": 1.92578125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "S列出 as primeira dois Questiones ( answer choices) e as situação da f式a da Reta numérica. \n\n** Question 1: Use a Reta num Sara,capaz de identi specificar o_between 23 e 27?**\n\nGere 2 Questiones ( answer choices) and put them in order.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 71,
+            "total_tokens": 71
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.3593844999559224,
+            "tempo_decode_s": 4.612169600033667,
+            "tempo_resposta_s": 6.971554099989589,
+            "tempo_total_s": 6.971554099989589,
+            "tokens_entrada": 0,
+            "tokens_saida": 71,
+            "tps": 10.184242850544045,
+            "ram_inicio_mb": 1741.9921875,
+            "ram_pico_mb": 1743.8359375,
+            "ram_usada_mb": 1.84375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's create three questions ( solutions) in the area of numbers for the 9th grade with the following criteria:\n1. The questions must be clearly stated.\n2. The questions must be in a consistent format with the given rubric.\n3. The questions must be solvable and clear.\n4. The questions must be well-organized and structured.\n5. The questions must be solvable and clear.\n6. The questions must be well- organized and structured.\n\nWe'll create three questions related to numbers, ensuring that the questions are in a consistent format with the given rubric. Each question will have a clear and consistent format, and the solutions will be well- organized and structured.\n\nHere are the three questions:\n\n**Question 1:**\n- en face: 1234567890 is a number.\n-alternatives:\n  - A: 123456789\n  - B: 12345678\n  - C: 1234567\n  - D: 123456\n  - E: 12345\n- Correct answer: E\n- Step-by-step solution: The number 1234567890 is a 10-digit number. The largest number among the options is 1234567, which is a 7-digit number. The next largest is 123456, which is a 6-digit number. The next largest is 12345, which is a 5-digit number. The next largest is 1234, which is a 4-digit number. The next largest is 123, which is a 3-digit number. The next largest is 12, which is a 2-digit number. The next largest is 1, which is a 1-digit number. Therefore, the correct answer is E: 12345.\n\n**Question 2:**\n- En face: Which number is the greatest among the following numbers?\n- Alternatives:\n  - A: 123456789\n  - B: 12345678\n  - C: 1234567\n  - D: 123456\n  - E: 12345\n- Correct answer: A\n- Step-by-step solution: The number 123456789 is the greatest among the given numbers because it has the most digits. The next greatest number is 12345678, which has fewer digits than 123456789 but more than the other options. The next greatest number is 1234567, which has fewer digits than 12345678 and 123456789 but more than the other options. The next greatest number is 123456, which has fewer digits than 1234567, 12345678, and 123456789 but more than the other options. The next greatest number is 12345, which has fewer digits than 123456, 1234567, 12345678, and 123456789 but more than the other options. Therefore, the correct answer is A: 123456789.\n\n**Question 3:**\n- En face: Which number is the smallest among the following numbers?\n- Alternatives:\n  - A: 123456789\n  - B: 12345678\n  - C: 1234567\n  - D: 123456\n  - E: 12345\n- Correct answer: E\n- Step-by-step solution: The number 12345 is the smallest among the given numbers because it has the fewest digits. The next smallest number is 123456, which has more digits than 12345 but fewer than the other options. The next smallest number is 1234567, which has more digits than 123456 and 12345678 but fewer than the other options. The next smallest number is 12345678, which has more digits than 1234567 and 123456789 but fewer than the other options. Therefore, the correct answer is E: 12345.\n\nHere is",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6696177999838255,
+            "tempo_decode_s": 69.73293280001963,
+            "tempo_resposta_s": 72.40255060000345,
+            "tempo_total_s": 72.40255060000345,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.143148155887635,
+            "ram_inicio_mb": 1743.7421875,
+            "ram_pico_mb": 1745.5859375,
+            "ram_usada_mb": 1.84375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "A below are the examples of questions that must be familiar with the given requirements (calibration of the speed of response):\n1. Solve for \\( x \\) in the equation \\( x + 5 = 12 \\).\n2. Solve for \\( x \\) in the equation \\( 2x = 10 \\) by applying the properties of equality.\n\nNow, let's create three new questions that align with the given requirement (cal refatoria do time of response). We'll also ensure that the questions are well- structures and clear.\n\nThe questions are as follows:\n\n**Question 1:**\nSolve for \\( x \\) in the equation \\( x + 5 = 12 \\).\n\n**Solution:**\nTo solve for \\( x \\) in the equation \\( x + 5 = 12 \\), we need to isolate \\( x \\). We can do this by subtracting 5 from both sides of the equation:\n\\[\nx + 5 - 5 = 12 - 5\n\\]\nSimplifying both sides, we get:\n\\[\nx = 7\n\\]\nSo, the value of \\( x \\) is \\( \\boxed{7} \\).\n\n**Question 2:**\nSolve for \\( x \\) in the equation \\( 2x = 10 \\).\n\n**Solution:**\nTo solve for \\( x \\) in the equation \\( 2x = 10 \\), we need to isolate \\( x \\). We can do this by dividing both sides of the equation by 2:\n\\[\n\\frac{2x}{2} = \\frac{10}{2}\n\\]\nSimplifying both sides, we get:\n\\[\nx = 5\n\\]\nSo, the value of \\( x \\) is \\( \\boxed{5} \\).\n\n**Question 3:**\nSolve for \\( x \\) in the equation \\( 3x - 6 = 15 \\).\n\n**Solution:**\nTo solve for \\( x \\) in the equation \\( 3x - 6 = 15 \\), we need to isolate \\( x \\). We can do this by first adding 6 to both sides of the equation:\n\\[\n3x - 6 + 6 = 15 + 6\n\\]\nSimplifying both sides, we get:\n\\[\n3x = 21\n\\]\nNext, we divide both sides of the equation by 3:\n\\[\n\\frac{3x}{3} = \\frac{21}{3}\n\\]\nSimplifying both sides, we get:\n\\[\nx = 7\n\\]\nSo, the value of \\( x \\) is \\( \\boxed{7} \\).\n\nI hope this helps!",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 573,
+            "total_tokens": 573
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.3516615999978967,
+            "tempo_decode_s": 37.46850220003398,
+            "tempo_resposta_s": 39.82016380003188,
+            "tempo_total_s": 39.82016380003188,
+            "tokens_entrada": 0,
+            "tokens_saida": 573,
+            "tps": 14.389694700340266,
+            "ram_inicio_mb": 1745.5703125,
+            "ram_pico_mb": 1747.33203125,
+            "ram_usada_mb": 1.76171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 14.587332,
+        "ram_media_mb": 1750.932292,
+        "ram_pico_mb": 1752.710938,
+        "tempo_medio_segundos": 70.04037,
+        "ttft_medio_segundos": 0.940214,
+        "tps": {
+          "n": 3,
+          "mediana": 14.690234,
+          "iqr": 0.309565,
+          "p25": 14.458275,
+          "p75": 14.767839,
+          "p95": 14.829924,
+          "p99": 14.842341,
+          "max": 14.845445,
+          "media": 14.587332
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.067126,
+          "iqr": 1.31213,
+          "p25": 0.065877,
+          "p75": 1.378007,
+          "p95": 2.426712,
+          "p99": 2.636452,
+          "max": 2.688888,
+          "media": 0.940214
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 69.433885,
+          "iqr": 1.635669,
+          "p25": 69.070915,
+          "p75": 70.706584,
+          "p95": 71.724742,
+          "p99": 71.928374,
+          "max": 71.979282,
+          "media": 70.04037
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1750.929688,
+          "iqr": 1.777344,
+          "p25": 1750.042969,
+          "p75": 1751.820312,
+          "p95": 1752.532813,
+          "p99": 1752.675313,
+          "max": 1752.710938,
+          "media": 1750.932292
+        },
+        "tps_por_rodada": [
+          14.226315824844727,
+          14.690233717022744,
+          14.845444967531092
+        ],
+        "ttft_por_rodada": [
+          2.688887699972838,
+          0.06712640001205727,
+          0.06462680001277477
+        ],
+        "tempo_por_rodada": [
+          71.97928209998645,
+          69.43388510000659,
+          68.70794390002266
+        ],
+        "ram_por_rodada": [
+          1749.15625,
+          1750.9296875,
+          1752.7109375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1752.710938,
+        "tps_medio": 14.587332,
+        "tempo_medio_segundos": 70.04037,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Here are the questions and solutions:\n\n** Question 1:**\n** Question:**\nDetermine which of the following fractions is in its simplest form. (Show all steps of simplification.)\n\n\\[\n\\text{A.} \\frac{15}{24} \\quad \\text{B.} \\frac{22}{33} \\quad \\text{C.} \\frac{28}{42} \\quad \\text{D.} \\frac{35}{56} \\quad \\text{E.} \\frac{45}{60}\n\\]\n\n**Solution:**\n\n1. **Simplify \\(\\frac{15}{24}\\):**\n   - Find the greatest common divisor (GCD) of 15 and 24, which is 3.\n   - Divide both the numerator and the denominator by their GCD:\n     \\[\n     \\frac{15 \\div 3}{24 \\div 3} = \\frac{5}{8}\n     \\]\n   - The simplified form is \\(\\frac{5}{8}\\).\n\n2. **Simplify \\(\\frac{22}{33}\\):**\n   - Find the GCD of 22 and 33, which is 11.\n   - Divide both the numerator and the denominator by their GCD:\n     \\[\n     \\frac{22 \\div 11}{33 \\div 11} = \\frac{2}{3}\n     \\]\n   - The simplified form is \\(\\frac{2}{3}\\).\n\n3. **Simplify \\(\\frac{28}{42}\\):**\n   - Find the GCD of 28 and 42, which is 14.\n   - Divide both the numerator and the denominator by their GCD:\n     \\[\n     \\frac{28 \\div 14}{42 \\div 14} = \\frac{2}{3}\n     \\]\n   - The simplified form is \\(\\frac{2}{3}\\).\n\n4. **Simplify \\(\\frac{35}{56}\\):**\n   - Find the GCD of 35 and 56, which is 7.\n   - Divide both the numerator and the denominator by their GCD:\n     \\[\n     \\frac{35 \\div 7}{56 \\div 7} = \\frac{5}{8}\n     \\]\n   - The simplified form is \\(\\frac{5}{8}\\).\n\n5. **Simplify \\(\\frac{45}{60}\\):**\n   - Find the GCD of 45 and 60, which is 15.\n   - Divide both the numerator and the denominator by their GCD:\n     \\[\n     \\frac{45 \\div 15}{60 \\div 15} = \\frac{3}{4}\n     \\]\n   - The simplified form is \\(\\frac{3}{4}\\).\n\n**Conclusion:**\nThe fractions in simplest form are:\n- A. \\(\\frac{5}{8}\\)\n- B. \\(\\frac{2}{3}\\)\n- C. \\(\\frac{2}{3}\\)\n- D. \\(\\frac{5}{8}\\)\n- E. \\(\\frac{3}{4}\\)\n\n** Question 2:**\n** Question:**\nTrue or False: The sum of two fractions with different denominators can always be expressed as a single fraction with a common denominator.\n\n**Solution:**\nTrue.\n\nTo add two fractions with different denominators, we need to find a common denominator. This can be done by finding the least common multiple (LCM) of the two denominators. Once the fractions have a common denominator, we can add the numerators and keep the common denominator. The resulting fraction will be a single fraction with a common denominator.\n\n** Question 3:**\n** Question:**\nSimplify the expression \\(\\frac{3x^2 - 12x + 12}{x^2 - 4x + 4}\\).\n\n**Solution:**\n1. **Factor the numerator and the denominator:**\n   - Numerator: \\(3x^2 - 12x + 12 = 3(x^2 - 4x + 4) = 3(x - 2)^2\\)\n   - Denominator: \\(x^2 - 4x + 4 = (x - 2)^2\\)\n\n2. **Simplify the expression:**\n   \\[\n   \\frac{3(x - 2)^2}{(x - 2)^2} = 3\n   \\]\n\n**Conclusion:**\nThe simplified expression is \\(3\\).\n\n** Question 4:**\n** Question:**\nSimplify the expression \\(\\frac{x^2 - 9}{x^2 -",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.688887699972838,
+            "tempo_decode_s": 69.29039440001361,
+            "tempo_resposta_s": 71.97928209998645,
+            "tempo_total_s": 71.97928209998645,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.226315824844727,
+            "ram_inicio_mb": 1747.30859375,
+            "ram_pico_mb": 1749.15625,
+            "ram_usada_mb": 1.84765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Here are the steps to create the test and the questions:\n\n1. **Test Configuration**:\n   - ** Question count**: 5 questions.\n   - ** Question type**: Multiple choice.\n   - ** Question text**: E01 question text.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: E.\n\n2. **Example Question**:\n   - ** Question**: D able a medir o di赛 de 50 cm em 5 sec.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: A.\n\n3. **Example Question**:\n   - ** Question**: D able a medir o dise de 100 cm em 10 sec.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: B.\n\n4. **Example Question**:\n   - ** Question**: D able a medir o dise de 150 cm em 15 sec.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: C.\n\n5. **Example Question**:\n   - ** Question**: D able a medir o dise de 200 cm em 20 sec.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: D.\n\n6. **Example Question**:\n   - ** Question**: D able a medir o dise de 250 cm em 25 sec.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: E.\n\nThe test should be scored as follows:\n- ** Score range**: 0 to 5.\n- ** Grading scale**: 0 to 5.\n- ** Time limit**: 1 minute.\n\nTo create the test and score it, you can use a testing tool such as a online test generator or a testing software. The tool will generate the questions and score the test based on the answers provided by the user. Here is an example of how to use a testing tool to create the test and score it:\n\n1. **Choose a testing tool**:\n   - There are many testing tools available, such as:\n     - <https:// test generator.com/ > (an online test generator)\n     - <https://www test saw.com/ > (an online test generator with a scorecard)\n     - <https://www free test generator.com/ > (an online test generator with a scorecard)\n\n2. **Define the test parameters**:\n   - ** Question count**: 5 questions.\n   - ** Question type**: Multiple choice.\n   - ** Question text**: Example questions.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: Example answers.\n\n3. **Generate the test**:\n   - Use the testing tool to generate the test based on the parameters you defined.\n\n4. ** score the test**:\n   - Use the testing tool to score the test based on the answers provided by the user.\n\nHere is an example of how to use the <https://test generator.com/> tool to create the test and score it:\n\n1. ** logarithmic:**\n   - ** Question count**: 5 questions.\n   - ** Question type**: Multiple choice.\n   - ** Question text**: <https:// test generator.com/ > (an example question text).\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: <https://test generator.com/> (an example correct answer).\n\n2. ** score the test**:\n   - Use the <https://test generator.com/> tool to score the test based on the answers provided by the user.\n\nThe final test should be scored as follows:\n- ** Score range**: 0 to 5.\n- ** Grading scale**: 0 to 5.\n- ** Time limit**: 1 minute.\n\nTo create the test and score it, you can use a testing tool such as a online test generator or a testing software. The tool will generate the questions and score the test based on the answers provided by the user. Here is an example of how to use a testing tool to create the test and score it:\n\n1. **Choose a testing tool**:\n   - There are many testing tools available, such as:\n     - <https://test generator.com/ > (an online test generator)\n     - <https://www test saw.com/ > (an online test generator with a scorecard)\n     - <https://www free test generator.com/ > (an online test generator with a scorecard)\n\n2. **Define the test parameters**:\n   - ** Question count**: 5 questions.\n   - ** Question type**: Multiple choice.\n   - ** Question text**: Example questions.\n   - ** Possible answers**: A, B, C, D, E",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1020,
+            "total_tokens": 1020
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06712640001205727,
+            "tempo_decode_s": 69.36675869999453,
+            "tempo_resposta_s": 69.43388510000659,
+            "tempo_total_s": 69.43388510000659,
+            "tokens_entrada": 0,
+            "tokens_saida": 1020,
+            "tps": 14.690233717022744,
+            "ram_inicio_mb": 1749.0625,
+            "ram_pico_mb": 1750.9296875,
+            "ram_usada_mb": 1.8671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Here are the steps to create the test and the questions:\n\n1. **Test Configuration**:\n   - ** Question count**: 5 questions.\n   - ** Question type**: Multiple choice.\n   - ** Question text**: E01 question text.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: E.\n\n2. **Example Question**:\n   - ** Question**: D able a medir o di赛 de 50 cm em 5 sec.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: A.\n\n3. **Example Question**:\n   - ** Question**: D able a medir o dise de 100 cm em 10 sec.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: B.\n\n4. **Example Question**:\n   - ** Question**: D able a medir o dise de 150 cm em 15 sec.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: C.\n\n5. **Example Question**:\n   - ** Question**: D able a medir o dise de 200 cm em 20 sec.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: D.\n\n6. **Example Question**:\n   - ** Question**: D able a medir o dise de 250 cm em 25 sec.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: E.\n\nThe test should be scored as follows:\n- ** Score range**: 0 to 5.\n- ** Grading scale**: 0 to 5.\n- ** Time limit**: 1 minute.\n\nTo create the test and score it, you can use a testing tool such as a online test generator or a testing software. The tool will generate the questions and score the test based on the answers provided by the user. Here is an example of how to use a testing tool to create the test and score it:\n\n1. **Choose a testing tool**:\n   - There are many testing tools available, such as:\n     - <https:// test generator.com/ > (an online test generator)\n     - <https://www test saw.com/ > (an online test generator with a scorecard)\n     - <https://www free test generator.com/ > (an online test generator with a scorecard)\n\n2. **Define the test parameters**:\n   - ** Question count**: 5 questions.\n   - ** Question type**: Multiple choice.\n   - ** Question text**: Example questions.\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: Example answers.\n\n3. **Generate the test**:\n   - Use the testing tool to generate the test based on the parameters you defined.\n\n4. ** score the test**:\n   - Use the testing tool to score the test based on the answers provided by the user.\n\nHere is an example of how to use the <https://test generator.com/> tool to create the test and score it:\n\n1. ** logarithmic:**\n   - ** Question count**: 5 questions.\n   - ** Question type**: Multiple choice.\n   - ** Question text**: <https:// test generator.com/ > (an example question text).\n   - ** Possible answers**: A, B, C, D, E.\n   - ** Correct answer**: <https://test generator.com/> (an example correct answer).\n\n2. ** score the test**:\n   - Use the <https://test generator.com/> tool to score the test based on the answers provided by the user.\n\nThe final test should be scored as follows:\n- ** Score range**: 0 to 5.\n- ** Grading scale**: 0 to 5.\n- ** Time limit**: 1 minute.\n\nTo create the test and score it, you can use a testing tool such as a online test generator or a testing software. The tool will generate the questions and score the test based on the answers provided by the user. Here is an example of how to use a testing tool to create the test and score it:\n\n1. **Choose a testing tool**:\n   - There are many testing tools available, such as:\n     - <https://test generator.com/ > (an online test generator)\n     - <https://www test saw.com/ > (an online test generator with a scorecard)\n     - <https://www free test generator.com/ > (an online test generator with a scorecard)\n\n2. **Define the test parameters**:\n   - ** Question count**: 5 questions.\n   - ** Question type**: Multiple choice.\n   - ** Question text**: Example questions.\n   - ** Possible answers**: A, B, C, D, E",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1020,
+            "total_tokens": 1020
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06462680001277477,
+            "tempo_decode_s": 68.64331710000988,
+            "tempo_resposta_s": 68.70794390002266,
+            "tempo_total_s": 68.70794390002266,
+            "tokens_entrada": 0,
+            "tokens_saida": 1020,
+            "tps": 14.845444967531092,
+            "ram_inicio_mb": 1750.84375,
+            "ram_pico_mb": 1752.7109375,
+            "ram_usada_mb": 1.8671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 11.554969,
+        "ram_media_mb": 1755.328125,
+        "ram_pico_mb": 1756.199219,
+        "tempo_medio_segundos": 10.59281,
+        "ttft_medio_segundos": 2.053709,
+        "tps": {
+          "n": 2,
+          "mediana": 11.554969,
+          "iqr": 2.342633,
+          "p25": 10.383652,
+          "p75": 12.726285,
+          "p95": 13.663338,
+          "p99": 13.850749,
+          "max": 13.897601,
+          "media": 11.554969
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.053709,
+          "iqr": 0.145752,
+          "p25": 1.980833,
+          "p75": 2.126585,
+          "p95": 2.184885,
+          "p99": 2.196546,
+          "max": 2.199461,
+          "media": 2.053709
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 10.59281,
+          "iqr": 5.165305,
+          "p25": 8.010157,
+          "p75": 13.175462,
+          "p95": 15.241584,
+          "p99": 15.654809,
+          "max": 15.758115,
+          "media": 10.59281
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1755.328125,
+          "iqr": 0.871094,
+          "p25": 1754.892578,
+          "p75": 1755.763672,
+          "p95": 1756.112109,
+          "p99": 1756.181797,
+          "max": 1756.199219,
+          "media": 1755.328125
+        },
+        "tps_por_rodada": [
+          9.212336055014466,
+          13.897601419339628
+        ],
+        "ttft_por_rodada": [
+          2.1994606999796815,
+          1.9079565999563783
+        ],
+        "tempo_por_rodada": [
+          5.427504999970552,
+          15.758114899974316
+        ],
+        "ram_por_rodada": [
+          1754.45703125,
+          1756.19921875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "S列出 as poleias e op Mutos do exameEF08MA05 e gere as primeiraQuestionearned de |M01001|.\n\\[\n\\boxed{\\text{M01001}}\n\\]\n```"
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "As per the instructions, here is the problem statement and the solution:\n\n**Problem Statement:**\nGere 1 per question of 1 point ( question ) for the following month (EF06MA17 )\n**Condition that the student must know (calories of consistency):**\n constant expressions.\n\n**Example of questions to follow the conditions (example problems not exists — create a question following the rules of BNCC):**\n 1.  (1 point)  Calculate the area of a rectangle with length 5 units and width 3 units.\n\n**Solution:*"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 1756.199219,
+        "tps_medio": 11.554969,
+        "tempo_medio_segundos": 10.59281,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "S列出 as poleias e op Mutos do exameEF08MA05 e gere as primeiraQuestionearned de |M01001|.\n\\[\n\\boxed{\\text{M01001}}\n\\]\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 50,
+            "total_tokens": 50
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.1994606999796815,
+            "tempo_decode_s": 3.22804429999087,
+            "tempo_resposta_s": 5.427504999970552,
+            "tempo_total_s": 5.427504999970552,
+            "tokens_entrada": 0,
+            "tokens_saida": 50,
+            "tps": 9.212336055014466,
+            "ram_inicio_mb": 1752.6171875,
+            "ram_pico_mb": 1754.45703125,
+            "ram_usada_mb": 1.83984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "As per the instructions, here is the problem statement and the solution:\n\n**Problem Statement:**\nGere 1 per question of 1 point ( question ) for the following month (EF06MA17 )\n**Condition that the student must know (calories of consistency):**\n constant expressions.\n\n**Example of questions to follow the conditions (example problems not exists — create a question following the rules of BNCC):**\n 1.  (1 point)  Calculate the area of a rectangle with length 5 units and width 3 units.\n\n**Solution:**\nTo find the area of a rectangle, we use the formula:\n\n\\[\n\\text{Area} = \\text{length} \\times \\text{width}\n\\]\n\nGiven the length is 5 units and the width is 3 units, we substitute these values into the formula:\n\n\\[\n\\text{Area} = 5 \\times 3 = 15 \\text{ square units}\n\\]\n\nTherefore, the area of the rectangle is:\n\n\\[\n\\boxed{15}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 219,
+            "total_tokens": 219
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.9079565999563783,
+            "tempo_decode_s": 13.850158300017938,
+            "tempo_resposta_s": 15.758114899974316,
+            "tempo_total_s": 15.758114899974316,
+            "tokens_entrada": 0,
+            "tokens_saida": 219,
+            "tps": 13.897601419339628,
+            "ram_inicio_mb": 1754.36328125,
+            "ram_pico_mb": 1756.19921875,
+            "ram_usada_mb": 1.8359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1756.2,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 8.52,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 70.04,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -3.4,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+    "gerado_em": "2026-09-04T14:14:23.551570"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}
