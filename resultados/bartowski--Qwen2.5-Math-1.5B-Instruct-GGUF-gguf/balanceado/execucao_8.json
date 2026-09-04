@@ -1,0 +1,1174 @@
+{
+  "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "04/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--Qwen2.5-Math-1.5B-Instruct-GGUF\\Qwen2.5-Math-1.5B-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 123,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 123
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 123
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.29,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": "JSON não encontrado na resposta",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 2.6150945000117645,
+        "tempo_prefill_s": 12.981180900009349,
+        "tempo_decode_s": 23.15849459997844,
+        "tempo_resposta_s": 36.13967549998779,
+        "tempo_total_s": 38.75476999999955,
+        "tokens_entrada": 0,
+        "tokens_saida": 346,
+        "tps": 9.573965322409077,
+        "ram_inicio_mb": 28.41015625,
+        "ram_pico_mb": 1497.12109375,
+        "ram_usada_mb": 1468.7109375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 38.75476999999955,
+        "tempo_carregamento_s": 2.6150945000117645,
+        "tempo_resposta_s": 36.13967549998779,
+        "ram_pico_mb": 1497.12109375,
+        "ram_inicio_mb": 28.41015625,
+        "ttft_segundos": 12.981180900009349,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "To solve the problem, we need to create a question with the following characteristics:\n\n1. The question should be based on a multiple-choice format with 5 options (A, B, C, D, E).\n2. The question should be related to numbers.\n3. The question should be designed to test the student's understanding of basic mathematical concepts and operations.\n4. The question should be clear, well-structured, and free of errors.\n5. The question should be solvable step-by-step, with each step clearly explained.\n\nLet's create a question that fits these criteria:\n\n**Question:**\nDetermine the value of \\( x \\) in the equation \\( 2x + 3 = 7 \\).\n\n** options:**\nA) 1\nB) 2\nC) 3\nD) 4\nE) 5\n\n**Solution:**\nTo solve for \\( x \\) in the equation \\( 2x + 3 = 7 \\), we need to isolate \\( x \\) on one side of the equation. Here are the steps:\n\n1. Subtract 3 from both sides of the equation:\n   \\[\n   2x + 3 - 3 = 7 - 3\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = 4\n   \\]\n\n2. Divide both sides of the equation by 2:\n   \\[\n   \\frac{2x}{2} = \\frac{4}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 2\n   \\]\n\nTherefore, the correct answer is \\(\\boxed{B}\\).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 346,
+            "total_tokens": 346
+          },
+          "metrics": {
+            "tempo_carregamento_s": 2.6150945000117645,
+            "tempo_prefill_s": 12.981180900009349,
+            "tempo_decode_s": 23.15849459997844,
+            "tempo_resposta_s": 36.13967549998779,
+            "tempo_total_s": 38.75476999999955,
+            "tokens_entrada": 0,
+            "tokens_saida": 346,
+            "tps": 9.573965322409077,
+            "ram_inicio_mb": 28.41015625,
+            "ram_pico_mb": 1497.12109375,
+            "ram_usada_mb": 1468.7109375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 11.540651,
+          "iqr": 1.507532,
+          "p25": 10.654652,
+          "p75": 12.162184,
+          "p95": 12.868508,
+          "p99": 13.055668,
+          "max": 13.102458,
+          "media": 11.445759
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.717953,
+          "iqr": 2.653683,
+          "p25": 0.704855,
+          "p75": 3.358538,
+          "p95": 3.769477,
+          "p99": 3.827012,
+          "max": 3.841395,
+          "media": 2.227773
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 51.623268,
+          "iqr": 40.506722,
+          "p25": 38.741713,
+          "p75": 79.248435,
+          "p95": 84.772621,
+          "p99": 85.47934,
+          "max": 85.65602,
+          "media": 56.476029
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1063.734375,
+          "iqr": 60.083008,
+          "p25": 1053.857422,
+          "p75": 1113.94043,
+          "p95": 1431.978125,
+          "p99": 1446.895625,
+          "max": 1450.625,
+          "media": 1141.465234
+        },
+        "tps_medio": 11.445759,
+        "ttft_medio_segundos": 2.227773,
+        "tempo_medio_segundos": 56.476029,
+        "ram_pico_mb": 1450.625
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 11.540651,
+          "iqr": 1.507532,
+          "p25": 10.654652,
+          "p75": 12.162184,
+          "p95": 12.868508,
+          "p99": 13.055668,
+          "max": 13.102458,
+          "media": 11.445759
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.717953,
+          "iqr": 2.653683,
+          "p25": 0.704855,
+          "p75": 3.358538,
+          "p95": 3.769477,
+          "p99": 3.827012,
+          "max": 3.841395,
+          "media": 2.227773
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 51.623268,
+          "iqr": 40.506722,
+          "p25": 38.741713,
+          "p75": 79.248435,
+          "p95": 84.772621,
+          "p99": 85.47934,
+          "max": 85.65602,
+          "media": 56.476029
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1063.734375,
+          "iqr": 60.083008,
+          "p25": 1053.857422,
+          "p75": 1113.94043,
+          "p95": 1431.978125,
+          "p99": 1446.895625,
+          "max": 1450.625,
+          "media": 1141.465234
+        },
+        "tps_medio": 11.445759,
+        "ttft_medio_segundos": 2.227773,
+        "tempo_medio_segundos": 56.476029,
+        "ram_pico_mb": 1450.625,
+        "tps_por_rodada": [
+          12.235205889218626,
+          10.244458139551353,
+          12.582569193910247,
+          10.912004819684487,
+          13.102458346405237,
+          9.787608544564424,
+          10.568868311233372,
+          11.620244868249383,
+          11.46105714400276,
+          11.943118492046422
+        ],
+        "ttft_por_rodada": [
+          3.451193599961698,
+          3.0805722999502905,
+          3.6815765000064857,
+          2.6880858999793418,
+          0.07619970000814646,
+          2.5538845999981277,
+          0.06848560000071302,
+          3.8413951999973506,
+          2.7478196999873035,
+          0.08851210004650056
+        ],
+        "tempo_por_rodada": [
+          83.69291119999252,
+          43.24289229995338,
+          60.00364379998064,
+          40.59748940001009,
+          34.19205680000596,
+          77.13835269998526,
+          79.95179570000619,
+          38.12312090001069,
+          22.162004499987233,
+          85.65602029999718
+        ],
+        "ram_por_rodada": [
+          1450.625,
+          1409.1875,
+          1117.921875,
+          1101.99609375,
+          1060.625,
+          1062.81640625,
+          1064.65234375,
+          1046.19921875,
+          1049.02734375,
+          1051.6015625
+        ],
+        "ram_media_mb": 1141.465234
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "To solve the problem, we need to create three questions with the given constraints. Here's the plan:\n\n1. ** Question 1:**\n   - Given a fraction \\(\\frac{a}{b}\\) where \\(a\\) and \\(b\\) are integers and \\(b \\neq 0\\), determine which of the following options is correct.\n\n2. ** Question 2:**\n   - Determine the correct option for the given fraction \\(\\frac{a}{b}\\) where \\(a\\) and \\(b\\) are integers and \\(b \\neq 0\\).\n\n3. ** Question 3:**\n   - Determine the correct option for the given fraction \\(\\frac{a}{b}\\) where \\(a\\) and \\(b\\) are integers and \\(b \\neq 0\\).\n\nLet's create these questions and solutions using Python and SymPy.\n\n```python\nimport sympy as sp\n\n# Define the variables\na, b = sp.symbols('a b', integer=True)\n\n# Question 1: Determine the correct option for the fraction a/b\n# The fraction a/b can be simplified, and we need to check if it is in its simplest form\nfraction = a / b\nsimplified_fraction = sp.simplify(fraction)\n\n# Question 2: Determine the correct option for the fraction a/b\n# The fraction a/b can be simplified, and we need to check if it is in its simplest form\nfraction_2 = a / b\nsimplified_fraction_2 = sp.simplify(fraction_2)\n\n# Question 3: Determine the correct option for the fraction a/b\n# The fraction a/b can be simplified, and we need to check if it is in its simplest form\nfraction_3 = a / b\nsimplified_fraction_3 = sp.simplify(fraction_3)\n\n# Print the simplified fractions\nprint(simplified_fraction)\nprint(simplified_fraction_2)\nprint(simplified_fraction_3)\n```\n```output\na/b\na/b\na/b\n```\nThe output indicates that the fraction \\(\\frac{a}{b}\\) is already in its simplest form, which means that the fraction cannot be simplified further. This is true for any integer values of \\(a\\) and \\(b\\) where \\(b \\neq 0\\).\n\nTo provide a more detailed and specific example, let's consider a few specific cases for the fraction \\(\\frac{a}{b}\\):\n\n1. ** Question 1:**\n   - Given a fraction \\(\\frac{a}{b}\\) where \\(a\\) and \\(b\\) are integers and \\(b \\neq 0\\), determine which of the following options is correct.\n   - Example: Determine if \\(\\frac{12}{18}\\) can be simplified further.\n\n2. ** Question 2:**\n   - Determine the correct option for the fraction \\(\\frac{a}{b}\\) where \\(a\\) and \\(b\\) are integers and \\(b \\neq 0\\).\n   - Example: Determine if \\(\\frac{15}{20}\\) can be simplified further.\n\n3. ** Question 3:**\n   - Determine the correct option for the fraction \\(\\frac{a}{b}\\) where \\(a\\) and \\(b\\) are integers and \\(b \\neq 0\\).\n   - Example: Determine if \\(\\frac{24}{36}\\) can be simplified further.\n\nLet's create these specific examples and solutions using Python and SymPy.\n\n```python\nimport sympy as sp\n\n# Define the variables\na, b = sp.symbols('a b', integer=True)\n\n# Question 1: Determine if the fraction 12/18 can be simplified further\nfraction_1 = sp.Rational(12, 18)\nsimplified_fraction_1 = sp.simplify(fraction_1)\n\n# Question 2: Determine if the fraction 15/20 can be simplified further\nfraction_2 = sp.Rational(15, 20)\nsimplified_fraction_2 = sp.simplify(fraction_2)\n\n# Question 3: Determine if the fraction 24/36 can be simplified further\nfraction_3 = sp.Rational(24, 36)\nsimplified_fraction_3 = sp.simplify(fraction_3)\n\n# Print the simplified fractions\nprint(simplified_fraction_1)\nprint(simplified_fraction_2)\nprint(simplified_fraction_3)\n```\n```output\n2/3\n3/4\n2/3\n```\nThe output indicates that the simplified forms of the fractions \\(\\frac{12}{18}\\), \\(\\frac{15}{20}\\), and \\(\\frac{24}{36}\\) are \\(\\frac{2}{3}\\), \\(\\frac{3}{4}\\), and \\(\\frac{2}{3}\\) respectively. This",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.451193599961698,
+            "tempo_decode_s": 80.24171760003082,
+            "tempo_resposta_s": 83.69291119999252,
+            "tempo_total_s": 83.69291119999252,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 12.235205889218626,
+            "ram_inicio_mb": 1443.8515625,
+            "ram_pico_mb": 1450.625,
+            "ram_usada_mb": 6.7734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's create the questions and solutions for the given problem. We'll use Python and SymPy to solve the equations.\n\nHere are the questions and solutions:\n\n1. Solve for \\( x \\) in the equation \\( x + 5 = 12 \\).\n2. Solve for \\( x \\) in the equation \\( 2x = 10 \\).\n3. Solve for \\( x \\) in the equation \\( 3x - 7 = 8 \\).\n\nWe'll use SymPy to solve these equations.\n\n```python\nimport sympy as sp\n\n# Define the variable\nx = sp.symbols('x')\n\n# Define the equations\nequation1 = sp.Eq(x + 5, 12)\nequation2 = sp.Eq(2*x, 10)\nequation3 = sp.Eq(3*x - 7, 8)\n\n# Solve the equations\nsolution1 = sp.solve(equation1, x)\nsolution2 = sp.solve(equation2, x)\nsolution3 = sp.solve(equation3, x)\n\n# Print the solutions\nprint(f\"Solution to x + 5 = 12: {solution1}\")\nprint(f\"Solution to 2x = 10: {solution2}\")\nprint(f\"Solution to 3x - 7 = 8: {solution3}\")\n```\n```output\nSolution to x + 5 = 12: [7]\nSolution to 2x = 10: [5]\nSolution to 3x - 7 = 8: [5]\n```\nThe solutions to the given equations are:\n\n1. The solution to the equation \\( x + 5 = 12 \\) is \\( x = 7 \\).\n2. The solution to the equation \\( 2x = 10 \\) is \\( x = 5 \\).\n3. The solution to the equation \\( 3x - 7 = 8 \\) is \\( x = 5 \\).\n\nSo, the final answers are:\n\\[\n\\boxed{7}, \\boxed{5}, \\boxed{5}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 443,
+            "total_tokens": 443
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.0805722999502905,
+            "tempo_decode_s": 40.16232000000309,
+            "tempo_resposta_s": 43.24289229995338,
+            "tempo_total_s": 43.24289229995338,
+            "tokens_entrada": 0,
+            "tokens_saida": 443,
+            "tps": 10.244458139551353,
+            "ram_inicio_mb": 1407.15625,
+            "ram_pico_mb": 1409.1875,
+            "ram_usada_mb": 2.03125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "To solve the problem, we need to create three questions with the given constraints. Here's the step-by-step approach:\n\n1. **Understand the Constraints:**\n   - We need to create three questions related to fractions.\n   - The questions should be in the form of \\(\\frac{a}{b}\\) where \\(a\\) and \\(b\\) are integers and \\(b \\neq 0\\).\n   - The questions should be in a format that can be easily checked for consistency.\n\n2. ** Create the Questions:**\n   - We can create questions that ask students to simplify fractions, convert fractions to decimals, or compare fractions.\n\nHere are the three questions:\n\n1. Simplify the fraction \\(\\frac{12}{18}\\).\n2. Convert the fraction \\(\\frac{5}{8}\\) to a decimal.\n3. Compare the fractions \\(\\frac{3}{4}\\) and \\(\\frac{2}{3}\\).\n\nLet's implement this in Python using sympy:\n\n```python\nimport sympy as sp\n\n# Define the fractions\nfraction1 = sp.Rational(12, 18)\nfraction2 = sp.Rational(5, 8)\nfraction3 = sp.Rational(3, 4)\nfraction4 = sp.Rational(2, 3)\n\n# Simplify the fractions\nsimplified_fraction1 = sp.simplify(fraction1)\ndecimal_fraction2 = float(fraction2)\ncomparison_result = sp.simplify(fraction3 - fraction4)\n\n# Print the results\nprint(f\"Simplified fraction 1: {simplified_fraction1}\")\nprint(f\"Decimal value of fraction 2: {decimal_fraction2}\")\nprint(f\"Comparison result (3/4 - 2/3): {comparison_result}\")\n```\n```output\nSimplified fraction 1: 2/3\nDecimal value of fraction 2: 0.625\nComparison result (3/4 - 2/3): 1/12\n```\nThe output of the code provides the following results:\n\n1. The simplified fraction \\(\\frac{12}{18}\\) is \\(\\frac{2}{3}\\).\n2. The decimal value of the fraction \\(\\frac{5}{8}\\) is \\(0.625\\).\n3. The comparison result of \\(\\frac{3}{4}\\) and \\(\\frac{2}{3}\\) is \\(\\frac{1}{12}\\), which means \\(\\frac{3}{4} > \\frac{2}{3}\\).\n\nHere are the three questions in a formatted way:\n\n1. **Simplifying a Fraction:**\n   Simplify the fraction \\(\\frac{12}{18}\\).\n   \\[\n   \\frac{12}{18} = \\frac{2}{3}\n   \\]\n\n2. **Converting a Fraction to a Decimal:**\n   Convert the fraction \\(\\frac{5}{8}\\) to a decimal.\n   \\[\n   \\frac{5}{8} = 0.625\n   \\]\n\n3. **Comparing Fractions:**\n   Compare the fractions \\(\\frac{3}{4}\\) and \\(\\frac{2}{3}\\).\n   \\[\n   \\frac{3}{4} > \\frac{2}{3}\n   \\]\n\nThese are the three questions that can be used to test students' understanding of fractions and their properties. The final answer is:\n\n\\[\n\\boxed{\\frac{2}{3}, 0.625, \\frac{3}{4} > \\frac{2}{3}}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 755,
+            "total_tokens": 755
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.6815765000064857,
+            "tempo_decode_s": 56.32206729997415,
+            "tempo_resposta_s": 60.00364379998064,
+            "tempo_total_s": 60.00364379998064,
+            "tokens_entrada": 0,
+            "tokens_saida": 755,
+            "tps": 12.582569193910247,
+            "ram_inicio_mb": 1117.70703125,
+            "ram_pico_mb": 1117.921875,
+            "ram_usada_mb": 0.21484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's create the questions and solutions for the given problem. We'll use Python and SymPy to solve the equations.\n\nHere are the questions and solutions:\n\n1. Solve for \\( x \\) in the equation \\( x + 5 = 12 \\).\n2. Solve for \\( x \\) in the equation \\( 2x = 10 \\).\n3. Solve for \\( x \\) in the equation \\( 3x - 7 = 8 \\).\n\nWe'll use SymPy to solve these equations.\n\n```python\nimport sympy as sp\n\n# Define the variable\nx = sp.symbols('x')\n\n# Define the equations\nequation1 = sp.Eq(x + 5, 12)\nequation2 = sp.Eq(2*x, 10)\nequation3 = sp.Eq(3*x - 7, 8)\n\n# Solve the equations\nsolution1 = sp.solve(equation1, x)\nsolution2 = sp.solve(equation2, x)\nsolution3 = sp.solve(equation3, x)\n\n# Print the solutions\nprint(f\"Solution to x + 5 = 12: {solution1}\")\nprint(f\"Solution to 2x = 10: {solution2}\")\nprint(f\"Solution to 3x - 7 = 8: {solution3}\")\n```\n```output\nSolution to x + 5 = 12: [7]\nSolution to 2x = 10: [5]\nSolution to 3x - 7 = 8: [5]\n```\nThe solutions to the given equations are:\n\n1. The solution to the equation \\( x + 5 = 12 \\) is \\( x = 7 \\).\n2. The solution to the equation \\( 2x = 10 \\) is \\( x = 5 \\).\n3. The solution to the equation \\( 3x - 7 = 8 \\) is \\( x = 5 \\).\n\nSo, the final answers are:\n\\[\n\\boxed{7}, \\boxed{5}, \\boxed{5}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 443,
+            "total_tokens": 443
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6880858999793418,
+            "tempo_decode_s": 37.90940350003075,
+            "tempo_resposta_s": 40.59748940001009,
+            "tempo_total_s": 40.59748940001009,
+            "tokens_entrada": 0,
+            "tokens_saida": 443,
+            "tps": 10.912004819684487,
+            "ram_inicio_mb": 1099.58203125,
+            "ram_pico_mb": 1101.99609375,
+            "ram_usada_mb": 2.4140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's create the questions and solutions for the given problem. We'll use Python and SymPy to solve the equations.\n\nHere's the problem:\n1. Solve the equation \\(x + 5 = 12\\).\n2. Solve the equation \\(2x = 10\\).\n3. Solve the equation \\(3x - 7 = 8\\).\n\nWe'll use SymPy to solve these equations step-by-step.\n\n```python\nimport sympy as sp\n\n# Define the variable\nx = sp.symbols('x')\n\n# Equation 1: x + 5 = 12\neq1 = sp.Eq(x + 5, 12)\nsolution1 = sp.solve(eq1, x)[0]\n\n# Equation 2: 2x = 10\neq2 = sp.Eq(2*x, 10)\nsolution2 = sp.solve(eq2, x)[0]\n\n# Equation 3: 3x - 7 = 8\neq3 = sp.Eq(3*x - 7, 8)\nsolution3 = sp.solve(eq3, x)[0]\n\n# Print the solutions\nprint(f\"Solution to x + 5 = 12: {solution1}\")\nprint(f\"Solution to 2x = 10: {solution2}\")\nprint(f\"Solution to 3x - 7 = 8: {solution3}\")\n```\n```output\nSolution to x + 5 = 12: 7\nSolution to 2x = 10: 5\nSolution to 3x - 7 = 8: 5\n```\nThe solutions to the given equations are:\n\n1. The solution to the equation \\(x + 5 = 12\\) is \\(x = 7\\).\n2. The solution to the equation \\(2x = 10\\) is \\(x = 5\\).\n3. The solution to the equation \\(3x - 7 = 8\\) is \\(x = 5\\).\n\nThus, the final answers are:\n\\[\n\\boxed{7}, \\boxed{5}, \\boxed{5}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 448,
+            "total_tokens": 448
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07619970000814646,
+            "tempo_decode_s": 34.11585709999781,
+            "tempo_resposta_s": 34.19205680000596,
+            "tempo_total_s": 34.19205680000596,
+            "tokens_entrada": 0,
+            "tokens_saida": 448,
+            "tps": 13.102458346405237,
+            "ram_inicio_mb": 1058.640625,
+            "ram_pico_mb": 1060.625,
+            "ram_usada_mb": 1.984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "To solve the problem, we need to create three questions with the given constraints. Here's the step-by-step approach:\n\n1. **Understand the Constraints:**\n   - We need to create three questions related to fractions.\n   - The questions should be in the form of \\(\\frac{a}{b}\\) where \\(a\\) and \\(b\\) are integers and \\(b \\neq 0\\).\n   - The questions should be in a format that can be easily checked for consistency.\n\n2. ** Create the Questions:**\n   - We can create questions that ask students to simplify fractions, convert fractions to decimals, or compare fractions.\n\nHere are the three questions:\n\n1. Simplify the fraction \\(\\frac{12}{18}\\).\n2. Convert the fraction \\(\\frac{5}{8}\\) to a decimal.\n3. Compare the fractions \\(\\frac{3}{4}\\) and \\(\\frac{2}{3}\\).\n\nLet's implement this in Python using sympy:\n\n```python\nimport sympy as sp\n\n# Define the fractions\nfraction1 = sp.Rational(12, 18)\nfraction2 = sp.Rational(5, 8)\nfraction3 = sp.Rational(3, 4)\nfraction4 = sp.Rational(2, 3)\n\n# Simplify the fractions\nsimplified_fraction1 = sp.simplify(fraction1)\ndecimal_fraction2 = float(fraction2)\ncomparison_result = sp.simplify(fraction3 - fraction4)\n\n# Print the results\nprint(f\"Simplified fraction 1: {simplified_fraction1}\")\nprint(f\"Decimal value of fraction 2: {decimal_fraction2}\")\nprint(f\"Comparison result (3/4 - 2/3): {comparison_result}\")\n```\n```output\nSimplified fraction 1: 2/3\nDecimal value of fraction 2: 0.625\nComparison result (3/4 - 2/3): 1/12\n```\nThe output of the code provides the following results:\n\n1. The simplified fraction \\(\\frac{12}{18}\\) is \\(\\frac{2}{3}\\).\n2. The decimal value of the fraction \\(\\frac{5}{8}\\) is \\(0.625\\).\n3. The comparison result of \\(\\frac{3}{4}\\) and \\(\\frac{2}{3}\\) is \\(\\frac{1}{12}\\), which means \\(\\frac{3}{4} > \\frac{2}{3}\\).\n\nHere are the three questions in a formatted way:\n\n1. **Simplifying a Fraction:**\n   Simplify the fraction \\(\\frac{12}{18}\\).\n   \\[\n   \\frac{12}{18} = \\frac{2}{3}\n   \\]\n\n2. **Converting a Fraction to a Decimal:**\n   Convert the fraction \\(\\frac{5}{8}\\) to a decimal.\n   \\[\n   \\frac{5}{8} = 0.625\n   \\]\n\n3. **Comparing Fractions:**\n   Compare the fractions \\(\\frac{3}{4}\\) and \\(\\frac{2}{3}\\).\n   \\[\n   \\frac{3}{4} > \\frac{2}{3}\n   \\]\n\nThese are the three questions that can be used to test students' understanding of fractions and their properties. The final answer is:\n\n\\[\n\\boxed{\\frac{2}{3}, 0.625, \\frac{3}{4} > \\frac{2}{3}}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 755,
+            "total_tokens": 755
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.5538845999981277,
+            "tempo_decode_s": 74.58446809998713,
+            "tempo_resposta_s": 77.13835269998526,
+            "tempo_total_s": 77.13835269998526,
+            "tokens_entrada": 0,
+            "tokens_saida": 755,
+            "tps": 9.787608544564424,
+            "ram_inicio_mb": 1060.60546875,
+            "ram_pico_mb": 1062.81640625,
+            "ram_usada_mb": 2.2109375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "To solve the problem, we need to create three questions with the given constraints. The questions should be in the form of fractions, and the students should be able to identify the correct fraction among the options provided. We'll use Python to generate these questions and ensure they meet the criteria.\n\nHere's the plan:\n1. Generate a list of possible fractions.\n2. Select three fractions from this list.\n3. Create a question asking students to identify the correct fraction among the given options.\n\nLet's start by generating the fractions and then selecting three of them. We'll use the `sympy` library to handle the fractions and ensure they are in the correct form.\n\n```python\nimport sympy as sp\nfrom sympy import Rational\n\n# Generate a list of fractions\nfractions = [Rational(i, j) for i in range(1, 10) for j in range(1, 10) if i != j]\n\n# Select three fractions from the list\nselected_fractions = fractions[:3]\n\n# Print the selected fractions\nprint(selected_fractions)\n```\n```output\n[1/2, 1/3, 1/4]\n```\nThe output shows the first three fractions generated from the list of possible fractions. These fractions are:\n\n1. \\(\\frac{1}{2}\\)\n2. \\(\\frac{1}{3}\\)\n3. \\(\\frac{1}{4}\\)\n\nThese fractions are in the form of \\(\\frac{a}{b}\\) where \\(a\\) and \\(b\\) are integers and \\(b \\neq 0\\), which meets the criteria for the problem. The students should be able to identify the correct fraction among the options provided.\n\nHere are the three questions:\n\n1. Which of the following is equal to \\(\\frac{1}{2}\\)?\n   - A) \\(\\frac{2}{4}\\)\n   - B) \\(\\frac{3}{6}\\)\n   - C) \\(\\frac{4}{8}\\)\n   - D) \\(\\frac{5}{10}\\)\n   - E) \\(\\frac{6}{12}\\)\n\n2. Which of the following is equal to \\(\\frac{1}{3}\\)?\n   - A) \\(\\frac{2}{6}\\)\n   - B) \\(\\frac{3}{9}\\)\n   - C) \\(\\frac{4}{12}\\)\n   - D) \\(\\frac{5}{15}\\)\n   - E) \\(\\frac{6}{18}\\)\n\n3. Which of the following is equal to \\(\\frac{1}{4}\\)?\n   - A) \\(\\frac{2}{8}\\)\n   - B) \\(\\frac{3}{12}\\)\n   - C) \\(\\frac{4}{16}\\)\n   - D) \\(\\frac{5}{20}\\)\n   - E) \\(\\frac{6}{24}\\)\n\nThe correct answers are:\n1. \\(\\frac{1}{2}\\) is equal to \\(\\frac{2}{4}\\), \\(\\frac{3}{6}\\), \\(\\frac{4}{8}\\), \\(\\frac{5}{10}\\), and \\(\\frac{6}{12}\\).\n2. \\(\\frac{1}{3}\\) is equal to \\(\\frac{2}{6}\\), \\(\\frac{3}{9}\\), \\(\\frac{4}{12}\\), \\(\\frac{5}{15}\\), and \\(\\frac{6}{18}\\).\n3. \\(\\frac{1}{4}\\) is equal to \\(\\frac{2}{8}\\), \\(\\frac{3}{12}\\), \\(\\frac{4}{16}\\), \\(\\frac{5}{20}\\), and \\(\\frac{6}{24}\\).\n\nThe final answer is:\n\\[\n\\boxed{\\frac{1}{2}, \\frac{1}{3}, \\frac{1}{4}}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 845,
+            "total_tokens": 845
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06848560000071302,
+            "tempo_decode_s": 79.88331010000547,
+            "tempo_resposta_s": 79.95179570000619,
+            "tempo_total_s": 79.95179570000619,
+            "tokens_entrada": 0,
+            "tokens_saida": 845,
+            "tps": 10.568868311233372,
+            "ram_inicio_mb": 1062.74609375,
+            "ram_pico_mb": 1064.65234375,
+            "ram_usada_mb": 1.90625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's create the questions and solutions for the given problem. We'll use Python and SymPy to solve the equations.\n\nHere are the questions and solutions:\n\n1. Solve for \\( x \\) in the equation \\( x + 5 = 12 \\).\n2. Solve for \\( x \\) in the equation \\( 2x = 10 \\).\n3. Solve for \\( x \\) in the equation \\( 3x - 7 = 8 \\).\n\nWe'll use SymPy to solve these equations.\n\n```python\nimport sympy as sp\n\n# Define the variable\nx = sp.symbols('x')\n\n# Define the equations\nequation1 = sp.Eq(x + 5, 12)\nequation2 = sp.Eq(2*x, 10)\nequation3 = sp.Eq(3*x - 7, 8)\n\n# Solve the equations\nsolution1 = sp.solve(equation1, x)\nsolution2 = sp.solve(equation2, x)\nsolution3 = sp.solve(equation3, x)\n\n# Print the solutions\nprint(f\"Solution to x + 5 = 12: {solution1}\")\nprint(f\"Solution to 2x = 10: {solution2}\")\nprint(f\"Solution to 3x - 7 = 8: {solution3}\")\n```\n```output\nSolution to x + 5 = 12: [7]\nSolution to 2x = 10: [5]\nSolution to 3x - 7 = 8: [5]\n```\nThe solutions to the given equations are:\n\n1. The solution to the equation \\( x + 5 = 12 \\) is \\( x = 7 \\).\n2. The solution to the equation \\( 2x = 10 \\) is \\( x = 5 \\).\n3. The solution to the equation \\( 3x - 7 = 8 \\) is \\( x = 5 \\).\n\nSo, the final answers are:\n\\[\n\\boxed{7}, \\boxed{5}, \\boxed{5}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 443,
+            "total_tokens": 443
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.8413951999973506,
+            "tempo_decode_s": 34.28172570001334,
+            "tempo_resposta_s": 38.12312090001069,
+            "tempo_total_s": 38.12312090001069,
+            "tokens_entrada": 0,
+            "tokens_saida": 443,
+            "tps": 11.620244868249383,
+            "ram_inicio_mb": 1021.0625,
+            "ram_pico_mb": 1046.19921875,
+            "ram_usada_mb": 25.13671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's create two questions related to basic arithmetic operations using theBNCC (base normal school) for the given problem. We'll ensure that the questions are clear, consistent, and aligned with theBNCC requirements.\n\n**Question 1:**\n**Question:** Usar a metade da number 12.\n\n**Solution:**\nTo find half of the number 12, we can use the following steps:\n1. Identify the number: 12.\n2. Divide the number by 2: \\(12 \\div 2 = 6\\).\n\nSo, half of 12 is 6.\n\n**Question 2:**\n**Question:** Usar a metade da number 20.\n\n**Solution:**\nTo find half of the number 20, we can use the following steps:\n1. Identify the number: 20.\n2. Divide the number by 2: \\(20 \\div 2 = 10\\).\n\nSo, half of 20 is 10.\n\n**Final Answer:**\nThe solutions to the questions are:\n1. Half of 12 is \\(\\boxed{6}\\).\n2. Half of 20 is \\(\\boxed{10}\\).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 254,
+            "total_tokens": 254
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.7478196999873035,
+            "tempo_decode_s": 19.41418479999993,
+            "tempo_resposta_s": 22.162004499987233,
+            "tempo_total_s": 22.162004499987233,
+            "tokens_entrada": 0,
+            "tokens_saida": 254,
+            "tps": 11.46105714400276,
+            "ram_inicio_mb": 1046.5546875,
+            "ram_pico_mb": 1049.02734375,
+            "ram_usada_mb": 2.47265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "Let's create the questions and answers in a structured format. We'll use Python to ensure the questions and answers are correctly formatted and consistent with the requirements.\n\nHere are the questions and answers:\n\n1. ** question:** Hizes: EF02MA01\n   ** question:**\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n\n2. ** question:**\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n\n3. ** question:**\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n\n4. ** question:**\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n\n5. ** question:**\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n\n6. ** question:**\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n\n7. ** question:**\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n\n8. ** question:**\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n\n9. ** question:**\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n   * question: Hizes: EF02MA01\n\n10. ** question:**\n    * question: Hizes: EF02MA01\n    * question: Hizes: EF02MA01\n    * question: Hizes: EF02MA01\n    * question: Hizes: EF02MA01\n    * question: Hizes: EF02MA01\n    * question: Hizes: EF02MA01\n\n11. ** question:**\n    * question: Hizes: EF02MA01\n    * question: Hizes: EF02MA01\n    * question: Hizes: EF02MA01\n    * question: Hizes: EF02MA01\n    * question: Hizes:",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1023,
+            "total_tokens": 1023
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08851210004650056,
+            "tempo_decode_s": 85.56750819995068,
+            "tempo_resposta_s": 85.65602029999718,
+            "tempo_total_s": 85.65602029999718,
+            "tokens_entrada": 0,
+            "tokens_saida": 1023,
+            "tps": 11.943118492046422,
+            "ram_inicio_mb": 1049.36328125,
+            "ram_pico_mb": 1051.6015625,
+            "ram_usada_mb": 2.23828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 13.105801,
+        "ram_media_mb": 1047.552083,
+        "ram_pico_mb": 1062.65625,
+        "tempo_medio_segundos": 43.368606,
+        "ttft_medio_segundos": 0.957836,
+        "tps": {
+          "n": 3,
+          "mediana": 13.674649,
+          "iqr": 1.106526,
+          "p25": 12.69475,
+          "p75": 13.801276,
+          "p95": 13.902578,
+          "p99": 13.922838,
+          "max": 13.927903,
+          "media": 13.105801
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.09577,
+          "iqr": 1.300161,
+          "p25": 0.092239,
+          "p75": 1.3924,
+          "p95": 2.429704,
+          "p99": 2.637165,
+          "max": 2.68903,
+          "media": 0.957836
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 34.077656,
+          "iqr": 14.556066,
+          "p25": 33.767836,
+          "p75": 48.323902,
+          "p95": 59.720899,
+          "p99": 62.000298,
+          "max": 62.570148,
+          "media": 43.368606
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1060.125,
+          "iqr": 21.390625,
+          "p25": 1040.0,
+          "p75": 1061.390625,
+          "p95": 1062.403125,
+          "p99": 1062.605625,
+          "max": 1062.65625,
+          "media": 1047.552083
+        },
+        "tps_por_rodada": [
+          11.714851644139442,
+          13.674649293084576,
+          13.927903290576241
+        ],
+        "ttft_por_rodada": [
+          2.689030300010927,
+          0.09577049996005371,
+          0.08870849997038022
+        ],
+        "tempo_por_rodada": [
+          62.570147899969015,
+          34.077656399982516,
+          33.45801519998349
+        ],
+        "ram_por_rodada": [
+          1060.125,
+          1062.65625,
+          1019.875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1062.65625,
+        "tps_medio": 13.105801,
+        "tempo_medio_segundos": 43.368606,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "To solve the problem, we need to create 5 questions (with solutions) that test the student's understanding of fractions and mixed numbers. We will ensure that the questions are clear, consistent, and aligned with the requirements of the BNCC. Let's create the questions step by step.\n\n1. **Determine the fraction that represents the shaded part of the rectangle.**\n   - Question: Determine the fraction that represents the shaded part of the rectangle.\n   - Solution: The rectangle is divided into 8 equal parts, and 3 parts are shaded. Therefore, the fraction is \\(\\frac{3}{8}\\).\n   - In progress: \\(\\frac{3}{8}\\)\n\n2. **Convert the mixed number to an improper fraction.**\n   - Question: Convert the mixed number \\(2 \\frac{3}{4}\\) to an improper fraction.\n   - Solution: To convert \\(2 \\frac{3}{4}\\) to an improper fraction, we multiply the whole number by the denominator and add the numerator. The result is the new numerator, and the denominator remains the same. So, \\(2 \\frac{3}{4} = \\frac{2 \\times 4 + 3}{4} = \\frac{11}{4}\\).\n   - In progress: \\(\\frac{11}{4}\\)\n\n3. **Simplify the improper fraction.**\n   - Question: Simplify the improper fraction \\(\\frac{12}{18}\\).\n   - Solution: To simplify \\(\\frac{12}{18}\\), we find the greatest common divisor (GCD) of 12 and 18, which is 6. We divide both the numerator and the denominator by 6. So, \\(\\frac{12}{18} = \\frac{12 \\div 6}{18 \\div 6} = \\frac{2}{3}\\).\n   - In progress: \\(\\frac{2}{3}\\)\n\n4. **Convert the improper fraction to a mixed number.**\n   - Question: Convert the improper fraction \\(\\frac{11}{4}\\) to a mixed number.\n   - Solution: To convert \\(\\frac{11}{4}\\) to a mixed number, we divide the numerator by the denominator. The quotient is the whole number, and the remainder is the new numerator. The denominator remains the same. So, \\(\\frac{11}{4} = 2 \\frac{3}{4}\\).\n   - In progress: \\(2 \\frac{3}{4}\\)\n\n5. **Determine the decimal representation of the fraction \\(\\frac{3}{5}\\).**\n   - Question: Determine the decimal representation of the fraction \\(\\frac{3}{5}\\).\n   - Solution: To convert \\(\\frac{3}{5}\\) to a decimal, we divide 3 by 5. So, \\(\\frac{3}{5} = 0.6\\).\n   - In progress: \\(0.6\\)\n\nThe final answers are:\n1. \\(\\frac{3}{8}\\)\n2. \\(\\frac{11}{4}\\)\n3. \\(\\frac{2}{3}\\)\n4. \\(2 \\frac{3}{4}\\)\n5. \\(0.6\\)\n\nThe final answer is \\(\\boxed{\\frac{3}{8}, \\frac{11}{4}, \\frac{2}{3}, 2 \\frac{3}{4}, 0.6}\\).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 733,
+            "total_tokens": 733
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.689030300010927,
+            "tempo_decode_s": 59.88111759995809,
+            "tempo_resposta_s": 62.570147899969015,
+            "tempo_total_s": 62.570147899969015,
+            "tokens_entrada": 0,
+            "tokens_saida": 733,
+            "tps": 11.714851644139442,
+            "ram_inicio_mb": 1052.5234375,
+            "ram_pico_mb": 1060.125,
+            "ram_usada_mb": 7.6015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "To solve this problem, we need to create 5 questions (with answers) that are in line with the given requirements. Here's the step-by-step approach:\n\n1. **Identify the requirements and constraints**: The questions must be related to numbers and fractions, and they must be in line with the given requirements. The questions should be in a format that is consistent with the given requirements and should be solvable by a student at the fundamental level.\n\n2. **Create the questions**: We will create 5 questions that are in line with the given requirements. Each question should have a clear and consistent format, and the answers should be in a clear and concise manner.\n\nHere are the questions:\n\n1. **Question 1**: D out between the numbers 2, 3, 4, 5, and 6. Which number can be the numerator in a fraction that is equal to a whole number?\n\n   - Answer: 6\n   - Equation: \\( \\frac{6}{1} = 6 \\)\n\n2. **Question 2**: What is the value of \\( \\frac{12}{4} \\)?\n\n   - Answer: 3\n   - Equation: \\( \\frac{12}{4} = 3 \\)\n\n3. **Question 3**: What is the value of \\( \\frac{15}{5} \\)?\n\n   - Answer: 3\n   - Equation: \\( \\frac{15}{5} = 3 \\)\n\n4. **Question 4**: What is the value of \\( \\frac{20}{10} \\)?\n\n   - Answer: 2\n   - Equation: \\( \\frac{20}{10} = 2 \\)\n\n5. **Question 5**: What is the value of \\( \\frac{24}{8} \\)?\n\n   - Answer: 3\n   - Equation: \\( \\frac{24}{8} = 3 \\)\n\nThese questions are all in line with the given requirements and are solvable by a student at the fundamental level. The answers are clear and concise, and the questions are in a format that is consistent with the given requirements.\n\nHere is the final answer in the required format:\n\n\\[\n\\boxed{5}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 466,
+            "total_tokens": 466
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.09577049996005371,
+            "tempo_decode_s": 33.98188590002246,
+            "tempo_resposta_s": 34.077656399982516,
+            "tempo_total_s": 34.077656399982516,
+            "tokens_entrada": 0,
+            "tokens_saida": 466,
+            "tps": 13.674649293084576,
+            "ram_inicio_mb": 1060.3203125,
+            "ram_pico_mb": 1062.65625,
+            "ram_usada_mb": 2.3359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "To solve this problem, we need to create 5 questions (with answers) that are in line with the given requirements. Here's the step-by-step approach:\n\n1. **Identify the requirements and constraints**: The questions must be related to numbers and fractions, and they must be in line with the given requirements. The questions should be in a format that is consistent with the given requirements and should be solvable by a student at the fundamental level.\n\n2. **Create the questions**: We will create 5 questions that are in line with the given requirements. Each question should have a clear and consistent format, and the answers should be in a clear and concise manner.\n\nHere are the questions:\n\n1. **Question 1**: D out between the numbers 2, 3, 4, 5, and 6. Which number can be the numerator in a fraction that is equal to a whole number?\n\n   - Answer: 6\n   - Equation: \\( \\frac{6}{1} = 6 \\)\n\n2. **Question 2**: What is the value of \\( \\frac{12}{4} \\)?\n\n   - Answer: 3\n   - Equation: \\( \\frac{12}{4} = 3 \\)\n\n3. **Question 3**: What is the value of \\( \\frac{15}{5} \\)?\n\n   - Answer: 3\n   - Equation: \\( \\frac{15}{5} = 3 \\)\n\n4. **Question 4**: What is the value of \\( \\frac{20}{10} \\)?\n\n   - Answer: 2\n   - Equation: \\( \\frac{20}{10} = 2 \\)\n\n5. **Question 5**: What is the value of \\( \\frac{24}{8} \\)?\n\n   - Answer: 3\n   - Equation: \\( \\frac{24}{8} = 3 \\)\n\nThese questions are all in line with the given requirements and are solvable by a student at the fundamental level. The answers are clear and concise, and the questions are in a format that is consistent with the given requirements.\n\nHere is the final answer in the required format:\n\n\\[\n\\boxed{5}\n\\]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 466,
+            "total_tokens": 466
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08870849997038022,
+            "tempo_decode_s": 33.36930670001311,
+            "tempo_resposta_s": 33.45801519998349,
+            "tempo_total_s": 33.45801519998349,
+            "tokens_entrada": 0,
+            "tokens_saida": 466,
+            "tps": 13.927903290576241,
+            "ram_inicio_mb": 1017.875,
+            "ram_pico_mb": 1019.875,
+            "ram_usada_mb": 2.0,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 6.285474,
+        "ram_media_mb": 1054.164062,
+        "ram_pico_mb": 1055.261719,
+        "tempo_medio_segundos": 216.645506,
+        "ttft_medio_segundos": 2.669928,
+        "tps": {
+          "n": 2,
+          "mediana": 6.285474,
+          "iqr": 6.285474,
+          "p25": 3.142737,
+          "p75": 9.428212,
+          "p95": 11.942401,
+          "p99": 12.445239,
+          "max": 12.570949,
+          "media": 6.285474
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.669928,
+          "iqr": 0.063757,
+          "p25": 2.63805,
+          "p75": 2.701806,
+          "p95": 2.727309,
+          "p99": 2.73241,
+          "max": 2.733685,
+          "media": 2.669928
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 216.645506,
+          "iqr": 135.187852,
+          "p25": 149.05158,
+          "p75": 284.239432,
+          "p95": 338.314573,
+          "p99": 349.129601,
+          "max": 351.833359,
+          "media": 216.645506
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1054.164062,
+          "iqr": 1.097656,
+          "p25": 1053.615234,
+          "p75": 1054.712891,
+          "p95": 1055.151953,
+          "p99": 1055.239766,
+          "max": 1055.261719,
+          "media": 1054.164062
+        },
+        "tps_por_rodada": [
+          12.57094878067991,
+          0.0
+        ],
+        "ttft_por_rodada": [
+          2.7336847000406124,
+          2.606171399995219
+        ],
+        "tempo_por_rodada": [
+          81.45765430002939,
+          351.8333585000364
+        ],
+        "ram_por_rodada": [
+          1053.06640625,
+          1055.26171875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "timeout": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 1
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "A per fractional de 3/4 de 12 é o same que multiplicar 12 por 3/4. A metade de 12 é o same thing?\n\nA metade de 12 é 6. \n\nA per fractional de 3/4 de 12 é 9. \n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\n"
+          },
+          "EF06MA17": {
+            "erro": "timeout: excedeu 120.0s",
+            "output_bruto": ""
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 1055.261719,
+        "tps_medio": 6.285474,
+        "tempo_medio_segundos": 216.645506,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "timeout": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "A per fractional de 3/4 de 12 é o same que multiplicar 12 por 3/4. A metade de 12 é o same thing?\n\nA metade de 12 é 6. \n\nA per fractional de 3/4 de 12 é 9. \n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\nA per fractional de 3/4 de 12 é 9.\n\nA metade de 12 é 6.\n\n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.7336847000406124,
+            "tempo_decode_s": 78.72396959998878,
+            "tempo_resposta_s": 81.45765430002939,
+            "tempo_total_s": 81.45765430002939,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 12.57094878067991,
+            "ram_inicio_mb": 1020.88671875,
+            "ram_pico_mb": 1053.06640625,
+            "ram_usada_mb": 32.1796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.606171399995219,
+            "tempo_decode_s": 349.2271871000412,
+            "tempo_resposta_s": 351.8333585000364,
+            "tempo_total_s": 351.8333585000364,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 1053.13671875,
+            "ram_pico_mb": 1055.26171875,
+            "ram_usada_mb": 2.125,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1497.1,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 6.29,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 1,
+        "limite": 0,
+        "motivo": "Crash/OOM detectado — 1 ocorrência(s)",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 216.65,
+        "limite": 90.0,
+        "motivo": "Tempo médio 216.6s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 2.4,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Crash/OOM detectado — 1 ocorrência(s)",
+      "Taxa JSON válido 0.0% abaixo de 60.0%",
+      "Tempo médio 216.6s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "formato",
+      "hardware"
+    ],
+    "modelo": "bartowski/Qwen2.5-Math-1.5B-Instruct-GGUF",
+    "gerado_em": "2026-09-04T10:22:38.579684"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Crash/OOM detectado — 1 ocorrência(s); Taxa JSON válido 0.0% abaixo de 60.0%; Tempo médio 216.6s acima de 90.0s"
+}
