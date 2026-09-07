@@ -1,0 +1,1208 @@
+{
+  "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+  "formato": "gguf",
+  "data": "05/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--DeepSeek-R1-Distill-Qwen-1.5B-GGUF\\DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf"
+    },
+    "seed": 123,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 123
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 123
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.47,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Qual fractional decimal equivalente a 3/4?",
+            "alternativas": {
+              "A": "0,75",
+              "B": "0,8",
+              "C": "0,6",
+              "D": "0,7",
+              "E": "0,65"
+            },
+            "resposta_correta": "A",
+            "resolucao_passo_a_passo": "Primeiro, divido 3 por 4. 4 into 3 zero vezes, adicionando um zero na frente do 3 para obter 30. 4 into 30 seven vezes (7*4=28), subtraído 28 de 30, obtendo 2. Adicionando um zero na frente da 2 para obter 20. 4 into 20 five vezes (5*4=20), subtraído 20 de 20, obtendo zero. Portanto, 3 dividido por 4 é 0,75. \n\nPortanto, a alternativa correta é A."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 0.963300499948673,
+        "tempo_prefill_s": 10.7641425000038,
+        "tempo_decode_s": 47.91143119998742,
+        "tempo_resposta_s": 58.67557369999122,
+        "tempo_total_s": 59.63887419993989,
+        "tokens_entrada": 0,
+        "tokens_saida": 729,
+        "tps": 12.424250058932259,
+        "ram_inicio_mb": 64.3671875,
+        "ram_pico_mb": 1750.9609375,
+        "ram_usada_mb": 1686.59375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 59.63887419993989,
+        "tempo_carregamento_s": 0.963300499948673,
+        "tempo_resposta_s": 58.67557369999122,
+        "ram_pico_mb": 1750.9609375,
+        "ram_inicio_mb": 64.3671875,
+        "ttft_segundos": 10.7641425000038,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, I need to create a multiple-choice question for fifth-grade math based on the Common Core Standard EF09MA01. This standard is about converting between equivalent forms of fractions, decimals, and percents. \n\nFirst, I should think about what kind of question would be appropriate for fifth graders. Maybe something about converting fractions to decimals. That seems manageable.\n\nI should pick a fraction that can be easily converted to a decimal. Let's go with 3/4. It's a common fraction that converts to 0.75, which is a terminating decimal. That should be straightforward.\n\nNow, I need to create the question. It should ask which decimal is equivalent to 3/4. The options should include 0.75, 0.8, 0.6, and 0.7. These are typical choices for fifth graders to test their understanding of fraction to decimal conversions.\n\nNext, I need to write the response. The correct answer is A, which is 0.75. I have to explain the steps clearly. First, divide 3 by 4. 4 goes into 3 zero times, so add a decimal and a zero, making it 30. 4 goes into 30 seven times (7*4=28), subtract 28 from 30, you get 2. Bring down another zero, making it 20. 4 goes into 20 five times (5*4=20), subtract 20, you get 0. So, 3 divided by 4 is 0.75. Therefore, the answer is A.\n\nI should make sure the question is clear and that the options are plausible. The other options are common mistakes students might make, like 0.8 which is too high, or 0.6 which is too low. 0.7 is a middle option, so it's good to include it as a distractor.\n\nI also need to ensure that the answer is correct and that the reasoning flows logically. Each step should be explained in a way that fifth graders can follow without confusion.\n\nFinally, I'll structure the JSON as specified, making sure there are no extra explanations and that each question is in its own array.\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual fractional decimal equivalente a 3/4?\",\n            \"alternativas\": {\n                \"A\": \"0,75\",\n                \"B\": \"0,8\",\n                \"C\": \"0,6\",\n                \"D\": \"0,7\",\n                \"E\": \"0,65\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Primeiro, divido 3 por 4. 4 into 3 zero vezes, adicionando um zero na frente do 3 para obter 30. 4 into 30 seven vezes (7*4=28), subtraído 28 de 30, obtendo 2. Adicionando um zero na frente da 2 para obter 20. 4 into 20 five vezes (5*4=20), subtraído 20 de 20, obtendo zero. Portanto, 3 dividido por 4 é 0,75. \\n\\nPortanto, a alternativa correta é A.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 729,
+            "total_tokens": 729
+          },
+          "metrics": {
+            "tempo_carregamento_s": 0.963300499948673,
+            "tempo_prefill_s": 10.7641425000038,
+            "tempo_decode_s": 47.91143119998742,
+            "tempo_resposta_s": 58.67557369999122,
+            "tempo_total_s": 59.63887419993989,
+            "tokens_entrada": 0,
+            "tokens_saida": 729,
+            "tps": 12.424250058932259,
+            "ram_inicio_mb": 64.3671875,
+            "ram_pico_mb": 1750.9609375,
+            "ram_usada_mb": 1686.59375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 14.554058,
+          "iqr": 0.300671,
+          "p25": 14.459772,
+          "p75": 14.760442,
+          "p95": 14.974957,
+          "p99": 14.996275,
+          "max": 15.001605,
+          "media": 14.614892
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.207596,
+          "iqr": 1.70431,
+          "p25": 0.587928,
+          "p75": 2.292238,
+          "p95": 2.885559,
+          "p99": 3.26645,
+          "max": 3.361672,
+          "media": 1.69871
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 68.843734,
+          "iqr": 9.190118,
+          "p25": 61.627152,
+          "p75": 70.81727,
+          "p95": 71.408689,
+          "p99": 71.742786,
+          "max": 71.826311,
+          "media": 65.325868
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1762.222656,
+          "iqr": 8.46875,
+          "p25": 1757.963867,
+          "p75": 1766.432617,
+          "p95": 1769.90625,
+          "p99": 1770.58125,
+          "max": 1770.75,
+          "media": 1762.13125
+        },
+        "tps_medio": 14.614892,
+        "ttft_medio_segundos": 1.69871,
+        "tempo_medio_segundos": 65.325868,
+        "ram_pico_mb": 1770.75
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 14.554058,
+          "iqr": 0.300671,
+          "p25": 14.459772,
+          "p75": 14.760442,
+          "p95": 14.974957,
+          "p99": 14.996275,
+          "max": 15.001605,
+          "media": 14.614892
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.207596,
+          "iqr": 1.70431,
+          "p25": 0.587928,
+          "p75": 2.292238,
+          "p95": 2.885559,
+          "p99": 3.26645,
+          "max": 3.361672,
+          "media": 1.69871
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 68.843734,
+          "iqr": 9.190118,
+          "p25": 61.627152,
+          "p75": 70.81727,
+          "p95": 71.408689,
+          "p99": 71.742786,
+          "max": 71.826311,
+          "media": 65.325868
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1762.222656,
+          "iqr": 8.46875,
+          "p25": 1757.963867,
+          "p75": 1766.432617,
+          "p95": 1769.90625,
+          "p99": 1770.58125,
+          "max": 1770.75,
+          "media": 1762.13125
+        },
+        "tps_medio": 14.614892,
+        "ttft_medio_segundos": 1.69871,
+        "tempo_medio_segundos": 65.325868,
+        "ram_pico_mb": 1770.75,
+        "tps_por_rodada": [
+          14.256614165407905,
+          14.49059123221899,
+          14.561240351808348,
+          14.449498484219765,
+          14.792447145209808,
+          14.54687624546616,
+          14.942388416424741,
+          14.443231303911181,
+          14.66442766540026,
+          15.001604615534491
+        ],
+        "ttft_por_rodada": [
+          3.3616722999722697,
+          2.3036433000233956,
+          2.1905351000023074,
+          2.2987536000437103,
+          0.0722245000069961,
+          2.135038700012956,
+          0.06351350003387779,
+          2.272691899968777,
+          2.224655999976676,
+          0.06437140004709363
+        ],
+        "tempo_por_rodada": [
+          71.826310799981,
+          70.66654380003456,
+          59.335604599968065,
+          70.86751150002237,
+          69.22451640001964,
+          59.39419469999848,
+          68.46295060002012,
+          70.89826220000396,
+          44.25675619998947,
+          68.32602420001058
+        ],
+        "ram_por_rodada": [
+          1753.0546875,
+          1755.40625,
+          1757.52734375,
+          1759.2734375,
+          1761.296875,
+          1763.1484375,
+          1765.10546875,
+          1766.875,
+          1768.875,
+          1770.75
+        ],
+        "ram_media_mb": 1762.13125
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso identificar quais são os conceitos e habilidades que são abordados no enunciado. O enunciado pede que identifique os números que não podem ser escrito na forma de uma fração a/b, com a e b inteiros e b ≠ 0.\n\nEm um nível fundamental, é importante que o aluno understanda o que é uma fração e que não todos os números podem ser expressos da forma de uma fração. Por exemplo, números decimais que não podem ser expressos como fracionais, ou números inteiros que não podem ser expressos como fracionais.\n\nPara resolver cada questão, preciso identificar um número que não pode ser escrito na forma de uma fração. Isso pode ser um número inteiro, um número decimal que não é inteiro, ou um número que não tem uma parte fractional.\n\nVou criar 3 questões diferentes para testar diferentes conceitos. A primeira questão pode ser sobre números decimais que não podem ser expressos como fracionais, como 0,25. A segunda questão pode ser sobre números inteiros que não podem ser expressos como fracionais, como 5. A terça questão pode ser sobre números decimais que não podem ser expressos como fracionais, como 0,7.\n\nPara cada questão, preciso definir os conceitos e habilidades que são abordados. Isso inclui a compreensão de fracionares, o reconhecimento de números decimais, e a identificação de números que não podem ser expressos da forma de uma fração.\n\nFinalmente, para cada questão, preciso definir o enunciado, as alternativas, a resolução passo a passo, e a resposta correta. Isso deve facilitar o aprendizado e a reinforcemento das habilidades.\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número não pode ser escrito na forma de uma fração a/b (com a e b inteiros e b ≠ 0)?\",\n            \"alternativas\": {\n                \"A\": \"0,25\",\n                \"B\": \"5\",\n                \"C\": \"0,7\",\n                \"D\": \"100\",\n                \"E\": \"200\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"0,25 pode ser escrito na forma de uma fração (1/4), 5 pode ser escrito como 5/1, 0,7 pode ser escrito como 7/10 e 100 pode ser escrito como 100/1. Porém, 0,25 pode ser escrito como 25/100, e 200 pode ser escrito como 200/1. No entanto, 100 pode ser escrito como 100/1, e 200 pode ser escrito como 200/1, e 0,25 pode ser escrito como 25/100. No entanto, 100 pode ser escrito como 100/1, e 200 pode ser escrito como 200/1, e 0,25 pode ser escrito como 25/100. No entanto, 100 pode ser escrito como 100/1, e 200 pode ser escrito como 200/1, e 0,25 pode ser escrito como 25/100. No entanto, 100 pode ser escrito como 100/1, e 200 pode ser escrito como 200/1, e 0,25 pode ser escrito como 25/100. No entanto, 100 pode ser escrito como 100/1, e 200 pode ser escrito como 200/1, e 0,25 pode ser escrito como 25/100. No entanto, 100 pode ser escrito como 100/1, e 200 pode ser escrito como 200/1, e 0,25 pode ser escrito como 25/100. No entanto, 100 pode ser escrito como 100/1, e 200 pode ser escrito como 200/1, e 0,25 pode ser escrito como 25/100. No entanto, 100 pode ser escrito",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.3616722999722697,
+            "tempo_decode_s": 68.46463850000873,
+            "tempo_resposta_s": 71.826310799981,
+            "tempo_total_s": 71.826310799981,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.256614165407905,
+            "ram_inicio_mb": 1750.8828125,
+            "ram_pico_mb": 1753.0546875,
+            "ram_usada_mb": 2.171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create three multiple-choice questions for a basic algebra unit. The specific skill here is solving simple equations, like x + 5 = 12. I should make sure each question is clear, relevant to the student's age, and not too hard. Let me start by thinking about different scenarios where a student might encounter this type of problem.\n\nFirst, maybe a question where they have to find the value of x directly. That makes sense. I'll set it up so that x is on one side and a number on the other. Next, perhaps a word problem that translates into an equation. That would help them apply their understanding to real-life situations. Lastly, maybe an equation where they need to check if a given value is correct. This could help reinforce the idea of plugging in values.\n\nI need to ensure that each question has plausible distractors that are easy to misselect. For example, in the first question, if I put \"x = 12\" as an option, that's obviously wrong. Then I can list other similar options to make it tricky. Similarly, in the word problem, the distractors should be plausible but incorrect options. And in the equation check, the distractors should be incorrect values that the student might think are correct.\n\nAlso, I should make sure that the answers are clearly marked as A, B, C, D, or E, with the correct one being \"A\". That way, the student knows which one is the right choice. I'll have to calculate each step carefully to avoid mistakes in the examples.\n\nLet me draft the first question: If x + 5 = 12, what is x? Then I'll create distractors that are close but incorrect. For the word problem, I'll set up a scenario where solving the equation makes sense. And for the equation check, I'll have options that are obviously wrong, like 12, 7, 0, or 5.\n\nI should also verify that the math is correct so that the examples are accurate. Maybe I'll solve each equation step by step to make sure the answers are right. Once I have all three questions ready, I'll format them correctly in the JSON structure provided.\n\nI need to remember to only include the JSON structure in the response and not add any extra text or explanations. Everything should be within the JSON format, with each question having its own \"enunciado\", \"alternativas\", \"resposta_correta\", and \"resolucao_passa_a_passo\". \n\nLastly, I'll make sure that each question is unique and in line with the pre-requisites, so that the student is not just repeating examples but actually learning new concepts. I'll also check that the language is clear and the questions are not too vague, so the student can understand what's being asked without confusion.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: x + 5 = 12.\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"12\",\n                \"C\": \"5\",\n                \"D\": \"17\",\n                \"E\": \"0\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para resolver x + 5 = 12, subtraímos 5 de ambos os lados. Portanto, x = 12 - 5 = 7.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Em um salário, após um aumento de R$ 10, o salário é de R$ 120. Quanto foi o salário antes do aumento?\",\n            \"alternativas\": {\n                \"A\": \"110\",\n                \"B\": \"115\",\n                \"C\": \"120\",\n                \"D\": \"125\",\n                \"E\": \"130\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Seja x o salário antes do aumento. O salário após o aumento é x + 10 = 120. Portanto, x = 120 - 10 = 110.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: 2x = 10.\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"7\",\n                \"C\": \"3\",\n                \"D\": \"8\",\n                \"E\": \"6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para resolver 2x = 10, dividimos ambos os lados por",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.3036433000233956,
+            "tempo_decode_s": 68.36290050001116,
+            "tempo_resposta_s": 70.66654380003456,
+            "tempo_total_s": 70.66654380003456,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.49059123221899,
+            "ram_inicio_mb": 1753.0390625,
+            "ram_pico_mb": 1755.40625,
+            "ram_usada_mb": 2.3671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso entender o que a habilidade EF09MA01 refers a. Isso se refere a aderência à conceitos de números, como frções, operações básicas e representações numéricas. Talvez este enunciado tenha que incluir questões que envolvam frções, operações básicas ou representações numéricas de números específicos.\n\nEm seguida, preciso garantir que as questões estejam alinhadas à base Nacional comum curricular (BNCC), que é importante que as questões estejam claras, contextuais e adequadas à faixa etária dos estudantes. Assim, não haja possibilidade de que uma resposta seja inválida ou confundida.\n\nDepois, vou criar 3 questões novas, cada uma com uma variedade de tópicos, como frções, operações básicas e representações numéricas, para garantir que o usuário tenha uma gama de problemas que permitam a compreensão da habilidade.\n\nFinalmente, preciso garantir que as resoluções passo a passo estejam bem-expladas, usando expressões claras e calculando os passos necessários para arrivelar à resposta correta. Além disso, o formato deve ser exato, usando markdown e estabelecendo o formato do JSON que o usuário precisaria para exibir as respostas de forma clara e organizada.\n\nPara terminar, vou revisar cada questão para garantir que elas estejam alinhadas à habilidade, que tenham uma variedade de tópicos, que sejam claras e que a resolução passo a passo esteja bem-explada. Isso me dará uma resposta que o usuárioze para testing e aprender.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \" qual é a representação decimal de 2/3?\",\n            \"alternativas\": {\n                \"A\": \"0,666...\",\n                \"B\": \"0,75\",\n                \"C\": \"0,666...\",\n                \"D\": \"0,75\",\n                \"E\": \"0,666...\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"convertir a fração 2/3 para decimal, dividindo 2 por 3, resultando em 0,666...\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \" qual é o resultado da operação 5 + 3 × 2?\",\n            \"alternativas\": {\n                \"A\": \"12\",\n                \"B\": \"8\",\n                \"C\": \"10\",\n                \"D\": \"7\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"segue as ordem das operações matemáticas, multiplicando 3 × 2 = 6, e adicionando 5 + 6 = 11. mas o resultado correto é 12. o erro está no cálculo de 3 × 2 = 6, o que resulta na resposta A.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \" qual é a representação decimal de 12,5%?\",\n            \"alternativas\": {\n                \"A\": \"0,125\",\n                \"B\": \"0,125\",\n                \"C\": \"0,125\",\n                \"D\": \"0,125\",\n                \"E\": \"0,125\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"convertir a porcentagem 12,5% para decimal, dividindo 12,5 por 100, resultando em 0,125\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 864,
+            "total_tokens": 864
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.1905351000023074,
+            "tempo_decode_s": 57.14506949996576,
+            "tempo_resposta_s": 59.335604599968065,
+            "tempo_total_s": 59.335604599968065,
+            "tokens_entrada": 0,
+            "tokens_saida": 864,
+            "tps": 14.561240351808348,
+            "ram_inicio_mb": 1755.328125,
+            "ram_pico_mb": 1757.52734375,
+            "ram_usada_mb": 2.19921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create three multiple-choice questions for a basic algebra unit. The specific skill here is solving simple equations, like x + 5 = 12. I should make sure each question is clear, relevant to the student's age, and not too hard. Let me start by thinking about different scenarios where a student might encounter this type of problem.\n\nFirst, maybe a question where they have to find the value of x directly. That makes sense. I'll set it up so that x is on one side and a number on the other. Next, perhaps a word problem that translates into an equation. That would help them apply their understanding to real-life situations. Lastly, maybe an equation where they need to check if a given value is correct. This could help reinforce the idea of plugging in values.\n\nI need to ensure that each question has plausible distractors that are easy to misselect. For example, in the first question, if I put \"x = 12\" as an option, that's obviously wrong. Then I can list other similar options to make it tricky. Similarly, in the word problem, the distractors should be plausible but incorrect options. And in the equation check, the distractors should be incorrect values that the student might think are correct.\n\nAlso, I should make sure that the answers are clearly marked as A, B, C, D, or E, with the correct one being \"A\". That way, the student knows which one is the right choice. I'll have to calculate each step carefully to avoid mistakes in the examples.\n\nLet me draft the first question: If x + 5 = 12, what is x? Then I'll create distractors that are close but incorrect. For the word problem, I'll set up a scenario where solving the equation makes sense. And for the equation check, I'll have options that are obviously wrong, like 12, 7, 0, or 5.\n\nI should also verify that the math is correct so that the examples are accurate. Maybe I'll solve each equation step by step to make sure the answers are right. Once I have all three questions ready, I'll format them correctly in the JSON structure provided.\n\nI need to remember to only include the JSON structure in the response and not add any extra text or explanations. Everything should be within the JSON format, with each question having its own \"enunciado\", \"alternativas\", \"resposta_correta\", and \"resolucao_passa_a_passo\". \n\nLastly, I'll make sure that each question is unique and in line with the pre-requisites, so that the student is not just repeating examples but actually learning new concepts. I'll also check that the language is clear and the questions are not too vague, so the student can understand what's being asked without confusion.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: x + 5 = 12.\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"12\",\n                \"C\": \"5\",\n                \"D\": \"17\",\n                \"E\": \"0\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para resolver x + 5 = 12, subtraímos 5 de ambos os lados. Portanto, x = 12 - 5 = 7.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Em um salário, após um aumento de R$ 10, o salário é de R$ 120. Quanto foi o salário antes do aumento?\",\n            \"alternativas\": {\n                \"A\": \"110\",\n                \"B\": \"115\",\n                \"C\": \"120\",\n                \"D\": \"125\",\n                \"E\": \"130\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Seja x o salário antes do aumento. O salário após o aumento é x + 10 = 120. Portanto, x = 120 - 10 = 110.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: 2x = 10.\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"7\",\n                \"C\": \"3\",\n                \"D\": \"8\",\n                \"E\": \"6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para resolver 2x = 10, dividimos ambos os lados por",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.2987536000437103,
+            "tempo_decode_s": 68.56875789997866,
+            "tempo_resposta_s": 70.86751150002237,
+            "tempo_total_s": 70.86751150002237,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.449498484219765,
+            "ram_inicio_mb": 1757.43359375,
+            "ram_pico_mb": 1759.2734375,
+            "ram_usada_mb": 1.83984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create three multiple-choice questions for a basic algebra unit. The goal is to assess EF06MA14, which I think stands for \"Equações Básicas\" or something similar. The pre-requisite is EF06MA01, which I believe is about solving one-step equations.\n\nFirst, I should understand what EF06MA01 entails. It likely involves equations where a number is added, subtracted, multiplied, or divided by a single number. So, I need to create questions that test these skills.\n\nLet me think of some basic equations:\n\n1. x + 5 = 12\n2. 2x = 10\n3. x/3 = 6\n\nThese are simple one-step equations, which should be good for testing the pre-requisite.\n\nNow, I need to create multiple-choice questions for each of these. Each question should have five options, with one correct answer and four incorrect ones. The incorrect answers should be plausible but based on common mistakes.\n\nFor the first equation, x + 5 = 12:\n\n- Correct answer: x = 7\n- Incorrect options could be:\n  - A: x = 5 (if someone subtracted instead of adding)\n  - B: x = 12 (if someone didn't move the 5)\n  - C: x = 17 (if someone multiplied 12 by 5)\n  - D: x = -5 (if someone subtracted 5 from both sides, but that's not right)\n  - E: x = 0 (if someone forgot to move the 5)\n\nFor the second equation, 2x = 10:\n\n- Correct answer: x = 5\n- Incorrect options could be:\n  - A: x = 2 (if someone divided by 2 instead of multiplying)\n  - B: x = 10 (if someone didn't move the 2)\n  - C: x = 1 (if someone subtracted 2 from both sides)\n  - D: x = 0 (if someone forgot to divide by 2)\n  - E: x = 5 (if someone made a calculation error)\n\nFor the third equation, x/3 = 6:\n\n- Correct answer: x = 18\n- Incorrect options could be:\n  - A: x = 6 (if someone multiplied instead of dividing)\n  - B: x = 12 (if someone didn't divide by 3)\n  - C: x = 3 (if someone multiplied 3 instead of dividing)\n  - D: x = 0 (if someone forgot to divide by 3)\n  - E: x = 9 (if someone divided by 2 instead of 3)\n\nI think these questions cover the basic operations and are appropriate for a pre-requisite. Now, I need to format them into the required JSON structure.\n\nWait, the user mentioned that the response should be in markdown and without additional text. So, I'll structure it as a JSON object with \"questoes\" containing an array of objects, each representing a question with \"enunciado\", \"alternativas\", \"resposta_correta\", and \"resolucao_passo_a_passo\".\n\nI should make sure each question is in the correct format and that the JSON is properly formatted. Also, I need to ensure that the keys are correctly named and that there are exactly three questions.\n\nLet me put it all together:\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: x + 5 = 12\",\n            \"alternativas\": {\n                \"A\": \"x = 5\",\n                \"B\": \"x = 12\",\n                \"C\": \"x = 17\",\n                \"D\": \"x = -5\",\n                \"E\": \"x = 0\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para resolver, subtraímos 5 de ambos os lados: x = 12 - 5 = 7.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: 2x = 10\",\n            \"alternativas\": {\n                \"A\": \"x = 2\",\n                \"B\": \"x = 10\",\n                \"C\": \"x = 1\",\n                \"D\": \"x = 0\",\n                \"E\": \"x = 5\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Dividindo ambos os lados por 2: x = 10 / 2 = 5.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"en",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0722245000069961,
+            "tempo_decode_s": 69.15229190001264,
+            "tempo_resposta_s": 69.22451640001964,
+            "tempo_total_s": 69.22451640001964,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.792447145209808,
+            "ram_inicio_mb": 1759.1796875,
+            "ram_pico_mb": 1761.296875,
+            "ram_usada_mb": 2.1171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso entender o que a habilidade EF09MA01 refers a. Isso se refere a aderência à conceitos de números, como frções, operações básicas e representações numéricas. Talvez este enunciado tenha que incluir questões que envolvam frções, operações básicas ou representações numéricas de números específicos.\n\nEm seguida, preciso garantir que as questões estejam alinhadas à base Nacional comum curricular (BNCC), que é importante que as questões estejam claras, contextuais e adequadas à faixa etária dos estudantes. Assim, não haja possibilidade de que uma resposta seja inválida ou confundida.\n\nDepois, vou criar 3 questões novas, cada uma com uma variedade de tópicos, como frções, operações básicas e representações numéricas, para garantir que o usuário tenha uma gama de problemas que permitam a compreensão da habilidade.\n\nFinalmente, preciso garantir que as resoluções passo a passo estejam bem-expladas, usando expressões claras e calculando os passos necessários para arrivelar à resposta correta. Além disso, o formato deve ser exato, usando markdown e estabelecendo o formato do JSON que o usuário precisaria para exibir as respostas de forma clara e organizada.\n\nPara terminar, vou revisar cada questão para garantir que elas estejam alinhadas à habilidade, que tenham uma variedade de tópicos, que sejam claras e que a resolução passo a passo esteja bem-explada. Isso me dará uma resposta que o usuárioze para testing e aprender.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \" qual é a representação decimal de 2/3?\",\n            \"alternativas\": {\n                \"A\": \"0,666...\",\n                \"B\": \"0,75\",\n                \"C\": \"0,666...\",\n                \"D\": \"0,75\",\n                \"E\": \"0,666...\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"convertir a fração 2/3 para decimal, dividindo 2 por 3, resultando em 0,666...\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \" qual é o resultado da operação 5 + 3 × 2?\",\n            \"alternativas\": {\n                \"A\": \"12\",\n                \"B\": \"8\",\n                \"C\": \"10\",\n                \"D\": \"7\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"segue as ordem das operações matemáticas, multiplicando 3 × 2 = 6, e adicionando 5 + 6 = 11. mas o resultado correto é 12. o erro está no cálculo de 3 × 2 = 6, o que resulta na resposta A.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \" qual é a representação decimal de 12,5%?\",\n            \"alternativas\": {\n                \"A\": \"0,125\",\n                \"B\": \"0,125\",\n                \"C\": \"0,125\",\n                \"D\": \"0,125\",\n                \"E\": \"0,125\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"convertir a porcentagem 12,5% para decimal, dividindo 12,5 por 100, resultando em 0,125\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 864,
+            "total_tokens": 864
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.135038700012956,
+            "tempo_decode_s": 57.25915599998552,
+            "tempo_resposta_s": 59.39419469999848,
+            "tempo_total_s": 59.39419469999848,
+            "tokens_entrada": 0,
+            "tokens_saida": 864,
+            "tps": 14.54687624546616,
+            "ram_inicio_mb": 1761.2734375,
+            "ram_pico_mb": 1763.1484375,
+            "ram_usada_mb": 1.875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso identificar quais são os números que devem ser escritos na forma de uma fração a/b. A habilidade EF09MA01 é focada em identificar números que não podem ser escritos na forma de uma fração a/b, com a e b inteiros e b ≠ 0.\n\nPara resolver isso, preciso identificar os números que são números decimais periódicos ou números decimais terminais. Isso é importante porque, na forma fractional, esses números podem ser escritos como frações.\n\nAssim, para cada questão, preciso escolher um número que é periódico ou terminado e writer o usuário um número que não é periódico ou terminado.\n\nPor exemplo, uma questão could ser:\n\n**Exemplo 1:**\n**Enunciado:** qualitative número não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\nA) 0,25  \nB) 0,333333...  \nC) 0,75  \nD) 1,25  \nE) 0,999999...\n\n**Resposta correta:** B) 0,333333...\n\nPreciso verificar que 0,333333... é periódico, portanto, não pode ser escrito na forma de uma fração a/b.\n\nOutro exemplo:\n\n**Exemplo 2:**\n**Enunciado:** qualitative número não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\nA) 0,5  \nB) 0,6  \nC) 0,8  \nD) 0,9  \nE) 0,25  \n\n**Resposta correta:** A) 0,5\n\nEssai:\n\nPreciso escolher números que são terminais e outros que são periódicos, para que não possam ser escritos na forma de uma fração a/b.\n\nPreciso garantir que o enunciado seja claro e que a faixa etária dos estudantes pode entender os conceitos.\n\nPreciso also garantir que as alternativas são plausíveis e que não haja respostas absurdas.\n\nPreciso também garantir que as alternativas incluem erros comuns dos alunos, como confusões entre 0,5 e 0,6, ou erros de cálculo, como 0,75 escrito como 0,8.\n\nPreciso also garantir que as resoluções passo a passo são claras e organizadas, com passos que facilitam a compreensão do aluno.\n\nPreciso also garantir que as resoluções passo a passo são didáticas, como dizer, \"Primeiro, identifique o tipo de número que está sendo tratado, e fortha, identifique o tipo de número que está sendo escrito na forma de uma fração a/b.\"\n\nPreciso também garantir que as resoluções passo a passo incluem passos que facilitam a compreensão do aluno, como passo 1: identificar o tipo de número, passo 2: determinar se o número é periódico ou terminado, passo 3: decider se é possível escalar na forma de uma fração a/b ou não.\n\nPreciso finalmente garantir que as resoluções passo a passo estejam bem-formadas, com expressões matemáticas claras e respostas numéricas corretas.\n\nPreciso também garantir que as resoluções passo a passo não contenham texto introdutório ou explicações teóricas, que ultrapassei da quadrada.\n\nPreciso também garantir que as resoluções passo a passo são variadas entre as alternativas, permitindo que o aluno encontre a resposta correta de suas próprias palavras.\n\nPreciso also garantir que as resoluções passo a passo são em português, como dizer, \"Primeiro passo: identificar o tipo de número que está sendo tratado, e fortha, identifique o tipo de número que está sendo escrito na forma de uma fração a/b.\"\n\nPreciso também garantir que os passos de cálculo são claros e organizados, com passos que facilitam a compreensão do aluno, como passo 1: identificar o tipo de número, passo 2: determinar se o número é periódico ou terminado, passo 3: decider se é possível escalar na forma de uma fração a/b ou não.\n\nPreciso finalmente garantir que as resoluções passo a passo este",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1023,
+            "total_tokens": 1023
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06351350003387779,
+            "tempo_decode_s": 68.39943709998624,
+            "tempo_resposta_s": 68.46295060002012,
+            "tempo_total_s": 68.46295060002012,
+            "tokens_entrada": 0,
+            "tokens_saida": 1023,
+            "tps": 14.942388416424741,
+            "ram_inicio_mb": 1763.05859375,
+            "ram_pico_mb": 1765.10546875,
+            "ram_usada_mb": 2.046875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create three multiple-choice questions for a basic algebra unit. The specific skill here is solving simple equations, like x + 5 = 12. I should make sure each question is clear, relevant to the student's age, and not too hard. Let me start by thinking about different scenarios where a student might encounter this type of problem.\n\nFirst, maybe a question where they have to find the value of x directly. That makes sense. I'll set it up so that x is on one side and a number on the other. Next, perhaps a word problem that translates into an equation. That would help them apply their understanding to real-life situations. Lastly, maybe an equation where they need to check if a given value is correct. This could help reinforce the idea of plugging in values.\n\nI need to ensure that each question has plausible distractors that are easy to misselect. For example, in the first question, if I put \"x = 12\" as an option, that's obviously wrong. Then I can list other similar options to make it tricky. Similarly, in the word problem, the distractors should be plausible but incorrect options. And in the equation check, the distractors should be incorrect values that the student might think are correct.\n\nAlso, I should make sure that the answers are clearly marked as A, B, C, D, or E, with the correct one being \"A\". That way, the student knows which one is the right choice. I'll have to calculate each step carefully to avoid mistakes in the examples.\n\nLet me draft the first question: If x + 5 = 12, what is x? Then I'll create distractors that are close but incorrect. For the word problem, I'll set up a scenario where solving the equation makes sense. And for the equation check, I'll have options that are obviously wrong, like 12, 7, 0, or 5.\n\nI should also verify that the math is correct so that the examples are accurate. Maybe I'll solve each equation step by step to make sure the answers are right. Once I have all three questions ready, I'll format them correctly in the JSON structure provided.\n\nI need to remember to only include the JSON structure in the response and not add any extra text or explanations. Everything should be within the JSON format, with each question having its own \"enunciado\", \"alternativas\", \"resposta_correta\", and \"resolucao_passa_a_passo\". \n\nLastly, I'll make sure that each question is unique and in line with the pre-requisites, so that the student is not just repeating examples but actually learning new concepts. I'll also check that the language is clear and the questions are not too vague, so the student can understand what's being asked without confusion.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: x + 5 = 12.\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"12\",\n                \"C\": \"5\",\n                \"D\": \"17\",\n                \"E\": \"0\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para resolver x + 5 = 12, subtraímos 5 de ambos os lados. Portanto, x = 12 - 5 = 7.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Em um salário, após um aumento de R$ 10, o salário é de R$ 120. Quanto foi o salário antes do aumento?\",\n            \"alternativas\": {\n                \"A\": \"110\",\n                \"B\": \"115\",\n                \"C\": \"120\",\n                \"D\": \"125\",\n                \"E\": \"130\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Seja x o salário antes do aumento. O salário após o aumento é x + 10 = 120. Portanto, x = 120 - 10 = 110.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: 2x = 10.\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"7\",\n                \"C\": \"3\",\n                \"D\": \"8\",\n                \"E\": \"6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para resolver 2x = 10, dividimos ambos os lados por",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.272691899968777,
+            "tempo_decode_s": 68.62557030003518,
+            "tempo_resposta_s": 70.89826220000396,
+            "tempo_total_s": 70.89826220000396,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.443231303911181,
+            "ram_inicio_mb": 1765.046875,
+            "ram_pico_mb": 1766.875,
+            "ram_usada_mb": 1.828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso entender o que a habilidade EF02MA01 se refere à. De acordo com o exemplo fornecido, parece que a habilidade envolve o uso da reta numérica para identificar números entre dois outros. Assim, o objetivo é garantir que o aluno possa identificar números entre dois valores reais, usando a reta numérica como fonte.\n\nPara criar duas questões de múltipla escolha, cada uma deve ser distante de um dos alunos, garantindo que cada uma tenha um objetivo distante. Vou criar cada uma uma questão differente, usando diferentes números para entrerir.\n\nPrimeiro questão: entre 10 e 15.\n\nSegunda questão: entre 20 e 25.\n\nPara resolver cada questão, preciso descrever como a reta numérica pode ser utilizada para identificar o número intermediário. Assim, o aluno deve descrever ou descrever passo a passo como identificaria o número intermediário entre dois valores.\n\nEm seguida, para eacher a precisão, vou definir a resposta correta para cada questão, e descrever o passo a passo de resolver cada uma, usando expressões claras e formatos consistentes.\n\nTambém preciso garantir que cada questão tenha mais de um opção correta, para facilitar o trecho de resolução e evitar que o aluno confunda os resultados.\n\nFinalmente, vou estruturar o JSON com as questões, their alternativas, as resoluções passo a passo e a resposta correta, garantindo que cada uma tenha sido coletada de maneira consistente e clara.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre 10 e 15, qual número está entre os dois)\",\n            \"alternativas\": {\n                \"A\": \"12\",\n                \"B\": \"13\",\n                \"C\": \"14\",\n                \"D\": \"11\",\n                \"E\": \"15\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para identificar a número entre 10 e 15,绘制一个数轴从0到20，找到10和15之间的中间点，即12。因此，答案是A。\"\n        },\n        {\n            \"enunciado\": \"Entre 20 e 25, qual número está entre os dois)\",\n            \"alternativas\": {\n                \"A\": \"21\",\n                \"B\": \"22\",\n                \"C\": \"23\",\n                \"D\": \"24\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"绘制一个数轴从0到30，找到20和25之间的中间点，即22。因此，答案是A。\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 649,
+            "total_tokens": 649
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.224655999976676,
+            "tempo_decode_s": 42.03210020001279,
+            "tempo_resposta_s": 44.25675619998947,
+            "tempo_total_s": 44.25675619998947,
+            "tokens_entrada": 0,
+            "tokens_saida": 649,
+            "tps": 14.66442766540026,
+            "ram_inicio_mb": 1766.78125,
+            "ram_pico_mb": 1768.875,
+            "ram_usada_mb": 2.09375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso entender o que a habilidade EF02MA01 significa. Isso refere à adição de números inteiros, com o objetivo de identificar o número que está entre os dois fornecidos. Talvez seja importante que o usuário faa uma lista de números que o aluno deve identificar o número que está entre os dois fornecidos.\n\nEm seguida, preciso criar duas questões de múltipla escolha, cada com five opções, de forma que o aluno tenha que escolher a correta. De acordo com o exemplo fornecido, o enunciado deve ser claro e contextualizado, adentura do aluno, e a resposta correta deve ser destacada.\n\nTambém preciso garantir que as alternativas possam incluir erros comuns dos alunos, como acertar um número outro ou errar em uma operação simples, para facilitar a identificação do erro.\n\nDepois, devo redigir a resolução passo a passo, mostrando o cálculo passo a passo de forma didática, como faria um professor explicando para o aluno.\n\nFinalmente, preciso calibrar a dificuldade das questões, destacando os conceitos listados em pré-requisitos, mas não using os focos centrais das questões, e garantir que a resposta correta seja distribuída de forma variada entre as opções A, B, C, D e E.\n\nDepois de montar as duas questões, preciso garantir que as resoluções passo a passo sejam claras e organizadas, e que a resposta correta seja destacada.\n\nFinalmente, para garantir que a resposta correta seja A, preciso verificar que a opção A é a correta e que a resolução passo a passo se corretamente mostre a passo a passo da resolução.\n\nEntão, vou criar duas questões de múltipla escolha, de forma que cada uma tenha um número intermedio entre dois outros, e os alunos precisam identificar o número corretamente.\n\nEm seguida, preciso redigir a resolução passo a passo de cada uma as questões, mostrando o cálculo passo a passo, e garantir que a resposta correta seja destacada.\n\nDepois, preciso garantir que as alternativas sejam clara e coletivas, incluindo erros comuns dos alunos, e que a resposta correta seja destacada.\n\nDepois, preciso garantir que as questões estejam alinhadas à habilidade da BNCC EF02MA01, bem como em formato markdown, e que a resposta correta seja destacada.\n\nEm conclusão, preciso garantir que a resposta correta seja destacada, o enunciado seja claro e contextualizado, e que as alternativas sejam coletivas e incluíssem os erros comuns dos alunos.\n\nDepois, preciso garantir que os passos de cálculo sejam clares e organizados, sem necessidade de explicações introduzidas, apenas passo a passo da resolução.\n\nDepois, preciso garantir que a resposta correta seja destacada, entre as opções A, B, C, D e E, e que a resposta correta seja A.\n\nDepois, preciso garantir que todas as questões estejam alinhadas à habilidade EF02MA01, bem como em formatomarkdown, e que a resposta correta seja destacada.\n\nDepois, preciso garantir que o JSON retendo todas as questoes, com as alternativas, resolução passo a passo e a resposta correta destacada, e que não existam textos adicional.\n\nDepois, preciso garantir que o JSON seja formatado corretamente, usando markdown e não containendo texto adicional.\n\nDepois, preciso garantir que todas as questoes estejam alinhadas à habilidade EF02MA01, bem como em formatomarkdown, e que a resposta correta seja A.\n\nDepois, preciso garantir que o JSON retendo todas as questoes, com as alternativas, resolução passo a passo e a resposta correta destacada, e que não existam textos adicional.\n\nDepois, preciso garantir que o JSON seja formatado corretamente, usando markdown e não containendo textos adicional.\n\nDepois, preciso garantir que todas as questoes estejam alinhadas à habilidade EF02MA01, bem como em formatomarkdown, e que a resposta correta seja A.\n\nDepois, preciso garantir que o JSON retendo todas as questoes, com as alternativas, res",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1025,
+            "total_tokens": 1025
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06437140004709363,
+            "tempo_decode_s": 68.26165279996349,
+            "tempo_resposta_s": 68.32602420001058,
+            "tempo_total_s": 68.32602420001058,
+            "tokens_entrada": 0,
+            "tokens_saida": 1025,
+            "tps": 15.001604615534491,
+            "ram_inicio_mb": 1768.796875,
+            "ram_pico_mb": 1770.75,
+            "ram_usada_mb": 1.953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 14.699682,
+        "ram_media_mb": 1770.259115,
+        "ram_pico_mb": 1772.515625,
+        "tempo_medio_segundos": 69.64931,
+        "ttft_medio_segundos": 0.908172,
+        "tps": {
+          "n": 3,
+          "mediana": 14.898663,
+          "iqr": 0.359819,
+          "p25": 14.569518,
+          "p75": 14.929337,
+          "p95": 14.953876,
+          "p99": 14.958784,
+          "max": 14.960011,
+          "media": 14.699682
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.06577,
+          "iqr": 1.263689,
+          "p25": 0.065727,
+          "p75": 1.329416,
+          "p95": 2.340333,
+          "p99": 2.542516,
+          "max": 2.593062,
+          "media": 0.908172
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 68.730999,
+          "iqr": 1.659317,
+          "p25": 68.590074,
+          "p75": 70.249391,
+          "p95": 71.464104,
+          "p99": 71.707047,
+          "max": 71.767783,
+          "media": 69.64931
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1772.058594,
+          "iqr": 3.15625,
+          "p25": 1769.130859,
+          "p75": 1772.287109,
+          "p95": 1772.469922,
+          "p99": 1772.506484,
+          "max": 1772.515625,
+          "media": 1770.259115
+        },
+        "tps_por_rodada": [
+          14.240373069234911,
+          14.898663184996282,
+          14.960010831868715
+        ],
+        "ttft_por_rodada": [
+          2.5930623000022024,
+          0.06576970004243776,
+          0.06568439997499809
+        ],
+        "tempo_por_rodada": [
+          71.76778270001523,
+          68.73099870001897,
+          68.44914829998743
+        ],
+        "ram_por_rodada": [
+          1772.515625,
+          1772.05859375,
+          1766.203125
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1772.515625,
+        "tps_medio": 14.699682,
+        "tempo_medio_segundos": 69.64931,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso entender o que a habilidade EF09MA01means. Isso parece ser a habilidade de identificar números decimais e fracionais, com o objetivo de identificar os que não podem ser expressos como a/b, onde a e b são inteiros e b ≠ 0.\n\nPara geração de questões, preciso criar situations em que um número não pode ser expresso como uma fração. Por exemplo, um número decimal com um dígitoAfteral não pode ser expresso como uma fração, ou um número que termina ou não termina.\n\nVou criar 5 questões differentes, cada com um número que não pode ser expresso como uma fração. Aqui está o exemplo:\n\n1. Quais dos seguintes números não pode ser escrito na forma a/b, com a e b inteiros e b ≠ 0?\n   - A) 0,25\n   - B) 0,3\n   - C) 0,5\n   - D) 0,75\n   - E) 0,8\n\nPara resolver cada questão, preciso identificar qual número não pode ser expressa como uma fração. Por exemplo, 0,25 pode ser escrito como 1/4, mas 0,3 não pode ser expresso como uma fração inteira.\n\nEm seguida, para a resolução passa passo a passo, preciso descrever como identificar o número não que pode ser expresso como uma fração. Isso inclui analisar o dígitoAfteral e verificar se é zero ou diferente de zero, e se o dígitoBeforeal for inteiro ou não.\n\nFinalmente, para each question, preciso definir o número que não pode ser escrito na forma a/b e explain o理由. Isso inclui descrever como identificar o dígitoAfteral e a propriedade de que a fração tem um dígitoAfteral zero ou não.\n\nAgora, para each question, preciso definir o número que não pode ser escrito na forma a/b e explain o理由. Isso inclui descrever como identificar o dígitoAfteral e a propriedade de que a fração tem um dígitoAfteral zero ou não.\n\nEm cada questão, preciso definir o número que não pode ser escrito na forma a/b e explain o理由. Isso inclui descrever como identificar o dígitoAfteral e a propriedade de que a fração tem um dígitoAfteral zero ou não.\n\nFinalmente, para each question, preciso definir o número que não pode ser escrito na forma a/b e explain o理由. Isso inclui descrever como identificar o dígitoAfteral e a propriedade de que a fração tem um dígitoAfteral zero ou não.\n\nEm cada questão, preciso definir o número que não pode ser escrito na forma a/b e explain o理由. Isso inclui descrever como identificar o dígitoAfteral e a propriedade de que a fração tem um dígitoAfteral zero ou não.\n\nFinalmente, para each question, preciso definir o número que não pode ser escrito na forma a/b e explain o理由. Isso inclui descrever como identificar o dígitoAfteral e a propriedade de que a fração tem um dígitoAfteral zero ou não.\n\nEm cada questão, preciso definir o número que não pode ser escrito na forma a/b e explain o理由. Isso inclui descrever como identificar o dígitoAfteral e a propriedade de que a fração tem um dígitoAfteral zero ou não.\n\nFinalmente, para each question, preciso definir o número que não pode ser escrito na forma a/b e explain o理由. Isso inclui descrever como identificar o dígitoAfteral e a propriedade de que a fração tem um dígitoAfteral zero ou não.\n\nEm cada questão, preciso definir o número que não pode ser escrito na forma a/b e explain o理由. Isso inclui descrever como identificar o dígitoAfteral e a propriedade de que a fração tem um dígitoAfteral zero ou não.\n\nFinalmente, para each question, preciso definir o número que não pode ser escrito na forma a/b e explain o理由. Isso inclui descrever como identificar o dígitoAfteral e a propriedade de que a fração tem um dígitoAfteral zero ou não.\n\nEm cada questão, preciso definir o número que não pode ser esc",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1022,
+            "total_tokens": 1022
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.5930623000022024,
+            "tempo_decode_s": 69.17472040001303,
+            "tempo_resposta_s": 71.76778270001523,
+            "tempo_total_s": 71.76778270001523,
+            "tokens_entrada": 0,
+            "tokens_saida": 1022,
+            "tps": 14.240373069234911,
+            "ram_inicio_mb": 1770.66796875,
+            "ram_pico_mb": 1772.515625,
+            "ram_usada_mb": 1.84765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, I need to create 5 multiple-choice questions about numbers for teaching fundamental math. The main skill here is understanding fractions, specifically identifying which fraction isn't correctly written in its simplest form. \n\nFirst, I'll think about the structure. Each question should have a clear statement followed by five options, one of which is incorrect. I'll need to make sure the incorrect option is a common mistake students might make.\n\nLet me start with the first question. The statement should present a fraction and ask which one isn't simplified. Maybe I'll use 6/8 because 6 and 8 have a common factor of 2, so it can be reduced. The options could be 6/8, 3/4, 2/3, 1/2, and 1/4. Here, 1/4 isn't simplified because 6 and 8 can both be divided by 2, so it's the incorrect choice.\n\nNext, for the second question, perhaps using 10/15. Both 10 and 15 are divisible by 5, so 10/15 simplifies to 2/3. The options could be 10/15, 2/3, 5/8, 1/2, and 1/4. Again, 1/4 is the incorrect one because it doesn't have a common factor with 10 or 15.\n\nFor the third question, maybe 12/16. Both 12 and 16 are divisible by 4, so it simplifies to 3/4. The options could be 12/16, 3/4, 5/6, 1/2, and 1/4. 1/4 is still the incorrect choice since it doesn't share a common factor with 12 or 16.\n\nMoving on to the fourth question, perhaps using 15/20. Both 15 and 20 are divisible by 5, so it simplifies to 3/4. The options could be 15/20, 3/4, 5/8, 1/2, and 1/4. Again, 1/4 is the incorrect choice.\n\nLastly, the fifth question, maybe 18/24. Both 18 and 24 are divisible by 6, so it simplifies to 3/4. The options could be 18/24, 3/4, 5/8, 1/2, and 1/4. Once more, 1/4 is the incorrect choice.\n\nI need to make sure each question is unique and that the incorrect options are distinct. Also, I should present them in a clear format with the correct answer and the step-by-step solution. \n\nLet me double-check each question to ensure they're clear and that the fractions are correctly presented. I think this should cover the necessary variations and ensure that students have to simplify the fractions correctly to find the right answer.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual fração não estáescrita na forma de uma fração a/b (com a e b inteiros, b ≠ 0)?\",\n            \"alternativas\": {\n                \"A\": \"6/8\",\n                \"B\": \"3/4\",\n                \"C\": \"2/3\",\n                \"D\": \"1/2\",\n                \"E\": \"1/4\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"6/8 pode ser simplificada para 3/4, pois 6 e 8 têm um因子 comum de 2. Portanto, 1/4 não é uma fração simplificada.\"\n        },\n        {\n            \"enunciado\": \"Qual fração não estáescrita na forma de uma fração a/b (com a e b inteiros, b ≠ 0)?\",\n            \"alternativas\": {\n                \"A\": \"10/15\",\n                \"B\": \"2/3\",\n                \"C\": \"5/8\",\n                \"D\": \"1/2\",\n                \"E\": \"1/4\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"10/15 pode ser simplificada para 2/3, pois 10 e 15 têm um因子 comum de 5. Portanto, 1/4 não é uma fração simplificada.\"\n        },\n        {\n            \"enunciado\": \"Qual fração não estáescrita na forma de uma fração a/b (com a e b inteiros, b ≠ 0)?\",\n            \"altern",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06576970004243776,
+            "tempo_decode_s": 68.66522899997653,
+            "tempo_resposta_s": 68.73099870001897,
+            "tempo_total_s": 68.73099870001897,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.898663184996282,
+            "ram_inicio_mb": 1770.125,
+            "ram_pico_mb": 1772.05859375,
+            "ram_usada_mb": 1.93359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, I need to create 5 multiple-choice questions about numbers for teaching fundamental math. The main skill here is understanding fractions, specifically identifying which fraction isn't correctly written in its simplest form. \n\nFirst, I'll think about the structure. Each question should have a clear statement followed by five options, one of which is incorrect. I'll need to make sure the incorrect option is a common mistake students might make.\n\nLet me start with the first question. The statement should present a fraction and ask which one isn't simplified. Maybe I'll use 6/8 because 6 and 8 have a common factor of 2, so it can be reduced. The options could be 6/8, 3/4, 2/3, 1/2, and 1/4. Here, 1/4 isn't simplified because 6 and 8 can both be divided by 2, so it's the incorrect choice.\n\nNext, for the second question, perhaps using 10/15. Both 10 and 15 are divisible by 5, so 10/15 simplifies to 2/3. The options could be 10/15, 2/3, 5/8, 1/2, and 1/4. Again, 1/4 is the incorrect one because it doesn't have a common factor with 10 or 15.\n\nFor the third question, maybe 12/16. Both 12 and 16 are divisible by 4, so it simplifies to 3/4. The options could be 12/16, 3/4, 5/6, 1/2, and 1/4. 1/4 is still the incorrect choice since it doesn't share a common factor with 12 or 16.\n\nMoving on to the fourth question, perhaps using 15/20. Both 15 and 20 are divisible by 5, so it simplifies to 3/4. The options could be 15/20, 3/4, 5/8, 1/2, and 1/4. Again, 1/4 is the incorrect choice.\n\nLastly, the fifth question, maybe 18/24. Both 18 and 24 are divisible by 6, so it simplifies to 3/4. The options could be 18/24, 3/4, 5/8, 1/2, and 1/4. Once more, 1/4 is the incorrect choice.\n\nI need to make sure each question is unique and that the incorrect options are distinct. Also, I should present them in a clear format with the correct answer and the step-by-step solution. \n\nLet me double-check each question to ensure they're clear and that the fractions are correctly presented. I think this should cover the necessary variations and ensure that students have to simplify the fractions correctly to find the right answer.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual fração não estáescrita na forma de uma fração a/b (com a e b inteiros, b ≠ 0)?\",\n            \"alternativas\": {\n                \"A\": \"6/8\",\n                \"B\": \"3/4\",\n                \"C\": \"2/3\",\n                \"D\": \"1/2\",\n                \"E\": \"1/4\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"6/8 pode ser simplificada para 3/4, pois 6 e 8 têm um因子 comum de 2. Portanto, 1/4 não é uma fração simplificada.\"\n        },\n        {\n            \"enunciado\": \"Qual fração não estáescrita na forma de uma fração a/b (com a e b inteiros, b ≠ 0)?\",\n            \"alternativas\": {\n                \"A\": \"10/15\",\n                \"B\": \"2/3\",\n                \"C\": \"5/8\",\n                \"D\": \"1/2\",\n                \"E\": \"1/4\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"10/15 pode ser simplificada para 2/3, pois 10 e 15 têm um因子 comum de 5. Portanto, 1/4 não é uma fração simplificada.\"\n        },\n        {\n            \"enunciado\": \"Qual fração não estáescrita na forma de uma fração a/b (com a e b inteiros, b ≠ 0)?\",\n            \"altern",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06568439997499809,
+            "tempo_decode_s": 68.38346390001243,
+            "tempo_resposta_s": 68.44914829998743,
+            "tempo_total_s": 68.44914829998743,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.960010831868715,
+            "ram_inicio_mb": 1764.01171875,
+            "ram_pico_mb": 1766.203125,
+            "ram_usada_mb": 2.19140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 14.624195,
+        "ram_media_mb": 1769.435547,
+        "ram_pico_mb": 1770.417969,
+        "tempo_medio_segundos": 47.282883,
+        "ttft_medio_segundos": 1.982226,
+        "tps": {
+          "n": 2,
+          "mediana": 14.624195,
+          "iqr": 0.005898,
+          "p25": 14.621246,
+          "p75": 14.627144,
+          "p95": 14.629504,
+          "p99": 14.629976,
+          "max": 14.630093,
+          "media": 14.624195
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 1.982226,
+          "iqr": 0.207485,
+          "p25": 1.878484,
+          "p75": 2.085969,
+          "p95": 2.168963,
+          "p99": 2.185562,
+          "max": 2.189712,
+          "media": 1.982226
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 47.282883,
+          "iqr": 4.391428,
+          "p25": 45.087168,
+          "p75": 49.478597,
+          "p95": 51.235168,
+          "p99": 51.586482,
+          "max": 51.674311,
+          "media": 47.282883
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1769.435547,
+          "iqr": 0.982422,
+          "p25": 1768.944336,
+          "p75": 1769.926758,
+          "p95": 1770.319727,
+          "p99": 1770.39832,
+          "max": 1770.417969,
+          "media": 1769.435547
+        },
+        "tps_por_rodada": [
+          14.630093471401736,
+          14.618296655054646
+        ],
+        "ttft_por_rodada": [
+          2.189711500017438,
+          1.7747408999712206
+        ],
+        "tempo_por_rodada": [
+          51.67431099998066,
+          42.89145409996854
+        ],
+        "ram_por_rodada": [
+          1768.453125,
+          1770.41796875
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "No quadrilátero ABCD, o lado AB tem uma medida de 10 cm e um ângulo de 60°. Qual é o lado correspondente a AB e qual é o ângulo correspondente a 60°?",
+                "alternativas": {
+                  "A": "CD e 70°",
+                  "B": "CD e 80°",
+                  "C": "AB e 60°",
+                  "D": "BC e 70°",
+                  "E": "AD e 80°"
+                },
+                "resposta_correta": "C",
+                "resolucao_passo_a_passo": "No quadrilátero ABCD, o lado correspondente a AB é CD, e o ângulo correspondente a 60° é o ângulo adjacentado a CD. Isso ocorre porque um lado e um ângulo adjacentes são correspondentes."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Calcule o perímetro de um triângulo regular de lado 5 cm.",
+                "alternativas": {
+                  "A": "20 cm",
+                  "B": "15 cm",
+                  "C": "10 cm",
+                  "D": "5 cm",
+                  "E": "30 cm"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "Para calcular o perímetro de um triângulo regular, basta somar as longas de cada lado. Como os lados são iguais a 5 cm, o perímetro será 5 cm + 5 cm + 5 cm = 15 cm."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 1770.417969,
+        "tps_medio": 14.624195,
+        "tempo_medio_segundos": 47.282883,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 100.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso identificar quais são os conceitos da EF08MA05. Isso refers à geometria, especialmente à propriedade de um quadrilátero, como os lados e os ângulos. De maneira mais direta, o quadrilátero tem as propriedades que permitem determinar se é um paralelogramo, retângulo, ou hombro, etc.\n\nEm seguida, devo criar uma questão de múltipla escolha com 5 opções de resolução. As alternativas devem ser claras e alinhadas com o conteúdo de geometria, especially a propriedade dos lados e dos ângulos dos lados de um quadrilátero.\n\nPara garantir que o enunciado seja claro e contextualizado, vou esconder o thématico da geometria e fator em que os alunos devem reconhecer as propriedades de um quadrilátero. Isso inclui a visualização de um quadrilátero e sua decomposição em triângulos para facilitar a compreensão.\n\nEm seguida, preciso criar as alternativas de maneira que refletem possíveis erros comuns dos alunos, como confunder lados ouângulos, ou descrever de forma inválida a propriedade. Isso inclui alternativas como \"paralelogramo\" ou \"retângulo\", para identificar erros de reconhecimento.\n\nDepois, devo resolver passo a passo a resolução da questão, mostrando os passos matemáticos claros e organizados, como a decomposição do quadrilátero em triângulos ou a identificação de características de um dos lados.\n\nFinalmente, preciso garantir que a resposta correta seja \"A\" e que a resolução passo a passo seja incluída corretamente. Também, preciso garantir que todas as questoes são inéditas entre si e que a resposta correta está distribuída de forma variada entre as opções.\n\nEntão, eu vou criar uma questão de múltipla escolha com 5 alternativas, que refleque as propriedades dos lados e dos ângulos de um quadrilátero, e garantir que a resolução passo a passo seja clara e organizada, com os passos matemáticos claros.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"No quadrilátero ABCD, o lado AB tem uma medida de 10 cm e um ângulo de 60°. Qual é o lado correspondente a AB e qual é o ângulo correspondente a 60°?\",\n            \"alternativas\": {\n                \"A\": \"CD e 70°\",\n                \"B\": \"CD e 80°\",\n                \"C\": \"AB e 60°\",\n                \"D\": \"BC e 70°\",\n                \"E\": \"AD e 80°\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"No quadrilátero ABCD, o lado correspondente a AB é CD, e o ângulo correspondente a 60° é o ângulo adjacentado a CD. Isso ocorre porque um lado e um ângulo adjacentes são correspondentes.\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 756,
+            "total_tokens": 756
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.189711500017438,
+            "tempo_decode_s": 49.484599499963224,
+            "tempo_resposta_s": 51.67431099998066,
+            "tempo_total_s": 51.67431099998066,
+            "tokens_entrada": 0,
+            "tokens_saida": 756,
+            "tps": 14.630093471401736,
+            "ram_inicio_mb": 1766.109375,
+            "ram_pico_mb": 1768.453125,
+            "ram_usada_mb": 2.34375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso entender o que a habilidade EF06MA17 representa. Em contexto de geometria, EF06MA17 pode ser uma habilidade que envolv relative a propriedades de figuras planas, como o cálculo de perimeters, áreas ou distâncias entre pontos.\n\nComo initiallyo, posso imaginar que a questão tenha como enunciado um problema que envolvha calcular o perímetro ou a área de um polígono regular ou um triângulo. Isso é comum para tareas de geometria elementar.\n\nEm seguida, vou estruturar a questão de forma que possa ter mais do que um answeredo, portanto, teria mais de um enunciado. Isso é importante para garantir que a questão seja de módulo duplo.\n\nDepois, vou definir as alternativas A, B, C, D e E, cada uma com uma resposta diferente, incluindo possíveis erros comuns dos alunos, como confunder formulas ou calcular o perímetro instead da área.\n\nNa resolução passa a passo, vou descrever o processo que um professor teria de passar o questionário para o aluno, incluindo passos como identificar o tipo de polígono, calcular a base ou a altura, aplicar a fórmula de área ou perímetro, e calcular o resultado final.\n\nFinalmente, vou garantir que a resposta correta seja A, como feito no exemplo fornecido, e que a resolução passa a passo seja exata e didática, com expressões claras e resutos numéricos.\n\nDepois de criar a questão e a resolução passa a passo, vou formatting os resultados de forma que seja readability e clara, usando format de JSON como requerido.\n\nFinalmente, vou redigerar a resposta como dica para o usuário, incluindo o JSON estruturado com todas as questoes e as resoluções passa a passo, mantendo a formato requerida e a consistência dos exemplos fornecidos.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Calcule o perímetro de um triângulo regular de lado 5 cm.\",\n            \"alternativas\": {\n                \"A\": \"20 cm\",\n                \"B\": \"15 cm\",\n                \"C\": \"10 cm\",\n                \"D\": \"5 cm\",\n                \"E\": \"30 cm\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para calcular o perímetro de um triângulo regular, basta somar as longas de cada lado. Como os lados são iguais a 5 cm, o perímetro será 5 cm + 5 cm + 5 cm = 15 cm.\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 627,
+            "total_tokens": 627
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.7747408999712206,
+            "tempo_decode_s": 41.11671319999732,
+            "tempo_resposta_s": 42.89145409996854,
+            "tempo_total_s": 42.89145409996854,
+            "tokens_entrada": 0,
+            "tokens_saida": 627,
+            "tps": 14.618296655054646,
+            "ram_inicio_mb": 1768.37890625,
+            "ram_pico_mb": 1770.41796875,
+            "ram_usada_mb": 2.0390625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1772.5,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 12.42,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 69.65,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -5.2,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+    "gerado_em": "2026-09-05T10:06:33.120119"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}

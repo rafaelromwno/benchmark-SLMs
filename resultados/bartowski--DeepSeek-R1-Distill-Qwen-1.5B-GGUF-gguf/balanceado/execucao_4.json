@@ -1,0 +1,1184 @@
+{
+  "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+  "formato": "gguf",
+  "data": "05/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--DeepSeek-R1-Distill-Qwen-1.5B-GGUF\\DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf"
+    },
+    "seed": 21,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 21
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 21
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.61,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "15 can be written as which of the following?",
+            "alternativas": {
+              "A": "15",
+              "B": "15.00",
+              "C": "15 dollars",
+              "D": "15 1/4 dollars",
+              "E": "15 1/4 of 60"
+            },
+            "resposta_correta": "E",
+            "resolucao_passo_a_passo": "15 pode ser escrito como 15, 15.00, 15 dólares, 15 1/4 dólares e 15 1/4 de 60."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 0.918896599963773,
+        "tempo_prefill_s": 11.027553000021726,
+        "tempo_decode_s": 66.04828409996117,
+        "tempo_resposta_s": 77.07583709998289,
+        "tempo_total_s": 77.99473369994666,
+        "tokens_entrada": 0,
+        "tokens_saida": 990,
+        "tps": 12.844492349992521,
+        "ram_inicio_mb": 61.8515625,
+        "ram_pico_mb": 1749.3671875,
+        "ram_usada_mb": 1687.515625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 77.99473369994666,
+        "tempo_carregamento_s": 0.918896599963773,
+        "tempo_resposta_s": 77.07583709998289,
+        "ram_pico_mb": 1749.3671875,
+        "ram_inicio_mb": 61.8515625,
+        "ttft_segundos": 11.027553000021726,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create a multiple-choice question for the BNCC EF09MA01, which is about numbers. The pre-requisitos are EF08MA01 and EF07MA01, so I should make sure the question covers those concepts.\n\nFirst, I should think about what EF08MA01 is. It's about writing numbers in different forms, like fractions, decimals, percentages, and exponents. EF07MA01 probably involves basic arithmetic operations. So, combining these, the question should test understanding of various number representations.\n\nNow, the question should have 5 options, A to E, with one correct answer. Let me come up with a scenario where numbers are presented in different forms. Maybe a real-life situation like money or measurements.\n\nOption 1: A real-life context, like money. If someone saves money monthly, I can present amounts in dollars and cents, fractions, decimals, and percentages. For example, $150.50 can be written as 150 1/2 dollars, 150.50 dollars, 15050/100 dollars, 15050% cents, and 150.50 dollars. But wait, cents are a fraction, not a percentage. Maybe I should adjust that.\n\nAlternatively, use percentages for something like discounts. For example, 20% off $100 is $20 off, which is $80. So, $100, $80, 20%, 100 dollars, 20% of $100. That seems better because percentages are a form of fractions.\n\nAnother example: if a book costs $15, which can be written as $15.00, 15 dollars, 15 1/7 dollars, 1500 cents, and 1500% of something. Wait, 1500% of $1 is $15, so 1500% of $1 is $15. That might be too convoluted. Maybe stick to smaller percentages or simpler numbers.\n\nLet me try again. How about $15 can be written as $15, $15.00, 15 dollars, 15 1/3 dollars, and 1500% of $0.10. Hmm, 1500% of $0.10 is $1.50, which isn't equal to $15. That doesn't make sense. Maybe I need to avoid that.\n\nAlternatively, use fractions like 1/4 of 60 is 15. So, 15 can be written as 15, 15.00, 15 dollars, 15 1/4 dollars, and 15 1/4 of 60. That works because 15 is 1/4 of 60. \n\nSo, the question would be: \"15 can be written as which of the following?\" with options A to E as above.\n\nNow, I need to make sure that the correct answer is one of them. Let's check:\n\nA) 15\nB) 15.00\nC) 15 dollars\nD) 15 1/4 dollars\nE) 15 1/4 of 60\n\nYes, E is correct because 15 is 15 1/4 of 60 (since 15 = (1/4)*60).\n\nSo, the question would be: \"15 can be written as which of the following?\" and the options would be as above.\n\nI think that makes sense. It tests the ability to represent numbers in various forms, which is part of EF09MA01.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"15 can be written as which of the following?\",\n            \"alternativas\": {\n                \"A\": \"15\",\n                \"B\": \"15.00\",\n                \"C\": \"15 dollars\",\n                \"D\": \"15 1/4 dollars\",\n                \"E\": \"15 1/4 of 60\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"15 pode ser escrito como 15, 15.00, 15 dólares, 15 1/4 dólares e 15 1/4 de 60.\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 990,
+            "total_tokens": 990
+          },
+          "metrics": {
+            "tempo_carregamento_s": 0.918896599963773,
+            "tempo_prefill_s": 11.027553000021726,
+            "tempo_decode_s": 66.04828409996117,
+            "tempo_resposta_s": 77.07583709998289,
+            "tempo_total_s": 77.99473369994666,
+            "tokens_entrada": 0,
+            "tokens_saida": 990,
+            "tps": 12.844492349992521,
+            "ram_inicio_mb": 61.8515625,
+            "ram_pico_mb": 1749.3671875,
+            "ram_usada_mb": 1687.515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 14.536441,
+          "iqr": 0.145027,
+          "p25": 14.479594,
+          "p75": 14.624621,
+          "p95": 14.831886,
+          "p99": 14.930259,
+          "max": 14.954852,
+          "media": 14.557323
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.242779,
+          "iqr": 0.390137,
+          "p25": 2.182446,
+          "p75": 2.572584,
+          "p95": 3.01665,
+          "p99": 3.229557,
+          "max": 3.282784,
+          "media": 2.202845
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 65.954387,
+          "iqr": 23.175092,
+          "p25": 47.270779,
+          "p75": 70.44587,
+          "p95": 70.952338,
+          "p99": 71.053275,
+          "max": 71.078509,
+          "media": 60.32287
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1757.345703,
+          "iqr": 4.614258,
+          "p25": 1754.922852,
+          "p75": 1759.537109,
+          "p95": 1761.107422,
+          "p99": 1761.740234,
+          "max": 1761.898438,
+          "media": 1757.199219
+        },
+        "tps_medio": 14.557323,
+        "ttft_medio_segundos": 2.202845,
+        "tempo_medio_segundos": 60.32287,
+        "ram_pico_mb": 1761.898438
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 14.536441,
+          "iqr": 0.145027,
+          "p25": 14.479594,
+          "p75": 14.624621,
+          "p95": 14.831886,
+          "p99": 14.930259,
+          "max": 14.954852,
+          "media": 14.557323
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.242779,
+          "iqr": 0.390137,
+          "p25": 2.182446,
+          "p75": 2.572584,
+          "p95": 3.01665,
+          "p99": 3.229557,
+          "max": 3.282784,
+          "media": 2.202845
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 65.954387,
+          "iqr": 23.175092,
+          "p25": 47.270779,
+          "p75": 70.44587,
+          "p95": 70.952338,
+          "p99": 71.053275,
+          "max": 71.078509,
+          "media": 60.32287
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1757.345703,
+          "iqr": 4.614258,
+          "p25": 1754.922852,
+          "p75": 1759.537109,
+          "p95": 1761.107422,
+          "p99": 1761.740234,
+          "max": 1761.898438,
+          "media": 1757.199219
+        },
+        "tps_medio": 14.557323,
+        "ttft_medio_segundos": 2.202845,
+        "tempo_medio_segundos": 60.32287,
+        "ram_pico_mb": 1761.898438,
+        "tps_por_rodada": [
+          14.266343721206896,
+          14.537357031089366,
+          14.527398460049113,
+          14.40660495565269,
+          14.550608658181288,
+          14.463659142538516,
+          14.954852381389795,
+          14.649291866338775,
+          14.535525542682848,
+          14.681592850685767
+        ],
+        "ttft_por_rodada": [
+          3.2827842999831773,
+          2.2377454999950714,
+          2.168190400057938,
+          2.668541799997911,
+          2.284709399973508,
+          2.6913737000431865,
+          0.06972169998334721,
+          2.1523571999859996,
+          2.2478125999914482,
+          2.225214699981734
+        ],
+        "tempo_por_rodada": [
+          63.43601539998781,
+          70.4392138000112,
+          43.572839400032535,
+          71.07850900001358,
+          43.503334799956065,
+          70.79812859999947,
+          68.47275879996596,
+          58.364595899998676,
+          70.44808920001378,
+          43.11521279998124
+        ],
+        "ram_por_rodada": [
+          1751.84765625,
+          1754.26171875,
+          1756.4140625,
+          1758.17578125,
+          1759.91796875,
+          1754.42578125,
+          1756.515625,
+          1758.39453125,
+          1760.140625,
+          1761.8984375
+        ],
+        "ram_media_mb": 1757.199219
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, identifico que o usuário está se perguntando por três questões de múltipla escolha, relacionadas à habilidade EF09MA01, que se refere a expresses de números na forma de fração a/b. Em seguida, vejo que o usuário tem fornecido exemplo de uma questão existente, que pede que identifique um número que não pode ser escrito na forma de uma fração a/b. \n\nPara geração de novas questões, preciso seguir os prontos da BNCC e garantir que as questões tenham o formato correto, incluindo alternativas e resoluções passo a passo. O usuário pediu que use exatamente 3 questões(ões), incluindo as mais relevantes e claras para a habilidade propria.\n\nEm seguida, preciso garantir que as questões estejam alinhadas à base Nacional curricular (BNCC), possivelmente referindo os conceitos e algebrab principle de Namor, como exatamente identificados em EF09MA01. Além disso, precisar de alternativas plausíveis e com erros comuns dos alunos, como erros de cálculo ou misunderstanding das fractions.\n\nFinalmente, encontrei uma expressão que satisfaz todas estas necessidades, incluindo uma questão que envolva um número que não pode ser escrito na forma de uma fração a/b, e outras questões que verificam a compreensão de fractions e operações básicas com números decimais. Assim, gerai três questões novas, alinhadas à habilidade propria e compliantas com os padrões de BNCC.\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Quando expressamos um número como \\( \\frac{a}{b} \\), o denominador \\( b \\) pode ser zero ou negativo? (Exemplo: 1/0 não pode ser escrito na forma de uma fração a/b).\",\n            \"alternativas\": {\n                \"A\": \"0/1 = 0\",\n                \"B\": \"1/0 não pode ser escrito na forma de uma fração a/b\",\n                \"C\": \"1/1 = 1\",\n                \"D\": \"2/3 = 0.666...\",\n                \"E\": \"3/2 = 1.5\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Note que o denominador \\( b \\) pode ser zero ou negativo, pois a fração \\( \\frac{a}{b} \\) é definida somente quando \\( b \\) é não-zero.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é a expressão fractional da número 2.5?\",\n            \"alternativas\": {\n                \"A\": \"2.5/1\",\n                \"B\": \"2/2 = 1\",\n                \"C\": \"5/2 = 2.5\",\n                \"D\": \"3/2 = 1.5\",\n                \"E\": \"1/2 = 0.5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"A expressão fractional da número 2.5 é \\( \\frac{5}{2} = 2.5 \\).\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é a expressão fractional de 1.25?\",\n            \"alternativas\": {\n                \"A\": \"1.25/1\",\n                \"B\": \"1/0.8 = 1.25\",\n                \"C\": \"3/2 = 1.5\",\n                \"D\": \"5/4 = 1.25\",\n                \"E\": \"2/1 = 2\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"A expressão fractional de 1.25 é \\( \\frac{5}{4} = 1.25 \\).\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 905,
+            "total_tokens": 905
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.2827842999831773,
+            "tempo_decode_s": 60.15323110000463,
+            "tempo_resposta_s": 63.43601539998781,
+            "tempo_total_s": 63.43601539998781,
+            "tokens_entrada": 0,
+            "tokens_saida": 905,
+            "tps": 14.266343721206896,
+            "ram_inicio_mb": 1749.390625,
+            "ram_pico_mb": 1751.84765625,
+            "ram_usada_mb": 2.45703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create three multiple-choice questions in English for the elementary level based on the EF06MA14 standard. The unit theme is Algebra, and the prerequisite is EF06MA01, which I think is solving one-step equations. \n\nFirst, I should understand what EF06MA01 entails. It's about solving simple one-step equations, probably involving addition, subtraction, multiplication, or division. The difficulty level for these questions should be appropriate for elementary students, so maybe one-step equations with positive integers only.\n\nNow, I need to create three different questions that cover various operations. Let me think of scenarios where a student would encounter one-step equations.\n\n1. **Addition**: Maybe a problem where a number is increased by a certain amount. For example, \"If a book costs 5 dollars, how much would two books cost?\" This translates to 5 + x = 10, but since it's multiple-choice, it should be phrased as \"If a book costs 5 dollars, how much would two books cost?\" with options A: 10, B: 15, C: 20, D: 25, E: 30. The correct answer is A: 10.\n\n2. **Subtraction**: Perhaps a problem where something is reduced in quantity. For example, \"If you have 10 apples and give away 3, how many do you have left?\" This becomes 10 - x = 7, so the equation is 10 - x = 7. The correct answer is 7, so the options would be A: 7, B: 13, C: 17, D: 21, E: 25. The correct answer is A: 7.\n\n3. **Multiplication**: Maybe a problem involving equal groups. For example, \"If there are 4 boxes with 3 candies each, how many candies are there in total?\" This translates to 4 * x = 12, so the equation is 4x = 12. The correct answer is 3, so the options would be A: 3, B: 4, C: 5, D: 6, E: 7. The correct answer is A: 3.\n\nWait, but the user mentioned \"manter consistência de estilo,\" so I need to make sure the questions are similar to examples given. In the examples, the questions were straightforward and used real-life scenarios, so I'll follow that style.\n\nI also need to make sure that the questions are different from each other and cover various operations. Let me check the examples again. The first example was about solving for a variable in a real-life context. The second was a subtraction problem, and the third was a multiplication problem. So, I can follow that pattern.\n\nNow, let me structure each question with a clear scenario, a real-life context, and multiple-choice options. I'll also provide the correct answer and the step-by-step solution for each.\n\nI should also make sure that the questions are in English, as per the user's instructions, and that the language is simple and clear for elementary students. No complex sentences or jargon.\n\nLet me start drafting the first question:\n\n**Question 1: Addition**\n\"John has 7 marbles. How many marbles does he have in total if he finds 3 more?\"\n\nOptions:\nA: 10\nB: 14\nC: 17\nD: 21\nE: 25\n\n**Solution:**\nJohn has 7 marbles and finds 3 more. So, 7 + 3 = 10. The correct answer is A: 10.\n\n**Question 2: Subtraction**\n\"Maria has 15 stickers. She gives 5 stickers to her friend. How many stickers does Maria have left?\"\n\nOptions:\nA: 10\nB: 13\nC: 17\nD: 21\nE: 25\n\n**Solution:**\nMaria starts with 15 stickers and gives away 5. So, 15 - 5 = 10. The correct answer is A: 10.\n\n**Question 3: Multiplication**\n\"Tom has 4 boxes of chocolates. Each box has 3 chocolates. How many chocolates does Tom have in total?\"\n\nOptions:\nA: 3\nB: 4\nC: 5\nD: 6\nE: 7\n\n**Solution:**\nTom has 4 boxes, each with 3 chocolates. So, 4 * 3 = 12. The correct answer is A: 3 (Wait, that can't be right. 4 * 3 is 12, so the correct answer should be none of the options. Let me check the options again. Oh, wait",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.2377454999950714,
+            "tempo_decode_s": 68.20146830001613,
+            "tempo_resposta_s": 70.4392138000112,
+            "tempo_total_s": 70.4392138000112,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.537357031089366,
+            "ram_inicio_mb": 1751.77734375,
+            "ram_pico_mb": 1754.26171875,
+            "ram_usada_mb": 2.484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, identifico que o usuário está pedindo duas questões de múltipla escolha sobre números, com o objetivo de testar o conhecimento de números e operações básicas. A habilidade EF02MA01 mentiona o uso da reta numérica e a compreensão de números inteiros, frações e operações básicas.\n\nEm seguida, identifico os pontos principais que precisam ser incluídos nas questões:\n\n1. Identificação de números eTheir positions on the number line.\n2. Operações básicas como adição e subtração.\n3. Frações e operações com Frações.\n4. Comparação de números e their magnitudes.\n\nPara criar as questões, vou dividir as opções em dois tamanhos: uma para os números e uma para as operações. Isso garantirá que as questões sejam relevantes e coveram todos os aspectos da habilidade.\n\nPara cada questão, vou definir um problema ou uma operação que o aluno precisará resolver. Depois, vou estabelecer as opções de respostas, garantindo que as opções possivelmente erradas sejam claras e comuns dos alunos.\n\nFinalmente, vou redirecionar a resolução passo a passo, mostrando a sequência de passos que um professor teria em tempo real para resolver a questão. Isso permitirá que o aluno esteja bem alinhado com a metodologia de ensino e compreende o processo de resolução.\n\nAssim, cada questão será emlinhada de forma que tenha uma sequência de passos claras e claras, garantindo que o aluno possa entender e learning.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 15 e 20 em uma reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"16\", \"B\": \"17\", \"C\": \"18\", \"D\": \"19\", \"E\": \"21\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Pode identificar os números 16, 17, 18, 19 e 21 na reta numérica. O número que está entre 15 e 20 é 18.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva 12 + 8 = ?\",\n            \"alternativas\": {\n                \"A\": \"20\", \"B\": \"24\", \"C\": \"15\", \"D\": \"18\", \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"12 + 8 = 20\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 633,
+            "total_tokens": 633
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.168190400057938,
+            "tempo_decode_s": 41.4046489999746,
+            "tempo_resposta_s": 43.572839400032535,
+            "tempo_total_s": 43.572839400032535,
+            "tokens_entrada": 0,
+            "tokens_saida": 633,
+            "tps": 14.527398460049113,
+            "ram_inicio_mb": 1754.1953125,
+            "ram_pico_mb": 1756.4140625,
+            "ram_usada_mb": 2.21875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create three multiple-choice questions in English for the elementary level based on the EF06MA14 standard. The unit theme is Algebra, and the prerequisite is EF06MA01, which I think is solving one-step equations. \n\nFirst, I should understand what EF06MA01 entails. It's about solving simple one-step equations, probably involving addition, subtraction, multiplication, or division. The difficulty level for these questions should be appropriate for elementary students, so maybe one-step equations with positive integers only.\n\nNow, I need to create three different questions that cover various operations. Let me think of scenarios where a student would encounter one-step equations.\n\n1. **Addition**: Maybe a problem where a number is increased by a certain amount. For example, \"If a book costs 5 dollars, how much would two books cost?\" This translates to 5 + x = 10, but since it's multiple-choice, it should be phrased as \"If a book costs 5 dollars, how much would two books cost?\" with options A: 10, B: 15, C: 20, D: 25, E: 30. The correct answer is A: 10.\n\n2. **Subtraction**: Perhaps a problem where something is reduced in quantity. For example, \"If you have 10 apples and give away 3, how many do you have left?\" This becomes 10 - x = 7, so the equation is 10 - x = 7. The correct answer is 7, so the options would be A: 7, B: 13, C: 17, D: 21, E: 25. The correct answer is A: 7.\n\n3. **Multiplication**: Maybe a problem involving equal groups. For example, \"If there are 4 boxes with 3 candies each, how many candies are there in total?\" This translates to 4 * x = 12, so the equation is 4x = 12. The correct answer is 3, so the options would be A: 3, B: 4, C: 5, D: 6, E: 7. The correct answer is A: 3.\n\nWait, but the user mentioned \"manter consistência de estilo,\" so I need to make sure the questions are similar to examples given. In the examples, the questions were straightforward and used real-life scenarios, so I'll follow that style.\n\nI also need to make sure that the questions are different from each other and cover various operations. Let me check the examples again. The first example was about solving for a variable in a real-life context. The second was a subtraction problem, and the third was a multiplication problem. So, I can follow that pattern.\n\nNow, let me structure each question with a clear scenario, a real-life context, and multiple-choice options. I'll also provide the correct answer and the step-by-step solution for each.\n\nI should also make sure that the questions are in English, as per the user's instructions, and that the language is simple and clear for elementary students. No complex sentences or jargon.\n\nLet me start drafting the first question:\n\n**Question 1: Addition**\n\"John has 7 marbles. How many marbles does he have in total if he finds 3 more?\"\n\nOptions:\nA: 10\nB: 14\nC: 17\nD: 21\nE: 25\n\n**Solution:**\nJohn has 7 marbles and finds 3 more. So, 7 + 3 = 10. The correct answer is A: 10.\n\n**Question 2: Subtraction**\n\"Maria has 15 stickers. She gives 5 stickers to her friend. How many stickers does Maria have left?\"\n\nOptions:\nA: 10\nB: 13\nC: 17\nD: 21\nE: 25\n\n**Solution:**\nMaria starts with 15 stickers and gives away 5. So, 15 - 5 = 10. The correct answer is A: 10.\n\n**Question 3: Multiplication**\n\"Tom has 4 boxes of chocolates. Each box has 3 chocolates. How many chocolates does Tom have in total?\"\n\nOptions:\nA: 3\nB: 4\nC: 5\nD: 6\nE: 7\n\n**Solution:**\nTom has 4 boxes, each with 3 chocolates. So, 4 * 3 = 12. The correct answer is A: 3 (Wait, that can't be right. 4 * 3 is 12, so the correct answer should be none of the options. Let me check the options again. Oh, wait",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.668541799997911,
+            "tempo_decode_s": 68.40996720001567,
+            "tempo_resposta_s": 71.07850900001358,
+            "tempo_total_s": 71.07850900001358,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.40660495565269,
+            "ram_inicio_mb": 1756.328125,
+            "ram_pico_mb": 1758.17578125,
+            "ram_usada_mb": 1.84765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, identifico que o usuário está pedindo duas questões de múltipla escolha sobre números, com o objetivo de testar o conhecimento de números e operações básicas. A habilidade EF02MA01 mentiona o uso da reta numérica e a compreensão de números inteiros, frações e operações básicas.\n\nEm seguida, identifico os pontos principais que precisam ser incluídos nas questões:\n\n1. Identificação de números eTheir positions on the number line.\n2. Operações básicas como adição e subtração.\n3. Frações e operações com Frações.\n4. Comparação de números e their magnitudes.\n\nPara criar as questões, vou dividir as opções em dois tamanhos: uma para os números e uma para as operações. Isso garantirá que as questões sejam relevantes e coveram todos os aspectos da habilidade.\n\nPara cada questão, vou definir um problema ou uma operação que o aluno precisará resolver. Depois, vou estabelecer as opções de respostas, garantindo que as opções possivelmente erradas sejam claras e comuns dos alunos.\n\nFinalmente, vou redirecionar a resolução passo a passo, mostrando a sequência de passos que um professor teria em tempo real para resolver a questão. Isso permitirá que o aluno esteja bem alinhado com a metodologia de ensino e compreende o processo de resolução.\n\nAssim, cada questão será emlinhada de forma que tenha uma sequência de passos claras e claras, garantindo que o aluno possa entender e learning.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 15 e 20 em uma reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"16\", \"B\": \"17\", \"C\": \"18\", \"D\": \"19\", \"E\": \"21\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Pode identificar os números 16, 17, 18, 19 e 21 na reta numérica. O número que está entre 15 e 20 é 18.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva 12 + 8 = ?\",\n            \"alternativas\": {\n                \"A\": \"20\", \"B\": \"24\", \"C\": \"15\", \"D\": \"18\", \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"12 + 8 = 20\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 633,
+            "total_tokens": 633
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.284709399973508,
+            "tempo_decode_s": 41.21862539998256,
+            "tempo_resposta_s": 43.503334799956065,
+            "tempo_total_s": 43.503334799956065,
+            "tokens_entrada": 0,
+            "tokens_saida": 633,
+            "tps": 14.550608658181288,
+            "ram_inicio_mb": 1758.109375,
+            "ram_pico_mb": 1759.91796875,
+            "ram_usada_mb": 1.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create three multiple-choice questions in English for the elementary level based on the EF06MA14 standard. The unit theme is Algebra, and the prerequisite is EF06MA01, which I think is solving one-step equations. \n\nFirst, I should understand what EF06MA01 entails. It's about solving simple one-step equations, probably involving addition, subtraction, multiplication, or division. The difficulty level for these questions should be appropriate for elementary students, so maybe one-step equations with positive integers only.\n\nNow, I need to create three different questions that cover various operations. Let me think of scenarios where a student would encounter one-step equations.\n\n1. **Addition**: Maybe a problem where a number is increased by a certain amount. For example, \"If a book costs 5 dollars, how much would two books cost?\" This translates to 5 + x = 10, but since it's multiple-choice, it should be phrased as \"If a book costs 5 dollars, how much would two books cost?\" with options A: 10, B: 15, C: 20, D: 25, E: 30. The correct answer is A: 10.\n\n2. **Subtraction**: Perhaps a problem where something is reduced in quantity. For example, \"If you have 10 apples and give away 3, how many do you have left?\" This becomes 10 - x = 7, so the equation is 10 - x = 7. The correct answer is 7, so the options would be A: 7, B: 13, C: 17, D: 21, E: 25. The correct answer is A: 7.\n\n3. **Multiplication**: Maybe a problem involving equal groups. For example, \"If there are 4 boxes with 3 candies each, how many candies are there in total?\" This translates to 4 * x = 12, so the equation is 4x = 12. The correct answer is 3, so the options would be A: 3, B: 4, C: 5, D: 6, E: 7. The correct answer is A: 3.\n\nWait, but the user mentioned \"manter consistência de estilo,\" so I need to make sure the questions are similar to examples given. In the examples, the questions were straightforward and used real-life scenarios, so I'll follow that style.\n\nI also need to make sure that the questions are different from each other and cover various operations. Let me check the examples again. The first example was about solving for a variable in a real-life context. The second was a subtraction problem, and the third was a multiplication problem. So, I can follow that pattern.\n\nNow, let me structure each question with a clear scenario, a real-life context, and multiple-choice options. I'll also provide the correct answer and the step-by-step solution for each.\n\nI should also make sure that the questions are in English, as per the user's instructions, and that the language is simple and clear for elementary students. No complex sentences or jargon.\n\nLet me start drafting the first question:\n\n**Question 1: Addition**\n\"John has 7 marbles. How many marbles does he have in total if he finds 3 more?\"\n\nOptions:\nA: 10\nB: 14\nC: 17\nD: 21\nE: 25\n\n**Solution:**\nJohn has 7 marbles and finds 3 more. So, 7 + 3 = 10. The correct answer is A: 10.\n\n**Question 2: Subtraction**\n\"Maria has 15 stickers. She gives 5 stickers to her friend. How many stickers does Maria have left?\"\n\nOptions:\nA: 10\nB: 13\nC: 17\nD: 21\nE: 25\n\n**Solution:**\nMaria starts with 15 stickers and gives away 5. So, 15 - 5 = 10. The correct answer is A: 10.\n\n**Question 3: Multiplication**\n\"Tom has 4 boxes of chocolates. Each box has 3 chocolates. How many chocolates does Tom have in total?\"\n\nOptions:\nA: 3\nB: 4\nC: 5\nD: 6\nE: 7\n\n**Solution:**\nTom has 4 boxes, each with 3 chocolates. So, 4 * 3 = 12. The correct answer is A: 3 (Wait, that can't be right. 4 * 3 is 12, so the correct answer should be none of the options. Let me check the options again. Oh, wait",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6913737000431865,
+            "tempo_decode_s": 68.10675489995629,
+            "tempo_resposta_s": 70.79812859999947,
+            "tempo_total_s": 70.79812859999947,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.463659142538516,
+            "ram_inicio_mb": 1750.44921875,
+            "ram_pico_mb": 1754.42578125,
+            "ram_usada_mb": 3.9765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create three multiple-choice questions in Portuguese for fundamental math. The topic is algebra, specifically EF06MA14. The pre-requisitos are EF06MA01, which I think means understanding of basic operations. The examples given are simple equations, so I should follow a similar structure.\n\nFirst, I need to make sure each question is in the correct format. Each should have five alternatives labeled A, B, C, D, E. The question should be clear and contextualized for the student's age. I should avoid any cultural references that might be too advanced or too simple. The alternatives should be plausible but include some common errors that students might make.\n\nFor each question, I'll create a simple equation or algebraic expression. Then, I'll provide five options, making sure they are correct except for a few that are plausible errors. After that, I'll write out the solution step by step, justifying each part clearly.\n\nLet me start with the first question. Maybe something like: \"Resolva a seguinte equação: x + 5 = 12. Quais das seguintes alternativas correta?\" The alternatives could be A) x = 7, B) x = 5, C) x = 12, D) x = 17, E) x = 10. The solution would involve subtracting 5 from both sides to get x = 7, so the correct answer is A.\n\nNext, I'll move on to the second question. Perhaps something about a simple algebraic expression: \"Calcule 2x + 3 quando x = 4.\" The alternatives could be A) 11, B) 10, C) 13, D) 9, E) 12. The solution would be 2*4 + 3 = 8 + 3 = 11, so A is correct.\n\nFor the third question, maybe involving more steps: \"Resolvam a seguinte equação: 3y - 7 = 14.\" The alternatives could be A) y = 7, B) y = 14, C) y = 21, D) y = 28, E) y = 17. Solving step by step: add 7 to both sides, 3y = 21, then divide by 3, y = 7. So A is correct.\n\nI need to make sure each question is different but still related to algebraic manipulation. I'll vary the operations and the coefficients to create three distinct questions. I'll also ensure that the correct answers are clearly marked, and the distractors are plausible errors that students might make, like incorrect operations or arithmetic mistakes.\n\nI should also keep the language simple and clear, avoiding any advanced terms or cultural references. Each question should be in Portuguese, and the alternatives should be straightforward. I'll double-check each question to ensure it's clear and that the solution is correctly explained.\n\nFinally, I'll format the response as a JSON object with an array of question objects, each containing the question, alternatives, correct answer, and solution. I'll make sure to include all the necessary information and follow the user's formatting instructions precisely.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: x + 5 = 12. Quais das seguintes alternativas correta?\",\n            \"alternativas\": {\n                \"A\": \"x = 7\",\n                \"B\": \"x = 5\",\n                \"C\": \"x = 12\",\n                \"D\": \"x = 17\",\n                \"E\": \"x = 10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para resolver a equação, subtraímos 5 de ambos os lados: x + 5 - 5 = 12 - 5. Isso resulta em x = 7.\"\n        },\n        {\n            \"enunciado\": \"Calcule 2x + 3 quando x = 4.\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"10\",\n                \"C\": \"13\",\n                \"D\": \"9\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Substituímos x por 4: 2*4 + 3 = 8 + 3 = 11.\"\n        },\n        {\n            \"enunciado\": \"Resolvam a seguinte equação: 3y - 7 = 14.\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"14",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06972169998334721,
+            "tempo_decode_s": 68.40303709998261,
+            "tempo_resposta_s": 68.47275879996596,
+            "tempo_total_s": 68.47275879996596,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.954852381389795,
+            "ram_inicio_mb": 1754.33203125,
+            "ram_pico_mb": 1756.515625,
+            "ram_usada_mb": 2.18359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, identifico que o usuário está se perguntando por três questões de múltipla escolha, relacionadas à habilidade EF09MA01, que se refere a efetividade de expressesões numéricas, bem como alinhar com os requisitos de EF08MA01 e EF07MA01. \n\nEm seguida, identifico os pré-requisitos do usuário: EF08MA01 e EF07MA01, que mencionam que o aluno deveKN dominar a forma de expressões numéricas como 10 + 5 = 15 e 3 × 4 = 12. Portanto, as questões devem incluir opções que possam resultar em erros comuns, como erro de contagem ou erro de operação.\n\nEm seguida, identifico as opções de resposta possíveis para cada questão, garantindo que cada uma tenha um erro de contagem ou de operação, e que estes erros sejam consistentes com os pré-requisitos. \n\nEm seguida, organizo as questões em ordem de dificuldade, verificando que cada questão seja alinhada à habilidade propria e que estes possam ser resolvidas de forma didática e clara.\n\nFinalmente, coleto as resoluções passo a passo para cada questão, destacando os passos significativos e a resolução matemática clara e organizada, comuns em todos os passos.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número é maior entre 10 + 5 e 3 × 4?\",\n            \"alternativas\": {\n                \"A\": \"10 + 5 = 15\",\n                \"B\": \"3 × 4 = 12\",\n                \"C\": \"10 - 5 = 5\",\n                \"D\": \"3 ÷ 4 = 0.75\",\n                \"E\": \"5 + 4 = 9\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"10 + 5 = 15 e 3 × 4 = 12. Comparando os resultados, 15 > 12, então a opção A é a correta.\",\n        },\n        {\n            \"enunciado\": \"Qual número é menor entre 10 × 5 e 3 + 4?\",\n            \"alternativas\": {\n                \"A\": \"10 × 5 = 50\",\n                \"B\": \"3 + 4 = 7\",\n                \"C\": \"10 - 5 = 5\",\n                \"D\": \"3 ÷ 4 = 0.75\",\n                \"E\": \"5 + 4 = 9\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"10 × 5 = 50 e 3 + 4 = 7. Comparando os resultados, 7 < 50, então a opção B é a correta.\",\n        },\n        {\n            \"enunciado\": \" qual operação deve ser executada para obter o resultado 12 entre 10 e 5?\",\n            \"alternativas\": {\n                \"A\": \"5 + 10 = 15\",\n                \"B\": \"3 × 4 = 12\",\n                \"C\": \"10 - 5 = 5\",\n                \"D\": \"3 ÷ 4 = 0.75\",\n                \"E\": \"5 + 4 = 9\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3 × 4 = 12. Portanto, a operação correta é a opção B.\",\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 855,
+            "total_tokens": 855
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.1523571999859996,
+            "tempo_decode_s": 56.212238700012676,
+            "tempo_resposta_s": 58.364595899998676,
+            "tempo_total_s": 58.364595899998676,
+            "tokens_entrada": 0,
+            "tokens_saida": 855,
+            "tps": 14.649291866338775,
+            "ram_inicio_mb": 1756.43359375,
+            "ram_pico_mb": 1758.39453125,
+            "ram_usada_mb": 1.9609375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create three multiple-choice questions in English for the elementary level based on the EF06MA14 standard. The unit theme is Algebra, and the prerequisite is EF06MA01, which I think is solving one-step equations. \n\nFirst, I should understand what EF06MA01 entails. It's about solving simple one-step equations, probably involving addition, subtraction, multiplication, or division. The difficulty level for these questions should be appropriate for elementary students, so maybe one-step equations with positive integers only.\n\nNow, I need to create three different questions that cover various operations. Let me think of scenarios where a student would encounter one-step equations.\n\n1. **Addition**: Maybe a problem where a number is increased by a certain amount. For example, \"If a book costs 5 dollars, how much would two books cost?\" This translates to 5 + x = 10, but since it's multiple-choice, it should be phrased as \"If a book costs 5 dollars, how much would two books cost?\" with options A: 10, B: 15, C: 20, D: 25, E: 30. The correct answer is A: 10.\n\n2. **Subtraction**: Perhaps a problem where something is reduced in quantity. For example, \"If you have 10 apples and give away 3, how many do you have left?\" This becomes 10 - x = 7, so the equation is 10 - x = 7. The correct answer is 7, so the options would be A: 7, B: 13, C: 17, D: 21, E: 25. The correct answer is A: 7.\n\n3. **Multiplication**: Maybe a problem involving equal groups. For example, \"If there are 4 boxes with 3 candies each, how many candies are there in total?\" This translates to 4 * x = 12, so the equation is 4x = 12. The correct answer is 3, so the options would be A: 3, B: 4, C: 5, D: 6, E: 7. The correct answer is A: 3.\n\nWait, but the user mentioned \"manter consistência de estilo,\" so I need to make sure the questions are similar to examples given. In the examples, the questions were straightforward and used real-life scenarios, so I'll follow that style.\n\nI also need to make sure that the questions are different from each other and cover various operations. Let me check the examples again. The first example was about solving for a variable in a real-life context. The second was a subtraction problem, and the third was a multiplication problem. So, I can follow that pattern.\n\nNow, let me structure each question with a clear scenario, a real-life context, and multiple-choice options. I'll also provide the correct answer and the step-by-step solution for each.\n\nI should also make sure that the questions are in English, as per the user's instructions, and that the language is simple and clear for elementary students. No complex sentences or jargon.\n\nLet me start drafting the first question:\n\n**Question 1: Addition**\n\"John has 7 marbles. How many marbles does he have in total if he finds 3 more?\"\n\nOptions:\nA: 10\nB: 14\nC: 17\nD: 21\nE: 25\n\n**Solution:**\nJohn has 7 marbles and finds 3 more. So, 7 + 3 = 10. The correct answer is A: 10.\n\n**Question 2: Subtraction**\n\"Maria has 15 stickers. She gives 5 stickers to her friend. How many stickers does Maria have left?\"\n\nOptions:\nA: 10\nB: 13\nC: 17\nD: 21\nE: 25\n\n**Solution:**\nMaria starts with 15 stickers and gives away 5. So, 15 - 5 = 10. The correct answer is A: 10.\n\n**Question 3: Multiplication**\n\"Tom has 4 boxes of chocolates. Each box has 3 chocolates. How many chocolates does Tom have in total?\"\n\nOptions:\nA: 3\nB: 4\nC: 5\nD: 6\nE: 7\n\n**Solution:**\nTom has 4 boxes, each with 3 chocolates. So, 4 * 3 = 12. The correct answer is A: 3 (Wait, that can't be right. 4 * 3 is 12, so the correct answer should be none of the options. Let me check the options again. Oh, wait",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.2478125999914482,
+            "tempo_decode_s": 68.20027660002233,
+            "tempo_resposta_s": 70.44808920001378,
+            "tempo_total_s": 70.44808920001378,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.535525542682848,
+            "ram_inicio_mb": 1758.30078125,
+            "ram_pico_mb": 1760.140625,
+            "ram_usada_mb": 1.83984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, identifico que o usuário está pedindo duas questões de múltipla escolha sobre números, com o objetivo de testar o conhecimento de números e operações básicas. A habilidade EF02MA01 mentiona o uso da reta numérica e a compreensão de números inteiros, frações e operações básicas.\n\nEm seguida, identifico os pontos principais que precisam ser incluídos nas questões:\n\n1. Identificação de números eTheir positions on the number line.\n2. Operações básicas como adição e subtração.\n3. Frações e operações com Frações.\n4. Comparação de números e their magnitudes.\n\nPara criar as questões, vou dividir as opções em dois tamanhos: uma para os números e uma para as operações. Isso garantirá que as questões sejam relevantes e coveram todos os aspectos da habilidade.\n\nPara cada questão, vou definir um problema ou uma operação que o aluno precisará resolver. Depois, vou estabelecer as opções de respostas, garantindo que as opções possivelmente erradas sejam claras e comuns dos alunos.\n\nFinalmente, vou redirecionar a resolução passo a passo, mostrando a sequência de passos que um professor teria em tempo real para resolver a questão. Isso permitirá que o aluno esteja bem alinhado com a metodologia de ensino e compreende o processo de resolução.\n\nAssim, cada questão será emlinhada de forma que tenha uma sequência de passos claras e claras, garantindo que o aluno possa entender e learning.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 15 e 20 em uma reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"16\", \"B\": \"17\", \"C\": \"18\", \"D\": \"19\", \"E\": \"21\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Pode identificar os números 16, 17, 18, 19 e 21 na reta numérica. O número que está entre 15 e 20 é 18.\"\n        }\n    ],\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva 12 + 8 = ?\",\n            \"alternativas\": {\n                \"A\": \"20\", \"B\": \"24\", \"C\": \"15\", \"D\": \"18\", \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"12 + 8 = 20\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 633,
+            "total_tokens": 633
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.225214699981734,
+            "tempo_decode_s": 40.8899980999995,
+            "tempo_resposta_s": 43.11521279998124,
+            "tempo_total_s": 43.11521279998124,
+            "tokens_entrada": 0,
+            "tokens_saida": 633,
+            "tps": 14.681592850685767,
+            "ram_inicio_mb": 1760.0625,
+            "ram_pico_mb": 1761.8984375,
+            "ram_usada_mb": 1.8359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 14.576765,
+        "ram_media_mb": 1765.704427,
+        "ram_pico_mb": 1767.53125,
+        "tempo_medio_segundos": 62.780572,
+        "ttft_medio_segundos": 0.922311,
+        "tps": {
+          "n": 3,
+          "mediana": 14.405126,
+          "iqr": 0.33435,
+          "p25": 14.36668,
+          "p75": 14.70103,
+          "p95": 14.937754,
+          "p99": 14.985099,
+          "max": 14.996935,
+          "media": 14.576765
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.068417,
+          "iqr": 1.286162,
+          "p25": 0.065757,
+          "p75": 1.351918,
+          "p95": 2.37872,
+          "p99": 2.58408,
+          "max": 2.63542,
+          "media": 0.922311
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 68.280619,
+          "iqr": 11.436733,
+          "p25": 58.437217,
+          "p75": 69.87395,
+          "p95": 71.148615,
+          "p99": 71.403548,
+          "max": 71.467281,
+          "media": 62.780572
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1765.789062,
+          "iqr": 1.869141,
+          "p25": 1764.791016,
+          "p75": 1766.660156,
+          "p95": 1767.357031,
+          "p99": 1767.496406,
+          "max": 1767.53125,
+          "media": 1765.704427
+        },
+        "tps_por_rodada": [
+          14.405125603797918,
+          14.996934950154856,
+          14.328235002163268
+        ],
+        "ttft_por_rodada": [
+          2.6354199000052176,
+          0.06309670000337064,
+          0.06841700000222772
+        ],
+        "tempo_por_rodada": [
+          48.59381440002471,
+          68.28061890002573,
+          71.46728120004991
+        ],
+        "ram_por_rodada": [
+          1763.79296875,
+          1765.7890625,
+          1767.53125
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1767.53125,
+        "tps_medio": 14.576765,
+        "tempo_medio_segundos": 62.780572,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, identifico que o usuário está procurando 5 questões de múltipla escolha, alinhadas à habilidade EF09MA01, que é a habilidade de identificar o número que não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0). \n\nPara cada questão, preciso apresentar um número que não pode ser escrito na forma de uma fração a/b. Isso significa que cada número deve ser inteira ou decimal, com não ser possível reduzir a fração a/b para uma forma mais simplificada. \n\nEm seguida, para cada questão, preciso definir o enunciado claro e oalternativas com as opções A, B, C, D e E. De acordo com a opção correta, que é a que não pode ser escrito na forma de uma fração a/b, e presentationar a resolução passo a passo, com os passos matemáticos necessários para identificar a número correta.\n\nPara garantir que todas as questões estejam alinhadas à BNCC, preciso garantir que cada questão tenha o usuário identificar corretamente a opção que não pode ser expressa na forma de uma fração a/b. Isso inclui usar números inteiros, decimais, fracionários e fracionários decimais.\n\nFinalmente, para cada questão, preciso definir o enunciado claro, presentationar as alternativas corretas, identificar a opção correta e a resolução passo a passo, com os passos matemáticos necessários para identificar a opção correta. Isso inclui using os passos de cálculo necessários para reduzir a fração a/b para sua forma mais simplificada e identificar a opção que não pode ser expressa na forma de uma fração a/b.\n\nEm resumo, cada questão deve ser clara, contextualizada e alinhada à habilidade de identificar o número que não pode ser expressa na forma de uma fração a/b, garantindo que o usuário identifique corretamente a opção correta e understanda a resolução passo a passo.\n</think>\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre os seguintes números, qual não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"3.14\",\n                \"B\": \"1/2\",\n                \"C\": \"5.0\",\n                \"D\": \"0.333...\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3.14 não pode ser escrito na forma de uma fração a/b, pois é um número decimal periódico que pode ser expressado como 3.14 = 314/100, eSimilarmente, 5.0 pode ser expressado como 5/1, e 7 pode ser expressado como 7/1.\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 700,
+            "total_tokens": 700
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6354199000052176,
+            "tempo_decode_s": 45.958394500019494,
+            "tempo_resposta_s": 48.59381440002471,
+            "tempo_total_s": 48.59381440002471,
+            "tokens_entrada": 0,
+            "tokens_saida": 700,
+            "tps": 14.405125603797918,
+            "ram_inicio_mb": 1761.8125,
+            "ram_pico_mb": 1763.79296875,
+            "ram_usada_mb": 1.98046875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create 5 multiple-choice questions related to numbers for teaching fundamental mathematics. The goal is to align them with the Base Nacional Comum Curricular (BNCC) standard EF09MA01, which I believe is about understanding and applying number properties and operations. \n\nFirst, I should recall what EF09MA01 entails. It likely involves basic number concepts such as counting, number sequences, place value, comparing numbers, and simple arithmetic operations like addition, subtraction, multiplication, and division. \n\nTo ensure I'm covering these areas, I'll think about different types of questions that can test these concepts. Maybe I can create questions about identifying numbers, comparing them, understanding place value, performing basic operations, and solving simple word problems.\n\nNow, I need to create 5 unique questions, each with a plausible and plausible distractor. Each question should have 5 options, with one correct answer and four incorrect ones. The distractors should be plausible so that students don't get stuck on incorrect options.\n\nLet me start brainstorming some questions:\n\n1. **Identifying a Number**: A question where a number is described in words, and students have to pick the correct numeral.\n\n2. **Comparing Numbers**: A question where two numbers are presented, and students have to determine which is larger or smaller.\n\n3. **Place Value**: A question about identifying the value of a digit in a number, like units, tens, hundreds.\n\n4. **Basic Operations**: A question where students have to perform an operation (addition, subtraction, multiplication, division) to find a result.\n\n5. **Word Problem**: A question that involves applying number operations to solve a real-life scenario.\n\nFor each question, I need to make sure the correct answer is clearly marked and that the distractors are plausible. I should also ensure that the questions are varied enough to cover different aspects of number understanding.\n\nLet me draft each question:\n\n1. **Question**: \"O número 24 tem um valor de... em sete dezenas.\"\n   - Options: A) 24, B) 24, C) 24, D) 24, E) 24\n   - Wait, that's not correct. I need to vary the distractors.\n\n   Let me correct that.\n\n2. **Question**: \"Qual é o valor de 30 + 25?\"\n   - Options: A) 55, B) 50, C) 60, D) 25, E) 30\n\n3. **Question**: \"Qual é o valor de 4 × 6?\"\n   - Options: A) 24, B) 20, C) 18, D) 16, E) 20\n\n4. **Question**: \" qual é o valor de 10 - 7?\"\n   - Options: A) 3, B) 7, C) 4, D) 10, E) 7\n\n5. **Question**: \" qual é o valor de 5 × 3 + 2?\"\n   - Options: A) 15, B) 17, C) 18, D) 16, E) 13\n\nWait, I'm using the same distractors in different questions, which might not be ideal. Let me try to vary them more.\n\nLet me try again:\n\n1. **Question**: \" qual é o valor de 12 + 13?\"\n   - Options: A) 25, B) 20, C) 15, D) 10, E) 25\n\n2. **Question**: \" qual é o valor de 100 - 50?\"\n   - Options: A) 50, B) 150, C) 100, D) 150, E) 50\n\n3. **Question**: \" qual é o valor de 200 ÷ 4?\"\n   - Options: A) 50, B) 40, C) 30, D) 60, E) 50\n\n4. **Question**: \" qual é o valor de 5 × 9 - 30?\"\n   - Options: A) 20, B) 30, C) 40, D) 50, E) 20\n\n5. **Question**: \" qual é o valor de 100 ÷ 2 + 50?\"\n   - Options: A) 125, B) 80, C) 150, D) 75, E) 125\n\nI think these are more varied. Each question targets a different aspect: addition, subtraction, multiplication, division, and word problems. The distractors are",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06309670000337064,
+            "tempo_decode_s": 68.21752220002236,
+            "tempo_resposta_s": 68.28061890002573,
+            "tempo_total_s": 68.28061890002573,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.996934950154856,
+            "ram_inicio_mb": 1763.69921875,
+            "ram_pico_mb": 1765.7890625,
+            "ram_usada_mb": 2.08984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nOkay, so I need to create 5 multiple-choice questions related to numbers for teaching fundamental mathematics. The goal is to align them with the Base Nacional Comum Curricular (BNCC) standard EF09MA01, which I believe is about understanding and applying number properties and operations. \n\nFirst, I should recall what EF09MA01 entails. It likely involves basic number concepts such as counting, number sequences, place value, comparing numbers, and simple arithmetic operations like addition, subtraction, multiplication, and division. \n\nTo ensure I'm covering these areas, I'll think about different types of questions that can test these concepts. Maybe I can create questions about identifying numbers, comparing them, understanding place value, performing basic operations, and solving simple word problems.\n\nNow, I need to create 5 unique questions, each with a plausible and plausible distractor. Each question should have 5 options, with one correct answer and four incorrect ones. The distractors should be plausible so that students don't get stuck on incorrect options.\n\nLet me start brainstorming some questions:\n\n1. **Identifying a Number**: A question where a number is described in words, and students have to pick the correct numeral.\n\n2. **Comparing Numbers**: A question where two numbers are presented, and students have to determine which is larger or smaller.\n\n3. **Place Value**: A question about identifying the value of a digit in a number, like units, tens, hundreds.\n\n4. **Basic Operations**: A question where students have to perform an operation (addition, subtraction, multiplication, division) to find a result.\n\n5. **Word Problem**: A question that involves applying number operations to solve a real-life scenario.\n\nFor each question, I need to make sure the correct answer is clearly marked and that the distractors are plausible. I should also ensure that the questions are varied enough to cover different aspects of number understanding.\n\nLet me draft each question:\n\n1. **Question**: \"O número 24 tem um valor de... em sete dezenas.\"\n   - Options: A) 24, B) 24, C) 24, D) 24, E) 24\n   - Wait, that's not correct. I need to vary the distractors.\n\n   Let me correct that.\n\n2. **Question**: \"Qual é o valor de 30 + 25?\"\n   - Options: A) 55, B) 50, C) 60, D) 25, E) 30\n\n3. **Question**: \"Qual é o valor de 4 × 6?\"\n   - Options: A) 24, B) 20, C) 18, D) 16, E) 20\n\n4. **Question**: \" qual é o valor de 10 - 7?\"\n   - Options: A) 3, B) 7, C) 4, D) 10, E) 7\n\n5. **Question**: \" qual é o valor de 5 × 3 + 2?\"\n   - Options: A) 15, B) 17, C) 18, D) 16, E) 13\n\nWait, I'm using the same distractors in different questions, which might not be ideal. Let me try to vary them more.\n\nLet me try again:\n\n1. **Question**: \" qual é o valor de 12 + 13?\"\n   - Options: A) 25, B) 20, C) 15, D) 10, E) 25\n\n2. **Question**: \" qual é o valor de 100 - 50?\"\n   - Options: A) 50, B) 150, C) 100, D) 150, E) 50\n\n3. **Question**: \" qual é o valor de 200 ÷ 4?\"\n   - Options: A) 50, B) 40, C) 30, D) 60, E) 50\n\n4. **Question**: \" qual é o valor de 5 × 9 - 30?\"\n   - Options: A) 20, B) 30, C) 40, D) 50, E) 20\n\n5. **Question**: \" qual é o valor de 100 ÷ 2 + 50?\"\n   - Options: A) 125, B) 80, C) 150, D) 75, E) 125\n\nI think these are more varied. Each question targets a different aspect: addition, subtraction, multiplication, division, and word problems. The distractors are",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06841700000222772,
+            "tempo_decode_s": 71.39886420004768,
+            "tempo_resposta_s": 71.46728120004991,
+            "tempo_total_s": 71.46728120004991,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.328235002163268,
+            "ram_inicio_mb": 1765.6953125,
+            "ram_pico_mb": 1767.53125,
+            "ram_usada_mb": 1.8359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 14.38143,
+        "ram_media_mb": 1770.445312,
+        "ram_pico_mb": 1771.417969,
+        "tempo_medio_segundos": 70.403218,
+        "ttft_medio_segundos": 1.976203,
+        "tps": {
+          "n": 2,
+          "mediana": 14.38143,
+          "iqr": 0.133362,
+          "p25": 14.314749,
+          "p75": 14.448111,
+          "p95": 14.501456,
+          "p99": 14.512125,
+          "max": 14.514792,
+          "media": 14.38143
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 1.976203,
+          "iqr": 0.214651,
+          "p25": 1.868877,
+          "p75": 2.083529,
+          "p95": 2.169389,
+          "p99": 2.186561,
+          "max": 2.190854,
+          "media": 1.976203
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 70.403218,
+          "iqr": 0.007711,
+          "p25": 70.399362,
+          "p75": 70.407073,
+          "p95": 70.410157,
+          "p99": 70.410774,
+          "max": 70.410929,
+          "media": 70.403218
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1770.445312,
+          "iqr": 0.972656,
+          "p25": 1769.958984,
+          "p75": 1770.931641,
+          "p95": 1771.320703,
+          "p99": 1771.398516,
+          "max": 1771.417969,
+          "media": 1770.445312
+        },
+        "tps_por_rodada": [
+          14.514792239225912,
+          14.248068538640858
+        ],
+        "ttft_por_rodada": [
+          2.190854499989655,
+          1.7615517000085674
+        ],
+        "tempo_por_rodada": [
+          70.41092860000208,
+          70.3955064000329
+        ],
+        "ram_por_rodada": [
+          1769.47265625,
+          1771.41796875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "<think>\nPrimeiro, preciso entender claramente o objetivo desse usuário. Ele está pedindo uma questão de múltipla escolha para a habilidade EF08MA05, que em generally refers à geometria. Preciso garantir que a questão é rigurosa, alinhada à BNCC e que a resposta correta esteja entre as alternativas. Também precisou do exemplo de uma questão existente, mas como none, preciso desenhar uma nova questão ou usar um exemplo fornecido.\n\nEm seguida, preciso definir as alternativas corretas e as restantes"
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "<think>\nPrimeiro, preciso entender que a habilidade EF06MA17 refers à geometria e a adquiração de figuras com destaque para o aluno. A objective está forward, o que sugere que a habilidade é forwarded, o que pode indicar que a aluno deve reconhecer, reconstruir ou descrever figuras, possivelmente em diferentes tamanhos ou com diferentes cores.\n\nEm relate a BNCC, a base Nacional com curricular (BNCC) tem um objetivo profundo em forthecamento da habilidade de reconhecer figuras, reconstruir e desc"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 1771.417969,
+        "tps_medio": 14.38143,
+        "tempo_medio_segundos": 70.403218,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso entender claramente o objetivo desse usuário. Ele está pedindo uma questão de múltipla escolha para a habilidade EF08MA05, que em generally refers à geometria. Preciso garantir que a questão é rigurosa, alinhada à BNCC e que a resposta correta esteja entre as alternativas. Também precisou do exemplo de uma questão existente, mas como none, preciso desenhar uma nova questão ou usar um exemplo fornecido.\n\nEm seguida, preciso definir as alternativas corretas e as restantes com erros comuns dos alunos. Isso implica degerar as resoluções passo a passo de forma didática, como um professor explicaria para o aluno. Além disso, preciso garantir que a dificuldade seja适iva, possivelmente comuns no nível fundamental.\n\nPreciso garantir que a resposta correta seja a que a mais se torna consistente com os passos de cálculo, sem adicionar texto introdutório ou explicações teóricas. Além disso, a resposta deve ser distribuída de forma variada entre as alternativas, garantindo que a opção correta seja a única que atende a requerências.\n\nFinalmente, preciso garantir que a resposta respeje os pré-requisitos informados, como não ser norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando norando",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1022,
+            "total_tokens": 1022
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.190854499989655,
+            "tempo_decode_s": 68.22007410001243,
+            "tempo_resposta_s": 70.41092860000208,
+            "tempo_total_s": 70.41092860000208,
+            "tokens_entrada": 0,
+            "tokens_saida": 1022,
+            "tps": 14.514792239225912,
+            "ram_inicio_mb": 1767.46875,
+            "ram_pico_mb": 1769.47265625,
+            "ram_usada_mb": 2.00390625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+          "raw_output": "<think>\nPrimeiro, preciso entender que a habilidade EF06MA17 refers à geometria e a adquiração de figuras com destaque para o aluno. A objective está forward, o que sugere que a habilidade é forwarded, o que pode indicar que a aluno deve reconhecer, reconstruir ou descrever figuras, possivelmente em diferentes tamanhos ou com diferentes cores.\n\nEm relate a BNCC, a base Nacional com curricular (BNCC) tem um objetivo profundo em forthecamento da habilidade de reconhecer figuras, reconstruir e descrever figuras, possivelmente em diferentes tamanhos ou cores. Portanto, a questão deve incluir problemas que envolvam reconhecer, reconstruir ou descrever figuras, possivelmente em diferentes tamanhos ou cores.\n\nPara geração de uma questão de múltipla escolha, preciso criar uma nova nova questão que respeita essas regras. Vou criar uma figure com um tamanho e uma cores e thenças, e posso propor questões que inclua desenhar ou reconstruir a figure com destaque para um dos vértices ou elementos da figure.\n\nAgora, para a resposta:\n\n1. Definir o enunciado: reconstruir ou reconstruir uma figure com destaque para um dos vértices ou elementos da figure.\n\n2. Definir as alternativas: as opções de reconstruir ou reconstruir a figure com destaque para um dos vértices ou elementos, possivelmente com descreções ou outros elementos.\n\n3. Determinar a resolução passo a passo: reconstruir a figure com destaque para um dos vértices ou elementos, possivelmente com um descrever ou outro elemetno.\n\n4. Determinar a reação correta: a opção que recontra o objetivo da BNCC.\n\n5. Determinar a resolução passo a passo: expreios matemáticos ou descreções que refletem o cálculo ou o descrever.\n\n6. Definir a classificação: a opção que corresponde à reação correta.\n\nDepois, em严格按照 os formatos, incluir todo o JSON como resposta.\n\nPreciso also garantir que a resposta seja variada entre as alternativas, no entanto, a reação correta será a mesma.\n\nE finalmente, garantir que a resposta respeitando as restrições de style e formato.\n\nEntão, para isso, preciso escrever um JSON com os elementos necessários.\n\nPreciso também garantir que o enunciado seja claro e contextualizado para o estudante, com base em etapas de etária.\n\nPortanto, preciso criar uma figure com um tamanho e uma cores e thenças, reconstruir ou reconstruir uma figure com destaque para um dos vértices ou elementos, possivelmente com descreções ou outro elemetno.\n\nDepois, definir as alternativas, possivelmente com opções de reconstruir ou reconstruir, possivelmente com descreções ou outro elemetno.\n\nA resolução passo a passo será a reconstrução ou reconstruição da figure com destaque para um dos vértices ou elementos.\n\nA classificação será a opção que corresponde à reação correta.\n\nFinalmente, a resposta será a classificação correta.\n\nPreciso also garantir que a resposta tenha todas as propriedades exatamente, sem texto adicional, e que as questoes estejam emlnas independentes entre si.\n\nDepois, para garantir que a resposta respeitando as restrições de style e formato, preciso escrever o JSON como resposta.\n\nPreciso also garantir que o enunciado seja claro e contextualizado, o enunciado seja claro e contextualizado, etc.\n\nDepois, para garantir que a resposta respeitando as restrições de style e formato, preciso escrever o JSON como resposta.\n\nPreciso also garantir que o enunciado e as alternativas estejam bem formados e claros, possivelmente com expreios matemáticos ou descreções.\n\nDepois, para garantir que a resposta respeitando as restrições de style e formato, preciso escrever o JSON como resposta.\n\nPreciso also garantir que o enunciado e as alternativas estejam bem formados e claros, possivelmente com expreios matemáticos ou descreções.\n\nDepois, para garantir que a resposta respeitando as restrições de style e formato, preciso escrever o",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1003,
+            "total_tokens": 1003
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.7615517000085674,
+            "tempo_decode_s": 68.63395470002433,
+            "tempo_resposta_s": 70.3955064000329,
+            "tempo_total_s": 70.3955064000329,
+            "tokens_entrada": 0,
+            "tokens_saida": 1003,
+            "tps": 14.248068538640858,
+            "ram_inicio_mb": 1769.37890625,
+            "ram_pico_mb": 1771.41796875,
+            "ram_usada_mb": 2.0390625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1771.4,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 12.84,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 70.4,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -2.9,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+    "gerado_em": "2026-09-05T08:59:05.772706"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}
