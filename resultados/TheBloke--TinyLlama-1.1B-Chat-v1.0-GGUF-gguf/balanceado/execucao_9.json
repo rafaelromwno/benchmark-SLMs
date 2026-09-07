@@ -1,0 +1,1169 @@
+{
+  "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+  "formato": "gguf",
+  "data": "07/09/2026",
+  "run_config": {
+    "modelos": [
+      "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\TheBloke--TinyLlama-1.1B-Chat-v1.0-GGUF\\tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf"
+    },
+    "seed": 256,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 256
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 256
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.28,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+      "json_valido": false,
+      "json_erro": "JSON não encontrado na resposta",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 3.80749769997783,
+        "tempo_prefill_s": 16.16024290001951,
+        "tempo_decode_s": 14.413466300000437,
+        "tempo_resposta_s": 30.573709200019948,
+        "tempo_total_s": 34.38120689999778,
+        "tokens_entrada": 0,
+        "tokens_saida": 260,
+        "tps": 8.504038495918918,
+        "ram_inicio_mb": 19.45703125,
+        "ram_pico_mb": 972.08203125,
+        "ram_usada_mb": 952.625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 34.38120689999778,
+        "tempo_carregamento_s": 3.80749769997783,
+        "tempo_resposta_s": 30.573709200019948,
+        "ram_pico_mb": 972.08203125,
+        "ram_inicio_mb": 19.45703125,
+        "ttft_segundos": 16.16024290001951,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Dada a seguinte questão para a habiliidade EF09MA01:\n\n**Haabilidade:** EF09MA01\n**Uniidade Temática:** Números\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF08MA01, EF07MA01\n\n**Exemplo de questão existente para esta habiliidade (manter consistência de estilo):**\nExemplo 1: Dentre os números 1 a 10, qual número é maior?\n\nGere 1 questão nova e inédita para a habiliidade EF09MA01.\n\nO campo \"resolucao_passo_a_passo\" é OBRIGATÓRIO. Escreva a resposta como texto corrido, sem lista numerada, sem tópicos, sem marcaadores. Apresente os passos de cálculo em sequência natural, no formato \"expressão = resultado\", conectados em frase, sem texto introdutório e sem explicações teóricas, sem conclusão.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 260,
+            "total_tokens": 260
+          },
+          "metrics": {
+            "tempo_carregamento_s": 3.80749769997783,
+            "tempo_prefill_s": 16.16024290001951,
+            "tempo_decode_s": 14.413466300000437,
+            "tempo_resposta_s": 30.573709200019948,
+            "tempo_total_s": 34.38120689999778,
+            "tokens_entrada": 0,
+            "tokens_saida": 260,
+            "tps": 8.504038495918918,
+            "ram_inicio_mb": 19.45703125,
+            "ram_pico_mb": 972.08203125,
+            "ram_usada_mb": 952.625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 15.532113,
+          "iqr": 2.711625,
+          "p25": 13.910027,
+          "p75": 16.621652,
+          "p95": 18.691826,
+          "p99": 19.424729,
+          "max": 19.607954,
+          "media": 15.588471
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 1.300444,
+          "iqr": 2.792551,
+          "p25": 0.065715,
+          "p75": 2.858266,
+          "p95": 3.468314,
+          "p99": 3.774929,
+          "max": 3.851583,
+          "media": 1.528142
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 13.853849,
+          "iqr": 18.63884,
+          "p25": 11.104215,
+          "p75": 29.743055,
+          "p95": 37.401572,
+          "p99": 38.343767,
+          "max": 38.579316,
+          "media": 19.469687
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 873.873047,
+          "iqr": 240.72168,
+          "p25": 715.208984,
+          "p75": 955.930664,
+          "p95": 974.227344,
+          "p99": 974.232969,
+          "max": 974.234375,
+          "media": 843.166406
+        },
+        "tps_medio": 15.588471,
+        "ttft_medio_segundos": 1.528142,
+        "tempo_medio_segundos": 19.469687,
+        "ram_pico_mb": 974.234375
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 15.532113,
+          "iqr": 2.711625,
+          "p25": 13.910027,
+          "p75": 16.621652,
+          "p95": 18.691826,
+          "p99": 19.424729,
+          "max": 19.607954,
+          "media": 15.588471
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 1.300444,
+          "iqr": 2.792551,
+          "p25": 0.065715,
+          "p75": 2.858266,
+          "p95": 3.468314,
+          "p99": 3.774929,
+          "max": 3.851583,
+          "media": 1.528142
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 13.853849,
+          "iqr": 18.63884,
+          "p25": 11.104215,
+          "p75": 29.743055,
+          "p95": 37.401572,
+          "p99": 38.343767,
+          "max": 38.579316,
+          "media": 19.469687
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 873.873047,
+          "iqr": 240.72168,
+          "p25": 715.208984,
+          "p75": 955.930664,
+          "p95": 974.227344,
+          "p99": 974.232969,
+          "max": 974.234375,
+          "media": 843.166406
+        },
+        "tps_medio": 15.588471,
+        "ttft_medio_segundos": 1.528142,
+        "tempo_medio_segundos": 19.469687,
+        "ram_pico_mb": 974.234375,
+        "tps_por_rodada": [
+          12.939407990471842,
+          19.60795446456505,
+          16.419954593387388,
+          16.30147277349548,
+          14.762752828362734,
+          14.463709111318323,
+          13.402996697081692,
+          17.572114134943035,
+          16.688884966070397,
+          13.725466819817754
+        ],
+        "ttft_por_rodada": [
+          3.8515831000404432,
+          0.060294699971564114,
+          0.05596769996918738,
+          0.08197430009022355,
+          0.13433629996143281,
+          2.9306683000177145,
+          2.9998744999757037,
+          0.059116699965670705,
+          2.466551199904643,
+          2.6410571000305936
+        ],
+        "tempo_por_rodada": [
+          15.379374400014058,
+          9.281947299954481,
+          11.084074500016868,
+          11.164635400054976,
+          12.328324000001885,
+          38.5793157001026,
+          35.96210689994041,
+          18.665938399964944,
+          33.43542729993351,
+          8.81572930002585
+        ],
+        "ram_por_rodada": [
+          973.69140625,
+          974.234375,
+          974.21875,
+          902.6484375,
+          902.62890625,
+          845.1171875,
+          713.84375,
+          714.40625,
+          714.98046875,
+          715.89453125
+        ],
+        "ram_media_mb": 843.166406
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Caso não exista questões de múltipla escolha para a habiliidade EF06MA14, a resposta para o seguinte problema é:\n\n**Haabilidade:** EF06MA14\n**Uniidade Temática:** Álgebra\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF06MA01\n\n**Exemplo de questão existentes para esta habiliada (manter consistência de estilo):**\nExemplo 1: Se 2x = 10, qual é o valor de x?\nExemplo 2: Se 5x = 20, determine o valor de x aplicando as propriidades da igualdade.\n\nGeire 3 questão nova, inédita e ali nhallada à habiliada EF06MA14.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 199,
+            "total_tokens": 199
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.8515831000404432,
+            "tempo_decode_s": 11.527791299973615,
+            "tempo_resposta_s": 15.379374400014058,
+            "tempo_total_s": 15.379374400014058,
+            "tokens_entrada": 0,
+            "tokens_saida": 199,
+            "tps": 12.939407990471842,
+            "ram_inicio_mb": 972.80078125,
+            "ram_pico_mb": 973.69140625,
+            "ram_usada_mb": 0.890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Caso seja possível encontrar 3 questões de múltipla escolha para a habilidade EF06MA14, a seguir são exatamente 3 questões novas, inéditas e aliadas à habilição:\n\n1. Se x + 5 = 12, qual é o valor de x?\n2. Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nNote que a resposta correta para a questão 1 deve ser \"x = 2\", enquanto a resposta correta para a questão 2 deve ser \"x = 2\".\n\nEsta resposta é exatamente a mesma que foi fornecida no JSON, conforme exigido pela regras absolutas.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 182,
+            "total_tokens": 182
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.060294699971564114,
+            "tempo_decode_s": 9.221652599982917,
+            "tempo_resposta_s": 9.281947299954481,
+            "tempo_total_s": 9.281947299954481,
+            "tokens_entrada": 0,
+            "tokens_saida": 182,
+            "tps": 19.60795446456505,
+            "ram_inicio_mb": 973.60546875,
+            "ram_pico_mb": 974.234375,
+            "ram_usada_mb": 0.62890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Caso seja possível encontrar 3 questões de múltipla escolha para a habilidade EF06MA14, a seguir são exatamente 3 questões novas, inéditas e aliadas à habilição:\n\n1. Se x + 5 = 12, qual é o valor de x?\n2. Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nNote que a resposta correta para a questão 1 deve ser \"x = 2\", enquanto a resposta correta para a questão 2 deve ser \"x = 2\".\n\nEsta resposta é exatamente a mesma que foi fornecida no JSON, conforme exigido pela regras absolutas.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 182,
+            "total_tokens": 182
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.05596769996918738,
+            "tempo_decode_s": 11.02810680004768,
+            "tempo_resposta_s": 11.084074500016868,
+            "tempo_total_s": 11.084074500016868,
+            "tokens_entrada": 0,
+            "tokens_saida": 182,
+            "tps": 16.419954593387388,
+            "ram_inicio_mb": 974.14453125,
+            "ram_pico_mb": 974.21875,
+            "ram_usada_mb": 0.07421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Caso seja possível encontrar 3 questões de múltipla escolha para a habilidade EF06MA14, a seguir são exatamente 3 questões novas, inéditas e aliadas à habilição:\n\n1. Se x + 5 = 12, qual é o valor de x?\n2. Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nNote que a resposta correta para a questão 1 deve ser \"x = 2\", enquanto a resposta correta para a questão 2 deve ser \"x = 2\".\n\nEsta resposta é exatamente a mesma que foi fornecida no JSON, conforme exigido pela regras absolutas.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 182,
+            "total_tokens": 182
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08197430009022355,
+            "tempo_decode_s": 11.082661099964753,
+            "tempo_resposta_s": 11.164635400054976,
+            "tempo_total_s": 11.164635400054976,
+            "tokens_entrada": 0,
+            "tokens_saida": 182,
+            "tps": 16.30147277349548,
+            "ram_inicio_mb": 902.57421875,
+            "ram_pico_mb": 902.6484375,
+            "ram_usada_mb": 0.07421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Caso seja possível encontrar 3 questões de múltipla escolha para a habilidade EF06MA14, a seguir são exatamente 3 questões novas, inéditas e aliadas à habilição:\n\n1. Se x + 5 = 12, qual é o valor de x?\n2. Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nNote que a resposta correta para a questão 1 deve ser \"x = 2\", enquanto a resposta correta para a questão 2 deve ser \"x = 2\".\n\nEsta resposta é exatamente a mesma que foi fornecida no JSON, conforme exigido pela regras absolutas.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 182,
+            "total_tokens": 182
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.13433629996143281,
+            "tempo_decode_s": 12.193987700040452,
+            "tempo_resposta_s": 12.328324000001885,
+            "tempo_total_s": 12.328324000001885,
+            "tokens_entrada": 0,
+            "tokens_saida": 182,
+            "tps": 14.762752828362734,
+            "ram_inicio_mb": 902.62890625,
+            "ram_pico_mb": 902.62890625,
+            "ram_usada_mb": 0.0,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Caso 1:\nQuestion: Dentre os números abaixo, qual NÃO pode ser escrita na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\nSolution:\nA fração a/b (com a e b inteiros, b≠0) não pode ser escrita na forma de uma fração a/c (com a e c inteiros, c≠0) porque a fração a/b é menor que a fração a/c.\n\nGeire 3 questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente adequadas à habiliidade EF09MA01.\n\nExemplo 2:\nQuestion: Qual é a maior quantidade de água que pode ser transportada por um carro de 1,5 toneladas com uma velocidade máxima de 50 km/h?\n\nSolution:\nA velocidade máxima do carro é de 50 km/h, portanto, a quantidade de água transportada é igual a:\n\n(1,5 toneladas) x (50 km/h) = 75,600 m³\n\nGeire 3 questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente adequadas à habiliidade EF09MA01.\n\nExemplo 3:\nQuestion: Qual é a menor quantidade de água que pode ser transportada por um carro de 1,5 toneladas com uma velocidade máxima de 50 km/h?\n\nSolution:\nA velocidade máxima do carro é de 50 km/h, portanto, a quantidade de água transportada é igual a:\n\n(1,5 toneladas) x (50 km/h) = 75,600 m³\n\nGeire 3 questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente adequadas à habiliidade EF09MA01.\n\nGeire 3 questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente adequadas à habiliidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 558,
+            "total_tokens": 558
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.9306683000177145,
+            "tempo_decode_s": 35.64864740008488,
+            "tempo_resposta_s": 38.5793157001026,
+            "tempo_total_s": 38.5793157001026,
+            "tokens_entrada": 0,
+            "tokens_saida": 558,
+            "tps": 14.463709111318323,
+            "ram_inicio_mb": 844.59375,
+            "ram_pico_mb": 845.1171875,
+            "ram_usada_mb": 0.5234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Caso não seja possível calibrar a dificidade dos pré-requisitos informados, o aluno deve ser informado que não será considerado para a habiliidade EF06MA14.\n\nRegras absolutas:\n- Todas as questões devem ser inéditas entre si na mesma respposta.\n- A respposta correta deve ser distribuída de forma variada entre A, B, C, D e E ao longo das questões.\n- A resolução passo a passo deve ser exclusiva para cada questão.\n- Todas as questões devem ser apresentadas com um formato de resposta e resolução passo a passo.\n- A JSON deve ter a estrutura exata descrita na regra absoluta.\n\nResposta:\n```\n{\n  \"questoe_01\": {\n    \"enunciado\": \"...\",\n    \"alternativas\": {\n      \"A\": \"...\",\n      \"B\": \"...\",\n      \"C\": \"...\",\n      \"D\": \"...\",\n      \"E\": \"...\",\n    },\n    \"respota_correta\": \"A\",\n    \"resolucao_passo_a_passo\": \"...\",\n  },\n  \"questoe_02\": {\n    \"enunciado\": \"...\",\n    \"alternativas\": {\n      \"A\": \"...\",\n      \"B\": \"...\",\n      \"C\": \"...\",\n      \"D\": \"...\",\n      \"E\": \"...\",\n    },\n    \"respota_correta\": \"A\",\n    \"resolucao_passo_a_passo\": \"...\",\n  },\n  \"questoe_03\": {\n    \"enunciado\": \"...\",\n    \"alternativas\": {\n      \"A\": \"...\",\n      \"B\": \"...\",\n      \"C\": \"...\",\n      \"D\": \"...\",\n      \"E\": \"...\",\n    },\n    \"respota_correta\": \"E\",\n    \"resolucao_passo_a_passo\": \"...\",\n  },\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 482,
+            "total_tokens": 482
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.9998744999757037,
+            "tempo_decode_s": 32.962232399964705,
+            "tempo_resposta_s": 35.96210689994041,
+            "tempo_total_s": 35.96210689994041,
+            "tokens_entrada": 0,
+            "tokens_saida": 482,
+            "tps": 13.402996697081692,
+            "ram_inicio_mb": 712.94921875,
+            "ram_pico_mb": 713.84375,
+            "ram_usada_mb": 0.89453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Certainly, here are three new question(s) and inédited and aliased answers to the habitability of EF06MA14, along with the pre-requisites that the student should already have mastered:\n\n1. Haabilidade: EF06MA14\nPre-requisitos: EF06MA01\nExemplo 1: Se x + 5 = 12, qual é o valor de x?\nExemplo 2: Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\n2. Haabilidade: EF06MA14\nPre-requisitos: EF06MA01\nExemplo 1: Se x + 5 = 12, qual é o valor de x?\nExemplo 2: Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\n3. Haabilidade: EF06MA14\nPre-requisitos: EF06MA01, EF06MA14\nExemplo 1: Se x + 5 = 12, qual é o valor de x?\nExemplo 2: Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nGeire 3 nova ou inédita question(ões) e aliásed aliadas à habilidade EF06MA14.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 328,
+            "total_tokens": 328
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.059116699965670705,
+            "tempo_decode_s": 18.606821699999273,
+            "tempo_resposta_s": 18.665938399964944,
+            "tempo_total_s": 18.665938399964944,
+            "tokens_entrada": 0,
+            "tokens_saida": 328,
+            "tps": 17.572114134943035,
+            "ram_inicio_mb": 713.81640625,
+            "ram_pico_mb": 714.40625,
+            "ram_usada_mb": 0.58984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Caso 1:\nQuestion: Dentre os números abaixo, qual NÃO pode ser escrita na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\nSolution:\nA fração a/b (com a e b inteiros, b≠0) não pode ser escrita na forma de uma fração a/c (com a e c inteiros, c≠0) porque a fração a/b é menor que a fração a/c.\n\nGeire 3 questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente adequadas à habiliidade EF09MA01.\n\nExemplo 2:\nQuestion: Qual é a maior quantidade de água que pode ser transportada por um carro de 1,5 toneladas com uma velocidade máxima de 50 km/h?\n\nSolution:\nA velocidade máxima do carro é de 50 km/h, portanto, a quantidade de água transportada é igual a:\n\n(1,5 toneladas) x (50 km/h) = 75,600 m³\n\nGeire 3 questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente adequadas à habiliidade EF09MA01.\n\nExemplo 3:\nQuestion: Qual é a menor quantidade de água que pode ser transportada por um carro de 1,5 toneladas com uma velocidade máxima de 50 km/h?\n\nSolution:\nA velocidade máxima do carro é de 50 km/h, portanto, a quantidade de água transportada é igual a:\n\n(1,5 toneladas) x (50 km/h) = 75,600 m³\n\nGeire 3 questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente adequadas à habiliidade EF09MA01.\n\nGeire 3 questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente adequadas à habiliidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 558,
+            "total_tokens": 558
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.466551199904643,
+            "tempo_decode_s": 30.968876100028865,
+            "tempo_resposta_s": 33.43542729993351,
+            "tempo_total_s": 33.43542729993351,
+            "tokens_entrada": 0,
+            "tokens_saida": 558,
+            "tps": 16.688884966070397,
+            "ram_inicio_mb": 714.32421875,
+            "ram_pico_mb": 714.98046875,
+            "ram_usada_mb": 0.65625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "1. Haabilidade: EF02MA01\n2. Pré-requisitos que o aluno já deve dominar (calibração de dificuldade): Não especificaida.\n3. Exemplo de questão existente para esta habiliidade (manter consistência de estilo):\n   Exemplo 1: Usando a reta numérica, qual número está entre 23 e 27?\n\nGeire 2 questão nova e inédita para a habiliidade EF02MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 121,
+            "total_tokens": 121
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6410571000305936,
+            "tempo_decode_s": 6.174672199995257,
+            "tempo_resposta_s": 8.81572930002585,
+            "tempo_total_s": 8.81572930002585,
+            "tokens_entrada": 0,
+            "tokens_saida": 121,
+            "tps": 13.725466819817754,
+            "ram_inicio_mb": 714.9140625,
+            "ram_pico_mb": 715.89453125,
+            "ram_usada_mb": 0.98046875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 16.388657,
+        "ram_media_mb": 723.75,
+        "ram_pico_mb": 724.898438,
+        "tempo_medio_segundos": 35.418233,
+        "ttft_medio_segundos": 1.192995,
+        "tps": {
+          "n": 3,
+          "mediana": 17.716229,
+          "iqr": 2.752578,
+          "p25": 15.344261,
+          "p75": 18.096839,
+          "p95": 18.401327,
+          "p99": 18.462225,
+          "max": 18.477449,
+          "media": 16.388657
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.077928,
+          "iqr": 1.691195,
+          "p25": 0.068631,
+          "p75": 1.759826,
+          "p95": 3.105344,
+          "p99": 3.374448,
+          "max": 3.441724,
+          "media": 1.192995
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 45.406701,
+          "iqr": 16.933709,
+          "p25": 29.448495,
+          "p75": 46.382204,
+          "p95": 47.162607,
+          "p99": 47.318687,
+          "max": 47.357707,
+          "media": 35.418233
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 724.328125,
+          "iqr": 1.4375,
+          "p25": 723.175781,
+          "p75": 724.613281,
+          "p95": 724.841406,
+          "p99": 724.887031,
+          "max": 724.898438,
+          "media": 723.75
+        },
+        "tps_por_rodada": [
+          12.972293212799002,
+          17.71622930259133,
+          18.477449037678284
+        ],
+        "ttft_por_rodada": [
+          3.4417239000322297,
+          0.07792770001105964,
+          0.05933339998591691
+        ],
+        "tempo_por_rodada": [
+          13.490290199988522,
+          47.35770719998982,
+          45.406700799940154
+        ],
+        "ram_por_rodada": [
+          724.328125,
+          724.8984375,
+          722.0234375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 724.898438,
+        "tps_medio": 16.388657,
+        "tempo_medio_segundos": 35.418233,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Gere exatamente 5 questão(ões) de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Haabilidade:** EF10MA01\n**Uniidade Temática:** Números\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF10MA01, EF10MA02\n\n**Exemplo de questão existentes para esta habiliada (manter consistência de estilo):**\nExemplo 1: Em qual número de dígitos pode-se escrever a letra A?\n\nGere 5 questão(ões) nova e inédita para a habiliada EF10MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 175,
+            "total_tokens": 175
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.4417239000322297,
+            "tempo_decode_s": 10.048566299956292,
+            "tempo_resposta_s": 13.490290199988522,
+            "tempo_total_s": 13.490290199988522,
+            "tokens_entrada": 0,
+            "tokens_saida": 175,
+            "tps": 12.972293212799002,
+            "ram_inicio_mb": 717.921875,
+            "ram_pico_mb": 724.328125,
+            "ram_usada_mb": 6.40625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Geire 5 questão(ões) de múltipla escolha (5 alternativas: A, B, C, D, E) para a habiliidade EF09MA01, com base na Base Nacional Comum Curricular (BNCC) e com domínio profundo da Base Nacional Comum Curricular (BNCC) solicitada.\n\n1. Dentre os números abaixo, qual NÃO pode ser escrita na forma de uma fração a/b (com a e b inteiros, b≠0)?\n   Alternativa A: 1/2\n   Alternativa B: 2/3\n   Alternativa C: 1/4\n   Alternativa D: 1/5\n   Alternativa E: 2/5\n\n2. Qual é a diferença entre o teorema da divisão e o teorema da multiplicação?\n   Alternativa A: O teorema da multiplicação é a única forma de multiplicação que é sempre bem-sucedida.\n   Alternativa B: O teorema da divisão é a única forma de divisão que é sempre bem-sucedida.\n   Alternativa C: A diferença é o teorema da multiplicação, pois a multiplicação é sempre bem-sucedida quando a divisão é.\n   Alternativa D: A diferença é o teorema da divisão, pois a divisão é sempre bem-sucedida quando a multiplicação é.\n   Alternativa E: Não há diferença.\n\n3. Qual é o maior número que pode ser escrito como o produto de dois números menores que 10?\n   Alternativa A: 10 × 5\n   Alternativa B: 10 × 7\n   Alternativa C: 10 × 9\n   Alternativa D: 10 × 10\n   Alternativa E: Não há número maior.\n\n4. Qual é a diferença entre um número real e uma fração?\n   Alternativa A: Um número real é um número que pode ser multiplicado por 1 ou por -1. A fração é um número que pode ser multiplicada por -1.\n   Alternativa B: Um número real é um número que pode ser multiplicado por 1 ou por 1/10. A fração é um número que pode ser multiplicado por -1 ou por 1/10.\n   Alternativa C: A fração é um número que pode ser multiplicado por 1 ou por 1/10.\n   Alternativa D: A fração é um número que pode ser multiplicado por 1 ou por 1/10.\n   Alternativa E: Não há número real ou fração.\n\n5. Qual é a diferença entre um número impar e um número par?\n   Alternativa A: Um número impar é um número que pode ser multiplicado por 1 ou por -1. A fração é um número que pode ser multiplicado por -1.\n   Alternativa B: Um número par é um número que não pode ser multiplicado por 1. A fração é um número que pode ser multiplicado por -1.\n   Alternativa C: A fração é um número que pode ser multiplicado por 1 ou por -1.\n   Alternativa D: A fração é um número que pode ser multiplicado por -1.\n   Alternativa E: Não há número impar ou número par.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 839,
+            "total_tokens": 839
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07792770001105964,
+            "tempo_decode_s": 47.27977949997876,
+            "tempo_resposta_s": 47.35770719998982,
+            "tempo_total_s": 47.35770719998982,
+            "tokens_entrada": 0,
+            "tokens_saida": 839,
+            "tps": 17.71622930259133,
+            "ram_inicio_mb": 724.25,
+            "ram_pico_mb": 724.8984375,
+            "ram_usada_mb": 0.6484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Geire 5 questão(ões) de múltipla escolha (5 alternativas: A, B, C, D, E) para a habiliidade EF09MA01, com base na Base Nacional Comum Curricular (BNCC) e com domínio profundo da Base Nacional Comum Curricular (BNCC) solicitada.\n\n1. Dentre os números abaixo, qual NÃO pode ser escrita na forma de uma fração a/b (com a e b inteiros, b≠0)?\n   Alternativa A: 1/2\n   Alternativa B: 2/3\n   Alternativa C: 1/4\n   Alternativa D: 1/5\n   Alternativa E: 2/5\n\n2. Qual é a diferença entre o teorema da divisão e o teorema da multiplicação?\n   Alternativa A: O teorema da multiplicação é a única forma de multiplicação que é sempre bem-sucedida.\n   Alternativa B: O teorema da divisão é a única forma de divisão que é sempre bem-sucedida.\n   Alternativa C: A diferença é o teorema da multiplicação, pois a multiplicação é sempre bem-sucedida quando a divisão é.\n   Alternativa D: A diferença é o teorema da divisão, pois a divisão é sempre bem-sucedida quando a multiplicação é.\n   Alternativa E: Não há diferença.\n\n3. Qual é o maior número que pode ser escrito como o produto de dois números menores que 10?\n   Alternativa A: 10 × 5\n   Alternativa B: 10 × 7\n   Alternativa C: 10 × 9\n   Alternativa D: 10 × 10\n   Alternativa E: Não há número maior.\n\n4. Qual é a diferença entre um número real e uma fração?\n   Alternativa A: Um número real é um número que pode ser multiplicado por 1 ou por -1. A fração é um número que pode ser multiplicada por -1.\n   Alternativa B: Um número real é um número que pode ser multiplicado por 1 ou por 1/10. A fração é um número que pode ser multiplicado por -1 ou por 1/10.\n   Alternativa C: A fração é um número que pode ser multiplicado por 1 ou por 1/10.\n   Alternativa D: A fração é um número que pode ser multiplicado por 1 ou por 1/10.\n   Alternativa E: Não há número real ou fração.\n\n5. Qual é a diferença entre um número impar e um número par?\n   Alternativa A: Um número impar é um número que pode ser multiplicado por 1 ou por -1. A fração é um número que pode ser multiplicado por -1.\n   Alternativa B: Um número par é um número que não pode ser multiplicado por 1. A fração é um número que pode ser multiplicado por -1.\n   Alternativa C: A fração é um número que pode ser multiplicado por 1 ou por -1.\n   Alternativa D: A fração é um número que pode ser multiplicado por -1.\n   Alternativa E: Não há número impar ou número par.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 839,
+            "total_tokens": 839
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.05933339998591691,
+            "tempo_decode_s": 45.34736739995424,
+            "tempo_resposta_s": 45.406700799940154,
+            "tempo_total_s": 45.406700799940154,
+            "tokens_entrada": 0,
+            "tokens_saida": 839,
+            "tps": 18.477449037678284,
+            "ram_inicio_mb": 721.5,
+            "ram_pico_mb": 722.0234375,
+            "ram_usada_mb": 0.5234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 16.712623,
+        "ram_media_mb": 724.490234,
+        "ram_pico_mb": 726.179688,
+        "tempo_medio_segundos": 42.6457,
+        "ttft_medio_segundos": 2.311048,
+        "tps": {
+          "n": 2,
+          "mediana": 16.712623,
+          "iqr": 0.097342,
+          "p25": 16.663952,
+          "p75": 16.761294,
+          "p95": 16.800231,
+          "p99": 16.808018,
+          "max": 16.809965,
+          "media": 16.712623
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.311048,
+          "iqr": 0.299887,
+          "p25": 2.161104,
+          "p75": 2.460992,
+          "p95": 2.580946,
+          "p99": 2.604937,
+          "max": 2.610935,
+          "media": 2.311048
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 42.6457,
+          "iqr": 18.270548,
+          "p25": 33.510426,
+          "p75": 51.780974,
+          "p95": 59.089193,
+          "p99": 60.550837,
+          "max": 60.916248,
+          "media": 42.6457
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 724.490234,
+          "iqr": 1.689453,
+          "p25": 723.645508,
+          "p75": 725.334961,
+          "p95": 726.010742,
+          "p99": 726.145898,
+          "max": 726.179688,
+          "media": 724.490234
+        },
+        "tps_por_rodada": [
+          16.61528059520892,
+          16.809965135133197
+        ],
+        "ttft_por_rodada": [
+          2.6109352000057697,
+          2.0111605999991298
+        ],
+        "tempo_por_rodada": [
+          24.37515259999782,
+          60.9162476999918
+        ],
+        "ram_por_rodada": [
+          722.80078125,
+          726.1796875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "A questão de múltipla escolha para a habilidade EF08MA05, Haabilidade: EF08MA05, Unidade Temática: Geometria, pre-requisitos já dominados por o aluno, e exemplo de questões existentes para esta habilidade, está disponível no seguinte formato:\n\n1. Unidade Temática: Geometria\n2. Haabilidade: EF08MA05\n3. Pré-requisitos: Não especificada\n4. Exemplo de questão:\n   A. A união dos quadrados de A e B é C.\n   B. A e B são dois pontos de Ponto A.\n   C. A e B são dois polígonos que se desejan calcular a me"
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "Questão 1:\n\nNome do aluno: Alice\nNome do curso: Geometria\n\nHabilidade: EF06MA17\nPre-requisitos: Não especificado\n\nExemplo:\n\nQuestão: Qual será a hipotenusa de um triângulo isósceles com bases de 8 cm e 5 cm?\n\nResolução passo a passo:\n\n1. Pré-req: A hipotenusa de um triângulo isósceles é igual à hipotenusa de um triângulo regular.\n2. A hipotenusa de um triângulo isósceles com bases de 8 cm e 5 cm é igual a:\n   - √(8 * 5) = √(35)\n   - √(35) = 5\n   - Hipotenusa de um triângulo regular com bases 8 c"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 726.179688,
+        "tps_medio": 16.712623,
+        "tempo_medio_segundos": 42.6457,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "A questão de múltipla escolha para a habilidade EF08MA05, Haabilidade: EF08MA05, Unidade Temática: Geometria, pre-requisitos já dominados por o aluno, e exemplo de questões existentes para esta habilidade, está disponível no seguinte formato:\n\n1. Unidade Temática: Geometria\n2. Haabilidade: EF08MA05\n3. Pré-requisitos: Não especificada\n4. Exemplo de questão:\n   A. A união dos quadrados de A e B é C.\n   B. A e B são dois pontos de Ponto A.\n   C. A e B são dois polígonos que se desejan calcular a medida do lado comum.\n\n5. Resposta correta: A\n6. Resposta errada: B\n7. Resolução passo a passo: A = A + B\n8. Resposta correta: C\n9. Resposta errada: D\n\nPara calibrar a dificulidade, deve-se considerar os pré-requisitos já dominados pelo aluno e os exemplos fornecidos. Para a questão 2, a união dos quadrados de A e B é C, então a resposta correta é A. Para a questão 5, os polígonos que se desejam calcular a medida do lado comum são os dois pontos de Ponto A, então a resposta correta é A. Para a questão 6, a resposta errada é B, pois a resposta correta é A. Para a questão 7, a resposta correta é C, pois a resposta errada é D.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 405,
+            "total_tokens": 405
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6109352000057697,
+            "tempo_decode_s": 21.76421739999205,
+            "tempo_resposta_s": 24.37515259999782,
+            "tempo_total_s": 24.37515259999782,
+            "tokens_entrada": 0,
+            "tokens_saida": 405,
+            "tps": 16.61528059520892,
+            "ram_inicio_mb": 722.08203125,
+            "ram_pico_mb": 722.80078125,
+            "ram_usada_mb": 0.71875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+          "raw_output": "Questão 1:\n\nNome do aluno: Alice\nNome do curso: Geometria\n\nHabilidade: EF06MA17\nPre-requisitos: Não especificado\n\nExemplo:\n\nQuestão: Qual será a hipotenusa de um triângulo isósceles com bases de 8 cm e 5 cm?\n\nResolução passo a passo:\n\n1. Pré-req: A hipotenusa de um triângulo isósceles é igual à hipotenusa de um triângulo regular.\n2. A hipotenusa de um triângulo isósceles com bases de 8 cm e 5 cm é igual a:\n   - √(8 * 5) = √(35)\n   - √(35) = 5\n   - Hipotenusa de um triângulo regular com bases 8 cm e 5 cm é igual a:\n      - √(8 * 5) = √(35)\n      - √(35) = 5\n      - Hipotenusa de um triângulo regular com bases 8 cm e 5 cm é igual a:\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         - 5\n         -",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.0111605999991298,
+            "tempo_decode_s": 58.90508709999267,
+            "tempo_resposta_s": 60.9162476999918,
+            "tempo_total_s": 60.9162476999918,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 16.809965135133197,
+            "ram_inicio_mb": 722.7265625,
+            "ram_pico_mb": 726.1796875,
+            "ram_usada_mb": 3.453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 974.2,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 8.5,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 42.65,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -6.1,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+    "gerado_em": "2026-09-07T10:10:10.301590"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}
