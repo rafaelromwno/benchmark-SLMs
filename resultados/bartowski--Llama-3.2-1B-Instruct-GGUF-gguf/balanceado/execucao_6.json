@@ -1,0 +1,1205 @@
+{
+  "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "09/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/Llama-3.2-1B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/Llama-3.2-1B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--Llama-3.2-1B-Instruct-GGUF\\Llama-3.2-1B-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 55,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 55
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 55
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.13,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": "Nenhuma questão válida (1 inválida(s))",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 9.975271899998916,
+        "tempo_prefill_s": 14.95613990000129,
+        "tempo_decode_s": 9.505827699998918,
+        "tempo_resposta_s": 24.461967600000207,
+        "tempo_total_s": 34.43723949999912,
+        "tokens_entrada": 0,
+        "tokens_saida": 100,
+        "tps": 4.087978597437075,
+        "ram_inicio_mb": 59.53125,
+        "ram_pico_mb": 1085.78125,
+        "ram_usada_mb": 1026.25,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 34.43723949999912,
+        "tempo_carregamento_s": 9.975271899998916,
+        "tempo_resposta_s": 24.461967600000207,
+        "ram_pico_mb": 1085.78125,
+        "ram_inicio_mb": 59.53125,
+        "ttft_segundos": 14.95613990000129,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n \"questoes\": [\n     {\n         \"enunciado\": \"Identifique e anote os números que podem ser escritos na forma de uma fração a/b, onde a e b são inteiros e b ≠ 0.\",\n         \"alternativas\": {\n             \"A\": \"3/2, 4/3, 5/4, 6/5, 7/6\"\n         },\n         \"resposta_correta\": \"A\"\n     }\n }",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 100,
+            "total_tokens": 100
+          },
+          "metrics": {
+            "tempo_carregamento_s": 9.975271899998916,
+            "tempo_prefill_s": 14.95613990000129,
+            "tempo_decode_s": 9.505827699998918,
+            "tempo_resposta_s": 24.461967600000207,
+            "tempo_total_s": 34.43723949999912,
+            "tokens_entrada": 0,
+            "tokens_saida": 100,
+            "tps": 4.087978597437075,
+            "ram_inicio_mb": 59.53125,
+            "ram_pico_mb": 1085.78125,
+            "ram_usada_mb": 1026.25,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 14.803707,
+          "iqr": 3.798381,
+          "p25": 13.521974,
+          "p75": 17.320355,
+          "p95": 17.884603,
+          "p99": 18.102634,
+          "max": 18.157141,
+          "media": 14.866532
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 1.844467,
+          "iqr": 0.434744,
+          "p25": 1.52729,
+          "p75": 1.962034,
+          "p95": 3.690643,
+          "p99": 4.583273,
+          "max": 4.80643,
+          "media": 1.81312
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 31.4459,
+          "iqr": 34.861103,
+          "p25": 24.483253,
+          "p75": 59.344356,
+          "p95": 77.694997,
+          "p99": 78.724804,
+          "max": 78.982256,
+          "media": 41.27864
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 900.742188,
+          "iqr": 22.989258,
+          "p25": 890.928711,
+          "p75": 913.917969,
+          "p95": 1011.417969,
+          "p99": 1073.292969,
+          "max": 1088.761719,
+          "media": 917.411719
+        },
+        "tps_medio": 14.866532,
+        "ttft_medio_segundos": 1.81312,
+        "tempo_medio_segundos": 41.27864,
+        "ram_pico_mb": 1088.761719
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 8,
+        "json_invalidos": 2,
+        "taxa_json_valido_percent": 80.0,
+        "json_valido_ic95": {
+          "numerador": 8,
+          "denominador": 10,
+          "ponto": 0.8,
+          "ic95": [
+            0.490162,
+            0.943318
+          ],
+          "formato": "80.0% [49.0–94.3]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 5,
+        "gabarito_avaliados": 8,
+        "taxa_gabarito_percent": 62.5,
+        "gabarito_ic95": {
+          "numerador": 5,
+          "denominador": 8,
+          "ponto": 0.625,
+          "ic95": [
+            0.305742,
+            0.863156
+          ],
+          "formato": "62.5% [30.6–86.3]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 5,
+        "taxa_utilizavel_percent": 50.0,
+        "utilizavel_ic95": {
+          "numerador": 5,
+          "denominador": 10,
+          "ponto": 0.5,
+          "ic95": [
+            0.236593,
+            0.763407
+          ],
+          "formato": "50.0% [23.7–76.3]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 8,
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 14.803707,
+          "iqr": 3.798381,
+          "p25": 13.521974,
+          "p75": 17.320355,
+          "p95": 17.884603,
+          "p99": 18.102634,
+          "max": 18.157141,
+          "media": 14.866532
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 1.844467,
+          "iqr": 0.434744,
+          "p25": 1.52729,
+          "p75": 1.962034,
+          "p95": 3.690643,
+          "p99": 4.583273,
+          "max": 4.80643,
+          "media": 1.81312
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 31.4459,
+          "iqr": 34.861103,
+          "p25": 24.483253,
+          "p75": 59.344356,
+          "p95": 77.694997,
+          "p99": 78.724804,
+          "max": 78.982256,
+          "media": 41.27864
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 900.742188,
+          "iqr": 22.989258,
+          "p25": 890.928711,
+          "p75": 913.917969,
+          "p95": 1011.417969,
+          "p99": 1073.292969,
+          "max": 1088.761719,
+          "media": 917.411719
+        },
+        "tps_medio": 14.866532,
+        "ttft_medio_segundos": 1.81312,
+        "tempo_medio_segundos": 41.27864,
+        "ram_pico_mb": 1088.761719,
+        "tps_por_rodada": [
+          9.00920219975168,
+          14.886991482748703,
+          17.551501409880604,
+          17.544950821940034,
+          18.157141244304132,
+          12.964937339850216,
+          14.72042192654719,
+          13.452146704146216,
+          13.731456361129464,
+          16.64656672307529
+        ],
+        "ttft_por_rodada": [
+          4.806430299999192,
+          0.16588600000250153,
+          0.06395150000025751,
+          1.7654493000009097,
+          1.9911977000010666,
+          1.4479036000011547,
+          1.8422500999986369,
+          2.326903700002731,
+          1.8466847999989113,
+          1.874544700000115
+        ],
+        "tempo_por_rodada": [
+          52.834867000001395,
+          31.504014800000732,
+          26.72136070000124,
+          13.67914920000112,
+          23.73721690000093,
+          78.98225599999932,
+          16.30388049999965,
+          76.12167950000003,
+          31.387784999998985,
+          61.514185899999575
+        ],
+        "ram_por_rodada": [
+          1088.76171875,
+          910.109375,
+          870.1796875,
+          906.84375,
+          915.1875,
+          916.88671875,
+          892.96484375,
+          894.640625,
+          888.29296875,
+          890.25
+        ],
+        "ram_media_mb": 917.411719
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n \"questoes\": [\n    {\n       \"enunciado\": \"O valor de x é igual a 2x+1. Qual é a expressão correta para x em termos de x?\",\n       \"alternativas\": {\n         \"A\": \"x^2-2x-1\",\n         \"B\": \"x^2-3x-1\",\n         \"C\": \"x^2-2x+1\",\n         \"D\": \"x^2-2x-2\",\n         \"E\": \"x^2+x-1\"\n       },\n       \"resposta_correta\": \"A\",\n       \"resolucao_passo_a_passo\": \"x^2-2x-1 = 2x + 1\"\n    },\n    {\n       \"enunciado\": \"Uma quantidade de 3x na mesa é igual a 6x na garrafa. Qual é a expressão correta para x?\",\n       \"alternativas\": {\n         \"A\": \"3x = 6x+3\",\n         \"B\": \"3x = 6x-3\",\n         \"C\": \"3x = 6x-3\",\n         \"D\": \"3x = 6x+3\",\n         \"E\": \"3x = 6x-6\"\n       },\n       \"resposta_correta\": \"A\",\n       \"resolucao_passo_a_passo\": \"3x = 6x+3\"\n    },\n    {\n       \"enunciado\": \"Uma soma de 5x+2 na mesa é igual a 10x na garrafa. Qual é a expressão correta para x?\",\n       \"alternativas\": {\n         \"A\": \"5x+2 = 10x+2\",\n         \"B\": \"5x+2 = 10x-2\",\n         \"C\": \"5x+2 = 10x-2\",\n         \"D\": \"5x+2 = 10x+10\",\n         \"E\": \"5x+2 = 10x-8\"\n       },\n       \"resposta_correta\": \"A\",\n       \"resolucao_passo_a_passo\": \"5x+2 = 10x+2\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 476,
+            "total_tokens": 476
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.806430299999192,
+            "tempo_decode_s": 48.0284367000022,
+            "tempo_resposta_s": 52.834867000001395,
+            "tempo_total_s": 52.834867000001395,
+            "tokens_entrada": 0,
+            "tokens_saida": 476,
+            "tps": 9.00920219975168,
+            "ram_inicio_mb": 1086.9765625,
+            "ram_pico_mb": 1088.76171875,
+            "ram_usada_mb": 1.78515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n \"questoes\": [\n    {\n       \"enunciado\": \"O valor de x em x = 2 * (2 + x), x não pode ser igual a 0 ou 1.\",\n       \"alternativas\": {\n          \"A\": \"3\",\n          \"B\": \"1\",\n          \"C\": \"4\",\n          \"D\": \"2\",\n          \"E\": \"6\"\n       },\n       \"resposta_correta\": \"A\",\n       \"resolucao_passo_a_passo\": \"2 * (2 + x) = x => 4 + 2x = x => 2x = x => x = 4\"\n    },\n    {\n       \"enunciado\": \"Como calcular a média de 3, 5 e 8?\",\n       \"alternativas\": {\n          \"A\": \"1 + 3 + 5 + 8 / 4\",\n          \"B\": \"2 + 4 + 6 + 10 / 3\",\n          \"C\": \"3 + 5 + 8\",\n          \"D\": \"9 + 10 + 11\",\n          \"E\": \"4 + 5 + 6\"\n       },\n       \"resposta_correta\": \"A\",\n       \"resolucao_passo_a_passo\": \"3 + 5 + 8 = 16 => 16 / 4 = 4 => 4 + 5 + 8 = 17\"\n    },\n    {\n       \"enunciado\": \"Se a média de 7, 9 e 11 é 10, qual é a média de x e y?\",\n       \"alternativas\": {\n          \"A\": \"7, 9, 11\",\n          \"B\": \"8, 10, 12\",\n          \"C\": \"6, 8, 10\",\n          \"D\": \"9, 11, 13\",\n          \"E\": \"8, 10, 12\"\n       },\n       \"resposta_correta\": \"A\",\n       \"resolucao_passo_a_passo\": \"7 + 9 + 11 = 27 => 27 / 3 = 9 => 9, 9, 11\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 469,
+            "total_tokens": 469
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.16588600000250153,
+            "tempo_decode_s": 31.33812879999823,
+            "tempo_resposta_s": 31.504014800000732,
+            "tempo_total_s": 31.504014800000732,
+            "tokens_entrada": 0,
+            "tokens_saida": 469,
+            "tps": 14.886991482748703,
+            "ram_inicio_mb": 897.27734375,
+            "ram_pico_mb": 910.109375,
+            "ram_usada_mb": 12.83203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n \"questoes\": [\n    {\n       \"enunciado\": \"O valor de x em x = 2 * (2 + x), x não pode ser igual a 0 ou 1.\",\n       \"alternativas\": {\n          \"A\": \"3\",\n          \"B\": \"1\",\n          \"C\": \"4\",\n          \"D\": \"2\",\n          \"E\": \"6\"\n       },\n       \"resposta_correta\": \"A\",\n       \"resolucao_passo_a_passo\": \"2 * (2 + x) = x => 4 + 2x = x => 2x = x => x = 4\"\n    },\n    {\n       \"enunciado\": \"Como calcular a média de 3, 5 e 8?\",\n       \"alternativas\": {\n          \"A\": \"1 + 3 + 5 + 8 / 4\",\n          \"B\": \"2 + 4 + 6 + 10 / 3\",\n          \"C\": \"3 + 5 + 8\",\n          \"D\": \"9 + 10 + 11\",\n          \"E\": \"4 + 5 + 6\"\n       },\n       \"resposta_correta\": \"A\",\n       \"resolucao_passo_a_passo\": \"3 + 5 + 8 = 16 => 16 / 4 = 4 => 4 + 5 + 8 = 17\"\n    },\n    {\n       \"enunciado\": \"Se a média de 7, 9 e 11 é 10, qual é a média de x e y?\",\n       \"alternativas\": {\n          \"A\": \"7, 9, 11\",\n          \"B\": \"8, 10, 12\",\n          \"C\": \"6, 8, 10\",\n          \"D\": \"9, 11, 13\",\n          \"E\": \"8, 10, 12\"\n       },\n       \"resposta_correta\": \"A\",\n       \"resolucao_passo_a_passo\": \"7 + 9 + 11 = 27 => 27 / 3 = 9 => 9, 9, 11\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 469,
+            "total_tokens": 469
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06395150000025751,
+            "tempo_decode_s": 26.657409200000984,
+            "tempo_resposta_s": 26.72136070000124,
+            "tempo_total_s": 26.72136070000124,
+            "tokens_entrada": 0,
+            "tokens_saida": 469,
+            "tps": 17.551501409880604,
+            "ram_inicio_mb": 868.58203125,
+            "ram_pico_mb": 870.1796875,
+            "ram_usada_mb": 1.59765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Escreva a resposta correta para a questão: Qual número está entre 23 e 27?\",\n            \"alternativas\": {\n                \"A\": 24,\n                \"B\": 25,\n                \"C\": 26,\n                \"D\": 27,\n                \"E\": 28\n            },\n            \"resposta_correta\": 25,\n            \"resolucao_passo_a_passo\": \"23 + 4 = 27\"\n        },\n        {\n            \"enunciado\": \"Escreva a resposta correta para a questão: Uma casa tem 10 quartos. Se cada quarto tem 5 m², o número total de m² na casa é?\",\n            \"alternativas\": {\n                \"A\": 50,\n                \"B\": 55,\n                \"C\": 60,\n                \"D\": 65,\n                \"E\": 70\n            },\n            \"resposta_correta\": 50,\n            \"resolucao_passo_a_passo\": \"10 x 5 = 50\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 240,
+            "total_tokens": 240
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.7654493000009097,
+            "tempo_decode_s": 11.91369990000021,
+            "tempo_resposta_s": 13.67914920000112,
+            "tempo_total_s": 13.67914920000112,
+            "tokens_entrada": 0,
+            "tokens_saida": 240,
+            "tps": 17.544950821940034,
+            "ram_inicio_mb": 870.09375,
+            "ram_pico_mb": 906.84375,
+            "ram_usada_mb": 36.75,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: 2x = 6x - 3\",\n            \"alternativas\": {\n                \"A\": \"x = 3\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 2\",\n                \"D\": \"x = 5\",\n                \"E\": \"x = -3\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"2x = 6x - 3; 4x = 3; x = 3/4\"\n        },\n        {\n            \"enunciado\": \"Resolva a seguinte equação: x^2 - 4x - 5 = 0\",\n            \"alternativas\": {\n                \"A\": \"x = 3\",\n                \"B\": \"x = -1\",\n                \"C\": \"x = 5\",\n                \"D\": \"x = -5\",\n                \"E\": \"x = 1\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"x^2 - 4x - 5 = 0; x = -1/2\"\n        },\n        {\n            \"enunciado\": \"Resolva a seguinte equação: 2x + 5 = 11x - 2\",\n            \"alternativas\": {\n                \"A\": \"x = 7/3\",\n                \"B\": \"x = 1/3\",\n                \"C\": \"x = 7/5\",\n                \"D\": \"x = 9/2\",\n                \"E\": \"x = 2/3\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"2x + 5 = 11x - 2; 9x = -7; x = -7/9\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 431,
+            "total_tokens": 431
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.9911977000010666,
+            "tempo_decode_s": 21.746019199999864,
+            "tempo_resposta_s": 23.73721690000093,
+            "tempo_total_s": 23.73721690000093,
+            "tokens_entrada": 0,
+            "tokens_saida": 431,
+            "tps": 18.157141244304132,
+            "ram_inicio_mb": 906.9453125,
+            "ram_pico_mb": 915.1875,
+            "ram_usada_mb": 8.2421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        }\n    ]\n}\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        }\n    ]\n}\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.4479036000011547,
+            "tempo_decode_s": 77.53435239999817,
+            "tempo_resposta_s": 78.98225599999932,
+            "tempo_total_s": 78.98225599999932,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 12.964937339850216,
+            "ram_inicio_mb": 915.171875,
+            "ram_pico_mb": 916.88671875,
+            "ram_usada_mb": 1.71484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Escreva a resposta correta para a questão: Qual número está entre 23 e 27?\",\n            \"alternativas\": {\n                \"A\": 24,\n                \"B\": 25,\n                \"C\": 26,\n                \"D\": 27,\n                \"E\": 28\n            },\n            \"resposta_correta\": 25,\n            \"resolucao_passo_a_passo\": \"23 + 4 = 27\"\n        },\n        {\n            \"enunciado\": \"Escreva a resposta correta para a questão: Uma casa tem 10 quartos. Se cada quarto tem 5 m², o número total de m² na casa é?\",\n            \"alternativas\": {\n                \"A\": 50,\n                \"B\": 55,\n                \"C\": 60,\n                \"D\": 65,\n                \"E\": 70\n            },\n            \"resposta_correta\": 50,\n            \"resolucao_passo_a_passo\": \"10 x 5 = 50\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 240,
+            "total_tokens": 240
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.8422500999986369,
+            "tempo_decode_s": 14.461630400001013,
+            "tempo_resposta_s": 16.30388049999965,
+            "tempo_total_s": 16.30388049999965,
+            "tokens_entrada": 0,
+            "tokens_saida": 240,
+            "tps": 14.72042192654719,
+            "ram_inicio_mb": 873.21484375,
+            "ram_pico_mb": 892.96484375,
+            "ram_usada_mb": 19.75,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        }\n    ]\n}\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        }\n    ]\n}\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.326903700002731,
+            "tempo_decode_s": 73.7947757999973,
+            "tempo_resposta_s": 76.12167950000003,
+            "tempo_total_s": 76.12167950000003,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 13.452146704146216,
+            "ram_inicio_mb": 890.7890625,
+            "ram_pico_mb": 894.640625,
+            "ram_usada_mb": 3.8515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Resolva a seguinte equação: 2x = 6x - 3\",\n            \"alternativas\": {\n                \"A\": \"x = 3\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 2\",\n                \"D\": \"x = 5\",\n                \"E\": \"x = -3\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"2x = 6x - 3; 4x = 3; x = 3/4\"\n        },\n        {\n            \"enunciado\": \"Resolva a seguinte equação: x^2 - 4x - 5 = 0\",\n            \"alternativas\": {\n                \"A\": \"x = 3\",\n                \"B\": \"x = -1\",\n                \"C\": \"x = 5\",\n                \"D\": \"x = -5\",\n                \"E\": \"x = 1\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"x^2 - 4x - 5 = 0; x = -1/2\"\n        },\n        {\n            \"enunciado\": \"Resolva a seguinte equação: 2x + 5 = 11x - 2\",\n            \"alternativas\": {\n                \"A\": \"x = 7/3\",\n                \"B\": \"x = 1/3\",\n                \"C\": \"x = 7/5\",\n                \"D\": \"x = 9/2\",\n                \"E\": \"x = 2/3\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"2x + 5 = 11x - 2; 9x = -7; x = -7/9\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 431,
+            "total_tokens": 431
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.8466847999989113,
+            "tempo_decode_s": 29.541100200000074,
+            "tempo_resposta_s": 31.387784999998985,
+            "tempo_total_s": 31.387784999998985,
+            "tokens_entrada": 0,
+            "tokens_saida": 431,
+            "tps": 13.731456361129464,
+            "ram_inicio_mb": 841.703125,
+            "ram_pico_mb": 888.29296875,
+            "ram_usada_mb": 46.58984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        }\n    ]\n}\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        }\n    ]\n}\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4/5\",\n                \"E\": \"5/6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N/A (questão de múltipla escolha)\"\n        },\n        {\n            \"enunciado\": \"Exemplo: Qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/3\",\n                \"C\": \"3/4\",\n                \"D\": \"4",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.874544700000115,
+            "tempo_decode_s": 59.63964119999946,
+            "tempo_resposta_s": 61.514185899999575,
+            "tempo_total_s": 61.514185899999575,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 16.64656672307529,
+            "ram_inicio_mb": 888.29296875,
+            "ram_pico_mb": 890.25,
+            "ram_usada_mb": 1.95703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 17.108131,
+        "ram_media_mb": 901.221354,
+        "ram_pico_mb": 903.078125,
+        "tempo_medio_segundos": 41.962921,
+        "ttft_medio_segundos": 0.659661,
+        "tps": {
+          "n": 3,
+          "mediana": 17.240492,
+          "iqr": 1.095756,
+          "p25": 16.593343,
+          "p75": 17.689099,
+          "p95": 18.047985,
+          "p99": 18.119762,
+          "max": 18.137706,
+          "media": 17.108131
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.061501,
+          "iqr": 0.901742,
+          "p25": 0.05925,
+          "p75": 0.960992,
+          "p95": 1.680584,
+          "p99": 1.824503,
+          "max": 1.860483,
+          "media": 0.659661
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 41.828162,
+          "iqr": 1.065915,
+          "p25": 41.396274,
+          "p75": 42.462189,
+          "p95": 42.969411,
+          "p99": 43.070856,
+          "max": 43.096217,
+          "media": 41.962921
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 901.414062,
+          "iqr": 1.953125,
+          "p25": 900.292969,
+          "p75": 902.246094,
+          "p95": 902.911719,
+          "p99": 903.044844,
+          "max": 903.078125,
+          "media": 901.221354
+        },
+        "tps_por_rodada": [
+          15.946194489217591,
+          18.137706250497843,
+          17.24049240154946
+        ],
+        "ttft_por_rodada": [
+          1.8604825000002165,
+          0.05699829999866779,
+          0.06150130000241916
+        ],
+        "tempo_por_rodada": [
+          41.828161599998566,
+          40.96438599999965,
+          43.09621690000131
+        ],
+        "ram_por_rodada": [
+          899.171875,
+          901.4140625,
+          903.078125
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 903.078125,
+        "tps_medio": 17.108131,
+        "tempo_medio_segundos": 41.962921,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n\"questoes\": [\n    {\n        \"enunciado\": \"Qual é o valor de x na seguinte equação: 2x + 5 = 11?\",\n        \"alternativas\": {\n            \"A\": 3,\n            \"B\": 2,\n            \"C\": 4,\n            \"D\": 1,\n            \"E\": 6\n        },\n        \"resposta_correta\": 3,\n        \"resolucao_passo_a_passo\": \"2x = 11 - 5 = 6x = 6 \\n x = 6/6 = 1\"\n    },\n    {\n        \"enunciado\": \"Qual é o valor de x na seguinte equação: 3x - 2 = 7?\",\n        \"alternativas\": {\n            \"A\": 2,\n            \"B\": 4,\n            \"C\": 1,\n            \"D\": 3,\n            \"E\": 5\n        },\n        \"resposta_correta\": 2,\n        \"resolucao_passo_a_passo\": \"3x = 7 + 2 = 3x = 7 + 2 = 3x = 7 + 2 = 3x = 9 \\n x = 9/3 = 3\"\n    },\n    {\n        \"enunciado\": \"Qual é o valor de x na seguinte equação: x + 4 = 9?\",\n        \"alternativas\": {\n            \"A\": 5,\n            \"B\": 3,\n            \"C\": 2,\n            \"D\": 1,\n            \"E\": 4\n        },\n        \"resposta_correta\": 5,\n        \"resolucao_passo_a_passo\": \"x = 9 - 4 = 5 \\n x = 5/1 = 5\"\n    },\n    {\n        \"enunciado\": \"Qual é o valor de x na seguinte equação: 2x - 3 = 8?\",\n        \"alternativas\": {\n            \"A\": 2,\n            \"B\": 4,\n            \"C\": 1,\n            \"D\": 3,\n            \"E\": 5\n        },\n        \"resposta_correta\": 2,\n        \"resolucao_passo_a_passo\": \"2x = 8 + 3 = 2x = 8 + 3 = 2x = 11 \\n x = 11/2 = 5.5\"\n    },\n    {\n        \"enunciado\": \"Qual é o valor de x na seguinte equação: 4x + 2 = 10?\",\n        \"alternativas\": {\n            \"A\": 3,\n            \"B\": 2,\n            \"C\": 1,\n            \"D\": 4,\n            \"E\": 6\n        },\n        \"resposta_correta\": 3,\n        \"resolucao_passo_a_passo\": \"4x = 10 - 2 = 4x = 10 - 2 = 4x = 8 \\n x = 8/4 = 2\"\n    }\n]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 667,
+            "total_tokens": 667
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.8604825000002165,
+            "tempo_decode_s": 39.96767909999835,
+            "tempo_resposta_s": 41.828161599998566,
+            "tempo_total_s": 41.828161599998566,
+            "tokens_entrada": 0,
+            "tokens_saida": 667,
+            "tps": 15.946194489217591,
+            "ram_inicio_mb": 892.9765625,
+            "ram_pico_mb": 899.171875,
+            "ram_usada_mb": 6.1953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n\"questoes\": [\n    {\n        \"enunciado\": \"Qual é o valor de x na seguinte equação: 2x + 5 = 11?\",\n        \"alternativas\": {\n            \"A\": 3,\n            \"B\": 2,\n            \"C\": 4,\n            \"D\": 1,\n            \"E\": 6\n        },\n        \"resposta_correta\": 3,\n        \"resolucao_passo_a_passo\": \"2x = 11 - 5 = 6, então x = 6/2 = 3\"\n    },\n    {\n        \"enunciado\": \"Como calcular o valor de 3/4 de uma fruta?\",\n        \"alternativas\": {\n            \"A\": \"Aumentar 3/4 vezes a quantidade de fruta\",\n            \"B\": \"Desfrutar da fruta como se fosse uma fruta completa\",\n            \"C\": \"Fazer uma fração de 3/4 de uma fruta\",\n            \"D\": \"Subtrair 3/4 de uma fruta\",\n            \"E\": \"Aumentar 3/4 vezes a quantidade de fruta\"\n        },\n        \"resposta_correta\": \"C\",\n        \"resolucao_passo_a_passo\": \"Para calcular 3/4 de uma fruta, você pode simplesmente multiplicar 3/4 vezes a quantidade de fruta\"\n    },\n    {\n        \"enunciado\": \"Qual é o valor de y na seguinte equação: 4y - 2 = 7?\",\n        \"alternativas\": {\n            \"A\": 5,\n            \"B\": 4,\n            \"C\": 2,\n            \"D\": 6,\n            \"E\": 3\n        },\n        \"resposta_correta\": 5,\n        \"resolucao_passo_a_passo\": \"Subtrair 2 de 4y = 7, então 4y = 7 + 2 = 9, então y = 9/4\"\n    },\n    {\n        \"enunciado\": \"Como calcular o valor de 1/3 de um valor numérico?\",\n        \"alternativas\": {\n            \"A\": \"Aumentar 1/3 vezes o valor numérico\",\n            \"B\": \"Desfrutar do valor numérico como uma fruta completa\",\n            \"C\": \"Fazer uma fração de 1/3 de um valor numérico\",\n            \"D\": \"Subtrair 1/3 de um valor numérico\",\n            \"E\": \"Aumentar 1/3 vezes o valor numérico\"\n        },\n        \"resposta_correta\": \"C\",\n        \"resolucao_passo_a_passo\": \"Para calcular 1/3 de um valor numérico, você pode simplesmente multiplicar 1/3 vezes o valor numérico\"\n    },\n    {\n        \"enunciado\": \"Qual é o valor de x na seguinte equação: x + 2 = 9?\",\n        \"alternativas\": {\n            \"A\": 5,\n            \"B\": 4,\n            \"C\": 3,\n            \"D\": 1,\n            \"E\": 6\n        },\n        \"resposta_correta\": 5,\n        \"resolucao_passo_a_passo\": \"Subtrair 2 de x = 9, então x = 9 - 2 = 7\"\n    }\n]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 743,
+            "total_tokens": 743
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.05699829999866779,
+            "tempo_decode_s": 40.90738770000098,
+            "tempo_resposta_s": 40.96438599999965,
+            "tempo_total_s": 40.96438599999965,
+            "tokens_entrada": 0,
+            "tokens_saida": 743,
+            "tps": 18.137706250497843,
+            "ram_inicio_mb": 899.16015625,
+            "ram_pico_mb": 901.4140625,
+            "ram_usada_mb": 2.25390625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n\"questoes\": [\n    {\n        \"enunciado\": \"Qual é o valor de x na seguinte equação: 2x + 5 = 11?\",\n        \"alternativas\": {\n            \"A\": 3,\n            \"B\": 2,\n            \"C\": 4,\n            \"D\": 1,\n            \"E\": 6\n        },\n        \"resposta_correta\": 3,\n        \"resolucao_passo_a_passo\": \"2x = 11 - 5 = 6, então x = 6/2 = 3\"\n    },\n    {\n        \"enunciado\": \"Como calcular o valor de 3/4 de uma fruta?\",\n        \"alternativas\": {\n            \"A\": \"Aumentar 3/4 vezes a quantidade de fruta\",\n            \"B\": \"Desfrutar da fruta como se fosse uma fruta completa\",\n            \"C\": \"Fazer uma fração de 3/4 de uma fruta\",\n            \"D\": \"Subtrair 3/4 de uma fruta\",\n            \"E\": \"Aumentar 3/4 vezes a quantidade de fruta\"\n        },\n        \"resposta_correta\": \"C\",\n        \"resolucao_passo_a_passo\": \"Para calcular 3/4 de uma fruta, você pode simplesmente multiplicar 3/4 vezes a quantidade de fruta\"\n    },\n    {\n        \"enunciado\": \"Qual é o valor de y na seguinte equação: 4y - 2 = 7?\",\n        \"alternativas\": {\n            \"A\": 5,\n            \"B\": 4,\n            \"C\": 2,\n            \"D\": 6,\n            \"E\": 3\n        },\n        \"resposta_correta\": 5,\n        \"resolucao_passo_a_passo\": \"Subtrair 2 de 4y = 7, então 4y = 7 + 2 = 9, então y = 9/4\"\n    },\n    {\n        \"enunciado\": \"Como calcular o valor de 1/3 de um valor numérico?\",\n        \"alternativas\": {\n            \"A\": \"Aumentar 1/3 vezes o valor numérico\",\n            \"B\": \"Desfrutar do valor numérico como uma fruta completa\",\n            \"C\": \"Fazer uma fração de 1/3 de um valor numérico\",\n            \"D\": \"Subtrair 1/3 de um valor numérico\",\n            \"E\": \"Aumentar 1/3 vezes o valor numérico\"\n        },\n        \"resposta_correta\": \"C\",\n        \"resolucao_passo_a_passo\": \"Para calcular 1/3 de um valor numérico, você pode simplesmente multiplicar 1/3 vezes o valor numérico\"\n    },\n    {\n        \"enunciado\": \"Qual é o valor de x na seguinte equação: x + 2 = 9?\",\n        \"alternativas\": {\n            \"A\": 5,\n            \"B\": 4,\n            \"C\": 3,\n            \"D\": 1,\n            \"E\": 6\n        },\n        \"resposta_correta\": 5,\n        \"resolucao_passo_a_passo\": \"Subtrair 2 de x = 9, então x = 9 - 2 = 7\"\n    }\n]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 743,
+            "total_tokens": 743
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06150130000241916,
+            "tempo_decode_s": 43.03471559999889,
+            "tempo_resposta_s": 43.09621690000131,
+            "tempo_total_s": 43.09621690000131,
+            "tokens_entrada": 0,
+            "tokens_saida": 743,
+            "tps": 17.24049240154946,
+            "ram_inicio_mb": 901.453125,
+            "ram_pico_mb": 903.078125,
+            "ram_usada_mb": 1.625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 15.31157,
+        "ram_media_mb": 907.460938,
+        "ram_pico_mb": 908.820312,
+        "tempo_medio_segundos": 25.77836,
+        "ttft_medio_segundos": 1.563079,
+        "tps": {
+          "n": 2,
+          "mediana": 15.31157,
+          "iqr": 0.428238,
+          "p25": 15.097451,
+          "p75": 15.525689,
+          "p95": 15.696984,
+          "p99": 15.731243,
+          "max": 15.739808,
+          "media": 15.31157
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 1.563079,
+          "iqr": 0.094871,
+          "p25": 1.515643,
+          "p75": 1.610514,
+          "p95": 1.648462,
+          "p99": 1.656052,
+          "max": 1.65795,
+          "media": 1.563079
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 25.77836,
+          "iqr": 3.98648,
+          "p25": 23.78512,
+          "p75": 27.771601,
+          "p95": 29.366193,
+          "p99": 29.685111,
+          "max": 29.764841,
+          "media": 25.77836
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 907.460938,
+          "iqr": 1.359375,
+          "p25": 906.78125,
+          "p75": 908.140625,
+          "p95": 908.684375,
+          "p99": 908.793125,
+          "max": 908.820312,
+          "media": 907.460938
+        },
+        "tps_por_rodada": [
+          14.883331796228207,
+          15.739807671480817
+        ],
+        "ttft_por_rodada": [
+          1.6579496000013023,
+          1.4682074000011198
+        ],
+        "tempo_por_rodada": [
+          29.764840700001514,
+          21.791880000000674
+        ],
+        "ram_por_rodada": [
+          906.1015625,
+          908.8203125
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Uma pessoa pode ir até o parque e voltar de volta, mas não pode ir até o mercado e voltar.",
+                "alternativas": {
+                  "A": "Pode ir até o parque e voltar, mas não pode ir até o mercado.",
+                  "B": "Não pode ir até o parque e voltar, pois não pode ir até o mercado.",
+                  "C": "Pode ir até o parque e voltar, mas não pode ir até o mercado.",
+                  "D": "Não pode ir até o parque e voltar, pois não pode ir até o mercado.",
+                  "E": "Não pode ir até o parque e voltar."
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "Para resolver essa questão, você precisa entender a diferença entre 'ir até' e 'de volta', que são expressões idiomáticas comuns na língua portuguesa. O enunciado apresenta uma situação que implica uma jornada, mas não é exatamente isso. A resposta 'A' é a correta porque 'ir até' é a expressão mais comum usada para indicar uma jornada, enquanto 'de volta' é usada para indicar uma retribuição ou um retorno, que não é a mesma coisa. A questão 'B' é incorreta porque é uma opção que não é plausível, já que é impossível ir de carro até o parque e voltar. A opção 'C' também é incorreta por ser semelhante a 'B', e a opção 'D' é incorreta porque é semelhante a 'C'. A opção 'E' é incorreta porque não é plausível e não se alinha com a estrutura do enunciado. A questão 'A' é a correta porque é a expressão mais comum usada para indicar uma jornada."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "O triângulo reto é um triângulo com um lato de 6 cm e um ângulo de 30 graus.",
+                "alternativas": {
+                  "A": "Um triângulo equilátero com um lato de 6 cm.",
+                  "B": "Um triângulo isósceles com um lato de 6 cm.",
+                  "C": "Um triângulo retângulo com um lato de 6 cm.",
+                  "D": "Um triângulo equilátero com um ângulo de 60 graus.",
+                  "E": "Um triângulo 45-45-90 com um lato de 6 cm."
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "Para calcular a resposta, primeiro use o teorema de Pitágoras para calcular o lado oposto do ângulo de 30 graus: √(6² - 6²)² = 6² = 36. Em seguida, use o teorema de Pitágoras novamente para calcular o lado oposto do ângulo de 60 graus: √(6² - 6²)² = 6² = 36. Com base nesses cálculos, podemos determinar que o lado oposto do ângulo de 60 graus é igual a 6 cm, então o triângulo retângulo é um triângulo equilátero."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 908.820312,
+        "tps_medio": 15.31157,
+        "tempo_medio_segundos": 25.77836,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 50.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Uma pessoa pode ir até o parque e voltar de volta, mas não pode ir até o mercado e voltar.\",\n            \"alternativas\": {\n                \"A\": \"Pode ir até o parque e voltar, mas não pode ir até o mercado.\",\n                \"B\": \"Não pode ir até o parque e voltar, pois não pode ir até o mercado.\",\n                \"C\": \"Pode ir até o parque e voltar, mas não pode ir até o mercado.\",\n                \"D\": \"Não pode ir até o parque e voltar, pois não pode ir até o mercado.\",\n                \"E\": \"Não pode ir até o parque e voltar.\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para resolver essa questão, você precisa entender a diferença entre 'ir até' e 'de volta', que são expressões idiomáticas comuns na língua portuguesa. O enunciado apresenta uma situação que implica uma jornada, mas não é exatamente isso. A resposta 'A' é a correta porque 'ir até' é a expressão mais comum usada para indicar uma jornada, enquanto 'de volta' é usada para indicar uma retribuição ou um retorno, que não é a mesma coisa. A questão 'B' é incorreta porque é uma opção que não é plausível, já que é impossível ir de carro até o parque e voltar. A opção 'C' também é incorreta por ser semelhante a 'B', e a opção 'D' é incorreta porque é semelhante a 'C'. A opção 'E' é incorreta porque não é plausível e não se alinha com a estrutura do enunciado. A questão 'A' é a correta porque é a expressão mais comum usada para indicar uma jornada.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 443,
+            "total_tokens": 443
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.6579496000013023,
+            "tempo_decode_s": 28.10689110000021,
+            "tempo_resposta_s": 29.764840700001514,
+            "tempo_total_s": 29.764840700001514,
+            "tokens_entrada": 0,
+            "tokens_saida": 443,
+            "tps": 14.883331796228207,
+            "ram_inicio_mb": 903.21484375,
+            "ram_pico_mb": 906.1015625,
+            "ram_usada_mb": 2.88671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"O triângulo reto é um triângulo com um lato de 6 cm e um ângulo de 30 graus.\",\n            \"alternativas\": {\n                \"A\": \"Um triângulo equilátero com um lato de 6 cm.\",\n                \"B\": \"Um triângulo isósceles com um lato de 6 cm.\",\n                \"C\": \"Um triângulo retângulo com um lato de 6 cm.\",\n                \"D\": \"Um triângulo equilátero com um ângulo de 60 graus.\",\n                \"E\": \"Um triângulo 45-45-90 com um lato de 6 cm.\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para calcular a resposta, primeiro use o teorema de Pitágoras para calcular o lado oposto do ângulo de 30 graus: √(6² - 6²)² = 6² = 36. Em seguida, use o teorema de Pitágoras novamente para calcular o lado oposto do ângulo de 60 graus: √(6² - 6²)² = 6² = 36. Com base nesses cálculos, podemos determinar que o lado oposto do ângulo de 60 graus é igual a 6 cm, então o triângulo retângulo é um triângulo equilátero.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 343,
+            "total_tokens": 343
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.4682074000011198,
+            "tempo_decode_s": 20.323672599999554,
+            "tempo_resposta_s": 21.791880000000674,
+            "tempo_total_s": 21.791880000000674,
+            "tokens_entrada": 0,
+            "tokens_saida": 343,
+            "tps": 15.739807671480817,
+            "ram_inicio_mb": 906.54296875,
+            "ram_pico_mb": 908.8203125,
+            "ram_usada_mb": 2.27734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1088.8,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 4.09,
+        "limite": 5.0,
+        "motivo": "TPS 4.09 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 80.0,
+        "limite": 60.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 41.96,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -84.8,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "TPS 4.09 abaixo do mínimo 5.0"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato",
+      "performance"
+    ],
+    "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+    "gerado_em": "2026-09-09T15:12:50.787640"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; TPS 4.09 abaixo do mínimo 5.0"
+}

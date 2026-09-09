@@ -1,0 +1,1179 @@
+{
+  "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "09/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/Llama-3.2-1B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/Llama-3.2-1B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--Llama-3.2-1B-Instruct-GGUF\\Llama-3.2-1B-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 256,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 256
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 256
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.17,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Números que não podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0.",
+            "alternativas": {
+              "A": "3/2",
+              "B": "4/3",
+              "C": "5/4",
+              "D": "6/5",
+              "E": "7/6"
+            },
+            "resposta_correta": "A",
+            "resolucao_passo_a_passo": "Para resolver essa questão, precisamos identificar os números que podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0. Esses são os números que têm uma razão comum, como 2/3, 3/4, 4/5, etc. Já os números que não têm uma razão comum comum, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Para resolver essa questão, precisamos identificar os números que podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0. Esses são os números que têm uma razão comum, como 2/3, 3/4, 4/5, etc. Já os números que não têm uma razão comum comum, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Para resolver essa questão, precisamos identificar os números que podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0. Esses são os números que têm uma razão comum, como 2/3, 3/4, 4/5, etc. Já os números que não têm uma razão comum comum, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Para resolver essa questão, precisamos identificar os números que podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0. Esses são os números que têm uma razão comum, como 2/3, 3/4, 4/5, etc. Já os números que não têm uma razão comum comum, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Para resolver essa questão, precisamos identificar os números que podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0. Esses são os números que"
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 3.8764511000008497,
+        "tempo_prefill_s": 15.19871190000049,
+        "tempo_decode_s": 72.05953500000032,
+        "tempo_resposta_s": 87.25824690000081,
+        "tempo_total_s": 91.13469800000166,
+        "tokens_entrada": 0,
+        "tokens_saida": 1024,
+        "tps": 11.735280462069316,
+        "ram_inicio_mb": 29.265625,
+        "ram_pico_mb": 1373.33984375,
+        "ram_usada_mb": 1344.07421875,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 91.13469800000166,
+        "tempo_carregamento_s": 3.8764511000008497,
+        "tempo_resposta_s": 87.25824690000081,
+        "ram_pico_mb": 1373.33984375,
+        "ram_inicio_mb": 29.265625,
+        "ttft_segundos": 15.19871190000049,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Números que não podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0.\",\n            \"alternativas\": {\n                \"A\": \"3/2\",\n                \"B\": \"4/3\",\n                \"C\": \"5/4\",\n                \"D\": \"6/5\",\n                \"E\": \"7/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para resolver essa questão, precisamos identificar os números que podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0. Esses são os números que têm uma razão comum, como 2/3, 3/4, 4/5, etc. Já os números que não têm uma razão comum comum, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Para resolver essa questão, precisamos identificar os números que podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0. Esses são os números que têm uma razão comum, como 2/3, 3/4, 4/5, etc. Já os números que não têm uma razão comum comum, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Para resolver essa questão, precisamos identificar os números que podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0. Esses são os números que têm uma razão comum, como 2/3, 3/4, 4/5, etc. Já os números que não têm uma razão comum comum, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Para resolver essa questão, precisamos identificar os números que podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0. Esses são os números que têm uma razão comum, como 2/3, 3/4, 4/5, etc. Já os números que não têm uma razão comum comum, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Esses são os números que não podem ser escritos na forma de uma fração a/b, como 3/2, 4/3, 5/4, etc. Para resolver essa questão, precisamos identificar os números que podem ser escritos na forma de uma fração a/b, com a e b inteiros e b≠0. Esses são os números que",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_carregamento_s": 3.8764511000008497,
+            "tempo_prefill_s": 15.19871190000049,
+            "tempo_decode_s": 72.05953500000032,
+            "tempo_resposta_s": 87.25824690000081,
+            "tempo_total_s": 91.13469800000166,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 11.735280462069316,
+            "ram_inicio_mb": 29.265625,
+            "ram_pico_mb": 1373.33984375,
+            "ram_usada_mb": 1344.07421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 15.890141,
+          "iqr": 3.47479,
+          "p25": 14.464732,
+          "p75": 17.939523,
+          "p95": 18.353041,
+          "p99": 18.384371,
+          "max": 18.392204,
+          "media": 15.900501
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 0.841941,
+          "iqr": 1.76202,
+          "p25": 0.062546,
+          "p75": 1.824567,
+          "p95": 3.631439,
+          "p99": 4.268907,
+          "max": 4.428274,
+          "media": 1.25377
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 21.587726,
+          "iqr": 6.54783,
+          "p25": 19.751097,
+          "p75": 26.298926,
+          "p95": 68.473489,
+          "p99": 69.200268,
+          "max": 69.381963,
+          "media": 31.020413
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1051.208984,
+          "iqr": 117.756836,
+          "p25": 937.119141,
+          "p75": 1054.875977,
+          "p95": 1080.271094,
+          "p99": 1080.816719,
+          "max": 1080.953125,
+          "media": 1008.823047
+        },
+        "tps_medio": 15.900501,
+        "ttft_medio_segundos": 1.25377,
+        "tempo_medio_segundos": 31.020413,
+        "ram_pico_mb": 1080.953125
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 6,
+        "json_invalidos": 4,
+        "taxa_json_valido_percent": 60.0,
+        "json_valido_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 6,
+        "gabarito_avaliados": 6,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 6,
+          "denominador": 6,
+          "ponto": 1.0,
+          "ic95": [
+            0.609666,
+            1.0
+          ],
+          "formato": "100.0% [61.0–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 6,
+        "taxa_utilizavel_percent": 60.0,
+        "utilizavel_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 6,
+          "json_invalido": 4
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 15.890141,
+          "iqr": 3.47479,
+          "p25": 14.464732,
+          "p75": 17.939523,
+          "p95": 18.353041,
+          "p99": 18.384371,
+          "max": 18.392204,
+          "media": 15.900501
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 0.841941,
+          "iqr": 1.76202,
+          "p25": 0.062546,
+          "p75": 1.824567,
+          "p95": 3.631439,
+          "p99": 4.268907,
+          "max": 4.428274,
+          "media": 1.25377
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 21.587726,
+          "iqr": 6.54783,
+          "p25": 19.751097,
+          "p75": 26.298926,
+          "p95": 68.473489,
+          "p99": 69.200268,
+          "max": 69.381963,
+          "media": 31.020413
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1051.208984,
+          "iqr": 117.756836,
+          "p25": 937.119141,
+          "p75": 1054.875977,
+          "p95": 1080.271094,
+          "p99": 1080.816719,
+          "max": 1080.953125,
+          "media": 1008.823047
+        },
+        "tps_medio": 15.900501,
+        "ttft_medio_segundos": 1.25377,
+        "tempo_medio_segundos": 31.020413,
+        "ram_pico_mb": 1080.953125,
+        "tps_por_rodada": [
+          14.366683592567785,
+          17.014436788067272,
+          18.305174467936364,
+          18.39220402478093,
+          18.247884709327316,
+          14.758878983754885,
+          11.842786826124517,
+          16.57908856797958,
+          15.20119357159272,
+          14.296676511180204
+        ],
+        "ttft_por_rodada": [
+          2.6575297999988834,
+          0.06132679999791435,
+          0.05573109999750159,
+          0.053050599999551196,
+          0.06621280000035767,
+          1.6484227999972063,
+          4.428273999998055,
+          0.0662053999985801,
+          1.6176686999970116,
+          1.8832813000008173
+        ],
+        "tempo_por_rodada": [
+          24.640342200000305,
+          20.805860599997686,
+          19.338794100000086,
+          19.247285400000692,
+          19.39950880000106,
+          69.38196329999846,
+          26.85178789999918,
+          21.35219909999796,
+          67.36313139999766,
+          21.823253800001112
+        ],
+        "ram_por_rodada": [
+          1079.4375,
+          1080.953125,
+          1050.46875,
+          1051.94921875,
+          1053.42578125,
+          1055.359375,
+          977.77734375,
+          921.91015625,
+          923.56640625,
+          893.3828125
+        ],
+        "ram_media_mb": 1008.823047
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 7 => x = 7 - 3 => x = 4\"\n        },\n        {\n            \"enunciado\": \"Se 2x = 14, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x = 14 => x = 14/2 => x = 7\"\n        },\n        {\n            \"enunciado\": \"Se x - 2 = 9, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"7\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x - 2 = 9 => x = 9 + 2 => x = 11\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 354,
+            "total_tokens": 354
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6575297999988834,
+            "tempo_decode_s": 21.98281240000142,
+            "tempo_resposta_s": 24.640342200000305,
+            "tempo_total_s": 24.640342200000305,
+            "tokens_entrada": 0,
+            "tokens_saida": 354,
+            "tps": 14.366683592567785,
+            "ram_inicio_mb": 1069.7265625,
+            "ram_pico_mb": 1079.4375,
+            "ram_usada_mb": 9.7109375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 7 => x = 7 - 3 => x = 4\"\n        },\n        {\n            \"enunciado\": \"Se 2x = 14, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x = 14 => x = 14/2 => x = 7\"\n        },\n        {\n            \"enunciado\": \"Se x - 2 = 9, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"7\",\n                \"E\": \"11\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x - 2 = 9 => x = 9 + 2 => x = 11\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 354,
+            "total_tokens": 354
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06132679999791435,
+            "tempo_decode_s": 20.744533799999772,
+            "tempo_resposta_s": 20.805860599997686,
+            "tempo_total_s": 20.805860599997686,
+            "tokens_entrada": 0,
+            "tokens_saida": 354,
+            "tps": 17.014436788067272,
+            "ram_inicio_mb": 1079.35546875,
+            "ram_pico_mb": 1080.953125,
+            "ram_usada_mb": 1.59765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 7 => x = 7 - 3 => x = 4\"\n        },\n        {\n            \"enunciado\": \"Se 2x = 14, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x = 14 => x = 14/2 => x = 7\"\n        },\n        {\n            \"enunciado\": \"Se x - 2 = 9, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"7\",\n                \"E\": \"11\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x - 2 = 9 => x = 9 + 2 => x = 11\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 354,
+            "total_tokens": 354
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.05573109999750159,
+            "tempo_decode_s": 19.283063000002585,
+            "tempo_resposta_s": 19.338794100000086,
+            "tempo_total_s": 19.338794100000086,
+            "tokens_entrada": 0,
+            "tokens_saida": 354,
+            "tps": 18.305174467936364,
+            "ram_inicio_mb": 1048.87890625,
+            "ram_pico_mb": 1050.46875,
+            "ram_usada_mb": 1.58984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 7 => x = 7 - 3 => x = 4\"\n        },\n        {\n            \"enunciado\": \"Se 2x = 14, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x = 14 => x = 14/2 => x = 7\"\n        },\n        {\n            \"enunciado\": \"Se x - 2 = 9, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"7\",\n                \"E\": \"11\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x - 2 = 9 => x = 9 + 2 => x = 11\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 354,
+            "total_tokens": 354
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.053050599999551196,
+            "tempo_decode_s": 19.19423480000114,
+            "tempo_resposta_s": 19.247285400000692,
+            "tempo_total_s": 19.247285400000692,
+            "tokens_entrada": 0,
+            "tokens_saida": 354,
+            "tps": 18.39220402478093,
+            "ram_inicio_mb": 1050.3828125,
+            "ram_pico_mb": 1051.94921875,
+            "ram_usada_mb": 1.56640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 7 => x = 7 - 3 => x = 4\"\n        },\n        {\n            \"enunciado\": \"Se 2x = 14, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x = 14 => x = 14/2 => x = 7\"\n        },\n        {\n            \"enunciado\": \"Se x - 2 = 9, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"7\",\n                \"E\": \"11\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x - 2 = 9 => x = 9 + 2 => x = 11\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 354,
+            "total_tokens": 354
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06621280000035767,
+            "tempo_decode_s": 19.3332960000007,
+            "tempo_resposta_s": 19.39950880000106,
+            "tempo_total_s": 19.39950880000106,
+            "tokens_entrada": 0,
+            "tokens_saida": 354,
+            "tps": 18.247884709327316,
+            "ram_inicio_mb": 1051.86328125,
+            "ram_pico_mb": 1053.42578125,
+            "ram_usada_mb": 1.5625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Números irrationais podem ser expressos em forma de frações a/b, onde a e b são inteiros e b não é igual a 0.\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"3/4\",\n                \"C\": \"2/3\",\n                \"D\": \"4/5\",\n                \"E\": \"1/1\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Para expressar um número irrationál como uma fração, b deve ser igual a 1. Isso significa que a fração deve ter a forma a/b, onde a e b são inteiros e b não é igual a 0.\"\n        },\n        {\n            \"enunciado\": \"Números irrationais que não podem ser expressos como uma fração a/b, onde a e b são inteiros e b não é igual a 0, são 1/2, 1/3, 2/3, 3/4, 4/5, 5/6, 6/7, 7/8, 8/9, 9/10, 10/11, 11/12, 12/13, 13/14, 14/15, 15/16, 16/17, 17/18, 18/19, 19/20, 20/21, 21/22, 22/23, 23/24, 24/25, 25/26, 26/27, 27/28, 28/29, 29/30, 30/31, 31/32, 32/33, 33/34, 34/35, 35/36, 36/37, 37/38, 38/39, 39/40, 40/41, 41/42, 42/43, 43/44, 44/45, 45/46, 46/47, 47/48, 48/49, 49/50, 50/51, 51/52, 52/53, 53/54, 54/55, 55/56, 56/57, 57/58, 58/59, 59/60, 60/61, 61/62, 62/63, 63/64, 64/65, 65/66, 66/67, 67/68, 68/69, 69/70, 70/71, 71/72, 72/73, 73/74, 74/75, 75/76, 76/77, 77/78, 78/79, 79/80, 80/81, 81/82, 82/83, 83/84, 84/85, 85/86, 86/87, 87/88, 88/89, 89/90, 90/91, 91/92, 92/93, 93/94, 94/95, 95/96, 96/97, 97/98, 98/99, 99/100, 100/101, 101/102, 102/103, 103/104, 104/105, 105/106, 106/107, 107/108, 108/109, 109/110, 110/111, 111/112, 112/113, 113/114, 114/115, 115/116, 116/117, 117/118, 118/119, 119/120, 120/121, 121/122, 122/123, 123/124, 124/125, 125/126, 126/127, 127/128, 128/129, 129/130, 130/131, 131/132, 132/133, 133/134, 134/135, 135/136, 136/137, 137/138, 138/139, 139/140, 140/141, 141/142, 142/143, 143/144, 144/145, 145/146, 146/147, 147/148, 148/149, 149/150, 150/151, 151/152, 152/153, 153/154, 154/155, 155/156, 156/157, 157/158, 158/159, 159/160,",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.6484227999972063,
+            "tempo_decode_s": 67.73354050000125,
+            "tempo_resposta_s": 69.38196329999846,
+            "tempo_total_s": 69.38196329999846,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 14.758878983754885,
+            "ram_inicio_mb": 1053.3359375,
+            "ram_pico_mb": 1055.359375,
+            "ram_usada_mb": 2.0234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 2x = 14, qual é o valor de x? \",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"4\",\n            \"resolucao_passo_a_passo\": \"x = 14/2 = 7\"\n        },\n        {\n            \"enunciado\": \"Se x - 3 = 9, qual é o valor de x? \",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"2\",\n            \"resolucao_passo_a_passo\": \"x = 9 + 3 = 12\"\n        },\n        {\n            \"enunciado\": \"Se 3x = 18, qual é o valor de x? \",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"7\",\n                \"C\": \"8\",\n                \"D\": \"9\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"6\",\n            \"resolucao_passo_a_passo\": \"x = 18/3 = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 318,
+            "total_tokens": 318
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.428273999998055,
+            "tempo_decode_s": 22.423513900001126,
+            "tempo_resposta_s": 26.85178789999918,
+            "tempo_total_s": 26.85178789999918,
+            "tokens_entrada": 0,
+            "tokens_saida": 318,
+            "tps": 11.842786826124517,
+            "ram_inicio_mb": 977.58203125,
+            "ram_pico_mb": 977.77734375,
+            "ram_usada_mb": 0.1953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"2\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 7 => x = 7 - 3 => x = 4\"\n        },\n        {\n            \"enunciado\": \"Se 2x = 14, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x = 14 => x = 14/2 => x = 7\"\n        },\n        {\n            \"enunciado\": \"Se x - 2 = 5, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x - 2 = 5 => x = 5 + 2 => x = 7\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 354,
+            "total_tokens": 354
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0662053999985801,
+            "tempo_decode_s": 21.28599369999938,
+            "tempo_resposta_s": 21.35219909999796,
+            "tempo_total_s": 21.35219909999796,
+            "tokens_entrada": 0,
+            "tokens_saida": 354,
+            "tps": 16.57908856797958,
+            "ram_inicio_mb": 919.7109375,
+            "ram_pico_mb": 921.91015625,
+            "ram_usada_mb": 2.19921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Números irrationais podem ser expressos em forma de frações a/b, onde a e b são inteiros e b não é igual a 0.\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"3/4\",\n                \"C\": \"2/3\",\n                \"D\": \"4/5\",\n                \"E\": \"1/1\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Para expressar um número irrationál como uma fração, b deve ser igual a 1. Isso significa que a fração deve ter a forma a/b, onde a e b são inteiros e b não é igual a 0.\"\n        },\n        {\n            \"enunciado\": \"Números irrationais que não podem ser expressos como uma fração a/b, onde a e b são inteiros e b não é igual a 0, são 1/2, 1/3, 2/3, 3/4, 4/5, 5/6, 6/7, 7/8, 8/9, 9/10, 10/11, 11/12, 12/13, 13/14, 14/15, 15/16, 16/17, 17/18, 18/19, 19/20, 20/21, 21/22, 22/23, 23/24, 24/25, 25/26, 26/27, 27/28, 28/29, 29/30, 30/31, 31/32, 32/33, 33/34, 34/35, 35/36, 36/37, 37/38, 38/39, 39/40, 40/41, 41/42, 42/43, 43/44, 44/45, 45/46, 46/47, 47/48, 48/49, 49/50, 50/51, 51/52, 52/53, 53/54, 54/55, 55/56, 56/57, 57/58, 58/59, 59/60, 60/61, 61/62, 62/63, 63/64, 64/65, 65/66, 66/67, 67/68, 68/69, 69/70, 70/71, 71/72, 72/73, 73/74, 74/75, 75/76, 76/77, 77/78, 78/79, 79/80, 80/81, 81/82, 82/83, 83/84, 84/85, 85/86, 86/87, 87/88, 88/89, 89/90, 90/91, 91/92, 92/93, 93/94, 94/95, 95/96, 96/97, 97/98, 98/99, 99/100, 100/101, 101/102, 102/103, 103/104, 104/105, 105/106, 106/107, 107/108, 108/109, 109/110, 110/111, 111/112, 112/113, 113/114, 114/115, 115/116, 116/117, 117/118, 118/119, 119/120, 120/121, 121/122, 122/123, 123/124, 124/125, 125/126, 126/127, 127/128, 128/129, 129/130, 130/131, 131/132, 132/133, 133/134, 134/135, 135/136, 136/137, 137/138, 138/139, 139/140, 140/141, 141/142, 142/143, 143/144, 144/145, 145/146, 146/147, 147/148, 148/149, 149/150, 150/151, 151/152, 152/153, 153/154, 154/155, 155/156, 156/157, 157/158, 158/159, 159/160,",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.6176686999970116,
+            "tempo_decode_s": 65.74546270000064,
+            "tempo_resposta_s": 67.36313139999766,
+            "tempo_total_s": 67.36313139999766,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 15.20119357159272,
+            "ram_inicio_mb": 921.82421875,
+            "ram_pico_mb": 923.56640625,
+            "ram_usada_mb": 1.7421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Uma casa tem uma área de 15 metros quadrados e um teto de 3 metros de altura. Qual é o volume do teto?\",\n            \"alternativas\": {\n                \"A\": \"3 metros\",\n                \"B\": \"4 metros\",\n                \"C\": \"5 metros\",\n                \"D\": \"6 metros\",\n                \"E\": \"7 metros\"\n            },\n            \"resposta_correta\": \"3 metros\",\n            \"resolucao_passo_a_passo\": \"Volume = (Área * Altura) / 2 = (15 * 3) / 2 = 22,5 metros cúbicos\"\n        },\n        {\n            \"enunciado\": \"Uma pessoa tem 15 anos de idade. Qual é o número de anos que ela precisa para alcançar a idade de 18 anos?\",\n            \"alternativas\": {\n                \"A\": \"2 anos\",\n                \"B\": \"3 anos\",\n                \"C\": \"4 anos\",\n                \"D\": \"5 anos\",\n                \"E\": \"6 anos\"\n            },\n            \"resposta_correta\": \"3 anos\",\n            \"resolucao_passo_a_passo\": \"Anos = (Idade atual - Idade necessária) / 1 = (15 - 18) / 1 = -3 anos. Não é possível, mas podemos calcular: anos = -3 anos\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 312,
+            "total_tokens": 312
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.8832813000008173,
+            "tempo_decode_s": 19.939972500000295,
+            "tempo_resposta_s": 21.823253800001112,
+            "tempo_total_s": 21.823253800001112,
+            "tokens_entrada": 0,
+            "tokens_saida": 312,
+            "tps": 14.296676511180204,
+            "ram_inicio_mb": 891.27734375,
+            "ram_pico_mb": 893.3828125,
+            "ram_usada_mb": 2.10546875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 12.674722,
+        "ram_media_mb": 903.751953,
+        "ram_pico_mb": 904.683594,
+        "tempo_medio_segundos": 45.435226,
+        "ttft_medio_segundos": 1.174581,
+        "tps": {
+          "n": 2,
+          "mediana": 12.674722,
+          "iqr": 2.088269,
+          "p25": 11.630587,
+          "p75": 13.718857,
+          "p95": 14.554164,
+          "p99": 14.721226,
+          "max": 14.762991,
+          "media": 12.674722
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 1.174581,
+          "iqr": 1.078417,
+          "p25": 0.635372,
+          "p75": 1.71379,
+          "p95": 2.145157,
+          "p99": 2.23143,
+          "max": 2.252998,
+          "media": 1.174581
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 45.435226,
+          "iqr": 19.930932,
+          "p25": 35.46976,
+          "p75": 55.400691,
+          "p95": 63.373064,
+          "p99": 64.967539,
+          "max": 65.366157,
+          "media": 45.435226
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 903.751953,
+          "iqr": 0.931641,
+          "p25": 903.286133,
+          "p75": 904.217773,
+          "p95": 904.59043,
+          "p99": 904.664961,
+          "max": 904.683594,
+          "media": 903.751953
+        },
+        "tps_por_rodada": [
+          10.58645274305329,
+          14.762991100957741
+        ],
+        "ttft_por_rodada": [
+          2.252998399999342,
+          0.09616380000079516
+        ],
+        "tempo_por_rodada": [
+          25.504293699999835,
+          65.36615739999979
+        ],
+        "ram_por_rodada": [
+          902.8203125,
+          904.68359375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 2,
+        "quantidade_de_questoes": 5,
+        "tentativas": 1,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": true,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 904.683594,
+        "tps_medio": 12.674722,
+        "tempo_medio_segundos": 45.435226,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Números decimais podem ser escritos em forma de frações, mas não podem ser escritos em forma de fracciones. Qual é o valor de x? x = 2/3\"\n        },\n        {\n            \"enunciado\": \"Números decimais podem ser escritos em forma de fracciones, mas não podem ser escritos em forma de fracciones. Qual é o valor de x? x = 3/4\"\n        },\n        {\n            \"enunciado\": \"Números decimais podem ser escritos em forma de fracciones, mas não podem ser escritos em forma de fracciones. Qual é o valor de x? x = 1/2\"\n        },\n        {\n            \"enunciado\": \"Números decimais podem ser escritos em forma de fracciones, mas não podem ser escritos em forma de fracciones. Qual é o valor de x? x = 5/6\"\n        },\n        {\n            \"enunciado\": \"Números decimais podem ser escritos em forma de fracciones, mas não podem ser escritos em forma de fracciones. Qual é o valor de x? x = 2/5\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 270,
+            "total_tokens": 270
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.252998399999342,
+            "tempo_decode_s": 23.251295300000493,
+            "tempo_resposta_s": 25.504293699999835,
+            "tempo_total_s": 25.504293699999835,
+            "tokens_entrada": 0,
+            "tokens_saida": 270,
+            "tps": 10.58645274305329,
+            "ram_inicio_mb": 896.75390625,
+            "ram_pico_mb": 902.8203125,
+            "ram_usada_mb": 6.06640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Números decimais podem ser escritos em forma de frações, mas não podem ser escritos em forma de fracciones, por exemplo: qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"3/4\",\n                \"C\": \"2/3\",\n                \"D\": \"1/6\",\n                \"E\": \"3/8\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Para resolver essa questão, o aluno precisa identificar quais são as frações que não podem ser escritas na forma a/b. Em seguida, ele precisa escolher a resposta correta. A resposta correta é D, pois as outras opções são fracciones válidas.\"\n        },\n        {\n            \"enunciado\": \"Números decimais podem ser escritos em forma de fracciones, mas não podem ser escritos em forma de fracciones, por exemplo: qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"0,5\",\n                \"B\": \"0,2\",\n                \"C\": \"1,8\",\n                \"D\": \"0,25\",\n                \"E\": \"2,5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Para resolver essa questão, o aluno precisa identificar quais são as frações que não podem ser escritas na forma a/b. Em seguida, ele precisa escolher a resposta correta. A resposta correta é D, pois as outras opções são fracciones válidas.\"\n        },\n        {\n            \"enunciado\": \"Números decimais podem ser escritos em forma de fracciones, mas não podem ser escritos em forma de fracciones, por exemplo: qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"0,1\",\n                \"B\": \"0,3\",\n                \"C\": \"0,6\",\n                \"D\": \"0,9\",\n                \"E\": \"1,1\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Para resolver essa questão, o aluno precisa identificar quais são as frações que não podem ser escritas na forma a/b. Em seguida, ele precisa escolher a resposta correta. A resposta correta é D, pois as outras opções são fracciones válidas.\"\n        },\n        {\n            \"enunciado\": \"Números decimais podem ser escritos em forma de fracciones, mas não podem ser escritos em forma de fracciones, por exemplo: qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"0,2\",\n                \"B\": \"0,4\",\n                \"C\": \"0,8\",\n                \"D\": \"1,2\",\n                \"E\": \"0,9\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Para resolver essa questão, o aluno precisa identificar quais são as frações que não podem ser escritas na forma a/b. Em seguida, ele precisa escolher a resposta correta. A resposta correta é D, pois as outras opções são fracciones válidas.\"\n        },\n        {\n            \"enunciado\": \"Números decimais podem ser escritos em forma de fracciones, mas não podem ser escritos em forma de fracciones, por exemplo: qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"0,1\",\n                \"B\": \"0,3\",\n                \"C\": \"0,6\",\n                \"D\": \"0,9\",\n                \"E\": \"1,1\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Para resolver essa questão, o aluno precisa identificar quais são as frações que não podem ser escritas na forma a/b. Em seguida, ele precisa escolher a resposta correta. A resposta correta é D, pois as outras opções são fracciones válidas.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 965,
+            "total_tokens": 965
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.09616380000079516,
+            "tempo_decode_s": 65.269993599999,
+            "tempo_resposta_s": 65.36615739999979,
+            "tempo_total_s": 65.36615739999979,
+            "tokens_entrada": 0,
+            "tokens_saida": 965,
+            "tps": 14.762991100957741,
+            "ram_inicio_mb": 902.83984375,
+            "ram_pico_mb": 904.68359375,
+            "ram_usada_mb": 1.84375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 13.733579,
+        "ram_media_mb": 908.027344,
+        "ram_pico_mb": 909.097656,
+        "tempo_medio_segundos": 21.540372,
+        "ttft_medio_segundos": 1.677999,
+        "tps": {
+          "n": 2,
+          "mediana": 13.733579,
+          "iqr": 1.696385,
+          "p25": 12.885386,
+          "p75": 14.581771,
+          "p95": 15.260325,
+          "p99": 15.396036,
+          "max": 15.429964,
+          "media": 13.733579
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 1.677999,
+          "iqr": 0.222916,
+          "p25": 1.566541,
+          "p75": 1.789457,
+          "p95": 1.878624,
+          "p99": 1.896457,
+          "max": 1.900915,
+          "media": 1.677999
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 21.540372,
+          "iqr": 6.58672,
+          "p25": 18.247012,
+          "p75": 24.833731,
+          "p95": 27.468419,
+          "p99": 27.995357,
+          "max": 28.127091,
+          "media": 21.540372
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 908.027344,
+          "iqr": 1.070312,
+          "p25": 907.492188,
+          "p75": 908.5625,
+          "p95": 908.990625,
+          "p99": 909.07625,
+          "max": 909.097656,
+          "media": 908.027344
+        },
+        "tps_por_rodada": [
+          12.037193241909717,
+          15.429963835009007
+        ],
+        "ttft_por_rodada": [
+          1.9009151999998721,
+          1.4550831999986258
+        ],
+        "tempo_por_rodada": [
+          14.953652100000909,
+          28.127091199999995
+        ],
+        "ram_por_rodada": [
+          906.95703125,
+          909.09765625
+        ],
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "Nenhuma questão válida (1 inválida(s))",
+            "output_bruto": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Em um triângulo retângulo com lados de comprimento médio 8, 10 e 12, calcule o valor da área.\",\n            \"alternativas\": {\n                \"A\": \"10, 20 e 16\",\n                \"B\": \"8, 10 e 12\",\n                \"C\": \"10, 12 e 8\",\n                \"D\": \"8, 10 e 16\",\n                \"E\": \"8, 12 e 10\"\n            },\n            \"resposta_correta\": \"10, 20 e 16\",\n            \"resolucao_passo_a_passo\": \"6, 8, 10; 8, 10, 12; 10, 12, 8\"\n        }"
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Uma reta em uma planície é reta e perpendicular às outras linhas que se encontram em um mesmo ponto. O ponto de interseção dessas linhas é chamado de centro de simetria. Qual é o nome da reta que liga dois pontos que se encontram em um mesmo ponto com as linhas que se encontram em um mesmo ponto, e que são perpendiculares entre si?",
+                "alternativas": {
+                  "A": "Linha perpendiculares e perpendicular, que liga dois pontos que se encontram em um mesmo ponto.",
+                  "B": "Linha perpendicular e reta, que liga dois pontos que se encontram em um mesmo ponto.",
+                  "C": "Linha em reta perpendiculare e em reta em reta, que liga dois pontos que se encontram em um mesmo ponto.",
+                  "D": "Linha em reta em reta e em reta em reta, que liga dois pontos que se encontram em um mesmo ponto.",
+                  "E": "Nenhuma das opções acima."
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "O centro de simetria é o ponto onde duas linhas se encontram em um mesmo ponto e são perpendiculares entre si. Em um retângulo, o centro de simetria é o ponto onde as retas se encontram em um mesmo ponto e são perpendiculares entre si. Portanto, a reta que liga dois pontos que se encontram em um mesmo ponto com as linhas que se encontram em um mesmo ponto, e que são perpendiculares entre si, é chamada de reta perpendiculares. Neste caso, a reta perpendiculares é a reta que liga os pontos que se encontram em um mesmo ponto com as linhas que se encontram em um mesmo ponto."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 909.097656,
+        "tps_medio": 13.733579,
+        "tempo_medio_segundos": 21.540372,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 50.0,
+        "taxa_utilizavel_percent": 50.0,
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Em um triângulo retângulo com lados de comprimento médio 8, 10 e 12, calcule o valor da área.\",\n            \"alternativas\": {\n                \"A\": \"10, 20 e 16\",\n                \"B\": \"8, 10 e 12\",\n                \"C\": \"10, 12 e 8\",\n                \"D\": \"8, 10 e 16\",\n                \"E\": \"8, 12 e 10\"\n            },\n            \"resposta_correta\": \"10, 20 e 16\",\n            \"resolucao_passo_a_passo\": \"6, 8, 10; 8, 10, 12; 10, 12, 8\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 180,
+            "total_tokens": 180
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.9009151999998721,
+            "tempo_decode_s": 13.052736900001037,
+            "tempo_resposta_s": 14.953652100000909,
+            "tempo_total_s": 14.953652100000909,
+            "tokens_entrada": 0,
+            "tokens_saida": 180,
+            "tps": 12.037193241909717,
+            "ram_inicio_mb": 905.05078125,
+            "ram_pico_mb": 906.95703125,
+            "ram_usada_mb": 1.90625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Uma reta em uma planície é reta e perpendicular às outras linhas que se encontram em um mesmo ponto. O ponto de interseção dessas linhas é chamado de centro de simetria. Qual é o nome da reta que liga dois pontos que se encontram em um mesmo ponto com as linhas que se encontram em um mesmo ponto, e que são perpendiculares entre si?\",\n            \"alternativas\": {\n                \"A\": \"Linha perpendiculares e perpendicular, que liga dois pontos que se encontram em um mesmo ponto.\",\n                \"B\": \"Linha perpendicular e reta, que liga dois pontos que se encontram em um mesmo ponto.\",\n                \"C\": \"Linha em reta perpendiculare e em reta em reta, que liga dois pontos que se encontram em um mesmo ponto.\",\n                \"D\": \"Linha em reta em reta e em reta em reta, que liga dois pontos que se encontram em um mesmo ponto.\",\n                \"E\": \"Nenhuma das opções acima.\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"O centro de simetria é o ponto onde duas linhas se encontram em um mesmo ponto e são perpendiculares entre si. Em um retângulo, o centro de simetria é o ponto onde as retas se encontram em um mesmo ponto e são perpendiculares entre si. Portanto, a reta que liga dois pontos que se encontram em um mesmo ponto com as linhas que se encontram em um mesmo ponto, e que são perpendiculares entre si, é chamada de reta perpendiculares. Neste caso, a reta perpendiculares é a reta que liga os pontos que se encontram em um mesmo ponto com as linhas que se encontram em um mesmo ponto.\"",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 434,
+            "total_tokens": 434
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.4550831999986258,
+            "tempo_decode_s": 26.67200800000137,
+            "tempo_resposta_s": 28.127091199999995,
+            "tempo_total_s": 28.127091199999995,
+            "tokens_entrada": 0,
+            "tokens_saida": 434,
+            "tps": 15.429963835009007,
+            "ram_inicio_mb": 907.1015625,
+            "ram_pico_mb": 909.09765625,
+            "ram_usada_mb": 1.99609375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1373.3,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 11.74,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 50.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 50.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 45.44,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 0.5,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Taxa JSON válido 50.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+    "gerado_em": "2026-09-09T15:35:54.852279"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Taxa JSON válido 50.0% abaixo de 60.0%"
+}

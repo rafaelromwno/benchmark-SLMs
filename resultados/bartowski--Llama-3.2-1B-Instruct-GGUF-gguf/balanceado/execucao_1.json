@@ -1,0 +1,1117 @@
+{
+  "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "09/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/Llama-3.2-1B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/Llama-3.2-1B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--Llama-3.2-1B-Instruct-GGUF\\Llama-3.2-1B-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 42,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 42
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 42
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.63,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": "Campo 'questoes' ausente",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 1.5621667000013986,
+        "tempo_prefill_s": 4.5248848000010184,
+        "tempo_decode_s": 31.256512599997222,
+        "tempo_resposta_s": 35.78139739999824,
+        "tempo_total_s": 37.34356409999964,
+        "tokens_entrada": 0,
+        "tokens_saida": 644,
+        "tps": 17.99817913204339,
+        "ram_inicio_mb": 62.02734375,
+        "ram_pico_mb": 1484.38671875,
+        "ram_usada_mb": 1422.359375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 37.34356409999964,
+        "tempo_carregamento_s": 1.5621667000013986,
+        "tempo_resposta_s": 35.78139739999824,
+        "ram_pico_mb": 1484.38671875,
+        "ram_inicio_mb": 62.02734375,
+        "ttft_segundos": 4.5248848000010184,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n\"questoes\": [\n    {\n        \"enunciado\": \"O número 3 pode ser escrito como uma fração a/b, onde a e b são inteiros e b não é igual a 0. Qual número entre 1 e 9 não pode ser escrito dessa forma?\",\n        \"alternativas\": {\n            \"A\": \"2/3\",\n            \"B\": \"4/6\",\n            \"C\": \"5/5\",\n            \"D\": \"1/2\",\n            \"E\": \"3/3\"\n        },\n        \"resposta_correta\": \"A\",\n        \"resolucao_passo_a_passo\": \"Para resolver essa questão, devemos considerar os valores possíveis de a e b. A fração a/b é válida quando a/b é um número entero. Portanto, podemos verificar os valores possíveis de a e b para cada número entre 1 e 9. Quando a/b é um número entero, a e b podem ser igual a 1, 2, 3, 4, 5, 6, 7 ou 8. No entanto, a/b não pode ser igual a 1/2 ou 3/3. Por exemplo, 1/2 não pode ser escrito como uma fração a/b porque a/b não é um número entero. Dessa mesma forma, 3/3 não pode ser escrito como uma fração a/b porque a/b é um número entero. Além disso, a/b não pode ser igual a 4/6 ou 5/5 porque a/b não é um número entero. Portanto, podemos concluir que a número 2 não pode ser escrito como uma fração a/b porque a/b não é um número entero. Dessa mesma forma, a número 4 não pode ser escrito como uma fração a/b porque a/b não é um número entero. Além disso, a número 5 não pode ser escrito como uma fração a/b porque a/b não é um número entero. Dessa mesma forma, a número 7 não pode ser escrito como uma fração a/b porque a/b não é um número entero. Além disso, a número 8 não pode ser escrito como uma fração a/b porque a/b não é um número entero. Por fim, a número 1 não pode ser escrito como uma fração a/b porque a/b não é um número entero. Dessa mesma forma, a número 3 não pode ser escrito como uma fração a/b porque a/b não é um número entero. Além disso, a número 6 não pode ser escrito como uma fração a/b porque a/b não é um número entero. Além disso, a número 9 não pode ser escrito como uma fração a/b porque a/b não é um número entero. Por isso, a resposta correta é a alternativa A.\"\n        },\n        \"resposta_correta\": \"A\"\n    }\n]",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 644,
+            "total_tokens": 644
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.5621667000013986,
+            "tempo_prefill_s": 4.5248848000010184,
+            "tempo_decode_s": 31.256512599997222,
+            "tempo_resposta_s": 35.78139739999824,
+            "tempo_total_s": 37.34356409999964,
+            "tokens_entrada": 0,
+            "tokens_saida": 644,
+            "tps": 17.99817913204339,
+            "ram_inicio_mb": 62.02734375,
+            "ram_pico_mb": 1484.38671875,
+            "ram_usada_mb": 1422.359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 18.583398,
+          "iqr": 0.901107,
+          "p25": 18.414851,
+          "p75": 19.315958,
+          "p95": 19.921762,
+          "p99": 20.086604,
+          "max": 20.127815,
+          "media": 18.772337
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 1.571425,
+          "iqr": 1.384316,
+          "p25": 0.414335,
+          "p75": 1.798651,
+          "p95": 2.018354,
+          "p99": 2.132307,
+          "max": 2.160795,
+          "media": 1.237034
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 22.98434,
+          "iqr": 5.360607,
+          "p25": 21.615843,
+          "p75": 26.97645,
+          "p95": 28.551542,
+          "p99": 28.671554,
+          "max": 28.701557,
+          "media": 23.241059
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1492.960938,
+          "iqr": 7.09668,
+          "p25": 1489.181641,
+          "p75": 1496.27832,
+          "p95": 1498.931055,
+          "p99": 1499.461211,
+          "max": 1499.59375,
+          "media": 1492.774609
+        },
+        "tps_medio": 18.772337,
+        "ttft_medio_segundos": 1.237034,
+        "tempo_medio_segundos": 23.241059,
+        "ram_pico_mb": 1499.59375
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 7,
+        "json_invalidos": 3,
+        "taxa_json_valido_percent": 70.0,
+        "json_valido_ic95": {
+          "numerador": 7,
+          "denominador": 10,
+          "ponto": 0.7,
+          "ic95": [
+            0.396778,
+            0.892209
+          ],
+          "formato": "70.0% [39.7–89.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 1,
+        "gabarito_avaliados": 7,
+        "taxa_gabarito_percent": 14.3,
+        "gabarito_ic95": {
+          "numerador": 1,
+          "denominador": 7,
+          "ponto": 0.142857,
+          "ic95": [
+            0.02568,
+            0.513128
+          ],
+          "formato": "14.3% [2.6–51.3]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 1,
+        "taxa_utilizavel_percent": 10.0,
+        "utilizavel_ic95": {
+          "numerador": 1,
+          "denominador": 10,
+          "ponto": 0.1,
+          "ic95": [
+            0.017876,
+            0.40415
+          ],
+          "formato": "10.0% [1.8–40.4]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 3,
+          "ok": 7
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 18.583398,
+          "iqr": 0.901107,
+          "p25": 18.414851,
+          "p75": 19.315958,
+          "p95": 19.921762,
+          "p99": 20.086604,
+          "max": 20.127815,
+          "media": 18.772337
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 1.571425,
+          "iqr": 1.384316,
+          "p25": 0.414335,
+          "p75": 1.798651,
+          "p95": 2.018354,
+          "p99": 2.132307,
+          "max": 2.160795,
+          "media": 1.237034
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 22.98434,
+          "iqr": 5.360607,
+          "p25": 21.615843,
+          "p75": 26.97645,
+          "p95": 28.551542,
+          "p99": 28.671554,
+          "max": 28.701557,
+          "media": 23.241059
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1492.960938,
+          "iqr": 7.09668,
+          "p25": 1489.181641,
+          "p75": 1496.27832,
+          "p95": 1498.931055,
+          "p99": 1499.461211,
+          "max": 1499.59375,
+          "media": 1492.774609
+        },
+        "tps_medio": 18.772337,
+        "ttft_medio_segundos": 1.237034,
+        "tempo_medio_segundos": 23.241059,
+        "ram_pico_mb": 1499.59375,
+        "tps_por_rodada": [
+          17.170441162019788,
+          18.70527099173183,
+          20.127814580437843,
+          18.939471028882146,
+          18.365209537115813,
+          18.461524309702195,
+          19.441453724040958,
+          19.66991915712358,
+          18.433696117366807,
+          18.408569400090958
+        ],
+        "ttft_por_rodada": [
+          2.1607953000020643,
+          1.7516231999979937,
+          0.05026549999820418,
+          1.5444748000008985,
+          1.8442598999972688,
+          1.5065455000003567,
+          0.049680699998134514,
+          0.049997400001302594,
+          1.5983754999979283,
+          1.8143271000008099
+        ],
+        "tempo_por_rodada": [
+          13.336873399999604,
+          21.544729299999744,
+          27.72283089999837,
+          24.076701999998477,
+          20.20123969999986,
+          21.82918339999742,
+          28.70155739999973,
+          28.368189800003165,
+          24.73730699999942,
+          21.891978200001176
+        ],
+        "ram_por_rodada": [
+          1485.859375,
+          1487.33203125,
+          1488.8125,
+          1490.2890625,
+          1492.2265625,
+          1493.6953125,
+          1495.16796875,
+          1496.6484375,
+          1498.12109375,
+          1499.59375
+        ],
+        "ram_media_mb": 1492.774609
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 25 e 29?\",\n            \"alternativas\": {\n                \"A\": 26,\n                \"B\": 27,\n                \"C\": 28,\n                \"D\": 29,\n                \"E\": 30\n            },\n            \"resposta_correta\": \"27\",\n            \"resolucao_passo_a_passo\": \"Calculando os números entre 25 e 29, encontramos que 26 está entre 25 e 29.\"\n        },\n        {\n            \"enunciado\": \"Qual número está acima de 18?\",\n            \"alternativas\": {\n                \"A\": 19,\n                \"B\": 20,\n                \"C\": 21,\n                \"D\": 22,\n                \"E\": 23\n            },\n            \"resposta_correta\": \"23\",\n            \"resolucao_passo_a_passo\": \"Considerando que 18 é o número entre 17 e 18, 23 está acima de 18.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 229,
+            "total_tokens": 229
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.1607953000020643,
+            "tempo_decode_s": 11.17607809999754,
+            "tempo_resposta_s": 13.336873399999604,
+            "tempo_total_s": 13.336873399999604,
+            "tokens_entrada": 0,
+            "tokens_saida": 229,
+            "tps": 17.170441162019788,
+            "ram_inicio_mb": 1484.359375,
+            "ram_pico_mb": 1485.859375,
+            "ram_usada_mb": 1.5,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b, com a e b inteiros e b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"3/4\",\n                \"B\": \"2/2\",\n                \"C\": \"1/3\",\n                \"D\": \"5/5\",\n                \"E\": \"4/4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3/4 = 0,75 = 3/4\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b, com a e b inteiros e b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"3/3\",\n                \"C\": \"2/2\",\n                \"D\": \"4/4\",\n                \"E\": \"3/3\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/2 = 0,5 = 1/2\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b, com a e b inteiros e b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"2/3\",\n                \"B\": \"4/4\",\n                \"C\": \"3/2\",\n                \"D\": \"6/6\",\n                \"E\": \"2/2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2/3 = 0,67 = 2/3\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 403,
+            "total_tokens": 403
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.7516231999979937,
+            "tempo_decode_s": 19.79310610000175,
+            "tempo_resposta_s": 21.544729299999744,
+            "tempo_total_s": 21.544729299999744,
+            "tokens_entrada": 0,
+            "tokens_saida": 403,
+            "tps": 18.70527099173183,
+            "ram_inicio_mb": 1485.7734375,
+            "ram_pico_mb": 1487.33203125,
+            "ram_usada_mb": 1.55859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre os números 1/2 e 3/4, qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"1/2, 2/4\",\n                \"B\": \"1/2, 3/4\",\n                \"C\": \"1/2, 4/4\",\n                \"D\": \"1/2, 2/4\",\n                \"E\": \"3/4, 2/4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Encontrar a fração com o maior denominador, que é 4, e a que não é 4: 1/2 = 2/4 e 3/4 = 3/4\"\n        },\n        {\n            \"enunciado\": \"Dentre os números 4, 6 e 8, qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"4, 6, 8\",\n                \"B\": \"4, 6, 9\",\n                \"C\": \"4, 6, 8\",\n                \"D\": \"4, 6, 9\",\n                \"E\": \"4, 8, 6\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Encontrar a fração com o menor denominador, que é 8 e a que não é 8: 4/8 = 1/2 e 6/8 = 3/4\"\n        },\n        {\n            \"enunciado\": \"Entre os números 1/3 e 2/5, qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"1/3, 2/5\",\n                \"B\": \"1/3, 3/5\",\n                \"C\": \"1/3, 2/5\",\n                \"D\": \"1/3, 3/5\",\n                \"E\": \"2/5, 1/3\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Encontrar a fração com o maior denominador, que é 5 e a que não é 5: 1/3 = 3/15 e 2/5 = 6/15\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 558,
+            "total_tokens": 558
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.05026549999820418,
+            "tempo_decode_s": 27.672565400000167,
+            "tempo_resposta_s": 27.72283089999837,
+            "tempo_total_s": 27.72283089999837,
+            "tokens_entrada": 0,
+            "tokens_saida": 558,
+            "tps": 20.127814580437843,
+            "ram_inicio_mb": 1487.24609375,
+            "ram_pico_mb": 1488.8125,
+            "ram_usada_mb": 1.56640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 24 e 28?\",\n            \"alternativas\": {\n                \"A\": 25,\n                \"B\": 26,\n                \"C\": 27,\n                \"D\": 28,\n                \"E\": 29\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1 = 2, 2 = 3, 3 = 4, 4 = 5, 5 = 6, 6 = 7, 7 = 8, 8 = 9, 9 = 10, 10 = 11, 11 = 12, 12 = 13, 13 = 14, 14 = 15, 15 = 16, 16 = 17, 17 = 18, 18 = 19, 19 = 20, 20 = 21, 21 = 22, 22 = 23, 23 = 24\"\n        },\n        {\n            \"enunciado\": \"Qual número é par e maior que 20?\",\n            \"alternativas\": {\n                \"A\": 21,\n                \"B\": 22,\n                \"C\": 23,\n                \"D\": 24,\n                \"E\": 25\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"2 = 3, 3 = 4, 4 = 5, 5 = 6, 6 = 7, 7 = 8, 8 = 9, 9 = 10, 10 = 11, 11 = 12, 12 = 13, 13 = 14, 14 = 15, 15 = 16, 16 = 17, 17 = 18, 18 = 19, 19 = 20, 20 = 21, 21 = 22, 22 = 23, 23 = 24, 24 = 25\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 456,
+            "total_tokens": 456
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.5444748000008985,
+            "tempo_decode_s": 22.53222719999758,
+            "tempo_resposta_s": 24.076701999998477,
+            "tempo_total_s": 24.076701999998477,
+            "tokens_entrada": 0,
+            "tokens_saida": 456,
+            "tps": 18.939471028882146,
+            "ram_inicio_mb": 1488.7265625,
+            "ram_pico_mb": 1490.2890625,
+            "ram_usada_mb": 1.5625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 2x = 15, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"9\",\n                \"C\": \"11\",\n                \"D\": \"13\",\n                \"E\": \"1\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"12/2 = x => x = 15/2 => x = 7.5\"\n        },\n        {\n            \"enunciado\": \"Se x - 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"9\",\n                \"E\": \"2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"10/3 + 3 = x => 10/3 = 10/3 => x = 10/3 + 3 => x = 10/3 + 9/3 => x = 19/3\"\n        },\n        {\n            \"enunciado\": \"Se 3x = 24, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"10\",\n                \"E\": \"2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"24/3 = x => 24/3 = 8 => x = 8\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 371,
+            "total_tokens": 371
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.8442598999972688,
+            "tempo_decode_s": 18.35697980000259,
+            "tempo_resposta_s": 20.20123969999986,
+            "tempo_total_s": 20.20123969999986,
+            "tokens_entrada": 0,
+            "tokens_saida": 371,
+            "tps": 18.365209537115813,
+            "ram_inicio_mb": 1490.66015625,
+            "ram_pico_mb": 1492.2265625,
+            "ram_usada_mb": 1.56640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b, com a e b inteiros e b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"3/4\",\n                \"B\": \"2/2\",\n                \"C\": \"1/3\",\n                \"D\": \"5/5\",\n                \"E\": \"4/4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3/4 = 0,75 = 3/4\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b, com a e b inteiros e b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"3/3\",\n                \"C\": \"2/2\",\n                \"D\": \"4/4\",\n                \"E\": \"3/3\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/2 = 0,5 = 1/2\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b, com a e b inteiros e b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"2/3\",\n                \"B\": \"4/4\",\n                \"C\": \"3/2\",\n                \"D\": \"6/6\",\n                \"E\": \"2/2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2/3 = 0,67 = 2/3\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 403,
+            "total_tokens": 403
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.5065455000003567,
+            "tempo_decode_s": 20.322637899997062,
+            "tempo_resposta_s": 21.82918339999742,
+            "tempo_total_s": 21.82918339999742,
+            "tokens_entrada": 0,
+            "tokens_saida": 403,
+            "tps": 18.461524309702195,
+            "ram_inicio_mb": 1492.1328125,
+            "ram_pico_mb": 1493.6953125,
+            "ram_usada_mb": 1.5625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre os números 1/2 e 3/4, qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"1/2, 2/4\",\n                \"B\": \"1/2, 3/4\",\n                \"C\": \"1/2, 4/4\",\n                \"D\": \"1/2, 2/4\",\n                \"E\": \"3/4, 2/4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Encontrar a fração com o maior denominador, que é 4, e a que não é 4: 1/2 = 2/4 e 3/4 = 3/4\"\n        },\n        {\n            \"enunciado\": \"Dentre os números 4, 6 e 8, qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"4, 6, 8\",\n                \"B\": \"4, 6, 9\",\n                \"C\": \"4, 6, 8\",\n                \"D\": \"4, 6, 9\",\n                \"E\": \"4, 8, 6\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Encontrar a fração com o menor denominador, que é 8 e a que não é 8: 4/8 = 1/2 e 6/8 = 3/4\"\n        },\n        {\n            \"enunciado\": \"Entre os números 1/3 e 2/5, qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"1/3, 2/5\",\n                \"B\": \"1/3, 3/5\",\n                \"C\": \"1/3, 2/5\",\n                \"D\": \"1/3, 3/5\",\n                \"E\": \"2/5, 1/3\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Encontrar a fração com o maior denominador, que é 5 e a que não é 5: 1/3 = 3/15 e 2/5 = 6/15\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 558,
+            "total_tokens": 558
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.049680699998134514,
+            "tempo_decode_s": 28.651876700001594,
+            "tempo_resposta_s": 28.70155739999973,
+            "tempo_total_s": 28.70155739999973,
+            "tokens_entrada": 0,
+            "tokens_saida": 558,
+            "tps": 19.441453724040958,
+            "ram_inicio_mb": 1493.609375,
+            "ram_pico_mb": 1495.16796875,
+            "ram_usada_mb": 1.55859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Entre os números 1/2 e 3/4, qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"1/2, 2/4\",\n                \"B\": \"1/2, 3/4\",\n                \"C\": \"1/2, 4/4\",\n                \"D\": \"1/2, 2/4\",\n                \"E\": \"3/4, 2/4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Encontrar a fração com o maior denominador, que é 4, e a que não é 4: 1/2 = 2/4 e 3/4 = 3/4\"\n        },\n        {\n            \"enunciado\": \"Dentre os números 4, 6 e 8, qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"4, 6, 8\",\n                \"B\": \"4, 6, 9\",\n                \"C\": \"4, 6, 8\",\n                \"D\": \"4, 6, 9\",\n                \"E\": \"4, 8, 6\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Encontrar a fração com o menor denominador, que é 8 e a que não é 8: 4/8 = 1/2 e 6/8 = 3/4\"\n        },\n        {\n            \"enunciado\": \"Entre os números 1/3 e 2/5, qual NÃO pode ser escrito na forma de uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"1/3, 2/5\",\n                \"B\": \"1/3, 3/5\",\n                \"C\": \"1/3, 2/5\",\n                \"D\": \"1/3, 3/5\",\n                \"E\": \"2/5, 1/3\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Encontrar a fração com o maior denominador, que é 5 e a que não é 5: 1/3 = 3/15 e 2/5 = 6/15\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 558,
+            "total_tokens": 558
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.049997400001302594,
+            "tempo_decode_s": 28.318192400001863,
+            "tempo_resposta_s": 28.368189800003165,
+            "tempo_total_s": 28.368189800003165,
+            "tokens_entrada": 0,
+            "tokens_saida": 558,
+            "tps": 19.66991915712358,
+            "ram_inicio_mb": 1495.07421875,
+            "ram_pico_mb": 1496.6484375,
+            "ram_usada_mb": 1.57421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 24 e 28?\",\n            \"alternativas\": {\n                \"A\": 25,\n                \"B\": 26,\n                \"C\": 27,\n                \"D\": 28,\n                \"E\": 29\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1 = 2, 2 = 3, 3 = 4, 4 = 5, 5 = 6, 6 = 7, 7 = 8, 8 = 9, 9 = 10, 10 = 11, 11 = 12, 12 = 13, 13 = 14, 14 = 15, 15 = 16, 16 = 17, 17 = 18, 18 = 19, 19 = 20, 20 = 21, 21 = 22, 22 = 23, 23 = 24\"\n        },\n        {\n            \"enunciado\": \"Qual número é par e maior que 20?\",\n            \"alternativas\": {\n                \"A\": 21,\n                \"B\": 22,\n                \"C\": 23,\n                \"D\": 24,\n                \"E\": 25\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"2 = 3, 3 = 4, 4 = 5, 5 = 6, 6 = 7, 7 = 8, 8 = 9, 9 = 10, 10 = 11, 11 = 12, 12 = 13, 13 = 14, 14 = 15, 15 = 16, 16 = 17, 17 = 18, 18 = 19, 19 = 20, 20 = 21, 21 = 22, 22 = 23, 23 = 24, 24 = 25\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 456,
+            "total_tokens": 456
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.5983754999979283,
+            "tempo_decode_s": 23.13893150000149,
+            "tempo_resposta_s": 24.73730699999942,
+            "tempo_total_s": 24.73730699999942,
+            "tokens_entrada": 0,
+            "tokens_saida": 456,
+            "tps": 18.433696117366807,
+            "ram_inicio_mb": 1496.5546875,
+            "ram_pico_mb": 1498.12109375,
+            "ram_usada_mb": 1.56640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b, com a e b inteiros e b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"3/4\",\n                \"B\": \"2/2\",\n                \"C\": \"1/3\",\n                \"D\": \"5/5\",\n                \"E\": \"4/4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3/4 = 0,75 = 3/4\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b, com a e b inteiros e b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"3/3\",\n                \"C\": \"2/2\",\n                \"D\": \"4/4\",\n                \"E\": \"3/3\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/2 = 0,5 = 1/2\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b, com a e b inteiros e b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"2/3\",\n                \"B\": \"4/4\",\n                \"C\": \"3/2\",\n                \"D\": \"6/6\",\n                \"E\": \"2/2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2/3 = 0,67 = 2/3\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 403,
+            "total_tokens": 403
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.8143271000008099,
+            "tempo_decode_s": 20.077651100000367,
+            "tempo_resposta_s": 21.891978200001176,
+            "tempo_total_s": 21.891978200001176,
+            "tokens_entrada": 0,
+            "tokens_saida": 403,
+            "tps": 18.408569400090958,
+            "ram_inicio_mb": 1498.02734375,
+            "ram_pico_mb": 1499.59375,
+            "ram_usada_mb": 1.56640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 18.622464,
+        "ram_media_mb": 1489.691406,
+        "ram_pico_mb": 1489.691406,
+        "tempo_medio_segundos": 32.219151,
+        "ttft_medio_segundos": 1.842641,
+        "tps": {
+          "n": 1,
+          "mediana": 18.622464,
+          "iqr": 0.0,
+          "p25": 18.622464,
+          "p75": 18.622464,
+          "p95": 18.622464,
+          "p99": 18.622464,
+          "max": 18.622464,
+          "media": 18.622464
+        },
+        "ttft": {
+          "n": 1,
+          "mediana": 1.842641,
+          "iqr": 0.0,
+          "p25": 1.842641,
+          "p75": 1.842641,
+          "p95": 1.842641,
+          "p99": 1.842641,
+          "max": 1.842641,
+          "media": 1.842641
+        },
+        "tempo": {
+          "n": 1,
+          "mediana": 32.219151,
+          "iqr": 0.0,
+          "p25": 32.219151,
+          "p75": 32.219151,
+          "p95": 32.219151,
+          "p99": 32.219151,
+          "max": 32.219151,
+          "media": 32.219151
+        },
+        "ram_pico": {
+          "n": 1,
+          "mediana": 1489.691406,
+          "iqr": 0.0,
+          "p25": 1489.691406,
+          "p75": 1489.691406,
+          "p95": 1489.691406,
+          "p99": 1489.691406,
+          "max": 1489.691406,
+          "media": 1489.691406
+        },
+        "tps_por_rodada": [
+          18.622464401715735
+        ],
+        "ttft_por_rodada": [
+          1.84264130000156
+        ],
+        "tempo_por_rodada": [
+          32.219151400000555
+        ],
+        "ram_por_rodada": [
+          1489.69140625
+        ],
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 1,
+        "quantidade_de_questoes": 5,
+        "tentativas": 0,
+        "valido_primeira_tentativa": true,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 1489.691406,
+        "tps_medio": 18.622464,
+        "tempo_medio_segundos": 32.219151,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"A fração a/b é igual a c/d. Qual NÃO pode ser escrita na forma a/b?\",\n            \"alternativas\": {\n                \"A\": \"a/b\",\n                \"B\": \"b/a\",\n                \"C\": \"c/d\",\n                \"D\": \"c/b\",\n                \"E\": \"b/a\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"c/d\"\n        },\n        {\n            \"enunciado\": \"O valor de x em a equação é igual ao valor de y em b. Qual valor de x não pode ser escrito como uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"a/b\",\n                \"B\": \"b/a\",\n                \"C\": \"c/d\",\n                \"D\": \"c/a\",\n                \"E\": \"a/b\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"c/a\"\n        },\n        {\n            \"enunciado\": \"O valor de z em a equação é igual ao valor de x em a. Qual valor de z não pode ser escrito como uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"a/b\",\n                \"B\": \"b/a\",\n                \"C\": \"c/d\",\n                \"D\": \"c/a\",\n                \"E\": \"a/b\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"c/a\"\n        },\n        {\n            \"enunciado\": \"A equação é a seguinte: 2x + 3 = 4x - 2. Qual valor de x não pode ser escrito como uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"a/b\",\n                \"B\": \"b/a\",\n                \"C\": \"c/d\",\n                \"D\": \"c/b\",\n                \"E\": \"b/a\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x + 3 = 4x - 2\"\n        },\n        {\n            \"enunciado\": \"O valor de y em a equação é igual ao valor de z em a. Qual valor de y não pode ser escrito como uma fração a/b?\",\n            \"alternativas\": {\n                \"A\": \"a/b\",\n                \"B\": \"b/a\",\n                \"C\": \"c/d\",\n                \"D\": \"c/a\",\n                \"E\": \"a/b\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"c/a\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 600,
+            "total_tokens": 600
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.84264130000156,
+            "tempo_decode_s": 30.376510099998995,
+            "tempo_resposta_s": 32.219151400000555,
+            "tempo_total_s": 32.219151400000555,
+            "tokens_entrada": 0,
+            "tokens_saida": 600,
+            "tps": 18.622464401715735,
+            "ram_inicio_mb": 1485.359375,
+            "ram_pico_mb": 1489.69140625,
+            "ram_usada_mb": 4.33203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 17.903617,
+        "ram_media_mb": 1491.939453,
+        "ram_pico_mb": 1492.699219,
+        "tempo_medio_segundos": 19.837462,
+        "ttft_medio_segundos": 1.43721,
+        "tps": {
+          "n": 2,
+          "mediana": 17.903617,
+          "iqr": 1.306153,
+          "p25": 17.250541,
+          "p75": 18.556694,
+          "p95": 19.079155,
+          "p99": 19.183647,
+          "max": 19.20977,
+          "media": 17.903617
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 1.43721,
+          "iqr": 0.159453,
+          "p25": 1.357484,
+          "p75": 1.516937,
+          "p95": 1.580718,
+          "p99": 1.593474,
+          "max": 1.596663,
+          "media": 1.43721
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 19.837462,
+          "iqr": 12.125441,
+          "p25": 13.774741,
+          "p75": 25.900182,
+          "p95": 30.750358,
+          "p99": 31.720393,
+          "max": 31.962902,
+          "media": 19.837462
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1491.939453,
+          "iqr": 0.759766,
+          "p25": 1491.55957,
+          "p75": 1492.319336,
+          "p95": 1492.623242,
+          "p99": 1492.684023,
+          "max": 1492.699219,
+          "media": 1491.939453
+        },
+        "tps_por_rodada": [
+          16.597464962848438,
+          19.209770006429018
+        ],
+        "ttft_por_rodada": [
+          1.5966633999996702,
+          1.2777573999992455
+        ],
+        "tempo_por_rodada": [
+          7.712021100000129,
+          31.962902200000826
+        ],
+        "ram_por_rodada": [
+          1491.1796875,
+          1492.69921875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "Nenhuma questão válida (1 inválida(s))",
+            "output_bruto": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Em um retângulo com lados de comprimento 8 cm e 10 cm, qual é o volume em cm³?\",\n            \"alternativas\": {\n                \"A\": 40,\n                \"B\": 50,\n                \"C\": 60,\n                \"D\": 80,\n                \"E\": 90\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \" (8 x 10 x 2.5) = 200\"\n        }\n    ]\n}"
+          },
+          "EF06MA17": {
+            "erro": "Campo 'questoes' ausente",
+            "output_bruto": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Um retângulo com lados de comprimento 8 cm e 12 cm tem uma área de 240 cm². O diâmetro do retângulo é de 20 cm, e o ângulo central de 90 graus é formado pela diagonal do retângulo. Qual é o comprimento da diagonal do retângulo?\",\n            \"alternativas\": {\n                \"A\": 10, \n                \"B\": 12, \n                \"C\": 14, \n                \"D\": 16, \n                \"E\": 18 \n            },\n            \"resposta_correta\": \"B\",\n   "
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 1492.699219,
+        "tps_medio": 17.903617,
+        "tempo_medio_segundos": 19.837462,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Em um retângulo com lados de comprimento 8 cm e 10 cm, qual é o volume em cm³?\",\n            \"alternativas\": {\n                \"A\": 40,\n                \"B\": 50,\n                \"C\": 60,\n                \"D\": 80,\n                \"E\": 90\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \" (8 x 10 x 2.5) = 200\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 128,
+            "total_tokens": 128
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.5966633999996702,
+            "tempo_decode_s": 6.115357700000459,
+            "tempo_resposta_s": 7.712021100000129,
+            "tempo_total_s": 7.712021100000129,
+            "tokens_entrada": 0,
+            "tokens_saida": 128,
+            "tps": 16.597464962848438,
+            "ram_inicio_mb": 1489.61328125,
+            "ram_pico_mb": 1491.1796875,
+            "ram_usada_mb": 1.56640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+          "raw_output": "{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Um retângulo com lados de comprimento 8 cm e 12 cm tem uma área de 240 cm². O diâmetro do retângulo é de 20 cm, e o ângulo central de 90 graus é formado pela diagonal do retângulo. Qual é o comprimento da diagonal do retângulo?\",\n            \"alternativas\": {\n                \"A\": 10, \n                \"B\": 12, \n                \"C\": 14, \n                \"D\": 16, \n                \"E\": 18 \n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \" \n                1. Um retângulo com lados de comprimento 8 cm e 12 cm tem uma área de 240 cm².\n                2. O diâmetro do retângulo é de 20 cm, e o ângulo central de 90 graus é formado pela diagonal do retângulo.\n                3. A diagonal do retângulo pode ser calculada usando a fórmula: \n                    Diagonal = √(Lado1² + Lado2²)\n                4. Para o retângulo em questão, o comprimento do lado é 8 cm e o comprimento do lado é 12 cm, então o comprimento da diagonal pode ser calculado usando a fórmula: \n                    Diagonal = √(8² + 12²)\n                5. Diagonal = √(64 + 144) = √208 = 14.47 cm\n                6. O comprimento da diagonal do retângulo é de 14.47 cm\n            },\n            \"resolucao_passo_a_passo\": \" \n                1. Um retângulo com lados de comprimento 8 cm e 12 cm tem uma área de 240 cm².\n                2. O diâmetro do retângulo é de 20 cm, e o ângulo central de 90 graus é formado pela diagonal do retângulo.\n                3. A diagonal do retângulo pode ser calculada usando a fórmula: \n                    Diagonal = √(Lado1² + Lado2²)\n                4. Para o retângulo em questão, o comprimento do lado é 8 cm e o comprimento do lado é 12 cm, então o comprimento da diagonal pode ser calculado usando a fórmula: \n                    Diagonal = √(8² + 12²)\n                5. Diagonal = √(64 + 144) = √208 = 14.47 cm\n                6. O comprimento da diagonal do retângulo é de 14.47 cm\n            \" \n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 614,
+            "total_tokens": 614
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.2777573999992455,
+            "tempo_decode_s": 30.68514480000158,
+            "tempo_resposta_s": 31.962902200000826,
+            "tempo_total_s": 31.962902200000826,
+            "tokens_entrada": 0,
+            "tokens_saida": 614,
+            "tps": 19.209770006429018,
+            "ram_inicio_mb": 1491.0859375,
+            "ram_pico_mb": 1492.69921875,
+            "ram_usada_mb": 1.61328125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1499.6,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 17.9,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 32.22,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -7.2,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+    "gerado_em": "2026-09-09T13:42:18.573050"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Taxa JSON válido 0.0% abaixo de 60.0%"
+}
