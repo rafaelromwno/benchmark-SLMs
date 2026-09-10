@@ -1,0 +1,1216 @@
+{
+  "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "09/09/2026",
+  "run_config": {
+    "modelos": [
+      "unsloth/Llama-3.2-3B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "unsloth/Llama-3.2-3B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\unsloth--Llama-3.2-3B-Instruct-GGUF\\Llama-3.2-3B-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 33,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 33
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 33
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.32,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Em uma conta bancária, o valor de R$ 150,00 é dividido entre 5 contas. Qual é o valor de cada conta?",
+            "alternativas": {
+              "A": "R$ 30,00",
+              "B": "R$ 25,00",
+              "C": "R$ 20,00",
+              "D": "R$ 15,00",
+              "E": "R$ 10,00"
+            },
+            "resposta_correta": "A",
+            "resolucao_passo_a_passo": "Para encontrar o valor de cada conta, dividimos o valor total (R$ 150,00) pelo número de contas (5). Isso significa que 150 ÷ 5 = 30. Então, o valor de cada conta é R$ 30,00."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 6.506834399995569,
+        "tempo_prefill_s": 32.605041700000584,
+        "tempo_decode_s": 28.22460090000095,
+        "tempo_resposta_s": 60.829642600001534,
+        "tempo_total_s": 67.3364769999971,
+        "tokens_entrada": 0,
+        "tokens_saida": 202,
+        "tps": 3.3207494137076337,
+        "ram_inicio_mb": 38.33203125,
+        "ram_pico_mb": 2409.73046875,
+        "ram_usada_mb": 2371.3984375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 67.3364769999971,
+        "tempo_carregamento_s": 6.506834399995569,
+        "tempo_resposta_s": 60.829642600001534,
+        "ram_pico_mb": 2409.73046875,
+        "ram_inicio_mb": 38.33203125,
+        "ttft_segundos": 32.605041700000584,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Em uma conta bancária, o valor de R$ 150,00 é dividido entre 5 contas. Qual é o valor de cada conta?\",\n      \"alternativas\": {\n        \"A\": \"R$ 30,00\",\n        \"B\": \"R$ 25,00\",\n        \"C\": \"R$ 20,00\",\n        \"D\": \"R$ 15,00\",\n        \"E\": \"R$ 10,00\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": \"Para encontrar o valor de cada conta, dividimos o valor total (R$ 150,00) pelo número de contas (5). Isso significa que 150 ÷ 5 = 30. Então, o valor de cada conta é R$ 30,00.\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 202,
+            "total_tokens": 202
+          },
+          "metrics": {
+            "tempo_carregamento_s": 6.506834399995569,
+            "tempo_prefill_s": 32.605041700000584,
+            "tempo_decode_s": 28.22460090000095,
+            "tempo_resposta_s": 60.829642600001534,
+            "tempo_total_s": 67.3364769999971,
+            "tokens_entrada": 0,
+            "tokens_saida": 202,
+            "tps": 3.3207494137076337,
+            "ram_inicio_mb": 38.33203125,
+            "ram_pico_mb": 2409.73046875,
+            "ram_usada_mb": 2371.3984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 6.216325,
+          "iqr": 0.669686,
+          "p25": 5.991561,
+          "p75": 6.661247,
+          "p95": 6.964065,
+          "p99": 7.008514,
+          "max": 7.019626,
+          "media": 6.319983
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 5.350065,
+          "iqr": 4.74241,
+          "p25": 1.340288,
+          "p75": 6.082697,
+          "p95": 7.285768,
+          "p99": 8.039694,
+          "max": 8.228176,
+          "media": 4.247559
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 62.437959,
+          "iqr": 20.279002,
+          "p25": 50.835411,
+          "p75": 71.114413,
+          "p95": 76.570281,
+          "p99": 78.15132,
+          "max": 78.546579,
+          "media": 61.277465
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2181.15625,
+          "iqr": 34.095703,
+          "p25": 2176.884766,
+          "p75": 2210.980469,
+          "p95": 2216.937695,
+          "p99": 2217.065664,
+          "max": 2217.097656,
+          "media": 2191.226172
+        },
+        "tps_medio": 6.319983,
+        "ttft_medio_segundos": 4.247559,
+        "tempo_medio_segundos": 61.277465,
+        "ram_pico_mb": 2217.097656
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 6.216325,
+          "iqr": 0.669686,
+          "p25": 5.991561,
+          "p75": 6.661247,
+          "p95": 6.964065,
+          "p99": 7.008514,
+          "max": 7.019626,
+          "media": 6.319983
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 5.350065,
+          "iqr": 4.74241,
+          "p25": 1.340288,
+          "p75": 6.082697,
+          "p95": 7.285768,
+          "p99": 8.039694,
+          "max": 8.228176,
+          "media": 4.247559
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 62.437959,
+          "iqr": 20.279002,
+          "p25": 50.835411,
+          "p75": 71.114413,
+          "p95": 76.570281,
+          "p99": 78.15132,
+          "max": 78.546579,
+          "media": 61.277465
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2181.15625,
+          "iqr": 34.095703,
+          "p25": 2176.884766,
+          "p75": 2210.980469,
+          "p95": 2216.937695,
+          "p99": 2217.065664,
+          "max": 2217.097656,
+          "media": 2191.226172
+        },
+        "tps_medio": 6.319983,
+        "ttft_medio_segundos": 4.247559,
+        "tempo_medio_segundos": 61.277465,
+        "ram_pico_mb": 2217.097656,
+        "tps_por_rodada": [
+          6.007929691086328,
+          6.687970372188954,
+          5.927533507226657,
+          5.665428124296073,
+          5.988428555372508,
+          6.896156870516987,
+          6.424720289121904,
+          7.019626441190471,
+          6.581078669149294,
+          6.000959668075518
+        ],
+        "ttft_por_rodada": [
+          8.228175899996131,
+          5.54765629999747,
+          4.901952100000926,
+          6.128448600000411,
+          6.133936000005633,
+          0.15114409999659983,
+          5.152473900001496,
+          0.13329419999354286,
+          0.15306609999970533,
+          5.9454440000045
+        ],
+        "tempo_por_rodada": [
+          50.766239899996435,
+          66.53737610000098,
+          64.95113010000205,
+          78.54657939999743,
+          72.64009179999994,
+          51.042922399996314,
+          59.92478780000238,
+          45.58647139999812,
+          48.62424779999856,
+          74.15480600000592
+        ],
+        "ram_por_rodada": [
+          2198.74609375,
+          2215.05859375,
+          2216.7421875,
+          2217.09765625,
+          2172.8671875,
+          2174.640625,
+          2176.37109375,
+          2178.42578125,
+          2180.01953125,
+          2182.29296875
+        ],
+        "ram_media_mb": 2191.226172
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Em uma loja, tem-se 25 livros e 15 livros que são de ficção. Quantos livros de ficção tem-se na loja?\",\n      \"alternativas\": {\n        \"A\": \"10\",\n        \"B\": \"15\",\n        \"C\": \"20\",\n        \"D\": \"25\",\n        \"E\": \"30\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": [\n        \"quantidade_de_ficcao = 15\",\n        \"quantidade_de_ficcao_total = 25 + 15\",\n        \"quantidade_de_ficcao_total = 40\"\n      ]\n    },\n    {\n      \"enunciado\": \"Um caixa de cereal tem 48 pacotes. Se ele tiver 6 pacotes que não estão fechados, quantos pacotes estão fechados?\",\n      \"alternativas\": {\n        \"A\": \"30\",\n        \"B\": \"36\",\n        \"C\": \"42\",\n        \"D\": \"42\",\n        \"E\": \"48\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"pacotes_fechados = 48 - 6\",\n        \"pacotes_fechados = 42\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 305,
+            "total_tokens": 305
+          },
+          "metrics": {
+            "tempo_prefill_s": 8.228175899996131,
+            "tempo_decode_s": 42.538064000000304,
+            "tempo_resposta_s": 50.766239899996435,
+            "tempo_total_s": 50.766239899996435,
+            "tokens_entrada": 0,
+            "tokens_saida": 305,
+            "tps": 6.007929691086328,
+            "ram_inicio_mb": 2185.71875,
+            "ram_pico_mb": 2198.74609375,
+            "ram_usada_mb": 13.02734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Qual é o produto de 4 e 5?\",\n      \"alternativas\": {\n        \"A\": \"10\",\n        \"B\": \"20\",\n        \"C\": \"25\",\n        \"D\": \"30\",\n        \"E\": \"40\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"4 * 5 = 20\",\n        \"20 ≠ 25, mas 4 * 5 = 20\",\n        \"20 ≠ 20, mas 4 * 5 = 20\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual é o número que, quando multiplicado por 3, dá 24?\",\n      \"alternativas\": {\n        \"A\": \"6\",\n        \"B\": \"8\",\n        \"C\": \"10\",\n        \"D\": \"12\",\n        \"E\": \"24\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"3 * x = 24\",\n        \"x = 24/3\",\n        \"x = 8\",\n        \"8 ≠ 10, mas 3 * 8 = 24\",\n        \"8 ≠ 12, mas 3 * 8 = 24\",\n        \"8 ≠ 24, mas 3 * 8 = 24\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual é o número que, quando dividido por 4, dá 9?\",\n      \"alternativas\": {\n        \"A\": \"20\",\n        \"B\": \"25\",\n        \"C\": \"30\",\n        \"D\": \"36\",\n        \"E\": \"40\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"x/4 = 9\",\n        \"x = 9 * 4\",\n        \"x = 36\",\n        \"36 = 36\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 445,
+            "total_tokens": 445
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.54765629999747,
+            "tempo_decode_s": 60.98971980000351,
+            "tempo_resposta_s": 66.53737610000098,
+            "tempo_total_s": 66.53737610000098,
+            "tokens_entrada": 0,
+            "tokens_saida": 445,
+            "tps": 6.687970372188954,
+            "ram_inicio_mb": 2198.87109375,
+            "ram_pico_mb": 2215.05859375,
+            "ram_usada_mb": 16.1875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Em uma conta bancária, se o saldo inicial foi de R$ 150,00 e R$ 30,00 foram depositados e R$ 20,00 foram retirados, qual é o novo saldo?\",\n      \"alternativas\": {\n        \"A\": \"R$ 160,00\",\n        \"B\": \"R$ 150,00\",\n        \"C\": \"R$ 180,00\",\n        \"D\": \"R$ 120,00\",\n        \"E\": \"R$ 200,00\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"150,00 + 30,00 = 180,00\",\n        \"180,00 - 20,00 = 160,00\"\n      ]\n    },\n    {\n      \"enunciado\": \"Um livro custa R$ 50,00. Se ele for descontado 10% e R$ 5,00 serão pagos como imposto, qual é o preço final que você precisa pagar?\",\n      \"alternativas\": {\n        \"A\": \"R$ 40,00\",\n        \"B\": \"R$ 45,00\",\n        \"C\": \"R$ 52,00\",\n        \"D\": \"R$ 55,00\",\n        \"E\": \"R$ 60,00\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": [\n        \"50,00 - (50,00 x 0,10) = 50,00 - 5,00 = 45,00\",\n        \"45,00 - 5,00 = 40,00\"\n      ]\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 385,
+            "total_tokens": 385
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.901952100000926,
+            "tempo_decode_s": 60.04917800000112,
+            "tempo_resposta_s": 64.95113010000205,
+            "tempo_total_s": 64.95113010000205,
+            "tokens_entrada": 0,
+            "tokens_saida": 385,
+            "tps": 5.927533507226657,
+            "ram_inicio_mb": 2215.08203125,
+            "ram_pico_mb": 2216.7421875,
+            "ram_usada_mb": 1.66015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Qual é o produto de 4 e 5?\",\n      \"alternativas\": {\n        \"A\": \"10\",\n        \"B\": \"20\",\n        \"C\": \"25\",\n        \"D\": \"30\",\n        \"E\": \"40\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"4 * 5 = 20\",\n        \"20 ≠ 25, mas 4 * 5 = 20\",\n        \"20 ≠ 20, mas 4 * 5 = 20\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual é o número que, quando multiplicado por 3, dá 24?\",\n      \"alternativas\": {\n        \"A\": \"6\",\n        \"B\": \"8\",\n        \"C\": \"10\",\n        \"D\": \"12\",\n        \"E\": \"24\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"3 * x = 24\",\n        \"x = 24/3\",\n        \"x = 8\",\n        \"8 ≠ 10, mas 3 * 8 = 24\",\n        \"8 ≠ 12, mas 3 * 8 = 24\",\n        \"8 ≠ 24, mas 3 * 8 = 24\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual é o número que, quando dividido por 4, dá 9?\",\n      \"alternativas\": {\n        \"A\": \"20\",\n        \"B\": \"25\",\n        \"C\": \"30\",\n        \"D\": \"36\",\n        \"E\": \"40\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"x/4 = 9\",\n        \"x = 9 * 4\",\n        \"x = 36\",\n        \"36 = 36\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 445,
+            "total_tokens": 445
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.128448600000411,
+            "tempo_decode_s": 72.41813079999702,
+            "tempo_resposta_s": 78.54657939999743,
+            "tempo_total_s": 78.54657939999743,
+            "tokens_entrada": 0,
+            "tokens_saida": 445,
+            "tps": 5.665428124296073,
+            "ram_inicio_mb": 2215.41796875,
+            "ram_pico_mb": 2217.09765625,
+            "ram_usada_mb": 1.6796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Se 2x + 3 = 11, determine o valor de x\",\n      \"alternativas\": {\n        \"A\": \"3\",\n        \"B\": \"2\",\n        \"C\": \"5\",\n        \"D\": \"1\",\n        \"E\": \"4\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"2x + 3 = 11\",\n        \"2x = 11 - 3\",\n        \"2x = 8\",\n        \"x = 8/2\",\n        \"x = 4\"\n      ]\n    },\n    {\n      \"enunciado\": \"Se x - 2 = 7, qual é o valor de x\",\n      \"alternativas\": {\n        \"A\": \"9\",\n        \"B\": \"5\",\n        \"C\": \"3\",\n        \"D\": \"1\",\n        \"E\": \"10\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"x - 2 = 7\",\n        \"x = 7 + 2\",\n        \"x = 9\"\n      ]\n    },\n    {\n      \"enunciado\": \"Se 4x = 28, determine o valor de x considerando que x > 0\",\n      \"alternativas\": {\n        \"A\": \"2\",\n        \"B\": \"5\",\n        \"C\": \"7\",\n        \"D\": \"1\",\n        \"E\": \"6\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"4x = 28\",\n        \"x = 28/4\",\n        \"x = 7\",\n        \"x > 0 não é satisfeito\",\n        \"reavalie a equação\",\n        \"x = 28/4\",\n        \"x = 7\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 435,
+            "total_tokens": 435
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.133936000005633,
+            "tempo_decode_s": 66.5061557999943,
+            "tempo_resposta_s": 72.64009179999994,
+            "tempo_total_s": 72.64009179999994,
+            "tokens_entrada": 0,
+            "tokens_saida": 435,
+            "tps": 5.988428555372508,
+            "ram_inicio_mb": 2169.375,
+            "ram_pico_mb": 2172.8671875,
+            "ram_usada_mb": 3.4921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Se 2x + 3 = 11, determine o valor de x\",\n      \"alternativas\": {\n        \"A\": \"3\",\n        \"B\": \"4\",\n        \"C\": \"5\",\n        \"D\": \"6\",\n        \"E\": \"7\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": [\n        \"2x + 3 = 11\",\n        \"2x = 8\",\n        \"x = 4\"\n      ]\n    },\n    {\n      \"enunciado\": \"Se x - 2 = 7, qual é o valor de x\",\n      \"alternativas\": {\n        \"A\": \"3\",\n        \"B\": \"5\",\n        \"C\": \"9\",\n        \"D\": \"10\",\n        \"E\": \"11\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"x - 2 = 7\",\n        \"x = 9\"\n      ]\n    },\n    {\n      \"enunciado\": \"Se 4x = 28, determine o valor de x\",\n      \"alternativas\": {\n        \"A\": \"4\",\n        \"B\": \"5\",\n        \"C\": \"6\",\n        \"D\": \"7\",\n        \"E\": \"8\"\n      },\n      \"resposta_correta\": \"E\",\n      \"resolucao_passo_a_passo\": [\n        \"4x = 28\",\n        \"x = 7\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 352,
+            "total_tokens": 352
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.15114409999659983,
+            "tempo_decode_s": 50.891778299999714,
+            "tempo_resposta_s": 51.042922399996314,
+            "tempo_total_s": 51.042922399996314,
+            "tokens_entrada": 0,
+            "tokens_saida": 352,
+            "tps": 6.896156870516987,
+            "ram_inicio_mb": 2173.01171875,
+            "ram_pico_mb": 2174.640625,
+            "ram_usada_mb": 1.62890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Em uma conta bancária, se o saldo inicial foi de R$ 150,00 e R$ 30,00 foram depositados e R$ 20,00 foram retirados, qual é o novo saldo?\",\n      \"alternativas\": {\n        \"A\": \"R$ 160,00\",\n        \"B\": \"R$ 150,00\",\n        \"C\": \"R$ 180,00\",\n        \"D\": \"R$ 120,00\",\n        \"E\": \"R$ 200,00\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"150,00 + 30,00 = 180,00\",\n        \"180,00 - 20,00 = 160,00\"\n      ]\n    },\n    {\n      \"enunciado\": \"Um livro custa R$ 50,00. Se ele for descontado 10% e R$ 5,00 serão pagos como imposto, qual é o preço final que você precisa pagar?\",\n      \"alternativas\": {\n        \"A\": \"R$ 40,00\",\n        \"B\": \"R$ 45,00\",\n        \"C\": \"R$ 52,00\",\n        \"D\": \"R$ 55,00\",\n        \"E\": \"R$ 60,00\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": [\n        \"50,00 - (50,00 x 0,10) = 50,00 - 5,00 = 45,00\",\n        \"45,00 - 5,00 = 40,00\"\n      ]\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 385,
+            "total_tokens": 385
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.152473900001496,
+            "tempo_decode_s": 54.77231390000088,
+            "tempo_resposta_s": 59.92478780000238,
+            "tempo_total_s": 59.92478780000238,
+            "tokens_entrada": 0,
+            "tokens_saida": 385,
+            "tps": 6.424720289121904,
+            "ram_inicio_mb": 2174.55859375,
+            "ram_pico_mb": 2176.37109375,
+            "ram_usada_mb": 1.8125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Em uma loja, os preços dos produtos são indicados com centavos. Qual é o valor máximo que pode ser pago por um produto com 50 centavos de desconto?\",\n      \"alternativas\": {\n        \"A\": \"2,50\",\n        \"B\": \"2,75\",\n        \"C\": \"3,00\",\n        \"D\": \"3,25\",\n        \"E\": \"3,50\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"50 = 50 centavos\",\n        \"50 - 20 = 30 centavos\",\n        \"30/100 = 0,30\",\n        \"0,30 x 100 = 30\"\n      ]\n    },\n    {\n      \"enunciado\": \"Um conjunto de 6 livros é composto por 2 conjuntos idênticos de 3 livros. Qual é o número de livros que temos em total?\",\n      \"alternativas\": {\n        \"A\": \"5\",\n        \"B\": \"6\",\n        \"C\": \"9\",\n        \"D\": \"12\",\n        \"E\": \"18\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"6 = 3 + 3\",\n        \"3 + 3 = 6\"\n      ]\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 320,
+            "total_tokens": 320
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.13329419999354286,
+            "tempo_decode_s": 45.453177200004575,
+            "tempo_resposta_s": 45.58647139999812,
+            "tempo_total_s": 45.58647139999812,
+            "tokens_entrada": 0,
+            "tokens_saida": 320,
+            "tps": 7.019626441190471,
+            "ram_inicio_mb": 2176.3359375,
+            "ram_pico_mb": 2178.42578125,
+            "ram_usada_mb": 2.08984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Em uma loja, os preços dos produtos são indicados com centavos. Qual é o valor máximo que pode ser pago por um produto com 50 centavos de desconto?\",\n      \"alternativas\": {\n        \"A\": \"2,50\",\n        \"B\": \"2,75\",\n        \"C\": \"3,00\",\n        \"D\": \"3,25\",\n        \"E\": \"3,50\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"50 = 50 centavos\",\n        \"50 - 20 = 30 centavos\",\n        \"30/100 = 0,30\",\n        \"0,30 x 100 = 30\"\n      ]\n    },\n    {\n      \"enunciado\": \"Um conjunto de 6 livros é composto por 2 conjuntos idênticos de 3 livros. Qual é o número de livros que temos em total?\",\n      \"alternativas\": {\n        \"A\": \"5\",\n        \"B\": \"6\",\n        \"C\": \"9\",\n        \"D\": \"12\",\n        \"E\": \"18\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"6 = 3 + 3\",\n        \"3 + 3 = 6\"\n      ]\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 320,
+            "total_tokens": 320
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.15306609999970533,
+            "tempo_decode_s": 48.47118169999885,
+            "tempo_resposta_s": 48.62424779999856,
+            "tempo_total_s": 48.62424779999856,
+            "tokens_entrada": 0,
+            "tokens_saida": 320,
+            "tps": 6.581078669149294,
+            "ram_inicio_mb": 2178.42578125,
+            "ram_pico_mb": 2180.01953125,
+            "ram_usada_mb": 1.59375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Qual é o produto de 4 e 5?\",\n      \"alternativas\": {\n        \"A\": \"10\",\n        \"B\": \"20\",\n        \"C\": \"25\",\n        \"D\": \"30\",\n        \"E\": \"40\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"4 * 5 = 20\",\n        \"20 ≠ 25, mas 4 * 5 = 20\",\n        \"20 ≠ 20, mas 4 * 5 = 20\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual é o número que, quando multiplicado por 3, dá 24?\",\n      \"alternativas\": {\n        \"A\": \"6\",\n        \"B\": \"8\",\n        \"C\": \"10\",\n        \"D\": \"12\",\n        \"E\": \"24\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"3 * x = 24\",\n        \"x = 24/3\",\n        \"x = 8\",\n        \"8 ≠ 10, mas 3 * 8 = 24\",\n        \"8 ≠ 12, mas 3 * 8 = 24\",\n        \"8 ≠ 24, mas 3 * 8 = 24\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual é o número que, quando dividido por 4, dá 9?\",\n      \"alternativas\": {\n        \"A\": \"20\",\n        \"B\": \"25\",\n        \"C\": \"30\",\n        \"D\": \"36\",\n        \"E\": \"40\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"x/4 = 9\",\n        \"x = 9 * 4\",\n        \"x = 36\",\n        \"36 = 36\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 445,
+            "total_tokens": 445
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.9454440000045,
+            "tempo_decode_s": 68.20936200000142,
+            "tempo_resposta_s": 74.15480600000592,
+            "tempo_total_s": 74.15480600000592,
+            "tokens_entrada": 0,
+            "tokens_saida": 445,
+            "tps": 6.000959668075518,
+            "ram_inicio_mb": 2179.9296875,
+            "ram_pico_mb": 2182.29296875,
+            "ram_usada_mb": 2.36328125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 4.487897,
+        "ram_media_mb": 2165.332031,
+        "ram_pico_mb": 2184.835938,
+        "tempo_medio_segundos": 100.149357,
+        "ttft_medio_segundos": 2.589198,
+        "tps": {
+          "n": 3,
+          "mediana": 6.582559,
+          "iqr": 3.440566,
+          "p25": 3.29128,
+          "p75": 6.731845,
+          "p95": 6.851274,
+          "p99": 6.87516,
+          "max": 6.881131,
+          "media": 4.487897
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.213116,
+          "iqr": 3.5851,
+          "p25": 0.202628,
+          "p75": 3.787727,
+          "p95": 6.647416,
+          "p99": 7.219354,
+          "max": 7.362338,
+          "media": 2.589198
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 87.807792,
+          "iqr": 22.322326,
+          "p25": 85.902803,
+          "p75": 108.225128,
+          "p95": 124.558998,
+          "p99": 127.825772,
+          "max": 128.642465,
+          "media": 100.149357
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 2163.652344,
+          "iqr": 18.664062,
+          "p25": 2155.580078,
+          "p75": 2174.244141,
+          "p95": 2182.717578,
+          "p99": 2184.412266,
+          "max": 2184.835938,
+          "media": 2165.332031
+        },
+        "tps_por_rodada": [
+          0.0,
+          6.582559354562137,
+          6.881131421438682
+        ],
+        "ttft_por_rodada": [
+          7.362338499995531,
+          0.2131160999997519,
+          0.19213920000038343
+        ],
+        "tempo_por_rodada": [
+          128.64246540000022,
+          87.80779159999656,
+          83.99781439999788
+        ],
+        "ram_por_rodada": [
+          2184.8359375,
+          2163.65234375,
+          2147.5078125
+        ],
+        "contagem_falhas": {
+          "timeout": 1,
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 1
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 2184.835938,
+        "tps_medio": 4.487897,
+        "tempo_medio_segundos": 100.149357,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "timeout": 1,
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 7.362338499995531,
+            "tempo_decode_s": 121.28012690000469,
+            "tempo_resposta_s": 128.64246540000022,
+            "tempo_total_s": 128.64246540000022,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2184.625,
+            "ram_pico_mb": 2184.8359375,
+            "ram_usada_mb": 0.2109375,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Qual número abaixo é múltiplo de 4 e 9?\",\n      \"alternativas\": {\n        \"A\": \"12\",\n        \"B\": \"15\",\n        \"C\": \"18\",\n        \"D\": \"20\",\n        \"E\": \"21\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"4 × 3 = 12\",\n        \"9 × 1,33 = 12\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número abaixo é divisível por 3 e 5?\",\n      \"alternativas\": {\n        \"A\": \"6\",\n        \"B\": \"10\",\n        \"C\": \"12\",\n        \"D\": \"15\",\n        \"E\": \"18\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"3 × 4 = 12\",\n        \"5 × 2,4 = 12\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número abaixo é múltiplo de 6 e 8?\",\n      \"alternativas\": {\n        \"A\": \"12\",\n        \"B\": \"15\",\n        \"C\": \"20\",\n        \"D\": \"24\",\n        \"E\": \"30\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"6 × 4 = 24\",\n        \"8 × 3 = 24\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número abaixo é divisível por 2 e 4?\",\n      \"alternativas\": {\n        \"A\": \"4\",\n        \"B\": \"6\",\n        \"C\": \"8\",\n        \"D\": \"10\",\n        \"E\": \"12\"\n      },\n      \"resposta_correta\": \"E\",\n      \"resolucao_passo_a_passo\": [\n        \"2 × 6 = 12\",\n        \"4 × 3 = 12\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número abaixo é múltiplo de 3 e 9?\",\n      \"alternativas\": {\n        \"A\": \"9\",\n        \"B\": \"12\",\n        \"C\": \"15\",\n        \"D\": \"18\",\n        \"E\": \"21\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"3 × 6 = 18\",\n        \"9 × 2 = 18\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 578,
+            "total_tokens": 578
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.2131160999997519,
+            "tempo_decode_s": 87.59467549999681,
+            "tempo_resposta_s": 87.80779159999656,
+            "tempo_total_s": 87.80779159999656,
+            "tokens_entrada": 0,
+            "tokens_saida": 578,
+            "tps": 6.582559354562137,
+            "ram_inicio_mb": 2152.2265625,
+            "ram_pico_mb": 2163.65234375,
+            "ram_usada_mb": 11.42578125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \" questoes\": [\n    {\n      \"enunciado\": \"Qual número abaixo é múltiplo de 4 e 9?\",\n      \"alternativas\": {\n        \"A\": \"12\",\n        \"B\": \"15\",\n        \"C\": \"18\",\n        \"D\": \"20\",\n        \"E\": \"21\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"4 × 3 = 12\",\n        \"9 × 1,33 = 12\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número abaixo é divisível por 3 e 5?\",\n      \"alternativas\": {\n        \"A\": \"6\",\n        \"B\": \"10\",\n        \"C\": \"12\",\n        \"D\": \"15\",\n        \"E\": \"18\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"3 × 4 = 12\",\n        \"5 × 2,4 = 12\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número abaixo é múltiplo de 6 e 8?\",\n      \"alternativas\": {\n        \"A\": \"12\",\n        \"B\": \"15\",\n        \"C\": \"20\",\n        \"D\": \"24\",\n        \"E\": \"30\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"6 × 4 = 24\",\n        \"8 × 3 = 24\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número abaixo é divisível por 2 e 4?\",\n      \"alternativas\": {\n        \"A\": \"4\",\n        \"B\": \"6\",\n        \"C\": \"8\",\n        \"D\": \"10\",\n        \"E\": \"12\"\n      },\n      \"resposta_correta\": \"E\",\n      \"resolucao_passo_a_passo\": [\n        \"2 × 6 = 12\",\n        \"4 × 3 = 12\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número abaixo é múltiplo de 3 e 9?\",\n      \"alternativas\": {\n        \"A\": \"9\",\n        \"B\": \"12\",\n        \"C\": \"15\",\n        \"D\": \"18\",\n        \"E\": \"21\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"3 × 6 = 18\",\n        \"9 × 2 = 18\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 578,
+            "total_tokens": 578
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.19213920000038343,
+            "tempo_decode_s": 83.8056751999975,
+            "tempo_resposta_s": 83.99781439999788,
+            "tempo_total_s": 83.99781439999788,
+            "tokens_entrada": 0,
+            "tokens_saida": 578,
+            "tps": 6.881131421438682,
+            "ram_inicio_mb": 2139.2734375,
+            "ram_pico_mb": 2147.5078125,
+            "ram_usada_mb": 8.234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 3.953351,
+        "ram_media_mb": 2169.634766,
+        "ram_pico_mb": 2181.425781,
+        "tempo_medio_segundos": 39.594041,
+        "ttft_medio_segundos": 5.950141,
+        "tps": {
+          "n": 2,
+          "mediana": 3.953351,
+          "iqr": 0.229857,
+          "p25": 3.838423,
+          "p75": 4.06828,
+          "p95": 4.160222,
+          "p99": 4.178611,
+          "max": 4.183208,
+          "media": 3.953351
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 5.950141,
+          "iqr": 0.584496,
+          "p25": 5.657893,
+          "p75": 6.242389,
+          "p95": 6.476188,
+          "p99": 6.522948,
+          "max": 6.534638,
+          "media": 5.950141
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 39.594041,
+          "iqr": 2.302085,
+          "p25": 38.442998,
+          "p75": 40.745084,
+          "p95": 41.665918,
+          "p99": 41.850085,
+          "max": 41.896127,
+          "media": 39.594041
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2169.634766,
+          "iqr": 11.791016,
+          "p25": 2163.739258,
+          "p75": 2175.530273,
+          "p95": 2180.24668,
+          "p99": 2181.189961,
+          "max": 2181.425781,
+          "media": 2169.634766
+        },
+        "tps_por_rodada": [
+          4.183207812250233,
+          3.723494581294697
+        ],
+        "ttft_por_rodada": [
+          5.36564499999804,
+          6.534637600001588
+        ],
+        "tempo_por_rodada": [
+          37.29195559999789,
+          41.89612650000345
+        ],
+        "ram_por_rodada": [
+          2181.42578125,
+          2157.84375
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Determine a área do triângulo com base = 5 cm e altitude = 6 cm.",
+                "alternativas": {
+                  "A": "12",
+                  "B": "15",
+                  "C": "18",
+                  "D": "21",
+                  "E": "24"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "Area = (base * altitude) / 2\nArea = (5 * 6) / 2\nArea = 30 / 2\nArea = 15"
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Determine a área do triângulo com base = 5 cm e altitude = 6 cm.",
+                "alternativas": {
+                  "A": "12",
+                  "B": "15",
+                  "C": "18",
+                  "D": "21",
+                  "E": "24"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "Area = (base * altitude) / 2\nArea = (5 * 6) / 2\nArea = 30 / 2\nArea = 15"
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 2181.425781,
+        "tps_medio": 3.953351,
+        "tempo_medio_segundos": 39.594041,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 100.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Determine a área do triângulo com base = 5 cm e altitude = 6 cm.\",\n      \"alternativas\": {\n        \"A\": \"12\",\n        \"B\": \"15\",\n        \"C\": \"18\",\n        \"D\": \"21\",\n        \"E\": \"24\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"Area = (base * altitude) / 2\",\n        \"Area = (5 * 6) / 2\",\n        \"Area = 30 / 2\",\n        \"Area = 15\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 156,
+            "total_tokens": 156
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.36564499999804,
+            "tempo_decode_s": 31.92631059999985,
+            "tempo_resposta_s": 37.29195559999789,
+            "tempo_total_s": 37.29195559999789,
+            "tokens_entrada": 0,
+            "tokens_saida": 156,
+            "tps": 4.183207812250233,
+            "ram_inicio_mb": 2141.07421875,
+            "ram_pico_mb": 2181.42578125,
+            "ram_usada_mb": 40.3515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Determine a área do triângulo com base = 5 cm e altitude = 6 cm.\",\n      \"alternativas\": {\n        \"A\": \"12\",\n        \"B\": \"15\",\n        \"C\": \"18\",\n        \"D\": \"21\",\n        \"E\": \"24\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"Area = (base * altitude) / 2\",\n        \"Area = (5 * 6) / 2\",\n        \"Area = 30 / 2\",\n        \"Area = 15\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 156,
+            "total_tokens": 156
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.534637600001588,
+            "tempo_decode_s": 35.36148890000186,
+            "tempo_resposta_s": 41.89612650000345,
+            "tempo_total_s": 41.89612650000345,
+            "tokens_entrada": 0,
+            "tokens_saida": 156,
+            "tps": 3.723494581294697,
+            "ram_inicio_mb": 2152.66015625,
+            "ram_pico_mb": 2157.84375,
+            "ram_usada_mb": 5.18359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2409.7,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2409.7 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3.32,
+        "limite": 5.0,
+        "motivo": "TPS 3.32 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 1,
+        "limite": 0,
+        "motivo": "Crash/OOM detectado — 1 ocorrência(s)",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 100.15,
+        "limite": 90.0,
+        "motivo": "Tempo médio 100.1s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 0.1,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "RAM pico 2409.7 MB — limite 2048.0 MB",
+      "TPS 3.32 abaixo do mínimo 5.0",
+      "Crash/OOM detectado — 1 ocorrência(s)",
+      "Taxa JSON válido 0.0% abaixo de 60.0%",
+      "Tempo médio 100.1s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "formato",
+      "hardware",
+      "performance"
+    ],
+    "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+    "gerado_em": "2026-09-09T21:06:03.300570"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; RAM pico 2409.7 MB — limite 2048.0 MB; TPS 3.32 abaixo do mínimo 5.0; Crash/OOM detectado — 1 ocorrência(s); Taxa JSON válido 0.0% abaixo de 60.0%; Tempo médio 100.1s acima de 90.0s"
+}

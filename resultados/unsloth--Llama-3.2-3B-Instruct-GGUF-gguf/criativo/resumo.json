@@ -1,0 +1,128 @@
+{
+  "schema": "benchmark_slms.resumo_celula.v1",
+  "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+  "perfil": "criativo",
+  "n_execucoes": 10,
+  "seeds": [
+    7,
+    13,
+    21,
+    33,
+    42,
+    55,
+    89,
+    123,
+    256,
+    777
+  ],
+  "metricas": {
+    "utilizaveis": {
+      "numerador": 24,
+      "denominador": 100,
+      "ponto": 0.24,
+      "ic95": [
+        0.166913,
+        0.332323
+      ],
+      "formato": "24.0% [16.7–33.2]",
+      "unidade_analise": "execucao"
+    },
+    "json": {
+      "numerador": 36,
+      "denominador": 100,
+      "ponto": 0.36,
+      "ic95": [
+        0.272712,
+        0.457646
+      ],
+      "formato": "36.0% [27.3–45.8]",
+      "unidade_analise": "execucao"
+    },
+    "gabarito": {
+      "numerador": 24,
+      "denominador": 36,
+      "ponto": 0.666667,
+      "ic95": [
+        0.50334,
+        0.797854
+      ],
+      "formato": "66.7% [50.3–79.8]",
+      "unidade_analise": "execucao"
+    },
+    "estaveis": {
+      "numerador": 0,
+      "denominador": 10,
+      "ponto": 0.0,
+      "ic95": [
+        0.0,
+        0.277533
+      ],
+      "formato": "0.0% [0.0–27.8]",
+      "unidade_analise": "execucao"
+    },
+    "tps": {
+      "n": 100,
+      "mediana": 6.83423,
+      "iqr": 1.169953,
+      "p25": 6.027241,
+      "p75": 7.197193,
+      "p95": 7.747509,
+      "p99": 7.833329,
+      "max": 7.959559,
+      "media": 6.406338,
+      "ic95_mediana": {
+        "n": 100,
+        "mediana": 6.83423,
+        "ic95": [
+          6.547834,
+          6.985176
+        ],
+        "formato": "6.834 [6.548–6.985]",
+        "unidade_analise": "execucao"
+      }
+    },
+    "ttft": {
+      "n": 100,
+      "mediana": 5.034092,
+      "iqr": 5.875615,
+      "p25": 0.29427,
+      "p75": 6.169884,
+      "p95": 9.770523,
+      "p99": 13.263694,
+      "max": 17.291817,
+      "media": 4.645417,
+      "ic95_mediana": {
+        "n": 100,
+        "mediana": 5.034092,
+        "ic95": [
+          4.849423,
+          5.434278
+        ],
+        "formato": "5.034 [4.849–5.434]",
+        "unidade_analise": "execucao"
+      }
+    },
+    "ram_pico": {
+      "n": 100,
+      "mediana": 2175.507812,
+      "iqr": 34.633789,
+      "p25": 2167.480469,
+      "p75": 2202.114258,
+      "p95": 2351.395117,
+      "p99": 2605.2725,
+      "max": 2703.40625,
+      "media": 2208.940703
+    },
+    "contagem_falhas": {
+      "json_invalido": 61,
+      "ok": 36,
+      "timeout": 3
+    }
+  },
+  "formatos": {
+    "utilizaveis": "24.0% [16.7–33.2]",
+    "json": "36.0% [27.3–45.8]",
+    "gabarito": "66.7% [50.3–79.8]",
+    "estaveis": "0.0% [0.0–27.8]"
+  }
+}

@@ -1,0 +1,1161 @@
+{
+  "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "09/09/2026",
+  "run_config": {
+    "modelos": [
+      "unsloth/Llama-3.2-3B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "unsloth/Llama-3.2-3B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\unsloth--Llama-3.2-3B-Instruct-GGUF\\Llama-3.2-3B-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 256,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 256
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 256
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.44,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Qual número abaixo não pode ser expresso como uma soma de dois números inteiros positivos iguais?",
+            "alternativas": {
+              "A": "5",
+              "B": "6",
+              "C": "7",
+              "D": "8",
+              "E": "9"
+            },
+            "resposta_correta": "A",
+            "resolucao_passo_a_passo": "Para resolver esse problema, precisamos encontrar dois números inteiros positivos iguais que sejam menores que 5. Mas, como 1+1=2 e 2+2=4, não há números inteiros positivos iguais que sejam menores que 5. Portanto, 5 não pode ser expresso como uma soma de dois números inteiros positivos iguais. O número 5 é a resposta correta."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 9.342200699997193,
+        "tempo_prefill_s": 26.52862759999698,
+        "tempo_decode_s": 26.08867179999652,
+        "tempo_resposta_s": 52.6172993999935,
+        "tempo_total_s": 61.95950009999069,
+        "tokens_entrada": 0,
+        "tokens_saida": 204,
+        "tps": 3.877051888376187,
+        "ram_inicio_mb": 23.1640625,
+        "ram_pico_mb": 2582.25390625,
+        "ram_usada_mb": 2559.08984375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 61.95950009999069,
+        "tempo_carregamento_s": 9.342200699997193,
+        "tempo_resposta_s": 52.6172993999935,
+        "ram_pico_mb": 2582.25390625,
+        "ram_inicio_mb": 23.1640625,
+        "ttft_segundos": 26.52862759999698,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Qual número abaixo não pode ser expresso como uma soma de dois números inteiros positivos iguais?\",\n      \"alternativas\": {\n        \"A\": \"5\",\n        \"B\": \"6\",\n        \"C\": \"7\",\n        \"D\": \"8\",\n        \"E\": \"9\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": \"Para resolver esse problema, precisamos encontrar dois números inteiros positivos iguais que sejam menores que 5. Mas, como 1+1=2 e 2+2=4, não há números inteiros positivos iguais que sejam menores que 5. Portanto, 5 não pode ser expresso como uma soma de dois números inteiros positivos iguais. O número 5 é a resposta correta.\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 204,
+            "total_tokens": 204
+          },
+          "metrics": {
+            "tempo_carregamento_s": 9.342200699997193,
+            "tempo_prefill_s": 26.52862759999698,
+            "tempo_decode_s": 26.08867179999652,
+            "tempo_resposta_s": 52.6172993999935,
+            "tempo_total_s": 61.95950009999069,
+            "tokens_entrada": 0,
+            "tokens_saida": 204,
+            "tps": 3.877051888376187,
+            "ram_inicio_mb": 23.1640625,
+            "ram_pico_mb": 2582.25390625,
+            "ram_usada_mb": 2559.08984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 6.37432,
+          "iqr": 2.544381,
+          "p25": 4.925754,
+          "p75": 7.470136,
+          "p95": 7.847292,
+          "p99": 7.860283,
+          "max": 7.863531,
+          "media": 5.365246
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.479346,
+          "iqr": 5.327626,
+          "p25": 0.141549,
+          "p75": 5.469175,
+          "p95": 6.447116,
+          "p99": 7.023172,
+          "max": 7.167185,
+          "media": 2.901273
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 70.334811,
+          "iqr": 22.760812,
+          "p25": 60.786397,
+          "p75": 83.547209,
+          "p95": 1075.240315,
+          "p99": 1681.699221,
+          "max": 1833.313947,
+          "media": 252.280057
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2170.330078,
+          "iqr": 24.925781,
+          "p25": 2162.166016,
+          "p75": 2187.091797,
+          "p95": 2336.16543,
+          "p99": 2421.745586,
+          "max": 2443.140625,
+          "media": 2196.904687
+        },
+        "tps_medio": 5.365246,
+        "ttft_medio_segundos": 2.901273,
+        "tempo_medio_segundos": 252.280057,
+        "ram_pico_mb": 2443.140625
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 9,
+        "json_invalidos": 0,
+        "taxa_json_valido_percent": 90.0,
+        "json_valido_ic95": {
+          "numerador": 9,
+          "denominador": 10,
+          "ponto": 0.9,
+          "ic95": [
+            0.59585,
+            0.982124
+          ],
+          "formato": "90.0% [59.6–98.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 8,
+        "gabarito_avaliados": 9,
+        "taxa_gabarito_percent": 88.9,
+        "gabarito_ic95": {
+          "numerador": 8,
+          "denominador": 9,
+          "ponto": 0.888889,
+          "ic95": [
+            0.565,
+            0.980109
+          ],
+          "formato": "88.9% [56.5–98.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 8,
+        "taxa_utilizavel_percent": 80.0,
+        "utilizavel_ic95": {
+          "numerador": 8,
+          "denominador": 10,
+          "ponto": 0.8,
+          "ic95": [
+            0.490162,
+            0.943318
+          ],
+          "formato": "80.0% [49.0–94.3]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 9,
+          "timeout": 1
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 6.37432,
+          "iqr": 2.544381,
+          "p25": 4.925754,
+          "p75": 7.470136,
+          "p95": 7.847292,
+          "p99": 7.860283,
+          "max": 7.863531,
+          "media": 5.365246
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.479346,
+          "iqr": 5.327626,
+          "p25": 0.141549,
+          "p75": 5.469175,
+          "p95": 6.447116,
+          "p99": 7.023172,
+          "max": 7.167185,
+          "media": 2.901273
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 70.334811,
+          "iqr": 22.760812,
+          "p25": 60.786397,
+          "p75": 83.547209,
+          "p95": 1075.240315,
+          "p99": 1681.699221,
+          "max": 1833.313947,
+          "media": 252.280057
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2170.330078,
+          "iqr": 24.925781,
+          "p25": 2162.166016,
+          "p75": 2187.091797,
+          "p95": 2336.16543,
+          "p99": 2421.745586,
+          "max": 2443.140625,
+          "media": 2196.904687
+        },
+        "tps_medio": 5.365246,
+        "ttft_medio_segundos": 2.901273,
+        "tempo_medio_segundos": 252.280057,
+        "ram_pico_mb": 2443.140625,
+        "tps_por_rodada": [
+          6.247405175851538,
+          7.66891726077465,
+          7.8635305405750975,
+          7.827444988992389,
+          0.2476389822745201,
+          6.873790410326878,
+          4.640259600824365,
+          5.782238335094175,
+          6.501235103953133,
+          0.0
+        ],
+        "ttft_por_rodada": [
+          7.167185499994957,
+          0.13610850000259234,
+          0.13104350000503473,
+          0.12590020000061486,
+          0.1578707000007853,
+          5.553902100000414,
+          4.617657699993288,
+          0.3410340000045835,
+          5.567031200000201,
+          5.214995599999384
+        ],
+        "tempo_por_rodada": [
+          72.35003769999457,
+          59.20001279999997,
+          57.73488100000395,
+          58.00104640000063,
+          1833.3139469000016,
+          68.37566639999568,
+          87.27959959999862,
+          65.54555140000593,
+          72.29395530000329,
+          148.70587610000075
+        ],
+        "ram_por_rodada": [
+          2443.140625,
+          2205.41796875,
+          2169.55859375,
+          2171.1015625,
+          2172.6484375,
+          2160.703125,
+          2163.07421875,
+          2129.6328125,
+          2161.86328125,
+          2191.90625
+        ],
+        "ram_media_mb": 2196.904687
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x - 3 = 7, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"x = 10\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 11\",\n                \"D\": \"x = 6\",\n                \"E\": \"x = 12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": [\n                \"x - 3 = 7\",\n                \"x = 7 + 3\",\n                \"x = 10\"\n            ]\n        },\n        {\n            \"enunciado\": \"Se 2x = 16, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"x = 8\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 6\",\n                \"D\": \"x = 9\",\n                \"E\": \"x = 10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": [\n                \"2x = 16\",\n                \"x = 16/2\",\n                \"x = 8\"\n            ]\n        },\n        {\n            \"enunciado\": \"Se x/2 + 2 = 5, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"x = 6\",\n                \"B\": \"x = 4\",\n                \"C\": \"x = 8\",\n                \"D\": \"x = 10\",\n                \"E\": \"x = 12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": [\n                \"x/2 + 2 = 5\",\n                \"x/2 = 5 - 2\",\n                \"x/2 = 3\",\n                \"x = 3 * 2\",\n                \"x = 6\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 452,
+            "total_tokens": 452
+          },
+          "metrics": {
+            "tempo_prefill_s": 7.167185499994957,
+            "tempo_decode_s": 65.18285219999962,
+            "tempo_resposta_s": 72.35003769999457,
+            "tempo_total_s": 72.35003769999457,
+            "tokens_entrada": 0,
+            "tokens_saida": 452,
+            "tps": 6.247405175851538,
+            "ram_inicio_mb": 2441.0390625,
+            "ram_pico_mb": 2443.140625,
+            "ram_usada_mb": 2.1015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 2x - 3 = 7, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"5/2\",\n                \"C\": \"7/2\",\n                \"D\": \"9\",\n                \"E\": \"-1\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"2x - 3 = 7\",\n                \"2x = 7 + 3\",\n                \"2x = 10\",\n                \"x = 10/2\",\n                \"x = 5/1\"\n            ]\n        },\n        {\n            \"enunciado\": \"Se x/2 + 2 = 5, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"10\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"x/2 + 2 = 5\",\n                \"x/2 = 5 - 2\",\n                \"x/2 = 3\",\n                \"x = 3 * 2\",\n                \"x = 6\"\n            ]\n        },\n        {\n            \"enunciado\": \"Se 3x - 1 = 11, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"2\",\n                \"C\": \"5/3\",\n                \"D\": \"3\",\n                \"E\": \"2/3\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"3x - 1 = 11\",\n                \"3x = 11 + 1\",\n                \"3x = 12\",\n                \"x = 12/3\",\n                \"x = 4/1\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 454,
+            "total_tokens": 454
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.13610850000259234,
+            "tempo_decode_s": 59.063904299997375,
+            "tempo_resposta_s": 59.20001279999997,
+            "tempo_total_s": 59.20001279999997,
+            "tokens_entrada": 0,
+            "tokens_saida": 454,
+            "tps": 7.66891726077465,
+            "ram_inicio_mb": 2203.734375,
+            "ram_pico_mb": 2205.41796875,
+            "ram_usada_mb": 1.68359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 2x - 3 = 7, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"5/2\",\n                \"C\": \"7/2\",\n                \"D\": \"9\",\n                \"E\": \"-1\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"2x - 3 = 7\",\n                \"2x = 7 + 3\",\n                \"2x = 10\",\n                \"x = 10/2\",\n                \"x = 5/1\"\n            ]\n        },\n        {\n            \"enunciado\": \"Se x/2 + 2 = 5, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"10\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"x/2 + 2 = 5\",\n                \"x/2 = 5 - 2\",\n                \"x/2 = 3\",\n                \"x = 3 * 2\",\n                \"x = 6\"\n            ]\n        },\n        {\n            \"enunciado\": \"Se 3x - 1 = 11, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"2\",\n                \"C\": \"5/3\",\n                \"D\": \"3\",\n                \"E\": \"2/3\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"3x - 1 = 11\",\n                \"3x = 11 + 1\",\n                \"3x = 12\",\n                \"x = 12/3\",\n                \"x = 4/1\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 454,
+            "total_tokens": 454
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.13104350000503473,
+            "tempo_decode_s": 57.60383749999892,
+            "tempo_resposta_s": 57.73488100000395,
+            "tempo_total_s": 57.73488100000395,
+            "tokens_entrada": 0,
+            "tokens_saida": 454,
+            "tps": 7.8635305405750975,
+            "ram_inicio_mb": 2167.89453125,
+            "ram_pico_mb": 2169.55859375,
+            "ram_usada_mb": 1.6640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 2x - 3 = 7, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"5/2\",\n                \"C\": \"7/2\",\n                \"D\": \"9\",\n                \"E\": \"-1\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"2x - 3 = 7\",\n                \"2x = 7 + 3\",\n                \"2x = 10\",\n                \"x = 10/2\",\n                \"x = 5/1\"\n            ]\n        },\n        {\n            \"enunciado\": \"Se x/2 + 2 = 5, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"10\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"x/2 + 2 = 5\",\n                \"x/2 = 5 - 2\",\n                \"x/2 = 3\",\n                \"x = 3 * 2\",\n                \"x = 6\"\n            ]\n        },\n        {\n            \"enunciado\": \"Se 3x - 1 = 11, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"2\",\n                \"C\": \"5/3\",\n                \"D\": \"3\",\n                \"E\": \"2/3\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"3x - 1 = 11\",\n                \"3x = 11 + 1\",\n                \"3x = 12\",\n                \"x = 12/3\",\n                \"x = 4/1\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 454,
+            "total_tokens": 454
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.12590020000061486,
+            "tempo_decode_s": 57.87514620000002,
+            "tempo_resposta_s": 58.00104640000063,
+            "tempo_total_s": 58.00104640000063,
+            "tokens_entrada": 0,
+            "tokens_saida": 454,
+            "tps": 7.827444988992389,
+            "ram_inicio_mb": 2169.4765625,
+            "ram_pico_mb": 2171.1015625,
+            "ram_usada_mb": 1.625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 2x - 3 = 7, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"5/2\",\n                \"C\": \"7/2\",\n                \"D\": \"9\",\n                \"E\": \"-1\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"2x - 3 = 7\",\n                \"2x = 7 + 3\",\n                \"2x = 10\",\n                \"x = 10/2\",\n                \"x = 5/1\"\n            ]\n        },\n        {\n            \"enunciado\": \"Se x/2 + 2 = 5, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"10\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"x/2 + 2 = 5\",\n                \"x/2 = 5 - 2\",\n                \"x/2 = 3\",\n                \"x = 3 * 2\",\n                \"x = 6\"\n            ]\n        },\n        {\n            \"enunciado\": \"Se 3x - 1 = 11, determine o valor de x.\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"2\",\n                \"C\": \"5/3\",\n                \"D\": \"3\",\n                \"E\": \"2/3\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"3x - 1 = 11\",\n                \"3x = 11 + 1\",\n                \"3x = 12\",\n                \"x = 12/3\",\n                \"x = 4/1\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 454,
+            "total_tokens": 454
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.1578707000007853,
+            "tempo_decode_s": 1833.1560762000008,
+            "tempo_resposta_s": 1833.3139469000016,
+            "tempo_total_s": 1833.3139469000016,
+            "tokens_entrada": 0,
+            "tokens_saida": 454,
+            "tps": 0.2476389822745201,
+            "ram_inicio_mb": 2171.0234375,
+            "ram_pico_mb": 2172.6484375,
+            "ram_usada_mb": 1.625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos números abaixo é múltiplo de 5 e 3?\",\n            \"alternativas\": {\n                \"A\": \"15\",\n                \"B\": \"20\",\n                \"C\": \"25\",\n                \"D\": \"30\",\n                \"E\": \"35\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": [\n                \"15 = 5 x 3\",\n                \"20 = 5 x 4\",\n                \"25 = 5 x 5\",\n                \"30 = 5 x 6\",\n                \"35 = 5 x 7\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual dos números abaixo é múltiplo de 7 e 2?\",\n            \"alternativas\": {\n                \"A\": \"14\",\n                \"B\": \"16\",\n                \"C\": \"18\",\n                \"D\": \"20\",\n                \"E\": \"22\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": [\n                \"14 = 7 x 2\",\n                \"16 = 7 x 2 + 2\",\n                \"18 = 7 x 2 + 4\",\n                \"20 = 7 x 2 + 6\",\n                \"22 = 7 x 2 + 8\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual dos números abaixo é múltiplo de 9 e 4?\",\n            \"alternativas\": {\n                \"A\": \"36\",\n                \"B\": \"40\",\n                \"C\": \"44\",\n                \"D\": \"48\",\n                \"E\": \"52\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": [\n                \"36 = 9 x 4\",\n                \"40 = 9 x 4 + 4\",\n                \"44 = 9 x 4 + 8\",\n                \"48 = 9 x 4 + 12\",\n                \"52 = 9 x 4 + 16\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 470,
+            "total_tokens": 470
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.553902100000414,
+            "tempo_decode_s": 62.821764299995266,
+            "tempo_resposta_s": 68.37566639999568,
+            "tempo_total_s": 68.37566639999568,
+            "tokens_entrada": 0,
+            "tokens_saida": 470,
+            "tps": 6.873790410326878,
+            "ram_inicio_mb": 2114.6875,
+            "ram_pico_mb": 2160.703125,
+            "ram_usada_mb": 46.015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Se 2x - 3 = 7, qual é o valor de x?\",\n      \"alternativas\": {\n        \"A\": \"2\",\n        \"B\": \"3,5\",\n        \"C\": \"4\",\n        \"D\": \"5\",\n        \"E\": \"6\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": [\n        \"2x - 3 = 7\",\n        \"2x = 7 + 3\",\n        \"2x = 10\",\n        \"x = 10 / 2\",\n        \"x = 5\"\n      ]\n    },\n    {\n      \"enunciado\": \"Se x - 2 = 9, qual é o valor de x?\",\n      \"alternativas\": {\n        \"A\": \"5\",\n        \"B\": \"7\",\n        \"C\": \"8\",\n        \"D\": \"9\",\n        \"E\": \"11\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"x - 2 = 9\",\n        \"x = 9 + 2\",\n        \"x = 11\"\n      ]\n    },\n    {\n      \"enunciado\": \"Se 3x = 24, determine o valor de x, considerando que x é um número natural.\",\n      \"alternativas\": {\n        \"A\": \"2\",\n        \"B\": \"3\",\n        \"C\": \"4\",\n        \"D\": \"6\",\n        \"E\": \"8\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"3x = 24\",\n        \"x = 24 / 3\",\n        \"x = 8\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 405,
+            "total_tokens": 405
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.617657699993288,
+            "tempo_decode_s": 82.66194190000533,
+            "tempo_resposta_s": 87.27959959999862,
+            "tempo_total_s": 87.27959959999862,
+            "tokens_entrada": 0,
+            "tokens_saida": 405,
+            "tps": 4.640259600824365,
+            "ram_inicio_mb": 2131.76953125,
+            "ram_pico_mb": 2163.07421875,
+            "ram_usada_mb": 31.3046875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Se 2x - 3 = 7, determine o valor de x.\",\n      \"alternativas\": {\n        \"A\": \"2\",\n        \"B\": \"4\",\n        \"C\": \"5\",\n        \"D\": \"6\",\n        \"E\": \"9\"\n      },\n      \"resposta_correta\": \"E\",\n      \"resolucao_passo_a_passo\": [\n        \"2x - 3 = 7\",\n        \"2x = 10\",\n        \"x = 5\"\n      ]\n    },\n    {\n      \"enunciado\": \"Se x/2 + 2 = 5, qual é o valor de x?\",\n      \"alternativas\": {\n        \"A\": \"6\",\n        \"B\": \"8\",\n        \"C\": \"10\",\n        \"D\": \"12\",\n        \"E\": \"14\"\n      },\n      \"resposta_correta\": \"E\",\n      \"resolucao_passo_a_passo\": [\n        \"x/2 + 2 = 5\",\n        \"x/2 = 3\",\n        \"x = 6\"\n      ]\n    },\n    {\n      \"enunciado\": \"Se 3x - 1 = 11, determine o valor de x.\",\n      \"alternativas\": {\n        \"A\": \"3\",\n        \"B\": \"4\",\n        \"C\": \"5\",\n        \"D\": \"6\",\n        \"E\": \"4\"\n      },\n      \"resposta_correta\": \"E\",\n      \"resolucao_passo_a_passo\": [\n        \"3x - 1 = 11\",\n        \"3x = 12\",\n        \"x = 4\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 379,
+            "total_tokens": 379
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.3410340000045835,
+            "tempo_decode_s": 65.20451740000135,
+            "tempo_resposta_s": 65.54555140000593,
+            "tempo_total_s": 65.54555140000593,
+            "tokens_entrada": 0,
+            "tokens_saida": 379,
+            "tps": 5.782238335094175,
+            "ram_inicio_mb": 2114.89453125,
+            "ram_pico_mb": 2129.6328125,
+            "ram_usada_mb": 14.73828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos números abaixo é múltiplo de 5 e 3?\",\n            \"alternativas\": {\n                \"A\": \"15\",\n                \"B\": \"20\",\n                \"C\": \"25\",\n                \"D\": \"30\",\n                \"E\": \"35\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": [\n                \"15 = 5 x 3\",\n                \"20 = 5 x 4\",\n                \"25 = 5 x 5\",\n                \"30 = 5 x 6\",\n                \"35 = 5 x 7\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual dos números abaixo é múltiplo de 7 e 2?\",\n            \"alternativas\": {\n                \"A\": \"14\",\n                \"B\": \"16\",\n                \"C\": \"18\",\n                \"D\": \"20\",\n                \"E\": \"22\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": [\n                \"14 = 7 x 2\",\n                \"16 = 7 x 2 + 2\",\n                \"18 = 7 x 2 + 4\",\n                \"20 = 7 x 2 + 6\",\n                \"22 = 7 x 2 + 8\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual dos números abaixo é múltiplo de 9 e 4?\",\n            \"alternativas\": {\n                \"A\": \"36\",\n                \"B\": \"40\",\n                \"C\": \"44\",\n                \"D\": \"48\",\n                \"E\": \"52\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": [\n                \"36 = 9 x 4\",\n                \"40 = 9 x 4 + 4\",\n                \"44 = 9 x 4 + 8\",\n                \"48 = 9 x 4 + 12\",\n                \"52 = 9 x 4 + 16\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 470,
+            "total_tokens": 470
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.567031200000201,
+            "tempo_decode_s": 66.72692410000309,
+            "tempo_resposta_s": 72.29395530000329,
+            "tempo_total_s": 72.29395530000329,
+            "tokens_entrada": 0,
+            "tokens_saida": 470,
+            "tps": 6.501235103953133,
+            "ram_inicio_mb": 2116.70703125,
+            "ram_pico_mb": 2161.86328125,
+            "ram_usada_mb": 45.15625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.214995599999384,
+            "tempo_decode_s": 143.49088050000137,
+            "tempo_resposta_s": 148.70587610000075,
+            "tempo_total_s": 148.70587610000075,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2161.953125,
+            "ram_pico_mb": 2191.90625,
+            "ram_usada_mb": 29.953125,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 5.241132,
+        "ram_media_mb": 2201.808594,
+        "ram_pico_mb": 2201.808594,
+        "tempo_medio_segundos": 110.853919,
+        "ttft_medio_segundos": 5.640928,
+        "tps": {
+          "n": 1,
+          "mediana": 5.241132,
+          "iqr": 0.0,
+          "p25": 5.241132,
+          "p75": 5.241132,
+          "p95": 5.241132,
+          "p99": 5.241132,
+          "max": 5.241132,
+          "media": 5.241132
+        },
+        "ttft": {
+          "n": 1,
+          "mediana": 5.640928,
+          "iqr": 0.0,
+          "p25": 5.640928,
+          "p75": 5.640928,
+          "p95": 5.640928,
+          "p99": 5.640928,
+          "max": 5.640928,
+          "media": 5.640928
+        },
+        "tempo": {
+          "n": 1,
+          "mediana": 110.853919,
+          "iqr": 0.0,
+          "p25": 110.853919,
+          "p75": 110.853919,
+          "p95": 110.853919,
+          "p99": 110.853919,
+          "max": 110.853919,
+          "media": 110.853919
+        },
+        "ram_pico": {
+          "n": 1,
+          "mediana": 2201.808594,
+          "iqr": 0.0,
+          "p25": 2201.808594,
+          "p75": 2201.808594,
+          "p95": 2201.808594,
+          "p99": 2201.808594,
+          "max": 2201.808594,
+          "media": 2201.808594
+        },
+        "tps_por_rodada": [
+          5.2411318186813505
+        ],
+        "ttft_por_rodada": [
+          5.640928200002236
+        ],
+        "tempo_por_rodada": [
+          110.85391860000527
+        ],
+        "ram_por_rodada": [
+          2201.80859375
+        ],
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 1,
+        "quantidade_de_questoes": 5,
+        "tentativas": 0,
+        "valido_primeira_tentativa": true,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 2201.808594,
+        "tps_medio": 5.241132,
+        "tempo_medio_segundos": 110.853919,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos números abaixo é múltiplo de 5?\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"15\",\n                \"C\": \"20\",\n                \"D\": \"25\",\n                \"E\": \"30\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": [\n                \"30 = 5 x 6\",\n                \"30 é múltiplo de 5\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual é o maior número que divide 24 sem deixar resto?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"10\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": [\n                \"24 = 2 x 12\",\n                \"12 é o maior divisor de 24\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual dos números abaixo é primo?\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"11\",\n                \"C\": \"13\",\n                \"D\": \"17\",\n                \"E\": \"19\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"13 = 1 x 13\",\n                \"13 é um número primo\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual é o menor número que é múltiplo de 3 e 5?\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"12\",\n                \"C\": \"15\",\n                \"D\": \"18\",\n                \"E\": \"20\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": [\n                \"15 = 3 x 5\",\n                \"15 é o menor múltiplo comum de 3 e 5\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual é o maior número que divide 48 sem deixar resto?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"10\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": [\n                \"48 = 6 x 8\",\n                \"8 é o maior divisor de 48\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 581,
+            "total_tokens": 581
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.640928200002236,
+            "tempo_decode_s": 105.21299040000304,
+            "tempo_resposta_s": 110.85391860000527,
+            "tempo_total_s": 110.85391860000527,
+            "tokens_entrada": 0,
+            "tokens_saida": 581,
+            "tps": 5.2411318186813505,
+            "ram_inicio_mb": 2194.91796875,
+            "ram_pico_mb": 2201.80859375,
+            "ram_usada_mb": 6.890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 5.065387,
+        "ram_media_mb": 2163.263672,
+        "ram_pico_mb": 2177.328125,
+        "tempo_medio_segundos": 44.089627,
+        "ttft_medio_segundos": 5.828325,
+        "tps": {
+          "n": 2,
+          "mediana": 5.065387,
+          "iqr": 0.547833,
+          "p25": 4.791471,
+          "p75": 5.339304,
+          "p95": 5.558437,
+          "p99": 5.602264,
+          "max": 5.61322,
+          "media": 5.065387
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 5.828325,
+          "iqr": 1.225868,
+          "p25": 5.21539,
+          "p75": 6.441259,
+          "p95": 6.931606,
+          "p99": 7.029676,
+          "max": 7.054193,
+          "media": 5.828325
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 44.089627,
+          "iqr": 16.119943,
+          "p25": 36.029656,
+          "p75": 52.149599,
+          "p95": 58.597576,
+          "p99": 59.887171,
+          "max": 60.20957,
+          "media": 44.089627
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2163.263672,
+          "iqr": 14.064453,
+          "p25": 2156.231445,
+          "p75": 2170.295898,
+          "p95": 2175.92168,
+          "p99": 2177.046836,
+          "max": 2177.328125,
+          "media": 2163.263672
+        },
+        "tps_por_rodada": [
+          4.517554261693703,
+          5.613220330888569
+        ],
+        "ttft_por_rodada": [
+          7.054192900002818,
+          4.602456200002052
+        ],
+        "tempo_por_rodada": [
+          60.20957009999984,
+          27.96968420000485
+        ],
+        "ram_por_rodada": [
+          2177.328125,
+          2149.19921875
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Em um retângulo, um dos lados tem 8 cm de comprimento e o outro lado tem 5 cm de comprimento. Qual é o nome da figura geométrica formada pela diagonal do retângulo?",
+                "alternativas": {
+                  "A": "Hipotenusa",
+                  "B": "Diagonal de um retângulo",
+                  "C": "Área do retângulo",
+                  "D": "Perímetro do retângulo",
+                  "E": "Círculo"
+                },
+                "resposta_correta": "B",
+                "resolucao_passo_a_passo": "1. Desenhe a diagonal do retângulo\n2. Observe que a diagonal divide o retângulo em duas triângulos retângulos\n3. Conheça que os triângulos retângulos são retângulos isósceles\n4. Conheça que a hipotenusa de um triângulo retângulo é a diagonal do retângulo\n5. Conheça que a diagonal de um retângulo não é um círculo"
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Em um retângulo, um dos lados tem 8 cm de comprimento e o outro lado tem 6 cm de comprimento. Qual é o nome da operação para encontrar a área do retângulo?",
+                "alternativas": {
+                  "A": "Aumentar",
+                  "B": "Diminuir",
+                  "C": "Dividir",
+                  "D": "Multiplicar",
+                  "E": "Achar o perímetro"
+                },
+                "resposta_correta": "D",
+                "resolucao_passo_a_passo": "8 x 6 = 48"
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 2177.328125,
+        "tps_medio": 5.065387,
+        "tempo_medio_segundos": 44.089627,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 100.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Em um retângulo, um dos lados tem 8 cm de comprimento e o outro lado tem 5 cm de comprimento. Qual é o nome da figura geométrica formada pela diagonal do retângulo?\",\n      \"alternativas\": {\n        \"A\": \"Hipotenusa\",\n        \"B\": \"Diagonal de um retângulo\",\n        \"C\": \"Área do retângulo\",\n        \"D\": \"Perímetro do retângulo\",\n        \"E\": \"Círculo\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": [\n        \"1. Desenhe a diagonal do retângulo\",\n        \"2. Observe que a diagonal divide o retângulo em duas triângulos retângulos\",\n        \"3. Conheça que os triângulos retângulos são retângulos isósceles\",\n        \"4. Conheça que a hipotenusa de um triângulo retângulo é a diagonal do retângulo\",\n        \"5. Conheça que a diagonal de um retângulo não é um círculo\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 272,
+            "total_tokens": 272
+          },
+          "metrics": {
+            "tempo_prefill_s": 7.054192900002818,
+            "tempo_decode_s": 53.15537719999702,
+            "tempo_resposta_s": 60.20957009999984,
+            "tempo_total_s": 60.20957009999984,
+            "tokens_entrada": 0,
+            "tokens_saida": 272,
+            "tps": 4.517554261693703,
+            "ram_inicio_mb": 2134.58984375,
+            "ram_pico_mb": 2177.328125,
+            "ram_usada_mb": 42.73828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Em um retângulo, um dos lados tem 8 cm de comprimento e o outro lado tem 6 cm de comprimento. Qual é o nome da operação para encontrar a área do retângulo?\",\n      \"alternativas\": {\n        \"A\": \"Aumentar\",\n        \"B\": \"Diminuir\",\n        \"C\": \"Dividir\",\n        \"D\": \"Multiplicar\",\n        \"E\": \"Achar o perímetro\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"8 x 6 = 48\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 157,
+            "total_tokens": 157
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.602456200002052,
+            "tempo_decode_s": 23.367228000002797,
+            "tempo_resposta_s": 27.96968420000485,
+            "tempo_total_s": 27.96968420000485,
+            "tokens_entrada": 0,
+            "tokens_saida": 157,
+            "tps": 5.613220330888569,
+            "ram_inicio_mb": 2128.09765625,
+            "ram_pico_mb": 2149.19921875,
+            "ram_usada_mb": 21.1015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2582.3,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2582.3 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3.88,
+        "limite": 5.0,
+        "motivo": "TPS 3.88 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 1,
+        "limite": 0,
+        "motivo": "Crash/OOM detectado — 1 ocorrência(s)",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 90.0,
+        "limite": 60.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 252.28,
+        "limite": 90.0,
+        "motivo": "Tempo médio 252.3s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 100.0,
+        "limite": 40.0,
+        "motivo": "Degradação TPS 100.0% entre 1ª e última geração",
+        "categoria_falha": "performance"
+      }
+    ],
+    "motivos_reprovacao": [
+      "RAM pico 2582.3 MB — limite 2048.0 MB",
+      "TPS 3.88 abaixo do mínimo 5.0",
+      "Crash/OOM detectado — 1 ocorrência(s)",
+      "Tempo médio 252.3s acima de 90.0s",
+      "Degradação TPS 100.0% entre 1ª e última geração"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "hardware",
+      "performance"
+    ],
+    "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+    "gerado_em": "2026-09-09T22:44:03.962371"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "RAM pico 2582.3 MB — limite 2048.0 MB; TPS 3.88 abaixo do mínimo 5.0; Crash/OOM detectado — 1 ocorrência(s); Tempo médio 252.3s acima de 90.0s; Degradação TPS 100.0% entre 1ª e última geração"
+}

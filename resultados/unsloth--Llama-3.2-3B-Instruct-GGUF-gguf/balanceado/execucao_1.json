@@ -1,0 +1,1193 @@
+{
+  "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "09/09/2026",
+  "run_config": {
+    "modelos": [
+      "unsloth/Llama-3.2-3B-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "unsloth/Llama-3.2-3B-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\unsloth--Llama-3.2-3B-Instruct-GGUF\\Llama-3.2-3B-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 42,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 42
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 42
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.1,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Considere os números 24, 36 e 48. Qual é o número que DEVE ser escrito como uma fração a/b (com a e b inteiros, b≠0)?",
+            "alternativas": {
+              "A": "24/4",
+              "B": "36/6",
+              "C": "48/8",
+              "D": "24/5",
+              "E": "36/9"
+            },
+            "resposta_correta": "D",
+            "resolucao_passo_a_passo": "Para calcular a fração, devemos dividir cada número por seu fator comum. 24/4 = 6, 36/6 = 6 e 48/8 = 6. Já 24/5 = 4,8 e 36/9 = 4. Portanto, o número que DEVE ser escrito como uma fração a/b (com a e b inteiros, b≠0) é 24/5."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 14.234424499998568,
+        "tempo_prefill_s": 43.51019610000367,
+        "tempo_decode_s": 45.38156049999816,
+        "tempo_resposta_s": 88.89175660000183,
+        "tempo_total_s": 103.1261811000004,
+        "tokens_entrada": 0,
+        "tokens_saida": 238,
+        "tps": 2.677413621951027,
+        "ram_inicio_mb": 62.0625,
+        "ram_pico_mb": 1410.63671875,
+        "ram_usada_mb": 1348.57421875,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 103.1261811000004,
+        "tempo_carregamento_s": 14.234424499998568,
+        "tempo_resposta_s": 88.89175660000183,
+        "ram_pico_mb": 1410.63671875,
+        "ram_inicio_mb": 62.0625,
+        "ttft_segundos": 43.51019610000367,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Considere os números 24, 36 e 48. Qual é o número que DEVE ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"24/4\",\n        \"B\": \"36/6\",\n        \"C\": \"48/8\",\n        \"D\": \"24/5\",\n        \"E\": \"36/9\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": \"Para calcular a fração, devemos dividir cada número por seu fator comum. 24/4 = 6, 36/6 = 6 e 48/8 = 6. Já 24/5 = 4,8 e 36/9 = 4. Portanto, o número que DEVE ser escrito como uma fração a/b (com a e b inteiros, b≠0) é 24/5.\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 238,
+            "total_tokens": 238
+          },
+          "metrics": {
+            "tempo_carregamento_s": 14.234424499998568,
+            "tempo_prefill_s": 43.51019610000367,
+            "tempo_decode_s": 45.38156049999816,
+            "tempo_resposta_s": 88.89175660000183,
+            "tempo_total_s": 103.1261811000004,
+            "tokens_entrada": 0,
+            "tokens_saida": 238,
+            "tps": 2.677413621951027,
+            "ram_inicio_mb": 62.0625,
+            "ram_pico_mb": 1410.63671875,
+            "ram_usada_mb": 1348.57421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 5.760576,
+          "iqr": 1.801554,
+          "p25": 4.790574,
+          "p75": 6.592127,
+          "p95": 7.457804,
+          "p99": 7.639528,
+          "max": 7.684959,
+          "media": 5.705228
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 5.563965,
+          "iqr": 5.218825,
+          "p25": 1.389357,
+          "p75": 6.608182,
+          "p95": 7.78921,
+          "p99": 8.340811,
+          "max": 8.478711,
+          "media": 4.478879
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 64.857208,
+          "iqr": 19.188077,
+          "p25": 55.480356,
+          "p75": 74.668433,
+          "p95": 94.480695,
+          "p99": 104.960966,
+          "max": 107.581034,
+          "media": 66.405348
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2164.697266,
+          "iqr": 31.220703,
+          "p25": 2136.564453,
+          "p75": 2167.785156,
+          "p95": 2173.348828,
+          "p99": 2174.426016,
+          "max": 2174.695312,
+          "media": 2155.386328
+        },
+        "tps_medio": 5.705228,
+        "ttft_medio_segundos": 4.478879,
+        "tempo_medio_segundos": 66.405348,
+        "ram_pico_mb": 2174.695312
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 7,
+        "json_invalidos": 3,
+        "taxa_json_valido_percent": 70.0,
+        "json_valido_ic95": {
+          "numerador": 7,
+          "denominador": 10,
+          "ponto": 0.7,
+          "ic95": [
+            0.396778,
+            0.892209
+          ],
+          "formato": "70.0% [39.7–89.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 7,
+        "gabarito_avaliados": 7,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 7,
+          "denominador": 7,
+          "ponto": 1.0,
+          "ic95": [
+            0.64567,
+            1.0
+          ],
+          "formato": "100.0% [64.6–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 7,
+        "taxa_utilizavel_percent": 70.0,
+        "utilizavel_ic95": {
+          "numerador": 7,
+          "denominador": 10,
+          "ponto": 0.7,
+          "ic95": [
+            0.396778,
+            0.892209
+          ],
+          "formato": "70.0% [39.7–89.2]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 3,
+          "ok": 7
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 5.760576,
+          "iqr": 1.801554,
+          "p25": 4.790574,
+          "p75": 6.592127,
+          "p95": 7.457804,
+          "p99": 7.639528,
+          "max": 7.684959,
+          "media": 5.705228
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 5.563965,
+          "iqr": 5.218825,
+          "p25": 1.389357,
+          "p75": 6.608182,
+          "p95": 7.78921,
+          "p99": 8.340811,
+          "max": 8.478711,
+          "media": 4.478879
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 64.857208,
+          "iqr": 19.188077,
+          "p25": 55.480356,
+          "p75": 74.668433,
+          "p95": 94.480695,
+          "p99": 104.960966,
+          "max": 107.581034,
+          "media": 66.405348
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2164.697266,
+          "iqr": 31.220703,
+          "p25": 2136.564453,
+          "p75": 2167.785156,
+          "p95": 2173.348828,
+          "p99": 2174.426016,
+          "max": 2174.695312,
+          "media": 2155.386328
+        },
+        "tps_medio": 5.705228,
+        "ttft_medio_segundos": 4.478879,
+        "tempo_medio_segundos": 66.405348,
+        "ram_pico_mb": 2174.695312,
+        "tps_por_rodada": [
+          3.54645092949148,
+          5.45437151245963,
+          5.872974724815209,
+          4.569307689605595,
+          4.099235562375393,
+          5.648176955145707,
+          7.180168928640254,
+          7.684959491212531,
+          6.31068912533679,
+          6.685940222379726
+        ],
+        "ttft_por_rodada": [
+          8.478711499999918,
+          6.844379400004982,
+          0.19183740000153193,
+          5.899590200002422,
+          6.946486799999548,
+          5.629248900004313,
+          0.1820774999941932,
+          0.13586280000163242,
+          4.981914700001653,
+          5.498682000004919
+        ],
+        "tempo_por_rodada": [
+          65.69948509999813,
+          78.4691690000036,
+          71.34374309999839,
+          51.21125909999682,
+          107.58103390000178,
+          75.7766627000019,
+          58.355172999996284,
+          54.52208309999696,
+          37.07994410000538,
+          64.01493070000288
+        ],
+        "ram_por_rodada": [
+          2174.6953125,
+          2152.09765625,
+          2129.96484375,
+          2164.12109375,
+          2168.078125,
+          2166.90625,
+          2129.63671875,
+          2131.38671875,
+          2165.2734375,
+          2171.703125
+        ],
+        "ram_media_mb": 2155.386328
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Qual número é maior entre 43 e 57?\",\n      \"alternativas\": {\n        \"A\": 43,\n        \"B\": 50,\n        \"C\": 57,\n        \"D\": 67,\n        \"E\": 72\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"57 > 43\",\n        \"57 é o maior número entre 43 e 57\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número é menor entre 93 e 19?\",\n      \"alternativas\": {\n        \"A\": 93,\n        \"B\": 19,\n        \"C\": 42,\n        \"D\": 85,\n        \"E\": 98\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": [\n        \"19 < 93\",\n        \"19 é o menor número entre 93 e 19\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 233,
+            "total_tokens": 233
+          },
+          "metrics": {
+            "tempo_prefill_s": 8.478711499999918,
+            "tempo_decode_s": 57.22077359999821,
+            "tempo_resposta_s": 65.69948509999813,
+            "tempo_total_s": 65.69948509999813,
+            "tokens_entrada": 0,
+            "tokens_saida": 233,
+            "tps": 3.54645092949148,
+            "ram_inicio_mb": 2162.06640625,
+            "ram_pico_mb": 2174.6953125,
+            "ram_usada_mb": 12.62890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"7\",\n                \"E\": \"11\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": [\n                \"1 = 1/1\",\n                \"2 = 2/1\",\n                \"3 = 3/1\",\n                \"5 = 5/1\",\n                \"7 = 7/1\",\n                \"11 = 11/1\"\n            ]\n        },\n        {\n            \"enunciado\": \"Quais números são múltiplos de 3 e 4?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"12\",\n                \"C\": \"18\",\n                \"D\": \"24\",\n                \"E\": \"30\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": [\n                \"12 = 3 x 4\",\n                \"24 = 3 x 8\",\n                \"30 = 3 x 10\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual número é o maior múltiplo de 5 e 6 entre 20 e 40?\",\n            \"alternativas\": {\n                \"A\": \"25\",\n                \"B\": \"30\",\n                \"C\": \"35\",\n                \"D\": \"40\",\n                \"E\": \"45\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": [\n                \"30 = 5 x 6\",\n                \"35 = 5 x 7\",\n                \"40 = 5 x 8\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 428,
+            "total_tokens": 428
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.844379400004982,
+            "tempo_decode_s": 71.62478959999862,
+            "tempo_resposta_s": 78.4691690000036,
+            "tempo_total_s": 78.4691690000036,
+            "tokens_entrada": 0,
+            "tokens_saida": 428,
+            "tps": 5.45437151245963,
+            "ram_inicio_mb": 2129.62890625,
+            "ram_pico_mb": 2152.09765625,
+            "ram_usada_mb": 22.46875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Qual número não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"2\",\n        \"B\": \"3\",\n        \"C\": \"5\",\n        \"D\": \"7\",\n        \"E\": \"11\"\n      },\n      \"resposta_correta\": \"E\",\n      \"resolucao_passo_a_passo\": [\n        \"1 = 1/1\",\n        \"2 = 2/1\",\n        \"3 = 3/1\",\n        \"5 = 5/1\",\n        \"7 = 7/1\",\n        \"11 = 11/1\"\n      ]\n    },\n    {\n      \"enunciado\": \"Quais números são múltiplos de 3 e 4?\",\n      \"alternativas\": {\n        \"A\": \"6\",\n        \"B\": \"12\",\n        \"C\": \"18\",\n        \"D\": \"24\",\n        \"E\": \"30\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"3 x 4 = 12\",\n        \"3 x 5 = 15\",\n        \"3 x 6 = 18\",\n        \"3 x 7 = 21\",\n        \"3 x 8 = 24\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número é múltiplo de 5 e 9?\",\n      \"alternativas\": {\n        \"A\": \"15\",\n        \"B\": \"25\",\n        \"C\": \"45\",\n        \"D\": \"55\",\n        \"E\": \"75\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"5 x 9 = 45\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 419,
+            "total_tokens": 419
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.19183740000153193,
+            "tempo_decode_s": 71.15190569999686,
+            "tempo_resposta_s": 71.34374309999839,
+            "tempo_total_s": 71.34374309999839,
+            "tokens_entrada": 0,
+            "tokens_saida": 419,
+            "tps": 5.872974724815209,
+            "ram_inicio_mb": 2116.44140625,
+            "ram_pico_mb": 2129.96484375,
+            "ram_usada_mb": 13.5234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número é maior entre 45 e 51?\",\n            \"alternativas\": {\n                \"A\": \"45\",\n                \"B\": \"50\",\n                \"C\": \"51\",\n                \"D\": \"55\",\n                \"E\": \"60\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"51 > 45, 51 > 50, 51 > 55, 51 > 60\"\n        },\n        {\n            \"enunciado\": \"Qual número é menor entre 93 e 98?\",\n            \"alternativas\": {\n                \"A\": \"92\",\n                \"B\": \"93\",\n                \"C\": \"95\",\n                \"D\": \"97\",\n                \"E\": \"100\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"92 < 93, 92 < 95, 92 < 97, 92 < 100\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 234,
+            "total_tokens": 234
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.899590200002422,
+            "tempo_decode_s": 45.3116688999944,
+            "tempo_resposta_s": 51.21125909999682,
+            "tempo_total_s": 51.21125909999682,
+            "tokens_entrada": 0,
+            "tokens_saida": 234,
+            "tps": 4.569307689605595,
+            "ram_inicio_mb": 2129.875,
+            "ram_pico_mb": 2164.12109375,
+            "ram_usada_mb": 34.24609375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Se 3x - 2 = 7, determine o valor de x.\",\n      \"alternativas\": {\n        \"A\": \"x = 3\",\n        \"B\": \"x = 2,5\",\n        \"C\": \"x = 9\",\n        \"D\": \"x = 1,6\",\n        \"E\": \"x = 10\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": [\n        \"3x - 2 = 7\",\n        \"3x = 7 + 2\",\n        \"3x = 9\",\n        \"x = 9/3\",\n        \"x = 3\"\n      ]\n    },\n    {\n      \"enunciado\": \"Se x + 2 = 9, determine o valor de x.\",\n      \"alternativas\": {\n        \"A\": \"x = 11\",\n        \"B\": \"x = 7\",\n        \"C\": \"x = 9\",\n        \"D\": \"x = 5\",\n        \"E\": \"x = 1\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"x + 2 = 9\",\n        \"x = 9 - 2\",\n        \"x = 7\"\n      ]\n    },\n    {\n      \"enunciado\": \"Se 4x = 24, determine o valor de x.\",\n      \"alternativas\": {\n        \"A\": \"x = 6\",\n        \"B\": \"x = 4,5\",\n        \"C\": \"x = 8\",\n        \"D\": \"x = 3\",\n        \"E\": \"x = 2\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": [\n        \"4x = 24\",\n        \"x = 24/4\",\n        \"x = 6\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 441,
+            "total_tokens": 441
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.946486799999548,
+            "tempo_decode_s": 100.63454710000224,
+            "tempo_resposta_s": 107.58103390000178,
+            "tempo_total_s": 107.58103390000178,
+            "tokens_entrada": 0,
+            "tokens_saida": 441,
+            "tps": 4.099235562375393,
+            "ram_inicio_mb": 2121.78515625,
+            "ram_pico_mb": 2168.078125,
+            "ram_usada_mb": 46.29296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"7\",\n                \"E\": \"11\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": [\n                \"1 = 1/1\",\n                \"2 = 2/1\",\n                \"3 = 3/1\",\n                \"5 = 5/1\",\n                \"7 = 7/1\",\n                \"11 = 11/1\"\n            ]\n        },\n        {\n            \"enunciado\": \"Quais números são múltiplos de 3 e 4?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"12\",\n                \"C\": \"18\",\n                \"D\": \"24\",\n                \"E\": \"30\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": [\n                \"12 = 3 x 4\",\n                \"24 = 3 x 8\",\n                \"30 = 3 x 10\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual número é o maior múltiplo de 5 e 6 entre 20 e 40?\",\n            \"alternativas\": {\n                \"A\": \"25\",\n                \"B\": \"30\",\n                \"C\": \"35\",\n                \"D\": \"40\",\n                \"E\": \"45\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": [\n                \"30 = 5 x 6\",\n                \"35 = 5 x 7\",\n                \"40 = 5 x 8\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 428,
+            "total_tokens": 428
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.629248900004313,
+            "tempo_decode_s": 70.1474137999976,
+            "tempo_resposta_s": 75.7766627000019,
+            "tempo_total_s": 75.7766627000019,
+            "tokens_entrada": 0,
+            "tokens_saida": 428,
+            "tps": 5.648176955145707,
+            "ram_inicio_mb": 2143.703125,
+            "ram_pico_mb": 2166.90625,
+            "ram_usada_mb": 23.203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Qual número não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"2\",\n        \"B\": \"3\",\n        \"C\": \"5\",\n        \"D\": \"7\",\n        \"E\": \"11\"\n      },\n      \"resposta_correta\": \"E\",\n      \"resolucao_passo_a_passo\": [\n        \"1 = 1/1\",\n        \"2 = 2/1\",\n        \"3 = 3/1\",\n        \"5 = 5/1\",\n        \"7 = 7/1\",\n        \"11 = 11/1\"\n      ]\n    },\n    {\n      \"enunciado\": \"Quais números são múltiplos de 3 e 4?\",\n      \"alternativas\": {\n        \"A\": \"6\",\n        \"B\": \"12\",\n        \"C\": \"18\",\n        \"D\": \"24\",\n        \"E\": \"30\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"3 x 4 = 12\",\n        \"3 x 5 = 15\",\n        \"3 x 6 = 18\",\n        \"3 x 7 = 21\",\n        \"3 x 8 = 24\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número é múltiplo de 5 e 9?\",\n      \"alternativas\": {\n        \"A\": \"15\",\n        \"B\": \"25\",\n        \"C\": \"45\",\n        \"D\": \"55\",\n        \"E\": \"75\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"5 x 9 = 45\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 419,
+            "total_tokens": 419
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.1820774999941932,
+            "tempo_decode_s": 58.17309550000209,
+            "tempo_resposta_s": 58.355172999996284,
+            "tempo_total_s": 58.355172999996284,
+            "tokens_entrada": 0,
+            "tokens_saida": 419,
+            "tps": 7.180168928640254,
+            "ram_inicio_mb": 2116.91015625,
+            "ram_pico_mb": 2129.63671875,
+            "ram_usada_mb": 12.7265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Qual número não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n      \"alternativas\": {\n        \"A\": \"2\",\n        \"B\": \"3\",\n        \"C\": \"5\",\n        \"D\": \"7\",\n        \"E\": \"11\"\n      },\n      \"resposta_correta\": \"E\",\n      \"resolucao_passo_a_passo\": [\n        \"1 = 1/1\",\n        \"2 = 2/1\",\n        \"3 = 3/1\",\n        \"5 = 5/1\",\n        \"7 = 7/1\",\n        \"11 = 11/1\"\n      ]\n    },\n    {\n      \"enunciado\": \"Quais números são múltiplos de 3 e 4?\",\n      \"alternativas\": {\n        \"A\": \"6\",\n        \"B\": \"12\",\n        \"C\": \"18\",\n        \"D\": \"24\",\n        \"E\": \"30\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": [\n        \"3 x 4 = 12\",\n        \"3 x 5 = 15\",\n        \"3 x 6 = 18\",\n        \"3 x 7 = 21\",\n        \"3 x 8 = 24\"\n      ]\n    },\n    {\n      \"enunciado\": \"Qual número é múltiplo de 5 e 9?\",\n      \"alternativas\": {\n        \"A\": \"15\",\n        \"B\": \"25\",\n        \"C\": \"45\",\n        \"D\": \"55\",\n        \"E\": \"75\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": [\n        \"5 x 9 = 45\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 419,
+            "total_tokens": 419
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.13586280000163242,
+            "tempo_decode_s": 54.38622029999533,
+            "tempo_resposta_s": 54.52208309999696,
+            "tempo_total_s": 54.52208309999696,
+            "tokens_entrada": 0,
+            "tokens_saida": 419,
+            "tps": 7.684959491212531,
+            "ram_inicio_mb": 2129.6328125,
+            "ram_pico_mb": 2131.38671875,
+            "ram_usada_mb": 1.75390625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número é maior entre 45 e 51?\",\n            \"alternativas\": {\n                \"A\": \"45\",\n                \"B\": \"50\",\n                \"C\": \"51\",\n                \"D\": \"55\",\n                \"E\": \"60\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"51 > 45, 51 > 50, 51 > 55, 51 > 60\"\n        },\n        {\n            \"enunciado\": \"Qual número é menor entre 93 e 98?\",\n            \"alternativas\": {\n                \"A\": \"92\",\n                \"B\": \"93\",\n                \"C\": \"95\",\n                \"D\": \"97\",\n                \"E\": \"100\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"92 < 93, 92 < 95, 92 < 97, 92 < 100\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 234,
+            "total_tokens": 234
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.981914700001653,
+            "tempo_decode_s": 32.098029400003725,
+            "tempo_resposta_s": 37.07994410000538,
+            "tempo_total_s": 37.07994410000538,
+            "tokens_entrada": 0,
+            "tokens_saida": 234,
+            "tps": 6.31068912533679,
+            "ram_inicio_mb": 2131.28125,
+            "ram_pico_mb": 2165.2734375,
+            "ram_usada_mb": 33.9921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número não pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"3\",\n                \"C\": \"5\",\n                \"D\": \"7\",\n                \"E\": \"11\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": [\n                \"1 = 1/1\",\n                \"2 = 2/1\",\n                \"3 = 3/1\",\n                \"5 = 5/1\",\n                \"7 = 7/1\",\n                \"11 = 11/1\"\n            ]\n        },\n        {\n            \"enunciado\": \"Quais números são múltiplos de 3 e 4?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"12\",\n                \"C\": \"18\",\n                \"D\": \"24\",\n                \"E\": \"30\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": [\n                \"12 = 3 x 4\",\n                \"24 = 3 x 8\",\n                \"30 = 3 x 10\"\n            ]\n        },\n        {\n            \"enunciado\": \"Qual número é o maior múltiplo de 5 e 6 entre 20 e 40?\",\n            \"alternativas\": {\n                \"A\": \"25\",\n                \"B\": \"30\",\n                \"C\": \"35\",\n                \"D\": \"40\",\n                \"E\": \"45\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": [\n                \"30 = 5 x 6\",\n                \"35 = 5 x 7\",\n                \"40 = 5 x 8\"\n            ]\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 428,
+            "total_tokens": 428
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.498682000004919,
+            "tempo_decode_s": 58.51624869999796,
+            "tempo_resposta_s": 64.01493070000288,
+            "tempo_total_s": 64.01493070000288,
+            "tokens_entrada": 0,
+            "tokens_saida": 428,
+            "tps": 6.685940222379726,
+            "ram_inicio_mb": 2165.23046875,
+            "ram_pico_mb": 2171.703125,
+            "ram_usada_mb": 6.47265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "timeout",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 3.007034,
+        "ram_media_mb": 2167.464844,
+        "ram_pico_mb": 2176.316406,
+        "tempo_medio_segundos": 129.361173,
+        "ttft_medio_segundos": 3.240771,
+        "tps": {
+          "n": 2,
+          "mediana": 3.007034,
+          "iqr": 3.007034,
+          "p25": 1.503517,
+          "p75": 4.510551,
+          "p95": 5.713364,
+          "p99": 5.953927,
+          "max": 6.014068,
+          "media": 3.007034
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 3.240771,
+          "iqr": 2.988047,
+          "p25": 1.746748,
+          "p75": 4.734795,
+          "p95": 5.930014,
+          "p99": 6.169058,
+          "max": 6.228818,
+          "media": 3.240771
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 129.361173,
+          "iqr": 31.257857,
+          "p25": 113.732245,
+          "p75": 144.990102,
+          "p95": 157.493244,
+          "p99": 159.993873,
+          "max": 160.61903,
+          "media": 129.361173
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2167.464844,
+          "iqr": 8.851562,
+          "p25": 2163.039062,
+          "p75": 2171.890625,
+          "p95": 2175.43125,
+          "p99": 2176.139375,
+          "max": 2176.316406,
+          "media": 2167.464844
+        },
+        "tps_por_rodada": [
+          0.0,
+          6.014067862904819
+        ],
+        "ttft_por_rodada": [
+          6.228818499999761,
+          0.2527244000011706
+        ],
+        "tempo_por_rodada": [
+          160.61903010000242,
+          98.10331600000063
+        ],
+        "ram_por_rodada": [
+          2176.31640625,
+          2158.61328125
+        ],
+        "contagem_falhas": {
+          "timeout": 1,
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 1
+      },
+      "agregado": {
+        "execucoes": 2,
+        "quantidade_de_questoes": 5,
+        "tentativas": 1,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": true,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 2176.316406,
+        "tps_medio": 3.007034,
+        "tempo_medio_segundos": 129.361173,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "timeout": 1,
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.228818499999761,
+            "tempo_decode_s": 154.39021160000266,
+            "tempo_resposta_s": 160.61903010000242,
+            "tempo_total_s": 160.61903010000242,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2174.61328125,
+            "ram_pico_mb": 2176.31640625,
+            "ram_usada_mb": 1.703125,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Qual número pode ser escrito como a soma de 3/4 e 2/5?\",\n      \"alternativas\": {\n        \"A\": \"5/12\",\n        \"B\": \"7/15\",\n        \"C\": \"11/20\",\n        \"D\": \"13/24\",\n        \"E\": \"17/30\"\n      },\n      \"resposta_correta\": \"A\",\n      \"resolucao_passo_a_passo\": \"3/4 + 2/5 = 15/20 + 8/20 = 23/20\"\n    },\n    {\n      \"enunciado\": \"Qual número é igual a 5 vezes 3/4?\",\n      \"alternativas\": {\n        \"A\": \"3/4\",\n        \"B\": \"5/4\",\n        \"C\": \"15/4\",\n        \"D\": \"12/4\",\n        \"E\": \"20/4\"\n      },\n      \"resposta_correta\": \"C\",\n      \"resolucao_passo_a_passo\": \"5 * 3/4 = 15/4\"\n    },\n    {\n      \"enunciado\": \"Qual número é igual à metade de 20?\",\n      \"alternativas\": {\n        \"A\": \"10\",\n        \"B\": \"5\",\n        \"C\": \"10/2\",\n        \"D\": \"20/2\",\n        \"E\": \"30/2\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": \"20/2 = 10\"\n    },\n    {\n      \"enunciado\": \"Qual número é igual à soma de 2/3 e 2/3?\",\n      \"alternativas\": {\n        \"A\": \"1/3\",\n        \"B\": \"2/3\",\n        \"C\": \"4/3\",\n        \"D\": \"6/3\",\n        \"E\": \"8/3\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": \"2/3 + 2/3 = 4/3\"\n    },\n    {\n      \"enunciado\": \"Qual número é igual à diferença de 15/4 e 3/4?\",\n      \"alternativas\": {\n        \"A\": \"6/4\",\n        \"B\": \"7/4\",\n        \"C\": \"10/4\",\n        \"D\": \"12/4\",\n        \"E\": \"15/4\"\n      },\n      \"resposta_correta\": \"D\",\n      \"resolucao_passo_a_passo\": \"15/4 - 3/4 = 12/4\"\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 590,
+            "total_tokens": 590
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.2527244000011706,
+            "tempo_decode_s": 97.85059159999946,
+            "tempo_resposta_s": 98.10331600000063,
+            "tempo_total_s": 98.10331600000063,
+            "tokens_entrada": 0,
+            "tokens_saida": 590,
+            "tps": 6.014067862904819,
+            "ram_inicio_mb": 2145.64453125,
+            "ram_pico_mb": 2158.61328125,
+            "ram_usada_mb": 12.96875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 5.914931,
+        "ram_media_mb": 2177.035156,
+        "ram_pico_mb": 2180.082031,
+        "tempo_medio_segundos": 53.671099,
+        "ttft_medio_segundos": 5.023278,
+        "tps": {
+          "n": 2,
+          "mediana": 5.914931,
+          "iqr": 0.456259,
+          "p25": 5.686801,
+          "p75": 6.14306,
+          "p95": 6.325563,
+          "p99": 6.362064,
+          "max": 6.371189,
+          "media": 5.914931
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 5.023278,
+          "iqr": 0.826429,
+          "p25": 4.610064,
+          "p75": 5.436493,
+          "p95": 5.767065,
+          "p99": 5.833179,
+          "max": 5.849708,
+          "media": 5.023278
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 53.671099,
+          "iqr": 30.598484,
+          "p25": 38.371857,
+          "p75": 68.970341,
+          "p95": 81.209735,
+          "p99": 83.657613,
+          "max": 84.269583,
+          "media": 53.671099
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2177.035156,
+          "iqr": 3.046875,
+          "p25": 2175.511719,
+          "p75": 2178.558594,
+          "p95": 2179.777344,
+          "p99": 2180.021094,
+          "max": 2180.082031,
+          "media": 2177.035156
+        },
+        "tps_por_rodada": [
+          5.4586718436709685,
+          6.37118933964657
+        ],
+        "ttft_por_rodada": [
+          5.8497075000050245,
+          4.196849300002214
+        ],
+        "tempo_por_rodada": [
+          84.26958300000115,
+          23.072615199998836
+        ],
+        "ram_por_rodada": [
+          2180.08203125,
+          2173.98828125
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "A seguir, é mostrado um retângulo com uma diagonal de 10 cm. Qual é o comprimento da diagonal do retângulo?",
+                "alternativas": {
+                  "A": "5 cm",
+                  "B": "7,07 cm",
+                  "C": "10 cm",
+                  "D": "12,25 cm",
+                  "E": "15 cm"
+                },
+                "resposta_correta": "B",
+                "resolucao_passo_a_passo": "1. Para calcular o comprimento da diagonal de um retângulo, podemos usar a fórmula: diagonal = √(a² + b²)\n2. Neste caso, sabemos que a diagonal é de 10 cm, então podemos escrever: 10 = √(a² + b²)\n3. Para resolver a² + b², podemos elevá-lo ao quadrado de ambos os lados: 100 = a² + b²\n4. Para calcular a² + b², podemos usar o valor da diagonal: 100 = 10²\n5. Isso significa que a² + b² é igual ao valor da diagonal ao quadrado: a² + b² = 100\n6. Para encontrar a², podemos subtrair b² do lado esquerdo: a² = 100 - b²\n7. Sabemos que o valor da diagonal é 10 cm, então podemos substituir esse valor: a² = 100 - 10²\n8. Isso significa que a² é igual a 100 - 100: a² = 0\n9. A raiz quadrada de 0 é 0, então a² + b² é igual a 100: √(a² + b²) = √100\n10. Portanto, o valor da diagonal do retângulo é de 10 cm, mas isso não é correto, pois a alternativa B é 7,07 cm."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Um retângulo tem uma altura de 8 cm e uma base de 10 cm. Qual é a área do retângulo?",
+                "alternativas": {
+                  "A": "40",
+                  "B": "48",
+                  "C": "56",
+                  "D": "64",
+                  "E": "72"
+                },
+                "resposta_correta": "B",
+                "resolucao_passo_a_passo": "Área = base × altura\nÁrea = 10 × 8\nÁrea = 80"
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 2180.082031,
+        "tps_medio": 5.914931,
+        "tempo_medio_segundos": 53.671099,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 100.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"A seguir, é mostrado um retângulo com uma diagonal de 10 cm. Qual é o comprimento da diagonal do retângulo?\",\n      \"alternativas\": {\n        \"A\": \"5 cm\",\n        \"B\": \"7,07 cm\",\n        \"C\": \"10 cm\",\n        \"D\": \"12,25 cm\",\n        \"E\": \"15 cm\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": [\n        \"1. Para calcular o comprimento da diagonal de um retângulo, podemos usar a fórmula: diagonal = √(a² + b²)\",\n        \"2. Neste caso, sabemos que a diagonal é de 10 cm, então podemos escrever: 10 = √(a² + b²)\",\n        \"3. Para resolver a² + b², podemos elevá-lo ao quadrado de ambos os lados: 100 = a² + b²\",\n        \"4. Para calcular a² + b², podemos usar o valor da diagonal: 100 = 10²\",\n        \"5. Isso significa que a² + b² é igual ao valor da diagonal ao quadrado: a² + b² = 100\",\n        \"6. Para encontrar a², podemos subtrair b² do lado esquerdo: a² = 100 - b²\",\n        \"7. Sabemos que o valor da diagonal é 10 cm, então podemos substituir esse valor: a² = 100 - 10²\",\n        \"8. Isso significa que a² é igual a 100 - 100: a² = 0\",\n        \"9. A raiz quadrada de 0 é 0, então a² + b² é igual a 100: √(a² + b²) = √100\",\n        \"10. Portanto, o valor da diagonal do retângulo é de 10 cm, mas isso não é correto, pois a alternativa B é 7,07 cm.\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 460,
+            "total_tokens": 460
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.8497075000050245,
+            "tempo_decode_s": 78.41987549999612,
+            "tempo_resposta_s": 84.26958300000115,
+            "tempo_total_s": 84.26958300000115,
+            "tokens_entrada": 0,
+            "tokens_saida": 460,
+            "tps": 5.4586718436709685,
+            "ram_inicio_mb": 2146.24609375,
+            "ram_pico_mb": 2180.08203125,
+            "ram_usada_mb": 33.8359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+          "raw_output": "```\n{\n  \"questoes\": [\n    {\n      \"enunciado\": \"Um retângulo tem uma altura de 8 cm e uma base de 10 cm. Qual é a área do retângulo?\",\n      \"alternativas\": {\n        \"A\": \"40\",\n        \"B\": \"48\",\n        \"C\": \"56\",\n        \"D\": \"64\",\n        \"E\": \"72\"\n      },\n      \"resposta_correta\": \"B\",\n      \"resolucao_passo_a_passo\": [\n        \"Área = base × altura\",\n        \"Área = 10 × 8\",\n        \"Área = 80\"\n      ]\n    }\n  ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 147,
+            "total_tokens": 147
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.196849300002214,
+            "tempo_decode_s": 18.875765899996622,
+            "tempo_resposta_s": 23.072615199998836,
+            "tempo_total_s": 23.072615199998836,
+            "tokens_entrada": 0,
+            "tokens_saida": 147,
+            "tps": 6.37118933964657,
+            "ram_inicio_mb": 2161.90625,
+            "ram_pico_mb": 2173.98828125,
+            "ram_usada_mb": 12.08203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2180.1,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2180.1 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2.68,
+        "limite": 5.0,
+        "motivo": "TPS 2.68 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 1,
+        "limite": 0,
+        "motivo": "Crash/OOM detectado — 1 ocorrência(s)",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 70.0,
+        "limite": 60.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 129.36,
+        "limite": 90.0,
+        "motivo": "Tempo médio 129.4s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -88.5,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "RAM pico 2180.1 MB — limite 2048.0 MB",
+      "TPS 2.68 abaixo do mínimo 5.0",
+      "Crash/OOM detectado — 1 ocorrência(s)",
+      "Tempo médio 129.4s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "hardware",
+      "performance"
+    ],
+    "modelo": "unsloth/Llama-3.2-3B-Instruct-GGUF",
+    "gerado_em": "2026-09-09T19:56:54.817848"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "RAM pico 2180.1 MB — limite 2048.0 MB; TPS 2.68 abaixo do mínimo 5.0; Crash/OOM detectado — 1 ocorrência(s); Tempo médio 129.4s acima de 90.0s"
+}
