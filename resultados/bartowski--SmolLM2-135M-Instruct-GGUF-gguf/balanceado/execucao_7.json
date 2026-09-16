@@ -1,0 +1,1183 @@
+{
+  "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "11/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/SmolLM2-135M-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/SmolLM2-135M-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--SmolLM2-135M-Instruct-GGUF\\SmolLM2-135M-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 89,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 89
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 89
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 89
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 89
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 89
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 89
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.59,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": "JSON não encontrado na resposta",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 0.44195539999054745,
+        "tempo_prefill_s": 3.9726801999786403,
+        "tempo_decode_s": 23.692769000015687,
+        "tempo_resposta_s": 27.665449199994328,
+        "tempo_total_s": 28.107404599984875,
+        "tokens_entrada": 0,
+        "tokens_saida": 1024,
+        "tps": 37.01367697294465,
+        "ram_inicio_mb": 32.48828125,
+        "ram_pico_mb": 235.8984375,
+        "ram_usada_mb": 203.41015625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 28.107404599984875,
+        "tempo_carregamento_s": 0.44195539999054745,
+        "tempo_resposta_s": 27.665449199994328,
+        "ram_pico_mb": 235.8984375,
+        "ram_inicio_mb": 32.48828125,
+        "ttft_segundos": 3.9726801999786403,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O exemplo 1 é um questão na forma da habilidade EF09MA01. O exemplo da forma da habilidade é o que pode ser inéditas e alinhadas para a habilidade EF09MA01. O exemplo 1 é o que pode ser inéditos e alinhas à habilidade EF09MA01.\n\nO exemplo 2 é um questão à forma de uma fração a/b. Pode ser inéditos e alinhas à habilidade EF09MA01.\n\nO exemplo 3 é um questão na forma de uma fração a/b. Pode ser inéditos e alinhas à habilidade EF09MA01.\n\nPara estudar a habilidade EF09MA01, você pode verificar o seguinte exemplo:\n\n**Entrada de questões:**\n\n[A]\nEF09MA01\nEF09MA02\nEF09MA03\nEF09MA04\nEF09MA05\nEF09MA06\nEF09MA07\nEF09MA08\nEF09MA09\nEF09MA010\nEF09MA011\nEF09MA012\nEF09MA013\nEF09MA014\nEF09MA015\nEF09MA016\nEF09MA017\nEF09MA018\nEF09MA019\nEF09MA020\nEF09MA021\nEF09MA022\nEF09MA023\nEF09MA024\nEF09MA025\nEF09MA026\nEF09MA027\nEF09MA028\nEF09MA029\nEF09MA030\nEF09MA031\nEF09MA032\nEF09MA033\nEF09MA034\nEF09MA035\nEF09MA036\nEF09MA037\nEF09MA038\nEF09MA039\nEF09MA040\nEF09MA041\nEF09MA042\nEF09MA043\nEF09MA044\nEF09MA045\nEF09MA046\nEF09MA047\nEF09MA048\nEF09MA049\nEF09MA050\nEF09MA051\nEF09MA052\nEF09MA053\nEF09MA054\nEF09MA055\nEF09MA056\nEF09MA057\nEF09MA058\nEF09MA059\nEF09MA060\nEF09MA061\nEF09MA062\nEF09MA063\nEF09MA064\nEF09MA065\nEF09MA066\nEF09MA067\nEF09MA068\nEF09MA069\nEF09MA070\nEF09MA071\nEF09MA072\nEF09MA073\nEF09MA074\nEF09MA075\nEF09MA076\nEF09MA077\nEF09MA078\nEF09MA079\nEF09MA080\nEF09MA081\nEF09MA082\nEF09MA083\nEF09MA084\nEF09MA085\nEF09MA086\nEF09MA087\nEF09MA088\nEF09MA089\nEF09MA090\nEF09MA091\nEF09MA092\nEF09MA093\nEF09MA094\nEF09MA095\nEF09MA096\nEF09MA097\nEF09MA098\nEF09MA099\nEF09MA010\nEF09MA",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_carregamento_s": 0.44195539999054745,
+            "tempo_prefill_s": 3.9726801999786403,
+            "tempo_decode_s": 23.692769000015687,
+            "tempo_resposta_s": 27.665449199994328,
+            "tempo_total_s": 28.107404599984875,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 37.01367697294465,
+            "ram_inicio_mb": 32.48828125,
+            "ram_pico_mb": 235.8984375,
+            "ram_usada_mb": 203.41015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 52.765579,
+          "iqr": 6.810653,
+          "p25": 47.340876,
+          "p75": 54.151528,
+          "p95": 66.080478,
+          "p99": 67.341341,
+          "max": 67.656557,
+          "media": 52.563709
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 0.762653,
+          "iqr": 0.637879,
+          "p25": 0.201638,
+          "p75": 0.839518,
+          "p95": 1.149419,
+          "p99": 1.262695,
+          "max": 1.291013,
+          "media": 0.619123
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 12.404299,
+          "iqr": 16.253888,
+          "p25": 4.512696,
+          "p75": 20.766584,
+          "p95": 22.259761,
+          "p99": 22.592599,
+          "max": 22.675808,
+          "media": 12.530397
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 224.361328,
+          "iqr": 3.085938,
+          "p25": 222.833984,
+          "p75": 225.919922,
+          "p95": 231.038477,
+          "p99": 233.888945,
+          "max": 234.601562,
+          "media": 225.122266
+        },
+        "tps_medio": 52.563709,
+        "ttft_medio_segundos": 0.619123,
+        "tempo_medio_segundos": 12.530397,
+        "ram_pico_mb": 234.601562
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 52.765579,
+          "iqr": 6.810653,
+          "p25": 47.340876,
+          "p75": 54.151528,
+          "p95": 66.080478,
+          "p99": 67.341341,
+          "max": 67.656557,
+          "media": 52.563709
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 0.762653,
+          "iqr": 0.637879,
+          "p25": 0.201638,
+          "p75": 0.839518,
+          "p95": 1.149419,
+          "p99": 1.262695,
+          "max": 1.291013,
+          "media": 0.619123
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 12.404299,
+          "iqr": 16.253888,
+          "p25": 4.512696,
+          "p75": 20.766584,
+          "p95": 22.259761,
+          "p99": 22.592599,
+          "max": 22.675808,
+          "media": 12.530397
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 224.361328,
+          "iqr": 3.085938,
+          "p25": 222.833984,
+          "p75": 225.919922,
+          "p95": 231.038477,
+          "p99": 233.888945,
+          "max": 234.601562,
+          "media": 225.122266
+        },
+        "tps_medio": 52.563709,
+        "ttft_medio_segundos": 0.619123,
+        "tempo_medio_segundos": 12.530397,
+        "ram_pico_mb": 234.601562,
+        "tps_por_rodada": [
+          45.15825852820776,
+          54.3946711070466,
+          67.6565572734793,
+          52.4794782278016,
+          53.05168030469537,
+          53.42209949394742,
+          47.07773315770665,
+          48.130302872560435,
+          40.11214687728711,
+          64.15415816491029
+        ],
+        "ttft_por_rodada": [
+          1.2910134999838192,
+          0.7810440000030212,
+          0.02049659998738207,
+          0.8590087000047788,
+          0.7711753000039607,
+          0.6746927999774925,
+          0.7541311999957543,
+          0.019353899988345802,
+          0.9763595999975223,
+          0.04395330001716502
+        ],
+        "tempo_por_rodada": [
+          22.67580799999996,
+          18.82537350000348,
+          2.7048376000020653,
+          4.573216200020397,
+          19.301933400012786,
+          4.4925227999920025,
+          21.751259699987713,
+          21.25480080000125,
+          5.983225000003586,
+          3.7409890000126325
+        ],
+        "ram_por_rodada": [
+          234.6015625,
+          221.5,
+          222.29296875,
+          223.1796875,
+          224.046875,
+          224.67578125,
+          225.4453125,
+          226.078125,
+          226.68359375,
+          222.71875
+        ],
+        "ram_media_mb": 225.122266
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O objetivo deve ser o que é possível exaltar o é-maior de forma alinhadas do estudo.\n\n**Exemplos de questões existentes:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.2910134999838192,
+            "tempo_decode_s": 21.38479450001614,
+            "tempo_resposta_s": 22.67580799999996,
+            "tempo_total_s": 22.67580799999996,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 45.15825852820776,
+            "ram_inicio_mb": 233.8671875,
+            "ram_pico_mb": 234.6015625,
+            "ram_usada_mb": 0.734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O objetivo deve ser o que os alunos podem utilizar para a habilidade-alvo. Todas as questões devem ser inéditas, e seus exemplos de questões existentes, seguem em uma forma continua.\n\nPodemos utilizar a reta numérica para a habilidade-alvo como o exemplo 1: Usando a reta numérica, qual número está entre 23 e 27?\n\nExemplo 1: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão os exemplos de questões existentes:\n\nAqui estão o exemplo 1: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 2: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão os exemplos de questões existentes:\n\nAqui estão o exemplo 3: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 4: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão os exemplos de questões existentes:\n\nAqui estão o exemplo 5: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 6: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 7: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão os exemplos de questões existentes:\n\nAqui estão o exemplo 8: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 9: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 10: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão os exemplos de questões existentes:\n\nAqui estão o exemplo 11: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 12: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 13: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 14: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 15: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 16: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 17: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 18: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 19: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo 20: Usando a reta numérica, qual número está entre 23 e 27?\n\nAqui estão o exemplo ",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.7810440000030212,
+            "tempo_decode_s": 18.044329500000458,
+            "tempo_resposta_s": 18.82537350000348,
+            "tempo_total_s": 18.82537350000348,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 54.3946711070466,
+            "ram_inicio_mb": 220.51953125,
+            "ram_pico_mb": 221.5,
+            "ram_usada_mb": 0.98046875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O mesmo estrutura é OBRIGATÓRIO.\n\nTodas as questões devem ser inéditas entre si ao longo da resposta.\n\nA resposta correta deve ser distribuída de forma variada entre A, B, C, D e E ao longo das questões.\n\nNesse caso, a resposta será:\n\n\"A\"\n\"B\"\n\"C\"\n\"D\"\n\nTodas as questões devem ser inéditas entre si ao longo da resposta.\n\nO mesmo estrutura é OBRIGATÓRIO.\n\nGere o mesmo estrutura e está disponibilizado.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 183,
+            "total_tokens": 183
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.02049659998738207,
+            "tempo_decode_s": 2.6843410000146832,
+            "tempo_resposta_s": 2.7048376000020653,
+            "tempo_total_s": 2.7048376000020653,
+            "tokens_entrada": 0,
+            "tokens_saida": 183,
+            "tps": 67.6565572734793,
+            "ram_inicio_mb": 221.45703125,
+            "ram_pico_mb": 222.29296875,
+            "ram_usada_mb": 0.8359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O conteúdo do documento será abaixo:\n\nGere exatamente 3 questões de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Habilidade:** EF06MA14\n**Unidade Temática:** Álgebra\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF06MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Se x + 5 = 12, qual é o valor de x?\nExemplo 2: Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nGere 3 questão(ões) novas, inéditas e alinhadas à habilidade EF06MA14.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 240,
+            "total_tokens": 240
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.8590087000047788,
+            "tempo_decode_s": 3.7142075000156183,
+            "tempo_resposta_s": 4.573216200020397,
+            "tempo_total_s": 4.573216200020397,
+            "tokens_entrada": 0,
+            "tokens_saida": 240,
+            "tps": 52.4794782278016,
+            "ram_inicio_mb": 222.23828125,
+            "ram_pico_mb": 223.1796875,
+            "ram_usada_mb": 0.94140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O objetivo deve ser o que é possível exaltar o é-maior de forma alinhadas do estudo.\n\n**Exemplos de questões existentes:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.7711753000039607,
+            "tempo_decode_s": 18.530758100008825,
+            "tempo_resposta_s": 19.301933400012786,
+            "tempo_total_s": 19.301933400012786,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 53.05168030469537,
+            "ram_inicio_mb": 223.1328125,
+            "ram_pico_mb": 224.046875,
+            "ram_usada_mb": 0.9140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O conteúdo do documento será abaixo:\n\nGere exatamente 3 questões de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Habilidade:** EF06MA14\n**Unidade Temática:** Álgebra\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF06MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Se x + 5 = 12, qual é o valor de x?\nExemplo 2: Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nGere 3 questão(ões) novas, inéditas e alinhadas à habilidade EF06MA14.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 240,
+            "total_tokens": 240
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.6746927999774925,
+            "tempo_decode_s": 3.81783000001451,
+            "tempo_resposta_s": 4.4925227999920025,
+            "tempo_total_s": 4.4925227999920025,
+            "tokens_entrada": 0,
+            "tokens_saida": 240,
+            "tps": 53.42209949394742,
+            "ram_inicio_mb": 223.95703125,
+            "ram_pico_mb": 224.67578125,
+            "ram_usada_mb": 0.71875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O objetivo deve ser o que é possível exaltar o é-maior de forma alinhadas do estudo.\n\n**Exemplos de questões existentes:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n- \"Então, você não pode ser o número 000001 diferente de diferentes valores.\"\n\n**Exemplos de questões alinhadas:**\n- \"Então, você tem o número 100% diferente de diferentes valores.\"\n- \"Então",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.7541311999957543,
+            "tempo_decode_s": 20.99712849999196,
+            "tempo_resposta_s": 21.751259699987713,
+            "tempo_total_s": 21.751259699987713,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 47.07773315770665,
+            "ram_inicio_mb": 224.59375,
+            "ram_pico_mb": 225.4453125,
+            "ram_usada_mb": 0.8515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Aquela o aluno tem uma forma muito simbrada, temos um exemplo de questões de múltipla escolha:\n\n**Entrada:**\n\n\"A\" - \"B\"\n\"B\" - \"A\"\n\"A\" - \"B\"\n\nEntrada:\n\n\"B\"\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\nEntrada:\n\nEntrada:\n\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\nEntrada:\n\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\nEntrada:\n\nEntrada:\n\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\nEntrada:\n\nEntrada:\n\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\nEntrada:\n\nEntrada:\n\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\nEntrada:\n\nEntrada:\n\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\"A\"\n\"B\"\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada:\n\nEntrada",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1023,
+            "total_tokens": 1023
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.019353899988345802,
+            "tempo_decode_s": 21.235446900012903,
+            "tempo_resposta_s": 21.25480080000125,
+            "tempo_total_s": 21.25480080000125,
+            "tokens_entrada": 0,
+            "tokens_saida": 1023,
+            "tps": 48.130302872560435,
+            "ram_inicio_mb": 225.37890625,
+            "ram_pico_mb": 226.078125,
+            "ram_usada_mb": 0.69921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O conteúdo do documento será abaixo:\n\nGere exatamente 3 questões de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Habilidade:** EF06MA14\n**Unidade Temática:** Álgebra\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF06MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Se x + 5 = 12, qual é o valor de x?\nExemplo 2: Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nGere 3 questão(ões) novas, inéditas e alinhadas à habilidade EF06MA14.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 240,
+            "total_tokens": 240
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.9763595999975223,
+            "tempo_decode_s": 5.006865400006063,
+            "tempo_resposta_s": 5.983225000003586,
+            "tempo_total_s": 5.983225000003586,
+            "tokens_entrada": 0,
+            "tokens_saida": 240,
+            "tps": 40.11214687728711,
+            "ram_inicio_mb": 226.00390625,
+            "ram_pico_mb": 226.68359375,
+            "ram_usada_mb": 0.6796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O conteúdo do documento será abaixo:\n\nGere exatamente 3 questões de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Habilidade:** EF06MA14\n**Unidade Temática:** Álgebra\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF06MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Se x + 5 = 12, qual é o valor de x?\nExemplo 2: Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nGere 3 questão(ões) novas, inéditas e alinhadas à habilidade EF06MA14.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 240,
+            "total_tokens": 240
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.04395330001716502,
+            "tempo_decode_s": 3.6970356999954674,
+            "tempo_resposta_s": 3.7409890000126325,
+            "tempo_total_s": 3.7409890000126325,
+            "tokens_entrada": 0,
+            "tokens_saida": 240,
+            "tps": 64.15415816491029,
+            "ram_inicio_mb": 222.66015625,
+            "ram_pico_mb": 222.71875,
+            "ram_usada_mb": 0.05859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 51.932939,
+        "ram_media_mb": 209.605469,
+        "ram_pico_mb": 218.910156,
+        "tempo_medio_segundos": 19.932152,
+        "ttft_medio_segundos": 0.327706,
+        "tps": {
+          "n": 3,
+          "mediana": 55.052587,
+          "iqr": 6.411639,
+          "p25": 49.507032,
+          "p75": 55.918671,
+          "p95": 56.611538,
+          "p99": 56.750112,
+          "max": 56.784755,
+          "media": 51.932939
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.028158,
+          "iqr": 0.454633,
+          "p25": 0.025502,
+          "p75": 0.480135,
+          "p95": 0.841717,
+          "p99": 0.914033,
+          "max": 0.932112,
+          "media": 0.327706
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 18.545904,
+          "iqr": 2.645098,
+          "p25": 18.263041,
+          "p75": 20.908139,
+          "p95": 22.797927,
+          "p99": 23.175885,
+          "max": 23.270374,
+          "media": 19.932152
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 205.320312,
+          "iqr": 7.162109,
+          "p25": 204.953125,
+          "p75": 212.115234,
+          "p95": 217.551172,
+          "p99": 218.638359,
+          "max": 218.910156,
+          "media": 209.605469
+        },
+        "tps_por_rodada": [
+          43.961476321973635,
+          56.78475485615965,
+          55.052587056137625
+        ],
+        "ttft_por_rodada": [
+          0.9321124000125565,
+          0.02815810000174679,
+          0.02284630000940524
+        ],
+        "tempo_por_rodada": [
+          23.27037409998593,
+          17.980177999997977,
+          18.54590409999946
+        ],
+        "ram_por_rodada": [
+          218.91015625,
+          204.5859375,
+          205.3203125
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 218.910156,
+        "tps_medio": 51.932939,
+        "tempo_medio_segundos": 19.932152,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Ao verificar o JSON com esta estrutura, você precisamos:\n\n1. Explica o estado inicial do JSON:\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n```\n\n2. Criar questões de múltipla escolha:\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n```\n\nNesse exemplo, a questão \"A\" é um valor numérico, seu é um valor numérico de 0, seu é um valor numérico b, seu é um valor numérico c, e sobras numéricos b, c, e a.\n\n3. Garantir que o aluno pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n```\n\nO exemplo criado como esta é o exemplo de questões de múltipla escolha que pode ser escrita no JSON. Nesse exemplo, o aluno pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0), a fração é um valor numérico (a) e um valor numérico b (b≠0).\n\n4. Calibrar a dificuldade respeita-se a forma de forma alinhadada:\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n```\n\nPara criar questões de múltipla escolha, você precisamos:\n\n1. A resposta verificada seja alinhadas pelo aluno.\n2. A resposta verificada seja alinhadas pelo aluno.\n3. A resposta verificada seja alinhadas pelo aluno.\n4. A resposta verificada seja alinhadas pelo aluno.\n\nO exemplo criado como esta seria um exemplo de questões de múltipla escolha que pode ser escrita no JSON. Nesse exemplo, a resposta verificada seja alinhadas pelo aluno.\n\n5. Redigir a resolução passo a passo de forma didática:\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n```\n\nO exemplo criado como esta seria um exemplo de questões de múltipla es",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1023,
+            "total_tokens": 1023
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.9321124000125565,
+            "tempo_decode_s": 22.338261699973373,
+            "tempo_resposta_s": 23.27037409998593,
+            "tempo_total_s": 23.27037409998593,
+            "tokens_entrada": 0,
+            "tokens_saida": 1023,
+            "tps": 43.961476321973635,
+            "ram_inicio_mb": 217.89453125,
+            "ram_pico_mb": 218.91015625,
+            "ram_usada_mb": 1.015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Ao verificar o JSON com esta estrutura, você precisamos retornar seu número de dados para este habilidade.\n\n**Aquela foi verificada:**\n1. 0: Então, você tem dados adicionados ao banco.\n2. 0: Você tem dados adicionados ao banco.\n\n**Aquela foi realizada:**\nEntão, você tem dados adicionados ao banco.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\n\n**Entrada 1:**\n0\n\n**Entrada 2:**\n0\n\n**Entrada 3:**\n0\n\n**Entrada 4:**\n0\n\n**Entrada 5:**\n0\n\n**Entrada 6:**\n0\n\n**Entrada 7:**\n0\n\n**Entrada 8:**\n0\n\n**Entrada 9:**\n0\n\n**Entrada 10:**\n0\n\n**Entrada 11:**\n0\n\n**Entrada 12:**\n0\n\n**Entrada 13:**\n0\n\n**Entrada 14:**\n0\n\n**Entrada 15:**\n0\n\n**Entrada 16:**\n0\n\n**Entrada 17:**\n0\n\n**Entrada 18:**\n0\n\n**Entrada 19:**\n0\n\n**Entrada 20:**\n0\n\n**Entrada 21:**\n0\n\n**Entrada 22:**\n0\n\n**Entrada 23:**\n0\n\n**Entrada 24:**\n0\n\n**Entrada 25:**\n0\n\n**Entrada 26:**\n0\n\n**Entrada 27:**\n0\n\n**Entrada 28:**\n0\n\n**Entrada 29:**\n0\n\n**Entrada 30:**\n0\n\n**Entrada 31:**\n0\n\n**Entrada 32:**\n0\n\n**Entrada 33:**\n0\n\n**Entrada 34:**\n0\n\n**Entrada 35:**\n0\n\n**Entrada 36:**\n0\n\n**Entrada 37:**\n0\n\n**Entrada 38:**\n0\n\n**Entrada 39:**\n0\n\n**Entrada 40:**\n0\n\n**Entrada 41:**\n0\n\n**Entrada 42:**\n0\n\n**Entrada 43:**\n0\n\n**Entrada 44:**\n0\n\n**Entrada 45:**\n0\n\n**Entrada 46:**\n0\n\n**Entrada 47:**\n0\n\n**Entrada 48:**\n0\n\n**Entrada 49:**\n0\n\n**Entrada 50:**\n0\n\n**Entrada 51:**\n0\n\n**Entrada 52:**\n0\n\n**Entrada 53:**\n0\n\n**Entrada 54:**\n0\n\n**Entrada 55:**\n0\n\n**Entrada 56:**\n0\n\n**Entrada 57:**\n0\n\n**Entrada 58:**\n0\n\n**Entrada 59:**\n0\n\n**Entrada 60:**\n0\n\n**Entrada 61:**\n0\n\n**Entrada 62:**\n0\n\n**Entrada 63:**\n0\n\n**Entrada 64:**\n0\n\n**Entrada 65:**\n0\n\n**Entrada 66:**\n0\n\n**Entrada 67:**\n0\n\n**Entrada 68:**\n0\n\n**Entrada 69:**\n0\n\n**Entrada 70:**\n0\n\n**Entrada 71:**\n0\n\n**Entrada 72:**\n0\n\n**Entrada 73:**\n0\n\n**Entrada 74:**\n0\n\n**Entrada 75:**\n0\n\n**Entrada 76:**\n0\n\n**Entrada 77:**\n0\n\n**Entrada 78:**\n0\n\n**Entrada 79:**\n0\n\n**Entrada 80:**\n0\n\n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1021,
+            "total_tokens": 1021
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.02815810000174679,
+            "tempo_decode_s": 17.95201989999623,
+            "tempo_resposta_s": 17.980177999997977,
+            "tempo_total_s": 17.980177999997977,
+            "tokens_entrada": 0,
+            "tokens_saida": 1021,
+            "tps": 56.78475485615965,
+            "ram_inicio_mb": 203.72265625,
+            "ram_pico_mb": 204.5859375,
+            "ram_usada_mb": 0.86328125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Ao verificar o JSON com esta estrutura, você precisamos retornar seu número de dados para este habilidade.\n\n**Aquela foi verificada:**\n1. 0: Então, você tem dados adicionados ao banco.\n2. 0: Você tem dados adicionados ao banco.\n\n**Aquela foi realizada:**\nEntão, você tem dados adicionados ao banco.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\n\n**Entrada 1:**\n0\n\n**Entrada 2:**\n0\n\n**Entrada 3:**\n0\n\n**Entrada 4:**\n0\n\n**Entrada 5:**\n0\n\n**Entrada 6:**\n0\n\n**Entrada 7:**\n0\n\n**Entrada 8:**\n0\n\n**Entrada 9:**\n0\n\n**Entrada 10:**\n0\n\n**Entrada 11:**\n0\n\n**Entrada 12:**\n0\n\n**Entrada 13:**\n0\n\n**Entrada 14:**\n0\n\n**Entrada 15:**\n0\n\n**Entrada 16:**\n0\n\n**Entrada 17:**\n0\n\n**Entrada 18:**\n0\n\n**Entrada 19:**\n0\n\n**Entrada 20:**\n0\n\n**Entrada 21:**\n0\n\n**Entrada 22:**\n0\n\n**Entrada 23:**\n0\n\n**Entrada 24:**\n0\n\n**Entrada 25:**\n0\n\n**Entrada 26:**\n0\n\n**Entrada 27:**\n0\n\n**Entrada 28:**\n0\n\n**Entrada 29:**\n0\n\n**Entrada 30:**\n0\n\n**Entrada 31:**\n0\n\n**Entrada 32:**\n0\n\n**Entrada 33:**\n0\n\n**Entrada 34:**\n0\n\n**Entrada 35:**\n0\n\n**Entrada 36:**\n0\n\n**Entrada 37:**\n0\n\n**Entrada 38:**\n0\n\n**Entrada 39:**\n0\n\n**Entrada 40:**\n0\n\n**Entrada 41:**\n0\n\n**Entrada 42:**\n0\n\n**Entrada 43:**\n0\n\n**Entrada 44:**\n0\n\n**Entrada 45:**\n0\n\n**Entrada 46:**\n0\n\n**Entrada 47:**\n0\n\n**Entrada 48:**\n0\n\n**Entrada 49:**\n0\n\n**Entrada 50:**\n0\n\n**Entrada 51:**\n0\n\n**Entrada 52:**\n0\n\n**Entrada 53:**\n0\n\n**Entrada 54:**\n0\n\n**Entrada 55:**\n0\n\n**Entrada 56:**\n0\n\n**Entrada 57:**\n0\n\n**Entrada 58:**\n0\n\n**Entrada 59:**\n0\n\n**Entrada 60:**\n0\n\n**Entrada 61:**\n0\n\n**Entrada 62:**\n0\n\n**Entrada 63:**\n0\n\n**Entrada 64:**\n0\n\n**Entrada 65:**\n0\n\n**Entrada 66:**\n0\n\n**Entrada 67:**\n0\n\n**Entrada 68:**\n0\n\n**Entrada 69:**\n0\n\n**Entrada 70:**\n0\n\n**Entrada 71:**\n0\n\n**Entrada 72:**\n0\n\n**Entrada 73:**\n0\n\n**Entrada 74:**\n0\n\n**Entrada 75:**\n0\n\n**Entrada 76:**\n0\n\n**Entrada 77:**\n0\n\n**Entrada 78:**\n0\n\n**Entrada 79:**\n0\n\n**Entrada 80:**\n0\n\n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1021,
+            "total_tokens": 1021
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.02284630000940524,
+            "tempo_decode_s": 18.523057799990056,
+            "tempo_resposta_s": 18.54590409999946,
+            "tempo_total_s": 18.54590409999946,
+            "tokens_entrada": 0,
+            "tokens_saida": 1021,
+            "tps": 55.052587056137625,
+            "ram_inicio_mb": 204.578125,
+            "ram_pico_mb": 205.3203125,
+            "ram_usada_mb": 0.7421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 48.063669,
+        "ram_media_mb": 206.677734,
+        "ram_pico_mb": 207.050781,
+        "tempo_medio_segundos": 21.285168,
+        "ttft_medio_segundos": 0.720143,
+        "tps": {
+          "n": 2,
+          "mediana": 48.063669,
+          "iqr": 1.558518,
+          "p25": 47.28441,
+          "p75": 48.842928,
+          "p95": 49.466335,
+          "p99": 49.591017,
+          "max": 49.622187,
+          "media": 48.063669
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 0.720143,
+          "iqr": 0.072869,
+          "p25": 0.683709,
+          "p75": 0.756577,
+          "p95": 0.785725,
+          "p99": 0.791554,
+          "max": 0.793012,
+          "media": 0.720143
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 21.285168,
+          "iqr": 0.66939,
+          "p25": 20.950473,
+          "p75": 21.619863,
+          "p95": 21.887618,
+          "p99": 21.94117,
+          "max": 21.954557,
+          "media": 21.285168
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 206.677734,
+          "iqr": 0.373047,
+          "p25": 206.491211,
+          "p75": 206.864258,
+          "p95": 207.013477,
+          "p99": 207.04332,
+          "max": 207.050781,
+          "media": 206.677734
+        },
+        "tps_por_rodada": [
+          46.505150680027945,
+          49.62218695191398
+        ],
+        "ttft_por_rodada": [
+          0.6472744999919087,
+          0.7930117000069004
+        ],
+        "tempo_por_rodada": [
+          21.954557399993064,
+          20.615778200008208
+        ],
+        "ram_por_rodada": [
+          206.3046875,
+          207.05078125
+        ],
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "Aquela foi explicada anteriormente, aquela foi desenhadra, para ao meno a verificação de acesso ao seu estudante.\n\nO seu estudante como F13341, que sabia que o estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação, tem uma versão de 1000 aplicações de múltipla escolha.\n\nEntão, ao acessar a estudante, acesso ao estudo não será o mesmo, como ao acessar a estudante de BNCC, que não consiga ser o primeiro que ajuda-se a ser aplicado.\n\nEfuso que estamos acessando a estudante de BNC"
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "...",
+                "alternativas": {
+                  "A": "...",
+                  "B": "...",
+                  "C": "...",
+                  "D": "...",
+                  "E": "..."
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "..."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 207.050781,
+        "tps_medio": 48.063669,
+        "tempo_medio_segundos": 21.285168,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 50.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Aquela foi explicada anteriormente, aquela foi desenhadra, para ao meno a verificação de acesso ao seu estudante.\n\nO seu estudante como F13341, que sabia que o estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação, tem uma versão de 1000 aplicações de múltipla escolha.\n\nEntão, ao acessar a estudante, acesso ao estudo não será o mesmo, como ao acessar a estudante de BNCC, que não consiga ser o primeiro que ajuda-se a ser aplicado.\n\nEfuso que estamos acessando a estudante de BNCC, acessando o estudo de BNCC, ou estando com a estudante de BNCC.\n\nEnquanto estamos acessando a estudante de BNCC, acessando o estudo de BNCC.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante de BNCC, acesso ao estudo não consiga ser o primeiro que ajuda-se a ser aplicado à situação.\n\nAo acessar a estudante",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1021,
+            "total_tokens": 1021
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.6472744999919087,
+            "tempo_decode_s": 21.307282900001155,
+            "tempo_resposta_s": 21.954557399993064,
+            "tempo_total_s": 21.954557399993064,
+            "tokens_entrada": 0,
+            "tokens_saida": 1021,
+            "tps": 46.505150680027945,
+            "ram_inicio_mb": 205.37109375,
+            "ram_pico_mb": 206.3046875,
+            "ram_usada_mb": 0.93359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Aquela foi:\n\n**Entrada:**\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\nA resposta seria:\n\n\"A\"\n\n**Entrada:**\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\n**Entrada:**\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\n**Entrada:**\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\n**Entrada:**\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\n**Entrada:**\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\n**Entrada:**\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\n**Entrada:**\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\n**Entrada:**\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\n**Entrada:**\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\n**Entrada:**\n{\n    \"questoes\": [",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1023,
+            "total_tokens": 1023
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.7930117000069004,
+            "tempo_decode_s": 19.822766500001308,
+            "tempo_resposta_s": 20.615778200008208,
+            "tempo_total_s": 20.615778200008208,
+            "tokens_entrada": 0,
+            "tokens_saida": 1023,
+            "tps": 49.62218695191398,
+            "ram_inicio_mb": 206.30078125,
+            "ram_pico_mb": 207.05078125,
+            "ram_usada_mb": 0.75,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 235.9,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 37.01,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 21.29,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -42.1,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+    "gerado_em": "2026-09-11T09:27:09.108756"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}

@@ -1,0 +1,1207 @@
+{
+  "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+  "formato": "gguf",
+  "data": "12/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--HuggingFaceTB_SmolLM3-3B-GGUF\\HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf"
+    },
+    "seed": 55,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 55
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 55
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.36,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Se a soma dos três números inteiros a, b e c é 27, e a diferença entre a e b é 5, qual é o valor de a + b + c se c = 10?",
+            "alternativas": {
+              "A": "25",
+              "B": "30",
+              "C": "27",
+              "D": "35",
+              "E": "40"
+            },
+            "resposta_correta": "B",
+            "resolucao_passo_a_passo": "Sabemos que a + b + c = 27 e c = 10. Substituindo c no primeiro termo, temos a + b + 10 = 27. Isso significa que a + b = 27 - 10 = 17. Dado que a - b = 5, podemos escrever a = b + 5. Substituindo a na equação a + b = 17, temos (b + 5) + b = 17. Isso simplifica para 2b + 5 = 17. Resolvendo para b, temos 2b = 12, ou seja, b = 6. Como a = b + 5, então a = 6 + 5 = 11. Portanto, a + b = 11 + 6 = 17. O valor de a + b + c é 17 + 10 = 27. No entanto, o problema pede a soma de a, b e c com c = 10, mas a pergunta está correta, então a soma é 27, mas o valor de a + b + c com c = 10 é 17 + 10 = 27. Como a resposta correta é B, e 30 é a soma quando a + b = 20 e c = 10, então a resposta correta é B."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 3.357854600006249,
+        "tempo_prefill_s": 25.847129000001587,
+        "tempo_decode_s": 54.14909620000981,
+        "tempo_resposta_s": 79.9962252000114,
+        "tempo_total_s": 83.35407980001764,
+        "tokens_entrada": 0,
+        "tokens_saida": 432,
+        "tps": 5.400254811022489,
+        "ram_inicio_mb": 45.74609375,
+        "ram_pico_mb": 3080.87109375,
+        "ram_usada_mb": 3035.125,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 83.35407980001764,
+        "tempo_carregamento_s": 3.357854600006249,
+        "tempo_resposta_s": 79.9962252000114,
+        "ram_pico_mb": 3080.87109375,
+        "ram_inicio_mb": 45.74609375,
+        "ttft_segundos": 25.847129000001587,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se a soma dos três números inteiros a, b e c é 27, e a diferença entre a e b é 5, qual é o valor de a + b + c se c = 10?\",\n            \"alternativas\": {\n                \"A\": \"25\",\n                \"B\": \"30\",\n                \"C\": \"27\",\n                \"D\": \"35\",\n                \"E\": \"40\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Sabemos que a + b + c = 27 e c = 10. Substituindo c no primeiro termo, temos a + b + 10 = 27. Isso significa que a + b = 27 - 10 = 17. Dado que a - b = 5, podemos escrever a = b + 5. Substituindo a na equação a + b = 17, temos (b + 5) + b = 17. Isso simplifica para 2b + 5 = 17. Resolvendo para b, temos 2b = 12, ou seja, b = 6. Como a = b + 5, então a = 6 + 5 = 11. Portanto, a + b = 11 + 6 = 17. O valor de a + b + c é 17 + 10 = 27. No entanto, o problema pede a soma de a, b e c com c = 10, mas a pergunta está correta, então a soma é 27, mas o valor de a + b + c com c = 10 é 17 + 10 = 27. Como a resposta correta é B, e 30 é a soma quando a + b = 20 e c = 10, então a resposta correta é B.\"\n            }\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 432,
+            "total_tokens": 432
+          },
+          "metrics": {
+            "tempo_carregamento_s": 3.357854600006249,
+            "tempo_prefill_s": 25.847129000001587,
+            "tempo_decode_s": 54.14909620000981,
+            "tempo_resposta_s": 79.9962252000114,
+            "tempo_total_s": 83.35407980001764,
+            "tokens_entrada": 0,
+            "tokens_saida": 432,
+            "tps": 5.400254811022489,
+            "ram_inicio_mb": 45.74609375,
+            "ram_pico_mb": 3080.87109375,
+            "ram_usada_mb": 3035.125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 7.630089,
+          "iqr": 0.504022,
+          "p25": 7.373315,
+          "p75": 7.877338,
+          "p95": 8.392736,
+          "p99": 8.438056,
+          "max": 8.449386,
+          "media": 6.97287
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.586896,
+          "iqr": 0.823084,
+          "p25": 4.456596,
+          "p75": 5.27968,
+          "p95": 6.484971,
+          "p99": 7.148484,
+          "max": 7.314362,
+          "media": 4.148903
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 61.769844,
+          "iqr": 60.595782,
+          "p25": 53.447391,
+          "p75": 114.043173,
+          "p95": 126.010835,
+          "p99": 132.248108,
+          "max": 133.807426,
+          "media": 76.944368
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2760.539062,
+          "iqr": 171.519531,
+          "p25": 2593.025391,
+          "p75": 2764.544922,
+          "p95": 2837.824219,
+          "p99": 2884.427344,
+          "max": 2896.078125,
+          "media": 2646.530078
+        },
+        "tps_medio": 6.97287,
+        "ttft_medio_segundos": 4.148903,
+        "tempo_medio_segundos": 76.944368,
+        "ram_pico_mb": 2896.078125
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 4,
+        "json_invalidos": 5,
+        "taxa_json_valido_percent": 40.0,
+        "json_valido_ic95": {
+          "numerador": 4,
+          "denominador": 10,
+          "ponto": 0.4,
+          "ic95": [
+            0.16818,
+            0.687326
+          ],
+          "formato": "40.0% [16.8–68.7]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 4,
+        "gabarito_avaliados": 4,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 4,
+          "denominador": 4,
+          "ponto": 1.0,
+          "ic95": [
+            0.510109,
+            1.0
+          ],
+          "formato": "100.0% [51.0–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 4,
+        "taxa_utilizavel_percent": 40.0,
+        "utilizavel_ic95": {
+          "numerador": 4,
+          "denominador": 10,
+          "ponto": 0.4,
+          "ic95": [
+            0.16818,
+            0.687326
+          ],
+          "formato": "40.0% [16.8–68.7]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "timeout": 1,
+          "ok": 4,
+          "json_invalido": 5
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 7.630089,
+          "iqr": 0.504022,
+          "p25": 7.373315,
+          "p75": 7.877338,
+          "p95": 8.392736,
+          "p99": 8.438056,
+          "max": 8.449386,
+          "media": 6.97287
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.586896,
+          "iqr": 0.823084,
+          "p25": 4.456596,
+          "p75": 5.27968,
+          "p95": 6.484971,
+          "p99": 7.148484,
+          "max": 7.314362,
+          "media": 4.148903
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 61.769844,
+          "iqr": 60.595782,
+          "p25": 53.447391,
+          "p75": 114.043173,
+          "p95": 126.010835,
+          "p99": 132.248108,
+          "max": 133.807426,
+          "media": 76.944368
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2760.539062,
+          "iqr": 171.519531,
+          "p25": 2593.025391,
+          "p75": 2764.544922,
+          "p95": 2837.824219,
+          "p99": 2884.427344,
+          "max": 2896.078125,
+          "media": 2646.530078
+        },
+        "tps_medio": 6.97287,
+        "ttft_medio_segundos": 4.148903,
+        "tempo_medio_segundos": 76.944368,
+        "ram_pico_mb": 2896.078125,
+        "tps_por_rodada": [
+          0.0,
+          8.449385782992628,
+          8.323497171777994,
+          7.297281135601958,
+          7.619491077533355,
+          7.768180559226359,
+          7.115039969235096,
+          7.640687196404623,
+          7.601417907616261,
+          7.913723322145464
+        ],
+        "ttft_por_rodada": [
+          7.3143617999739945,
+          0.1148109000059776,
+          0.11570809996919706,
+          4.621599500009324,
+          5.471270199981518,
+          4.449900200008415,
+          4.999390000011772,
+          5.373110199987423,
+          4.552192699979059,
+          4.476683499990031
+        ],
+        "tempo_por_rodada": [
+          133.80742579995422,
+          61.30623139999807,
+          62.23345659999177,
+          30.422289600013755,
+          53.41564099997049,
+          114.5699424999766,
+          31.20151129999431,
+          116.48166939994553,
+          53.54264229995897,
+          112.46286530001089
+        ],
+        "ram_por_rodada": [
+          2896.078125,
+          2759.71484375,
+          2761.36328125,
+          2763.19140625,
+          2764.99609375,
+          2766.625,
+          2615.90625,
+          2585.3984375,
+          2275.26171875,
+          2276.765625
+        ],
+        "ram_media_mb": 2646.530078
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 7.3143617999739945,
+            "tempo_decode_s": 126.49306399998022,
+            "tempo_resposta_s": 133.80742579995422,
+            "tempo_total_s": 133.80742579995422,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2894.20703125,
+            "ram_pico_mb": 2896.078125,
+            "ram_usada_mb": 1.87109375,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se a soma dos números 7/2, 3/4 e x é igual a 10, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"17/2\",\n                \"B\": \"27/2\",\n                \"C\": \"37/2\",\n                \"D\": \"47/2\",\n                \"E\": \"57/2\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"7/2 + 3/4 + x = 10\\n(14/4 + 3/4) + x = 10\\n17/4 + x = 10\\nx = 10 - 17/4\\nx = (40/4 - 17/4)\\n= 23/4 = 27/2\"\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da soma de 5/3 e 7/6?\",\n            \"alternativas\": {\n                \"A\": \"38/6\",\n                \"B\": \"44/6\",\n                \"C\": \"48/6\",\n                \"D\": \"52/6\",\n                \"E\": \"56/6\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"5/3 + 7/6 = (10/6 + 7/6) = 17/6\"\n        },\n        {\n            \"enunciado\": \"Se a diferença entre 15/4 e 7/4 é 8/3, qual é o valor de x se 15/4 - x = 7/4?\",\n            \"alternativas\": {\n                \"A\": \"17/4\",\n                \"B\": \"23/4\",\n                \"C\": \"29/4\",\n                \"D\": \"35/4\",\n                \"E\": \"41/4\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"15/4 - x = 7/4\\nx = 15/4 - 7/4\\nx = 8/4 = 2\\nx = 8/3 * 4/4 = 32/12 = 8/3\\nx = 23/4\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 518,
+            "total_tokens": 518
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.1148109000059776,
+            "tempo_decode_s": 61.19142049999209,
+            "tempo_resposta_s": 61.30623139999807,
+            "tempo_total_s": 61.30623139999807,
+            "tokens_entrada": 0,
+            "tokens_saida": 518,
+            "tps": 8.449385782992628,
+            "ram_inicio_mb": 2758.0,
+            "ram_pico_mb": 2759.71484375,
+            "ram_usada_mb": 1.71484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se a soma dos números 7/2, 3/4 e x é igual a 10, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"17/2\",\n                \"B\": \"27/2\",\n                \"C\": \"37/2\",\n                \"D\": \"47/2\",\n                \"E\": \"57/2\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"7/2 + 3/4 + x = 10\\n(14/4 + 3/4) + x = 10\\n17/4 + x = 10\\nx = 10 - 17/4\\nx = (40/4 - 17/4)\\n= 23/4 = 27/2\"\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da soma de 5/3 e 7/6?\",\n            \"alternativas\": {\n                \"A\": \"38/6\",\n                \"B\": \"44/6\",\n                \"C\": \"48/6\",\n                \"D\": \"52/6\",\n                \"E\": \"56/6\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"5/3 + 7/6 = (10/6 + 7/6) = 17/6\"\n        },\n        {\n            \"enunciado\": \"Se a diferença entre 15/4 e 7/4 é 8/3, qual é o valor de x se 15/4 - x = 7/4?\",\n            \"alternativas\": {\n                \"A\": \"17/4\",\n                \"B\": \"23/4\",\n                \"C\": \"29/4\",\n                \"D\": \"35/4\",\n                \"E\": \"41/4\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"15/4 - x = 7/4\\nx = 15/4 - 7/4\\nx = 8/4 = 2\\nx = 8/3 * 4/4 = 32/12 = 8/3\\nx = 23/4\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 518,
+            "total_tokens": 518
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.11570809996919706,
+            "tempo_decode_s": 62.11774850002257,
+            "tempo_resposta_s": 62.23345659999177,
+            "tempo_total_s": 62.23345659999177,
+            "tokens_entrada": 0,
+            "tokens_saida": 518,
+            "tps": 8.323497171777994,
+            "ram_inicio_mb": 2759.77734375,
+            "ram_pico_mb": 2761.36328125,
+            "ram_usada_mb": 1.5859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 23 e 27?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"26\",\n                \"C\": \"28\",\n                \"D\": \"22\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"23 < x < 27 → 24\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 45 e 50?\",\n            \"alternativas\": {\n                \"A\": \"48\",\n                \"B\": \"49\",\n                \"C\": \"47\",\n                \"D\": \"51\",\n                \"E\": \"46\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"45 < x < 50 → 48\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 222,
+            "total_tokens": 222
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.621599500009324,
+            "tempo_decode_s": 25.80069010000443,
+            "tempo_resposta_s": 30.422289600013755,
+            "tempo_total_s": 30.422289600013755,
+            "tokens_entrada": 0,
+            "tokens_saida": 222,
+            "tps": 7.297281135601958,
+            "ram_inicio_mb": 2761.34765625,
+            "ram_pico_mb": 2763.19140625,
+            "ram_usada_mb": 1.84375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine o valor de x em que 3x + 7 = 22.\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3x + 7 = 22\\n3x = 22 - 7\\n3x = 15\\nx = 15 / 3\\nx = 5\"\n        },\n        {\n            \"enunciado\": \"Se 4y - 2 = 14, qual é o valor de y?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"4y - 2 = 14\\n4y = 14 + 2\\n4y = 16\\ny = 16 / 4\\ny = 4\"\n        },\n        {\n            \"enunciado\": \"Resolva a equação 2z + 9 = 25 para z.\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"2z + 9 = 25\\n2z = 25 - 9\\n2z = 16\\nz = 16 / 2\\nz = 8\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 407,
+            "total_tokens": 407
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.471270199981518,
+            "tempo_decode_s": 47.944370799988974,
+            "tempo_resposta_s": 53.41564099997049,
+            "tempo_total_s": 53.41564099997049,
+            "tokens_entrada": 0,
+            "tokens_saida": 407,
+            "tps": 7.619491077533355,
+            "ram_inicio_mb": 2763.1875,
+            "ram_pico_mb": 2764.99609375,
+            "ram_usada_mb": 1.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se a soma dos números 7/10, 3/5 e 2/4 é expressa como uma fração A/B, onde A e B são inteiros, qual é o valor de A + B?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"17\",\n                \"C\": \"23\",\n                \"D\": \"27\",\n                \"E\": \"31\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"7/10 + 3/5 + 2/4 = 7/10 + 6/10 + 5/10 = 18/10 = 9/5. A + B = 9 + 5 = 14. A alternativa C está incorreta, mas a soma de A + B é 14, que não está entre as alternativas. No entanto, se considerarmos o valor de A + B da forma 9/5, então 9 + 5 = 14, mas como a alternativa 14 não está presente, devemos reavaliar. A soma de A e B na forma 18/10 simplificada é 9/5, então 9 + 5 = 14, mas a alternativa correta deve ser 14, que não está presente. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa correta, considerando a soma 14, está faltando, mas se considerarmos a soma como 18/10 = 9/5, então 9 + 5 = 14, mas como isso não está presente, a alternativa mais próxima que pode estar correta é 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto.\"\n            }\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da seguinte operação: (3/4) ÷ (5/6)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"3/5\",\n                \"C\": \"9/10\",\n                \"D\": \"11/12\",\n                \"E\": \"7/8\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"3/4 ÷ 5/6 = 3/4 * 6/5 = 18/20 = 9/10. A alternativa C está correta.\"\n        },\n        {\n            \"enunciado\": \"Se a soma de 4/9 e 2/3 é expressa como uma fração A/B, onde A e B são inteiros, qual é o valor de B?\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"11\",\n                \"C\": \"13\",\n                \"D\": \"17\",\n                \"E\": \"19\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"4/9 + 2/3 = 4/9 + 6/9 = 10/9. B = 9. A alternativa E está incorreta, mas B = 9, que não está presente. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 19, mas isso é incorreto.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 890,
+            "total_tokens": 890
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.449900200008415,
+            "tempo_decode_s": 110.12004229996819,
+            "tempo_resposta_s": 114.5699424999766,
+            "tempo_total_s": 114.5699424999766,
+            "tokens_entrada": 0,
+            "tokens_saida": 890,
+            "tps": 7.768180559226359,
+            "ram_inicio_mb": 2764.96484375,
+            "ram_pico_mb": 2766.625,
+            "ram_usada_mb": 1.66015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 23 e 27?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"26\",\n                \"C\": \"28\",\n                \"D\": \"22\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"23 < x < 27 → 24\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 45 e 50?\",\n            \"alternativas\": {\n                \"A\": \"48\",\n                \"B\": \"49\",\n                \"C\": \"47\",\n                \"D\": \"51\",\n                \"E\": \"46\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"45 < x < 50 → 48\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 222,
+            "total_tokens": 222
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.999390000011772,
+            "tempo_decode_s": 26.202121299982537,
+            "tempo_resposta_s": 31.20151129999431,
+            "tempo_total_s": 31.20151129999431,
+            "tokens_entrada": 0,
+            "tokens_saida": 222,
+            "tps": 7.115039969235096,
+            "ram_inicio_mb": 2613.75390625,
+            "ram_pico_mb": 2615.90625,
+            "ram_usada_mb": 2.15234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se a soma dos números 7/10, 3/5 e 2/4 é expressa como uma fração A/B, onde A e B são inteiros, qual é o valor de A + B?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"17\",\n                \"C\": \"23\",\n                \"D\": \"27\",\n                \"E\": \"31\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"7/10 + 3/5 + 2/4 = 7/10 + 6/10 + 5/10 = 18/10 = 9/5. A + B = 9 + 5 = 14. A alternativa C está incorreta, mas a soma de A + B é 14, que não está entre as alternativas. No entanto, se considerarmos o valor de A + B da forma 9/5, então 9 + 5 = 14, mas como a alternativa 14 não está presente, devemos reavaliar. A soma de A e B na forma 18/10 simplificada é 9/5, então 9 + 5 = 14, mas a alternativa correta deve ser 14, que não está presente. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa correta, considerando a soma 14, está faltando, mas se considerarmos a soma como 18/10 = 9/5, então 9 + 5 = 14, mas como isso não está presente, a alternativa mais próxima que pode estar correta é 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto.\"\n            }\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da seguinte operação: (3/4) ÷ (5/6)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"3/5\",\n                \"C\": \"9/10\",\n                \"D\": \"11/12\",\n                \"E\": \"7/8\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"3/4 ÷ 5/6 = 3/4 * 6/5 = 18/20 = 9/10. A alternativa C está correta.\"\n        },\n        {\n            \"enunciado\": \"Se a soma de 4/9 e 2/3 é expressa como uma fração A/B, onde A e B são inteiros, qual é o valor de B?\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"11\",\n                \"C\": \"13\",\n                \"D\": \"17\",\n                \"E\": \"19\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"4/9 + 2/3 = 4/9 + 6/9 = 10/9. B = 9. A alternativa E está incorreta, mas B = 9, que não está presente. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 19, mas isso é incorreto.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 890,
+            "total_tokens": 890
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.373110199987423,
+            "tempo_decode_s": 111.10855919995811,
+            "tempo_resposta_s": 116.48166939994553,
+            "tempo_total_s": 116.48166939994553,
+            "tokens_entrada": 0,
+            "tokens_saida": 890,
+            "tps": 7.640687196404623,
+            "ram_inicio_mb": 2583.82421875,
+            "ram_pico_mb": 2585.3984375,
+            "ram_usada_mb": 1.57421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine o valor de x em que 3x + 7 = 22.\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3x + 7 = 22\\n3x = 22 - 7\\n3x = 15\\nx = 15 / 3\\nx = 5\"\n        },\n        {\n            \"enunciado\": \"Se 4y - 2 = 14, qual é o valor de y?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"4y - 2 = 14\\n4y = 14 + 2\\n4y = 16\\ny = 16 / 4\\ny = 4\"\n        },\n        {\n            \"enunciado\": \"Resolva a equação 2z + 9 = 25 para z.\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"2z + 9 = 25\\n2z = 25 - 9\\n2z = 16\\nz = 16 / 2\\nz = 8\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 407,
+            "total_tokens": 407
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.552192699979059,
+            "tempo_decode_s": 48.99044959997991,
+            "tempo_resposta_s": 53.54264229995897,
+            "tempo_total_s": 53.54264229995897,
+            "tokens_entrada": 0,
+            "tokens_saida": 407,
+            "tps": 7.601417907616261,
+            "ram_inicio_mb": 2273.640625,
+            "ram_pico_mb": 2275.26171875,
+            "ram_usada_mb": 1.62109375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se a soma dos números 7/10, 3/5 e 2/4 é expressa como uma fração A/B, onde A e B são inteiros, qual é o valor de A + B?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"17\",\n                \"C\": \"23\",\n                \"D\": \"27\",\n                \"E\": \"31\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"7/10 + 3/5 + 2/4 = 7/10 + 6/10 + 5/10 = 18/10 = 9/5. A + B = 9 + 5 = 14. A alternativa C está incorreta, mas a soma de A + B é 14, que não está entre as alternativas. No entanto, se considerarmos o valor de A + B da forma 9/5, então 9 + 5 = 14, mas como a alternativa 14 não está presente, devemos reavaliar. A soma de A e B na forma 18/10 simplificada é 9/5, então 9 + 5 = 14, mas a alternativa correta deve ser 14, que não está presente. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa correta, considerando a soma 14, está faltando, mas se considerarmos a soma como 18/10 = 9/5, então 9 + 5 = 14, mas como isso não está presente, a alternativa mais próxima que pode estar correta é 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 23, mas isso é incorreto.\"\n            }\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da seguinte operação: (3/4) ÷ (5/6)?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"3/5\",\n                \"C\": \"9/10\",\n                \"D\": \"11/12\",\n                \"E\": \"7/8\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"3/4 ÷ 5/6 = 3/4 * 6/5 = 18/20 = 9/10. A alternativa C está correta.\"\n        },\n        {\n            \"enunciado\": \"Se a soma de 4/9 e 2/3 é expressa como uma fração A/B, onde A e B são inteiros, qual é o valor de B?\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"11\",\n                \"C\": \"13\",\n                \"D\": \"17\",\n                \"E\": \"19\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"4/9 + 2/3 = 4/9 + 6/9 = 10/9. B = 9. A alternativa E está incorreta, mas B = 9, que não está presente. A alternativa mais próxima que poderia estar correta, considerando o erro no enunciado, seria 19, mas isso é incorreto.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 890,
+            "total_tokens": 890
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.476683499990031,
+            "tempo_decode_s": 107.98618180002086,
+            "tempo_resposta_s": 112.46286530001089,
+            "tempo_total_s": 112.46286530001089,
+            "tokens_entrada": 0,
+            "tokens_saida": 890,
+            "tps": 7.913723322145464,
+            "ram_inicio_mb": 2275.17578125,
+            "ram_pico_mb": 2276.765625,
+            "ram_usada_mb": 1.58984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "timeout",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 0.0,
+        "ram_media_mb": 2188.196615,
+        "ram_pico_mb": 2278.480469,
+        "tempo_medio_segundos": 126.003467,
+        "ttft_medio_segundos": 1.953717,
+        "tps": {
+          "n": 3,
+          "mediana": 0.0,
+          "iqr": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "max": 0.0,
+          "media": 0.0
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.129349,
+          "iqr": 2.739472,
+          "p25": 0.127889,
+          "p75": 2.867361,
+          "p95": 5.057771,
+          "p99": 5.495853,
+          "max": 5.605373,
+          "media": 1.953717
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 122.199264,
+          "iqr": 6.418784,
+          "p25": 121.843025,
+          "p75": 128.261809,
+          "p95": 133.111845,
+          "p99": 134.081852,
+          "max": 134.324353,
+          "media": 126.003467
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 2157.777344,
+          "iqr": 75.074219,
+          "p25": 2143.054688,
+          "p75": 2218.128906,
+          "p95": 2266.410156,
+          "p99": 2276.066406,
+          "max": 2278.480469,
+          "media": 2188.196615
+        },
+        "tps_por_rodada": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ttft_por_rodada": [
+          5.60537339997245,
+          0.12642960000084713,
+          0.12934860005043447
+        ],
+        "tempo_por_rodada": [
+          134.32435349997832,
+          122.19926359999226,
+          121.48678540001856
+        ],
+        "ram_por_rodada": [
+          2278.48046875,
+          2157.77734375,
+          2128.33203125
+        ],
+        "contagem_falhas": {
+          "timeout": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 3
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 2278.480469,
+        "tps_medio": 0.0,
+        "tempo_medio_segundos": 126.003467,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "timeout": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.60537339997245,
+            "tempo_decode_s": 128.71898010000587,
+            "tempo_resposta_s": 134.32435349997832,
+            "tempo_total_s": 134.32435349997832,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2276.86328125,
+            "ram_pico_mb": 2278.48046875,
+            "ram_usada_mb": 1.6171875,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.12642960000084713,
+            "tempo_decode_s": 122.07283399999142,
+            "tempo_resposta_s": 122.19926359999226,
+            "tempo_total_s": 122.19926359999226,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2155.97265625,
+            "ram_pico_mb": 2157.77734375,
+            "ram_usada_mb": 1.8046875,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.12934860005043447,
+            "tempo_decode_s": 121.35743679996813,
+            "tempo_resposta_s": 121.48678540001856,
+            "tempo_total_s": 121.48678540001856,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2126.62109375,
+            "ram_pico_mb": 2128.33203125,
+            "ram_usada_mb": 1.7109375,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 7.526947,
+        "ram_media_mb": 2131.158203,
+        "ram_pico_mb": 2132.09375,
+        "tempo_medio_segundos": 34.529781,
+        "ttft_medio_segundos": 4.179285,
+        "tps": {
+          "n": 2,
+          "mediana": 7.526947,
+          "iqr": 0.229046,
+          "p25": 7.412424,
+          "p75": 7.641471,
+          "p95": 7.733089,
+          "p99": 7.751413,
+          "max": 7.755994,
+          "media": 7.526947
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 4.179285,
+          "iqr": 0.449375,
+          "p25": 3.954597,
+          "p75": 4.403972,
+          "p95": 4.583723,
+          "p99": 4.619673,
+          "max": 4.62866,
+          "media": 4.179285
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 34.529781,
+          "iqr": 2.602792,
+          "p25": 33.228385,
+          "p75": 35.831177,
+          "p95": 36.872293,
+          "p99": 37.080517,
+          "max": 37.132572,
+          "media": 34.529781
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2131.158203,
+          "iqr": 0.935547,
+          "p25": 2130.69043,
+          "p75": 2131.625977,
+          "p95": 2132.000195,
+          "p99": 2132.075039,
+          "max": 2132.09375,
+          "media": 2131.158203
+        },
+        "tps_por_rodada": [
+          7.29790079923953,
+          7.755993764647804
+        ],
+        "ttft_por_rodada": [
+          4.628660099988338,
+          3.729909499990754
+        ],
+        "tempo_por_rodada": [
+          31.926989200001117,
+          37.132572400034405
+        ],
+        "ram_por_rodada": [
+          2130.22265625,
+          2132.09375
+        ],
+        "contagem_falhas": {
+          "ok": 1,
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Considerando um retângulo cuja área é de 48 m² e cujo comprimento é 8 m, qual é o seu comprimento se o seu comprimento for dobrado e o seu comprimento e largura forem trocados?",
+                "alternativas": {
+                  "A": "6 m",
+                  "B": "8 m",
+                  "C": "12 m",
+                  "D": "24 m",
+                  "E": "48 m"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "a = 48 / 8 = 6 m. Novo comprimento = 6 m, nova largura = 8 m. Novo comprimento = 8 m / 2 = 4 m. Novo comprimento e largura trocados: novo comprimento = 8 m, novo comprimento = 4 m. Novo comprimento = 4 m."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "erro": "Campo 'questoes' ausente",
+            "output_bruto": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Seja quadrado ABCD, com AB = 4 cm e BC = 3 cm. Qual é o comprimento da diagonal AC?\",\n            \"alternativas\": {\n                \"A\": \"5 cm\",\n                \"B\": \"4√2 cm\",\n                \"C\": \"3√2 cm\",\n                \"D\": \"5√2 cm\",\n                \"E\": \"7 cm\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"AC = \\(\\sqrt{AB^2 + BC^2}\\) = \\(\\sqrt{4^2 + 3^2}\\) = \\(\\sqrt{16 + 9}"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 2132.09375,
+        "tps_medio": 7.526947,
+        "tempo_medio_segundos": 34.529781,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 50.0,
+        "taxa_utilizavel_percent": 50.0,
+        "contagem_falhas": {
+          "ok": 1,
+          "json_invalido": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Considerando um retângulo cuja área é de 48 m² e cujo comprimento é 8 m, qual é o seu comprimento se o seu comprimento for dobrado e o seu comprimento e largura forem trocados?\",\n            \"alternativas\": {\n                \"A\": \"6 m\",\n                \"B\": \"8 m\",\n                \"C\": \"12 m\",\n                \"D\": \"24 m\",\n                \"E\": \"48 m\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"a = 48 / 8 = 6 m. Novo comprimento = 6 m, nova largura = 8 m. Novo comprimento = 8 m / 2 = 4 m. Novo comprimento e largura trocados: novo comprimento = 8 m, novo comprimento = 4 m. Novo comprimento = 4 m.\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 233,
+            "total_tokens": 233
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.628660099988338,
+            "tempo_decode_s": 27.29832910001278,
+            "tempo_resposta_s": 31.926989200001117,
+            "tempo_total_s": 31.926989200001117,
+            "tokens_entrada": 0,
+            "tokens_saida": 233,
+            "tps": 7.29790079923953,
+            "ram_inicio_mb": 2128.3671875,
+            "ram_pico_mb": 2130.22265625,
+            "ram_usada_mb": 1.85546875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Seja quadrado ABCD, com AB = 4 cm e BC = 3 cm. Qual é o comprimento da diagonal AC?\",\n            \"alternativas\": {\n                \"A\": \"5 cm\",\n                \"B\": \"4√2 cm\",\n                \"C\": \"3√2 cm\",\n                \"D\": \"5√2 cm\",\n                \"E\": \"7 cm\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"AC = \\(\\sqrt{AB^2 + BC^2}\\) = \\(\\sqrt{4^2 + 3^2}\\) = \\(\\sqrt{16 + 9}\\) = \\(\\sqrt{25}\\) = 5 cm? \\(\\sqrt{16 + 9} = \\(\\sqrt{25}\\) = 5 cm? Não, a fórmula para diagonal de um quadrado é \\(\\sqrt{AB^2 + BC^2}\\), mas isso é para um retângulo. Para quadrado, a diagonal é \\(\\sqrt{2} \\cdot s\\), onde s é o lado. \\(\\sqrt{2} \\cdot 4 = 4\\sqrt{2} cm.\"\n            }\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 288,
+            "total_tokens": 288
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.729909499990754,
+            "tempo_decode_s": 33.40266290004365,
+            "tempo_resposta_s": 37.132572400034405,
+            "tempo_total_s": 37.132572400034405,
+            "tokens_entrada": 0,
+            "tokens_saida": 288,
+            "tps": 7.755993764647804,
+            "ram_inicio_mb": 2130.42578125,
+            "ram_pico_mb": 2132.09375,
+            "ram_usada_mb": 1.66796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3080.9,
+        "limite": 2048.0,
+        "motivo": "RAM pico 3080.9 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 5.0,
+        "motivo": "TPS 0.00 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 4,
+        "limite": 0,
+        "motivo": "Crash/OOM detectado — 4 ocorrência(s)",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 40.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 40.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 126.0,
+        "limite": 90.0,
+        "motivo": "Tempo médio 126.0s acima de 90.0s",
+        "categoria_falha": "performance"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "RAM pico 3080.9 MB — limite 2048.0 MB",
+      "TPS 0.00 abaixo do mínimo 5.0",
+      "Crash/OOM detectado — 4 ocorrência(s)",
+      "Taxa JSON válido 40.0% abaixo de 60.0%",
+      "Tempo médio 126.0s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "formato",
+      "hardware",
+      "performance"
+    ],
+    "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+    "gerado_em": "2026-09-12T09:57:55.253922"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; RAM pico 3080.9 MB — limite 2048.0 MB; TPS 0.00 abaixo do mínimo 5.0; Crash/OOM detectado — 4 ocorrência(s); Taxa JSON válido 40.0% abaixo de 60.0%; Tempo médio 126.0s acima de 90.0s"
+}

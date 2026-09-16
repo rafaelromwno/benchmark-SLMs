@@ -1,0 +1,1169 @@
+{
+  "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+  "formato": "gguf",
+  "data": "12/09/2026",
+  "run_config": {
+    "modelos": [
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\Qwen--Qwen1.5-1.8B-Chat-GGUF\\qwen1_5-1_8b-chat-q4_k_m.gguf"
+    },
+    "seed": 42,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 42
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 42
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 42
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.15,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": "JSON não encontrado na resposta",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 1.5364860000554472,
+        "tempo_prefill_s": 11.702824099978898,
+        "tempo_decode_s": 43.895379499997944,
+        "tempo_resposta_s": 55.59820359997684,
+        "tempo_total_s": 57.13468960003229,
+        "tokens_entrada": 0,
+        "tokens_saida": 634,
+        "tps": 11.403246129345519,
+        "ram_inicio_mb": 62.3125,
+        "ram_pico_mb": 1771.328125,
+        "ram_usada_mb": 1709.015625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 57.13468960003229,
+        "tempo_carregamento_s": 1.5364860000554472,
+        "tempo_resposta_s": 55.59820359997684,
+        "ram_pico_mb": 1771.328125,
+        "ram_inicio_mb": 62.3125,
+        "ttft_segundos": 11.702824099978898,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF09MA01\n**Unidade Temática:** Números\n\n**Pré--requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF08MA01, EF07MA01\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n1. Qual é a diferença entre a fração de 12/13 e a fração de 13/12?\n2. Dado um número, determine se a fração de 4/5 é uma fração múltipla ou não.\n3. Qual é a diferença entre a fração de 2/3 e a fração de 3/2?\n4. Determine se a fração de 1/2 é uma fração múltipla ou não.\n5. Qual é a diferença entre a fração de 7/8 e a fração de 8/7?\n6. Determine se a fração de 2/3 é uma fração múltipla ou não.\n7. Qual é a diferença entre a fração de 5/7 e a fração de 7/5?\n8. Determine se a fração de 1/2 é uma fração múltipla ou não.\n9. Qual é a diferença entre a fração de 9/10 e a fração de 10/9?\n10. Determine se a fração de 1/2 é uma fração múltipla ou não.\n\n**Questões novas, inéditas e alinhadas à habilidade EF09MA01:**\n\n1. Qual é a diferença entre a fração de 1/3 e a fração de 1/2?\n2. Qual é a diferença entre a fração de 4/5 e a fração de 1/5?\n3. Qual é a diferença entre a fração de 6/7 e a fração de 7/6?\n4. Qual é a diferença entre a fração de 1/4 e a fração de 1/3?\n5. Qual é a diferença entre a fração de 7/8 e a fração de 1/4?\n6. Qual é a diferença entre a fração de 8/7 e a fração de 7/8?\n7. Qual é a diferença entre a fração de 9/10 e a fração de 1/4?\n8. Qual é a diferença entre a fração de 1/2 e a fração de 1/3?\n9. Qual é a diferença entre a fração de 9/10 e a fração de 1/4?\n10. Qual é a diferença entre a fração de 1/2 e a fração de 1/3?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 634,
+            "total_tokens": 634
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.5364860000554472,
+            "tempo_prefill_s": 11.702824099978898,
+            "tempo_decode_s": 43.895379499997944,
+            "tempo_resposta_s": 55.59820359997684,
+            "tempo_total_s": 57.13468960003229,
+            "tokens_entrada": 0,
+            "tokens_saida": 634,
+            "tps": 11.403246129345519,
+            "ram_inicio_mb": 62.3125,
+            "ram_pico_mb": 1771.328125,
+            "ram_usada_mb": 1709.015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 14.176162,
+          "iqr": 3.660473,
+          "p25": 11.086344,
+          "p75": 14.746817,
+          "p95": 15.009687,
+          "p99": 15.051203,
+          "max": 15.061582,
+          "media": 13.112198
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.510352,
+          "iqr": 2.34197,
+          "p25": 0.637475,
+          "p75": 2.979445,
+          "p95": 3.10016,
+          "p99": 3.103922,
+          "max": 3.104863,
+          "media": 1.966733
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 9.505189,
+          "iqr": 71.068231,
+          "p25": 6.738428,
+          "p75": 77.806659,
+          "p95": 79.232663,
+          "p99": 80.037306,
+          "max": 80.238467,
+          "media": 35.740777
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1803.117188,
+          "iqr": 12.666016,
+          "p25": 1795.260742,
+          "p75": 1807.926758,
+          "p95": 1811.293359,
+          "p99": 1811.971172,
+          "max": 1812.140625,
+          "media": 1801.814844
+        },
+        "tps_medio": 13.112198,
+        "ttft_medio_segundos": 1.966733,
+        "tempo_medio_segundos": 35.740777,
+        "ram_pico_mb": 1812.140625
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 14.176162,
+          "iqr": 3.660473,
+          "p25": 11.086344,
+          "p75": 14.746817,
+          "p95": 15.009687,
+          "p99": 15.051203,
+          "max": 15.061582,
+          "media": 13.112198
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.510352,
+          "iqr": 2.34197,
+          "p25": 0.637475,
+          "p75": 2.979445,
+          "p95": 3.10016,
+          "p99": 3.103922,
+          "max": 3.104863,
+          "media": 1.966733
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 9.505189,
+          "iqr": 71.068231,
+          "p25": 6.738428,
+          "p75": 77.806659,
+          "p95": 79.232663,
+          "p99": 80.037306,
+          "max": 80.238467,
+          "media": 35.740777
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1803.117188,
+          "iqr": 12.666016,
+          "p25": 1795.260742,
+          "p75": 1807.926758,
+          "p95": 1811.293359,
+          "p99": 1811.971172,
+          "max": 1812.140625,
+          "media": 1801.814844
+        },
+        "tps_medio": 13.112198,
+        "ttft_medio_segundos": 1.966733,
+        "tempo_medio_segundos": 35.740777,
+        "ram_pico_mb": 1812.140625,
+        "tps_por_rodada": [
+          15.061581875425182,
+          9.129282758135576,
+          14.946260845799214,
+          14.007583090395583,
+          14.344740659112421,
+          10.149512139394476,
+          14.762039815912676,
+          14.701146990032566,
+          13.896839491408693,
+          10.122996339100327
+        ],
+        "ttft_por_rodada": [
+          3.104862700041849,
+          3.0944129999843426,
+          0.07044460001634434,
+          2.3188421999802813,
+          3.0024373999913223,
+          2.6514294000226073,
+          0.06813830003375188,
+          0.07701880001695827,
+          2.3692752000060864,
+          2.91046650003409
+        ],
+        "tempo_por_rodada": [
+          77.94665990001522,
+          9.748849099967629,
+          3.9474755999981426,
+          77.38665499998024,
+          80.23846700001741,
+          9.26152890000958,
+          6.028977100038901,
+          6.0539494000258856,
+          78.00334749999456,
+          8.79186330002267
+        ],
+        "ram_por_rodada": [
+          1789.90625,
+          1792.84375,
+          1794.625,
+          1797.16796875,
+          1801.3671875,
+          1804.8671875,
+          1806.60546875,
+          1808.3671875,
+          1810.2578125,
+          1812.140625
+        ],
+        "ram_media_mb": 1801.814844
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Hability:** EF02MA01\n**Unidade Temática:** Números\n**Pré--requisitos que o aluno já deve dominar  (calibração de dificuldade):**\n\n  1. Conhecimento básico da aritmética, incluindo divisões, addições, multiplicações, regulações, frações e equações.\n  2. Comprimento e interpretação de números com base no sistema decimal.\n  3. Conhecimento e uso de operadores matemáticos básicos, como +, -, *, /, % e +e.\n  4. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e -e.\n  5. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  6. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  7. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  8. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  9. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  10. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  11. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  12. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  13. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  14. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  15. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  16. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  17. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  18. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  19. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  20. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  21. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  22. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  23. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  24. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  25. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  26. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  27. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  28. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  29. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  30. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n  31. Conhecimento e uso de operadores matemáticos básicos, como +e, -, *, /, % e e.\n ",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1174,
+            "total_tokens": 1174
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.104862700041849,
+            "tempo_decode_s": 74.84179719997337,
+            "tempo_resposta_s": 77.94665990001522,
+            "tempo_total_s": 77.94665990001522,
+            "tokens_entrada": 0,
+            "tokens_saida": 1174,
+            "tps": 15.061581875425182,
+            "ram_inicio_mb": 1779.17578125,
+            "ram_pico_mb": 1789.90625,
+            "ram_usada_mb": 10.73046875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração a/2 de 1000, com 2000 dividido por 2?\n2. Qual é a fração a/3 de 1000, com 1000 dividido por 3?\n3. Qual é a fração a/5 de 1000, com 1000 dividido por 5?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 89,
+            "total_tokens": 89
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.0944129999843426,
+            "tempo_decode_s": 6.654436099983286,
+            "tempo_resposta_s": 9.748849099967629,
+            "tempo_total_s": 9.748849099967629,
+            "tokens_entrada": 0,
+            "tokens_saida": 89,
+            "tps": 9.129282758135576,
+            "ram_inicio_mb": 1790.765625,
+            "ram_pico_mb": 1792.84375,
+            "ram_usada_mb": 2.078125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração a/2 de 10000?\n  2. Qual é a fração b/3 de 12000?\n  3. Qual é a fração c/4 de 8000?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 59,
+            "total_tokens": 59
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07044460001634434,
+            "tempo_decode_s": 3.8770309999817982,
+            "tempo_resposta_s": 3.9474755999981426,
+            "tempo_total_s": 3.9474755999981426,
+            "tokens_entrada": 0,
+            "tokens_saida": 59,
+            "tps": 14.946260845799214,
+            "ram_inicio_mb": 1792.81640625,
+            "ram_pico_mb": 1794.625,
+            "ram_usada_mb": 1.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Hability:** EF02MA01\n**Unidade Temática:** Números\n**Pré--requisitos que o aluno já deve dominar  (calibração de dificuldade):**\n\n  1. Conhecimento básico da fórmula para encontrar o valor de um número no sistema decimal, como a função `sqrt()`, `pow()`, `mod()`, entre outros.\n  2. Familiaridade com a estrutura de uma regra numérica, como a reta, o intervalo, o valor de um número no intervalo e a função de precisão.\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n  1. Identificar o valor de 10 em um sistema decimal, usando a função `sqrt()`.\n  2. Crie uma regra numérica para encontrar o valor de 5 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n\n**Questões (alternativas)**:\n\n  1. Qual é a raiz quadrada da inteira 27?\n  2. Crie uma regra numérica para encontrar o valor de 30 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  3. Crie uma regra numérica para encontrar o valor de 45 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  4. Crie uma regra numérica para encontrar o valor de 60 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  5. Crie uma regra numérica para encontrar o valor de 75 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  6. Crie uma regra numérica para encontrar o valor de 90 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  7. Crie uma regra numérica para encontrar o valor de 120 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  8. Crie uma regra numérica para encontrar o valor de 150 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  9. Crie uma regra numérica para encontrar o valor de 180 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  10. Crie uma regra numérica para encontrar o valor de 210 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n\n**Resposta correta**: A raiz quadrada da inteira 27 é 3, pois 27 = 3 * 3 * 3.\n**Resposta correta**: A regra numérica para encontrar o valor de 30 em um intervalo de 0 a 10 é 3, pois 30 = 3 * 3 * 5.\n**Resposta correta**: A regra numérica para encontrar o valor de 45 em um intervalo de 0 a 10 é 5, pois 45 = 5 * 3 * 3.\n**Resposta correta**: A regra numérica para encontrar o valor de 60 em um intervalo de 0 a 10 é 6, pois 60 = 6 * 3 * 5.\n**Resposta correta**: A regra numérica para encontrar o valor de 75 em um intervalo de 0 a 10 é 7, pois 75 = 7 * 3 * 5.\n**Resposta correta**: A regra numérica para encontrar o valor de 90 em um intervalo de 0 a 10 é 9, pois 90 = 9 * 3 * 5.\n**Resposta correta**: A regra numérica para encontrar o valor de 120 em um intervalo de 0 a 10 é 10, pois 120 = 10 * 3 * 5.\n**Resposta correta**: A regra numérica para encontrar o valor de 150 em",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1084,
+            "total_tokens": 1084
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.3188421999802813,
+            "tempo_decode_s": 75.06781279999996,
+            "tempo_resposta_s": 77.38665499998024,
+            "tempo_total_s": 77.38665499998024,
+            "tokens_entrada": 0,
+            "tokens_saida": 1084,
+            "tps": 14.007583090395583,
+            "ram_inicio_mb": 1794.5546875,
+            "ram_pico_mb": 1797.16796875,
+            "ram_usada_mb": 2.61328125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF06MA14\n**Unidade Temática:** Álgebra\n**Pré-requisitos que o aluno já deve dominar  (calibração de dificuldade):**\n\n1. EF06MA01: Definição de operações básicas de álgebra, como additiones, multiplications, and subtractions, along with the concept of order of operations (PEMDAS).\n2. EF06MA02: Understanding the concept of variables, including their types (numeric, algebraic, and boolean), and their usage in algebraic expressions.\n3. EF06MA03: Applying basic algebraic operations on numbers and expressions, including operations on arrays and matrices.\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n1. Exemplo 1: Determine the value of x in the equation x + 5 = 12, given that x is a numeric variable.\n2. Exemplo 2: Solve the equation 2x = 10 using the order of operations, by breaking down the expression into the following steps:\n   a. Subtracting 2 from both sides of the equation to isolate x: 2x - 2 = 10 - 2\n   b. Multiplying both sides of the equation by x to solve for x: 2x(x - 1) = 8\n   c. Simplifying the expression by dividing both sides by 2: x(x - 1) = 4\n   d. Adding the expressions on the left-hand side and right-hand side: x^2 - x = 4\n   e. Taking the square root of both sides: x = √(4)\n   f. Subtracting the square root from both sides: x - √(4) = 0\n   g. Adding the square root to both sides: x = 2√(4)\n   h. Checking the solution by plugging the value of x back into the original equation: 2√(4) + 5 = 12\n\n**3. New questions (novas, inéditas e alinhadas à habilidade EF06MA14):**\n\n1. Example 3: Determine the value of y in the equation 3x + 5y = 10, where x and y are algebraic variables.\n2. Example 4: Evaluate the expression (2x - 3) * 2 - 4x, using the distributive property of multiplication and simplifying the expression.\n3. Example 5: Calculate the determinant of a 3x2 matrix, given that the elements are (2, 3), (3, 2), and (2, 1).\n4. Example 6: Solve the system of linear equations with 3 unknowns (x, y, and z), given by the equations:\n   a. x + y - z = 5\n   b. 2x + y - 3z = 12\n   c. x + 3y - 4z = 8\n   d. 3x + 4y - 5z = 10\n5. Example 7: Evaluate the expression (x^2 - 2x + y^2) / (x - y), where x and y are algebraic variables.\n6. Example 8: Determine the value of w in the equation (x^2 + y^2 + z^2) / (x + y + z), where x, y, and z are algebraic variables.\n7. Example 9: Simplify the expression (a + b + c) / (a - b + c), where a, b, and c are integers.\n8. Example 10: Evaluate the expression (a^2 - b^2 + c^2) / (a + b + c), where a, b, and c are integers.\n9. Example 11: Solve the system of linear equations with 4 unknowns (x, y, z, and w), given by the equations:\n   a. x + y - z - w = 5\n   b. 2x + y - z - w = 12\n   c. x + 3y - z - w = 8\n   d. 3x + 4y - z - w = 10\n   e. 4x + 5y - z - w = 15\n10. Example 12: Evaluate the expression (a^3 - b^3 + c^3) / (a^2 + b^2 + c^2), where a, b, and c are integers.\n\n**Resposta correta:**\n\n1. Example 3: y = 2\n2.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1151,
+            "total_tokens": 1151
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.0024373999913223,
+            "tempo_decode_s": 77.23602960002609,
+            "tempo_resposta_s": 80.23846700001741,
+            "tempo_total_s": 80.23846700001741,
+            "tokens_entrada": 0,
+            "tokens_saida": 1151,
+            "tps": 14.344740659112421,
+            "ram_inicio_mb": 1797.9296875,
+            "ram_pico_mb": 1801.3671875,
+            "ram_usada_mb": 3.4375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração a/2 de 1000, com 2000 dividido por 2?\n2. Quais são as frações a/3 e b/4 de 1200, com 1800 dividido por 2?\n3. Qual é a fração a/5 de 2000, com 1500 dividido por 3?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 94,
+            "total_tokens": 94
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6514294000226073,
+            "tempo_decode_s": 6.610099499986973,
+            "tempo_resposta_s": 9.26152890000958,
+            "tempo_total_s": 9.26152890000958,
+            "tokens_entrada": 0,
+            "tokens_saida": 94,
+            "tps": 10.149512139394476,
+            "ram_inicio_mb": 1802.94921875,
+            "ram_pico_mb": 1804.8671875,
+            "ram_usada_mb": 1.91796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração a/2 de 1000, com 2000 dividido por 2?\n2. Qual é a fração a/3 de 1250, com 3000 dividido por 3?\n3. Qual é a fração a/4 de 1875, com 4000 dividido por 4?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 89,
+            "total_tokens": 89
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06813830003375188,
+            "tempo_decode_s": 5.960838800005149,
+            "tempo_resposta_s": 6.028977100038901,
+            "tempo_total_s": 6.028977100038901,
+            "tokens_entrada": 0,
+            "tokens_saida": 89,
+            "tps": 14.762039815912676,
+            "ram_inicio_mb": 1804.796875,
+            "ram_pico_mb": 1806.60546875,
+            "ram_usada_mb": 1.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração a/2 de 1000, com 2000 dividido por 2?\n2. Qual é a fração a/3 de 1250, com 3000 dividido por 3?\n3. Qual é a fração a/4 de 1875, com 4000 dividido por 4?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 89,
+            "total_tokens": 89
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07701880001695827,
+            "tempo_decode_s": 5.976930600008927,
+            "tempo_resposta_s": 6.0539494000258856,
+            "tempo_total_s": 6.0539494000258856,
+            "tokens_entrada": 0,
+            "tokens_saida": 89,
+            "tps": 14.701146990032566,
+            "ram_inicio_mb": 1806.55078125,
+            "ram_pico_mb": 1808.3671875,
+            "ram_usada_mb": 1.81640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Hability:** EF02MA01\n**Unidade Temática:** Números\n**Pré--requisitos que o aluno já deve dominar  (calibração de dificuldade):**\n\n  1. Conhecimento básico da fórmula para encontrar o valor de um número no sistema decimal, como a função `sqrt()`, `pow()`, `mod()`, entre outros.\n  2. Familiaridade com a estrutura de uma regra numérica, como a reta, o intervalo, o valor de um número no intervalo e a função de precisão.\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n  1. Identificar o valor de 10 em um sistema decimal, usando a função `sqrt()`.\n  2. Crie uma regra numérica para encontrar o valor de 5 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n\n**Questões (alternativas)**:\n\n  1. Qual é a raiz quadrada da inteira 27?\n  2. Crie uma regra numérica para encontrar o valor de 30 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  3. Crie uma regra numérica para encontrar o valor de 45 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  4. Crie uma regra numérica para encontrar o valor de 60 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  5. Crie uma regra numérica para encontrar o valor de 75 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  6. Crie uma regra numérica para encontrar o valor de 90 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  7. Crie uma regra numérica para encontrar o valor de 120 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  8. Crie uma regra numérica para encontrar o valor de 150 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  9. Crie uma regra numérica para encontrar o valor de 180 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n  10. Crie uma regra numérica para encontrar o valor de 210 em um intervalo de 0 a 10, usando a função `sqrt()`, e apresente a solução para cada caso.\n\n**Resposta correta**: A raiz quadrada da inteira 27 é 3, pois 27 = 3 * 3 * 3.\n**Resposta correta**: A regra numérica para encontrar o valor de 30 em um intervalo de 0 a 10 é 3, pois 30 = 3 * 3 * 5.\n**Resposta correta**: A regra numérica para encontrar o valor de 45 em um intervalo de 0 a 10 é 5, pois 45 = 5 * 3 * 3.\n**Resposta correta**: A regra numérica para encontrar o valor de 60 em um intervalo de 0 a 10 é 6, pois 60 = 6 * 3 * 5.\n**Resposta correta**: A regra numérica para encontrar o valor de 75 em um intervalo de 0 a 10 é 7, pois 75 = 7 * 3 * 5.\n**Resposta correta**: A regra numérica para encontrar o valor de 90 em um intervalo de 0 a 10 é 9, pois 90 = 9 * 3 * 5.\n**Resposta correta**: A regra numérica para encontrar o valor de 120 em um intervalo de 0 a 10 é 10, pois 120 = 10 * 3 * 5.\n**Resposta correta**: A regra numérica para encontrar o valor de 150 em",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1084,
+            "total_tokens": 1084
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.3692752000060864,
+            "tempo_decode_s": 75.63407229998847,
+            "tempo_resposta_s": 78.00334749999456,
+            "tempo_total_s": 78.00334749999456,
+            "tokens_entrada": 0,
+            "tokens_saida": 1084,
+            "tps": 13.896839491408693,
+            "ram_inicio_mb": 1808.44921875,
+            "ram_pico_mb": 1810.2578125,
+            "ram_usada_mb": 1.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração a/2 de 1000, com 2000 dividido por 2?\n2. Qual é a fração a/3 de 1000, com 1000 dividido por 3?\n3. Qual é a fração a/5 de 1000, com 1000 dividido por 5?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 89,
+            "total_tokens": 89
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.91046650003409,
+            "tempo_decode_s": 5.881396799988579,
+            "tempo_resposta_s": 8.79186330002267,
+            "tempo_total_s": 8.79186330002267,
+            "tokens_entrada": 0,
+            "tokens_saida": 89,
+            "tps": 10.122996339100327,
+            "ram_inicio_mb": 1810.29296875,
+            "ram_pico_mb": 1812.140625,
+            "ram_usada_mb": 1.84765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 13.724937,
+        "ram_media_mb": 1816.054688,
+        "ram_pico_mb": 1817.839844,
+        "tempo_medio_segundos": 36.874204,
+        "ttft_medio_segundos": 1.015738,
+        "tps": {
+          "n": 3,
+          "mediana": 14.900493,
+          "iqr": 1.860353,
+          "p25": 13.08865,
+          "p75": 14.949003,
+          "p95": 14.987811,
+          "p99": 14.995572,
+          "max": 14.997513,
+          "media": 13.724937
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.07126,
+          "iqr": 1.419323,
+          "p25": 0.069957,
+          "p75": 1.48928,
+          "p95": 2.623696,
+          "p99": 2.85058,
+          "max": 2.9073,
+          "media": 1.015738
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 49.474871,
+          "iqr": 19.223139,
+          "p25": 30.412801,
+          "p75": 49.63594,
+          "p95": 49.764795,
+          "p99": 49.790566,
+          "max": 49.797009,
+          "media": 36.874204
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1816.066406,
+          "iqr": 1.791016,
+          "p25": 1815.162109,
+          "p75": 1816.953125,
+          "p95": 1817.6625,
+          "p99": 1817.804375,
+          "max": 1817.839844,
+          "media": 1816.054688
+        },
+        "tps_por_rodada": [
+          11.276806455618024,
+          14.900493320784404,
+          14.997512575631381
+        ],
+        "ttft_por_rodada": [
+          2.9073004000238143,
+          0.06865420000394806,
+          0.07126029999926686
+        ],
+        "tempo_por_rodada": [
+          11.350731300015468,
+          49.79700900003081,
+          49.47487099998398
+        ],
+        "ram_por_rodada": [
+          1814.2578125,
+          1816.06640625,
+          1817.83984375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1817.839844,
+        "tps_medio": 13.724937,
+        "tempo_medio_segundos": 36.874204,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração a/2 de 12/3?\n  2. Quais são os números entre 1 e 10 que são divisíveis por 3 e não possuem raio menor que 2?\n  3. Quais são os números entre 1 e 10 que são divisíveis por 5 e não possuem raio menor que 2?\n  4. Qual é a fração a/4 de 16/9?\n  5. Qual é a fração a/5 de 20/15?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 128,
+            "total_tokens": 128
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.9073004000238143,
+            "tempo_decode_s": 8.443430899991654,
+            "tempo_resposta_s": 11.350731300015468,
+            "tempo_total_s": 11.350731300015468,
+            "tokens_entrada": 0,
+            "tokens_saida": 128,
+            "tps": 11.276806455618024,
+            "ram_inicio_mb": 1812.37890625,
+            "ram_pico_mb": 1814.2578125,
+            "ram_usada_mb": 1.87890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração a/2 de 12/3?\n  2. Qual é a fração b/4 de 16/5?\n  3. Qual é a fração c/6 de 20/7?\n  4. Qual é a fração d/8 de 24/9?\n  5. Qual é a fração e/10 de 28/11?\n\n1. Qual é a fração a/4 de 16/5?\n  2. Qual é a fração b/8 de 20/7?\n  3. Qual é a fração c/10 de 24/9?\n  4. Qual é a fração d/12 de 28/11?\n  5. Qual é a fração e/14 de 32/13?\n\n1. Qual é a fração a/6 de 20/7?\n  2. Qual é a fração b/12 de 24/9?\n  3. Qual é a fração c/18 de 28/11?\n  4. Qual é a fração d/20 de 32/13?\n  5. Qual é a fração e/22 de 36/15?\n\n1. Qual é a fração a/8 de 20/7?\n  2. Qual é a fração b/16 de 24/9?\n  3. Qual é a fração c/24 de 30/11?\n  4. Qual é a fração d/28 de 36/15?\n  5. Qual é a fração e/30 de 40/17?\n\n1. Qual é a fração a/10 de 28/11?\n  2. Qual é a fração b/20 de 32/13?\n  3. Qual é a fração c/30 de 36/15?\n  4. Qual é a fração d/34 de 40/17?\n  5. Qual é a fração e/36 de 44/19?\n\n1. Qual é a fração a/12 de 28/11?\n  2. Qual é a fração b/24 de 32/13?\n  3. Qual é a fração c/36 de 38/15?\n  4. Qual é a fração d/40 de 44/20?\n  5. Qual é a fração e/42 de 48/22?\n\n1. Qual é a fração a/14 de 32/13?\n  2. Qual é a fração b/22 de 36/15?\n  3. Qual é a fração c/40 de 44/20?\n  4. Qual é a fração d/44 de 48/22?\n  5. Qual é a fração e/46 de 52/24?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 742,
+            "total_tokens": 742
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.06865420000394806,
+            "tempo_decode_s": 49.728354800026864,
+            "tempo_resposta_s": 49.79700900003081,
+            "tempo_total_s": 49.79700900003081,
+            "tokens_entrada": 0,
+            "tokens_saida": 742,
+            "tps": 14.900493320784404,
+            "ram_inicio_mb": 1814.21875,
+            "ram_pico_mb": 1816.06640625,
+            "ram_usada_mb": 1.84765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração a/2 de 12/3?\n  2. Qual é a fração b/4 de 16/5?\n  3. Qual é a fração c/6 de 20/7?\n  4. Qual é a fração d/8 de 24/9?\n  5. Qual é a fração e/10 de 28/11?\n\n1. Qual é a fração a/4 de 16/5?\n  2. Qual é a fração b/8 de 20/7?\n  3. Qual é a fração c/10 de 24/9?\n  4. Qual é a fração d/12 de 28/11?\n  5. Qual é a fração e/14 de 32/13?\n\n1. Qual é a fração a/6 de 20/7?\n  2. Qual é a fração b/12 de 24/9?\n  3. Qual é a fração c/18 de 28/11?\n  4. Qual é a fração d/20 de 32/13?\n  5. Qual é a fração e/22 de 36/15?\n\n1. Qual é a fração a/8 de 20/7?\n  2. Qual é a fração b/16 de 24/9?\n  3. Qual é a fração c/24 de 30/11?\n  4. Qual é a fração d/28 de 36/15?\n  5. Qual é a fração e/30 de 40/17?\n\n1. Qual é a fração a/10 de 28/11?\n  2. Qual é a fração b/20 de 32/13?\n  3. Qual é a fração c/30 de 36/15?\n  4. Qual é a fração d/34 de 40/17?\n  5. Qual é a fração e/36 de 44/19?\n\n1. Qual é a fração a/12 de 28/11?\n  2. Qual é a fração b/24 de 32/13?\n  3. Qual é a fração c/36 de 38/15?\n  4. Qual é a fração d/40 de 44/20?\n  5. Qual é a fração e/42 de 48/22?\n\n1. Qual é a fração a/14 de 32/13?\n  2. Qual é a fração b/22 de 36/15?\n  3. Qual é a fração c/40 de 44/20?\n  4. Qual é a fração d/44 de 48/22?\n  5. Qual é a fração e/46 de 52/24?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 742,
+            "total_tokens": 742
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07126029999926686,
+            "tempo_decode_s": 49.40361069998471,
+            "tempo_resposta_s": 49.47487099998398,
+            "tempo_total_s": 49.47487099998398,
+            "tokens_entrada": 0,
+            "tokens_saida": 742,
+            "tps": 14.997512575631381,
+            "ram_inicio_mb": 1816.0,
+            "ram_pico_mb": 1817.83984375,
+            "ram_usada_mb": 1.83984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 13.330734,
+        "ram_media_mb": 1768.667969,
+        "ram_pico_mb": 1820.867188,
+        "tempo_medio_segundos": 80.203377,
+        "ttft_medio_segundos": 2.161245,
+        "tps": {
+          "n": 2,
+          "mediana": 13.330734,
+          "iqr": 0.459991,
+          "p25": 13.100738,
+          "p75": 13.560729,
+          "p95": 13.744726,
+          "p99": 13.781525,
+          "max": 13.790725,
+          "media": 13.330734
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.161245,
+          "iqr": 0.229322,
+          "p25": 2.046584,
+          "p75": 2.275906,
+          "p95": 2.367635,
+          "p99": 2.385981,
+          "max": 2.390567,
+          "media": 2.161245
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 80.203377,
+          "iqr": 3.630171,
+          "p25": 78.388291,
+          "p75": 82.018462,
+          "p95": 83.470531,
+          "p99": 83.760944,
+          "max": 83.833548,
+          "media": 80.203377
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1768.667969,
+          "iqr": 52.199219,
+          "p25": 1742.568359,
+          "p75": 1794.767578,
+          "p95": 1815.647266,
+          "p99": 1819.823203,
+          "max": 1820.867188,
+          "media": 1768.667969
+        },
+        "tps_por_rodada": [
+          12.870742405973001,
+          13.790724692364998
+        ],
+        "ttft_por_rodada": [
+          2.390567100024782,
+          1.9319235000293702
+        ],
+        "tempo_por_rodada": [
+          83.8335479000234,
+          76.57320580002852
+        ],
+        "ram_por_rodada": [
+          1820.8671875,
+          1716.46875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. **Habilidade:** EF08MA05\n**Unidade Temática:** Geometria\n**Pré--requisitos que o aluno já deve dominar (calibração de dificuldade):**\n\n  * Aprenda a lidar com equações rectangulares e circulares, incluindo a identificação das raízes e as circunferências.\n  * Fique familiarizado com as funções de trigonometria, como raízes, tangentes, e hipotenusa.\n  * Conheça as propriedades de geometria, como a equação da reta, a hipotenusa e a raiz.\n  * Crie e implemente soluções para equações rectangulares"
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. **Habilidade:** EF06MA17\n**Unidade Temática:** Geometria\n**Pré--requisitos que o aluno já deve dominar (calibração de dificuldade):**\n\n  * Geometria basicamente consiste em comparações entre pontos, linhas, e retângulos, a fim de encontrar as medidas e formulas necessárias para determinar a distância, o comprimento, o ângulo, etc.\n  * A equação da retângulo é uma equação linear, que pode ser escrita em forma de uma equação matricial com uma base e uma raiz.\n  * A equação da retângulo pode ser"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 1820.867188,
+        "tps_medio": 13.330734,
+        "tempo_medio_segundos": 80.203377,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. **Habilidade:** EF08MA05\n**Unidade Temática:** Geometria\n**Pré--requisitos que o aluno já deve dominar (calibração de dificuldade):**\n\n  * Aprenda a lidar com equações rectangulares e circulares, incluindo a identificação das raízes e as circunferências.\n  * Fique familiarizado com as funções de trigonometria, como raízes, tangentes, e hipotenusa.\n  * Conheça as propriedades de geometria, como a equação da reta, a hipotenusa e a raiz.\n  * Crie e implemente soluções para equações rectangulares e circulares, utilizando técnicas como resolvação de polinomios e equações de segundo grau.\n  * Fique familiarizado com a utilização de técnicas matemáticas para determinar a distância entre pontos, como a distância entre dois pontos em um quadrado, o raiz do quadrado, o raiz do triângulo e o raiz do triângulo paralelo.\n  * Conheça as principais técnicas de resolução de problemas de geometria, como o método de mínimos cuadrados, o método de mínimos cuadrados e o método de mínimos cuadrados.\n\nExemplos de questões:\n\n  1. Determine o raiz do quadrado de 6x6, 8x8 e 10x10.\n  2. Determine a distância entre as pontos (0, 0) e (4, 6) no plano euclidiano.\n  3. Sua geometria determina a reta entre as pontos (3, 4) e (5, 7).\n  4. Determine o hipotenusa da reta entre as pontos (1, 2) e (3, 4).\n  5. Determine a distância entre os pontos (0, 0) e (2, 4) no plano euclidiano e use a geometria para resolver o problema de equação de segundo grau.\n  6. Determine a distância entre os pontos (1, 2) e (3, 4) no plano euclidiano e use a geometria para resolver o problema de equação de segundo grau usando o método de mínimos cuadrados.\n\nResposta correta: A, B, C, D, E\nResolução passo a passo:\n  1. A (6x6) é uma reta de 6x6, e a raiz é 0.\n  2. B (8x8) é uma reta de 8x8, e a raiz é 2.\n  3. C (10x10) é uma reta de 10x10, e a raiz é 0.\n  4. D (4x4) é um quadrado, e o raiz é 0.\n  5. E (0, 0) é um ponto, e o raiz é 0.\n  6. O método de mínimos cuadrados é utilizado para resolver o problema de equação de segundo grau, e a raiz é 0.\n  7. O ponto (0, 0) é um ponto, e o raiz é 0.\n  8. O método de mínimos cuadrados é utilizado para resolver o problema de equação de segundo grau, e a raiz é 2.\n  9. O ponto (4, 6) é um ponto, e o raiz é 2.\n  10. O método de mínimos cuadrados é utilizado para resolver o problema de equação de segundo grau, e a raiz é 4.\n  11. O ponto (1, 2) é um ponto, e o raiz é 1.\n  12. O método de mínimos cuadrados é utilizado para resolver o problema de equação de segundo grau, e a raiz é 3.\n  13. O ponto (3, 4) é um ponto, e o raiz é 3.\n  14. O método de mínimos cuadrados é utilizado para resolver o problema de equação de segundo grau, e a raiz é 4.\n  15. O ponto (2, 4) é um ponto, e o raiz é 4.\n  16. O método de mínimos cuadrados é utilizado para resolver o problema de equação de segundo grau, e a raiz é 6.\n  17. O método de mínimos cuadrados é utilizado para resolver o problema de equ",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1079,
+            "total_tokens": 1079
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.390567100024782,
+            "tempo_decode_s": 81.44298079999862,
+            "tempo_resposta_s": 83.8335479000234,
+            "tempo_total_s": 83.8335479000234,
+            "tokens_entrada": 0,
+            "tokens_saida": 1079,
+            "tps": 12.870742405973001,
+            "ram_inicio_mb": 1818.29296875,
+            "ram_pico_mb": 1820.8671875,
+            "ram_usada_mb": 2.57421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. **Habilidade:** EF06MA17\n**Unidade Temática:** Geometria\n**Pré--requisitos que o aluno já deve dominar (calibração de dificuldade):**\n\n  * Geometria basicamente consiste em comparações entre pontos, linhas, e retângulos, a fim de encontrar as medidas e formulas necessárias para determinar a distância, o comprimento, o ângulo, etc.\n  * A equação da retângulo é uma equação linear, que pode ser escrita em forma de uma equação matricial com uma base e uma raiz.\n  * A equação da retângulo pode ser escrita em forma de uma equação algebraica com um lado e um lado adjacente.\n  * A equação da retângulo pode ser escrita em forma de uma equação trigonométrica com um lado e um lado adjacente.\n  * A equação da retângulo pode ser escrita em forma de uma equação de segundo grau com um lado e um lado adjacente.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\n\n  1. **Habilidade:** EF06MA17\n  * Definindo o ângulo entre dois retângulos, como se estiverem em uma retângulo equilibrado.\n  * Identificando a retângulo retângulo, que é a retângulo que está entre dois retângulos.\n  * Descrevendo a medida de retângulo, como a distância, o comprimento, o ângulo, etc.\n  * Definindo a forma de retângulo, como a forma de retângulo retângulo, que é uma retângulo que está entre dois retângulos.\n  * Descrevendo a raiz de retângulo, como o ponto que é o local da retângulo.\n  * Descrevendo a equação da retângulo, como a equação linear da retângulo, que pode ser escrita em forma de uma equação matricial.\n  * Descrevendo a equação da retângulo, como a equação algebraica da retângulo, que pode ser escrita em forma de uma equação trigonométrica.\n  * Descrevendo a equação da retângulo, como a equação de segundo grau da retângulo, que pode ser escrita em forma de uma equação de segundo grau.\n\n  2. **Habilidade:** EF06MA17\n  * Definindo a distância entre dois pontos, como se estiverem em um retângulo equilibrado.\n  * Identificando a retângulo retângulo, que é a retângulo que está entre dois pontos.\n  * Descrevendo a medida de retângulo, como a distância, o comprimento, o ângulo, etc.\n  * Definindo a forma de retângulo, como a forma de retângulo retângulo, que é uma retângulo que está entre dois retângulos.\n  * Descrevendo a raiz de retângulo, como o ponto que é o local da retângulo.\n  * Descrevendo a equação da retângulo, como a equação linear da retângulo, que pode ser escrita em forma de uma equação matricial.\n  * Descrevendo a equação da retângulo, como a equação algebraica da retângulo, que pode ser escrita em forma de uma equação trigonométrica.\n  * Descrevendo a equação da retângulo, como a equação de segundo grau da retângulo, que pode ser escrita em forma de uma equação de segundo grau.\n  * Descrevendo a equação da retângulo, como a equação do ponto retângulo, que é o ponto em que se encontram os pontos.\n  * Descrevendo a equação da retângulo, como a equação do retângulo, que é o retângulo que está entre os pontos.\n  * Descrevendo a equação da retângulo, como a equação do retângulo, que é o retângulo que está entre os pontos.\n  * Descrevendo a equação da retângulo, como a equação do retângulo, que é o retângulo que está entre os pontos.\n\n  3. **Habilidade:** EF0",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1056,
+            "total_tokens": 1056
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.9319235000293702,
+            "tempo_decode_s": 74.64128229999915,
+            "tempo_resposta_s": 76.57320580002852,
+            "tempo_total_s": 76.57320580002852,
+            "tokens_entrada": 0,
+            "tokens_saida": 1056,
+            "tps": 13.790724692364998,
+            "ram_inicio_mb": 1713.890625,
+            "ram_pico_mb": 1716.46875,
+            "ram_usada_mb": 2.578125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1820.9,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 11.4,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 80.2,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 32.8,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+    "gerado_em": "2026-09-12T17:15:50.178154"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}

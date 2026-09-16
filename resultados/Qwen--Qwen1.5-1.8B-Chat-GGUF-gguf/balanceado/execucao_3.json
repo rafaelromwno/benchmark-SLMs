@@ -1,0 +1,1169 @@
+{
+  "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+  "formato": "gguf",
+  "data": "12/09/2026",
+  "run_config": {
+    "modelos": [
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\Qwen--Qwen1.5-1.8B-Chat-GGUF\\qwen1_5-1_8b-chat-q4_k_m.gguf"
+    },
+    "seed": 13,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 13
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 13
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.15,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": "JSON não encontrado na resposta",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 1.5163063000072725,
+        "tempo_prefill_s": 13.426314099982847,
+        "tempo_decode_s": 7.922957599977963,
+        "tempo_resposta_s": 21.34927169996081,
+        "tempo_total_s": 22.86557799996808,
+        "tokens_entrada": 0,
+        "tokens_saida": 122,
+        "tps": 5.714480649015487,
+        "ram_inicio_mb": 59.31640625,
+        "ram_pico_mb": 2028.30078125,
+        "ram_usada_mb": 1968.984375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 22.86557799996808,
+        "tempo_carregamento_s": 1.5163063000072725,
+        "tempo_resposta_s": 21.34927169996081,
+        "ram_pico_mb": 2028.30078125,
+        "ram_inicio_mb": 59.31640625,
+        "ttft_segundos": 13.426314099982847,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é o valor da fração a/20, que é igual a 5/12?\n2. Qual é o valor da fração b/25, que é igual a 3/10?\n3. Qual é o valor da fração c/30, que é igual a 1/4?\n4. Qual é o valor da fração d/45, que é igual a 1/3?\n5. Qual é o valor da fração e/50, que é igual a 1/10?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 122,
+            "total_tokens": 122
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.5163063000072725,
+            "tempo_prefill_s": 13.426314099982847,
+            "tempo_decode_s": 7.922957599977963,
+            "tempo_resposta_s": 21.34927169996081,
+            "tempo_total_s": 22.86557799996808,
+            "tokens_entrada": 0,
+            "tokens_saida": 122,
+            "tps": 5.714480649015487,
+            "ram_inicio_mb": 59.31640625,
+            "ram_pico_mb": 2028.30078125,
+            "ram_usada_mb": 1968.984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 10.950393,
+          "iqr": 4.040494,
+          "p25": 8.969562,
+          "p75": 13.010056,
+          "p95": 14.47046,
+          "p99": 14.908749,
+          "max": 15.018322,
+          "media": 11.100701
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.396058,
+          "iqr": 2.240382,
+          "p25": 0.696339,
+          "p75": 2.93672,
+          "p95": 3.471769,
+          "p99": 3.805925,
+          "max": 3.889464,
+          "media": 2.014759
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 10.42914,
+          "iqr": 4.475819,
+          "p25": 6.312509,
+          "p75": 10.788328,
+          "p95": 64.227315,
+          "p99": 74.05908,
+          "max": 76.517021,
+          "media": 19.326862
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2032.923828,
+          "iqr": 23.514648,
+          "p25": 2013.849609,
+          "p75": 2037.364258,
+          "p95": 2039.564258,
+          "p99": 2039.590977,
+          "max": 2039.597656,
+          "media": 2026.858594
+        },
+        "tps_medio": 11.100701,
+        "ttft_medio_segundos": 2.014759,
+        "tempo_medio_segundos": 19.326862,
+        "ram_pico_mb": 2039.597656
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 10.950393,
+          "iqr": 4.040494,
+          "p25": 8.969562,
+          "p75": 13.010056,
+          "p95": 14.47046,
+          "p99": 14.908749,
+          "max": 15.018322,
+          "media": 11.100701
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.396058,
+          "iqr": 2.240382,
+          "p25": 0.696339,
+          "p75": 2.93672,
+          "p95": 3.471769,
+          "p99": 3.805925,
+          "max": 3.889464,
+          "media": 2.014759
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 10.42914,
+          "iqr": 4.475819,
+          "p25": 6.312509,
+          "p75": 10.788328,
+          "p95": 64.227315,
+          "p99": 74.05908,
+          "max": 76.517021,
+          "media": 19.326862
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2032.923828,
+          "iqr": 23.514648,
+          "p25": 2013.849609,
+          "p75": 2037.364258,
+          "p95": 2039.564258,
+          "p99": 2039.590977,
+          "max": 2039.597656,
+          "media": 2026.858594
+        },
+        "tps_medio": 11.100701,
+        "ttft_medio_segundos": 2.014759,
+        "tempo_medio_segundos": 19.326862,
+        "ram_pico_mb": 2039.597656,
+        "tps_por_rodada": [
+          9.256919133458057,
+          13.672003611968577,
+          8.718700323609303,
+          13.800850960463997,
+          10.975599762833596,
+          8.74143586236764,
+          10.925186654938702,
+          8.873775862599834,
+          11.024211466650245,
+          15.018321691986586
+        ],
+        "ttft_por_rodada": [
+          3.889464100007899,
+          0.13995969999814406,
+          2.365475400001742,
+          0.0663664000458084,
+          2.9439257999765687,
+          2.421271299943328,
+          2.9612537000211887,
+          2.37084380001761,
+          2.915104000014253,
+          0.07392880000406876
+        ],
+        "tempo_por_rodada": [
+          10.154566399985924,
+          8.045638600015081,
+          5.734799699974246,
+          76.51702080003452,
+          10.75112089997856,
+          5.7198840999626555,
+          10.800730800023302,
+          5.634580000012647,
+          10.703713399998378,
+          49.20656349998899
+        ],
+        "ram_por_rodada": [
+          2030.16796875,
+          2031.93359375,
+          2033.9140625,
+          2035.9609375,
+          2037.83203125,
+          2039.59765625,
+          2039.5234375,
+          2004.75,
+          2006.49609375,
+          2008.41015625
+        ],
+        "ram_media_mb": 2026.858594
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A: Determine o valor de x quando x = 2, e utilize a propriedade da igualdade para fazer uma operação com 2x.\n2. B: Se y = 3, determine a raiz quadrada de y.\n3. C: Determine o valor de x quando x = 4, e utilize a propriedade da igualdade para fazer uma operação com 2x.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 94,
+            "total_tokens": 94
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.889464100007899,
+            "tempo_decode_s": 6.265102299978025,
+            "tempo_resposta_s": 10.154566399985924,
+            "tempo_total_s": 10.154566399985924,
+            "tokens_entrada": 0,
+            "tokens_saida": 94,
+            "tps": 9.256919133458057,
+            "ram_inicio_mb": 2028.22265625,
+            "ram_pico_mb": 2030.16796875,
+            "ram_usada_mb": 1.9453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A: Determine o valor de 2x + 7 no caso de x = 4.\n2. B: Sua equação é x + 2 = 8. Determine o valor de x utilizando a propriedade da igualdade.\n3. C: Se a equação é x^2 + 3x + 2 = 0, determine o valor de x utilizando a propriedade da igualdade e a fórmula de factorização.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 110,
+            "total_tokens": 110
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.13995969999814406,
+            "tempo_decode_s": 7.905678900016937,
+            "tempo_resposta_s": 8.045638600015081,
+            "tempo_total_s": 8.045638600015081,
+            "tokens_entrada": 0,
+            "tokens_saida": 110,
+            "tps": 13.672003611968577,
+            "ram_inicio_mb": 2030.08203125,
+            "ram_pico_mb": 2031.93359375,
+            "ram_usada_mb": 1.8515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "Questão 1: Determinar o valor de 45.67 em um sistema decimal\nQuesão 2: Identificar a menor número entre 20 e 30 que é igual a 24.56",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 50,
+            "total_tokens": 50
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.365475400001742,
+            "tempo_decode_s": 3.3693242999725044,
+            "tempo_resposta_s": 5.734799699974246,
+            "tempo_total_s": 5.734799699974246,
+            "tokens_entrada": 0,
+            "tokens_saida": 50,
+            "tps": 8.718700323609303,
+            "ram_inicio_mb": 2031.86328125,
+            "ram_pico_mb": 2033.9140625,
+            "ram_usada_mb": 2.05078125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "Questão 1: Fatorial\nHabilidade: EF02MA01\nUnidade Temática: Números\nPré-Requisitos: Nível de habilidade: Profissional\nExemplo 1: Fatorial de 12\nA: Fatorial de 12 = 12 x 12 x 12 x 12 x 12 = 1,728,640\nB: Fatorial de 12 = 1 x 12 x 12 x 12 x 12 = 1,44\nC: Fatorial de 12 = 2 x 2 x 2 x 2 x 2 = 16\nD: Fatorial de 12 = 3 x 3 x 3 x 3 x 3 = 81\nE: Fatorial de 12 = 4 x 4 x 4 x 4 x 4 = 256\n\nResposta correta: A\n\nResolução passo a passo: O fatorial é uma operação matemática que se concentra na divisão de números em termos de múltiplas potências. O fatorial de 12 é calculado usando a fórmula: fatorial(n) = n! (n factorial) e é uma operação matemática com base nos números primeiros de 1 até n. Em cada potência, o número se multiplica por si mesmo e é adicionado à soma dos números restantes na potência anterior. A fórmula é usada para calcular a fórmula de fatorial de cada número, e a resposta correta é o número que está entre 23 e 27, que é 81.\nQuestão 2: Exponential\nHabilidade: EF02MA01\nUnidade Temática: Números\nPré-Requisitos: Nível de habilidade: Profissional\nExemplo 2: Exponential de 3.4 x 10^4\nA: Exponential de 3.4 x 10^4 = 3.4 x 10^4 x 10^4 x 10^4 = 1.422 x 10^16\nB: Exponential de 3.4 x 10^4 = 3.4 x 10^4 x 10^4 x 10^4 x 10^4 x 10^4 = 1.000 x 10^16\nC: Exponential de 3.4 x 10^4 = 3.4 x 10^4 x 10^4 x 10^4 x 10^4 x 10^4 x 10^4 = 1.000 x 10^16\nD: Exponential de 3.4 x 10^4 = 3.4 x 10^4 x 10^4 x 10^4 x 10^4 x 10^4 x 10^4 = 1.000 x 10^16\nE: Exponential de 3.4 x 10^4 = 3.4 x 10^4 x 10^4 x 10^4 x 10^4 x 10^4 x 10^4 = 1.000 x 10^16\n\nResposta correta: B\n\nResolução passo a passo: O exponencial é uma operação matemática que se concentra na divisão de números em termos de múltiplas potências. O exponencial de 3.4 x 10^4 é calculado usando a fórmula: exponencial(n) = e^n (eigenvalor e potência) e é uma operação matemática com base nos números primeiros de 1 até n. Em cada potência, o número se multiplica por si mesmo e é adicionado à soma dos números restantes na potência anterior. A fórmula é usada para calcular a fórmula de exponencial de cada número, e a resposta correta é o número que está entre 23 e 27, que é 1.422 x 10^16.\nAs duas questões foram criadas com base nas habilidades da BNCC solicitada: efetividade do fatorial (A) e exponencial (B). Ambas são operações matemáticas com base nos números primeiros de 1 até n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1056,
+            "total_tokens": 1056
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0663664000458084,
+            "tempo_decode_s": 76.45065439998871,
+            "tempo_resposta_s": 76.51702080003452,
+            "tempo_total_s": 76.51702080003452,
+            "tokens_entrada": 0,
+            "tokens_saida": 1056,
+            "tps": 13.800850960463997,
+            "ram_inicio_mb": 2033.8203125,
+            "ram_pico_mb": 2035.9609375,
+            "ram_usada_mb": 2.140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fórmula para encontrar o valor de um número divido por outro número no entanto que a fração seja maior do que o número? Por exemplo, 5/2.\n2. Qual é a fórmula para encontrar o valor de um número dividido por outro número que é igual a 1? Por exemplo, 2/1.\n3. Qual é a fórmula para encontrar o valor de um número dividido por outro número que é menor do que 1? Por exemplo, 1/0.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 118,
+            "total_tokens": 118
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.9439257999765687,
+            "tempo_decode_s": 7.807195100001991,
+            "tempo_resposta_s": 10.75112089997856,
+            "tempo_total_s": 10.75112089997856,
+            "tokens_entrada": 0,
+            "tokens_saida": 118,
+            "tps": 10.975599762833596,
+            "ram_inicio_mb": 2035.9140625,
+            "ram_pico_mb": 2037.83203125,
+            "ram_usada_mb": 1.91796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "Questão 1: Determinar o valor de 45.67 em um sistema decimal\nQuesão 2: Identificar a menor número entre 20 e 30 que é igual a 24.56",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 50,
+            "total_tokens": 50
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.421271299943328,
+            "tempo_decode_s": 3.2986128000193276,
+            "tempo_resposta_s": 5.7198840999626555,
+            "tempo_total_s": 5.7198840999626555,
+            "tokens_entrada": 0,
+            "tokens_saida": 50,
+            "tps": 8.74143586236764,
+            "ram_inicio_mb": 2037.80859375,
+            "ram_pico_mb": 2039.59765625,
+            "ram_usada_mb": 1.7890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fórmula para encontrar o valor de um número divido por outro número no entanto que a fração seja maior do que o número? Por exemplo, 5/2.\n2. Qual é a fórmula para encontrar o valor de um número dividido por outro número que é igual a 1? Por exemplo, 2/1.\n3. Qual é a fórmula para encontrar o valor de um número dividido por outro número que é menor do que 1? Por exemplo, 1/0.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 118,
+            "total_tokens": 118
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.9612537000211887,
+            "tempo_decode_s": 7.839477100002114,
+            "tempo_resposta_s": 10.800730800023302,
+            "tempo_total_s": 10.800730800023302,
+            "tokens_entrada": 0,
+            "tokens_saida": 118,
+            "tps": 10.925186654938702,
+            "ram_inicio_mb": 2039.51171875,
+            "ram_pico_mb": 2039.5234375,
+            "ram_usada_mb": 0.01171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "Questão 1: Determinar o valor de 45.67 em um sistema decimal\nQuesão 2: Identificar a menor número entre 20 e 30 que é igual a 24.56",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 50,
+            "total_tokens": 50
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.37084380001761,
+            "tempo_decode_s": 3.263736199995037,
+            "tempo_resposta_s": 5.634580000012647,
+            "tempo_total_s": 5.634580000012647,
+            "tokens_entrada": 0,
+            "tokens_saida": 50,
+            "tps": 8.873775862599834,
+            "ram_inicio_mb": 2002.98828125,
+            "ram_pico_mb": 2004.75,
+            "ram_usada_mb": 1.76171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fórmula para encontrar o valor de um número divido por outro número no entanto que a fração seja maior do que o número? Por exemplo, 5/2.\n2. Qual é a fórmula para encontrar o valor de um número dividido por outro número que é igual a 1? Por exemplo, 2/1.\n3. Qual é a fórmula para encontrar o valor de um número dividido por outro número que é menor do que 1? Por exemplo, 1/0.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 118,
+            "total_tokens": 118
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.915104000014253,
+            "tempo_decode_s": 7.788609399984125,
+            "tempo_resposta_s": 10.703713399998378,
+            "tempo_total_s": 10.703713399998378,
+            "tokens_entrada": 0,
+            "tokens_saida": 118,
+            "tps": 11.024211466650245,
+            "ram_inicio_mb": 2004.6640625,
+            "ram_pico_mb": 2006.49609375,
+            "ram_usada_mb": 1.83203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fórmula para encontrar o valor de um número divido por outro número no entanto que a fração seja maior do que a divisão? Utilize a seguinte fórmula para encontrar o valor de 3/4:\n   ```\n   (3/4) * (4/3) = 1\n   ```\n   Em qual parte do mundo você tem encontrado essa fórmula e como você acreditou que ela poderia ser usada para resolver essa situação?\n   Resposta: A fórmula para encontrar o valor de um número divido por outro número em que a fração seja maior do que a divisão é: (a * b) / (c * d), onde a e b são números inteiros e b ≠ 0. A fórmula é usada para calcular a fração de um número, e quando a fração é maior do que a divisão, é encontrada na fórmula (a * b) / (c * d).\n2. Qual é a fórmula para encontrar a raíz quadrada de um número que é par ou ímpar? Utilize a seguinte fórmula para encontrar a raíz quadrada de um número no entanto que a raíz é maior do que a divisão:\n   ```\n   (x^2) / (y^2) = x / y\n   ```\n   Em qual parte do mundo você tem encontrado essa fórmula e como você acreditou que ela poderia ser usada para resolver essa situação?\n   Resposta: A fórmula para encontrar a raíz quadrada de um número que é par ou ímpar é: (x^2) / (y^2), onde x é um número par ou ímpar e y é um número inteiro. A raíz quadrada é encontrada na fórmula (x^2) / (y^2), onde x^2 é a raíz quadrada de um número par e y^2 é a raíz quadrada de um número ímpar.\n3. Qual é a fórmula para encontrar o valor de um número divisível por outro número que é primo ou é múltiplo? Utilize a seguinte fórmula para encontrar o valor de um número divisível por outro número em que o número não é múltiplo:\n   ```\n   (n * p) / (q * r) = n / q\n   ```\n   Em qual parte do mundo você tem encontrado essa fórmula e como você acreditou que ela poderia ser usada para resolver essa situação?\n   Resposta: A fórmula para encontrar o valor de um número divisível por outro número em que o número não é múltiplo é: (n * p) / (q * r), onde n é um número primo ou um número múltiplo e p é um número divisível por q e r. A fórmula é usada para calcular o valor de um número divisível por outro número, e quando o número não é múltiplo, é encontrada na fórmula (n * p) / (q * r).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 739,
+            "total_tokens": 739
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07392880000406876,
+            "tempo_decode_s": 49.13263469998492,
+            "tempo_resposta_s": 49.20656349998899,
+            "tempo_total_s": 49.20656349998899,
+            "tokens_entrada": 0,
+            "tokens_saida": 739,
+            "tps": 15.018321691986586,
+            "ram_inicio_mb": 2006.40234375,
+            "ram_pico_mb": 2008.41015625,
+            "ram_usada_mb": 2.0078125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 15.08097,
+        "ram_media_mb": 2011.946615,
+        "ram_pico_mb": 2013.679688,
+        "tempo_medio_segundos": 24.127721,
+        "ttft_medio_segundos": 1.022128,
+        "tps": {
+          "n": 3,
+          "mediana": 15.378159,
+          "iqr": 0.639258,
+          "p25": 14.835638,
+          "p75": 15.474896,
+          "p95": 15.552286,
+          "p99": 15.567764,
+          "max": 15.571633,
+          "media": 15.08097
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.07403,
+          "iqr": 1.423864,
+          "p25": 0.073171,
+          "p75": 1.497035,
+          "p95": 2.635439,
+          "p99": 2.86312,
+          "max": 2.92004,
+          "media": 1.022128
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 6.567756,
+          "iqr": 26.421549,
+          "p25": 6.526955,
+          "p75": 32.948504,
+          "p95": 54.053103,
+          "p99": 58.274022,
+          "max": 59.329252,
+          "media": 24.127721
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 2011.964844,
+          "iqr": 1.742188,
+          "p25": 2011.080078,
+          "p75": 2012.822266,
+          "p95": 2013.508203,
+          "p99": 2013.645391,
+          "max": 2013.679688,
+          "media": 2011.946615
+        },
+        "tps_por_rodada": [
+          14.293117957088507,
+          15.378158666228707,
+          15.5716334298652
+        ],
+        "ttft_por_rodada": [
+          2.9200402999995276,
+          0.07231219997629523,
+          0.07403039996279404
+        ],
+        "tempo_por_rodada": [
+          59.32925219996832,
+          6.567756399977952,
+          6.486153199977707
+        ],
+        "ram_por_rodada": [
+          2010.1953125,
+          2011.96484375,
+          2013.6796875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 2013.679688,
+        "tps_medio": 15.08097,
+        "tempo_medio_segundos": 24.127721,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é o valor de a + b?\n2. Qual é a fórmula para encontrar a raíz quadrada de x^4 + 4x^3 + 6x^2 + 4x + 1?\n3. Qual é a fórmula para encontrar a raíz quadrada de x^2 - 3x + 5?\n4. Qual é a fórmula para encontrar a raíz quadrada de x^3 - 9x^2 + 27x - 27?\n5. Qual é a fórmula para encontrar a raíz quadrada de x^2 + 2x + 3x - 1?\n\n1. Qual é o valor de a + b?\n2. Qual é a fórmula para encontrar a raíz quadrada de x^4 + 4x^3 + 6x^2 + 4x + 1?\n3. Qual é a fórmula para encontrar a raíz quadrada de x^2 - 3x + 5?\n4. Qual é a fórmula para encontrar a raíz quadrada de x^3 - 9x^2 + 27x - 27?\n5. Qual é a fórmula para encontrar a raíz quadrada de x^2 + 2x + 3x - 1?\n\n1. Qual é o valor de a + b?\n2. Qual é a fórmula para encontrar a raíz quadrada de x^4 + 4x^3 + 6x^2 + 4x + 1?\n3. Qual é a fórmula para encontrar a raíz quadrada de x^2 - 3x + 5?\n4. Qual é a fórmula para encontrar a raíz quadrada de x^3 - 9x^2 + 27x - 27?\n5. Qual é a fórmula para encontrar a raíz quadrada de x^2 + 2x + 3x - 1?\n\n1. Qual é o valor de a + b?\n2. Qual é a fórmula para encontrar a raíz quadrada de x^4 + 4x^3 + 6x^2 + 4x + 1?\n3. Qual é a fórmula para encontrar a raíz quadrada de x^2 - 3x + 5?\n4. Qual é a fórmula para encontrar a raíz quadrada de x^3 - 9x^2 + 27x - 27?\n5. Qual é a fórmula para encontrar a raíz quadrada de x^2 + 2x + 3x - 1?\n\n1. Qual é o valor de a + b?\n2. Qual é a fórmula para encontrar a raíz quadrada de x^4 + 4x^3 + 6x^2 + 4x + 1?\n3. Qual é a fórmula para encontrar a raíz quadrada de x^2 - 3x + 5?\n4. Qual é a fórmula para encontrar a raíz quadrada de x^3 - 9x^2 + 27x - 27?\n5. Qual é a fórmula para encontrar a raíz quadrada de x^2 + 2x + 3x - 1?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 848,
+            "total_tokens": 848
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.9200402999995276,
+            "tempo_decode_s": 56.409211899968795,
+            "tempo_resposta_s": 59.32925219996832,
+            "tempo_total_s": 59.32925219996832,
+            "tokens_entrada": 0,
+            "tokens_saida": 848,
+            "tps": 14.293117957088507,
+            "ram_inicio_mb": 2008.34765625,
+            "ram_pico_mb": 2010.1953125,
+            "ram_usada_mb": 1.84765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é o valor de a + b?\n2. Qual é a fórmula para calcular a ÷ b?\n3. Quais são as diferenças entre a ÷ b e a / b?\n4. Qual é a fórmula para calcular a x^2 + 2x + 1?\n5. Qual é a fórmula para calcular a y^2 - 3y + 4?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 101,
+            "total_tokens": 101
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07231219997629523,
+            "tempo_decode_s": 6.495444200001657,
+            "tempo_resposta_s": 6.567756399977952,
+            "tempo_total_s": 6.567756399977952,
+            "tokens_entrada": 0,
+            "tokens_saida": 101,
+            "tps": 15.378158666228707,
+            "ram_inicio_mb": 2010.1015625,
+            "ram_pico_mb": 2011.96484375,
+            "ram_usada_mb": 1.86328125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é o valor de a + b?\n2. Qual é a fórmula para calcular a ÷ b?\n3. Quais são as diferenças entre a ÷ b e a / b?\n4. Qual é a fórmula para calcular a x^2 + 2x + 1?\n5. Qual é a fórmula para calcular a y^2 - 3y + 4?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 101,
+            "total_tokens": 101
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07403039996279404,
+            "tempo_decode_s": 6.412122800014913,
+            "tempo_resposta_s": 6.486153199977707,
+            "tempo_total_s": 6.486153199977707,
+            "tokens_entrada": 0,
+            "tokens_saida": 101,
+            "tps": 15.5716334298652,
+            "ram_inicio_mb": 2011.87109375,
+            "ram_pico_mb": 2013.6796875,
+            "ram_usada_mb": 1.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 13.099129,
+        "ram_media_mb": 2016.675781,
+        "ram_pico_mb": 2017.644531,
+        "tempo_medio_segundos": 74.206727,
+        "ttft_medio_segundos": 2.118569,
+        "tps": {
+          "n": 2,
+          "mediana": 13.099129,
+          "iqr": 0.077191,
+          "p25": 13.060533,
+          "p75": 13.137725,
+          "p95": 13.168601,
+          "p99": 13.174777,
+          "max": 13.176321,
+          "media": 13.099129
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.118569,
+          "iqr": 0.213572,
+          "p25": 2.011783,
+          "p75": 2.225355,
+          "p95": 2.310784,
+          "p99": 2.327869,
+          "max": 2.332141,
+          "media": 2.118569
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 74.206727,
+          "iqr": 7.040783,
+          "p25": 70.686335,
+          "p75": 77.727118,
+          "p95": 80.543431,
+          "p99": 81.106694,
+          "max": 81.24751,
+          "media": 74.206727
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2016.675781,
+          "iqr": 0.96875,
+          "p25": 2016.191406,
+          "p75": 2017.160156,
+          "p95": 2017.547656,
+          "p99": 2017.625156,
+          "max": 2017.644531,
+          "media": 2016.675781
+        },
+        "tps_por_rodada": [
+          13.021937581919836,
+          13.176320565425161
+        ],
+        "ttft_por_rodada": [
+          2.3321408999618143,
+          1.904997400008142
+        ],
+        "tempo_por_rodada": [
+          81.24750970001332,
+          67.16594330000225
+        ],
+        "ram_por_rodada": [
+          2015.70703125,
+          2017.64453125
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "Habilidade: EF08MA05\nUnidade Temática: Geometria\n\n**Pré- requisitos que o aluno deve dominar (calibração de dificuldade):**\n- Conhecimento básico de geometria, incluindo as formas de pontos, linhas, retângulos, triângulos e quadrântos, as normas de euclidiana e as equações de sines e cosines.\n- Familiaridade com o conceito de área, a área de um círculo, a área de um quadrado, a área de um triangle e a área de um hexágono.\n- Conhecimento básico de retângulos e retângulos rectos e tangulos.\n- Fami"
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "Habilidade: EF06MA17\nUnidade Temática: Geometria\n\n**Pré- requisitos que o aluno deve dominar (calibração de dificuldade):**\n\n  * Definir e entender a geometria topológica, incluindo o conceito de ponto e dimensão, as propriedades de uma geometria, como a forma, a direção e a área, e a geometria de forma e direção.\n  * Identificar e manipular as propriedades topológicas de uma geometria, como o raio, o ângulo e o ângulo interior, e a retângulo.\n  * Utilizar as propriedades topológicas para resolv"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 2017.644531,
+        "tps_medio": 13.099129,
+        "tempo_medio_segundos": 74.206727,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "Habilidade: EF08MA05\nUnidade Temática: Geometria\n\n**Pré- requisitos que o aluno deve dominar (calibração de dificuldade):**\n- Conhecimento básico de geometria, incluindo as formas de pontos, linhas, retângulos, triângulos e quadrântos, as normas de euclidiana e as equações de sines e cosines.\n- Familiaridade com o conceito de área, a área de um círculo, a área de um quadrado, a área de um triangle e a área de um hexágono.\n- Conhecimento básico de retângulos e retângulos rectos e tangulos.\n- Familiaridade com a geometria de retângulos de hipotenusa e tangulo, a geometria de retângulos de altitude e tangulo.\n- Conhecimento básico de geometria de retângulos de hipotenusa e tangulo, a geometria de retângulos de altitude e tangulo.\n- Conhecimento básico de geometria de retângulos de hipotenusa e tangulo, a geometria de retângulos de altitude e tangulo.\n- Conhecimento básico de geometria de retângulos de hipotenusa e tangulo, a geometria de retângulos de altitude e tangulo.\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n  1. Qual é a área de um círculo retangulo de hipotenusa e tangulo de 6cm e 8cm?\n  2. Qual é a área de um quadrado retangulo de hipotenusa e tangulo de 3cm e 5cm?\n  3. Qual é a área de um triangle retangulo de hipotenusa e tangulo de 5cm e 7cm?\n  4. Qual é a área de um hexágono retangulo de hipotenusa e tangulo de 9cm e 11cm?\n  5. Qual é a área de um retângulo recto e tangulo de 10cm e 12cm?\n  6. Qual é a área de um retângulo recto e tangulo de 13cm e 15cm?\n  7. Qual é a área de um retângulo recto e tangulo de 14cm e 16cm?\n  8. Qual é a área de um retângulo recto e tangulo de 15cm e 17cm?\n  9. Qual é a área de um retângulo recto e tangulo de 16cm e 18cm?\n  10. Qual é a área de um retângulo recto e tangulo de 17cm e 19cm?\n\n11. Qual é a área de um retângulo retangulo de hipotenusa e tangulo de 1cm e 2cm?\n  12. Qual é a área de um retângulo recto e tangulo de 2cm e 3cm?\n  13. Qual é a área de um retângulo recto e tangulo de 3cm e 4cm?\n  14. Qual é a área de um retângulo recto e tangulo de 4cm e 5cm?\n  15. Qual é a área de um retângulo recto e tangulo de 5cm e 6cm?\n  16. Qual é a área de um retângulo recto e tangulo de 6cm e 7cm?\n  17. Qual é a área de um retângulo recto e tangulo de 7cm e 8cm?\n  18. Qual é a área de um retângulo recto e tangulo de 8cm e 9cm?\n  19. Qual é a área de um retângulo recto e tangulo de 9cm e 10cm?\n  20. Qual é a área de um retângulo recto e tangulo de 10cm e 11cm?\n\n1. Qual é a área de um retângulo retangulo de hipotenusa e tangulo de 1cm e 2cm?\n  2. Qual é a área de um retângulo recto e tangulo de 2cm e 3cm?\n  3. Qual é a área de um retângulo recto e tangulo de 3cm e 4cm?\n  4. Qual é a área de um retâng",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1058,
+            "total_tokens": 1058
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.3321408999618143,
+            "tempo_decode_s": 78.91536880005151,
+            "tempo_resposta_s": 81.24750970001332,
+            "tempo_total_s": 81.24750970001332,
+            "tokens_entrada": 0,
+            "tokens_saida": 1058,
+            "tps": 13.021937581919836,
+            "ram_inicio_mb": 2013.609375,
+            "ram_pico_mb": 2015.70703125,
+            "ram_usada_mb": 2.09765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "Habilidade: EF06MA17\nUnidade Temática: Geometria\n\n**Pré- requisitos que o aluno deve dominar (calibração de dificuldade):**\n\n  * Definir e entender a geometria topológica, incluindo o conceito de ponto e dimensão, as propriedades de uma geometria, como a forma, a direção e a área, e a geometria de forma e direção.\n  * Identificar e manipular as propriedades topológicas de uma geometria, como o raio, o ângulo e o ângulo interior, e a retângulo.\n  * Utilizar as propriedades topológicas para resolver problemas de geometria, como encontrar um ponto no espaço, calcular a área ou a raio de um retângulo, ou encontrar a direção de uma retângulo.\n  * Realizar desempenhas matemáticas relacionadas à geometria, como calcular a área, a raio, o ângulo, o ângulo interior, o raio de um retângulo, ou resolver problemas relacionados a geometria.\n  * Seja capaz de interpretar e aplicar as propriedades topológicas de uma geometria no contexto da prática, como na geometria de um problema de planejamento, na geometria de uma área, na geometria de um retângulo, ou na geometria de uma solução de um problema de geometria.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\n\n  1. Qual é a forma e direção do ângulo interior da retângulo retângulo, e como podemos calcular a área da retângulo retângulo?\n  2. Para encontrar o raio de um retângulo retângulo, podemos usar a propriedade topológica de raio, como o raio da retângulo retângulo. Qual é o raio de um retângulo retângulo, e como podemos calcular o ângulo interior de um retângulo retângulo?\n  3. Qual é a forma e direção do ângulo retângulo retângulo, e como podemos calcular a área da retângulo retângulo?\n  4. Seja capaz de interpretar e aplicar as propriedades topológicas de uma geometria no contexto da prática, como na geometria de um problema de planejamento, na geometria de uma área, na geometria de um retângulo, ou na geometria de uma solução de um problema de geometria.\n  5. Qual é a forma e direção do ângulo retângulo retângulo, e como podemos calcular a área da retângulo retângulo?\n  6. Para encontrar o ângulo interior de um retângulo retângulo, podemos usar a propriedade topológica de ângulo interior, como o ângulo interior do retângulo retângulo. Qual é o ângulo interior do retângulo retângulo, e como podemos calcular o ângulo interior de um retângulo retângulo?\n  7. Qual é a forma e direção do ângulo retângulo retângulo, e como podemos calcular a área da retângulo retângulo?\n  8. Seja capaz de interpretar e aplicar as propriedades topológicas de uma geometria no contexto da prática, como na geometria de um problema de planejamento, na geometria de uma área, na geometria de um retângulo, ou na geometria de uma solução de um problema de geometria.\n\n**Nova questão (inédita):**\n\n  Qual é a forma e direção do ângulo interior do retângulo retângulo, e como podemos calcular a área da retângulo retângulo?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 885,
+            "total_tokens": 885
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.904997400008142,
+            "tempo_decode_s": 65.26094589999411,
+            "tempo_resposta_s": 67.16594330000225,
+            "tempo_total_s": 67.16594330000225,
+            "tokens_entrada": 0,
+            "tokens_saida": 885,
+            "tps": 13.176320565425161,
+            "ram_inicio_mb": 2015.62890625,
+            "ram_pico_mb": 2017.64453125,
+            "ram_usada_mb": 2.015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 2039.6,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 5.71,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 74.21,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -62.2,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+    "gerado_em": "2026-09-12T17:29:52.242400"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}

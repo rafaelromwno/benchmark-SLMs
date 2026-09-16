@@ -1,0 +1,1194 @@
+{
+  "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+  "formato": "gguf",
+  "data": "12/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--HuggingFaceTB_SmolLM3-3B-GGUF\\HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf"
+    },
+    "seed": 123,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 123
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 123
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.18,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Qual é o menor número inteiro positivo que, quando dividido por 7, deixa resto 3?",
+            "alternativas": {
+              "A": "10",
+              "B": "17",
+              "C": "24",
+              "D": "31",
+              "E": "38"
+            },
+            "resposta_correta": "D",
+            "resolucao_passo_a_passo": "Para encontrar o menor número inteiro positivo que, quando dividido por 7, deixa resto 3, podemos escrever a forma geral da equação: x = 7k + 3, onde k é um inteiro positivo. O menor valor de k que faz x ser positivo é 1, então substituindo k = 1 na equação, temos x = 7*1 + 3 = 10 + 3 = 13. No entanto, 13 não é uma das alternativas. A seguir, tentamos k = 2, então x = 7*2 + 3 = 14 + 3 = 17. 17 é uma das alternativas. Portanto, o menor número inteiro positivo que, quando dividido por 7, deixa resto 3, é 17. A alternativa correta é B."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 2.7740370000246912,
+        "tempo_prefill_s": 26.253725299960934,
+        "tempo_decode_s": 35.936628700001165,
+        "tempo_resposta_s": 62.1903539999621,
+        "tempo_total_s": 64.96439099998679,
+        "tokens_entrada": 0,
+        "tokens_saida": 302,
+        "tps": 4.856058545673885,
+        "ram_inicio_mb": 40.7890625,
+        "ram_pico_mb": 2934.06640625,
+        "ram_usada_mb": 2893.27734375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 64.96439099998679,
+        "tempo_carregamento_s": 2.7740370000246912,
+        "tempo_resposta_s": 62.1903539999621,
+        "ram_pico_mb": 2934.06640625,
+        "ram_inicio_mb": 40.7890625,
+        "ttft_segundos": 26.253725299960934,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o menor número inteiro positivo que, quando dividido por 7, deixa resto 3?\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"17\",\n                \"C\": \"24\",\n                \"D\": \"31\",\n                \"E\": \"38\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Para encontrar o menor número inteiro positivo que, quando dividido por 7, deixa resto 3, podemos escrever a forma geral da equação: x = 7k + 3, onde k é um inteiro positivo. O menor valor de k que faz x ser positivo é 1, então substituindo k = 1 na equação, temos x = 7*1 + 3 = 10 + 3 = 13. No entanto, 13 não é uma das alternativas. A seguir, tentamos k = 2, então x = 7*2 + 3 = 14 + 3 = 17. 17 é uma das alternativas. Portanto, o menor número inteiro positivo que, quando dividido por 7, deixa resto 3, é 17. A alternativa correta é B.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 302,
+            "total_tokens": 302
+          },
+          "metrics": {
+            "tempo_carregamento_s": 2.7740370000246912,
+            "tempo_prefill_s": 26.253725299960934,
+            "tempo_decode_s": 35.936628700001165,
+            "tempo_resposta_s": 62.1903539999621,
+            "tempo_total_s": 64.96439099998679,
+            "tokens_entrada": 0,
+            "tokens_saida": 302,
+            "tps": 4.856058545673885,
+            "ram_inicio_mb": 40.7890625,
+            "ram_pico_mb": 2934.06640625,
+            "ram_usada_mb": 2893.27734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 7.619303,
+          "iqr": 0.272494,
+          "p25": 7.39423,
+          "p75": 7.666724,
+          "p95": 8.487248,
+          "p99": 8.525947,
+          "max": 8.535622,
+          "media": 6.95188
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.549791,
+          "iqr": 3.513975,
+          "p25": 1.203233,
+          "p75": 4.717207,
+          "p95": 6.184667,
+          "p99": 6.839453,
+          "max": 7.00315,
+          "media": 3.547971
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 55.128467,
+          "iqr": 10.522799,
+          "p25": 49.504335,
+          "p75": 60.027134,
+          "p95": 104.306162,
+          "p99": 121.652993,
+          "max": 125.989701,
+          "media": 60.085345
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2353.380859,
+          "iqr": 490.932617,
+          "p25": 2337.821289,
+          "p75": 2828.753906,
+          "p95": 2890.863672,
+          "p99": 2913.394609,
+          "max": 2919.027344,
+          "media": 2519.725391
+        },
+        "tps_medio": 6.95188,
+        "ttft_medio_segundos": 3.547971,
+        "tempo_medio_segundos": 60.085345,
+        "ram_pico_mb": 2919.027344
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 7,
+        "json_invalidos": 2,
+        "taxa_json_valido_percent": 70.0,
+        "json_valido_ic95": {
+          "numerador": 7,
+          "denominador": 10,
+          "ponto": 0.7,
+          "ic95": [
+            0.396778,
+            0.892209
+          ],
+          "formato": "70.0% [39.7–89.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 7,
+        "gabarito_avaliados": 7,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 7,
+          "denominador": 7,
+          "ponto": 1.0,
+          "ic95": [
+            0.64567,
+            1.0
+          ],
+          "formato": "100.0% [64.6–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 7,
+        "taxa_utilizavel_percent": 70.0,
+        "utilizavel_ic95": {
+          "numerador": 7,
+          "denominador": 10,
+          "ponto": 0.7,
+          "ic95": [
+            0.396778,
+            0.892209
+          ],
+          "formato": "70.0% [39.7–89.2]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 7,
+          "timeout": 1,
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 7.619303,
+          "iqr": 0.272494,
+          "p25": 7.39423,
+          "p75": 7.666724,
+          "p95": 8.487248,
+          "p99": 8.525947,
+          "max": 8.535622,
+          "media": 6.95188
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.549791,
+          "iqr": 3.513975,
+          "p25": 1.203233,
+          "p75": 4.717207,
+          "p95": 6.184667,
+          "p99": 6.839453,
+          "max": 7.00315,
+          "media": 3.547971
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 55.128467,
+          "iqr": 10.522799,
+          "p25": 49.504335,
+          "p75": 60.027134,
+          "p95": 104.306162,
+          "p99": 121.652993,
+          "max": 125.989701,
+          "media": 60.085345
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2353.380859,
+          "iqr": 490.932617,
+          "p25": 2337.821289,
+          "p75": 2828.753906,
+          "p95": 2890.863672,
+          "p99": 2913.394609,
+          "max": 2919.027344,
+          "media": 2519.725391
+        },
+        "tps_medio": 6.95188,
+        "ttft_medio_segundos": 3.547971,
+        "tempo_medio_segundos": 60.085345,
+        "ram_pico_mb": 2919.027344,
+        "tps_por_rodada": [
+          7.596004825354407,
+          7.64260081461893,
+          7.669545379616841,
+          7.139998649787062,
+          8.428123352974007,
+          7.484511726128403,
+          0.0,
+          7.658259729571487,
+          7.364136452110933,
+          8.535621832535004
+        ],
+        "ttft_por_rodada": [
+          7.003149900003336,
+          4.739654999983031,
+          4.435147800017148,
+          5.184299699962139,
+          0.11810089997015893,
+          4.4608678999939,
+          0.12397780001629144,
+          4.649864399980288,
+          4.63871480000671,
+          0.12592740001855418
+        ],
+        "tempo_por_rodada": [
+          77.8040579999797,
+          53.25412249995861,
+          58.934392800030764,
+          57.002811899990775,
+          48.290702799975406,
+          60.39138109999476,
+          125.98970129998634,
+          53.14523329999065,
+          38.157902400009334,
+          27.883147199987434
+        ],
+        "ram_por_rodada": [
+          2919.02734375,
+          2856.44140625,
+          2851.0625,
+          2761.828125,
+          2337.4453125,
+          2338.94921875,
+          2352.44921875,
+          2354.3125,
+          2228.0859375,
+          2197.65234375
+        ],
+        "ram_media_mb": 2519.725391
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o valor de x que satisfaz a equação 2x + 5 = 15?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"10\",\n                \"C\": \"12\",\n                \"D\": \"20\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"2x + 5 = 15; 2x = 15 - 5; 2x = 10; x = 10/2; x = 5\"\n        },\n        {\n            \"enunciado\": \"Se temos uma linha reta que passa pelos pontos (1, 3) e (4, 7), qual é a equação dessa reta na forma y = mx + b?\",\n            \"alternativas\": {\n                \"A\": \"y = 2x + 1\",\n                \"B\": \"y = 2x + 3\",\n                \"C\": \"y = 3x + 2\",\n                \"D\": \"y = 3x + 1\",\n                \"E\": \"y = 4x + 1\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"A reta passa pelos pontos (1, 3) e (4, 7). A inclinação m é (7-3)/(4-1) = 4/3. Usando o ponto (1, 3), temos 3 = (4/3)(1) + b. Resolvendo, b = 3 - 4/3 = 5/3. A equação da reta é y = (4/3)x + 5/3, mas simplificando, podemos dizer que é y = 2x + 3.\"\n        },\n        {\n            \"enunciado\": \"Se temos um conjunto de dados com os valores {2, 4, 6, 8, 10}, qual é a média desse conjunto?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"10\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"A média é a soma dos valores dividida pelo número de valores. Soma = 2 + 4 + 6 + 8 + 10 = 30. Número de valores = 5. Média = 30/5 = 6.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 591,
+            "total_tokens": 591
+          },
+          "metrics": {
+            "tempo_prefill_s": 7.003149900003336,
+            "tempo_decode_s": 70.80090809997637,
+            "tempo_resposta_s": 77.8040579999797,
+            "tempo_total_s": 77.8040579999797,
+            "tokens_entrada": 0,
+            "tokens_saida": 591,
+            "tps": 7.596004825354407,
+            "ram_inicio_mb": 2917.08203125,
+            "ram_pico_mb": 2919.02734375,
+            "ram_usada_mb": 1.9453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x + 7 = 22, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x + 7 = 22\\n3x = 22 - 7\\n3x = 15\\nx = 15 / 3\\nx = 5\"\n        },\n        {\n            \"enunciado\": \"Se 4x - 3 = 13, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4x - 3 = 13\\n4x = 13 + 3\\n4x = 16\\nx = 16 / 4\\nx = 4\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 5 = 17, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"7\",\n                \"C\": \"8\",\n                \"D\": \"9\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x + 5 = 17\\n2x = 17 - 5\\n2x = 12\\nx = 12 / 2\\nx = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 407,
+            "total_tokens": 407
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.739654999983031,
+            "tempo_decode_s": 48.51446749997558,
+            "tempo_resposta_s": 53.25412249995861,
+            "tempo_total_s": 53.25412249995861,
+            "tokens_entrada": 0,
+            "tokens_saida": 407,
+            "tps": 7.64260081461893,
+            "ram_inicio_mb": 2855.6328125,
+            "ram_pico_mb": 2856.44140625,
+            "ram_usada_mb": 0.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Considere a sequência de números: 1/2, 2/4, 3/6, 4/8, 5/10. Qual é a razão entre o quinto termo e o primeiro termo dessa sequência?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/1\",\n                \"C\": \"5/2\",\n                \"D\": \"10/5\",\n                \"E\": \"1/1\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/2 * 5/1 = 5/2\"\n        },\n        {\n            \"enunciado\": \"Se temos um número inteiro positivo N tal que N dividido por 7 resulta em um resto de 3, qual é o menor número inteiro positivo que satisfaz essa condição?\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"17\",\n                \"C\": \"24\",\n                \"D\": \"31\",\n                \"E\": \"38\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N = 7k + 3. Para k = 2, N = 7*2 + 3 = 17\"\n        },\n        {\n            \"enunciado\": \"Determine o menor número inteiro positivo N que, quando dividido por 9, resulta em um quociente de 8 e um resto de 5.\",\n            \"alternativas\": {\n                \"A\": \"73\",\n                \"B\": \"77\",\n                \"C\": \"81\",\n                \"D\": \"85\",\n                \"E\": \"89\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"N = 9*8 + 5 = 72 + 5 = 77 + 2 = 89\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 452,
+            "total_tokens": 452
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.435147800017148,
+            "tempo_decode_s": 54.499245000013616,
+            "tempo_resposta_s": 58.934392800030764,
+            "tempo_total_s": 58.934392800030764,
+            "tokens_entrada": 0,
+            "tokens_saida": 452,
+            "tps": 7.669545379616841,
+            "ram_inicio_mb": 2849.20703125,
+            "ram_pico_mb": 2851.0625,
+            "ram_usada_mb": 1.85546875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x + 7 = 22, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x + 7 = 22\\n3x = 22 - 7\\n3x = 15\\nx = 15 / 3\\nx = 5\"\n        },\n        {\n            \"enunciado\": \"Se 4x - 3 = 13, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4x - 3 = 13\\n4x = 13 + 3\\n4x = 16\\nx = 16 / 4\\nx = 4\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 5 = 17, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"7\",\n                \"C\": \"8\",\n                \"D\": \"9\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x + 5 = 17\\n2x = 17 - 5\\n2x = 12\\nx = 12 / 2\\nx = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 407,
+            "total_tokens": 407
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.184299699962139,
+            "tempo_decode_s": 51.818512200028636,
+            "tempo_resposta_s": 57.002811899990775,
+            "tempo_total_s": 57.002811899990775,
+            "tokens_entrada": 0,
+            "tokens_saida": 407,
+            "tps": 7.139998649787062,
+            "ram_inicio_mb": 2761.796875,
+            "ram_pico_mb": 2761.828125,
+            "ram_usada_mb": 0.03125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x + 2 = 17, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3x + 2 = 17\\n3x = 17 - 2\\n3x = 15\\nx = 15 / 3\\nx = 5\"\n        },\n        {\n            \"enunciado\": \"Se 4x - 3 = 25, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"7\",\n                \"C\": \"8\",\n                \"D\": \"9\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"4x - 3 = 25\\n4x = 25 + 3\\n4x = 28\\nx = 28 / 4\\nx = 7\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 5 = 23, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"8\",\n                \"B\": \"9\",\n                \"C\": \"10\",\n                \"D\": \"11\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"2x + 5 = 23\\n2x = 23 - 5\\n2x = 18\\nx = 18 / 2\\nx = 9\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 407,
+            "total_tokens": 407
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.11810089997015893,
+            "tempo_decode_s": 48.17260190000525,
+            "tempo_resposta_s": 48.290702799975406,
+            "tempo_total_s": 48.290702799975406,
+            "tokens_entrada": 0,
+            "tokens_saida": 407,
+            "tps": 8.428123352974007,
+            "ram_inicio_mb": 2335.8671875,
+            "ram_pico_mb": 2337.4453125,
+            "ram_usada_mb": 1.578125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Considere a sequência de números: 1/2, 2/4, 3/6, 4/8, 5/10. Qual é a razão entre o quinto termo e o primeiro termo dessa sequência?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/1\",\n                \"C\": \"5/2\",\n                \"D\": \"10/5\",\n                \"E\": \"1/1\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/2 * 5/1 = 5/2\"\n        },\n        {\n            \"enunciado\": \"Se temos um número inteiro positivo N tal que N dividido por 7 resulta em um resto de 3, qual é o menor número inteiro positivo que satisfaz essa condição?\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"17\",\n                \"C\": \"24\",\n                \"D\": \"31\",\n                \"E\": \"38\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"N = 7k + 3. Para k = 2, N = 7*2 + 3 = 17\"\n        },\n        {\n            \"enunciado\": \"Determine o menor número inteiro positivo N que, quando dividido por 9, resulta em um quociente de 8 e um resto de 5.\",\n            \"alternativas\": {\n                \"A\": \"73\",\n                \"B\": \"77\",\n                \"C\": \"81\",\n                \"D\": \"85\",\n                \"E\": \"89\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"N = 9*8 + 5 = 72 + 5 = 77 + 2 = 89\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 452,
+            "total_tokens": 452
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.4608678999939,
+            "tempo_decode_s": 55.93051320000086,
+            "tempo_resposta_s": 60.39138109999476,
+            "tempo_total_s": 60.39138109999476,
+            "tokens_entrada": 0,
+            "tokens_saida": 452,
+            "tps": 7.484511726128403,
+            "ram_inicio_mb": 2337.43359375,
+            "ram_pico_mb": 2338.94921875,
+            "ram_usada_mb": 1.515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.12397780001629144,
+            "tempo_decode_s": 125.86572349997004,
+            "tempo_resposta_s": 125.98970129998634,
+            "tempo_total_s": 125.98970129998634,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2338.859375,
+            "ram_pico_mb": 2352.44921875,
+            "ram_usada_mb": 13.58984375,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x + 7 = 22, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x + 7 = 22\\n3x = 22 - 7\\n3x = 15\\nx = 15 / 3\\nx = 5\"\n        },\n        {\n            \"enunciado\": \"Se 4x - 3 = 13, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4x - 3 = 13\\n4x = 13 + 3\\n4x = 16\\nx = 16 / 4\\nx = 4\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 5 = 17, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"7\",\n                \"C\": \"8\",\n                \"D\": \"9\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x + 5 = 17\\n2x = 17 - 5\\n2x = 12\\nx = 12 / 2\\nx = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 407,
+            "total_tokens": 407
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.649864399980288,
+            "tempo_decode_s": 48.49536890001036,
+            "tempo_resposta_s": 53.14523329999065,
+            "tempo_total_s": 53.14523329999065,
+            "tokens_entrada": 0,
+            "tokens_saida": 407,
+            "tps": 7.658259729571487,
+            "ram_inicio_mb": 2352.7265625,
+            "ram_pico_mb": 2354.3125,
+            "ram_usada_mb": 1.5859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 12 e 18?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"14\",\n                \"C\": \"15\",\n                \"D\": \"16\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"12 < x < 18 → 14, 15, 16, 17 estão entre 12 e 18. Apenas o 17 está entre as alternativas.\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 9 e 15?\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"11\",\n                \"C\": \"12\",\n                \"D\": \"13\",\n                \"E\": \"14\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"9 < x < 15 → 10, 11, 12, 13, 14 estão entre 9 e 15. Apenas o 14 está entre as alternativas.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 281,
+            "total_tokens": 281
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.63871480000671,
+            "tempo_decode_s": 33.519187600002624,
+            "tempo_resposta_s": 38.157902400009334,
+            "tempo_total_s": 38.157902400009334,
+            "tokens_entrada": 0,
+            "tokens_saida": 281,
+            "tps": 7.364136452110933,
+            "ram_inicio_mb": 2226.21875,
+            "ram_pico_mb": 2228.0859375,
+            "ram_usada_mb": 1.8671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 17 e 21?\",\n            \"alternativas\": {\n                \"A\": \"18\",\n                \"B\": \"19\",\n                \"C\": \"20\",\n                \"D\": \"22\",\n                \"E\": \"23\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"17 < x < 21; x = 18, 19, 20\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 45 e 49?\",\n            \"alternativas\": {\n                \"A\": \"46\",\n                \"B\": \"47\",\n                \"C\": \"48\",\n                \"D\": \"50\",\n                \"E\": \"51\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"45 < x < 49; x = 46, 47, 48\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 238,
+            "total_tokens": 238
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.12592740001855418,
+            "tempo_decode_s": 27.75721979996888,
+            "tempo_resposta_s": 27.883147199987434,
+            "tempo_total_s": 27.883147199987434,
+            "tokens_entrada": 0,
+            "tokens_saida": 238,
+            "tps": 8.535621832535004,
+            "ram_inicio_mb": 2196.05859375,
+            "ram_pico_mb": 2197.65234375,
+            "ram_usada_mb": 1.59375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 7.96602,
+        "ram_media_mb": 2201.017578,
+        "ram_pico_mb": 2202.324219,
+        "tempo_medio_segundos": 101.776173,
+        "ttft_medio_segundos": 2.817388,
+        "tps": {
+          "n": 2,
+          "mediana": 7.96602,
+          "iqr": 0.268846,
+          "p25": 7.831597,
+          "p75": 8.100443,
+          "p95": 8.207981,
+          "p99": 8.229489,
+          "max": 8.234866,
+          "media": 7.96602
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.817388,
+          "iqr": 2.704446,
+          "p25": 1.465165,
+          "p75": 4.169611,
+          "p95": 5.25139,
+          "p99": 5.467745,
+          "max": 5.521834,
+          "media": 2.817388
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 101.776173,
+          "iqr": 8.365271,
+          "p25": 97.593538,
+          "p75": 105.958809,
+          "p95": 109.304917,
+          "p99": 109.974139,
+          "max": 110.141444,
+          "media": 101.776173
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2201.017578,
+          "iqr": 1.306641,
+          "p25": 2200.364258,
+          "p75": 2201.670898,
+          "p95": 2202.193555,
+          "p99": 2202.298086,
+          "max": 2202.324219,
+          "media": 2201.017578
+        },
+        "tps_por_rodada": [
+          7.697174296014876,
+          8.234865698478048
+        ],
+        "ttft_por_rodada": [
+          5.521834200015292,
+          0.11294230003841221
+        ],
+        "tempo_por_rodada": [
+          93.41090280003846,
+          110.14144410000881
+        ],
+        "ram_por_rodada": [
+          2199.7109375,
+          2202.32421875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 2,
+        "quantidade_de_questoes": 5,
+        "tentativas": 1,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": true,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 2202.324219,
+        "tps_medio": 7.96602,
+        "tempo_medio_segundos": 101.776173,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o valor de x se 3x + 7 = 16?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"5\",\n                \"C\": \"7\",\n                \"D\": \"9\",\n                \"E\": \"11\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3x + 7 = 16; 3x = 16 - 7; 3x = 9; x = 9 / 3; x = 3\"\n            }\n        },\n        {\n            \"enunciado\": \"Se a soma de dois números é 25 e a diferença entre eles é 7, qual é o maior número?\",\n            \"alternativas\": {\n                \"A\": \"16\",\n                \"B\": \"18\",\n                \"C\": \"19\",\n                \"D\": \"20\",\n                \"E\": \"21\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"x + y = 25; x - y = 7; 2x = 32; x = 16; y = 9\"\n            }\n        },\n        {\n            \"enunciado\": \"Se a área de um quadrado é 144 cm², qual é o comprimento de cada lado?\",\n            \"alternativas\": {\n                \"A\": \"12 cm\",\n                \"B\": \"14 cm\",\n                \"C\": \"16 cm\",\n                \"D\": \"18 cm\",\n                \"E\": \"20 cm\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x² = 144; x = √144; x = 12\"\n            }\n        },\n        {\n            \"enunciado\": \"Se um número inteiro é dividido por 7, o resto é 3. Qual é o próximo número inteiro que, quando dividido por 7, também deixa resto 3?\",\n            \"alternativas\": {\n                \"A\": \"14\",\n                \"B\": \"21\",\n                \"C\": \"28\",\n                \"D\": \"35\",\n                \"E\": \"42\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"x = 7k + 3; 7(k+1) + 3; x+7 = 7(k+1) + 3\"\n            }\n        },\n        {\n            \"enunciado\": \"Se a soma de três números é 63 e a média desses números é 21, qual é o maior número?\",\n            \"alternativas\": {\n                \"A\": \"50\",\n                \"B\": \"60\",\n                \"C\": \"70\",\n                \"D\": \"80\",\n                \"E\": \"90\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"x + y + z = 63; (x + y + z) / 3 = 21; x + y + z = 63; z = 63 - (x + y); z = 63 - 42; z = 21\"\n            }\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 719,
+            "total_tokens": 719
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.521834200015292,
+            "tempo_decode_s": 87.88906860002317,
+            "tempo_resposta_s": 93.41090280003846,
+            "tempo_total_s": 93.41090280003846,
+            "tokens_entrada": 0,
+            "tokens_saida": 719,
+            "tps": 7.697174296014876,
+            "ram_inicio_mb": 2197.7578125,
+            "ram_pico_mb": 2199.7109375,
+            "ram_usada_mb": 1.953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Considere a sequência de números: 1/2, 2/4, 3/6, 4/8, 5/10. Qual é o próximo número da sequência?\",\n            \"alternativas\": {\n                \"A\": \"6/12\",\n                \"B\": \"5/9\",\n                \"C\": \"10/5\",\n                \"D\": \"7/14\",\n                \"E\": \"3/3\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/2 = 2/4 = 3/6 = 4/8 = 5/10. Todos os termos da sequência são iguais a n/(2n). O próximo termo é 6/(2*6) = 6/12.\"\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da soma: 7/8 + 3/8?\",\n            \"alternativas\": {\n                \"A\": \"10/8\",\n                \"B\": \"10/4\",\n                \"C\": \"10/16\",\n                \"D\": \"10/12\",\n                \"E\": \"10/8\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para somar frações, é necessário ter o mesmo denominador. O denominador comum de 8 e 8 é 8. Portanto, 7/8 + 3/8 = (7+3)/8 = 10/8.\"\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da subtração: 9/12 - 5/12?\",\n            \"alternativas\": {\n                \"A\": \"4/12\",\n                \"B\": \"5/12\",\n                \"C\": \"6/12\",\n                \"D\": \"7/12\",\n                \"E\": \"8/12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para subtrair frações, é necessário ter o mesmo denominador. O denominador comum de 12 e 12 é 12. Portanto, 9/12 - 5/12 = (9-5)/12 = 4/12.\"\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da multiplicação: 3/4 × 4/3?\",\n            \"alternativas\": {\n                \"A\": \"1/1\",\n                \"B\": \"1/2\",\n                \"C\": \"1/3\",\n                \"D\": \"1/4\",\n                \"E\": \"1/6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para multiplicar frações, multiplicamos os numeradores entre si e os denominadores entre si. Portanto, (3×4)/(4×3) = 12/12 = 1/1.\"\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da divisão: 2/3 ÷ 4/5?\",\n            \"alternativas\": {\n                \"A\": \"2/5\",\n                \"B\": \"5/2\",\n                \"C\": \"10/15\",\n                \"D\": \"8/15\",\n                \"E\": \"10/8\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Para dividir frações, multiplicamos a primeira fração pelo inverso da segunda. Portanto, (2/3) × (5/4) = (2×5)/(3×4) = 10/12 = 5/6. Simplificando 10/12, obtemos 5/6, mas a alternativa mais próxima é 2/5, que pode ser um erro de simplificação. No entanto, o resultado exato é 5/6, mas devido à necessidade de escolher entre as alternativas, a resposta mais próxima, considerando um erro de simplificação, é 2/5.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 907,
+            "total_tokens": 907
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.11294230003841221,
+            "tempo_decode_s": 110.0285017999704,
+            "tempo_resposta_s": 110.14144410000881,
+            "tempo_total_s": 110.14144410000881,
+            "tokens_entrada": 0,
+            "tokens_saida": 907,
+            "tps": 8.234865698478048,
+            "ram_inicio_mb": 2200.0078125,
+            "ram_pico_mb": 2202.32421875,
+            "ram_usada_mb": 2.31640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 7.327882,
+        "ram_media_mb": 2205.132812,
+        "ram_pico_mb": 2206.015625,
+        "tempo_medio_segundos": 27.825439,
+        "ttft_medio_segundos": 4.192271,
+        "tps": {
+          "n": 2,
+          "mediana": 7.327882,
+          "iqr": 0.17657,
+          "p25": 7.239597,
+          "p75": 7.416166,
+          "p95": 7.486794,
+          "p99": 7.50092,
+          "max": 7.504451,
+          "media": 7.327882
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 4.192271,
+          "iqr": 0.404799,
+          "p25": 3.989871,
+          "p75": 4.39467,
+          "p95": 4.55659,
+          "p99": 4.588974,
+          "max": 4.59707,
+          "media": 4.192271
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 27.825439,
+          "iqr": 0.557716,
+          "p25": 27.546581,
+          "p75": 28.104297,
+          "p95": 28.327383,
+          "p99": 28.372001,
+          "max": 28.383155,
+          "media": 27.825439
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2205.132812,
+          "iqr": 0.882812,
+          "p25": 2204.691406,
+          "p75": 2205.574219,
+          "p95": 2205.927344,
+          "p99": 2205.997969,
+          "max": 2206.015625,
+          "media": 2205.132812
+        },
+        "tps_por_rodada": [
+          7.1513121156034245,
+          7.504451170087901
+        ],
+        "ttft_por_rodada": [
+          4.597070199961308,
+          3.7874712999910116
+        ],
+        "tempo_por_rodada": [
+          27.267723299970385,
+          28.383154899987858
+        ],
+        "ram_por_rodada": [
+          2204.25,
+          2206.015625
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Quais são os lados de um triângulo equilátero?",
+                "alternativas": {
+                  "A": "Dois lados iguais e um lado diferente",
+                  "B": "Tres lados iguais",
+                  "C": "Dois lados diferentes e um lado igual",
+                  "D": "Tres lados diferentes",
+                  "E": "Dois lados iguais e um ângulo reto"
+                },
+                "resposta_correta": "B",
+                "resolucao_passo_a_passo": "1) Um triângulo equilátero é definido como um triângulo com três lados iguais. 2) Logo, os lados do triângulo equilátero são iguais entre si."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Qual é o perímetro de um quadrado com lado de 5 cm?",
+                "alternativas": {
+                  "A": "20 cm",
+                  "B": "25 cm",
+                  "C": "30 cm",
+                  "D": "35 cm",
+                  "E": "40 cm"
+                },
+                "resposta_correta": "B",
+                "resolucao_passo_a_passo": "4 * 5 = 20 cm (lado do quadrado) + 20 cm (outro lado) + 20 cm (terceiro lado) + 20 cm (quarto lado) = 80 cm (percurso ao redor do quadrado) / 4 = 20 cm / 4 = 5 cm (comprimento de cada lado) + 5 cm + 5 cm + 5 cm + 5 cm = 25 cm"
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 2206.015625,
+        "tps_medio": 7.327882,
+        "tempo_medio_segundos": 27.825439,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 100.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Quais são os lados de um triângulo equilátero?\",\n            \"alternativas\": {\n                \"A\": \"Dois lados iguais e um lado diferente\",\n                \"B\": \"Tres lados iguais\",\n                \"C\": \"Dois lados diferentes e um lado igual\",\n                \"D\": \"Tres lados diferentes\",\n                \"E\": \"Dois lados iguais e um ângulo reto\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1) Um triângulo equilátero é definido como um triângulo com três lados iguais. 2) Logo, os lados do triângulo equilátero são iguais entre si.\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 195,
+            "total_tokens": 195
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.597070199961308,
+            "tempo_decode_s": 22.670653100009076,
+            "tempo_resposta_s": 27.267723299970385,
+            "tempo_total_s": 27.267723299970385,
+            "tokens_entrada": 0,
+            "tokens_saida": 195,
+            "tps": 7.1513121156034245,
+            "ram_inicio_mb": 2202.421875,
+            "ram_pico_mb": 2204.25,
+            "ram_usada_mb": 1.828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o perímetro de um quadrado com lado de 5 cm?\",\n            \"alternativas\": {\n                \"A\": \"20 cm\",\n                \"B\": \"25 cm\",\n                \"C\": \"30 cm\",\n                \"D\": \"35 cm\",\n                \"E\": \"40 cm\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4 * 5 = 20 cm (lado do quadrado) + 20 cm (outro lado) + 20 cm (terceiro lado) + 20 cm (quarto lado) = 80 cm (percurso ao redor do quadrado) / 4 = 20 cm / 4 = 5 cm (comprimento de cada lado) + 5 cm + 5 cm + 5 cm + 5 cm = 25 cm\"\n            }\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 213,
+            "total_tokens": 213
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.7874712999910116,
+            "tempo_decode_s": 24.595683599996846,
+            "tempo_resposta_s": 28.383154899987858,
+            "tempo_total_s": 28.383154899987858,
+            "tokens_entrada": 0,
+            "tokens_saida": 213,
+            "tps": 7.504451170087901,
+            "ram_inicio_mb": 2204.40625,
+            "ram_pico_mb": 2206.015625,
+            "ram_usada_mb": 1.609375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2934.1,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2934.1 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 4.86,
+        "limite": 5.0,
+        "motivo": "TPS 4.86 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 1,
+        "limite": 0,
+        "motivo": "Crash/OOM detectado — 1 ocorrência(s)",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 70.0,
+        "limite": 60.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 101.78,
+        "limite": 90.0,
+        "motivo": "Tempo médio 101.8s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -12.4,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "RAM pico 2934.1 MB — limite 2048.0 MB",
+      "TPS 4.86 abaixo do mínimo 5.0",
+      "Crash/OOM detectado — 1 ocorrência(s)",
+      "Tempo médio 101.8s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "hardware",
+      "performance"
+    ],
+    "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+    "gerado_em": "2026-09-12T10:26:56.147805"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "RAM pico 2934.1 MB — limite 2048.0 MB; TPS 4.86 abaixo do mínimo 5.0; Crash/OOM detectado — 1 ocorrência(s); Tempo médio 101.8s acima de 90.0s"
+}

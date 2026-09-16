@@ -1,0 +1,1194 @@
+{
+  "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+  "formato": "gguf",
+  "data": "12/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--HuggingFaceTB_SmolLM3-3B-GGUF\\HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf"
+    },
+    "seed": 33,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 33
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 33
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.03,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Determine qual é o maior número que pode ser obtido subtraindo uma fração de 3/8 de 5/6.",
+            "alternativas": {
+              "A": "15/24",
+              "B": "25/24",
+              "C": "35/24",
+              "D": "45/24",
+              "E": "55/24"
+            },
+            "resposta_correta": "E",
+            "resolucao_passo_a_passo": "Para resolver esta questão, precisamos calcular o valor da fração 3/8 de 5/6 e subtrair esse valor de 5/6. Primeiro, calculamos 3/8 de 5/6: (3/8) * (5/6) = 15/48 = 5/16. Em seguida, subtraímos 5/16 de 5/6: 5/6 - 5/16. Para isso, precisamos de um denominador comum. O menor denominador comum de 6 e 16 é 48. Convertendo as frações: 5/6 = 40/48 e 5/16 = 15/48. Agora, realizamos a subtração: 40/48 - 15/48 = 25/48. Portanto, o maior número que pode ser obtido subtraindo 3/8 de 5/6 de 5/6 é 25/48, o que corresponde à alternativa B."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 3.123575500037987,
+        "tempo_prefill_s": 27.027641599997878,
+        "tempo_decode_s": 45.17730499996105,
+        "tempo_resposta_s": 72.20494659995893,
+        "tempo_total_s": 75.32852209999692,
+        "tokens_entrada": 0,
+        "tokens_saida": 351,
+        "tps": 4.861162794630467,
+        "ram_inicio_mb": 39.9375,
+        "ram_pico_mb": 3003.8671875,
+        "ram_usada_mb": 2963.9296875,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 75.32852209999692,
+        "tempo_carregamento_s": 3.123575500037987,
+        "tempo_resposta_s": 72.20494659995893,
+        "ram_pico_mb": 3003.8671875,
+        "ram_inicio_mb": 39.9375,
+        "ttft_segundos": 27.027641599997878,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine qual é o maior número que pode ser obtido subtraindo uma fração de 3/8 de 5/6.\",\n            \"alternativas\": {\n                \"A\": \"15/24\",\n                \"B\": \"25/24\",\n                \"C\": \"35/24\",\n                \"D\": \"45/24\",\n                \"E\": \"55/24\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Para resolver esta questão, precisamos calcular o valor da fração 3/8 de 5/6 e subtrair esse valor de 5/6. Primeiro, calculamos 3/8 de 5/6: (3/8) * (5/6) = 15/48 = 5/16. Em seguida, subtraímos 5/16 de 5/6: 5/6 - 5/16. Para isso, precisamos de um denominador comum. O menor denominador comum de 6 e 16 é 48. Convertendo as frações: 5/6 = 40/48 e 5/16 = 15/48. Agora, realizamos a subtração: 40/48 - 15/48 = 25/48. Portanto, o maior número que pode ser obtido subtraindo 3/8 de 5/6 de 5/6 é 25/48, o que corresponde à alternativa B.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 351,
+            "total_tokens": 351
+          },
+          "metrics": {
+            "tempo_carregamento_s": 3.123575500037987,
+            "tempo_prefill_s": 27.027641599997878,
+            "tempo_decode_s": 45.17730499996105,
+            "tempo_resposta_s": 72.20494659995893,
+            "tempo_total_s": 75.32852209999692,
+            "tokens_entrada": 0,
+            "tokens_saida": 351,
+            "tps": 4.861162794630467,
+            "ram_inicio_mb": 39.9375,
+            "ram_pico_mb": 3003.8671875,
+            "ram_usada_mb": 2963.9296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 7.770156,
+          "iqr": 1.034263,
+          "p25": 7.162064,
+          "p75": 8.196327,
+          "p95": 8.626068,
+          "p99": 8.636751,
+          "max": 8.639422,
+          "media": 7.725283
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 5.216663,
+          "iqr": 4.055287,
+          "p25": 1.285589,
+          "p75": 5.340876,
+          "p95": 6.227834,
+          "p99": 6.411563,
+          "max": 6.457496,
+          "media": 3.861901
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 42.798413,
+          "iqr": 36.497567,
+          "p25": 34.010469,
+          "p75": 70.508036,
+          "p95": 77.253198,
+          "p99": 77.492505,
+          "max": 77.552331,
+          "media": 49.417536
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2569.388672,
+          "iqr": 487.330078,
+          "p25": 2221.515625,
+          "p75": 2708.845703,
+          "p95": 2787.775195,
+          "p99": 2838.989414,
+          "max": 2851.792969,
+          "media": 2498.180469
+        },
+        "tps_medio": 7.725283,
+        "ttft_medio_segundos": 3.861901,
+        "tempo_medio_segundos": 49.417536,
+        "ram_pico_mb": 2851.792969
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 5,
+        "json_invalidos": 5,
+        "taxa_json_valido_percent": 50.0,
+        "json_valido_ic95": {
+          "numerador": 5,
+          "denominador": 10,
+          "ponto": 0.5,
+          "ic95": [
+            0.236593,
+            0.763407
+          ],
+          "formato": "50.0% [23.7–76.3]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 5,
+        "gabarito_avaliados": 5,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 5,
+          "denominador": 5,
+          "ponto": 1.0,
+          "ic95": [
+            0.565518,
+            1.0
+          ],
+          "formato": "100.0% [56.6–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 5,
+        "taxa_utilizavel_percent": 50.0,
+        "utilizavel_ic95": {
+          "numerador": 5,
+          "denominador": 10,
+          "ponto": 0.5,
+          "ic95": [
+            0.236593,
+            0.763407
+          ],
+          "formato": "50.0% [23.7–76.3]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 5,
+          "ok": 5
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 7.770156,
+          "iqr": 1.034263,
+          "p25": 7.162064,
+          "p75": 8.196327,
+          "p95": 8.626068,
+          "p99": 8.636751,
+          "max": 8.639422,
+          "media": 7.725283
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 5.216663,
+          "iqr": 4.055287,
+          "p25": 1.285589,
+          "p75": 5.340876,
+          "p95": 6.227834,
+          "p99": 6.411563,
+          "max": 6.457496,
+          "media": 3.861901
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 42.798413,
+          "iqr": 36.497567,
+          "p25": 34.010469,
+          "p75": 70.508036,
+          "p95": 77.253198,
+          "p99": 77.492505,
+          "max": 77.552331,
+          "media": 49.417536
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2569.388672,
+          "iqr": 487.330078,
+          "p25": 2221.515625,
+          "p75": 2708.845703,
+          "p95": 2787.775195,
+          "p99": 2838.989414,
+          "max": 2851.792969,
+          "media": 2498.180469
+        },
+        "tps_medio": 7.725283,
+        "ttft_medio_segundos": 3.861901,
+        "tempo_medio_segundos": 49.417536,
+        "ram_pico_mb": 2851.792969,
+        "tps_por_rodada": [
+          6.78570289443566,
+          7.803599882562623,
+          7.3594977584318,
+          7.825031910871961,
+          7.076768599234104,
+          8.320092600973874,
+          7.09625293093753,
+          8.609747248064156,
+          8.639421970910028,
+          7.736711336926373
+        ],
+        "ttft_por_rodada": [
+          6.457495700044092,
+          5.300563500029966,
+          4.702163300011307,
+          5.340532400005031,
+          5.132761599961668,
+          0.12453450000612065,
+          5.947136600036174,
+          0.14673070004209876,
+          0.1260996999917552,
+          5.34099040000001
+        ],
+        "tempo_por_rodada": [
+          35.95795509999152,
+          76.88759150000988,
+          33.69795170001453,
+          76.67700359999435,
+          52.00113509997027,
+          49.638870600028895,
+          34.94802150002215,
+          28.45611990004545,
+          28.358378699980676,
+          77.55233119998593
+        ],
+        "ram_por_rodada": [
+          2851.79296875,
+          2705.64453125,
+          2707.6328125,
+          2709.25,
+          2709.53125,
+          2433.1328125,
+          2372.18359375,
+          2159.9296875,
+          2161.4140625,
+          2171.29296875
+        ],
+        "ram_media_mb": 2498.180469
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 17 e 21?\",\n            \"alternativas\": {\n                \"A\": \"18\",\n                \"B\": \"19\",\n                \"C\": \"20\",\n                \"D\": \"21\",\n                \"E\": \"22\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"17 < x < 21\\n18, 19, 20 são números entre 17 e 21\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 4 e 10?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"4 < x < 10\\n9 é o único número entre 4 e 10\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 244,
+            "total_tokens": 244
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.457495700044092,
+            "tempo_decode_s": 29.50045939994743,
+            "tempo_resposta_s": 35.95795509999152,
+            "tempo_total_s": 35.95795509999152,
+            "tokens_entrada": 0,
+            "tokens_saida": 244,
+            "tps": 6.78570289443566,
+            "ram_inicio_mb": 2851.203125,
+            "ram_pico_mb": 2851.79296875,
+            "ram_usada_mb": 0.58984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine qual é o maior número que divide 630 e 990 sem deixar resto.\",\n            \"alternativas\": {\n                \"A\": \"210\",\n                \"B\": \"140\",\n                \"C\": \"105\",\n                \"D\": \"90\",\n                \"E\": \"70\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"630 = 2^1 × 3^2 × 5^1 × 7^1\\n990 = 2^1 × 3^2 × 5^1 × 11^1\\nMáximo divisor comum (MDC) = 2^1 × 3^2 × 5^1 = 2 × 9 × 5 = 90 × 2 = 180 / 2 = 90\"\n        },\n        {\n            \"enunciado\": \"Considere o número 360. Qual é o maior divisor próprio de 360 que é menor que 180?\",\n            \"alternativas\": {\n                \"A\": \"120\",\n                \"B\": \"100\",\n                \"C\": \"90\",\n                \"D\": \"80\",\n                \"E\": \"70\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Divisores de 360: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, 360\\nMaior divisor próprio de 360 que é menor que 180 é 120\"\n        },\n        {\n            \"enunciado\": \"Considere o número 600. Qual é o menor divisor próprio de 600 que é maior que 50?\",\n            \"alternativas\": {\n                \"A\": \"60\",\n                \"B\": \"80\",\n                \"C\": \"100\",\n                \"D\": \"120\",\n                \"E\": \"140\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Divisores de 600: 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 24, 25, 30, 40, 50, 60, 75, 100, 120, 150, 200, 300, 600\\nMenor divisor próprio de 600 que é maior que 50 é 60\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 600,
+            "total_tokens": 600
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.300563500029966,
+            "tempo_decode_s": 71.58702799997991,
+            "tempo_resposta_s": 76.88759150000988,
+            "tempo_total_s": 76.88759150000988,
+            "tokens_entrada": 0,
+            "tokens_saida": 600,
+            "tps": 7.803599882562623,
+            "ram_inicio_mb": 2703.4921875,
+            "ram_pico_mb": 2705.64453125,
+            "ram_usada_mb": 2.15234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 45 e 51?\",\n            \"alternativas\": {\n                \"A\": \"47\",\n                \"B\": \"48\",\n                \"C\": \"49\",\n                \"D\": \"50\",\n                \"E\": \"52\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"50 = 45 + 5\"\n        },\n        {\n            \"enunciado\": \"Qual é o próximo número na sequência: 32, 30, 28, 26?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"25\",\n                \"C\": \"27\",\n                \"D\": \"28\",\n                \"E\": \"29\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"32 - 2 = 30; 30 - 2 = 28; 28 - 2 = 26; 26 - 2 = 24\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 248,
+            "total_tokens": 248
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.702163300011307,
+            "tempo_decode_s": 28.99578840000322,
+            "tempo_resposta_s": 33.69795170001453,
+            "tempo_total_s": 33.69795170001453,
+            "tokens_entrada": 0,
+            "tokens_saida": 248,
+            "tps": 7.3594977584318,
+            "ram_inicio_mb": 2705.99609375,
+            "ram_pico_mb": 2707.6328125,
+            "ram_usada_mb": 1.63671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine qual é o maior número que divide 630 e 990 sem deixar resto.\",\n            \"alternativas\": {\n                \"A\": \"210\",\n                \"B\": \"140\",\n                \"C\": \"105\",\n                \"D\": \"90\",\n                \"E\": \"70\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"630 = 2^1 × 3^2 × 5^1 × 7^1\\n990 = 2^1 × 3^2 × 5^1 × 11^1\\nMáximo divisor comum (MDC) = 2^1 × 3^2 × 5^1 = 2 × 9 × 5 = 90 × 2 = 180 / 2 = 90\"\n        },\n        {\n            \"enunciado\": \"Considere o número 360. Qual é o maior divisor próprio de 360 que é menor que 180?\",\n            \"alternativas\": {\n                \"A\": \"120\",\n                \"B\": \"100\",\n                \"C\": \"90\",\n                \"D\": \"80\",\n                \"E\": \"70\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Divisores de 360: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, 360\\nMaior divisor próprio de 360 que é menor que 180 é 120\"\n        },\n        {\n            \"enunciado\": \"Considere o número 600. Qual é o menor divisor próprio de 600 que é maior que 50?\",\n            \"alternativas\": {\n                \"A\": \"60\",\n                \"B\": \"80\",\n                \"C\": \"100\",\n                \"D\": \"120\",\n                \"E\": \"140\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Divisores de 600: 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 24, 25, 30, 40, 50, 60, 75, 100, 120, 150, 200, 300, 600\\nMenor divisor próprio de 600 que é maior que 50 é 60\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 600,
+            "total_tokens": 600
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.340532400005031,
+            "tempo_decode_s": 71.33647119998932,
+            "tempo_resposta_s": 76.67700359999435,
+            "tempo_total_s": 76.67700359999435,
+            "tokens_entrada": 0,
+            "tokens_saida": 600,
+            "tps": 7.825031910871961,
+            "ram_inicio_mb": 2707.73046875,
+            "ram_pico_mb": 2709.25,
+            "ram_usada_mb": 1.51953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x + 2 = 14, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x + 2 = 14\\n3x = 14 - 2\\n3x = 12\\nx = 12 / 3\\nx = 4\"\n        },\n        {\n            \"enunciado\": \"Se x - 4 = 9, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"14\",\n                \"C\": \"15\",\n                \"D\": \"16\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x - 4 = 9\\nx = 9 + 4\\nx = 13\"\n        },\n        {\n            \"enunciado\": \"Se 4x = 24, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"10\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4x = 24\\nx = 24 / 4\\nx = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 368,
+            "total_tokens": 368
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.132761599961668,
+            "tempo_decode_s": 46.8683735000086,
+            "tempo_resposta_s": 52.00113509997027,
+            "tempo_total_s": 52.00113509997027,
+            "tokens_entrada": 0,
+            "tokens_saida": 368,
+            "tps": 7.076768599234104,
+            "ram_inicio_mb": 2709.234375,
+            "ram_pico_mb": 2709.53125,
+            "ram_usada_mb": 0.296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 11, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"4\",\n                \"D\": \"3\",\n                \"E\": \"2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 11;\\n3x = 11 + 7;\\n3x = 18;\\nx = 18 / 3;\\nx = 6\"\n        },\n        {\n            \"enunciado\": \"Se 4y + 9 = 25, qual é o valor de y?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"7\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4y + 9 = 25;\\n4y = 25 - 9;\\n4y = 16;\\ny = 16 / 4;\\ny = 4\"\n        },\n        {\n            \"enunciado\": \"Se 2z - 4 = 10, qual é o valor de z?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"7\",\n                \"C\": \"8\",\n                \"D\": \"9\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2z - 4 = 10;\\n2z = 10 + 4;\\n2z = 14;\\nz = 14 / 2;\\nz = 7\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 413,
+            "total_tokens": 413
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.12453450000612065,
+            "tempo_decode_s": 49.514336100022774,
+            "tempo_resposta_s": 49.638870600028895,
+            "tempo_total_s": 49.638870600028895,
+            "tokens_entrada": 0,
+            "tokens_saida": 413,
+            "tps": 8.320092600973874,
+            "ram_inicio_mb": 2431.64453125,
+            "ram_pico_mb": 2433.1328125,
+            "ram_usada_mb": 1.48828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 45 e 51?\",\n            \"alternativas\": {\n                \"A\": \"47\",\n                \"B\": \"48\",\n                \"C\": \"49\",\n                \"D\": \"50\",\n                \"E\": \"52\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"50 = 45 + 5\"\n        },\n        {\n            \"enunciado\": \"Qual é o próximo número na sequência: 32, 30, 28, 26?\",\n            \"alternativas\": {\n                \"A\": \"24\",\n                \"B\": \"25\",\n                \"C\": \"27\",\n                \"D\": \"28\",\n                \"E\": \"29\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"32 - 2 = 30; 30 - 2 = 28; 28 - 2 = 26; 26 - 2 = 24\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 248,
+            "total_tokens": 248
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.947136600036174,
+            "tempo_decode_s": 29.000884899985977,
+            "tempo_resposta_s": 34.94802150002215,
+            "tempo_total_s": 34.94802150002215,
+            "tokens_entrada": 0,
+            "tokens_saida": 248,
+            "tps": 7.09625293093753,
+            "ram_inicio_mb": 2371.515625,
+            "ram_pico_mb": 2372.18359375,
+            "ram_usada_mb": 0.66796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 12 e 15?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"14\",\n                \"C\": \"15\",\n                \"D\": \"16\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"12 < x < 15 \\nApenas o número 13 está entre 12 e 15.\"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 19 e 22 na reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"20\",\n                \"B\": \"21\",\n                \"C\": \"22\",\n                \"D\": \"23\",\n                \"E\": \"24\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"19 < x < 22 \\nApenas o número 20 está entre 19 e 22.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 245,
+            "total_tokens": 245
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.14673070004209876,
+            "tempo_decode_s": 28.309389200003352,
+            "tempo_resposta_s": 28.45611990004545,
+            "tempo_total_s": 28.45611990004545,
+            "tokens_entrada": 0,
+            "tokens_saida": 245,
+            "tps": 8.609747248064156,
+            "ram_inicio_mb": 2158.3515625,
+            "ram_pico_mb": 2159.9296875,
+            "ram_usada_mb": 1.578125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 12 e 15?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"14\",\n                \"C\": \"15\",\n                \"D\": \"16\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"12 < x < 15 \\nApenas o número 13 está entre 12 e 15.\"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 19 e 22 na reta numérica?\",\n            \"alternativas\": {\n                \"A\": \"20\",\n                \"B\": \"21\",\n                \"C\": \"22\",\n                \"D\": \"23\",\n                \"E\": \"24\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"19 < x < 22 \\nApenas o número 20 está entre 19 e 22.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 245,
+            "total_tokens": 245
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.1260996999917552,
+            "tempo_decode_s": 28.23227899998892,
+            "tempo_resposta_s": 28.358378699980676,
+            "tempo_total_s": 28.358378699980676,
+            "tokens_entrada": 0,
+            "tokens_saida": 245,
+            "tps": 8.639421970910028,
+            "ram_inicio_mb": 2159.84765625,
+            "ram_pico_mb": 2161.4140625,
+            "ram_usada_mb": 1.56640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine qual é o maior número que divide 630 e 990 sem deixar resto.\",\n            \"alternativas\": {\n                \"A\": \"210\",\n                \"B\": \"140\",\n                \"C\": \"105\",\n                \"D\": \"90\",\n                \"E\": \"70\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"630 = 2^1 × 3^2 × 5^1 × 7^1\\n990 = 2^1 × 3^2 × 5^1 × 11^1\\nMáximo divisor comum (MDC) = 2^1 × 3^2 × 5^1 = 2 × 9 × 5 = 90 × 2 = 180 / 2 = 90\"\n        },\n        {\n            \"enunciado\": \"Considere o número 360. Qual é o maior divisor próprio de 360 que é menor que 180?\",\n            \"alternativas\": {\n                \"A\": \"120\",\n                \"B\": \"100\",\n                \"C\": \"90\",\n                \"D\": \"80\",\n                \"E\": \"70\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Divisores de 360: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, 360\\nMaior divisor próprio de 360 que é menor que 180 é 120\"\n        },\n        {\n            \"enunciado\": \"Considere o número 600. Qual é o menor divisor próprio de 600 que é maior que 50?\",\n            \"alternativas\": {\n                \"A\": \"60\",\n                \"B\": \"80\",\n                \"C\": \"100\",\n                \"D\": \"120\",\n                \"E\": \"140\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Divisores de 600: 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 24, 25, 30, 40, 50, 60, 75, 100, 120, 150, 200, 300, 600\\nMenor divisor próprio de 600 que é maior que 50 é 60\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 600,
+            "total_tokens": 600
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.34099040000001,
+            "tempo_decode_s": 72.21134079998592,
+            "tempo_resposta_s": 77.55233119998593,
+            "tempo_total_s": 77.55233119998593,
+            "tokens_entrada": 0,
+            "tokens_saida": 600,
+            "tps": 7.736711336926373,
+            "ram_inicio_mb": 2161.390625,
+            "ram_pico_mb": 2171.29296875,
+            "ram_usada_mb": 9.90234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 7.976324,
+        "ram_media_mb": 2179.013672,
+        "ram_pico_mb": 2184.183594,
+        "tempo_medio_segundos": 104.239007,
+        "ttft_medio_segundos": 2.732651,
+        "tps": {
+          "n": 2,
+          "mediana": 7.976324,
+          "iqr": 0.259731,
+          "p25": 7.846459,
+          "p75": 8.10619,
+          "p95": 8.210082,
+          "p99": 8.230861,
+          "max": 8.236055,
+          "media": 7.976324
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.732651,
+          "iqr": 2.620696,
+          "p25": 1.422303,
+          "p75": 4.042999,
+          "p95": 5.091278,
+          "p99": 5.300934,
+          "max": 5.353348,
+          "media": 2.732651
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 104.239007,
+          "iqr": 4.06527,
+          "p25": 102.206372,
+          "p75": 106.271642,
+          "p95": 107.89775,
+          "p99": 108.222971,
+          "max": 108.304277,
+          "media": 104.239007
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2179.013672,
+          "iqr": 5.169922,
+          "p25": 2176.428711,
+          "p75": 2181.598633,
+          "p95": 2183.666602,
+          "p99": 2184.080195,
+          "max": 2184.183594,
+          "media": 2179.013672
+        },
+        "tps_por_rodada": [
+          7.716593468303285,
+          8.236055172816004
+        ],
+        "ttft_por_rodada": [
+          5.353347500029486,
+          0.11195489997044206
+        ],
+        "tempo_por_rodada": [
+          100.17373640002916,
+          108.3042768999585
+        ],
+        "ram_por_rodada": [
+          2173.84375,
+          2184.18359375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 2,
+        "quantidade_de_questoes": 5,
+        "tentativas": 1,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": true,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 2184.183594,
+        "tps_medio": 7.976324,
+        "tempo_medio_segundos": 104.239007,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Considere os números 3, 4 e 5. Qual é a soma de seus quadrados?\",\n            \"alternativas\": {\n                \"A\": \"50\",\n                \"B\": \"54\",\n                \"C\": \"58\",\n                \"D\": \"62\",\n                \"E\": \"66\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"3² + 4² + 5² = 9 + 16 + 25 = 50 + 25 = 75. 75 ≠ 66\"\n        },\n        {\n            \"enunciado\": \"Se a soma de três números inteiros é 27 e a soma do maior e do menor é 18, qual é o valor do número médio?\",\n            \"alternativas\": {\n                \"A\": \"9\",\n                \"B\": \"10\",\n                \"C\": \"11\",\n                \"D\": \"12\",\n                \"E\": \"13\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Let x ser o menor número e y ser o maior número. x + y = 18. A soma dos três números é x + y + m = 27, onde m é o número médio. Substituindo, x + y + m = 18 + m = 27. Portanto, m = 9.\"\n        },\n        {\n            \"enunciado\": \"Considerando os números 12, 24 e 36, qual é a razão entre o maior e o menor?\",\n            \"alternativas\": {\n                \"A\": \"1:1\",\n                \"B\": \"1:2\",\n                \"C\": \"2:1\",\n                \"D\": \"3:1\",\n                \"E\": \"1:3\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"O maior número é 36 e o menor é 12. A razão entre o maior e o menor é 36/12 = 3/1. Portanto, a razão é 3:1.\"\n        },\n        {\n            \"enunciado\": \"Se a soma de dois números inteiros é 20 e a diferença entre eles é 6, qual é o valor do maior número?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"14\",\n                \"C\": \"15\",\n                \"D\": \"16\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"Let x ser o maior número e y ser o menor número. x + y = 20 e x - y = 6. Somando as equações, 2x = 26. Portanto, x = 13. Substituindo x = 13 na equação x + y = 20, temos 13 + y = 20. Portanto, y = 7.\"\n        },\n        {\n            \"enunciado\": \"Qual é o produto de 9 e 8?\"\n            \"alternativas\": {\n                \"A\": \"72\",\n                \"B\": \"73\",\n                \"C\": \"74\",\n                \"D\": \"75\",\n                \"E\": \"76\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"9 × 8 = 72\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 773,
+            "total_tokens": 773
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.353347500029486,
+            "tempo_decode_s": 94.82038889999967,
+            "tempo_resposta_s": 100.17373640002916,
+            "tempo_total_s": 100.17373640002916,
+            "tokens_entrada": 0,
+            "tokens_saida": 773,
+            "tps": 7.716593468303285,
+            "ram_inicio_mb": 2171.34765625,
+            "ram_pico_mb": 2173.84375,
+            "ram_usada_mb": 2.49609375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine qual é o valor de x que satisfaz a equação 2(x + 3) = 5(2x - 1).\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2(x + 3) = 5(2x - 1) \\n2x + 6 = 10x - 5 \\n6 + 5 = 10x - 2x \\n11 = 8x \\nx = 11/8\"\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da soma de 7/8 + 3/8?\",\n            \"alternativas\": {\n                \"A\": \"10/8\",\n                \"B\": \"11/8\",\n                \"C\": \"12/8\",\n                \"D\": \"13/8\",\n                \"E\": \"14/8\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"7/8 + 3/8 = (7 + 3)/8 = 10/8 = 5/4\"\n        },\n        {\n            \"enunciado\": \"Se a soma de dois números é 15 e a diferença entre eles é 7, qual é o maior número?\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"10\",\n                \"C\": \"9\",\n                \"D\": \"8\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + y = 15 \\ny - x = 7 \\nx = 15 - y \\n(15 - y) - y = 7 \\n15 - 2y = 7 \\n2y = 8 \\ny = 4 \\nx = 11\"\n        },\n        {\n            \"enunciado\": \"Qual é o valor de x que resolve a equação x² + 4x - 5 = 0?\",\n            \"alternativas\": {\n                \"A\": \"-5\",\n                \"B\": \"-4\",\n                \"C\": \"-3\",\n                \"D\": \"-2\",\n                \"E\": \"-1\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"x² + 4x - 5 = 0 \\n(x + 5)(x - 1) = 0 \\nx + 5 = 0 \\nou \\nx - 1 = 0 \\nx = -5 \\nou \\nx = 1\"\n        },\n        {\n            \"enunciado\": \"Quais são os fatores de 24?\",\n            \"alternativas\": {\n                \"A\": \"1, 2, 3, 4, 6, 8, 12, 24\",\n                \"B\": \"1, 2, 3, 4, 5, 6, 8, 12, 24\",\n                \"C\": \"1, 2, 3, 4, 5, 6, 7, 8, 12, 24\",\n                \"D\": \"1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24\",\n                \"E\": \"1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 24\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Os fatores de 24 são os números que multiplicados resultam em 24: 1×24, 2×12, 3×8, 4×6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 892,
+            "total_tokens": 892
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.11195489997044206,
+            "tempo_decode_s": 108.19232199998805,
+            "tempo_resposta_s": 108.3042768999585,
+            "tempo_total_s": 108.3042768999585,
+            "tokens_entrada": 0,
+            "tokens_saida": 892,
+            "tps": 8.236055172816004,
+            "ram_inicio_mb": 2173.95703125,
+            "ram_pico_mb": 2184.18359375,
+            "ram_usada_mb": 10.2265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 7.046364,
+        "ram_media_mb": 2187.097656,
+        "ram_pico_mb": 2187.945312,
+        "tempo_medio_segundos": 26.62113,
+        "ttft_medio_segundos": 4.338651,
+        "tps": {
+          "n": 2,
+          "mediana": 7.046364,
+          "iqr": 0.447233,
+          "p25": 6.822747,
+          "p75": 7.26998,
+          "p95": 7.448873,
+          "p99": 7.484652,
+          "max": 7.493596,
+          "media": 7.046364
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 4.338651,
+          "iqr": 0.550019,
+          "p25": 4.063642,
+          "p75": 4.613661,
+          "p95": 4.833669,
+          "p99": 4.87767,
+          "max": 4.888671,
+          "media": 4.338651
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 26.62113,
+          "iqr": 5.406215,
+          "p25": 23.918023,
+          "p75": 29.324238,
+          "p95": 31.486724,
+          "p99": 31.919221,
+          "max": 32.027346,
+          "media": 26.62113
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2187.097656,
+          "iqr": 0.847656,
+          "p25": 2186.673828,
+          "p75": 2187.521484,
+          "p95": 2187.860547,
+          "p99": 2187.928359,
+          "max": 2187.945312,
+          "media": 2187.097656
+        },
+        "tps_por_rodada": [
+          6.599130909537609,
+          7.493596323840497
+        ],
+        "ttft_por_rodada": [
+          4.888670600019395,
+          3.7886321000405587
+        ],
+        "tempo_por_rodada": [
+          21.21491480001714,
+          32.02734570001485
+        ],
+        "ram_por_rodada": [
+          2186.25,
+          2187.9453125
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Qual é a área de um quadrado com lado igual a 5 cm?",
+                "alternativas": {
+                  "A": "25 cm²",
+                  "B": "15 cm²",
+                  "C": "20 cm²",
+                  "D": "30 cm²",
+                  "E": "35 cm²"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "L = 5 cm; A = L² = 5² = 25 cm²"
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Quando um quadrado é inscrito em um círculo, qual é a relação entre o raio do círculo e a diagonal do quadrado?",
+                "alternativas": {
+                  "A": "raio = diagonal / √2",
+                  "B": "diagonal = raio * √2",
+                  "C": "raio = diagonal * √2",
+                  "D": "diagonal = raio / √2",
+                  "E": "raio = 2 * diagonal"
+                },
+                "resposta_correta": "B",
+                "resolucao_passo_a_passo": "1) Seja r o raio do círculo e d a diagonal do quadrado. Como o quadrado está inscrito no círculo, a diagonal do quadrado é o diâmetro do círculo. Portanto, d = 2r. 2) Dividindo ambos os lados da equação por √2, obtemos d = r * √2."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 2187.945312,
+        "tps_medio": 7.046364,
+        "tempo_medio_segundos": 26.62113,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 100.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é a área de um quadrado com lado igual a 5 cm?\",\n            \"alternativas\": {\n                \"A\": \"25 cm²\",\n                \"B\": \"15 cm²\",\n                \"C\": \"20 cm²\",\n                \"D\": \"30 cm²\",\n                \"E\": \"35 cm²\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"L = 5 cm; A = L² = 5² = 25 cm²\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 140,
+            "total_tokens": 140
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.888670600019395,
+            "tempo_decode_s": 16.326244199997745,
+            "tempo_resposta_s": 21.21491480001714,
+            "tempo_total_s": 21.21491480001714,
+            "tokens_entrada": 0,
+            "tokens_saida": 140,
+            "tps": 6.599130909537609,
+            "ram_inicio_mb": 2184.4453125,
+            "ram_pico_mb": 2186.25,
+            "ram_usada_mb": 1.8046875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Quando um quadrado é inscrito em um círculo, qual é a relação entre o raio do círculo e a diagonal do quadrado?\",\n            \"alternativas\": {\n                \"A\": \"raio = diagonal / √2\",\n                \"B\": \"diagonal = raio * √2\",\n                \"C\": \"raio = diagonal * √2\",\n                \"D\": \"diagonal = raio / √2\",\n                \"E\": \"raio = 2 * diagonal\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1) Seja r o raio do círculo e d a diagonal do quadrado. Como o quadrado está inscrito no círculo, a diagonal do quadrado é o diâmetro do círculo. Portanto, d = 2r. 2) Dividindo ambos os lados da equação por √2, obtemos d = r * √2.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 240,
+            "total_tokens": 240
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.7886321000405587,
+            "tempo_decode_s": 28.23871359997429,
+            "tempo_resposta_s": 32.02734570001485,
+            "tempo_total_s": 32.02734570001485,
+            "tokens_entrada": 0,
+            "tokens_saida": 240,
+            "tps": 7.493596323840497,
+            "ram_inicio_mb": 2186.2734375,
+            "ram_pico_mb": 2187.9453125,
+            "ram_usada_mb": 1.671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3003.9,
+        "limite": 2048.0,
+        "motivo": "RAM pico 3003.9 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 4.86,
+        "limite": 5.0,
+        "motivo": "TPS 4.86 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 50.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 50.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 104.24,
+        "limite": 90.0,
+        "motivo": "Tempo médio 104.2s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -14.0,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "RAM pico 3003.9 MB — limite 2048.0 MB",
+      "TPS 4.86 abaixo do mínimo 5.0",
+      "Taxa JSON válido 50.0% abaixo de 60.0%",
+      "Tempo médio 104.2s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "hardware",
+      "performance",
+      "formato"
+    ],
+    "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+    "gerado_em": "2026-09-12T09:36:13.958091"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "RAM pico 3003.9 MB — limite 2048.0 MB; TPS 4.86 abaixo do mínimo 5.0; Taxa JSON válido 50.0% abaixo de 60.0%; Tempo médio 104.2s acima de 90.0s"
+}

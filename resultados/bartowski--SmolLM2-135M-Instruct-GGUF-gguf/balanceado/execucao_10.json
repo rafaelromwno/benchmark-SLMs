@@ -1,0 +1,1184 @@
+{
+  "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "11/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/SmolLM2-135M-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/SmolLM2-135M-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--SmolLM2-135M-Instruct-GGUF\\SmolLM2-135M-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 777,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 777
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 777
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.8,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": false,
+      "utilizavel": false,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "...",
+            "alternativas": {
+              "A": "...",
+              "B": "...",
+              "C": "...",
+              "D": "...",
+              "E": "..."
+            },
+            "resposta_correta": "A",
+            "resolucao_passo_a_passo": "..."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 0.42034440001589246,
+        "tempo_prefill_s": 2.8477361999975983,
+        "tempo_decode_s": 15.506377100013196,
+        "tempo_resposta_s": 18.354113300010795,
+        "tempo_total_s": 18.774457700026687,
+        "tokens_entrada": 0,
+        "tokens_saida": 555,
+        "tps": 30.23845341521748,
+        "ram_inicio_mb": 26.61328125,
+        "ram_pico_mb": 234.5390625,
+        "ram_usada_mb": 207.92578125,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 18.774457700026687,
+        "tempo_carregamento_s": 0.42034440001589246,
+        "tempo_resposta_s": 18.354113300010795,
+        "ram_pico_mb": 234.5390625,
+        "ram_inicio_mb": 26.61328125,
+        "ttft_segundos": 2.8477361999975983,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você é um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e comdistos (few-shot).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da habilidade.\n- Produzir alternativas plausíveis e comdistos (few-shot).\n- Redicar a dificuldade respeito do pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da habilidade.\n\nRegresso:\n- Retorne SOMENTE o JSON estrutura exata:\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\nO campo \"resolucao_passo_a_passo\" é OBRIGATÓRIO. Escreva a resolução como texto corrido, sem lista numerada, sem tópicos, sem marcadores. Apresente os questões devem ser inéditos entre si na mesma resposta.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 555,
+            "total_tokens": 555
+          },
+          "metrics": {
+            "tempo_carregamento_s": 0.42034440001589246,
+            "tempo_prefill_s": 2.8477361999975983,
+            "tempo_decode_s": 15.506377100013196,
+            "tempo_resposta_s": 18.354113300010795,
+            "tempo_total_s": 18.774457700026687,
+            "tokens_entrada": 0,
+            "tokens_saida": 555,
+            "tps": 30.23845341521748,
+            "ram_inicio_mb": 26.61328125,
+            "ram_pico_mb": 234.5390625,
+            "ram_usada_mb": 207.92578125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 55.256336,
+          "iqr": 8.413831,
+          "p25": 52.873233,
+          "p75": 61.287064,
+          "p95": 63.607183,
+          "p99": 64.266495,
+          "max": 64.431323,
+          "media": 55.928847
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 0.690641,
+          "iqr": 0.583938,
+          "p25": 0.180957,
+          "p75": 0.764895,
+          "p95": 1.128195,
+          "p99": 1.329295,
+          "max": 1.37957,
+          "media": 0.582688
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 17.049651,
+          "iqr": 4.102016,
+          "p25": 14.779828,
+          "p75": 18.881844,
+          "p95": 20.377944,
+          "p99": 20.984446,
+          "max": 21.136071,
+          "media": 15.697141
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 238.441406,
+          "iqr": 2.912109,
+          "p25": 237.132812,
+          "p75": 240.044922,
+          "p95": 240.904102,
+          "p99": 240.93082,
+          "max": 240.9375,
+          "media": 238.473437
+        },
+        "tps_medio": 55.928847,
+        "ttft_medio_segundos": 0.582688,
+        "tempo_medio_segundos": 15.697141,
+        "ram_pico_mb": 240.9375
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 55.256336,
+          "iqr": 8.413831,
+          "p25": 52.873233,
+          "p75": 61.287064,
+          "p95": 63.607183,
+          "p99": 64.266495,
+          "max": 64.431323,
+          "media": 55.928847
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 0.690641,
+          "iqr": 0.583938,
+          "p25": 0.180957,
+          "p75": 0.764895,
+          "p95": 1.128195,
+          "p99": 1.329295,
+          "max": 1.37957,
+          "media": 0.582688
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 17.049651,
+          "iqr": 4.102016,
+          "p25": 14.779828,
+          "p75": 18.881844,
+          "p95": 20.377944,
+          "p99": 20.984446,
+          "max": 21.136071,
+          "media": 15.697141
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 238.441406,
+          "iqr": 2.912109,
+          "p25": 237.132812,
+          "p75": 240.044922,
+          "p95": 240.904102,
+          "p99": 240.93082,
+          "max": 240.9375,
+          "media": 238.473437
+        },
+        "tps_medio": 55.928847,
+        "ttft_medio_segundos": 0.582688,
+        "tempo_medio_segundos": 15.697141,
+        "ram_pico_mb": 240.9375,
+        "tps_por_rodada": [
+          45.707108987690155,
+          48.44798236890057,
+          53.5604057419857,
+          56.35175026663029,
+          64.43132268870635,
+          59.50322696638587,
+          62.599901174087954,
+          61.8816764826545,
+          54.16092232904932,
+          52.64417583060895
+        ],
+        "ttft_por_rodada": [
+          1.379569700016873,
+          0.8209585000004154,
+          0.020336000015959144,
+          0.02051900001242757,
+          0.6622719999868423,
+          0.7569438999926206,
+          0.017455399996833876,
+          0.6783406999893486,
+          0.7675456000142731,
+          0.70294119999744
+        ],
+        "tempo_por_rodada": [
+          16.890151600004174,
+          21.13607109998702,
+          19.118600500019966,
+          18.17157400000724,
+          7.046262299991213,
+          17.209150699985912,
+          16.35785329999635,
+          7.336582099989755,
+          14.253819300007308,
+          19.45134450000478
+        ],
+        "ram_por_rodada": [
+          235.5703125,
+          236.30859375,
+          236.98828125,
+          237.56640625,
+          238.125,
+          238.7578125,
+          239.3359375,
+          240.28125,
+          240.9375,
+          240.86328125
+        ],
+        "ram_media_mb": 238.473437
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você é um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC.\n- Garantir que o enunciado seja certo, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma dois respeto (dois-projetos de forma alinhadas).\n\nRegulas absolutas:\n- Retorne SOMENTE o JSON estrutura solicitado, sem texto adicional, markdown ou explicações fora do JSON.\n- Todas as questões devem ser inéditas entre si na mesma resposta.\n- A resposta correta deve ser distribuída de forma variada entre A, B, C, D e E ao longo das questões.\n\nRetorne SOMENTE um JSON com esta estrutura exata:\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\nO campo \"resolucao_passo_a_passo\" é OBRIGATÓRIO. Liste apenas os questões devem ser inéditas entre si na mesma resposta.\n\n**Entrada de questões**\n\n- A.B.\n- C.E.\n- D.S.\n- E.T.\n- F.S.\n- G.E.\n- H.A.\n- I.S.\n- J.S.\n- K.S.\n- M.R.\n- N.N.\n- O.P.\n- R.P.\n- S.S.\n- V.S.\n- Z.Z.\n- T.T.\n- X.X.\n- Y.Y.\n- Z.Z.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Dentre os números abaixo, qual NÚMERICA pode ser escrita na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\nGere 3 questão(ões) novas, inéditas e alinhadas à habilidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 772,
+            "total_tokens": 772
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.379569700016873,
+            "tempo_decode_s": 15.5105818999873,
+            "tempo_resposta_s": 16.890151600004174,
+            "tempo_total_s": 16.890151600004174,
+            "tokens_entrada": 0,
+            "tokens_saida": 772,
+            "tps": 45.707108987690155,
+            "ram_inicio_mb": 234.671875,
+            "ram_pico_mb": 235.5703125,
+            "ram_usada_mb": 0.8984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "\nAo verificar se x = 12, se 2x = 10, ou se 2x = 12, algumas oferecer na habilidade EF06MA14, como seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla es",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.8209585000004154,
+            "tempo_decode_s": 20.315112599986605,
+            "tempo_resposta_s": 21.13607109998702,
+            "tempo_total_s": 21.13607109998702,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 48.44798236890057,
+            "ram_inicio_mb": 235.515625,
+            "ram_pico_mb": 236.30859375,
+            "ram_usada_mb": 0.79296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "\nAo verificar se x = 12, se 2x = 10, ou se 2x = 12, algumas oferecer na habilidade EF06MA14, como seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla es",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.020336000015959144,
+            "tempo_decode_s": 19.098264500004007,
+            "tempo_resposta_s": 19.118600500019966,
+            "tempo_total_s": 19.118600500019966,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 53.5604057419857,
+            "ram_inicio_mb": 236.30859375,
+            "ram_pico_mb": 236.98828125,
+            "ram_usada_mb": 0.6796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "\nAo verificar se x = 12, se 2x = 10, ou se 2x = 12, algumas oferecer na habilidade EF06MA14, como seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla es",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.02051900001242757,
+            "tempo_decode_s": 18.151054999994813,
+            "tempo_resposta_s": 18.17157400000724,
+            "tempo_total_s": 18.17157400000724,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 56.35175026663029,
+            "ram_inicio_mb": 236.90234375,
+            "ram_pico_mb": 237.56640625,
+            "ram_usada_mb": 0.6640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você é um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicita.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da habilidade.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da habilidade.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 454,
+            "total_tokens": 454
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.6622719999868423,
+            "tempo_decode_s": 6.3839903000043705,
+            "tempo_resposta_s": 7.046262299991213,
+            "tempo_total_s": 7.046262299991213,
+            "tokens_entrada": 0,
+            "tokens_saida": 454,
+            "tps": 64.43132268870635,
+            "ram_inicio_mb": 237.47265625,
+            "ram_pico_mb": 238.125,
+            "ram_usada_mb": 0.65234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "\nAo verificar se x = 12, se 2x = 10, ou se 2x = 12, algumas oferecer na habilidade EF06MA14, como seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla es",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.7569438999926206,
+            "tempo_decode_s": 16.45220679999329,
+            "tempo_resposta_s": 17.209150699985912,
+            "tempo_total_s": 17.209150699985912,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 59.50322696638587,
+            "ram_inicio_mb": 238.0390625,
+            "ram_pico_mb": 238.7578125,
+            "ram_usada_mb": 0.71875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "\nAo verificar se x = 12, se 2x = 10, ou se 2x = 12, algumas oferecer na habilidade EF06MA14, como seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla es",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.017455399996833876,
+            "tempo_decode_s": 16.340397899999516,
+            "tempo_resposta_s": 16.35785329999635,
+            "tempo_total_s": 16.35785329999635,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 62.599901174087954,
+            "ram_inicio_mb": 238.73828125,
+            "ram_pico_mb": 239.3359375,
+            "ram_usada_mb": 0.59765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você é um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicita.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da habilidade.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da habilidade.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 454,
+            "total_tokens": 454
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.6783406999893486,
+            "tempo_decode_s": 6.658241400000406,
+            "tempo_resposta_s": 7.336582099989755,
+            "tempo_total_s": 7.336582099989755,
+            "tokens_entrada": 0,
+            "tokens_saida": 454,
+            "tps": 61.8816764826545,
+            "ram_inicio_mb": 239.24609375,
+            "ram_pico_mb": 240.28125,
+            "ram_usada_mb": 1.03515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você é um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC.\n- Garantir que o enunciado seja certo, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma dois respeto (dois-projetos de forma alinhadas).\n\nRegulas absolutas:\n- Retorne SOMENTE o JSON estrutura solicitado, sem texto adicional, markdown ou explicações fora do JSON.\n- Todas as questões devem ser inéditas entre si na mesma resposta.\n- A resposta correta deve ser distribuída de forma variada entre A, B, C, D e E ao longo das questões.\n\nRetorne SOMENTE um JSON com esta estrutura exata:\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n\nO campo \"resolucao_passo_a_passo\" é OBRIGATÓRIO. Liste apenas os questões devem ser inéditas entre si na mesma resposta.\n\n**Entrada de questões**\n\n- A.B.\n- C.E.\n- D.S.\n- E.T.\n- F.S.\n- G.E.\n- H.A.\n- I.S.\n- J.S.\n- K.S.\n- M.R.\n- N.N.\n- O.P.\n- R.P.\n- S.S.\n- V.S.\n- Z.Z.\n- T.T.\n- X.X.\n- Y.Y.\n- Z.Z.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Dentre os números abaixo, qual NÚMERICA pode ser escrita na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\nGere 3 questão(ões) novas, inéditas e alinhadas à habilidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 772,
+            "total_tokens": 772
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.7675456000142731,
+            "tempo_decode_s": 13.486273699993035,
+            "tempo_resposta_s": 14.253819300007308,
+            "tempo_total_s": 14.253819300007308,
+            "tokens_entrada": 0,
+            "tokens_saida": 772,
+            "tps": 54.16092232904932,
+            "ram_inicio_mb": 240.26171875,
+            "ram_pico_mb": 240.9375,
+            "ram_usada_mb": 0.67578125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "\nAo verificar se x = 12, se 2x = 10, ou se 2x = 12, algumas oferecer na habilidade EF06MA14, como seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla escolha, como seu seu seu exemplo:\n\n- \"EF06MA14\" - \"A\"\n- \"EF06MA14\" - \"B\"\n- \"EF06MA14\" - \"C\"\n- \"EF06MA14\" - \"E\"\n\nEntão, \"EF06MA14\" é um exemplo de questão de múltipla es",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.70294119999744,
+            "tempo_decode_s": 18.74840330000734,
+            "tempo_resposta_s": 19.45134450000478,
+            "tempo_total_s": 19.45134450000478,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 52.64417583060895,
+            "ram_inicio_mb": 240.8515625,
+            "ram_pico_mb": 240.86328125,
+            "ram_usada_mb": 0.01171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 54.527038,
+        "ram_media_mb": 233.369792,
+        "ram_pico_mb": 233.929688,
+        "tempo_medio_segundos": 4.312579,
+        "ttft_medio_segundos": 0.338652,
+        "tps": {
+          "n": 3,
+          "mediana": 49.495614,
+          "iqr": 12.366744,
+          "p25": 47.08581,
+          "p75": 59.452553,
+          "p95": 67.418105,
+          "p99": 69.011216,
+          "max": 69.409493,
+          "media": 54.527038
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.021411,
+          "iqr": 0.476139,
+          "p25": 0.021272,
+          "p75": 0.497411,
+          "p95": 0.878211,
+          "p99": 0.954371,
+          "max": 0.973411,
+          "media": 0.338652
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 4.586265,
+          "iqr": 0.905291,
+          "p25": 3.928356,
+          "p75": 4.833646,
+          "p95": 5.031551,
+          "p99": 5.071132,
+          "max": 5.081027,
+          "media": 4.312579
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 233.367188,
+          "iqr": 0.558594,
+          "p25": 233.089844,
+          "p75": 233.648438,
+          "p95": 233.873437,
+          "p99": 233.918438,
+          "max": 233.929688,
+          "media": 233.369792
+        },
+        "tps_por_rodada": [
+          49.49561353311562,
+          69.40949338388026,
+          44.67600567058547
+        ],
+        "ttft_por_rodada": [
+          0.9734110999852419,
+          0.021410999994259328,
+          0.021132699999725446
+        ],
+        "tempo_por_rodada": [
+          4.586264999990817,
+          3.2704460000095423,
+          5.081027200008975
+        ],
+        "ram_por_rodada": [
+          232.8125,
+          233.3671875,
+          233.9296875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 233.929688,
+        "tps_medio": 54.527038,
+        "tempo_medio_segundos": 4.312579,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Gere exatamente 5 questões de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Habilidade:** EF09MA01\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF08MA01, EF07MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\nGere 5 questão(ões) novas, inéditas e alinhadas à habilidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 227,
+            "total_tokens": 227
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.9734110999852419,
+            "tempo_decode_s": 3.6128539000055753,
+            "tempo_resposta_s": 4.586264999990817,
+            "tempo_total_s": 4.586264999990817,
+            "tokens_entrada": 0,
+            "tokens_saida": 227,
+            "tps": 49.49561353311562,
+            "ram_inicio_mb": 232.05859375,
+            "ram_pico_mb": 232.8125,
+            "ram_usada_mb": 0.75390625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Gere exatamente 5 questões de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Habilidade:** EF09MA01\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF08MA01, EF07MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\nGere 5 questão(ões) novas, inéditas e alinhadas à habilidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 227,
+            "total_tokens": 227
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.021410999994259328,
+            "tempo_decode_s": 3.249035000015283,
+            "tempo_resposta_s": 3.2704460000095423,
+            "tempo_total_s": 3.2704460000095423,
+            "tokens_entrada": 0,
+            "tokens_saida": 227,
+            "tps": 69.40949338388026,
+            "ram_inicio_mb": 232.71875,
+            "ram_pico_mb": 233.3671875,
+            "ram_usada_mb": 0.6484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Gere exatamente 5 questões de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Habilidade:** EF09MA01\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF08MA01, EF07MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\nGere 5 questão(ões) novas, inéditas e alinhadas à habilidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 227,
+            "total_tokens": 227
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.021132699999725446,
+            "tempo_decode_s": 5.05989450000925,
+            "tempo_resposta_s": 5.081027200008975,
+            "tempo_total_s": 5.081027200008975,
+            "tokens_entrada": 0,
+            "tokens_saida": 227,
+            "tps": 44.67600567058547,
+            "ram_inicio_mb": 233.2734375,
+            "ram_pico_mb": 233.9296875,
+            "ram_usada_mb": 0.65625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 49.493452,
+        "ram_media_mb": 234.826172,
+        "ram_pico_mb": 235.117188,
+        "tempo_medio_segundos": 3.827376,
+        "ttft_medio_segundos": 0.900326,
+        "tps": {
+          "n": 2,
+          "mediana": 49.493452,
+          "iqr": 2.298275,
+          "p25": 48.344314,
+          "p75": 50.642589,
+          "p95": 51.561899,
+          "p99": 51.745761,
+          "max": 51.791727,
+          "media": 49.493452
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 0.900326,
+          "iqr": 0.231868,
+          "p25": 0.784392,
+          "p75": 1.01626,
+          "p95": 1.109007,
+          "p99": 1.127557,
+          "max": 1.132194,
+          "media": 0.900326
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 3.827376,
+          "iqr": 0.622231,
+          "p25": 3.516261,
+          "p75": 4.138492,
+          "p95": 4.387384,
+          "p99": 4.437163,
+          "max": 4.449607,
+          "media": 3.827376
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 234.826172,
+          "iqr": 0.291016,
+          "p25": 234.680664,
+          "p75": 234.97168,
+          "p95": 235.088086,
+          "p99": 235.111367,
+          "max": 235.117188,
+          "media": 234.826172
+        },
+        "tps_por_rodada": [
+          47.19517607747034,
+          51.79172699567308
+        ],
+        "ttft_por_rodada": [
+          1.132193900004495,
+          0.6684586999763269
+        ],
+        "tempo_por_rodada": [
+          4.4496073000191245,
+          3.2051450999861117
+        ],
+        "ram_por_rodada": [
+          234.53515625,
+          235.1171875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "Verificação de questões de múltipla escolha da BNCC:\n\n**Habilidade:** EF08MA05\n**Unidade Temática:** Geometria\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nNão especificada.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nNenhum exemplo disponível — crie questões seguindo as diretrizes gerais da BNCC.\n\nAço às questões devem ser inéditas entre si na mesma resposta.\n\nGere 2 questões novas, inéditas e alinhadas à habilidad"
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "O que seja exatamente o que o aluno deve dominar:\n\n\"Efetos\" (Efetuos)\n\n\"Exemplos\" (Exemplos)\n\nNenhum exemplo disponível — crie questões seguindo as diretrizes gerais da BNCC.\n\nO mesmo estrutura deve ser obrigada para todas as questões devem ser inéditas entre quais o aluno já deve dominar. Efetos é a opção de escrever o que o aluno precisará dominar. Exemplos é o exemplo que todos os alunos não preocupam."
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 235.117188,
+        "tps_medio": 49.493452,
+        "tempo_medio_segundos": 3.827376,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Verificação de questões de múltipla escolha da BNCC:\n\n**Habilidade:** EF08MA05\n**Unidade Temática:** Geometria\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nNão especificada.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nNenhum exemplo disponível — crie questões seguindo as diretrizes gerais da BNCC.\n\nAço às questões devem ser inéditas entre si na mesma resposta.\n\nGere 2 questões novas, inéditas e alinhadas à habilidade EF08MA05.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 210,
+            "total_tokens": 210
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.132193900004495,
+            "tempo_decode_s": 3.3174134000146296,
+            "tempo_resposta_s": 4.4496073000191245,
+            "tempo_total_s": 4.4496073000191245,
+            "tokens_entrada": 0,
+            "tokens_saida": 210,
+            "tps": 47.19517607747034,
+            "ram_inicio_mb": 233.83984375,
+            "ram_pico_mb": 234.53515625,
+            "ram_usada_mb": 0.6953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "O que seja exatamente o que o aluno deve dominar:\n\n\"Efetos\" (Efetuos)\n\n\"Exemplos\" (Exemplos)\n\nNenhum exemplo disponível — crie questões seguindo as diretrizes gerais da BNCC.\n\nO mesmo estrutura deve ser obrigada para todas as questões devem ser inéditas entre quais o aluno já deve dominar. Efetos é a opção de escrever o que o aluno precisará dominar. Exemplos é o exemplo que todos os alunos não preocupam.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 166,
+            "total_tokens": 166
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.6684586999763269,
+            "tempo_decode_s": 2.536686400009785,
+            "tempo_resposta_s": 3.2051450999861117,
+            "tempo_total_s": 3.2051450999861117,
+            "tokens_entrada": 0,
+            "tokens_saida": 166,
+            "tps": 51.79172699567308,
+            "ram_inicio_mb": 234.44921875,
+            "ram_pico_mb": 235.1171875,
+            "ram_usada_mb": 0.66796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 240.9,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 30.24,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 15.7,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -15.2,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+    "gerado_em": "2026-09-11T09:37:57.624085"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}

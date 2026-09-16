@@ -1,0 +1,1169 @@
+{
+  "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+  "formato": "gguf",
+  "data": "11/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/SmolLM2-135M-Instruct-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/SmolLM2-135M-Instruct-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--SmolLM2-135M-Instruct-GGUF\\SmolLM2-135M-Instruct-Q4_K_M.gguf"
+    },
+    "seed": 55,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 55
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 55
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.58,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": "JSON não encontrado na resposta",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 0.6194131000083871,
+        "tempo_prefill_s": 7.007782899978338,
+        "tempo_decode_s": 10.509974800021155,
+        "tempo_resposta_s": 17.517757699999493,
+        "tempo_total_s": 18.13717080000788,
+        "tokens_entrada": 0,
+        "tokens_saida": 459,
+        "tps": 26.2019836020459,
+        "ram_inicio_mb": 25.9375,
+        "ram_pico_mb": 234.11328125,
+        "ram_usada_mb": 208.17578125,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 18.13717080000788,
+        "tempo_carregamento_s": 0.6194131000083871,
+        "tempo_resposta_s": 17.517757699999493,
+        "ram_pico_mb": 234.11328125,
+        "ram_inicio_mb": 25.9375,
+        "ttft_segundos": 7.007782899978338,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Seria um equipo de exemplos para o habilidade EF09MA01?\n\nAqui estão 5 exemplos:\n\n- \"A\" - A é uma variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"B\" - B é um variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"C\" - C é um variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"D\" - D é um variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"E\" - E é um variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"N\" - N é um variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"N\" - N é um variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"P\" - P é um variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"V\" - V é um variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"T\" - T é um variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"S\" - S é um variável que incluem as dificulas que podem ser adicionadas à questão.\n- \"S\" - S é um variável que incluem as dificulas que podem ser adicionadas à questão.\n\nTodos as questões devem ser inéditas entre si na mesma resposta.\n\nTodas as questões devem ser inéditas entre si na mesma resposta.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 459,
+            "total_tokens": 459
+          },
+          "metrics": {
+            "tempo_carregamento_s": 0.6194131000083871,
+            "tempo_prefill_s": 7.007782899978338,
+            "tempo_decode_s": 10.509974800021155,
+            "tempo_resposta_s": 17.517757699999493,
+            "tempo_total_s": 18.13717080000788,
+            "tokens_entrada": 0,
+            "tokens_saida": 459,
+            "tps": 26.2019836020459,
+            "ram_inicio_mb": 25.9375,
+            "ram_pico_mb": 234.11328125,
+            "ram_usada_mb": 208.17578125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 54.210546,
+          "iqr": 5.360224,
+          "p25": 50.117801,
+          "p75": 55.478025,
+          "p95": 58.898291,
+          "p99": 60.053858,
+          "max": 60.34275,
+          "media": 52.695818
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 0.788321,
+          "iqr": 0.251361,
+          "p25": 0.708597,
+          "p75": 0.959958,
+          "p95": 1.154396,
+          "p99": 1.209099,
+          "max": 1.222775,
+          "media": 0.72143
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 7.303598,
+          "iqr": 4.693513,
+          "p25": 4.207627,
+          "p75": 8.90114,
+          "p95": 18.456727,
+          "p99": 18.805982,
+          "max": 18.893296,
+          "media": 8.475542
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 238.101562,
+          "iqr": 2.589844,
+          "p25": 236.80957,
+          "p75": 239.399414,
+          "p95": 240.138477,
+          "p99": 240.165195,
+          "max": 240.171875,
+          "media": 237.984375
+        },
+        "tps_medio": 52.695818,
+        "ttft_medio_segundos": 0.72143,
+        "tempo_medio_segundos": 8.475542,
+        "ram_pico_mb": 240.171875
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 54.210546,
+          "iqr": 5.360224,
+          "p25": 50.117801,
+          "p75": 55.478025,
+          "p95": 58.898291,
+          "p99": 60.053858,
+          "max": 60.34275,
+          "media": 52.695818
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 0.788321,
+          "iqr": 0.251361,
+          "p25": 0.708597,
+          "p75": 0.959958,
+          "p95": 1.154396,
+          "p99": 1.209099,
+          "max": 1.222775,
+          "media": 0.72143
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 7.303598,
+          "iqr": 4.693513,
+          "p25": 4.207627,
+          "p75": 8.90114,
+          "p95": 18.456727,
+          "p99": 18.805982,
+          "max": 18.893296,
+          "media": 8.475542
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 238.101562,
+          "iqr": 2.589844,
+          "p25": 236.80957,
+          "p75": 239.399414,
+          "p95": 240.138477,
+          "p99": 240.165195,
+          "max": 240.171875,
+          "media": 237.984375
+        },
+        "tps_medio": 52.695818,
+        "ttft_medio_segundos": 0.72143,
+        "tempo_medio_segundos": 8.475542,
+        "ram_pico_mb": 240.171875,
+        "tps_por_rodada": [
+          42.96128471508278,
+          54.19911852113055,
+          57.13284072295106,
+          55.09915716900674,
+          49.24203800097068,
+          55.60431448440251,
+          60.342749798760956,
+          52.74508992531285,
+          45.4096145294864,
+          54.2219744327242
+        ],
+        "ttft_por_rodada": [
+          1.222774699999718,
+          0.02438130002701655,
+          0.02372199998353608,
+          0.7073937999957707,
+          1.0708213000034448,
+          0.7362316999933682,
+          0.7122060999972746,
+          0.8946228999993764,
+          0.8404111999843735,
+          0.9817362000176217
+        ],
+        "tempo_por_rodada": [
+          9.333985300007043,
+          18.89329620002536,
+          17.923141699982807,
+          4.410230799985584,
+          3.817876100016292,
+          7.21167059999425,
+          4.026995799998986,
+          7.602603400009684,
+          4.140092399989953,
+          7.395525600004476
+        ],
+        "ram_por_rodada": [
+          235.0390625,
+          235.85546875,
+          236.63671875,
+          237.328125,
+          237.796875,
+          238.40625,
+          238.96875,
+          239.54296875,
+          240.171875,
+          240.09765625
+        ],
+        "ram_media_mb": 237.984375
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você tem um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão — use-os como base para atingir a habilidade-alvo.\n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos (few-shot).\n\nRegresso: Gere exatamente 3 questão(ões) novas, inéditas e alinhadas à habilidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 401,
+            "total_tokens": 401
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.222774699999718,
+            "tempo_decode_s": 8.111210600007325,
+            "tempo_resposta_s": 9.333985300007043,
+            "tempo_total_s": 9.333985300007043,
+            "tokens_entrada": 0,
+            "tokens_saida": 401,
+            "tps": 42.96128471508278,
+            "ram_inicio_mb": 234.109375,
+            "ram_pico_mb": 235.0390625,
+            "ram_usada_mb": 0.9296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você tem um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão — use-os como base para atingir a habilidade-alvo.\n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos (few-shot).\n\nRegras absolutas:\n- Retorne SOMENTE o JSON estrutura exata:\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n```\n- Todas as questões devem ser inéditas entre si na mesma resposta.\n- A resposta correta deve ser distribuída de forma variada entre A, B, C, D e E ao longo das questões.\n- A resposta contém uma forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém uma forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.02438130002701655,
+            "tempo_decode_s": 18.868914899998344,
+            "tempo_resposta_s": 18.89329620002536,
+            "tempo_total_s": 18.89329620002536,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 54.19911852113055,
+            "ram_inicio_mb": 234.94921875,
+            "ram_pico_mb": 235.85546875,
+            "ram_usada_mb": 0.90625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você tem um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão — use-os como base para atingir a habilidade-alvo.\n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos (few-shot).\n\nRegras absolutas:\n- Retorne SOMENTE o JSON estrutura exata:\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"...\",\n            \"alternativas\": {\n                \"A\": \"...\",\n                \"B\": \"...\",\n                \"C\": \"...\",\n                \"D\": \"...\",\n                \"E\": \"...\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"...\"\n        }\n    ]\n}\n```\n- Todas as questões devem ser inéditas entre si na mesma resposta.\n- A resposta correta deve ser distribuída de forma variada entre A, B, C, D e E ao longo das questões.\n- A resposta contém uma forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém uma forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C e D ao longo das questões.\n- A resposta contém um contorno de forma determinada entre A, B, C",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.02372199998353608,
+            "tempo_decode_s": 17.89941969999927,
+            "tempo_resposta_s": 17.923141699982807,
+            "tempo_total_s": 17.923141699982807,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 57.13284072295106,
+            "ram_inicio_mb": 235.90234375,
+            "ram_pico_mb": 236.63671875,
+            "ram_usada_mb": 0.734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você tem uma 2 questões de múltipla escolha para a seguinte habilidade da BNCC, com dominio profundo da Base Nacional Comum Curricular (BNCC).\n\nTodos as questões devem ser inéditos entre si na mesma resposta.\n\n**Habilidade:** EF02MA01\n\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nNão especificada.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Usando a reta numérica, qual número está entre 23 e 27?\n\nGere 2 questão(ões) novas, inéditas e alinhadas à habilidade EF02MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 243,
+            "total_tokens": 243
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.7073937999957707,
+            "tempo_decode_s": 3.702836999989813,
+            "tempo_resposta_s": 4.410230799985584,
+            "tempo_total_s": 4.410230799985584,
+            "tokens_entrada": 0,
+            "tokens_saida": 243,
+            "tps": 55.09915716900674,
+            "ram_inicio_mb": 236.55078125,
+            "ram_pico_mb": 237.328125,
+            "ram_usada_mb": 0.77734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "\nHabilidade: EF06MA14\n\n**Unidade Temática:** Álgebra\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF06MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Se x + 5 = 12, qual é o valor de x?\nExemplo 2: Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nGere 3 questão(ões) novas, inéditas e alinhadas à habilidade EF06MA14.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 188,
+            "total_tokens": 188
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.0708213000034448,
+            "tempo_decode_s": 2.7470548000128474,
+            "tempo_resposta_s": 3.817876100016292,
+            "tempo_total_s": 3.817876100016292,
+            "tokens_entrada": 0,
+            "tokens_saida": 188,
+            "tps": 49.24203800097068,
+            "ram_inicio_mb": 237.13671875,
+            "ram_pico_mb": 237.796875,
+            "ram_usada_mb": 0.66015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você tem um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão — use-os como base para atingir a habilidade-alvo.\n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos (few-shot).\n\nRegresso: Gere exatamente 3 questão(ões) novas, inéditas e alinhadas à habilidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 401,
+            "total_tokens": 401
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.7362316999933682,
+            "tempo_decode_s": 6.475438900000881,
+            "tempo_resposta_s": 7.21167059999425,
+            "tempo_total_s": 7.21167059999425,
+            "tokens_entrada": 0,
+            "tokens_saida": 401,
+            "tps": 55.60431448440251,
+            "ram_inicio_mb": 237.70703125,
+            "ram_pico_mb": 238.40625,
+            "ram_usada_mb": 0.69921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você tem uma 2 questões de múltipla escolha para a seguinte habilidade da BNCC, com dominio profundo da Base Nacional Comum Curricular (BNCC).\n\nTodos as questões devem ser inéditos entre si na mesma resposta.\n\n**Habilidade:** EF02MA01\n\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nNão especificada.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Usando a reta numérica, qual número está entre 23 e 27?\n\nGere 2 questão(ões) novas, inéditas e alinhadas à habilidade EF02MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 243,
+            "total_tokens": 243
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.7122060999972746,
+            "tempo_decode_s": 3.314789700001711,
+            "tempo_resposta_s": 4.026995799998986,
+            "tempo_total_s": 4.026995799998986,
+            "tokens_entrada": 0,
+            "tokens_saida": 243,
+            "tps": 60.342749798760956,
+            "ram_inicio_mb": 238.38671875,
+            "ram_pico_mb": 238.96875,
+            "ram_usada_mb": 0.58203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você tem um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão — use-os como base para atingir a habilidade-alvo.\n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos (few-shot).\n\nRegresso: Gere exatamente 3 questão(ões) novas, inéditas e alinhadas à habilidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 401,
+            "total_tokens": 401
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.8946228999993764,
+            "tempo_decode_s": 6.707980500010308,
+            "tempo_resposta_s": 7.602603400009684,
+            "tempo_total_s": 7.602603400009684,
+            "tokens_entrada": 0,
+            "tokens_saida": 401,
+            "tps": 52.74508992531285,
+            "ram_inicio_mb": 238.9453125,
+            "ram_pico_mb": 239.54296875,
+            "ram_usada_mb": 0.59765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "\nHabilidade: EF06MA14\n\n**Unidade Temática:** Álgebra\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF06MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 1: Se x + 5 = 12, qual é o valor de x?\nExemplo 2: Se 2x = 10, determine o valor de x aplicando as propriedades da igualdade.\n\nGere 3 questão(ões) novas, inéditas e alinhadas à habilidade EF06MA14.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 188,
+            "total_tokens": 188
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.8404111999843735,
+            "tempo_decode_s": 3.2996812000055797,
+            "tempo_resposta_s": 4.140092399989953,
+            "tempo_total_s": 4.140092399989953,
+            "tokens_entrada": 0,
+            "tokens_saida": 188,
+            "tps": 45.4096145294864,
+            "ram_inicio_mb": 239.4609375,
+            "ram_pico_mb": 240.171875,
+            "ram_usada_mb": 0.7109375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você tem um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental (1º ao 9º ano), com domínio profundo da Base Nacional Comum Curricular (BNCC).\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão — use-os como base para atingir a habilidade-alvo.\n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos (few-shot).\n\nRegresso: Gere exatamente 3 questão(ões) novas, inéditas e alinhadas à habilidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 401,
+            "total_tokens": 401
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.9817362000176217,
+            "tempo_decode_s": 6.413789399986854,
+            "tempo_resposta_s": 7.395525600004476,
+            "tempo_total_s": 7.395525600004476,
+            "tokens_entrada": 0,
+            "tokens_saida": 401,
+            "tps": 54.2219744327242,
+            "ram_inicio_mb": 240.078125,
+            "ram_pico_mb": 240.09765625,
+            "ram_usada_mb": 0.01953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 55.069875,
+        "ram_media_mb": 233.338542,
+        "ram_pico_mb": 233.964844,
+        "tempo_medio_segundos": 7.67099,
+        "ttft_medio_segundos": 0.291309,
+        "tps": {
+          "n": 3,
+          "mediana": 52.199828,
+          "iqr": 6.623012,
+          "p25": 51.040858,
+          "p75": 57.66387,
+          "p95": 62.035102,
+          "p99": 62.909349,
+          "max": 63.127911,
+          "media": 55.069875
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.029345,
+          "iqr": 0.402293,
+          "p25": 0.024671,
+          "p75": 0.426965,
+          "p95": 0.74506,
+          "p99": 0.80868,
+          "max": 0.824584,
+          "media": 0.291309
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 8.221403,
+          "iqr": 3.008795,
+          "p25": 6.304195,
+          "p75": 9.312991,
+          "p95": 10.186261,
+          "p99": 10.360915,
+          "max": 10.404578,
+          "media": 7.67099
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 233.382812,
+          "iqr": 0.648438,
+          "p25": 233.025391,
+          "p75": 233.673828,
+          "p95": 233.906641,
+          "p99": 233.953203,
+          "max": 233.964844,
+          "media": 233.338542
+        },
+        "tps_por_rodada": [
+          52.19982841973017,
+          49.88188661258004,
+          63.127910611723976
+        ],
+        "ttft_por_rodada": [
+          0.8245844999910332,
+          0.019997700001113117,
+          0.02934450001339428
+        ],
+        "tempo_por_rodada": [
+          4.386987600009888,
+          10.404578399989987,
+          8.221403100003954
+        ],
+        "ram_por_rodada": [
+          232.66796875,
+          233.3828125,
+          233.96484375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 233.964844,
+        "tps_medio": 55.069875,
+        "tempo_medio_segundos": 7.67099,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Você tem uma índo de 5 questões de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Habilidade:** EF09MA01\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF08MA01, EF07MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nExemplo 2: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\n\nGere 5 questões novas, inéditas e alinhadas à habilidade EF09MA01.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 229,
+            "total_tokens": 229
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.8245844999910332,
+            "tempo_decode_s": 3.562403100018855,
+            "tempo_resposta_s": 4.386987600009888,
+            "tempo_total_s": 4.386987600009888,
+            "tokens_entrada": 0,
+            "tokens_saida": 229,
+            "tps": 52.19982841973017,
+            "ram_inicio_mb": 231.96484375,
+            "ram_pico_mb": 232.66796875,
+            "ram_usada_mb": 0.703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Sounds good, we can add 5 more questions:\n\n1. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n2. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n3. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n4. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n5. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n\nWe can also add some questions to the questions:\n\n1. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n2. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n3. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n4. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n5. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n\nWe can also add some questions to the questions:\n\n1. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n2. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n3. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n4. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n5. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n\nWe can also add some questions to the questions:\n\n1. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n2. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n3. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n4. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n5. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n\nSo that's all 5 more questions.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 519,
+            "total_tokens": 519
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.019997700001113117,
+            "tempo_decode_s": 10.384580699988874,
+            "tempo_resposta_s": 10.404578399989987,
+            "tempo_total_s": 10.404578399989987,
+            "tokens_entrada": 0,
+            "tokens_saida": 519,
+            "tps": 49.88188661258004,
+            "ram_inicio_mb": 232.58203125,
+            "ram_pico_mb": 233.3828125,
+            "ram_usada_mb": 0.80078125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Sounds good, we can add 5 more questions:\n\n1. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n2. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n3. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n4. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n5. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n\nWe can also add some questions to the questions:\n\n1. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n2. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n3. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n4. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n5. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n\nWe can also add some questions to the questions:\n\n1. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n2. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n3. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n4. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n5. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n\nWe can also add some questions to the questions:\n\n1. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n2. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n3. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n4. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n5. \"Is it possible to create a math problem that can be solved using only the given math resources?\"\n\nSo that's all 5 more questions.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 519,
+            "total_tokens": 519
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.02934450001339428,
+            "tempo_decode_s": 8.19205859999056,
+            "tempo_resposta_s": 8.221403100003954,
+            "tempo_total_s": 8.221403100003954,
+            "tokens_entrada": 0,
+            "tokens_saida": 519,
+            "tps": 63.127910611723976,
+            "ram_inicio_mb": 233.31640625,
+            "ram_pico_mb": 233.96484375,
+            "ram_usada_mb": 0.6484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 45.508827,
+        "ram_media_mb": 234.798828,
+        "ram_pico_mb": 235.0625,
+        "tempo_medio_segundos": 4.287603,
+        "ttft_medio_segundos": 0.779934,
+        "tps": {
+          "n": 2,
+          "mediana": 45.508827,
+          "iqr": 4.605674,
+          "p25": 43.20599,
+          "p75": 47.811664,
+          "p95": 49.653934,
+          "p99": 50.022388,
+          "max": 50.114501,
+          "media": 45.508827
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 0.779934,
+          "iqr": 0.015541,
+          "p25": 0.772163,
+          "p75": 0.787704,
+          "p95": 0.79392,
+          "p99": 0.795164,
+          "max": 0.795474,
+          "media": 0.779934
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 4.287603,
+          "iqr": 0.895371,
+          "p25": 3.839917,
+          "p75": 4.735289,
+          "p95": 5.093437,
+          "p99": 5.165067,
+          "max": 5.182975,
+          "media": 4.287603
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 234.798828,
+          "iqr": 0.263672,
+          "p25": 234.666992,
+          "p75": 234.930664,
+          "p95": 235.036133,
+          "p99": 235.057227,
+          "max": 235.0625,
+          "media": 234.798828
+        },
+        "tps_por_rodada": [
+          50.114501317663205,
+          40.90315240981259
+        ],
+        "ttft_por_rodada": [
+          0.795474499987904,
+          0.7643927000171971
+        ],
+        "tempo_por_rodada": [
+          3.3922317000105977,
+          5.182974600000307
+        ],
+        "ram_por_rodada": [
+          234.53515625,
+          235.0625
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "Ver suas respostas:\n\n**Habilidade:** EF08MA05\n**Unidade Temática:** Geometria\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nNão especificada.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nNenhum exemplo disponível — crie questões seguindo as diretrizes gerais da BNCC.\n\nGere 1 questão(ões) novas, inéditas e alinhadas à habilidade EF08MA05."
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "Ver suas regras absolutas:\n\n**Gere exatamente 1 questão(ões) de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Habilidade:** EF06MA17\n**Unidade Temática:** Geometria\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nNão especificada.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nNenhum exemplo disponível — crie questões seguindo as diretrizes gerais da BNCC.\n\nGere 1 questão(ões) novas, inéditas e alinhadas à habil"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 235.0625,
+        "tps_medio": 45.508827,
+        "tempo_medio_segundos": 4.287603,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Ver suas respostas:\n\n**Habilidade:** EF08MA05\n**Unidade Temática:** Geometria\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nNão especificada.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nNenhum exemplo disponível — crie questões seguindo as diretrizes gerais da BNCC.\n\nGere 1 questão(ões) novas, inéditas e alinhadas à habilidade EF08MA05.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 170,
+            "total_tokens": 170
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.795474499987904,
+            "tempo_decode_s": 2.5967572000226937,
+            "tempo_resposta_s": 3.3922317000105977,
+            "tempo_total_s": 3.3922317000105977,
+            "tokens_entrada": 0,
+            "tokens_saida": 170,
+            "tps": 50.114501317663205,
+            "ram_inicio_mb": 233.875,
+            "ram_pico_mb": 234.53515625,
+            "ram_usada_mb": 0.66015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+          "raw_output": "Ver suas regras absolutas:\n\n**Gere exatamente 1 questão(ões) de múltipla escolha para a seguinte habilidade da BNCC:\n\n**Habilidade:** EF06MA17\n**Unidade Temática:** Geometria\n\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nNão especificada.\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\nNenhum exemplo disponível — crie questões seguindo as diretrizes gerais da BNCC.\n\nGere 1 questão(ões) novas, inéditas e alinhadas à habilidade EF06MA17.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 212,
+            "total_tokens": 212
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.7643927000171971,
+            "tempo_decode_s": 4.41858189998311,
+            "tempo_resposta_s": 5.182974600000307,
+            "tempo_total_s": 5.182974600000307,
+            "tokens_entrada": 0,
+            "tokens_saida": 212,
+            "tps": 40.90315240981259,
+            "ram_inicio_mb": 234.4453125,
+            "ram_pico_mb": 235.0625,
+            "ram_usada_mb": 0.6171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 240.2,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 26.2,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 8.48,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -26.2,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "bartowski/SmolLM2-135M-Instruct-GGUF",
+    "gerado_em": "2026-09-11T09:22:52.045919"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}

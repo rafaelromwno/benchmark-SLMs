@@ -1,0 +1,1169 @@
+{
+  "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+  "formato": "gguf",
+  "data": "12/09/2026",
+  "run_config": {
+    "modelos": [
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\Qwen--Qwen1.5-1.8B-Chat-GGUF\\qwen1_5-1_8b-chat-q4_k_m.gguf"
+    },
+    "seed": 55,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 55
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 55
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.22,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": "JSON não encontrado na resposta",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 2.2063876999891363,
+        "tempo_prefill_s": 13.264339699991979,
+        "tempo_decode_s": 78.28692720003892,
+        "tempo_resposta_s": 91.5512669000309,
+        "tempo_total_s": 93.75765460002003,
+        "tokens_entrada": 0,
+        "tokens_saida": 1111,
+        "tps": 12.135277179868552,
+        "ram_inicio_mb": 68.03515625,
+        "ram_pico_mb": 2007.62890625,
+        "ram_usada_mb": 1939.59375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 93.75765460002003,
+        "tempo_carregamento_s": 2.2063876999891363,
+        "tempo_resposta_s": 91.5512669000309,
+        "ram_pico_mb": 2007.62890625,
+        "ram_inicio_mb": 68.03515625,
+        "ttft_segundos": 13.264339699991979,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "Habilidade: EF09MA01\nUnidade Temática: Números\n\nPré--Requisitos que o aluno já deve dominar:\n\n1. EF08MA01: Aprenda a compreender e manipular divisões básicas de números, como divisões com dois e três números.\n2. EF07MA01: Aprenda a compreender e manipular divisões com múltiplas números, como divisões com mais de dois números.\n3. EF09MA01: Aprenda a usar divisões com números com significados e representações matemáticas, como divisões com números compostos.\n4. EF08MA01: Aprenda a realizar divisões com números com significados, como divisões com números compostos.\n\nExemplos de questões existentes para esta habilidade:\n\n1. Exemplo 1: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b?\n   A: 12 / 3\n   B: 12 / 5\n   C: 12 / 7\n   D: 12 / 9\n   E: 12 / 11\n\n1. Exemplo 2: Qual é a fração a/2 para a seguinte divisão?\n   A: 16 / 4\n   B: 24 / 6\n   C: 32 / 8\n   D: 40 / 10\n   E: 48 / 12\n\n1. Exemplo 3: Qual é a fração a/3 para a seguinte divisão?\n   A: 18 / 3\n   B: 24 / 4\n   C: 36 / 6\n   D: 48 / 8\n   E: 60 / 10\n\n1. Exemplo 4: Qual é a fração a/4 para a seguinte divisão?\n   A: 20 / 5\n   B: 25 / 7\n   C: 30 / 9\n   D: 35 / 11\n   E: 40 / 13\n\n1. Exemplo 5: Qual é a fração a/5 para a seguinte divisão?\n   A: 24 / 6\n   B: 30 / 8\n   C: 36 / 10\n   D: 40 / 12\n   E: 45 / 15\n\n1. Exemplo 6: Qual é a fração a/6 para a seguinte divisão?\n   A: 28 / 7\n   B: 32 / 9\n   C: 36 / 11\n   D: 40 / 13\n   E: 45 / 15\n\n1. Exemplo 7: Qual é a fração a/7 para a seguinte divisão?\n   A: 32 / 11\n   B: 36 / 13\n   C: 40 / 15\n   D: 44 / 17\n   E: 48 / 19\n\n1. Exemplo 8: Qual é a fração a/8 para a seguinte divisão?\n   A: 36 / 17\n   B: 40 / 19\n   C: 44 / 21\n   D: 48 / 23\n   E: 50 / 25\n\n1. Exemplo 9: Qual é a fração a/9 para a seguinte divisão?\n   A: 40 / 23\n   B: 44 / 25\n   C: 48 / 27\n   D: 50 / 29\n   E: 52 / 31\n\n1. Exemplo 10: Qual é a fração a/10 para a seguinte divisão?\n   A: 50 / 31\n   B: 52 / 33\n   C: 54 / 35\n   D: 56 / 37\n   E: 58 / 39\n\n1. Exemplo 11: Qual é a fração a/11 para a seguinte divisão?\n   A: 56 / 37\n   B: 58 / 39\n   C: 60 / 41\n   D: 62 / 43\n   E: 64 / 45\n\n1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1111,
+            "total_tokens": 1111
+          },
+          "metrics": {
+            "tempo_carregamento_s": 2.2063876999891363,
+            "tempo_prefill_s": 13.264339699991979,
+            "tempo_decode_s": 78.28692720003892,
+            "tempo_resposta_s": 91.5512669000309,
+            "tempo_total_s": 93.75765460002003,
+            "tokens_entrada": 0,
+            "tokens_saida": 1111,
+            "tps": 12.135277179868552,
+            "ram_inicio_mb": 68.03515625,
+            "ram_pico_mb": 2007.62890625,
+            "ram_usada_mb": 1939.59375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 13.397046,
+          "iqr": 1.054936,
+          "p25": 12.687571,
+          "p75": 13.742507,
+          "p95": 14.157343,
+          "p99": 14.207121,
+          "max": 14.219565,
+          "media": 13.140615
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.486082,
+          "iqr": 0.529156,
+          "p25": 2.456029,
+          "p75": 2.985185,
+          "p95": 4.392655,
+          "p99": 4.939173,
+          "max": 5.075803,
+          "media": 2.441935
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 69.054822,
+          "iqr": 39.536217,
+          "p25": 40.350616,
+          "p75": 79.886834,
+          "p95": 80.847205,
+          "p99": 81.211104,
+          "max": 81.302079,
+          "media": 58.755776
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2015.041016,
+          "iqr": 4.918945,
+          "p25": 2013.152344,
+          "p75": 2018.071289,
+          "p95": 2021.224219,
+          "p99": 2021.854219,
+          "max": 2022.011719,
+          "media": 2015.491016
+        },
+        "tps_medio": 13.140615,
+        "ttft_medio_segundos": 2.441935,
+        "tempo_medio_segundos": 58.755776,
+        "ram_pico_mb": 2022.011719
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 13.397046,
+          "iqr": 1.054936,
+          "p25": 12.687571,
+          "p75": 13.742507,
+          "p95": 14.157343,
+          "p99": 14.207121,
+          "max": 14.219565,
+          "media": 13.140615
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.486082,
+          "iqr": 0.529156,
+          "p25": 2.456029,
+          "p75": 2.985185,
+          "p95": 4.392655,
+          "p99": 4.939173,
+          "max": 5.075803,
+          "media": 2.441935
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 69.054822,
+          "iqr": 39.536217,
+          "p25": 40.350616,
+          "p75": 79.886834,
+          "p95": 80.847205,
+          "p99": 81.211104,
+          "max": 81.302079,
+          "media": 58.755776
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2015.041016,
+          "iqr": 4.918945,
+          "p25": 2013.152344,
+          "p75": 2018.071289,
+          "p95": 2021.224219,
+          "p99": 2021.854219,
+          "max": 2022.011719,
+          "media": 2015.491016
+        },
+        "tps_medio": 13.140615,
+        "ttft_medio_segundos": 2.441935,
+        "tempo_medio_segundos": 58.755776,
+        "ram_pico_mb": 2022.011719,
+        "tps_por_rodada": [
+          13.19633870708032,
+          14.219565347723155,
+          14.081293088747573,
+          12.854574956862917,
+          13.787305813815399,
+          13.597754073737196,
+          12.63190333085869,
+          11.770905106912139,
+          11.658396321068087,
+          13.608111921328666
+        ],
+        "ttft_por_rodada": [
+          5.075802500010468,
+          0.07699510001111776,
+          0.08083320001605898,
+          2.461434100056067,
+          3.1002704999991693,
+          2.4865740000386722,
+          2.45422780001536,
+          3.5576964000356384,
+          2.6399300000048243,
+          2.4855907000019215
+        ],
+        "tempo_por_rodada": [
+          34.5550390999997,
+          57.737348499998916,
+          58.30430449999403,
+          79.89373460004572,
+          80.29124869999941,
+          79.86613039998338,
+          81.30207880004309,
+          23.10782370000379,
+          12.694713400036562,
+          79.80534009996336
+        ],
+        "ram_por_rodada": [
+          2009.59375,
+          2011.37890625,
+          2013.1875,
+          2015.015625,
+          2013.140625,
+          2015.06640625,
+          2016.73828125,
+          2018.515625,
+          2020.26171875,
+          2022.01171875
+        ],
+        "ram_media_mb": 2015.491016
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A fração 2/3 pode ser escrita como:\n   ```\n   2/3 = 0.6666666666666667\n   ```\n   E a fração 3/4 pode ser escrita como:\n   ```\n   3/4 = 0.75\n   ```\n   A fração 4/5 pode ser escrita como:\n   ```\n   4/5 = 0.8\n   ```\n2. Qual número pode ser escrito como a fração 1/2?\n   ```\n   1/2 = 0.5\n   ```\n   Qual número pode ser escrito como a fração 2/3?\n   ```\n   2/3 = 0.6666666666666667\n   ```\n   Qual número pode ser escrito como a fração 3/4?\n   ```\n   3/4 = 0.75\n   ```\n   Qual número pode ser escrito como a fração 4/5?\n   ```\n   4/5 = 0.8\n   ```\n3. Qual número pode ser escrito como a fração 5/6?\n   ```\n   5/6 = 0.75\n   ```\n   Qual número pode ser escrito como a fração 6/7?\n   ```\n   6/7 = 0.75\n   ```\n   Qual número pode ser escrito como a fração 7/8?\n   ```\n   7/8 = 0.75\n   ```\n   Qual número pode ser escrito como a fração 8/9?\n   ```\n   8/9 = 0.75\n   ```\n   Qual número pode ser escrito como a fração 9/10?\n   ```\n   9/10 = 0.75\n   ```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 456,
+            "total_tokens": 456
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.075802500010468,
+            "tempo_decode_s": 29.479236599989235,
+            "tempo_resposta_s": 34.5550390999997,
+            "tempo_total_s": 34.5550390999997,
+            "tokens_entrada": 0,
+            "tokens_saida": 456,
+            "tps": 13.19633870708032,
+            "ram_inicio_mb": 2007.58203125,
+            "ram_pico_mb": 2009.59375,
+            "ram_usada_mb": 2.01171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A fração 2/3 pode ser escrita como:\n   - A/3\n   - 2/3\n   - 3/2\n\n2. A fração 1/2 pode ser escrita como:\n   - 1/2\n   - 1/4\n   - 1/8\n\n3. A fração 5/6 pode ser escrita como:\n   - 5/6\n   - 2/3\n   - 1/2\n\n4. A fração 1/4 pode ser escrita como:\n   - 1/4\n   - 1/8\n   - 1/16\n\n5. A fração 7/8 pode ser escrita como:\n   - 7/8\n   - 3/4\n   - 1/2\n\n6. A fração 1/3 pode ser escrita como:\n   - 1/3\n   - 1/6\n   - 1/9\n\n7. A fração 9/10 pode ser escrita como:\n   - 9/10\n   - 3/5\n   - 1/2\n\n8. A fração 1/20 can be written as:\n   - 1/20\n   - 1/40\n   - 1/80\n\n9. A fração 1/5 can be written as:\n   - 1/5\n   - 1/10\n   - 1/15\n\n10. A fração 1/8 can be written as:\n   - 1/8\n   - 1/16\n   - 1/24\n\n11. A fração 1/12 can be written as:\n   - 1/12\n   - 1/18\n   - 1/24\n\n12. A fração 1/18 can be written as:\n   - 1/18\n   - 1/24\n   - 1/36\n\n13. A fração 1/24 can be written as:\n   - 1/24\n   - 1/36\n   - 1/48\n\n14. A fração 1/36 can be written as:\n   - 1/36\n   - 1/48\n   - 1/60\n\n15. A fração 1/48 can be written as:\n   - 1/48\n   - 1/60\n   - 1/80\n\n16. A fração 1/60 can be written as:\n   - 1/60\n   - 1/80\n   - 1/100\n\n17. A fração 1/80 can be written as:\n   - 1/80\n   - 1/100\n   - 1/120\n\n18. A fração 1/100 can be written as:\n   - 1/100\n   - 1/120\n   - 1/140\n\n19. A fração 1/140 can be written as:\n   - 1/140\n   - 1/160\n   - 1/180\n\n20. A fração 1/180 can be written as:\n   - 1/180\n   - 1/200\n   - 1/220",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 821,
+            "total_tokens": 821
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07699510001111776,
+            "tempo_decode_s": 57.6603533999878,
+            "tempo_resposta_s": 57.737348499998916,
+            "tempo_total_s": 57.737348499998916,
+            "tokens_entrada": 0,
+            "tokens_saida": 821,
+            "tps": 14.219565347723155,
+            "ram_inicio_mb": 2009.5,
+            "ram_pico_mb": 2011.37890625,
+            "ram_usada_mb": 1.87890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A fração 2/3 pode ser escrita como:\n   - A/3\n   - 2/3\n   - 3/2\n\n2. A fração 1/2 pode ser escrita como:\n   - 1/2\n   - 1/4\n   - 1/8\n\n3. A fração 5/6 pode ser escrita como:\n   - 5/6\n   - 2/3\n   - 1/2\n\n4. A fração 1/4 pode ser escrita como:\n   - 1/4\n   - 1/8\n   - 1/16\n\n5. A fração 7/8 pode ser escrita como:\n   - 7/8\n   - 3/4\n   - 1/2\n\n6. A fração 1/3 pode ser escrita como:\n   - 1/3\n   - 1/6\n   - 1/9\n\n7. A fração 9/10 pode ser escrita como:\n   - 9/10\n   - 3/5\n   - 1/2\n\n8. A fração 1/20 can be written as:\n   - 1/20\n   - 1/40\n   - 1/80\n\n9. A fração 1/5 can be written as:\n   - 1/5\n   - 1/10\n   - 1/15\n\n10. A fração 1/8 can be written as:\n   - 1/8\n   - 1/16\n   - 1/24\n\n11. A fração 1/12 can be written as:\n   - 1/12\n   - 1/18\n   - 1/24\n\n12. A fração 1/18 can be written as:\n   - 1/18\n   - 1/24\n   - 1/36\n\n13. A fração 1/24 can be written as:\n   - 1/24\n   - 1/36\n   - 1/48\n\n14. A fração 1/36 can be written as:\n   - 1/36\n   - 1/48\n   - 1/60\n\n15. A fração 1/48 can be written as:\n   - 1/48\n   - 1/60\n   - 1/80\n\n16. A fração 1/60 can be written as:\n   - 1/60\n   - 1/80\n   - 1/100\n\n17. A fração 1/80 can be written as:\n   - 1/80\n   - 1/100\n   - 1/120\n\n18. A fração 1/100 can be written as:\n   - 1/100\n   - 1/120\n   - 1/140\n\n19. A fração 1/140 can be written as:\n   - 1/140\n   - 1/160\n   - 1/180\n\n20. A fração 1/180 can be written as:\n   - 1/180\n   - 1/200\n   - 1/220",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 821,
+            "total_tokens": 821
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08083320001605898,
+            "tempo_decode_s": 58.22347129997797,
+            "tempo_resposta_s": 58.30430449999403,
+            "tempo_total_s": 58.30430449999403,
+            "tokens_entrada": 0,
+            "tokens_saida": 821,
+            "tps": 14.081293088747573,
+            "ram_inicio_mb": 2011.28515625,
+            "ram_pico_mb": 2013.1875,
+            "ram_usada_mb": 1.90234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Questão 1 (A):**\nQual número está entre 23 e 27?\n**Alternativas:**\n- 24\n- 25\n- 26\n- 28\n- 29\n- 30\n- 31\n- 32\n- 33\n- 34\n- 35\n- 36\n- 37\n- 38\n- 39\n- 40\n- 41\n- 42\n- 43\n- 44\n- 45\n- 46\n- 47\n- 48\n- 49\n- 50\n- 51\n- 52\n- 53\n- 54\n- 55\n- 56\n- 57\n- 58\n- 59\n- 60\n- 61\n- 62\n- 63\n- 64\n- 65\n- 66\n- 67\n- 68\n- 69\n- 70\n- 71\n- 72\n- 73\n- 74\n- 75\n- 76\n- 77\n- 78\n- 79\n- 80\n- 81\n- 82\n- 83\n- 84\n- 85\n- 86\n- 87\n- 88\n- 89\n- 90\n- 91\n- 92\n- 93\n- 94\n- 95\n- 96\n- 97\n- 98\n- 99\n- 100\n- 101\n- 102\n- 103\n- 104\n- 105\n- 106\n- 107\n- 108\n- 109\n- 110\n- 111\n- 112\n- 113\n- 114\n- 115\n- 116\n- 117\n- 118\n- 119\n- 120\n- 121\n- 122\n- 123\n- 124\n- 125\n- 126\n- 127\n- 128\n- 129\n- 130\n- 131\n- 132\n- 133\n- 134\n- 135\n- 136\n- 137\n- 138\n- 139\n- 140\n- 141\n- 142\n- 143\n- 144\n- 145\n- 146\n- 147\n- 148\n- 149\n- 150\n- 151\n- 152\n- 153\n- 154\n- 155\n- 156\n- 157\n- 158\n- 159\n- 160\n- 161\n- 162\n- 163\n- 164\n- 165\n- 166\n- 167\n- 168\n- 169\n- 170\n- 171\n- 172\n- 173\n- 174\n- 175\n- 176\n- 177\n- 178\n- 179\n- 180\n- 181\n- 182\n- 183\n- 184\n- 185\n- 186\n- 187\n- 188\n- 189\n- 190\n- 191\n- 192\n- 193\n- 194\n- 195\n- 196\n- 197\n- 198\n- 199\n- 200\n- 201\n- 202\n- 203",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1027,
+            "total_tokens": 1027
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.461434100056067,
+            "tempo_decode_s": 77.43230049998965,
+            "tempo_resposta_s": 79.89373460004572,
+            "tempo_total_s": 79.89373460004572,
+            "tokens_entrada": 0,
+            "tokens_saida": 1027,
+            "tps": 12.854574956862917,
+            "ram_inicio_mb": 2013.11328125,
+            "ram_pico_mb": 2015.015625,
+            "ram_usada_mb": 1.90234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Utilize a biblioteca de álgebra para resolver o problema de encontrar a raiz quadrada de 18.\n    * Enunciado: Identifique a raiz quadrada de 18.\n    * Alternativas:\n        * A: 3\n        * B: 2\n        * C: 4\n        * D: 5\n        * E: 6\n    * Resposta correta: D\n    * Resolução passo a passo:\n        * Primeiro, identifique a raiz quadrada de 18 usando a função de raiz quadrada de uma biblioteca de álgebra, como Python's `sqrt()` ou MATLAB's `sqrt()`.\n        * Em Python, usamos:\n            ```python\n            from math import sqrt\n            x_quadrada = sqrt(18)\n            print(\"Raiz quadrada de 18:\", x_quadrada)\n            ```\n        * Em MATLAB, usamos:\n            ```matlab\n            sqrt(18)\n            ```\n        * O resultado da execução é:\n            ```matlab\n            3.0\n            ```\n        * Agora, usamos a raiz quadrada encontrada para encontrar a raiz quadrada de 18:\n            ```python\n            x_quadrada = x_quadrada / 2\n            print(\"Raiz quadrada de 18:\", x_quadrada)\n            ```\n        * Em Python, usamos:\n            ```python\n            x_quadrada /= 2\n            print(\"Raiz quadrada de 18:\", x_quadrada)\n            ```\n        * O resultado da execução é:\n            ```python\n            1.5\n            ```\n        * O passo final é encontrar a raiz quadrada de 18:\n            ```python\n            x_quadrada = 3 / 2\n            print(\"Raiz quadrada de 18:\", x_quadrada)\n            ```\n        * Agora, usamos a raiz quadrada encontrada para encontrar a raiz quadrada de 18:\n            ```python\n            x_quadrada = 18 / 4\n            print(\"Raiz quadrada de 18:\", x_quadrada)\n            ```\n        * O resultado da execução é:\n            ```matlab\n            3.375\n            ```\n        * A partir da resolução passo a passo, identifique a raiz quadrada de 18.\n2. Implemente o cálculo de a propriedade de multiplicação de números.\n    * Enunciado: Determine o valor de 4 x 2 + 6.\n    * Alternativas:\n        * A: 10\n        * B: 12\n        * C: 14\n        * D: 16\n        * E: 18\n    * Resposta correta: C\n    * Resolução passo a passo:\n        * Primeiro, identifique o valor de 4 x 2 usando a função de multiplicação de números, como Python's `*` ou MATLAB's `*`.\n        * Em Python, usamos:\n            ```python\n            x = 4 * 2\n            print(\"Valor de 4 x 2:\", x)\n            ```\n        * Em MATLAB, usamos:\n            ```matlab\n            x = 4 * 2\n            print(\"Valor de 4 x 2:\", x)\n            ```\n        * O resultado da execução é:\n            ```matlab\n            8\n            ```\n        * Agora, identifique o valor de 6 multiplicado por 4 usando a função de multiplicação de números, como Python's `**` ou MATLAB's `**`.\n        * Em Python, usamos:\n            ```python\n            y = 6 ** 4\n            print(\"Valor de 6 x 4:\", y)\n            ```\n        * Em MATLAB, usamos:\n            ```matlab\n            y = 6 ** 4\n            print(\"Valor de 6 x 4:\", y)\n            ```\n        * O resultado da execução é:\n            ```matlab\n            1296\n            ```\n        * O passo final é encontrar o valor de 6 multiplicado por 4 usando a função de multiplicação de números:\n            ```python\n            y = 6 * 4\n            print(\"Valor de 6 x 4:\", y)\n            ```\n        * Agora, identifique o valor de 4 x 2 + 6 usando a função de multiplicação de números, como Python's `+` ou MATLAB's `+`.\n        * Em Python, usamos:\n            ```python\n            x =",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1107,
+            "total_tokens": 1107
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.1002704999991693,
+            "tempo_decode_s": 77.19097820000025,
+            "tempo_resposta_s": 80.29124869999941,
+            "tempo_total_s": 80.29124869999941,
+            "tokens_entrada": 0,
+            "tokens_saida": 1107,
+            "tps": 13.787305813815399,
+            "ram_inicio_mb": 1990.9375,
+            "ram_pico_mb": 2013.140625,
+            "ram_usada_mb": 22.203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A fração 2/3 é escrita no formato a/3, mas não na forma a/b.\n  * A: 2/3 = 2/3\n  * B: 2/3 = 2/3\n  * C: 2/3 = 2/3\n  * D: 2/3 = 2/3\n  * E: 2/3 = 2/3\n\n2. O número 5/8 é escrita no formato 5/8, mas não na forma 5/8.\n  * A: 5/8 = 5/8\n  * B: 5/8 = 5/8\n  * C: 5/8 = 5/8\n  * D: 5/8 = 5/8\n  * E: 5/8 = 5/8\n\n3. O número 7/14 é escrita no formato 7/14, mas não na forma 7/14.\n  * A: 7/14 = 7/14\n  * B: 7/14 = 7/14\n  * C: 7/14 = 7/14\n  * D: 7/14 = 7/14\n  * E: 7/14 = 7/14\n\n1. O número 11/16 é escrita no formato 11/16, mas não na forma 11/16.\n  * A: 11/16 = 11/16\n  * B: 11/16 = 11/16\n  * C: 11/16 = 11/16\n  * D: 11/16 = 11/16\n  * E: 11/16 = 11/16\n\n2. O número 13/18 é escrita no formato 13/18, mas não na forma 13/18.\n  * A: 13/18 = 13/18\n  * B: 13/18 = 13/18\n  * C: 13/18 = 13/18\n  * D: 13/18 = 13/18\n  * E: 13/18 = 13/18\n\n3. O número 15/20 é escrita no formato 15/20, mas não na forma 15/20.\n  * A: 15/20 = 15/20\n  * B: 15/20 = 15/20\n  * C: 15/20 = 15/20\n  * D: 15/20 = 15/20\n  * E: 15/20 = 15/20\n\n1. O número 19/24 é escrita no formato 19/24, mas não na forma 19/24.\n  * A: 19/24 = 19/24\n  * B: 19/24 = 19/24\n  * C: 19/24 = 19/24\n  * D: 19/24 = 19/24\n  * E: 19/24 = 19/24\n\n2. O número 21/26 é escrita no formato 21/26, mas não na forma 21/26.\n  * A: 21/26 = 21/26\n  * B: 21/26 = 21/26\n  * C: 21/26 = 21/26\n  * D: 21/26 = 21/26\n  * E: 21/26 = 21/26\n\n3. O número 23/28 é escrita no formato 23/28, mas não na forma 23/28.\n  * A: 23/28 = 23/28\n  * B: 23/28 = 23/28\n  * C: 23/28 = 23/28\n  * D: 23/28 = 23/28\n  *",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1086,
+            "total_tokens": 1086
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.4865740000386722,
+            "tempo_decode_s": 77.3795563999447,
+            "tempo_resposta_s": 79.86613039998338,
+            "tempo_total_s": 79.86613039998338,
+            "tokens_entrada": 0,
+            "tokens_saida": 1086,
+            "tps": 13.597754073737196,
+            "ram_inicio_mb": 2013.0546875,
+            "ram_pico_mb": 2015.06640625,
+            "ram_usada_mb": 2.01171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Questão 1 (A):**\nQual número está entre 23 e 27?\n**Alternativas:**\n- 24\n- 25\n- 26\n- 28\n- 29\n- 30\n- 31\n- 32\n- 33\n- 34\n- 35\n- 36\n- 37\n- 38\n- 39\n- 40\n- 41\n- 42\n- 43\n- 44\n- 45\n- 46\n- 47\n- 48\n- 49\n- 50\n- 51\n- 52\n- 53\n- 54\n- 55\n- 56\n- 57\n- 58\n- 59\n- 60\n- 61\n- 62\n- 63\n- 64\n- 65\n- 66\n- 67\n- 68\n- 69\n- 70\n- 71\n- 72\n- 73\n- 74\n- 75\n- 76\n- 77\n- 78\n- 79\n- 80\n- 81\n- 82\n- 83\n- 84\n- 85\n- 86\n- 87\n- 88\n- 89\n- 90\n- 91\n- 92\n- 93\n- 94\n- 95\n- 96\n- 97\n- 98\n- 99\n- 100\n- 101\n- 102\n- 103\n- 104\n- 105\n- 106\n- 107\n- 108\n- 109\n- 110\n- 111\n- 112\n- 113\n- 114\n- 115\n- 116\n- 117\n- 118\n- 119\n- 120\n- 121\n- 122\n- 123\n- 124\n- 125\n- 126\n- 127\n- 128\n- 129\n- 130\n- 131\n- 132\n- 133\n- 134\n- 135\n- 136\n- 137\n- 138\n- 139\n- 140\n- 141\n- 142\n- 143\n- 144\n- 145\n- 146\n- 147\n- 148\n- 149\n- 150\n- 151\n- 152\n- 153\n- 154\n- 155\n- 156\n- 157\n- 158\n- 159\n- 160\n- 161\n- 162\n- 163\n- 164\n- 165\n- 166\n- 167\n- 168\n- 169\n- 170\n- 171\n- 172\n- 173\n- 174\n- 175\n- 176\n- 177\n- 178\n- 179\n- 180\n- 181\n- 182\n- 183\n- 184\n- 185\n- 186\n- 187\n- 188\n- 189\n- 190\n- 191\n- 192\n- 193\n- 194\n- 195\n- 196\n- 197\n- 198\n- 199\n- 200\n- 201\n- 202\n- 203",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1027,
+            "total_tokens": 1027
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.45422780001536,
+            "tempo_decode_s": 78.84785100002773,
+            "tempo_resposta_s": 81.30207880004309,
+            "tempo_total_s": 81.30207880004309,
+            "tokens_entrada": 0,
+            "tokens_saida": 1027,
+            "tps": 12.63190333085869,
+            "ram_inicio_mb": 2014.8984375,
+            "ram_pico_mb": 2016.73828125,
+            "ram_usada_mb": 1.83984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A fração 2/3 é escrita no formato a/3, mas a fração 3/4 é escrita no formato b/3. Quais dos números abaixo pode ser escrito na forma de uma fração a/3?\na) 1/4\nb) 1/2\nc) 3/4\nd) 2/3\ne) 1/6\n2. A fração 4/7 é escrita no formato a/7, mas a fração 5/8 é escrita no formato b/7. Quais dos números abaixo pode ser escrito na forma de uma fração a/7?\na) 1/8\nb) 1/6\nc) 3/8\nd) 4/7\ne) 2/9\n3. A fração 6/9 é escrita no formato a/9, mas a fração 7/11 é escrita no formato b/9. Quais dos números abaixo pode ser escrito na forma de uma fração a/9?\na) 1/9\nb) 1/8\nc) 3/9\nd) 4/11\ne) 2/11",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 272,
+            "total_tokens": 272
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.5576964000356384,
+            "tempo_decode_s": 19.550127299968153,
+            "tempo_resposta_s": 23.10782370000379,
+            "tempo_total_s": 23.10782370000379,
+            "tokens_entrada": 0,
+            "tokens_saida": 272,
+            "tps": 11.770905106912139,
+            "ram_inicio_mb": 2016.67578125,
+            "ram_pico_mb": 2018.515625,
+            "ram_usada_mb": 1.83984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Identifique a função e o resultado de 2x + 3, e determine o valor de x quando x é igual a 4. Utilize a propriedade da igualdade para encontrar o valor de x.\n2. Se 3x - 4 = 10, determine o valor de x aplicando as propriedades da igualdade. Utilize a propriedade da igualdade para encontrar o valor de x.\n3. Se 4x - 5 = 7, determine o valor de x aplicando as propriedades da igualdade. Utilize a propriedade da igualdade para encontrar o valor de x.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 148,
+            "total_tokens": 148
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6399300000048243,
+            "tempo_decode_s": 10.054783400031738,
+            "tempo_resposta_s": 12.694713400036562,
+            "tempo_total_s": 12.694713400036562,
+            "tokens_entrada": 0,
+            "tokens_saida": 148,
+            "tps": 11.658396321068087,
+            "ram_inicio_mb": 2018.4296875,
+            "ram_pico_mb": 2020.26171875,
+            "ram_usada_mb": 1.83203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A fração 2/3 é escrita no formato a/3, mas não na forma a/b.\n  * A: 2/3 = 2/3\n  * B: 2/3 = 2/3\n  * C: 2/3 = 2/3\n  * D: 2/3 = 2/3\n  * E: 2/3 = 2/3\n\n2. O número 5/8 é escrita no formato 5/8, mas não na forma 5/8.\n  * A: 5/8 = 5/8\n  * B: 5/8 = 5/8\n  * C: 5/8 = 5/8\n  * D: 5/8 = 5/8\n  * E: 5/8 = 5/8\n\n3. O número 7/14 é escrita no formato 7/14, mas não na forma 7/14.\n  * A: 7/14 = 7/14\n  * B: 7/14 = 7/14\n  * C: 7/14 = 7/14\n  * D: 7/14 = 7/14\n  * E: 7/14 = 7/14\n\n1. O número 11/16 é escrita no formato 11/16, mas não na forma 11/16.\n  * A: 11/16 = 11/16\n  * B: 11/16 = 11/16\n  * C: 11/16 = 11/16\n  * D: 11/16 = 11/16\n  * E: 11/16 = 11/16\n\n2. O número 13/18 é escrita no formato 13/18, mas não na forma 13/18.\n  * A: 13/18 = 13/18\n  * B: 13/18 = 13/18\n  * C: 13/18 = 13/18\n  * D: 13/18 = 13/18\n  * E: 13/18 = 13/18\n\n3. O número 15/20 é escrita no formato 15/20, mas não na forma 15/20.\n  * A: 15/20 = 15/20\n  * B: 15/20 = 15/20\n  * C: 15/20 = 15/20\n  * D: 15/20 = 15/20\n  * E: 15/20 = 15/20\n\n1. O número 19/24 é escrita no formato 19/24, mas não na forma 19/24.\n  * A: 19/24 = 19/24\n  * B: 19/24 = 19/24\n  * C: 19/24 = 19/24\n  * D: 19/24 = 19/24\n  * E: 19/24 = 19/24\n\n2. O número 21/26 é escrita no formato 21/26, mas não na forma 21/26.\n  * A: 21/26 = 21/26\n  * B: 21/26 = 21/26\n  * C: 21/26 = 21/26\n  * D: 21/26 = 21/26\n  * E: 21/26 = 21/26\n\n3. O número 23/28 é escrita no formato 23/28, mas não na forma 23/28.\n  * A: 23/28 = 23/28\n  * B: 23/28 = 23/28\n  * C: 23/28 = 23/28\n  * D: 23/28 = 23/28\n  *",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1086,
+            "total_tokens": 1086
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.4855907000019215,
+            "tempo_decode_s": 77.31974939996144,
+            "tempo_resposta_s": 79.80534009996336,
+            "tempo_total_s": 79.80534009996336,
+            "tokens_entrada": 0,
+            "tokens_saida": 1086,
+            "tps": 13.608111921328666,
+            "ram_inicio_mb": 2020.1796875,
+            "ram_pico_mb": 2022.01171875,
+            "ram_usada_mb": 1.83203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 13.689489,
+        "ram_media_mb": 2025.507812,
+        "ram_pico_mb": 2027.253906,
+        "tempo_medio_segundos": 50.617898,
+        "ttft_medio_segundos": 1.046279,
+        "tps": {
+          "n": 3,
+          "mediana": 13.761132,
+          "iqr": 0.19747,
+          "p25": 13.608665,
+          "p75": 13.806135,
+          "p95": 13.842137,
+          "p99": 13.849338,
+          "max": 13.851138,
+          "media": 13.689489
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.080657,
+          "iqr": 1.455277,
+          "p25": 0.077235,
+          "p75": 1.532512,
+          "p95": 2.693996,
+          "p99": 2.926292,
+          "max": 2.984367,
+          "media": 1.046279
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 35.316862,
+          "iqr": 23.181045,
+          "p25": 35.202116,
+          "p75": 58.383161,
+          "p95": 76.836201,
+          "p99": 80.526809,
+          "max": 81.449461,
+          "media": 50.617898
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 2025.511719,
+          "iqr": 1.748047,
+          "p25": 2024.634766,
+          "p75": 2026.382812,
+          "p95": 2027.079687,
+          "p99": 2027.219062,
+          "max": 2027.253906,
+          "media": 2025.507812
+        },
+        "tps_por_rodada": [
+          13.456197154978872,
+          13.851137730162879,
+          13.761131927521124
+        ],
+        "ttft_por_rodada": [
+          2.984366599994246,
+          0.07381310005439445,
+          0.0806569000124
+        ],
+        "tempo_por_rodada": [
+          81.44946059997892,
+          35.087370400025975,
+          35.31686219997937
+        ],
+        "ram_por_rodada": [
+          2023.7578125,
+          2025.51171875,
+          2027.25390625
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 2027.253906,
+        "tps_medio": 13.689489,
+        "tempo_medio_segundos": 50.617898,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A fração 2/3 é escrita a/3, então qual é a fração 1/2?\n2. Dentre os números abaixo, qual é a fração 1/4?\n3. Qual é a fração 1/5?\n4. Dentre os números abaixo, qual é a fração 1/6?\n5. Qual é a fração 1/7?\n6. Qual é a fração 1/8?\n7. Qual é a fração 1/9?\n8. Qual é a fração 1/10?\n9. Qual é a fração 1/11?\n10. Qual é a fração 1/12?\n11. Qual é a fração 1/13?\n12. Qual é a fração 1/14?\n13. Qual é a fração 1/15?\n14. Qual é a fração 1/16?\n15. Qual é a fração 1/17?\n16. Qual é a fração 1/18?\n17. Qual é a fração 1/19?\n18. Qual é a fração 1/20?\n19. Qual é a fração 1/21?\n20. Qual é a fração 1/22?\n21. Qual é a fração 1/23?\n22. Qual é a fração 1/24?\n23. Qual é a fração 1/25?\n24. Qual é a fração 1/26?\n25. Qual é a fração 1/27?\n26. Qual é a fração 1/28?\n27. Qual é a fração 1/29?\n28. Qual é a fração 1/30?\n29. Qual é a fração 1/31?\n30. Qual é a fração 1/32?\n31. Qual é a fração 1/33?\n32. Qual é a fração 1/34?\n33. Qual é a fração 1/35?\n34. Qual é a fração 1/36?\n35. Qual é a fração 1/37?\n36. Qual é a fração 1/38?\n37. Qual é a fração 1/39?\n38. Qual é a fração 1/40?\n39. Qual é a fração 1/41?\n40. Qual é a fração 1/42?\n41. Qual é a fração 1/43?\n42. Qual é a fração 1/44?\n43. Qual é a fração 1/45?\n44. Qual é a fração 1/46?\n45. Qual é a fração 1/47?\n46. Qual é a fração 1/48?\n47. Qual é a fração 1/49?\n48. Qual é a fração 1/50?\n49. Qual é a fração 1/51?\n50. Qual é a fração 1/52?\n51. Qual é a fração 1/53?\n52. Qual é a fração 1/54?\n53. Qual é a fração 1/55?\n54. Qual é a fração 1/56?\n55. Qual é a fração 1/57?\n56. Qual é a fração 1/58?\n57. Qual é a fração 1/59?\n58. Qual é a fração 1/60?\n59. Qual é a fração 1/61?\n60. Qual é a fração 1/62?\n61. Qual é a fração 1/63?\n62. Qual é a fração 1/64?\n63. Qual é a fração 1/65?\n64. Qual é a fração 1/66?\n65. Qual é a fração 1/67?\n66. Qual é a fração 1/68?\n67. Qual é a fração 1/69?\n68. Qual é a fração 1/70?\n69. Qual é a fração 1/71?\n70. Qual é a fração 1/72?\n71. Qual é a fração 1/73?\n72. Qual é a fração 1/74?\n73. Qual é",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1096,
+            "total_tokens": 1096
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.984366599994246,
+            "tempo_decode_s": 78.46509399998467,
+            "tempo_resposta_s": 81.44946059997892,
+            "tempo_total_s": 81.44946059997892,
+            "tokens_entrada": 0,
+            "tokens_saida": 1096,
+            "tps": 13.456197154978872,
+            "ram_inicio_mb": 2021.91796875,
+            "ram_pico_mb": 2023.7578125,
+            "ram_usada_mb": 1.83984375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A fração 2/3 é escrita em forma de uma fração a/3, mas a fração 3/5 é escrita em forma de uma fração a/5. Qual é a diferença entre as duas frações?\n2. A fração 2/3 é escrita em forma de uma fração a/3, e a fração 3/5 é escrita em forma de uma fração a/5. Qual é a diferença entre as duas frações, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3?\n3. A fração 2/3 é escrita em forma de uma fração a/3, e a fração 3/5 é escrita em forma de uma fração a/5. Qual é a diferença entre as duas frações, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3?\n4. A fração 2/3 é escrita em forma de uma fração a/3, e a fração 3/5 é escrita em forma de uma fração a/5. Qual é a diferença entre as duas frações, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3?\n5. A fração 2/3 é escrita em forma de uma fração a/3, e a fração 3/5 é escrita em forma de uma fração a/5. Qual é a diferença entre as duas frações, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 486,
+            "total_tokens": 486
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07381310005439445,
+            "tempo_decode_s": 35.01355729997158,
+            "tempo_resposta_s": 35.087370400025975,
+            "tempo_total_s": 35.087370400025975,
+            "tokens_entrada": 0,
+            "tokens_saida": 486,
+            "tps": 13.851137730162879,
+            "ram_inicio_mb": 2023.6640625,
+            "ram_pico_mb": 2025.51171875,
+            "ram_usada_mb": 1.84765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A fração 2/3 é escrita em forma de uma fração a/3, mas a fração 3/5 é escrita em forma de uma fração a/5. Qual é a diferença entre as duas frações?\n2. A fração 2/3 é escrita em forma de uma fração a/3, e a fração 3/5 é escrita em forma de uma fração a/5. Qual é a diferença entre as duas frações, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3?\n3. A fração 2/3 é escrita em forma de uma fração a/3, e a fração 3/5 é escrita em forma de uma fração a/5. Qual é a diferença entre as duas frações, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3?\n4. A fração 2/3 é escrita em forma de uma fração a/3, e a fração 3/5 é escrita em forma de uma fração a/5. Qual é a diferença entre as duas frações, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3?\n5. A fração 2/3 é escrita em forma de uma fração a/3, e a fração 3/5 é escrita em forma de uma fração a/5. Qual é a diferença entre as duas frações, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3, se a fração 3/5 é escrita em forma de uma fração a/5, em vez de uma fração a/3?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 486,
+            "total_tokens": 486
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0806569000124,
+            "tempo_decode_s": 35.23620529996697,
+            "tempo_resposta_s": 35.31686219997937,
+            "tempo_total_s": 35.31686219997937,
+            "tokens_entrada": 0,
+            "tokens_saida": 486,
+            "tps": 13.761131927521124,
+            "ram_inicio_mb": 2025.41796875,
+            "ram_pico_mb": 2027.25390625,
+            "ram_usada_mb": 1.8359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 13.179192,
+        "ram_media_mb": 2030.091797,
+        "ram_pico_mb": 2030.988281,
+        "tempo_medio_segundos": 61.748558,
+        "ttft_medio_segundos": 2.213726,
+        "tps": {
+          "n": 2,
+          "mediana": 13.179192,
+          "iqr": 0.167189,
+          "p25": 13.095597,
+          "p75": 13.262786,
+          "p95": 13.329662,
+          "p99": 13.343037,
+          "max": 13.346381,
+          "media": 13.179192
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.213726,
+          "iqr": 0.214435,
+          "p25": 2.106508,
+          "p75": 2.320943,
+          "p95": 2.406717,
+          "p99": 2.423872,
+          "max": 2.428161,
+          "media": 2.213726
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 61.748558,
+          "iqr": 19.71469,
+          "p25": 51.891213,
+          "p75": 71.605903,
+          "p95": 79.491779,
+          "p99": 81.068954,
+          "max": 81.463248,
+          "media": 61.748558
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2030.091797,
+          "iqr": 0.896484,
+          "p25": 2029.643555,
+          "p75": 2030.540039,
+          "p95": 2030.898633,
+          "p99": 2030.970352,
+          "max": 2030.988281,
+          "media": 2030.091797
+        },
+        "tps_por_rodada": [
+          13.012002711989103,
+          13.346380558291274
+        ],
+        "ttft_por_rodada": [
+          2.4281606000149623,
+          1.9992905000108294
+        ],
+        "tempo_por_rodada": [
+          81.46324770001229,
+          42.033868100028485
+        ],
+        "ram_por_rodada": [
+          2029.1953125,
+          2030.98828125
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. Enunciado: Qual é a função de uma reta e como ela pode ser utilizada na geometria?\nAlternativas:\n  * A reta é uma reta que se divide um quadrado em quadrados iguais, com a raiz vertical e a raiz horizontal igual.\n  * A reta é uma reta que se divide um quadrado em quadrados iguais, com a raiz vertical diferente da raiz horizontal.\n  * A reta é uma reta que se divide um quadrado em quadrados iguais, com a raiz vertical e a raiz horizontal iguais.\n  * A reta é uma reta que se divide um quadrado "
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. Enunciado: Qual é a função de uma reta e como ela pode ser utilizada na geometria?\n  Alternativas:\n\n  A) A reta é uma reta que passa pelos pontos de origem e destino. Ela pode ser usada para representar uma reta que passa pelos pontos de origem e destino, seja para calcular a distância entre eles, ou para representar uma reta que passa pelos pontos de origem e destino em um determinado ângulo.\n  B) A reta é uma reta que passa pelos pontos de origem e destino, como na reta reta reta reta, onde"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 2030.988281,
+        "tps_medio": 13.179192,
+        "tempo_medio_segundos": 61.748558,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Enunciado: Qual é a função de uma reta e como ela pode ser utilizada na geometria?\nAlternativas:\n  * A reta é uma reta que se divide um quadrado em quadrados iguais, com a raiz vertical e a raiz horizontal igual.\n  * A reta é uma reta que se divide um quadrado em quadrados iguais, com a raiz vertical diferente da raiz horizontal.\n  * A reta é uma reta que se divide um quadrado em quadrados iguais, com a raiz vertical e a raiz horizontal iguais.\n  * A reta é uma reta que se divide um quadrado em quadrados iguais, com a raiz vertical diferente da raiz horizontal e a raiz vertical igual.\n  * A reta é uma reta que se divide um quadrado em quadrados iguais, com a raiz vertical diferente da raiz horizontal e a raiz vertical diferente.\n  * A reta é uma reta que se divide um quadrado em quadrados iguais, com a raiz vertical diferente da raiz horizontal e a raiz vertical diferente.\n\nResposta correta: A reta é uma reta que se divide um quadrado em quadrados iguais, com a raiz vertical igual à raiz horizontal.\nResolução passo a passo: A raiz vertical é o raiz vertical da reta e o raiz horizontal é o raiz horizontal da reta. A reta divide o quadrado em quadrados iguais, e a raiz vertical é o que divide os quadrados iguais. A raiz vertical é igual a raiz horizontal, então a reta divide o quadrado em quadrados iguais. A raiz vertical é igual à raiz horizontal, então a reta divide o quadrado em quadrados iguais. A raiz vertical é igual a raiz horizontal, então a reta divide o quadrado em quadrados iguais.\n2. Enunciado: Qual é o valor de um determinado ponto no plano cartesiano?\nAlternativas:\n  * O valor de um ponto no plano cartesiano é a raiz vertical do ponto.\n  * O valor de um ponto no plano cartesiano é a raiz horizontal do ponto.\n  * O valor de um ponto no plano cartesiano é a raiz vertical e a raiz horizontal do ponto.\n  * O valor de um ponto no plano cartesiano é a raiz vertical e a raiz horizontal do ponto.\n  * O valor de um ponto no plano cartesiano é a raiz vertical e a raiz horizontal do ponto.\n\nResposta correta: O valor de um ponto no plano cartesiano é a raiz vertical.\nResolução passo a passo: O valor de um ponto no plano cartesiano é a raiz vertical do ponto. A raiz vertical é a raiz vertical do ponto, então o valor de um ponto no plano cartesiano é a raiz vertical do ponto.\n3. Enunciado: Qual é a propriedade de uma reta que é igual a qualquer reta reta?\nAlternativas:\n  * A propriedade de uma reta que é igual a qualquer reta reta é a raiz vertical.\n  * A propriedade de uma reta que é igual a qualquer reta reta é a raiz horizontal.\n  * A propriedade de uma reta que é igual a qualquer reta reta é a raiz vertical e a raiz horizontal.\n  * A propriedade de uma reta que é igual a qualquer reta reta é a raiz vertical e a raiz horizontal do ponto.\n  * A propriedade de uma reta que é igual a qualquer reta reta é a raiz vertical e a raiz horizontal do ponto.\n\nResposta correta: A propriedade de uma reta que é igual a qualquer reta reta é a raiz vertical.\nResolução passo a passo: A propriedade de uma reta que é igual a qualquer reta reta é a raiz vertical. A propriedade de uma reta que é igual a qualquer reta reta é a raiz vertical, então a propriedade de uma reta que é igual a qualquer reta reta é a raiz vertical.\n4. Enunciado: Qual é o valor de um determinado vértice no plano cartesiano?\nAlternativas:\n  * O valor de um vértice no plano cartesiano é a raiz vertical do vértice.\n  * O valor de um vértice no plano cartesiano é a raiz horizontal do vértice.\n  * O valor de um vértice no plano cartesiano é a raiz vertical e a raiz horizontal do vértice.\n  * O valor de um vértice",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1060,
+            "total_tokens": 1060
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.4281606000149623,
+            "tempo_decode_s": 79.03508709999733,
+            "tempo_resposta_s": 81.46324770001229,
+            "tempo_total_s": 81.46324770001229,
+            "tokens_entrada": 0,
+            "tokens_saida": 1060,
+            "tps": 13.012002711989103,
+            "ram_inicio_mb": 2027.16015625,
+            "ram_pico_mb": 2029.1953125,
+            "ram_usada_mb": 2.03515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Enunciado: Qual é a função de uma reta e como ela pode ser utilizada na geometria?\n  Alternativas:\n\n  A) A reta é uma reta que passa pelos pontos de origem e destino. Ela pode ser usada para representar uma reta que passa pelos pontos de origem e destino, seja para calcular a distância entre eles, ou para representar uma reta que passa pelos pontos de origem e destino em um determinado ângulo.\n  B) A reta é uma reta que passa pelos pontos de origem e destino, como na reta reta reta reta, onde cada reta representa uma reta que passa pelos pontos de origem e destino. Ela pode ser usada para representar uma reta que passa pelos pontos de origem e destino, seja para calcular a distância entre eles, ou para representar uma reta que passa pelos pontos de origem e destino em um determinado ângulo.\n  C) A reta é uma reta que passa pelos pontos de origem e destino, como na reta reta reta reta, onde cada reta representa uma reta que passa pelos pontos de origem e destino, seja para calcular a distância entre eles, ou para representar uma reta que passa pelos pontos de origem e destino em um determinado ângulo.\n  D) A reta é uma reta que passa pelos pontos de origem e destino, como na reta reta reta reta, onde cada reta representa uma reta que passa pelos pontos de origem e destino, seja para calcular a distância entre eles, ou para representar uma reta que passa pelos pontos de origem e destino em um determinado ângulo.\n  E) A reta é uma reta que passa pelos pontos de origem e destino, como na reta reta reta reta, onde cada reta representa uma reta que passa pelos pontos de origem e destino, seja para calcular a distância entre eles, ou para representar uma reta que passa pelos pontos de origem e destino em um determinado ângulo.\n\nResposta correta: C) A reta é uma reta que passa pelos pontos de origem e destino, como na reta reta reta reta, onde cada reta representa uma reta que passa pelos pontos de origem e destino, seja para calcular a distância entre eles, ou para representar uma reta que passa pelos pontos de origem e destino em um determinado ângulo.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 561,
+            "total_tokens": 561
+          },
+          "metrics": {
+            "tempo_prefill_s": 1.9992905000108294,
+            "tempo_decode_s": 40.034577600017656,
+            "tempo_resposta_s": 42.033868100028485,
+            "tempo_total_s": 42.033868100028485,
+            "tokens_entrada": 0,
+            "tokens_saida": 561,
+            "tps": 13.346380558291274,
+            "ram_inicio_mb": 2029.1015625,
+            "ram_pico_mb": 2030.98828125,
+            "ram_usada_mb": 1.88671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 2031.0,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 12.14,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 61.75,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -3.1,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+    "gerado_em": "2026-09-12T18:10:59.935028"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}

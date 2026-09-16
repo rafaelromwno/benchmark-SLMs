@@ -1,0 +1,1130 @@
+{
+  "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+  "formato": "gguf",
+  "data": "12/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--HuggingFaceTB_SmolLM3-3B-GGUF\\HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf"
+    },
+    "seed": 21,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 21
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 21
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 21
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.13,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?",
+            "alternativas": {
+              "A": "π",
+              "B": "1,5",
+              "C": "2/3",
+              "D": "0,25",
+              "E": "√2"
+            },
+            "resposta_correta": "A",
+            "resolucao_passo_a_passo": "A constante π (pi) é um número irracional, o que significa que não pode ser representado como uma fração a/b onde a e b são inteiros e b ≠ 0. As alternativas B, C, D e E são números racionais, pois podem ser escritas na forma de frações de inteiros."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 2.8858426000224426,
+        "tempo_prefill_s": 26.80071790004149,
+        "tempo_decode_s": 24.34485739999218,
+        "tempo_resposta_s": 51.14557530003367,
+        "tempo_total_s": 54.03141790005611,
+        "tokens_entrada": 0,
+        "tokens_saida": 206,
+        "tps": 4.027718894382334,
+        "ram_inicio_mb": 45.2421875,
+        "ram_pico_mb": 3260.78515625,
+        "ram_usada_mb": 3215.54296875,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 54.03141790005611,
+        "tempo_carregamento_s": 2.8858426000224426,
+        "tempo_resposta_s": 51.14557530003367,
+        "ram_pico_mb": 3260.78515625,
+        "ram_inicio_mb": 45.2421875,
+        "ttft_segundos": 26.80071790004149,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"π\",\n                \"B\": \"1,5\",\n                \"C\": \"2/3\",\n                \"D\": \"0,25\",\n                \"E\": \"√2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"A constante π (pi) é um número irracional, o que significa que não pode ser representado como uma fração a/b onde a e b são inteiros e b ≠ 0. As alternativas B, C, D e E são números racionais, pois podem ser escritas na forma de frações de inteiros.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 206,
+            "total_tokens": 206
+          },
+          "metrics": {
+            "tempo_carregamento_s": 2.8858426000224426,
+            "tempo_prefill_s": 26.80071790004149,
+            "tempo_decode_s": 24.34485739999218,
+            "tempo_resposta_s": 51.14557530003367,
+            "tempo_total_s": 54.03141790005611,
+            "tokens_entrada": 0,
+            "tokens_saida": 206,
+            "tps": 4.027718894382334,
+            "ram_inicio_mb": 45.2421875,
+            "ram_pico_mb": 3260.78515625,
+            "ram_usada_mb": 3215.54296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 7.588463,
+          "iqr": 0.452967,
+          "p25": 7.233699,
+          "p75": 7.686666,
+          "p95": 8.113292,
+          "p99": 8.350155,
+          "max": 8.409371,
+          "media": 6.836789
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.958707,
+          "iqr": 1.01161,
+          "p25": 4.61757,
+          "p75": 5.62918,
+          "p95": 6.685603,
+          "p99": 7.166042,
+          "max": 7.286151,
+          "media": 4.813582
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 53.256576,
+          "iqr": 14.014386,
+          "p25": 42.770711,
+          "p75": 56.785097,
+          "p95": 106.707626,
+          "p99": 138.047046,
+          "max": 145.881901,
+          "media": 58.948316
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2118.166016,
+          "iqr": 23.97168,
+          "p25": 2115.253906,
+          "p75": 2139.225586,
+          "p95": 2757.873633,
+          "p99": 3138.999727,
+          "max": 3234.28125,
+          "media": 2236.917188
+        },
+        "tps_medio": 6.836789,
+        "ttft_medio_segundos": 4.813582,
+        "tempo_medio_segundos": 58.948316,
+        "ram_pico_mb": 3234.28125
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 6,
+        "json_invalidos": 3,
+        "taxa_json_valido_percent": 60.0,
+        "json_valido_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 6,
+        "gabarito_avaliados": 6,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 6,
+          "denominador": 6,
+          "ponto": 1.0,
+          "ic95": [
+            0.609666,
+            1.0
+          ],
+          "formato": "100.0% [61.0–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 6,
+        "taxa_utilizavel_percent": 60.0,
+        "utilizavel_ic95": {
+          "numerador": 6,
+          "denominador": 10,
+          "ponto": 0.6,
+          "ic95": [
+            0.312674,
+            0.83182
+          ],
+          "formato": "60.0% [31.3–83.2]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "timeout": 1,
+          "ok": 6,
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 7.588463,
+          "iqr": 0.452967,
+          "p25": 7.233699,
+          "p75": 7.686666,
+          "p95": 8.113292,
+          "p99": 8.350155,
+          "max": 8.409371,
+          "media": 6.836789
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.958707,
+          "iqr": 1.01161,
+          "p25": 4.61757,
+          "p75": 5.62918,
+          "p95": 6.685603,
+          "p99": 7.166042,
+          "max": 7.286151,
+          "media": 4.813582
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 53.256576,
+          "iqr": 14.014386,
+          "p25": 42.770711,
+          "p75": 56.785097,
+          "p95": 106.707626,
+          "p99": 138.047046,
+          "max": 145.881901,
+          "media": 58.948316
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2118.166016,
+          "iqr": 23.97168,
+          "p25": 2115.253906,
+          "p75": 2139.225586,
+          "p95": 2757.873633,
+          "p99": 3138.999727,
+          "max": 3234.28125,
+          "media": 2236.917188
+        },
+        "tps_medio": 6.836789,
+        "ttft_medio_segundos": 4.813582,
+        "tempo_medio_segundos": 58.948316,
+        "ram_pico_mb": 3234.28125,
+        "tps_por_rodada": [
+          0.0,
+          7.078261509683967,
+          7.162031198188236,
+          7.448700497697921,
+          7.59422618322657,
+          7.58270015566779,
+          8.409371090106582,
+          7.751416690392042,
+          7.70273991872118,
+          7.638442926785729
+        ],
+        "ttft_por_rodada": [
+          7.286151200009044,
+          5.637414299999364,
+          5.238915199995972,
+          5.951600400032476,
+          4.678498900029808,
+          5.604477500019129,
+          0.12247860000934452,
+          4.36936249997234,
+          4.635243900003843,
+          4.611679199966602
+        ],
+        "tempo_por_rodada": [
+          145.8819014999899,
+          57.49999480001861,
+          41.60830800002441,
+          54.64040340000065,
+          39.240337700000964,
+          53.674811300006695,
+          46.25791820004815,
+          58.82795599999372,
+          52.838341199967545,
+          39.013186700001825
+        ],
+        "ram_por_rodada": [
+          3234.28125,
+          2175.59765625,
+          2145.44921875,
+          2115.19921875,
+          2112.41796875,
+          2113.921875,
+          2115.41796875,
+          2117.25,
+          2119.08203125,
+          2120.5546875
+        ],
+        "ram_media_mb": 2236.917188
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 7.286151200009044,
+            "tempo_decode_s": 138.59575029998086,
+            "tempo_resposta_s": 145.8819014999899,
+            "tempo_total_s": 145.8819014999899,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 3229.5625,
+            "ram_pico_mb": 3234.28125,
+            "ram_usada_mb": 4.71875,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 20, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"13\",\n                \"C\": \"9\",\n                \"D\": \"15\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 20\\n3x = 20 + 7\\n3x = 27\\nx = 27 / 3\\nx = 9\"\n        },\n        {\n            \"enunciado\": \"Se 4x + 5 = 41, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"8\",\n                \"B\": \"9\",\n                \"C\": \"10\",\n                \"D\": \"11\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"4x + 5 = 41\\n4x = 41 - 5\\n4x = 36\\nx = 36 / 4\\nx = 9\"\n        },\n        {\n            \"enunciado\": \"Se 5x - 12 = 78, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"16\",\n                \"B\": \"17\",\n                \"C\": \"18\",\n                \"D\": \"19\",\n                \"E\": \"20\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"5x - 12 = 78\\n5x = 78 + 12\\n5x = 90\\nx = 90 / 5\\nx = 18\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 407,
+            "total_tokens": 407
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.637414299999364,
+            "tempo_decode_s": 51.86258050001925,
+            "tempo_resposta_s": 57.49999480001861,
+            "tempo_total_s": 57.49999480001861,
+            "tokens_entrada": 0,
+            "tokens_saida": 407,
+            "tps": 7.078261509683967,
+            "ram_inicio_mb": 2173.734375,
+            "ram_pico_mb": 2175.59765625,
+            "ram_usada_mb": 1.86328125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 45 e 50?\",\n            \"alternativas\": {\n                \"A\": \"48\",\n                \"B\": \"49\",\n                \"C\": \"51\",\n                \"D\": \"47\",\n                \"E\": \"52\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"45 < x < 50. Podemos escrever isso como: 45 < x < 50. Sabemos que x deve ser um número inteiro. Apenas o número 49 está entre 45 e 50.\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 12 e 18?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"14\",\n                \"C\": \"15\",\n                \"D\": \"16\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"12 < x < 18. Podemos escrever isso como: 12 < x < 18. Sabemos que x deve ser um número inteiro. Apenas o número 17 está entre 12 e 18.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 298,
+            "total_tokens": 298
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.238915199995972,
+            "tempo_decode_s": 36.369392800028436,
+            "tempo_resposta_s": 41.60830800002441,
+            "tempo_total_s": 41.60830800002441,
+            "tokens_entrada": 0,
+            "tokens_saida": 298,
+            "tps": 7.162031198188236,
+            "ram_inicio_mb": 2143.59375,
+            "ram_pico_mb": 2145.44921875,
+            "ram_usada_mb": 1.85546875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 20, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"13\",\n                \"C\": \"9\",\n                \"D\": \"15\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 20\\n3x = 20 + 7\\n3x = 27\\nx = 27 / 3\\nx = 9\"\n        },\n        {\n            \"enunciado\": \"Se 4x + 5 = 41, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"8\",\n                \"B\": \"9\",\n                \"C\": \"10\",\n                \"D\": \"11\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"4x + 5 = 41\\n4x = 41 - 5\\n4x = 36\\nx = 36 / 4\\nx = 9\"\n        },\n        {\n            \"enunciado\": \"Se 5x - 12 = 78, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"16\",\n                \"B\": \"17\",\n                \"C\": \"18\",\n                \"D\": \"19\",\n                \"E\": \"20\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"5x - 12 = 78\\n5x = 78 + 12\\n5x = 90\\nx = 90 / 5\\nx = 18\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 407,
+            "total_tokens": 407
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.951600400032476,
+            "tempo_decode_s": 48.688802999968175,
+            "tempo_resposta_s": 54.64040340000065,
+            "tempo_total_s": 54.64040340000065,
+            "tokens_entrada": 0,
+            "tokens_saida": 407,
+            "tps": 7.448700497697921,
+            "ram_inicio_mb": 2113.58203125,
+            "ram_pico_mb": 2115.19921875,
+            "ram_usada_mb": 1.6171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 45 e 50?\",\n            \"alternativas\": {\n                \"A\": \"48\",\n                \"B\": \"49\",\n                \"C\": \"51\",\n                \"D\": \"47\",\n                \"E\": \"52\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"45 < x < 50. Podemos escrever isso como: 45 < x < 50. Sabemos que x deve ser um número inteiro. Apenas o número 49 está entre 45 e 50.\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 12 e 18?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"14\",\n                \"C\": \"15\",\n                \"D\": \"16\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"12 < x < 18. Podemos escrever isso como: 12 < x < 18. Sabemos que x deve ser um número inteiro. Apenas o número 17 está entre 12 e 18.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 298,
+            "total_tokens": 298
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.678498900029808,
+            "tempo_decode_s": 34.561838799971156,
+            "tempo_resposta_s": 39.240337700000964,
+            "tempo_total_s": 39.240337700000964,
+            "tokens_entrada": 0,
+            "tokens_saida": 298,
+            "tps": 7.59422618322657,
+            "ram_inicio_mb": 2110.22265625,
+            "ram_pico_mb": 2112.41796875,
+            "ram_usada_mb": 2.1953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 20, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"13\",\n                \"C\": \"9\",\n                \"D\": \"15\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 20\\n3x = 20 + 7\\n3x = 27\\nx = 27 / 3\\nx = 9\"\n        },\n        {\n            \"enunciado\": \"Se 4x + 5 = 41, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"8\",\n                \"B\": \"9\",\n                \"C\": \"10\",\n                \"D\": \"11\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"4x + 5 = 41\\n4x = 41 - 5\\n4x = 36\\nx = 36 / 4\\nx = 9\"\n        },\n        {\n            \"enunciado\": \"Se 5x - 12 = 78, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"16\",\n                \"B\": \"17\",\n                \"C\": \"18\",\n                \"D\": \"19\",\n                \"E\": \"20\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"5x - 12 = 78\\n5x = 78 + 12\\n5x = 90\\nx = 90 / 5\\nx = 18\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 407,
+            "total_tokens": 407
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.604477500019129,
+            "tempo_decode_s": 48.070333799987566,
+            "tempo_resposta_s": 53.674811300006695,
+            "tempo_total_s": 53.674811300006695,
+            "tokens_entrada": 0,
+            "tokens_saida": 407,
+            "tps": 7.58270015566779,
+            "ram_inicio_mb": 2112.32421875,
+            "ram_pico_mb": 2113.921875,
+            "ram_usada_mb": 1.59765625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x + 4 = 19, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x + 4 = 19\\n3x = 19 - 4\\n3x = 15\\nx = 15 / 3\\nx = 5\"\n        },\n        {\n            \"enunciado\": \"Se x - 7 = 3, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"11\",\n                \"C\": \"12\",\n                \"D\": \"13\",\n                \"E\": \"14\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x - 7 = 3\\nx = 3 + 7\\nx = 10\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 3 = 17, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"8\",\n                \"C\": \"9\",\n                \"D\": \"10\",\n                \"E\": \"11\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x + 3 = 17\\n2x = 17 - 3\\n2x = 14\\nx = 14 / 2\\nx = 7\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 389,
+            "total_tokens": 389
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.12247860000934452,
+            "tempo_decode_s": 46.13543960003881,
+            "tempo_resposta_s": 46.25791820004815,
+            "tempo_total_s": 46.25791820004815,
+            "tokens_entrada": 0,
+            "tokens_saida": 389,
+            "tps": 8.409371090106582,
+            "ram_inicio_mb": 2113.83203125,
+            "ram_pico_mb": 2115.41796875,
+            "ram_usada_mb": 1.5859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2,5\",\n                \"B\": \"7/3\",\n                \"C\": \"0,25\",\n                \"D\": \"1/0\",\n                \"E\": \"4/2\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1/0 não pode ser escrito como uma fração a/b, pois b=0, o que é proibido.\"\n        },\n        {\n            \"enunciado\": \"Qual dos números abaixo é um múltiplo de 3, mas não de 9?\",\n            \"alternativas\": {\n                \"A\": \"27\",\n                \"B\": \"45\",\n                \"C\": \"54\",\n                \"D\": \"63\",\n                \"E\": \"81\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"45 é múltiplo de 3 (45 = 3 * 15), mas não é múltiplo de 9 (45/9 = 5, que não é inteiro).\"\n        },\n        {\n            \"enunciado\": \"Qual das frações abaixo é maior?\",\n            \"alternativas\": {\n                \"A\": \"3/4\",\n                \"B\": \"4/3\",\n                \"C\": \"2/5\",\n                \"D\": \"5/2\",\n                \"E\": \"1/2\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Comparando as frações, multiplicamos o denominador de uma com o numerador da outra e vice-versa: (3 * 3) = 9 e (4 * 4) = 16. Como 16 > 9, 4/3 > 3/4.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 456,
+            "total_tokens": 456
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.36936249997234,
+            "tempo_decode_s": 54.45859350002138,
+            "tempo_resposta_s": 58.82795599999372,
+            "tempo_total_s": 58.82795599999372,
+            "tokens_entrada": 0,
+            "tokens_saida": 456,
+            "tps": 7.751416690392042,
+            "ram_inicio_mb": 2115.33984375,
+            "ram_pico_mb": 2117.25,
+            "ram_usada_mb": 1.91015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 7 = 20, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"11\",\n                \"B\": \"13\",\n                \"C\": \"9\",\n                \"D\": \"15\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x - 7 = 20\\n3x = 20 + 7\\n3x = 27\\nx = 27 / 3\\nx = 9\"\n        },\n        {\n            \"enunciado\": \"Se 4x + 5 = 41, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"8\",\n                \"B\": \"9\",\n                \"C\": \"10\",\n                \"D\": \"11\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"4x + 5 = 41\\n4x = 41 - 5\\n4x = 36\\nx = 36 / 4\\nx = 9\"\n        },\n        {\n            \"enunciado\": \"Se 5x - 12 = 78, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"16\",\n                \"B\": \"17\",\n                \"C\": \"18\",\n                \"D\": \"19\",\n                \"E\": \"20\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"5x - 12 = 78\\n5x = 78 + 12\\n5x = 90\\nx = 90 / 5\\nx = 18\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 407,
+            "total_tokens": 407
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.635243900003843,
+            "tempo_decode_s": 48.2030972999637,
+            "tempo_resposta_s": 52.838341199967545,
+            "tempo_total_s": 52.838341199967545,
+            "tokens_entrada": 0,
+            "tokens_saida": 407,
+            "tps": 7.70273991872118,
+            "ram_inicio_mb": 2117.50390625,
+            "ram_pico_mb": 2119.08203125,
+            "ram_usada_mb": 1.578125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 45 e 50?\",\n            \"alternativas\": {\n                \"A\": \"48\",\n                \"B\": \"49\",\n                \"C\": \"51\",\n                \"D\": \"47\",\n                \"E\": \"52\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"45 < x < 50. Podemos escrever isso como: 45 < x < 50. Sabemos que x deve ser um número inteiro. Apenas o número 49 está entre 45 e 50.\"\n        },\n        {\n            \"enunciado\": \"Usando a reta numérica, qual número está entre 12 e 18?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"14\",\n                \"C\": \"15\",\n                \"D\": \"16\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"12 < x < 18. Podemos escrever isso como: 12 < x < 18. Sabemos que x deve ser um número inteiro. Apenas o número 17 está entre 12 e 18.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 298,
+            "total_tokens": 298
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.611679199966602,
+            "tempo_decode_s": 34.40150750003522,
+            "tempo_resposta_s": 39.013186700001825,
+            "tempo_total_s": 39.013186700001825,
+            "tokens_entrada": 0,
+            "tokens_saida": 298,
+            "tps": 7.638442926785729,
+            "ram_inicio_mb": 2119.05859375,
+            "ram_pico_mb": 2120.5546875,
+            "ram_usada_mb": 1.49609375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 7.806555,
+        "ram_media_mb": 2122.660156,
+        "ram_pico_mb": 2122.660156,
+        "tempo_medio_segundos": 96.841696,
+        "ttft_medio_segundos": 5.315293,
+        "tps": {
+          "n": 1,
+          "mediana": 7.806555,
+          "iqr": 0.0,
+          "p25": 7.806555,
+          "p75": 7.806555,
+          "p95": 7.806555,
+          "p99": 7.806555,
+          "max": 7.806555,
+          "media": 7.806555
+        },
+        "ttft": {
+          "n": 1,
+          "mediana": 5.315293,
+          "iqr": 0.0,
+          "p25": 5.315293,
+          "p75": 5.315293,
+          "p95": 5.315293,
+          "p99": 5.315293,
+          "max": 5.315293,
+          "media": 5.315293
+        },
+        "tempo": {
+          "n": 1,
+          "mediana": 96.841696,
+          "iqr": 0.0,
+          "p25": 96.841696,
+          "p75": 96.841696,
+          "p95": 96.841696,
+          "p99": 96.841696,
+          "max": 96.841696,
+          "media": 96.841696
+        },
+        "ram_pico": {
+          "n": 1,
+          "mediana": 2122.660156,
+          "iqr": 0.0,
+          "p25": 2122.660156,
+          "p75": 2122.660156,
+          "p95": 2122.660156,
+          "p99": 2122.660156,
+          "max": 2122.660156,
+          "media": 2122.660156
+        },
+        "tps_por_rodada": [
+          7.806554698063283
+        ],
+        "ttft_por_rodada": [
+          5.315293399966322
+        ],
+        "tempo_por_rodada": [
+          96.84169640002074
+        ],
+        "ram_por_rodada": [
+          2122.66015625
+        ],
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 1,
+        "quantidade_de_questoes": 5,
+        "tentativas": 0,
+        "valido_primeira_tentativa": true,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 2122.660156,
+        "tps_medio": 7.806555,
+        "tempo_medio_segundos": 96.841696,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Considere o conjunto de números reais R. Qual é o menor número positivo que, ao ser multiplicado por 3, resulta em um número que, quando subtraído de 7, é igual a 4?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x * 3 - 7 = 4 → x * 3 = 11 → x = 11/3\"\n        },\n        {\n            \"enunciado\": \"Se o produto de dois números inteiros positivos é 48, qual é o maior número possível para um desses inteiros, dado que o outro é um múltiplo de 3?\",\n            \"alternativas\": {\n                \"A\": \"12\",\n                \"B\": \"16\",\n                \"C\": \"24\",\n                \"D\": \"32\",\n                \"E\": \"48\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Os fatores de 48 que são múltiplos de 3 são 3, 6, 12, 24. O maior deles é 24.\"\n        },\n        {\n            \"enunciado\": \"Quais são os dois números inteiros positivos que, quando somados, resultam em 15 e, quando multiplicados, resultam em 56?\",\n            \"alternativas\": {\n                \"A\": \"7 e 8\",\n                \"B\": \"5 e 10\",\n                \"C\": \"4 e 11\",\n                \"D\": \"3 e 12\",\n                \"E\": \"2 e 13\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + y = 15; x * y = 56 → (x, y) = (7, 8)\"\n        },\n        {\n            \"enunciado\": \"Qual é o resto da divisão de 73 por 9?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"73 ÷ 9 = 8 * 9 + 1 → Resto = 1\"\n        },\n        {\n            \"enunciado\": \"Se o número x é divisível por 9, qual é o menor número positivo que, quando adicionado a x, resulta em um número que é divisível por 10?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"2\",\n                \"C\": \"3\",\n                \"D\": \"4\",\n                \"E\": \"5\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x = 9k; x + 5 = 10m → 9k + 5 = 10m → k = 1; x = 9; 9 + 5 = 14 (14 é divisível por 10)\"\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 756,
+            "total_tokens": 756
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.315293399966322,
+            "tempo_decode_s": 91.52640300005442,
+            "tempo_resposta_s": 96.84169640002074,
+            "tempo_total_s": 96.84169640002074,
+            "tokens_entrada": 0,
+            "tokens_saida": 756,
+            "tps": 7.806554698063283,
+            "ram_inicio_mb": 2120.6875,
+            "ram_pico_mb": 2122.66015625,
+            "ram_usada_mb": 1.97265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 7.636771,
+        "ram_media_mb": 2126.113281,
+        "ram_pico_mb": 2127.179688,
+        "tempo_medio_segundos": 56.282676,
+        "ttft_medio_segundos": 4.223471,
+        "tps": {
+          "n": 2,
+          "mediana": 7.636771,
+          "iqr": 0.179003,
+          "p25": 7.54727,
+          "p75": 7.726273,
+          "p95": 7.797874,
+          "p99": 7.812194,
+          "max": 7.815774,
+          "media": 7.636771
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 4.223471,
+          "iqr": 0.415566,
+          "p25": 4.015688,
+          "p75": 4.431254,
+          "p95": 4.59748,
+          "p99": 4.630725,
+          "max": 4.639037,
+          "media": 4.223471
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 56.282676,
+          "iqr": 14.983457,
+          "p25": 48.790948,
+          "p75": 63.774405,
+          "p95": 69.767788,
+          "p99": 70.966464,
+          "max": 71.266134,
+          "media": 56.282676
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2126.113281,
+          "iqr": 1.066406,
+          "p25": 2125.580078,
+          "p75": 2126.646484,
+          "p95": 2127.073047,
+          "p99": 2127.158359,
+          "max": 2127.179688,
+          "media": 2126.113281
+        },
+        "tps_por_rodada": [
+          7.4577681661609105,
+          7.815774094153199
+        ],
+        "ttft_por_rodada": [
+          4.639036800013855,
+          3.807905599998776
+        ],
+        "tempo_por_rodada": [
+          41.29921890003607,
+          71.26613350003026
+        ],
+        "ram_por_rodada": [
+          2125.046875,
+          2127.1796875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "Campo 'questoes' ausente",
+            "output_bruto": "<think>\n\n</think>\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o número de lados de um polígono regular que possui um ângulo interno de 150 graus?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"A fórmula para o ângulo interno de um polígono regular é: \\n\\n( n - 2 ) \\*"
+          },
+          "EF06MA17": {
+            "erro": "Campo 'questoes' ausente",
+            "output_bruto": "<think>\n\n</think>\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Quais são os ângulos formados pelas retas AB e CD, que se intersectam no ponto O, se a medida do ângulo AOC é de 110 graus?\",\n            \"alternativas\": {\n                \"A\": \"80 graus e 130 graus\",\n                \"B\": \"110 graus e 80 graus\",\n                \"C\": \"100 graus e 120 graus\",\n                \"D\": \"90 graus e 130 graus\",\n                \"E\": \"60 graus e 150 graus\"\n            },\n            \"resposta_"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 2127.179688,
+        "tps_medio": 7.636771,
+        "tempo_medio_segundos": 56.282676,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o número de lados de um polígono regular que possui um ângulo interno de 150 graus?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"A fórmula para o ângulo interno de um polígono regular é: \\n\\n( n - 2 ) \\* 180 / n = 150 \\n\\nResolvendo para n: \\n\\n( n - 2 ) * 180 = 150 * n \\n\\n180n - 360 = 150n \\n\\n30n = 360 \\n\\nn = 12 \\n\\nPortanto, o número de lados é 12. Mas, analisando as alternativas, o polígono regular com ângulo interno de 150 graus não é um polígono com número de lados exatamente 12, mas sim um polígono regular com 6 lados, pois 150 graus é o ângulo interno de um hexágono regular (6 lados).\"\n            }\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 308,
+            "total_tokens": 308
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.639036800013855,
+            "tempo_decode_s": 36.66018210002221,
+            "tempo_resposta_s": 41.29921890003607,
+            "tempo_total_s": 41.29921890003607,
+            "tokens_entrada": 0,
+            "tokens_saida": 308,
+            "tps": 7.4577681661609105,
+            "ram_inicio_mb": 2123.15234375,
+            "ram_pico_mb": 2125.046875,
+            "ram_usada_mb": 1.89453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Quais são os ângulos formados pelas retas AB e CD, que se intersectam no ponto O, se a medida do ângulo AOC é de 110 graus?\",\n            \"alternativas\": {\n                \"A\": \"80 graus e 130 graus\",\n                \"B\": \"110 graus e 80 graus\",\n                \"C\": \"100 graus e 120 graus\",\n                \"D\": \"90 graus e 130 graus\",\n                \"E\": \"60 graus e 150 graus\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1) Sabemos que o ângulo AOC é formado pelas retas AB e CD. \\n2) A soma dos ângulos adjacentes em um ponto de interseção de retas é de 180 graus. \\n3) Se o ângulo AOC é de 110 graus, então o ângulo AOD (oposto a AOC) também é de 110 graus. \\n4) Os ângulos AOC e AOD são suplementares, então o ângulo AOB é de 180 - 110 = 70 graus. \\n5) Os ângulos AOB e BOC são suplementares, então o ângulo BOC é de 180 - 70 = 110 graus. \\n6) Mas, já sabemos que o ângulo BOC é o mesmo que o ângulo AOC, então o ângulo AOB é de 70 graus e o ângulo BOC é de 110 graus. \\n7) No entanto, precisamos encontrar os ângulos formados pelas retas AB e CD. \\n8) O ângulo AOB é de 70 graus, então o ângulo AOC (compartilhado) é de 110 graus, então o ângulo AOB é de 70 graus e o ângulo AOD é de 110 graus. \\n9) O ângulo AOB é de 70 graus e o ângulo AOD é de 110 graus. \\n10) Portanto, os ângulos formados pelas retas AB e CD são de 80 graus (180 - 100) e 130 graus (180 - 50).\"\n            }\n        }\n    ]\n}\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 557,
+            "total_tokens": 557
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.807905599998776,
+            "tempo_decode_s": 67.45822790003149,
+            "tempo_resposta_s": 71.26613350003026,
+            "tempo_total_s": 71.26613350003026,
+            "tokens_entrada": 0,
+            "tokens_saida": 557,
+            "tps": 7.815774094153199,
+            "ram_inicio_mb": 2125.4296875,
+            "ram_pico_mb": 2127.1796875,
+            "ram_usada_mb": 1.75,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3260.8,
+        "limite": 2048.0,
+        "motivo": "RAM pico 3260.8 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 4.03,
+        "limite": 5.0,
+        "motivo": "TPS 4.03 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 1,
+        "limite": 0,
+        "motivo": "Crash/OOM detectado — 1 ocorrência(s)",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 96.84,
+        "limite": 90.0,
+        "motivo": "Tempo médio 96.8s acima de 90.0s",
+        "categoria_falha": "performance"
+      }
+    ],
+    "motivos_reprovacao": [
+      "RAM pico 3260.8 MB — limite 2048.0 MB",
+      "TPS 4.03 abaixo do mínimo 5.0",
+      "Crash/OOM detectado — 1 ocorrência(s)",
+      "Taxa JSON válido 0.0% abaixo de 60.0%",
+      "Tempo médio 96.8s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "hardware",
+      "performance",
+      "formato"
+    ],
+    "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+    "gerado_em": "2026-09-12T09:22:21.717205"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "RAM pico 3260.8 MB — limite 2048.0 MB; TPS 4.03 abaixo do mínimo 5.0; Crash/OOM detectado — 1 ocorrência(s); Taxa JSON válido 0.0% abaixo de 60.0%; Tempo médio 96.8s acima de 90.0s"
+}

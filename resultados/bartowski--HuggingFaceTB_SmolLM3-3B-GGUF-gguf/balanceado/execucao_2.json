@@ -1,0 +1,1193 @@
+{
+  "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+  "formato": "gguf",
+  "data": "12/09/2026",
+  "run_config": {
+    "modelos": [
+      "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\bartowski--HuggingFaceTB_SmolLM3-3B-GGUF\\HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf"
+    },
+    "seed": 7,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 7
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 7
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 7
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 7
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 7
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 7
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.42,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Considere os números 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Quantos desses números podem ser expressos como a soma de dois números primos?",
+            "alternativas": {
+              "A": "2",
+              "B": "4",
+              "C": "6",
+              "D": "8",
+              "E": "10"
+            },
+            "resposta_correta": "C",
+            "resolucao_passo_a_passo": "Primeiro, listamos os números primos menores que 9: 2, 3, 5, 7. Agora, verificamos quais números da lista 0 a 9 podem ser formados somando dois desses números. Podemos formar 0+2=2, 2+3=5, 3+2=5, 2+5=7, 3+5=8, 5+2=7, 5+3=8, 3+3=6, 2+2=4, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3"
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 4.850670200015884,
+        "tempo_prefill_s": 26.388881899998523,
+        "tempo_decode_s": 128.76790429995162,
+        "tempo_resposta_s": 155.15678619995015,
+        "tempo_total_s": 160.00745639996603,
+        "tokens_entrada": 0,
+        "tokens_saida": 1024,
+        "tps": 6.59977578215866,
+        "ram_inicio_mb": 33.33203125,
+        "ram_pico_mb": 3336.12109375,
+        "ram_usada_mb": 3302.7890625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 160.00745639996603,
+        "tempo_carregamento_s": 4.850670200015884,
+        "tempo_resposta_s": 155.15678619995015,
+        "ram_pico_mb": 3336.12109375,
+        "ram_inicio_mb": 33.33203125,
+        "ttft_segundos": 26.388881899998523,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Considere os números 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Quantos desses números podem ser expressos como a soma de dois números primos?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Primeiro, listamos os números primos menores que 9: 2, 3, 5, 7. Agora, verificamos quais números da lista 0 a 9 podem ser formados somando dois desses números. Podemos formar 0+2=2, 2+3=5, 3+2=5, 2+5=7, 3+5=8, 5+2=7, 5+3=8, 3+3=6, 2+2=4, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3+3=6, 2+4=6, 4+2=6, 3+5=8, 5+3=8, 2+5=7, 5+2=7, 2+2=4, 2+3=5, 3+2=5, 3",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1024,
+            "total_tokens": 1024
+          },
+          "metrics": {
+            "tempo_carregamento_s": 4.850670200015884,
+            "tempo_prefill_s": 26.388881899998523,
+            "tempo_decode_s": 128.76790429995162,
+            "tempo_resposta_s": 155.15678619995015,
+            "tempo_total_s": 160.00745639996603,
+            "tokens_entrada": 0,
+            "tokens_saida": 1024,
+            "tps": 6.59977578215866,
+            "ram_inicio_mb": 33.33203125,
+            "ram_pico_mb": 3336.12109375,
+            "ram_usada_mb": 3302.7890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 7.662776,
+          "iqr": 0.110966,
+          "p25": 7.622368,
+          "p75": 7.733334,
+          "p95": 8.196373,
+          "p99": 8.416032,
+          "max": 8.470947,
+          "media": 7.728866
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.520927,
+          "iqr": 0.52099,
+          "p25": 4.448202,
+          "p75": 4.969192,
+          "p95": 6.080187,
+          "p99": 6.690337,
+          "max": 6.842874,
+          "media": 4.409986
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 49.178166,
+          "iqr": 19.134389,
+          "p25": 41.619144,
+          "p75": 60.753533,
+          "p95": 64.553892,
+          "p99": 64.687126,
+          "max": 64.720435,
+          "media": 51.138962
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2500.484375,
+          "iqr": 245.836914,
+          "p25": 2346.751953,
+          "p75": 2592.588867,
+          "p95": 2604.051367,
+          "p99": 2604.885273,
+          "max": 2605.09375,
+          "media": 2475.967969
+        },
+        "tps_medio": 7.728866,
+        "ttft_medio_segundos": 4.409986,
+        "tempo_medio_segundos": 51.138962,
+        "ram_pico_mb": 2605.09375
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 7,
+        "json_invalidos": 3,
+        "taxa_json_valido_percent": 70.0,
+        "json_valido_ic95": {
+          "numerador": 7,
+          "denominador": 10,
+          "ponto": 0.7,
+          "ic95": [
+            0.396778,
+            0.892209
+          ],
+          "formato": "70.0% [39.7–89.2]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 7,
+        "gabarito_avaliados": 7,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 7,
+          "denominador": 7,
+          "ponto": 1.0,
+          "ic95": [
+            0.64567,
+            1.0
+          ],
+          "formato": "100.0% [64.6–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 7,
+        "taxa_utilizavel_percent": 70.0,
+        "utilizavel_ic95": {
+          "numerador": 7,
+          "denominador": 10,
+          "ponto": 0.7,
+          "ic95": [
+            0.396778,
+            0.892209
+          ],
+          "formato": "70.0% [39.7–89.2]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 7,
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 7.662776,
+          "iqr": 0.110966,
+          "p25": 7.622368,
+          "p75": 7.733334,
+          "p95": 8.196373,
+          "p99": 8.416032,
+          "max": 8.470947,
+          "media": 7.728866
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 4.520927,
+          "iqr": 0.52099,
+          "p25": 4.448202,
+          "p75": 4.969192,
+          "p95": 6.080187,
+          "p99": 6.690337,
+          "max": 6.842874,
+          "media": 4.409986
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 49.178166,
+          "iqr": 19.134389,
+          "p25": 41.619144,
+          "p75": 60.753533,
+          "p95": 64.553892,
+          "p99": 64.687126,
+          "max": 64.720435,
+          "media": 51.138962
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2500.484375,
+          "iqr": 245.836914,
+          "p25": 2346.751953,
+          "p75": 2592.588867,
+          "p95": 2604.051367,
+          "p99": 2604.885273,
+          "max": 2605.09375,
+          "media": 2475.967969
+        },
+        "tps_medio": 7.728866,
+        "ttft_medio_segundos": 4.409986,
+        "tempo_medio_segundos": 51.138962,
+        "ram_pico_mb": 2605.09375,
+        "tps_por_rodada": [
+          7.352379887346378,
+          7.860784098356328,
+          7.668373650687989,
+          7.657178873439134,
+          7.586475643945827,
+          8.470946513532327,
+          7.697271644338944,
+          7.6301072801000895,
+          7.745355026802255,
+          7.619788260583991
+        ],
+        "ttft_por_rodada": [
+          6.842874400026631,
+          4.323262699996121,
+          4.513713899999857,
+          4.576682900020387,
+          5.1000280000153,
+          0.12724369997158647,
+          4.528140699956566,
+          5.148013500031084,
+          4.513451399980113,
+          4.4264515999821015
+        ],
+        "tempo_por_rodada": [
+          55.62824640003964,
+          62.461962300003506,
+          49.42377839999972,
+          40.22369140002411,
+          64.72043450002093,
+          45.21336539997719,
+          40.01417829998536,
+          64.35034030000679,
+          48.93255359999603,
+          40.42107069998747
+        ],
+        "ram_por_rodada": [
+          2600.921875,
+          2602.77734375,
+          2605.09375,
+          2565.85546875,
+          2567.58984375,
+          2435.11328125,
+          2343.3125,
+          2344.78125,
+          2346.38671875,
+          2347.84765625
+        ],
+        "ram_media_mb": 2475.967969
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x + 4 = 19, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"6\",\n                \"C\": \"7\",\n                \"D\": \"8\",\n                \"E\": \"9\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3x + 4 = 19\\n3x = 19 - 4\\n3x = 15\\nx = 15 / 3\\nx = 5\"\n        },\n        {\n            \"enunciado\": \"Se 4x - 7 = 15, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"7\",\n                \"C\": \"8\",\n                \"D\": \"9\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"4x - 7 = 15\\n4x = 15 + 7\\n4x = 22\\nx = 22 / 4\\nx = 5.5\"\n        },\n        {\n            \"enunciado\": \"Se 5x + 2 = 32, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"7\",\n                \"C\": \"8\",\n                \"D\": \"9\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"5x + 2 = 32\\n5x = 32 - 2\\n5x = 30\\nx = 30 / 5\\nx = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 409,
+            "total_tokens": 409
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.842874400026631,
+            "tempo_decode_s": 48.78537200001301,
+            "tempo_resposta_s": 55.62824640003964,
+            "tempo_total_s": 55.62824640003964,
+            "tokens_entrada": 0,
+            "tokens_saida": 409,
+            "tps": 7.352379887346378,
+            "ram_inicio_mb": 2598.5703125,
+            "ram_pico_mb": 2600.921875,
+            "ram_usada_mb": 2.3515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o maior número inteiro que pode ser dividido por 9, 11 e 13 sem deixar resto?\",\n            \"alternativas\": {\n                \"A\": \"99\",\n                \"B\": \"100\",\n                \"C\": \"123\",\n                \"D\": \"143\",\n                \"E\": \"171\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Encontre o mínimo múltiplo comum (MMC) de 9, 11 e 13. O MMC de 9, 11 e 13 é 9 × 11 × 13 = 1287. O maior número inteiro que pode ser dividido por 9, 11 e 13 sem deixar resto é 1287.\"\n        },\n        {\n            \"enunciado\": \"Se o produto de dois números inteiros é 990, qual é o maior deles se o menor é 15?\",\n            \"alternativas\": {\n                \"A\": \"66\",\n                \"B\": \"70\",\n                \"C\": \"75\",\n                \"D\": \"80\",\n                \"E\": \"90\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Seja x o maior número. Então x × 15 = 990. Isso significa x = 990 / 15 = 66. O maior número inteiro é 66.\"\n        },\n        {\n            \"enunciado\": \"Se a soma de dois números inteiros é 105 e a diferença entre eles é 15, qual é o maior deles?\",\n            \"alternativas\": {\n                \"A\": \"60\",\n                \"B\": \"65\",\n                \"C\": \"70\",\n                \"D\": \"75\",\n                \"E\": \"80\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Seja x o maior número. Então x + y = 105 e x - y = 15. Soma as duas equações: 2x = 120 → x = 60. O maior número inteiro é 60.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 491,
+            "total_tokens": 491
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.323262699996121,
+            "tempo_decode_s": 58.138699600007385,
+            "tempo_resposta_s": 62.461962300003506,
+            "tempo_total_s": 62.461962300003506,
+            "tokens_entrada": 0,
+            "tokens_saida": 491,
+            "tps": 7.860784098356328,
+            "ram_inicio_mb": 2600.8984375,
+            "ram_pico_mb": 2602.77734375,
+            "ram_usada_mb": 1.87890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 9, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"7\",\n                \"C\": \"8\",\n                \"D\": \"5\",\n                \"E\": \"4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 9; x = 9 - 3; x = 6\"\n        },\n        {\n            \"enunciado\": \"Se 3x = 15, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"10\",\n                \"C\": \"15\",\n                \"D\": \"20\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x = 15; x = 15 / 3; x = 5\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 4 = 10, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x + 4 = 10; 2x = 10 - 4; 2x = 6; x = 6 / 2; x = 3\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 379,
+            "total_tokens": 379
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.513713899999857,
+            "tempo_decode_s": 44.91006449999986,
+            "tempo_resposta_s": 49.42377839999972,
+            "tempo_total_s": 49.42377839999972,
+            "tokens_entrada": 0,
+            "tokens_saida": 379,
+            "tps": 7.668373650687989,
+            "ram_inicio_mb": 2603.40625,
+            "ram_pico_mb": 2605.09375,
+            "ram_usada_mb": 1.6875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o próximo número na sequência: 5, 10, 15, 20?\",\n            \"alternativas\": {\n                \"A\": \"25\",\n                \"B\": \"30\",\n                \"C\": \"35\",\n                \"D\": \"40\",\n                \"E\": \"45\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"5 + 5 = 10; 10 + 5 = 15; 15 + 5 = 20; 20 + 5 = 25? Não, 20 + 5 = 25, mas a diferença é constante, então 20 + 10 = 30\"\n        },\n        {\n            \"enunciado\": \"Se você tem 3 caixas com 7, 9 e 11 doces, quantos doces você terá em total?\",\n            \"alternativas\": {\n                \"A\": \"26\",\n                \"B\": \"27\",\n                \"C\": \"28\",\n                \"D\": \"29\",\n                \"E\": \"30\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"7 + 9 = 16; 16 + 11 = 27; 27 + 1 = 28\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 308,
+            "total_tokens": 308
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.576682900020387,
+            "tempo_decode_s": 35.64700850000372,
+            "tempo_resposta_s": 40.22369140002411,
+            "tempo_total_s": 40.22369140002411,
+            "tokens_entrada": 0,
+            "tokens_saida": 308,
+            "tps": 7.657178873439134,
+            "ram_inicio_mb": 2563.4375,
+            "ram_pico_mb": 2565.85546875,
+            "ram_usada_mb": 2.41796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o maior número inteiro que pode ser dividido por 9, 11 e 13 sem deixar resto?\",\n            \"alternativas\": {\n                \"A\": \"99\",\n                \"B\": \"100\",\n                \"C\": \"123\",\n                \"D\": \"143\",\n                \"E\": \"171\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Encontre o mínimo múltiplo comum (MMC) de 9, 11 e 13. O MMC de 9, 11 e 13 é 9 × 11 × 13 = 1287. O maior número inteiro que pode ser dividido por 9, 11 e 13 sem deixar resto é 1287.\"\n        },\n        {\n            \"enunciado\": \"Se o produto de dois números inteiros é 990, qual é o maior deles se o menor é 15?\",\n            \"alternativas\": {\n                \"A\": \"66\",\n                \"B\": \"70\",\n                \"C\": \"75\",\n                \"D\": \"80\",\n                \"E\": \"90\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Seja x o maior número. Então x × 15 = 990. Isso significa x = 990 / 15 = 66. O maior número inteiro é 66.\"\n        },\n        {\n            \"enunciado\": \"Se a soma de dois números inteiros é 105 e a diferença entre eles é 15, qual é o maior deles?\",\n            \"alternativas\": {\n                \"A\": \"60\",\n                \"B\": \"65\",\n                \"C\": \"70\",\n                \"D\": \"75\",\n                \"E\": \"80\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Seja x o maior número. Então x + y = 105 e x - y = 15. Soma as duas equações: 2x = 120 → x = 60. O maior número inteiro é 60.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 491,
+            "total_tokens": 491
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.1000280000153,
+            "tempo_decode_s": 59.62040650000563,
+            "tempo_resposta_s": 64.72043450002093,
+            "tempo_total_s": 64.72043450002093,
+            "tokens_entrada": 0,
+            "tokens_saida": 491,
+            "tps": 7.586475643945827,
+            "ram_inicio_mb": 2566.015625,
+            "ram_pico_mb": 2567.58984375,
+            "ram_usada_mb": 1.57421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o produto de 9/10 e 10/9?\",\n            \"alternativas\": {\n                \"A\": \"1\",\n                \"B\": \"0\",\n                \"C\": \"9/10\",\n                \"D\": \"10/9\",\n                \"E\": \"90/90\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"9/10 * 10/9 = (9 * 10) / (10 * 9) = 90/90 = 1\"\n        },\n        {\n            \"enunciado\": \"Se temos uma caixa com 9 maçãs e retiramos 3, quantas maçãs restam na caixa?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"9\",\n                \"C\": \"12\",\n                \"D\": \"15\",\n                \"E\": \"18\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"9 - 3 = 6\"\n        },\n        {\n            \"enunciado\": \"Quais são os resultados da soma de 1/2 e 1/4?\",\n            \"alternativas\": {\n                \"A\": \"3/4\",\n                \"B\": \"5/4\",\n                \"C\": \"7/4\",\n                \"D\": \"9/4\",\n                \"E\": \"11/4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/2 + 1/4 = 2/4 + 1/4 = 3/4\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 383,
+            "total_tokens": 383
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.12724369997158647,
+            "tempo_decode_s": 45.086121700005606,
+            "tempo_resposta_s": 45.21336539997719,
+            "tempo_total_s": 45.21336539997719,
+            "tokens_entrada": 0,
+            "tokens_saida": 383,
+            "tps": 8.470946513532327,
+            "ram_inicio_mb": 2433.60546875,
+            "ram_pico_mb": 2435.11328125,
+            "ram_usada_mb": 1.5078125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o próximo número na sequência: 5, 10, 15, 20?\",\n            \"alternativas\": {\n                \"A\": \"25\",\n                \"B\": \"30\",\n                \"C\": \"35\",\n                \"D\": \"40\",\n                \"E\": \"45\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"5 + 5 = 10; 10 + 5 = 15; 15 + 5 = 20; 20 + 5 = 25? Não, 20 + 5 = 25, mas a diferença é constante, então 20 + 10 = 30\"\n        },\n        {\n            \"enunciado\": \"Se você tem 3 caixas com 7, 9 e 11 doces, quantos doces você terá em total?\",\n            \"alternativas\": {\n                \"A\": \"26\",\n                \"B\": \"27\",\n                \"C\": \"28\",\n                \"D\": \"29\",\n                \"E\": \"30\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"7 + 9 = 16; 16 + 11 = 27; 27 + 1 = 28\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 308,
+            "total_tokens": 308
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.528140699956566,
+            "tempo_decode_s": 35.486037600028794,
+            "tempo_resposta_s": 40.01417829998536,
+            "tempo_total_s": 40.01417829998536,
+            "tokens_entrada": 0,
+            "tokens_saida": 308,
+            "tps": 7.697271644338944,
+            "ram_inicio_mb": 2341.7109375,
+            "ram_pico_mb": 2343.3125,
+            "ram_usada_mb": 1.6015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o maior número inteiro que pode ser dividido por 9, 11 e 13 sem deixar resto?\",\n            \"alternativas\": {\n                \"A\": \"99\",\n                \"B\": \"100\",\n                \"C\": \"123\",\n                \"D\": \"143\",\n                \"E\": \"171\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Encontre o mínimo múltiplo comum (MMC) de 9, 11 e 13. O MMC de 9, 11 e 13 é 9 × 11 × 13 = 1287. O maior número inteiro que pode ser dividido por 9, 11 e 13 sem deixar resto é 1287.\"\n        },\n        {\n            \"enunciado\": \"Se o produto de dois números inteiros é 990, qual é o maior deles se o menor é 15?\",\n            \"alternativas\": {\n                \"A\": \"66\",\n                \"B\": \"70\",\n                \"C\": \"75\",\n                \"D\": \"80\",\n                \"E\": \"90\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"Seja x o maior número. Então x × 15 = 990. Isso significa x = 990 / 15 = 66. O maior número inteiro é 66.\"\n        },\n        {\n            \"enunciado\": \"Se a soma de dois números inteiros é 105 e a diferença entre eles é 15, qual é o maior deles?\",\n            \"alternativas\": {\n                \"A\": \"60\",\n                \"B\": \"65\",\n                \"C\": \"70\",\n                \"D\": \"75\",\n                \"E\": \"80\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"Seja x o maior número. Então x + y = 105 e x - y = 15. Soma as duas equações: 2x = 120 → x = 60. O maior número inteiro é 60.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 491,
+            "total_tokens": 491
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.148013500031084,
+            "tempo_decode_s": 59.20232679997571,
+            "tempo_resposta_s": 64.35034030000679,
+            "tempo_total_s": 64.35034030000679,
+            "tokens_entrada": 0,
+            "tokens_saida": 491,
+            "tps": 7.6301072801000895,
+            "ram_inicio_mb": 2343.21875,
+            "ram_pico_mb": 2344.78125,
+            "ram_usada_mb": 1.5625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se x + 3 = 9, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"7\",\n                \"C\": \"8\",\n                \"D\": \"5\",\n                \"E\": \"4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"x + 3 = 9; x = 9 - 3; x = 6\"\n        },\n        {\n            \"enunciado\": \"Se 3x = 15, determine o valor de x aplicando as propriedades da igualdade.\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"10\",\n                \"C\": \"15\",\n                \"D\": \"20\",\n                \"E\": \"25\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3x = 15; x = 15 / 3; x = 5\"\n        },\n        {\n            \"enunciado\": \"Se 2x + 4 = 10, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"6\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"2x + 4 = 10; 2x = 10 - 4; 2x = 6; x = 6 / 2; x = 3\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 379,
+            "total_tokens": 379
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.513451399980113,
+            "tempo_decode_s": 44.419102200015914,
+            "tempo_resposta_s": 48.93255359999603,
+            "tempo_total_s": 48.93255359999603,
+            "tokens_entrada": 0,
+            "tokens_saida": 379,
+            "tps": 7.745355026802255,
+            "ram_inicio_mb": 2344.6953125,
+            "ram_pico_mb": 2346.38671875,
+            "ram_usada_mb": 1.69140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o próximo número na sequência: 5, 10, 15, 20?\",\n            \"alternativas\": {\n                \"A\": \"25\",\n                \"B\": \"30\",\n                \"C\": \"35\",\n                \"D\": \"40\",\n                \"E\": \"45\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"5 + 5 = 10; 10 + 5 = 15; 15 + 5 = 20; 20 + 5 = 25? Não, 20 + 5 = 25, mas a diferença é constante, então 20 + 10 = 30\"\n        },\n        {\n            \"enunciado\": \"Se você tem 3 caixas com 7, 9 e 11 doces, quantos doces você terá em total?\",\n            \"alternativas\": {\n                \"A\": \"26\",\n                \"B\": \"27\",\n                \"C\": \"28\",\n                \"D\": \"29\",\n                \"E\": \"30\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"7 + 9 = 16; 16 + 11 = 27; 27 + 1 = 28\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 308,
+            "total_tokens": 308
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.4264515999821015,
+            "tempo_decode_s": 35.994619100005366,
+            "tempo_resposta_s": 40.42107069998747,
+            "tempo_total_s": 40.42107069998747,
+            "tokens_entrada": 0,
+            "tokens_saida": 308,
+            "tps": 7.619788260583991,
+            "ram_inicio_mb": 2346.30859375,
+            "ram_pico_mb": 2347.84765625,
+            "ram_usada_mb": 1.5390625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "timeout",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 4.171945,
+        "ram_media_mb": 2351.480469,
+        "ram_pico_mb": 2352.550781,
+        "tempo_medio_segundos": 108.768863,
+        "ttft_medio_segundos": 2.642033,
+        "tps": {
+          "n": 2,
+          "mediana": 4.171945,
+          "iqr": 4.171945,
+          "p25": 2.085972,
+          "p75": 6.257917,
+          "p95": 7.926695,
+          "p99": 8.26045,
+          "max": 8.343889,
+          "media": 4.171945
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.642033,
+          "iqr": 2.530943,
+          "p25": 1.376561,
+          "p75": 3.907505,
+          "p95": 4.919882,
+          "p99": 5.122357,
+          "max": 5.172976,
+          "media": 2.642033
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 108.768863,
+          "iqr": 21.878926,
+          "p25": 97.8294,
+          "p75": 119.708327,
+          "p95": 128.459897,
+          "p99": 130.210211,
+          "max": 130.64779,
+          "media": 108.768863
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2351.480469,
+          "iqr": 1.070312,
+          "p25": 2350.945312,
+          "p75": 2352.015625,
+          "p95": 2352.44375,
+          "p99": 2352.529375,
+          "max": 2352.550781,
+          "media": 2351.480469
+        },
+        "tps_por_rodada": [
+          0.0,
+          8.343889129927623
+        ],
+        "ttft_por_rodada": [
+          5.172976200003177,
+          0.11108950001653284
+        ],
+        "tempo_por_rodada": [
+          130.64778979995754,
+          86.88993689999916
+        ],
+        "ram_por_rodada": [
+          2350.41015625,
+          2352.55078125
+        ],
+        "contagem_falhas": {
+          "timeout": 1,
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 1
+      },
+      "agregado": {
+        "execucoes": 2,
+        "quantidade_de_questoes": 5,
+        "tentativas": 1,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": true,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 2352.550781,
+        "tps_medio": 4.171945,
+        "tempo_medio_segundos": 108.768863,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "timeout": 1,
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 5.172976200003177,
+            "tempo_decode_s": 125.47481359995436,
+            "tempo_resposta_s": 130.64778979995754,
+            "tempo_total_s": 130.64778979995754,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2347.875,
+            "ram_pico_mb": 2350.41015625,
+            "ram_usada_mb": 2.53515625,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é o produto de 9/4 e 8/3?\",\n            \"alternativas\": {\n                \"A\": \"24/3\",\n                \"B\": \"72/12\",\n                \"C\": \"2/1\",\n                \"D\": \"72/3\",\n                \"E\": \"2/9\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"9/4 * 8/3 = (9 * 8) / (4 * 3) = 72 / 12\"\n        },\n        {\n            \"enunciado\": \"Qual é o resultado da soma de 7/2 e 5/4?\",\n            \"alternativas\": {\n                \"A\": \"24/4\",\n                \"B\": \"29/4\",\n                \"C\": \"27/4\",\n                \"D\": \"23/4\",\n                \"E\": \"31/4\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"7/2 + 5/4 = (14 + 5) / 4 = 19/4\"\n        },\n        {\n            \"enunciado\": \"Se 3a + 2b = 8 e 2a - b = 3, qual é o valor de a + b?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"4\",\n                \"C\": \"3\",\n                \"D\": \"2\",\n                \"E\": \"1\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Resolvendo o sistema de equações: 3a + 2b = 8 e 2a - b = 3, obtemos a = 5 e b = 2. Portanto, a + b = 5 + 2 = 7\"\n        },\n        {\n            \"enunciado\": \"Se a soma de dois números inteiros é 17 e o produto deles é 48, qual é o menor desses números?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"6\",\n                \"D\": \"8\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"Resolvendo o sistema de equações: x + y = 17 e xy = 48, obtemos x = 4 e y = 13. Portanto, o menor número é 4\"\n        },\n        {\n            \"enunciado\": \"Se o produto de dois números inteiros é 48 e o maior número é 12, qual é o menor número?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"6\",\n                \"C\": \"8\",\n                \"D\": \"10\",\n                \"E\": \"12\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Resolvendo o sistema de equações: x * y = 48 e y = 12, obtemos x = 4. Portanto, o menor número é 4\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 725,
+            "total_tokens": 725
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.11108950001653284,
+            "tempo_decode_s": 86.77884739998262,
+            "tempo_resposta_s": 86.88993689999916,
+            "tempo_total_s": 86.88993689999916,
+            "tokens_entrada": 0,
+            "tokens_saida": 725,
+            "tps": 8.343889129927623,
+            "ram_inicio_mb": 2350.8671875,
+            "ram_pico_mb": 2352.55078125,
+            "ram_usada_mb": 1.68359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 6.863902,
+        "ram_media_mb": 2355.494141,
+        "ram_pico_mb": 2356.402344,
+        "tempo_medio_segundos": 22.120364,
+        "ttft_medio_segundos": 4.159582,
+        "tps": {
+          "n": 2,
+          "mediana": 6.863902,
+          "iqr": 0.366004,
+          "p25": 6.6809,
+          "p75": 7.046905,
+          "p95": 7.193306,
+          "p99": 7.222587,
+          "max": 7.229907,
+          "media": 6.863902
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 4.159582,
+          "iqr": 0.474945,
+          "p25": 3.92211,
+          "p75": 4.397055,
+          "p95": 4.587033,
+          "p99": 4.625028,
+          "max": 4.634527,
+          "media": 4.159582
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 22.120364,
+          "iqr": 3.191166,
+          "p25": 20.524781,
+          "p75": 23.715947,
+          "p95": 24.992413,
+          "p99": 25.247707,
+          "max": 25.31153,
+          "media": 22.120364
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2355.494141,
+          "iqr": 0.908203,
+          "p25": 2355.040039,
+          "p75": 2355.948242,
+          "p95": 2356.311523,
+          "p99": 2356.38418,
+          "max": 2356.402344,
+          "media": 2355.494141
+        },
+        "tps_por_rodada": [
+          6.497898149187715,
+          7.229906658228806
+        ],
+        "ttft_por_rodada": [
+          4.634527399961371,
+          3.6846371999708936
+        ],
+        "tempo_por_rodada": [
+          18.929197899997234,
+          25.311530100007076
+        ],
+        "ram_por_rodada": [
+          2354.5859375,
+          2356.40234375
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Qual é a área de um retângulo com base 5 e altura 3?",
+                "alternativas": {
+                  "A": "15",
+                  "B": "14",
+                  "C": "16",
+                  "D": "17",
+                  "E": "18"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "A = b × h = 5 × 3 = 15"
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Determine a área de um retângulo cujas dimensões são 8 cm e 12 cm.",
+                "alternativas": {
+                  "A": "64 cm²",
+                  "B": "96 cm²",
+                  "C": "144 cm²",
+                  "D": "192 cm²",
+                  "E": "240 cm²"
+                },
+                "resposta_correta": "B",
+                "resolucao_passo_a_passo": "A área de um retângulo é dada pela fórmula: área = comprimento × largura. Neste caso, comprimento = 12 cm e largura = 8 cm. Portanto, área = 12 cm × 8 cm = 96 cm²."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 2356.402344,
+        "tps_medio": 6.863902,
+        "tempo_medio_segundos": 22.120364,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 100.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual é a área de um retângulo com base 5 e altura 3?\",\n            \"alternativas\": {\n                \"A\": \"15\",\n                \"B\": \"14\",\n                \"C\": \"16\",\n                \"D\": \"17\",\n                \"E\": \"18\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"A = b × h = 5 × 3 = 15\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 123,
+            "total_tokens": 123
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.634527399961371,
+            "tempo_decode_s": 14.294670500035863,
+            "tempo_resposta_s": 18.929197899997234,
+            "tempo_total_s": 18.929197899997234,
+            "tokens_entrada": 0,
+            "tokens_saida": 123,
+            "tps": 6.497898149187715,
+            "ram_inicio_mb": 2352.7421875,
+            "ram_pico_mb": 2354.5859375,
+            "ram_usada_mb": 1.84375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+          "raw_output": "<think>\n\n</think>\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Determine a área de um retângulo cujas dimensões são 8 cm e 12 cm.\",\n            \"alternativas\": {\n                \"A\": \"64 cm²\",\n                \"B\": \"96 cm²\",\n                \"C\": \"144 cm²\",\n                \"D\": \"192 cm²\",\n                \"E\": \"240 cm²\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"A área de um retângulo é dada pela fórmula: área = comprimento × largura. Neste caso, comprimento = 12 cm e largura = 8 cm. Portanto, área = 12 cm × 8 cm = 96 cm².\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 183,
+            "total_tokens": 183
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.6846371999708936,
+            "tempo_decode_s": 21.626892900036182,
+            "tempo_resposta_s": 25.311530100007076,
+            "tempo_total_s": 25.311530100007076,
+            "tokens_entrada": 0,
+            "tokens_saida": 183,
+            "tps": 7.229906658228806,
+            "ram_inicio_mb": 2354.609375,
+            "ram_pico_mb": 2356.40234375,
+            "ram_usada_mb": 1.79296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3336.1,
+        "limite": 2048.0,
+        "motivo": "RAM pico 3336.1 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 4.17,
+        "limite": 5.0,
+        "motivo": "TPS 4.17 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 1,
+        "limite": 0,
+        "motivo": "Crash/OOM detectado — 1 ocorrência(s)",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 70.0,
+        "limite": 60.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 108.77,
+        "limite": 90.0,
+        "motivo": "Tempo médio 108.8s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -3.6,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "RAM pico 3336.1 MB — limite 2048.0 MB",
+      "TPS 4.17 abaixo do mínimo 5.0",
+      "Crash/OOM detectado — 1 ocorrência(s)",
+      "Tempo médio 108.8s acima de 90.0s"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "hardware",
+      "performance"
+    ],
+    "modelo": "bartowski/HuggingFaceTB_SmolLM3-3B-GGUF",
+    "gerado_em": "2026-09-12T08:54:14.858959"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "RAM pico 3336.1 MB — limite 2048.0 MB; TPS 4.17 abaixo do mínimo 5.0; Crash/OOM detectado — 1 ocorrência(s); Tempo médio 108.8s acima de 90.0s"
+}
