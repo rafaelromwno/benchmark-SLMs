@@ -1,0 +1,1158 @@
+{
+  "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+  "formato": "gguf",
+  "data": "19/09/2026",
+  "run_config": {
+    "modelos": [
+      "ggml-org/Qwen3-1.7B-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "ggml-org/Qwen3-1.7B-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\ggml-org--Qwen3-1.7B-GGUF\\Qwen3-1.7B-Q4_K_M.gguf"
+    },
+    "seed": 33,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 33
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 33
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 33
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.36,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": true,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Qual dos seguintes números NÃO pode ser escrito na forma de uma fração a/b, com a e b inteiros, b ≠ 0?",
+            "alternativas": {
+              "A": "2",
+              "B": "3/2",
+              "C": "0",
+              "D": "-5/2",
+              "E": "√2"
+            },
+            "resposta_correta": "E",
+            "resolucao_passo_a_passo": "A número √2 não pode ser escrito na forma de uma fração a/b, pois é irracional. As outras opções são números racionais, que podem ser escritos como frações. Portanto, a resposta correta é E."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 1.0497313999803737,
+        "tempo_prefill_s": 11.742752999998629,
+        "tempo_decode_s": 13.013852800009772,
+        "tempo_resposta_s": 24.7566058000084,
+        "tempo_total_s": 25.806337199988775,
+        "tokens_entrada": 0,
+        "tokens_saida": 182,
+        "tps": 7.3515732112169525,
+        "ram_inicio_mb": 54.4375,
+        "ram_pico_mb": 2069.6015625,
+        "ram_usada_mb": 2015.1640625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 25.806337199988775,
+        "tempo_carregamento_s": 1.0497313999803737,
+        "tempo_resposta_s": 24.7566058000084,
+        "ram_pico_mb": 2069.6015625,
+        "ram_inicio_mb": 54.4375,
+        "ttft_segundos": 11.742752999998629,
+        "rodadas": 1,
+        "utilizaveis": 1,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números NÃO pode ser escrito na forma de uma fração a/b, com a e b inteiros, b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"2\",\n                \"B\": \"3/2\",\n                \"C\": \"0\",\n                \"D\": \"-5/2\",\n                \"E\": \"√2\"\n            },\n            \"resposta_correta\": \"E\",\n            \"resolucao_passo_a_passo\": \"A número √2 não pode ser escrito na forma de uma fração a/b, pois é irracional. As outras opções são números racionais, que podem ser escritos como frações. Portanto, a resposta correta é E.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 182,
+            "total_tokens": 182
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.0497313999803737,
+            "tempo_prefill_s": 11.742752999998629,
+            "tempo_decode_s": 13.013852800009772,
+            "tempo_resposta_s": 24.7566058000084,
+            "tempo_total_s": 25.806337199988775,
+            "tokens_entrada": 0,
+            "tokens_saida": 182,
+            "tps": 7.3515732112169525,
+            "ram_inicio_mb": 54.4375,
+            "ram_pico_mb": 2069.6015625,
+            "ram_usada_mb": 2015.1640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 12.504453,
+          "iqr": 1.036839,
+          "p25": 12.392831,
+          "p75": 13.429669,
+          "p95": 13.800949,
+          "p99": 13.849044,
+          "max": 13.861067,
+          "media": 12.759992
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.526143,
+          "iqr": 2.203379,
+          "p25": 0.664713,
+          "p75": 2.868092,
+          "p95": 3.250041,
+          "p99": 3.48269,
+          "max": 3.540852,
+          "media": 1.982564
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 26.385067,
+          "iqr": 11.110742,
+          "p25": 22.099352,
+          "p75": 33.210093,
+          "p95": 34.943503,
+          "p99": 34.990773,
+          "max": 35.002591,
+          "media": 26.610082
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2077.708984,
+          "iqr": 8.023438,
+          "p25": 2073.689453,
+          "p75": 2081.712891,
+          "p95": 2084.850586,
+          "p99": 2085.476367,
+          "max": 2085.632812,
+          "media": 2074.863672
+        },
+        "tps_medio": 12.759992,
+        "ttft_medio_segundos": 1.982564,
+        "tempo_medio_segundos": 26.610082,
+        "ram_pico_mb": 2085.632812
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 5,
+        "json_invalidos": 5,
+        "taxa_json_valido_percent": 50.0,
+        "json_valido_ic95": {
+          "numerador": 5,
+          "denominador": 10,
+          "ponto": 0.5,
+          "ic95": [
+            0.236593,
+            0.763407
+          ],
+          "formato": "50.0% [23.7–76.3]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 5,
+        "gabarito_avaliados": 5,
+        "taxa_gabarito_percent": 100.0,
+        "gabarito_ic95": {
+          "numerador": 5,
+          "denominador": 5,
+          "ponto": 1.0,
+          "ic95": [
+            0.565518,
+            1.0
+          ],
+          "formato": "100.0% [56.6–100.0]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 5,
+        "taxa_utilizavel_percent": 50.0,
+        "utilizavel_ic95": {
+          "numerador": 5,
+          "denominador": 10,
+          "ponto": 0.5,
+          "ic95": [
+            0.236593,
+            0.763407
+          ],
+          "formato": "50.0% [23.7–76.3]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 5,
+          "ok": 5
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 12.504453,
+          "iqr": 1.036839,
+          "p25": 12.392831,
+          "p75": 13.429669,
+          "p95": 13.800949,
+          "p99": 13.849044,
+          "max": 13.861067,
+          "media": 12.759992
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.526143,
+          "iqr": 2.203379,
+          "p25": 0.664713,
+          "p75": 2.868092,
+          "p95": 3.250041,
+          "p99": 3.48269,
+          "max": 3.540852,
+          "media": 1.982564
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 26.385067,
+          "iqr": 11.110742,
+          "p25": 22.099352,
+          "p75": 33.210093,
+          "p95": 34.943503,
+          "p99": 34.990773,
+          "max": 35.002591,
+          "media": 26.610082
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2077.708984,
+          "iqr": 8.023438,
+          "p25": 2073.689453,
+          "p75": 2081.712891,
+          "p95": 2084.850586,
+          "p99": 2085.476367,
+          "max": 2085.632812,
+          "media": 2074.863672
+        },
+        "tps_medio": 12.759992,
+        "ttft_medio_segundos": 1.982564,
+        "tempo_medio_segundos": 26.610082,
+        "ram_pico_mb": 2085.632812,
+        "tps_por_rodada": [
+          11.583159893688117,
+          12.580101379056671,
+          12.298438392954244,
+          12.45622084767768,
+          12.50578136901804,
+          13.712858764986548,
+          12.37170076141005,
+          13.861067288336285,
+          13.727471893307582,
+          12.50312423967858
+        ],
+        "ttft_por_rodada": [
+          3.540851900004782,
+          2.7980137999984436,
+          2.4750828000251204,
+          2.8914518000092357,
+          2.577203900029417,
+          0.0784857000107877,
+          2.423395399993751,
+          0.07291129999794066,
+          0.07363510003779083,
+          2.8946061999886297
+        ],
+        "tempo_por_rodada": [
+          26.59032620000653,
+          34.65790829999605,
+          22.19794019998517,
+          35.00259069999447,
+          28.866648900031578,
+          26.1798073000391,
+          22.066489099990577,
+          17.74755109997932,
+          17.920269800000824,
+          34.87128429999575
+        ],
+        "ram_por_rodada": [
+          2071.46484375,
+          2073.25,
+          2075.0078125,
+          2076.79296875,
+          2078.625,
+          2080.40625,
+          2082.1484375,
+          2083.89453125,
+          2085.6328125,
+          2041.4140625
+        ],
+        "ram_media_mb": 2074.863672
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 15 e 20?\",\n            \"alternativas\": {\n                \"A\": \"18\",\n                \"B\": \"16\",\n                \"C\": \"19\",\n                \"D\": \"20\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"18 = 15 + 3; 16 = 15 + 1; 19 = 15 + 4; 20 = 15 + 5; 17 = 15 + 2\"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 32 e 36?\",\n            \"alternativas\": {\n                \"A\": \"34\",\n                \"B\": \"33\",\n                \"C\": \"35\",\n                \"D\": \"36\",\n                \"E\": \"32\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"32 + 1 = 33; 33 + 1 = 34; 34 + 1 = 35; 35 + 1 = 36; 36 + 1 = 37\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 308,
+            "total_tokens": 308
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.540851900004782,
+            "tempo_decode_s": 23.049474300001748,
+            "tempo_resposta_s": 26.59032620000653,
+            "tempo_total_s": 26.59032620000653,
+            "tokens_entrada": 0,
+            "tokens_saida": 308,
+            "tps": 11.583159893688117,
+            "ram_inicio_mb": 2069.5078125,
+            "ram_pico_mb": 2071.46484375,
+            "ram_usada_mb": 1.95703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números é um número racional?\",\n            \"alternativas\": {\n                \"A\": \"√2\",\n                \"B\": \"π\",\n                \"C\": \"3/2\",\n                \"D\": \"√9\",\n                \"E\": \"√16\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"√2 = irracional, π = irracional, 3/2 = racional, √9 = 3 = racional, √16 = 4 = racional\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números é um número irracional?\",\n            \"alternativas\": {\n                \"A\": \"1/3\",\n                \"B\": \"√9\",\n                \"C\": \"π\",\n                \"D\": \"√16\",\n                \"E\": \"√2\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1/3 = racional, √9 = 3 = racional, π = irracional, √16 = 4 = racional, √2 = irracional\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números é um número inteiro?\",\n            \"alternativas\": {\n                \"A\": \"√16\",\n                \"B\": \"√25\",\n                \"C\": \"√36\",\n                \"D\": \"√49\",\n                \"E\": \"√64\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"√16 = 4 = inteiro, √25 = 5 = inteiro, √36 = 6 = inteiro, √49 = 7 = inteiro, √64 = 8 = inteiro\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 436,
+            "total_tokens": 436
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.7980137999984436,
+            "tempo_decode_s": 31.85989449999761,
+            "tempo_resposta_s": 34.65790829999605,
+            "tempo_total_s": 34.65790829999605,
+            "tokens_entrada": 0,
+            "tokens_saida": 436,
+            "tps": 12.580101379056671,
+            "ram_inicio_mb": 2071.37890625,
+            "ram_pico_mb": 2073.25,
+            "ram_usada_mb": 1.87109375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número é maior que 15 e menor que 20?\",\n            \"alternativas\": {\n                \"A\": \"16\",\n                \"B\": \"18\",\n                \"C\": \"19\",\n                \"D\": \"20\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"16 = 16\\n18 = 18\\n19 = 19\\n20 = 20\\n17 = 17\"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 35 e 40?\",\n            \"alternativas\": {\n                \"A\": \"36\",\n                \"B\": \"38\",\n                \"C\": \"40\",\n                \"D\": \"37\",\n                \"E\": \"39\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"36 = 36\\n38 = 38\\n40 = 40\\n37 = 37\\n39 = 39\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 273,
+            "total_tokens": 273
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.4750828000251204,
+            "tempo_decode_s": 19.72285739996005,
+            "tempo_resposta_s": 22.19794019998517,
+            "tempo_total_s": 22.19794019998517,
+            "tokens_entrada": 0,
+            "tokens_saida": 273,
+            "tps": 12.298438392954244,
+            "ram_inicio_mb": 2073.15625,
+            "ram_pico_mb": 2075.0078125,
+            "ram_usada_mb": 1.8515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números é um número racional?\",\n            \"alternativas\": {\n                \"A\": \"√2\",\n                \"B\": \"π\",\n                \"C\": \"3/2\",\n                \"D\": \"√9\",\n                \"E\": \"√16\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"√2 = irracional, π = irracional, 3/2 = racional, √9 = 3 = racional, √16 = 4 = racional\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números é um número irracional?\",\n            \"alternativas\": {\n                \"A\": \"1/3\",\n                \"B\": \"√9\",\n                \"C\": \"π\",\n                \"D\": \"√16\",\n                \"E\": \"√2\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1/3 = racional, √9 = 3 = racional, π = irracional, √16 = 4 = racional, √2 = irracional\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números é um número inteiro?\",\n            \"alternativas\": {\n                \"A\": \"√16\",\n                \"B\": \"√25\",\n                \"C\": \"√36\",\n                \"D\": \"√49\",\n                \"E\": \"√64\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"√16 = 4 = inteiro, √25 = 5 = inteiro, √36 = 6 = inteiro, √49 = 7 = inteiro, √64 = 8 = inteiro\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 436,
+            "total_tokens": 436
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.8914518000092357,
+            "tempo_decode_s": 32.111138899985235,
+            "tempo_resposta_s": 35.00259069999447,
+            "tempo_total_s": 35.00259069999447,
+            "tokens_entrada": 0,
+            "tokens_saida": 436,
+            "tps": 12.45622084767768,
+            "ram_inicio_mb": 2074.984375,
+            "ram_pico_mb": 2076.79296875,
+            "ram_usada_mb": 1.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3y = 18, qual é o valor de y?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"9\",\n                \"C\": \"12\",\n                \"D\": \"3\",\n                \"E\": \"18\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"3y = 18\\ny = 18 ÷ 3\\ny = 6\"\n        },\n        {\n            \"enunciado\": \"Se 4z = 36, qual é o valor de z?\",\n            \"alternativas\": {\n                \"A\": \"9\",\n                \"B\": \"12\",\n                \"C\": \"6\",\n                \"D\": \"4\",\n                \"E\": \"36\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4z = 36\\nz = 36 ÷ 4\\nz = 9\"\n        },\n        {\n            \"enunciado\": \"Se 5w = 45, qual é o valor de w?\",\n            \"alternativas\": {\n                \"A\": \"9\",\n                \"B\": \"10\",\n                \"C\": \"5\",\n                \"D\": \"4\",\n                \"E\": \"2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"5w = 45\\nw = 45 ÷ 5\\nw = 9\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 361,
+            "total_tokens": 361
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.577203900029417,
+            "tempo_decode_s": 26.28944500000216,
+            "tempo_resposta_s": 28.866648900031578,
+            "tempo_total_s": 28.866648900031578,
+            "tokens_entrada": 0,
+            "tokens_saida": 361,
+            "tps": 12.50578136901804,
+            "ram_inicio_mb": 2076.69921875,
+            "ram_pico_mb": 2078.625,
+            "ram_usada_mb": 1.92578125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3y = 15, qual é o valor de y?\",\n            \"alternativas\": {\n                \"A\": \"5\",\n                \"B\": \"3\",\n                \"C\": \"15\",\n                \"D\": \"2\",\n                \"E\": \"6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3y = 15 => y = 15 / 3 => 5 = 5\"\n        },\n        {\n            \"enunciado\": \"Se 4z = 28, qual é o valor de z?\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"28\",\n                \"C\": \"4\",\n                \"D\": \"1\",\n                \"E\": \"2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"4z = 28 => z = 28 / 4 => 7 = 7\"\n        },\n        {\n            \"enunciado\": \"Se 5w = 45, qual é o valor de w?\",\n            \"alternativas\": {\n                \"A\": \"9\",\n                \"B\": \"45\",\n                \"C\": \"5\",\n                \"D\": \"1\",\n                \"E\": \"3\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"5w = 45 => w = 45 / 5 => 9 = 9\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 359,
+            "total_tokens": 359
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0784857000107877,
+            "tempo_decode_s": 26.101321600028314,
+            "tempo_resposta_s": 26.1798073000391,
+            "tempo_total_s": 26.1798073000391,
+            "tokens_entrada": 0,
+            "tokens_saida": 359,
+            "tps": 13.712858764986548,
+            "ram_inicio_mb": 2078.5390625,
+            "ram_pico_mb": 2080.40625,
+            "ram_usada_mb": 1.8671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número é maior que 15 e menor que 20?\",\n            \"alternativas\": {\n                \"A\": \"16\",\n                \"B\": \"18\",\n                \"C\": \"19\",\n                \"D\": \"20\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"16 = 16\\n18 = 18\\n19 = 19\\n20 = 20\\n17 = 17\"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 35 e 40?\",\n            \"alternativas\": {\n                \"A\": \"36\",\n                \"B\": \"38\",\n                \"C\": \"40\",\n                \"D\": \"37\",\n                \"E\": \"39\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"36 = 36\\n38 = 38\\n40 = 40\\n37 = 37\\n39 = 39\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 273,
+            "total_tokens": 273
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.423395399993751,
+            "tempo_decode_s": 19.643093699996825,
+            "tempo_resposta_s": 22.066489099990577,
+            "tempo_total_s": 22.066489099990577,
+            "tokens_entrada": 0,
+            "tokens_saida": 273,
+            "tps": 12.37170076141005,
+            "ram_inicio_mb": 2080.3125,
+            "ram_pico_mb": 2082.1484375,
+            "ram_usada_mb": 1.8359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 14 e 16?\",\n            \"alternativas\": {\n                \"A\": \"15\",\n                \"B\": \"14\",\n                \"C\": \"16\",\n                \"D\": \"13\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"15 = 15\n            15 está entre 14 e 16\n            \"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 29 e 31?\",\n            \"alternativas\": {\n                \"A\": \"30\",\n                \"B\": \"29\",\n                \"C\": \"31\",\n                \"D\": \"28\",\n                \"E\": \"32\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"30 = 30\n            30 está entre 29 e 31\n            \"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 246,
+            "total_tokens": 246
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07291129999794066,
+            "tempo_decode_s": 17.674639799981378,
+            "tempo_resposta_s": 17.74755109997932,
+            "tempo_total_s": 17.74755109997932,
+            "tokens_entrada": 0,
+            "tokens_saida": 246,
+            "tps": 13.861067288336285,
+            "ram_inicio_mb": 2082.125,
+            "ram_pico_mb": 2083.89453125,
+            "ram_usada_mb": 1.76953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número está entre 14 e 16?\",\n            \"alternativas\": {\n                \"A\": \"15\",\n                \"B\": \"14\",\n                \"C\": \"16\",\n                \"D\": \"13\",\n                \"E\": \"17\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"15 = 15\n            15 está entre 14 e 16\n            \"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 29 e 31?\",\n            \"alternativas\": {\n                \"A\": \"30\",\n                \"B\": \"29\",\n                \"C\": \"31\",\n                \"D\": \"28\",\n                \"E\": \"32\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"30 = 30\n            30 está entre 29 e 31\n            \"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 246,
+            "total_tokens": 246
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07363510003779083,
+            "tempo_decode_s": 17.846634699963033,
+            "tempo_resposta_s": 17.920269800000824,
+            "tempo_total_s": 17.920269800000824,
+            "tokens_entrada": 0,
+            "tokens_saida": 246,
+            "tps": 13.727471893307582,
+            "ram_inicio_mb": 2083.87109375,
+            "ram_pico_mb": 2085.6328125,
+            "ram_usada_mb": 1.76171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números é um número racional?\",\n            \"alternativas\": {\n                \"A\": \"√2\",\n                \"B\": \"π\",\n                \"C\": \"3/2\",\n                \"D\": \"√9\",\n                \"E\": \"√16\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"√2 = irracional, π = irracional, 3/2 = racional, √9 = 3 = racional, √16 = 4 = racional\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números é um número irracional?\",\n            \"alternativas\": {\n                \"A\": \"1/3\",\n                \"B\": \"√9\",\n                \"C\": \"π\",\n                \"D\": \"√16\",\n                \"E\": \"√2\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"1/3 = racional, √9 = 3 = racional, π = irracional, √16 = 4 = racional, √2 = irracional\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números é um número inteiro?\",\n            \"alternativas\": {\n                \"A\": \"√16\",\n                \"B\": \"√25\",\n                \"C\": \"√36\",\n                \"D\": \"√49\",\n                \"E\": \"√64\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"√16 = 4 = inteiro, √25 = 5 = inteiro, √36 = 6 = inteiro, √49 = 7 = inteiro, √64 = 8 = inteiro\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 436,
+            "total_tokens": 436
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.8946061999886297,
+            "tempo_decode_s": 31.97667810000712,
+            "tempo_resposta_s": 34.87128429999575,
+            "tempo_total_s": 34.87128429999575,
+            "tokens_entrada": 0,
+            "tokens_saida": 436,
+            "tps": 12.50312423967858,
+            "ram_inicio_mb": 2031.3203125,
+            "ram_pico_mb": 2041.4140625,
+            "ram_usada_mb": 10.09375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 12.59919,
+        "ram_media_mb": 2071.292969,
+        "ram_pico_mb": 2071.292969,
+        "tempo_medio_segundos": 75.242933,
+        "ttft_medio_segundos": 2.804554,
+        "tps": {
+          "n": 1,
+          "mediana": 12.59919,
+          "iqr": 0.0,
+          "p25": 12.59919,
+          "p75": 12.59919,
+          "p95": 12.59919,
+          "p99": 12.59919,
+          "max": 12.59919,
+          "media": 12.59919
+        },
+        "ttft": {
+          "n": 1,
+          "mediana": 2.804554,
+          "iqr": 0.0,
+          "p25": 2.804554,
+          "p75": 2.804554,
+          "p95": 2.804554,
+          "p99": 2.804554,
+          "max": 2.804554,
+          "media": 2.804554
+        },
+        "tempo": {
+          "n": 1,
+          "mediana": 75.242933,
+          "iqr": 0.0,
+          "p25": 75.242933,
+          "p75": 75.242933,
+          "p95": 75.242933,
+          "p99": 75.242933,
+          "max": 75.242933,
+          "media": 75.242933
+        },
+        "ram_pico": {
+          "n": 1,
+          "mediana": 2071.292969,
+          "iqr": 0.0,
+          "p25": 2071.292969,
+          "p75": 2071.292969,
+          "p95": 2071.292969,
+          "p99": 2071.292969,
+          "max": 2071.292969,
+          "media": 2071.292969
+        },
+        "tps_por_rodada": [
+          12.599189896804592
+        ],
+        "ttft_por_rodada": [
+          2.8045537000289187
+        ],
+        "tempo_por_rodada": [
+          75.2429329000297
+        ],
+        "ram_por_rodada": [
+          2071.29296875
+        ],
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 1,
+        "quantidade_de_questoes": 5,
+        "tentativas": 0,
+        "valido_primeira_tentativa": true,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 2071.292969,
+        "tps_medio": 12.59919,
+        "tempo_medio_segundos": 75.242933,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números é representado por uma fração irredutível?\",\n            \"alternativas\": {\n                \"A\": \"3/6\",\n                \"B\": \"5/10\",\n                \"C\": \"7/14\",\n                \"D\": \"2/3\",\n                \"E\": \"4/8\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"3/6 = 3/6 → não é irredutível\\n5/10 = 5/10 → não é irredutível\\n7/14 = 7/14 → não é irredutível\\n2/3 = 2/3 → é irredutível\\n4/8 = 4/8 → não é irredutível\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números é representado por uma fração irredutível?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/4\",\n                \"C\": \"3/9\",\n                \"D\": \"5/7\",\n                \"E\": \"8/16\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1/2 = 1/2 → é irredutível\\n2/4 = 2/4 → não é irredutível\\n3/9 = 3/9 → não é irredutível\\n5/7 = 5/7 → é irredutível\\n8/16 = 8/16 → não é irredutível\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números é representado por uma fração irredutível?\",\n            \"alternativas\": {\n                \"A\": \"1/4\",\n                \"B\": \"2/6\",\n                \"C\": \"3/12\",\n                \"D\": \"5/8\",\n                \"E\": \"9/27\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1/4 = 1/4 → é irredutível\\n2/6 = 2/6 → não é irredutível\\n3/12 = 3/12 → não é irredutível\\n5/8 = 5/8 → é irredutível\\n9/27 = 9/27 → não é irredutível\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números é representado por uma fração irredutível?\",\n            \"alternativas\": {\n                \"A\": \"1/5\",\n                \"B\": \"2/10\",\n                \"C\": \"4/12\",\n                \"D\": \"7/14\",\n                \"E\": \"9/3\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1/5 = 1/5 → é irredutível\\n2/10 = 2/10 → não é irredutível\\n4/12 = 4/12 → não é irredutível\\n7/14 = 7/14 → não é irredutível\\n9/3 = 9/3 → não é irredutível\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números é representado por uma fração irredutível?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"2/4\",\n                \"C\": \"3/9\",\n                \"D\": \"5/7\",\n                \"E\": \"8/16\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1/2 = 1/2 → é irredutível\\n2/4 = 2/4 → não é irredutível\\n3/9 = 3/9 → não é irredutível\\n5/7 = 5/7 → é irredutível\\n8/16 = 8/16 → não é irredutível\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 948,
+            "total_tokens": 948
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.8045537000289187,
+            "tempo_decode_s": 72.43837920000078,
+            "tempo_resposta_s": 75.2429329000297,
+            "tempo_total_s": 75.2429329000297,
+            "tokens_entrada": 0,
+            "tokens_saida": 948,
+            "tps": 12.599189896804592,
+            "ram_inicio_mb": 2041.34765625,
+            "ram_pico_mb": 2071.29296875,
+            "ram_usada_mb": 29.9453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 12.047487,
+        "ram_media_mb": 2074.173828,
+        "ram_pico_mb": 2075.097656,
+        "tempo_medio_segundos": 16.400772,
+        "ttft_medio_segundos": 2.223175,
+        "tps": {
+          "n": 2,
+          "mediana": 12.047487,
+          "iqr": 0.312643,
+          "p25": 11.891166,
+          "p75": 12.203809,
+          "p95": 12.328866,
+          "p99": 12.353877,
+          "max": 12.36013,
+          "media": 12.047487
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.223175,
+          "iqr": 0.222868,
+          "p25": 2.111741,
+          "p75": 2.334608,
+          "p95": 2.423755,
+          "p99": 2.441585,
+          "max": 2.446042,
+          "media": 2.223175
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 16.400772,
+          "iqr": 1.317487,
+          "p25": 15.742029,
+          "p75": 17.059516,
+          "p95": 17.586511,
+          "p99": 17.69191,
+          "max": 17.71826,
+          "media": 16.400772
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2074.173828,
+          "iqr": 0.923828,
+          "p25": 2073.711914,
+          "p75": 2074.635742,
+          "p95": 2075.005273,
+          "p99": 2075.07918,
+          "max": 2075.097656,
+          "media": 2074.173828
+        },
+        "tps_por_rodada": [
+          11.734844155446408,
+          12.360130240559416
+        ],
+        "ttft_por_rodada": [
+          2.4460421999683604,
+          2.0003071000101045
+        ],
+        "tempo_por_rodada": [
+          15.083285099943168,
+          17.718259899993427
+        ],
+        "ram_por_rodada": [
+          2073.25,
+          2075.09765625
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Um quadrado de lado 4 cm está inscrito em uma circunferência. Qual é o comprimento da diagonal desse quadrado?",
+                "alternativas": {
+                  "A": "4√2 cm",
+                  "B": "8 cm",
+                  "C": "4 cm",
+                  "D": "2√2 cm",
+                  "E": "4√3 cm"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "1. O lado do quadrado é 4 cm.2. A diagonal de um quadrado é calculada por d = l√2.3. Substituindo, d = 4√2 cm."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Um triângulo é formado pelos segmentos de comprimentos 5 cm, 12 cm e 13 cm. Qual é a medida do ângulo oposto ao lado de 13 cm, usando o Teorema de Pitágoras?",
+                "alternativas": {
+                  "A": "90°",
+                  "B": "60°",
+                  "C": "120°",
+                  "D": "30°",
+                  "E": "45°"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "5² + 12² = 25 + 144 = 169 = 13². Portanto, o triângulo é retângulo, e o ângulo oposto ao lado de 13 cm é 90°."
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "ram_pico_mb": 2075.097656,
+        "tps_medio": 12.047487,
+        "tempo_medio_segundos": 16.400772,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 100.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Um quadrado de lado 4 cm está inscrito em uma circunferência. Qual é o comprimento da diagonal desse quadrado?\",\n            \"alternativas\": {\n                \"A\": \"4√2 cm\",\n                \"B\": \"8 cm\",\n                \"C\": \"4 cm\",\n                \"D\": \"2√2 cm\",\n                \"E\": \"4√3 cm\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"1. O lado do quadrado é 4 cm.2. A diagonal de um quadrado é calculada por d = l√2.3. Substituindo, d = 4√2 cm.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 177,
+            "total_tokens": 177
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.4460421999683604,
+            "tempo_decode_s": 12.637242899974808,
+            "tempo_resposta_s": 15.083285099943168,
+            "tempo_total_s": 15.083285099943168,
+            "tokens_entrada": 0,
+            "tokens_saida": 177,
+            "tps": 11.734844155446408,
+            "ram_inicio_mb": 2071.28515625,
+            "ram_pico_mb": 2073.25,
+            "ram_usada_mb": 1.96484375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Um triângulo é formado pelos segmentos de comprimentos 5 cm, 12 cm e 13 cm. Qual é a medida do ângulo oposto ao lado de 13 cm, usando o Teorema de Pitágoras?\",\n            \"alternativas\": {\n                \"A\": \"90°\",\n                \"B\": \"60°\",\n                \"C\": \"120°\",\n                \"D\": \"30°\",\n                \"E\": \"45°\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"5² + 12² = 25 + 144 = 169 = 13². Portanto, o triângulo é retângulo, e o ângulo oposto ao lado de 13 cm é 90°.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 219,
+            "total_tokens": 219
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.0003071000101045,
+            "tempo_decode_s": 15.717952799983323,
+            "tempo_resposta_s": 17.718259899993427,
+            "tempo_total_s": 17.718259899993427,
+            "tokens_entrada": 0,
+            "tokens_saida": 219,
+            "tps": 12.360130240559416,
+            "ram_inicio_mb": 2073.15625,
+            "ram_pico_mb": 2075.09765625,
+            "ram_usada_mb": 1.94140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2085.6,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2085.6 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 7.35,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 50.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 50.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 75.24,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -7.9,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "RAM pico 2085.6 MB — limite 2048.0 MB",
+      "Taxa JSON válido 50.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "hardware",
+      "formato"
+    ],
+    "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+    "gerado_em": "2026-09-19T08:19:47.608329"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "RAM pico 2085.6 MB — limite 2048.0 MB; Taxa JSON válido 50.0% abaixo de 60.0%"
+}

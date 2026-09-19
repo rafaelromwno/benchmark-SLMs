@@ -1,0 +1,1156 @@
+{
+  "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+  "formato": "gguf",
+  "data": "19/09/2026",
+  "run_config": {
+    "modelos": [
+      "ggml-org/Qwen3-1.7B-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "ggml-org/Qwen3-1.7B-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\ggml-org--Qwen3-1.7B-GGUF\\Qwen3-1.7B-Q4_K_M.gguf"
+    },
+    "seed": 123,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 123
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 123
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.13,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": false,
+      "utilizavel": false,
+      "codigo_falha": "ok",
+      "parsed": {
+        "questoes": [
+          {
+            "enunciado": "Qual dos seguintes números NÃO pode ser escrito na forma de uma fração a/b, com a e b inteiros, b ≠ 0?",
+            "alternativas": {
+              "A": "10",
+              "B": "10.5",
+              "C": "10%",
+              "D": "10√2",
+              "E": "10"
+            },
+            "resposta_correta": "D",
+            "resolucao_passo_a_passo": "10 é um número inteiro, portanto pode ser escrito como fração 10/1. 10.5 é um número decimal que pode ser escrito como fração 21/2. 10% é um número decimal que pode ser escrito como fração 1/10. 10√2 é um número irracional, e não pode ser escrito como fração a/b com a e b inteiros, b ≠ 0. Portanto, a resposta correta é D."
+          }
+        ]
+      },
+      "viabilidade": {
+        "tempo_carregamento_s": 1.1861959000234492,
+        "tempo_prefill_s": 13.168187099974602,
+        "tempo_decode_s": 19.214127300016116,
+        "tempo_resposta_s": 32.38231439999072,
+        "tempo_total_s": 33.56851030001417,
+        "tokens_entrada": 0,
+        "tokens_saida": 246,
+        "tps": 7.596739286802506,
+        "ram_inicio_mb": 56.69921875,
+        "ram_pico_mb": 2070.5234375,
+        "ram_usada_mb": 2013.82421875,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 33.56851030001417,
+        "tempo_carregamento_s": 1.1861959000234492,
+        "tempo_resposta_s": 32.38231439999072,
+        "ram_pico_mb": 2070.5234375,
+        "ram_inicio_mb": 56.69921875,
+        "ttft_segundos": 13.168187099974602,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 1,
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "ok"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números NÃO pode ser escrito na forma de uma fração a/b, com a e b inteiros, b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"10\",\n                \"B\": \"10.5\",\n                \"C\": \"10%\",\n                \"D\": \"10√2\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"10 é um número inteiro, portanto pode ser escrito como fração 10/1. 10.5 é um número decimal que pode ser escrito como fração 21/2. 10% é um número decimal que pode ser escrito como fração 1/10. 10√2 é um número irracional, e não pode ser escrito como fração a/b com a e b inteiros, b ≠ 0. Portanto, a resposta correta é D.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 246,
+            "total_tokens": 246
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.1861959000234492,
+            "tempo_prefill_s": 13.168187099974602,
+            "tempo_decode_s": 19.214127300016116,
+            "tempo_resposta_s": 32.38231439999072,
+            "tempo_total_s": 33.56851030001417,
+            "tokens_entrada": 0,
+            "tokens_saida": 246,
+            "tps": 7.596739286802506,
+            "ram_inicio_mb": 56.69921875,
+            "ram_pico_mb": 2070.5234375,
+            "ram_usada_mb": 2013.82421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 11.758209,
+          "iqr": 0.627512,
+          "p25": 11.69669,
+          "p75": 12.324202,
+          "p95": 12.76717,
+          "p99": 12.840511,
+          "max": 12.858846,
+          "media": 11.953735
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.65158,
+          "iqr": 2.059045,
+          "p25": 0.71088,
+          "p75": 2.769924,
+          "p95": 3.414082,
+          "p99": 3.789064,
+          "max": 3.882809,
+          "media": 2.037011
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 38.214201,
+          "iqr": 7.743156,
+          "p25": 31.741849,
+          "p75": 39.485004,
+          "p95": 43.350276,
+          "p99": 45.605337,
+          "max": 46.169102,
+          "media": 35.572135
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2078.541016,
+          "iqr": 4.327148,
+          "p25": 2076.37207,
+          "p75": 2080.699219,
+          "p95": 2083.880469,
+          "p99": 2084.510469,
+          "max": 2084.667969,
+          "media": 2078.528516
+        },
+        "tps_medio": 11.953735,
+        "ttft_medio_segundos": 2.037011,
+        "tempo_medio_segundos": 35.572135,
+        "ram_pico_mb": 2084.667969
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 8,
+        "json_invalidos": 2,
+        "taxa_json_valido_percent": 80.0,
+        "json_valido_ic95": {
+          "numerador": 8,
+          "denominador": 10,
+          "ponto": 0.8,
+          "ic95": [
+            0.490162,
+            0.943318
+          ],
+          "formato": "80.0% [49.0–94.3]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 5,
+        "gabarito_avaliados": 8,
+        "taxa_gabarito_percent": 62.5,
+        "gabarito_ic95": {
+          "numerador": 5,
+          "denominador": 8,
+          "ponto": 0.625,
+          "ic95": [
+            0.305742,
+            0.863156
+          ],
+          "formato": "62.5% [30.6–86.3]",
+          "unidade_analise": "execucao"
+        },
+        "utilizaveis": 5,
+        "taxa_utilizavel_percent": 50.0,
+        "utilizavel_ic95": {
+          "numerador": 5,
+          "denominador": 10,
+          "ponto": 0.5,
+          "ic95": [
+            0.236593,
+            0.763407
+          ],
+          "formato": "50.0% [23.7–76.3]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "ok": 8,
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 11.758209,
+          "iqr": 0.627512,
+          "p25": 11.69669,
+          "p75": 12.324202,
+          "p95": 12.76717,
+          "p99": 12.840511,
+          "max": 12.858846,
+          "media": 11.953735
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.65158,
+          "iqr": 2.059045,
+          "p25": 0.71088,
+          "p75": 2.769924,
+          "p95": 3.414082,
+          "p99": 3.789064,
+          "max": 3.882809,
+          "media": 2.037011
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 38.214201,
+          "iqr": 7.743156,
+          "p25": 31.741849,
+          "p75": 39.485004,
+          "p95": 43.350276,
+          "p99": 45.605337,
+          "max": 46.169102,
+          "media": 35.572135
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2078.541016,
+          "iqr": 4.327148,
+          "p25": 2076.37207,
+          "p75": 2080.699219,
+          "p95": 2083.880469,
+          "p99": 2084.510469,
+          "max": 2084.667969,
+          "media": 2078.528516
+        },
+        "tps_medio": 11.953735,
+        "ttft_medio_segundos": 2.037011,
+        "tempo_medio_segundos": 35.572135,
+        "ram_pico_mb": 2084.667969,
+        "tps_por_rodada": [
+          11.120496847700386,
+          11.69615731935409,
+          11.803018891464678,
+          11.690286371586941,
+          12.65512232097496,
+          11.804201262585606,
+          12.497535689557491,
+          11.698287381705976,
+          11.71339979771216,
+          12.858846069726802
+        ],
+        "ttft_por_rodada": [
+          3.8828091000323184,
+          2.8411941999802366,
+          2.5968565000221133,
+          2.788280799984932,
+          0.08062419999623671,
+          2.6012047000112943,
+          0.08011260000057518,
+          2.714854700025171,
+          2.701954399992246,
+          0.08222060004482046
+        ],
+        "tempo_por_rodada": [
+          35.7897678000154,
+          38.21768020000309,
+          39.905045000021346,
+          38.236873399990145,
+          28.367959700000938,
+          39.90104790002806,
+          46.16910200001439,
+          38.21072140004253,
+          30.392542399989907,
+          20.53061360004358
+        ],
+        "ram_por_rodada": [
+          2072.32421875,
+          2074.171875,
+          2075.96484375,
+          2077.703125,
+          2079.4453125,
+          2077.59375,
+          2079.37890625,
+          2081.1171875,
+          2082.91796875,
+          2084.66796875
+        ],
+        "ram_media_mb": 2078.528516
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito como uma fração com denominador 5?\",\n            \"alternativas\": {\n                \"A\": \"3/5\",\n                \"B\": \"5/5\",\n                \"C\": \"7/2\",\n                \"D\": \"10/3\",\n                \"E\": \"2/5\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3/5 = 3/5 = 3/5 → resultado = 3/5\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2/3\",\n                \"B\": \"5/1\",\n                \"C\": \"7/0\",\n                \"D\": \"10/2\",\n                \"E\": \"4/4\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"7/0 → divisão por zero → resultado = undefined\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito como uma fração com numerador 4 e denominador 6?\",\n            \"alternativas\": {\n                \"A\": \"4/6\",\n                \"B\": \"6/4\",\n                \"C\": \"2/3\",\n                \"D\": \"4/6\",\n                \"E\": \"3/2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"4/6 = 4/6 → resultado = 4/6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 398,
+            "total_tokens": 398
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.8828091000323184,
+            "tempo_decode_s": 31.90695869998308,
+            "tempo_resposta_s": 35.7897678000154,
+            "tempo_total_s": 35.7897678000154,
+            "tokens_entrada": 0,
+            "tokens_saida": 398,
+            "tps": 11.120496847700386,
+            "ram_inicio_mb": 2070.4296875,
+            "ram_pico_mb": 2072.32421875,
+            "ram_usada_mb": 1.89453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 2 = 14, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"5\",\n                \"C\": \"7\",\n                \"D\": \"4\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3x - 2 = 14\\n3x = 14 + 2\\n3x = 16\\nx = 16 / 3\\nx = 5.333...\\nComo a resposta deve ser um número inteiro, o valor de x é 5.\"\n        },\n        {\n            \"enunciado\": \"Qual é o valor de y em 4y + 3 = 19?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"2\",\n                \"E\": \"6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4y + 3 = 19\\n4y = 19 - 3\\n4y = 16\\ny = 16 / 4\\ny = 4\"\n        },\n        {\n            \"enunciado\": \"Se 5z - 10 = 20, qual é o valor de z?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"3\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"5z - 10 = 20\\n5z = 20 + 10\\n5z = 30\\nz = 30 / 5\\nz = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 447,
+            "total_tokens": 447
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.8411941999802366,
+            "tempo_decode_s": 35.37648600002285,
+            "tempo_resposta_s": 38.21768020000309,
+            "tempo_total_s": 38.21768020000309,
+            "tokens_entrada": 0,
+            "tokens_saida": 447,
+            "tps": 11.69615731935409,
+            "ram_inicio_mb": 2072.30859375,
+            "ram_pico_mb": 2074.171875,
+            "ram_usada_mb": 1.86328125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito como uma fração com denominador 5?\",\n            \"alternativas\": {\n                \"A\": \"3/5\",\n                \"B\": \"5/3\",\n                \"C\": \"7/2\",\n                \"D\": \"10/5\",\n                \"E\": \"1/5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"3/5 = 3/5, 5/3 = 5/3, 7/2 = 7/2, 10/5 = 2/1, 1/5 = 1/5\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2/3\",\n                \"B\": \"3/2\",\n                \"C\": \"5/0\",\n                \"D\": \"10/5\",\n                \"E\": \"1/5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"5/0 é inválido, pois o denominador não pode ser zero. Outras opções são válidas\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito como uma fração com numerador 4 e denominador 6?\",\n            \"alternativas\": {\n                \"A\": \"4/6\",\n                \"B\": \"6/4\",\n                \"C\": \"2/3\",\n                \"D\": \"4/6\",\n                \"E\": \"3/2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"4/6 = 4/6, 6/4 = 6/4, 2/3 = 2/3, 4/6 = 4/6, 3/2 = 3/2\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 471,
+            "total_tokens": 471
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.5968565000221133,
+            "tempo_decode_s": 37.30818849999923,
+            "tempo_resposta_s": 39.905045000021346,
+            "tempo_total_s": 39.905045000021346,
+            "tokens_entrada": 0,
+            "tokens_saida": 471,
+            "tps": 11.803018891464678,
+            "ram_inicio_mb": 2074.078125,
+            "ram_pico_mb": 2075.96484375,
+            "ram_usada_mb": 1.88671875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 2 = 14, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"5\",\n                \"C\": \"7\",\n                \"D\": \"4\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3x - 2 = 14\\n3x = 14 + 2\\n3x = 16\\nx = 16 / 3\\nx = 5.333...\\nComo a resposta deve ser um número inteiro, o valor de x é 5.\"\n        },\n        {\n            \"enunciado\": \"Qual é o valor de y em 4y + 3 = 19?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"2\",\n                \"E\": \"6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4y + 3 = 19\\n4y = 19 - 3\\n4y = 16\\ny = 16 / 4\\ny = 4\"\n        },\n        {\n            \"enunciado\": \"Se 5z - 10 = 20, qual é o valor de z?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"3\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"5z - 10 = 20\\n5z = 20 + 10\\n5z = 30\\nz = 30 / 5\\nz = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 447,
+            "total_tokens": 447
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.788280799984932,
+            "tempo_decode_s": 35.44859260000521,
+            "tempo_resposta_s": 38.236873399990145,
+            "tempo_total_s": 38.236873399990145,
+            "tokens_entrada": 0,
+            "tokens_saida": 447,
+            "tps": 11.690286371586941,
+            "ram_inicio_mb": 2075.87890625,
+            "ram_pico_mb": 2077.703125,
+            "ram_usada_mb": 1.82421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3y = 21, qual é o valor de y?\",\n            \"alternativas\": {\n                \"A\": \"7\",\n                \"B\": \"14\",\n                \"C\": \"3\",\n                \"D\": \"21\",\n                \"E\": \"6\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"3y = 21 => y = 21 / 3 => y = 7\"\n        },\n        {\n            \"enunciado\": \"Qual é o valor de z se 4z = 36?\",\n            \"alternativas\": {\n                \"A\": \"9\",\n                \"B\": \"12\",\n                \"C\": \"4\",\n                \"D\": \"36\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"4z = 36 => z = 36 / 4 => z = 9\"\n        },\n        {\n            \"enunciado\": \"Se 5x = 45, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"9\",\n                \"B\": \"5\",\n                \"C\": \"15\",\n                \"D\": \"45\",\n                \"E\": \"10\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"5x = 45 => x = 45 / 5 => x = 9\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 359,
+            "total_tokens": 359
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08062419999623671,
+            "tempo_decode_s": 28.2873355000047,
+            "tempo_resposta_s": 28.367959700000938,
+            "tempo_total_s": 28.367959700000938,
+            "tokens_entrada": 0,
+            "tokens_saida": 359,
+            "tps": 12.65512232097496,
+            "ram_inicio_mb": 2077.609375,
+            "ram_pico_mb": 2079.4453125,
+            "ram_usada_mb": 1.8359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito como uma fração com denominador 5?\",\n            \"alternativas\": {\n                \"A\": \"3/5\",\n                \"B\": \"5/3\",\n                \"C\": \"7/2\",\n                \"D\": \"10/5\",\n                \"E\": \"1/5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"3/5 = 3/5, 5/3 = 5/3, 7/2 = 7/2, 10/5 = 2/1, 1/5 = 1/5\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2/3\",\n                \"B\": \"3/2\",\n                \"C\": \"5/0\",\n                \"D\": \"10/5\",\n                \"E\": \"1/5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"5/0 é inválido, pois o denominador não pode ser zero. Outras opções são válidas\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito como uma fração com numerador 4 e denominador 6?\",\n            \"alternativas\": {\n                \"A\": \"4/6\",\n                \"B\": \"6/4\",\n                \"C\": \"2/3\",\n                \"D\": \"4/6\",\n                \"E\": \"3/2\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"4/6 = 4/6, 6/4 = 6/4, 2/3 = 2/3, 4/6 = 4/6, 3/2 = 3/2\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 471,
+            "total_tokens": 471
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6012047000112943,
+            "tempo_decode_s": 37.29984320001677,
+            "tempo_resposta_s": 39.90104790002806,
+            "tempo_total_s": 39.90104790002806,
+            "tokens_entrada": 0,
+            "tokens_saida": 471,
+            "tps": 11.804201262585606,
+            "ram_inicio_mb": 2075.69140625,
+            "ram_pico_mb": 2077.59375,
+            "ram_usada_mb": 1.90234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b com a e b inteiros, b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"3/2\",\n                \"B\": \"-5/2\",\n                \"C\": \"0/5\",\n                \"D\": \"12/0\",\n                \"E\": \"7/1\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3/2 = 3 ÷ 2, -5/2 = -5 ÷ 2, 0/5 = 0 ÷ 5, 12/0 = 12 ÷ 0 (divisão por zero, inválida), 7/1 = 7 ÷ 1\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números NÃO pode ser escrito na forma de uma fração a/b com a e b inteiros, b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"1/2\",\n                \"B\": \"-3/4\",\n                \"C\": \"0/7\",\n                \"D\": \"5/0\",\n                \"E\": \"9/1\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"1/2 = 1 ÷ 2, -3/4 = -3 ÷ 4, 0/7 = 0 ÷ 7, 5/0 = 5 ÷ 0 (divisão por zero, inválida), 9/1 = 9 ÷ 1\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito na forma de uma fração a/b com a e b inteiros, b ≠ 0?\",\n            \"alternativas\": {\n                \"A\": \"-1/2\",\n                \"B\": \"3/2\",\n                \"C\": \"0/5\",\n                \"D\": \"12/0\",\n                \"E\": \"7/1\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"-1/2 = -1 ÷ 2, 3/2 = 3 ÷ 2, 0/5 = 0 ÷ 5, 12/0 = 12 ÷ 0 (divisão por zero, inválida), 7/1 = 7 ÷ 1\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 577,
+            "total_tokens": 577
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08011260000057518,
+            "tempo_decode_s": 46.088989400013816,
+            "tempo_resposta_s": 46.16910200001439,
+            "tempo_total_s": 46.16910200001439,
+            "tokens_entrada": 0,
+            "tokens_saida": 577,
+            "tps": 12.497535689557491,
+            "ram_inicio_mb": 2077.515625,
+            "ram_pico_mb": 2079.37890625,
+            "ram_usada_mb": 1.86328125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Se 3x - 2 = 14, qual é o valor de x?\",\n            \"alternativas\": {\n                \"A\": \"6\",\n                \"B\": \"5\",\n                \"C\": \"7\",\n                \"D\": \"4\",\n                \"E\": \"8\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"3x - 2 = 14\\n3x = 14 + 2\\n3x = 16\\nx = 16 / 3\\nx = 5.333...\\nComo a resposta deve ser um número inteiro, o valor de x é 5.\"\n        },\n        {\n            \"enunciado\": \"Qual é o valor de y em 4y + 3 = 19?\",\n            \"alternativas\": {\n                \"A\": \"3\",\n                \"B\": \"4\",\n                \"C\": \"5\",\n                \"D\": \"2\",\n                \"E\": \"6\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"4y + 3 = 19\\n4y = 19 - 3\\n4y = 16\\ny = 16 / 4\\ny = 4\"\n        },\n        {\n            \"enunciado\": \"Se 5z - 10 = 20, qual é o valor de z?\",\n            \"alternativas\": {\n                \"A\": \"4\",\n                \"B\": \"5\",\n                \"C\": \"6\",\n                \"D\": \"3\",\n                \"E\": \"7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"5z - 10 = 20\\n5z = 20 + 10\\n5z = 30\\nz = 30 / 5\\nz = 6\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 447,
+            "total_tokens": 447
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.714854700025171,
+            "tempo_decode_s": 35.49586670001736,
+            "tempo_resposta_s": 38.21072140004253,
+            "tempo_total_s": 38.21072140004253,
+            "tokens_entrada": 0,
+            "tokens_saida": 447,
+            "tps": 11.698287381705976,
+            "ram_inicio_mb": 2079.28515625,
+            "ram_pico_mb": 2081.1171875,
+            "ram_usada_mb": 1.83203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número é maior que 45 e menor que 50?\",\n            \"alternativas\": {\n                \"A\": \"47\",\n                \"B\": \"49\",\n                \"C\": \"50\",\n                \"D\": \"46\",\n                \"E\": \"51\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"45 < 49 < 50 = 49\\n47 < 49 < 50 = 47\\n50 < 49 < 50 = 50\\n46 < 49 < 50 = 46\\n51 < 49 < 50 = 51\"\n        },\n        {\n            \"enunciado\": \"Qual número é menor que 32 e maior que 28?\",\n            \"alternativas\": {\n                \"A\": \"29\",\n                \"B\": \"31\",\n                \"C\": \"28\",\n                \"D\": \"30\",\n                \"E\": \"27\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"28 < 31 < 32 = 31\\n28 < 30 < 32 = 30\\n28 < 29 < 32 = 29\\n28 < 31 < 32 = 31\\n27 < 31 < 32 = 27\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 356,
+            "total_tokens": 356
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.701954399992246,
+            "tempo_decode_s": 27.69058799999766,
+            "tempo_resposta_s": 30.392542399989907,
+            "tempo_total_s": 30.392542399989907,
+            "tokens_entrada": 0,
+            "tokens_saida": 356,
+            "tps": 11.71339979771216,
+            "ram_inicio_mb": 2081.0234375,
+            "ram_pico_mb": 2082.91796875,
+            "ram_usada_mb": 1.89453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual número é maior que 45 e menor que 50?\",\n            \"alternativas\": {\n                \"A\": \"48\",\n                \"B\": \"43\",\n                \"C\": \"50\",\n                \"D\": \"47\",\n                \"E\": \"51\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"48 = 48\\n48 > 45 e 48 < 50\\nPortanto, a resposta correta é A\"\n        },\n        {\n            \"enunciado\": \"Qual número está entre 12 e 15?\",\n            \"alternativas\": {\n                \"A\": \"13\",\n                \"B\": \"14\",\n                \"C\": \"12\",\n                \"D\": \"15\",\n                \"E\": \"16\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"13 = 13\\n13 está entre 12 e 15\\nPortanto, a resposta correta é B\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 264,
+            "total_tokens": 264
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08222060004482046,
+            "tempo_decode_s": 20.44839299999876,
+            "tempo_resposta_s": 20.53061360004358,
+            "tempo_total_s": 20.53061360004358,
+            "tokens_entrada": 0,
+            "tokens_saida": 264,
+            "tps": 12.858846069726802,
+            "ram_inicio_mb": 2082.89453125,
+            "ram_pico_mb": 2084.66796875,
+            "ram_usada_mb": 1.7734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": true,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 11.634369,
+        "ram_media_mb": 2086.441406,
+        "ram_pico_mb": 2086.441406,
+        "tempo_medio_segundos": 65.323697,
+        "ttft_medio_segundos": 3.104287,
+        "tps": {
+          "n": 1,
+          "mediana": 11.634369,
+          "iqr": 0.0,
+          "p25": 11.634369,
+          "p75": 11.634369,
+          "p95": 11.634369,
+          "p99": 11.634369,
+          "max": 11.634369,
+          "media": 11.634369
+        },
+        "ttft": {
+          "n": 1,
+          "mediana": 3.104287,
+          "iqr": 0.0,
+          "p25": 3.104287,
+          "p75": 3.104287,
+          "p95": 3.104287,
+          "p99": 3.104287,
+          "max": 3.104287,
+          "media": 3.104287
+        },
+        "tempo": {
+          "n": 1,
+          "mediana": 65.323697,
+          "iqr": 0.0,
+          "p25": 65.323697,
+          "p75": 65.323697,
+          "p95": 65.323697,
+          "p99": 65.323697,
+          "max": 65.323697,
+          "media": 65.323697
+        },
+        "ram_pico": {
+          "n": 1,
+          "mediana": 2086.441406,
+          "iqr": 0.0,
+          "p25": 2086.441406,
+          "p75": 2086.441406,
+          "p95": 2086.441406,
+          "p99": 2086.441406,
+          "max": 2086.441406,
+          "media": 2086.441406
+        },
+        "tps_por_rodada": [
+          11.634369106927048
+        ],
+        "ttft_por_rodada": [
+          3.104286600020714
+        ],
+        "tempo_por_rodada": [
+          65.32369679998374
+        ],
+        "ram_por_rodada": [
+          2086.44140625
+        ],
+        "contagem_falhas": {
+          "ok": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 1,
+        "quantidade_de_questoes": 5,
+        "tentativas": 0,
+        "valido_primeira_tentativa": true,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": false,
+        "aprovado": true,
+        "ram_pico_mb": 2086.441406,
+        "tps_medio": 11.634369,
+        "tempo_medio_segundos": 65.323697,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "ok": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito como uma fração com denominador 5?\",\n            \"alternativas\": {\n                \"A\": \"3/5\",\n                \"B\": \"5/3\",\n                \"C\": \"7/2\",\n                \"D\": \"10/5\",\n                \"E\": \"1/5\"\n            },\n            \"resposta_correta\": \"D\",\n            \"resolucao_passo_a_passo\": \"3/5 = 3/5, 5/3 = 5/3, 7/2 = 7/2, 10/5 = 2/1, 1/5 = 1/5\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2/3\",\n                \"B\": \"3/2\",\n                \"C\": \"5/0\",\n                \"D\": \"10/5\",\n                \"E\": \"1/5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"5/0 é inválido, pois o denominador não pode ser zero. Outras opções são válidas\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito como uma fração com numerador 4?\",\n            \"alternativas\": {\n                \"A\": \"4/1\",\n                \"B\": \"1/4\",\n                \"C\": \"4/5\",\n                \"D\": \"5/4\",\n                \"E\": \"4/4\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"4/1 = 4/1, 1/4 = 1/4, 4/5 = 4/5, 5/4 = 5/4, 4/4 = 1\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números NÃO pode ser escrito como uma fração a/b (com a e b inteiros, b≠0)?\",\n            \"alternativas\": {\n                \"A\": \"2/3\",\n                \"B\": \"3/2\",\n                \"C\": \"5/0\",\n                \"D\": \"10/5\",\n                \"E\": \"1/5\"\n            },\n            \"resposta_correta\": \"C\",\n            \"resolucao_passo_a_passo\": \"5/0 é inválido, pois o denominador não pode ser zero. Outras opções são válidas\"\n        },\n        {\n            \"enunciado\": \"Qual dos seguintes números pode ser escrito como uma fração com denominador 7?\",\n            \"alternativas\": {\n                \"A\": \"7/1\",\n                \"B\": \"1/7\",\n                \"C\": \"7/2\",\n                \"D\": \"14/7\",\n                \"E\": \"7/7\"\n            },\n            \"resposta_correta\": \"B\",\n            \"resolucao_passo_a_passo\": \"1/7 = 1/7, 7/1 = 7/1, 7/2 = 7/2, 14/7 = 2/1, 7/7 = 1\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 760,
+            "total_tokens": 760
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.104286600020714,
+            "tempo_decode_s": 62.21941019996302,
+            "tempo_resposta_s": 65.32369679998374,
+            "tempo_total_s": 65.32369679998374,
+            "tokens_entrada": 0,
+            "tokens_saida": 760,
+            "tps": 11.634369106927048,
+            "ram_inicio_mb": 2084.578125,
+            "ram_pico_mb": 2086.44140625,
+            "ram_usada_mb": 1.86328125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+      "json_valido": true,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "ok",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 10.538261,
+        "ram_media_mb": 2089.228516,
+        "ram_pico_mb": 2090.097656,
+        "tempo_medio_segundos": 13.958175,
+        "ttft_medio_segundos": 2.417914,
+        "tps": {
+          "n": 2,
+          "mediana": 10.538261,
+          "iqr": 0.088957,
+          "p25": 10.493783,
+          "p75": 10.58274,
+          "p95": 10.618323,
+          "p99": 10.625439,
+          "max": 10.627218,
+          "media": 10.538261
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.417914,
+          "iqr": 0.236263,
+          "p25": 2.299782,
+          "p75": 2.536045,
+          "p95": 2.63055,
+          "p99": 2.649451,
+          "max": 2.654177,
+          "media": 2.417914
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 13.958175,
+          "iqr": 1.066749,
+          "p25": 13.4248,
+          "p75": 14.491549,
+          "p95": 14.918249,
+          "p99": 15.003589,
+          "max": 15.024924,
+          "media": 13.958175
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2089.228516,
+          "iqr": 0.869141,
+          "p25": 2088.793945,
+          "p75": 2089.663086,
+          "p95": 2090.010742,
+          "p99": 2090.080273,
+          "max": 2090.097656,
+          "media": 2089.228516
+        },
+        "tps_por_rodada": [
+          10.449304381138635,
+          10.627218349421074
+        ],
+        "ttft_por_rodada": [
+          2.654176600044593,
+          2.1816506999894045
+        ],
+        "tempo_por_rodada": [
+          15.024923600023612,
+          12.891426099988166
+        ],
+        "ram_por_rodada": [
+          2088.359375,
+          2090.09765625
+        ],
+        "contagem_falhas": {
+          "ok": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "questoes": [
+              {
+                "enunciado": "Um quadrado de lado 5 cm tem área igual a:",
+                "alternativas": {
+                  "A": "25 cm²",
+                  "B": "50 cm²",
+                  "C": "100 cm²",
+                  "D": "125 cm²",
+                  "E": "200 cm²"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "Área do quadrado = lado². Lado = 5 cm. 5² = 25. Portanto, a área é 25 cm²."
+              }
+            ]
+          },
+          "EF06MA17": {
+            "questoes": [
+              {
+                "enunciado": "Um quadrado de lado 5 cm tem área igual a:",
+                "alternativas": {
+                  "A": "25 cm²",
+                  "B": "100 cm²",
+                  "C": "25 cm²",
+                  "D": "50 cm²",
+                  "E": "100 cm²"
+                },
+                "resposta_correta": "A",
+                "resolucao_passo_a_passo": "Área do quadrado = lado² = 5² = 25"
+              }
+            ]
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": true
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": true,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 2090.097656,
+        "tps_medio": 10.538261,
+        "tempo_medio_segundos": 13.958175,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 100.0,
+        "taxa_utilizavel_percent": 50.0,
+        "contagem_falhas": {
+          "ok": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Um quadrado de lado 5 cm tem área igual a:\",\n            \"alternativas\": {\n                \"A\": \"25 cm²\",\n                \"B\": \"50 cm²\",\n                \"C\": \"100 cm²\",\n                \"D\": \"125 cm²\",\n                \"E\": \"200 cm²\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Área do quadrado = lado². Lado = 5 cm. 5² = 25. Portanto, a área é 25 cm².\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 157,
+            "total_tokens": 157
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.654176600044593,
+            "tempo_decode_s": 12.37074699997902,
+            "tempo_resposta_s": 15.024923600023612,
+            "tempo_total_s": 15.024923600023612,
+            "tokens_entrada": 0,
+            "tokens_saida": 157,
+            "tps": 10.449304381138635,
+            "ram_inicio_mb": 2086.41015625,
+            "ram_pico_mb": 2088.359375,
+            "ram_usada_mb": 1.94921875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+          "raw_output": "<think>\n\n</think>\n\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"Um quadrado de lado 5 cm tem área igual a:\",\n            \"alternativas\": {\n                \"A\": \"25 cm²\",\n                \"B\": \"100 cm²\",\n                \"C\": \"25 cm²\",\n                \"D\": \"50 cm²\",\n                \"E\": \"100 cm²\"\n            },\n            \"resposta_correta\": \"A\",\n            \"resolucao_passo_a_passo\": \"Área do quadrado = lado² = 5² = 25\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 137,
+            "total_tokens": 137
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.1816506999894045,
+            "tempo_decode_s": 10.709775399998762,
+            "tempo_resposta_s": 12.891426099988166,
+            "tempo_total_s": 12.891426099988166,
+            "tokens_entrada": 0,
+            "tokens_saida": 137,
+            "tps": 10.627218349421074,
+            "ram_inicio_mb": 2088.265625,
+            "ram_pico_mb": 2090.09765625,
+            "ram_usada_mb": 1.83203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "ok"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 3,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2090.1,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2090.1 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 7.6,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 80.0,
+        "limite": 60.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 65.32,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -15.6,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "RAM pico 2090.1 MB — limite 2048.0 MB"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "hardware"
+    ],
+    "modelo": "ggml-org/Qwen3-1.7B-GGUF",
+    "gerado_em": "2026-09-19T08:41:49.844949"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "RAM pico 2090.1 MB — limite 2048.0 MB"
+}
