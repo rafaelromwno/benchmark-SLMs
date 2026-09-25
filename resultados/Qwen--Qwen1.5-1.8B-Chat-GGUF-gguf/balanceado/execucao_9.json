@@ -1,0 +1,1169 @@
+{
+  "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+  "formato": "gguf",
+  "data": "25/09/2026",
+  "run_config": {
+    "modelos": [
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\Qwen--Qwen1.5-1.8B-Chat-GGUF\\qwen1_5-1_8b-chat-q4_k_m.gguf"
+    },
+    "seed": 256,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 256
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 256
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 256
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.86,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": "Campo 'questoes' ausente",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 3.4830541999835987,
+        "tempo_prefill_s": 20.83575280001969,
+        "tempo_decode_s": 108.18230210000183,
+        "tempo_resposta_s": 129.01805490002153,
+        "tempo_total_s": 132.50110910000512,
+        "tokens_entrada": 0,
+        "tokens_saida": 1239,
+        "tps": 9.6033070794636,
+        "ram_inicio_mb": 23.4453125,
+        "ram_pico_mb": 1993.87890625,
+        "ram_usada_mb": 1970.43359375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 132.50110910000512,
+        "tempo_carregamento_s": 3.4830541999835987,
+        "tempo_resposta_s": 129.01805490002153,
+        "ram_pico_mb": 1993.87890625,
+        "ram_inicio_mb": 23.4453125,
+        "ttft_segundos": 20.83575280001969,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "{ \"questoes\": [ \n  {\n    \"enunciado\": \"Identifique o número de divisões possíveis para a fração a/10\",\n    \"alternativas\": [\n      {\n        \"A\": \"1\",\n        \"B\": \"2\",\n        \"C\": \"3\",\n        \"D\": \"4\",\n        \"E\": \"5\"\n      },\n      {\n        \"A\": \"10\",\n        \"B\": \"11\",\n        \"C\": \"12\",\n        \"D\": \"13\",\n        \"E\": \"14\"\n      },\n      {\n        \"A\": \"100\",\n        \"B\": \"101\",\n        \"C\": \"102\",\n        \"D\": \"103\",\n        \"E\": \"104\"\n      },\n      {\n        \"A\": \"1000\",\n        \"B\": \"1001\",\n        \"C\": \"1002\",\n        \"D\": \"1003\",\n        \"E\": \"1004\"\n      }\n    ],\n    \"resposta_ correta\": \"1\",\n    \"resolução_ passo_ a_passo\": \"Identifique o número de divisões possíveis para a fração a/10\"\n  },\n  {\n    \"enunciado\": \"Determine a forma de divisão de 14/2\",\n    \"alternativas\": [\n      {\n        \"A\": \"4/2\",\n        \"B\": \"2/4\",\n        \"C\": \"2/2\",\n        \"D\": \"4/1\",\n        \"E\": \"1/2\"\n      },\n      {\n        \"A\": \"2/14\",\n        \"B\": \"7/28\",\n        \"C\": \"7/14\",\n        \"D\": \"14/2\",\n        \"E\": \"2/7\"\n      },\n      {\n        \"A\": \"4/7\",\n        \"B\": \"1/7\",\n        \"C\": \"7/1\",\n        \"D\": \"2/4\",\n        \"E\": \"1/4\"\n      },\n      {\n        \"A\": \"1/4\",\n        \"B\": \"7/16\",\n        \"C\": \"7/8\",\n        \"D\": \"16/2\",\n        \"E\": \"4/7\"\n      },\n      {\n        \"A\": \"1/2\",\n        \"B\": \"7/14\",\n        \"C\": \"14/7\",\n        \"D\": \"2/4\",\n        \"E\": \"7/16\"\n      }\n    ],\n    \"resposta_ correta\": \"7/14\",\n    \"resolução_ passo_ a_passo\": \"Determine a forma de divisão de 14/2\"\n  },\n  {\n    \"enunciado\": \"Identifique a forma de divisão de 11/3\",\n    \"alternativas\": [\n      {\n        \"A\": \"11/3\",\n        \"B\": \"3/11\",\n        \"C\": \"3/1\",\n        \"D\": \"3/4\",\n        \"E\": \"1/3\"\n      },\n      {\n        \"A\": \"3/11\",\n        \"B\": \"3/33\",\n        \"C\": \"3/11\",\n        \"D\": \"3/31\",\n        \"E\": \"1/33\"\n      },\n      {\n        \"A\": \"3/11\",\n        \"B\": \"3/111\",\n        \"C\": \"3/11\",\n        \"D\": \"3/11\",\n        \"E\": \"3/111\"\n      },\n      {\n        \"A\": \"3/11\",\n        \"B\": \"3/1111\",\n        \"C\": \"3/11\",\n        \"D\": \"3/11\",\n        \"E\": \"3/1111\"\n      },\n      {\n        \"A\": \"3/11\",\n        \"B\": \"3/11111\",\n        \"C\": \"3/11\",\n        \"D\": \"3/11\",\n        \"E\": \"3/11111\"\n      }\n    ],\n    \"resposta_ correta\": \"3/11\",\n    \"resolução_ passo_ a_passo\": \"Identifique a forma de divisão de 11/3\"\n  },\n  {\n    \"enunciado\": \"Determine a forma de divisão de 21/5\",\n    \"alternativas\": [\n      {\n        \"A\": \"21/5\",\n        \"B\": \"5/21\",\n        \"C\": \"5/11\",\n        \"D\":",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1239,
+            "total_tokens": 1239
+          },
+          "metrics": {
+            "tempo_carregamento_s": 3.4830541999835987,
+            "tempo_prefill_s": 20.83575280001969,
+            "tempo_decode_s": 108.18230210000183,
+            "tempo_resposta_s": 129.01805490002153,
+            "tempo_total_s": 132.50110910000512,
+            "tokens_entrada": 0,
+            "tokens_saida": 1239,
+            "tps": 9.6033070794636,
+            "ram_inicio_mb": 23.4453125,
+            "ram_pico_mb": 1993.87890625,
+            "ram_usada_mb": 1970.43359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 12.307711,
+          "iqr": 3.010459,
+          "p25": 10.211451,
+          "p75": 13.22191,
+          "p95": 14.323152,
+          "p99": 14.443799,
+          "max": 14.473961,
+          "media": 11.561258
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 1.736327,
+          "iqr": 4.193345,
+          "p25": 0.099438,
+          "p75": 4.292783,
+          "p95": 5.421593,
+          "p99": 5.914832,
+          "max": 6.038142,
+          "media": 2.262517
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 82.841454,
+          "iqr": 63.926893,
+          "p25": 24.648018,
+          "p75": 88.57491,
+          "p95": 97.854276,
+          "p99": 99.124739,
+          "max": 99.442354,
+          "media": 63.151626
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1437.789062,
+          "iqr": 24.665039,
+          "p25": 1417.102539,
+          "p75": 1441.767578,
+          "p95": 1455.009375,
+          "p99": 1456.005,
+          "max": 1456.253906,
+          "media": 1433.028125
+        },
+        "tps_medio": 11.561258,
+        "ttft_medio_segundos": 2.262517,
+        "tempo_medio_segundos": 63.151626,
+        "ram_pico_mb": 1456.253906
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 12.307711,
+          "iqr": 3.010459,
+          "p25": 10.211451,
+          "p75": 13.22191,
+          "p95": 14.323152,
+          "p99": 14.443799,
+          "max": 14.473961,
+          "media": 11.561258
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 1.736327,
+          "iqr": 4.193345,
+          "p25": 0.099438,
+          "p75": 4.292783,
+          "p95": 5.421593,
+          "p99": 5.914832,
+          "max": 6.038142,
+          "media": 2.262517
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 82.841454,
+          "iqr": 63.926893,
+          "p25": 24.648018,
+          "p75": 88.57491,
+          "p95": 97.854276,
+          "p99": 99.124739,
+          "max": 99.442354,
+          "media": 63.151626
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1437.789062,
+          "iqr": 24.665039,
+          "p25": 1417.102539,
+          "p75": 1441.767578,
+          "p95": 1455.009375,
+          "p99": 1456.005,
+          "max": 1456.253906,
+          "media": 1433.028125
+        },
+        "tps_medio": 11.561258,
+        "ttft_medio_segundos": 2.262517,
+        "tempo_medio_segundos": 63.151626,
+        "ram_pico_mb": 1456.253906,
+        "tps_por_rodada": [
+          12.957823676041507,
+          11.91645156784747,
+          13.309938826389567,
+          14.473960752211989,
+          14.138829775690004,
+          7.176778002182198,
+          9.904536841189787,
+          12.698969815360394,
+          7.903095942656439,
+          11.132192002436625
+        ],
+        "ttft_por_rodada": [
+          4.554656499996781,
+          0.0809325999871362,
+          0.1321188999863807,
+          0.0885439999983646,
+          0.15586009999969974,
+          4.668032400019001,
+          3.5071611999883316,
+          0.08292370001436211,
+          3.316794599988498,
+          6.038142000004882
+        ],
+        "tempo_por_rodada": [
+          87.20600219999324,
+          99.44235439997283,
+          89.03121309998096,
+          81.87116300000343,
+          83.8117452999868,
+          12.958461300004274,
+          14.53879190000589,
+          95.913292000012,
+          11.76754030000302,
+          54.97569570000633
+        ],
+        "ram_por_rodada": [
+          1453.48828125,
+          1456.25390625,
+          1406.75,
+          1408.61328125,
+          1410.56640625,
+          1437.26953125,
+          1439.9453125,
+          1442.375,
+          1438.30859375,
+          1436.7109375
+        ],
+        "ram_media_mb": 1433.028125
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF06MA14\n**Unidade Temática:** Álgebra\n\n**Pré-requisitos que o aluno deve dominar  (calibração de dificuldade):**\nEF06MA01\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n1. **Solução de equações com raízes complexas:** Qual é a solução para a equação x^2 + 5x + 6 = 0 com raízes complexas (r1 = 1, r2 = -6)? Utilizando o método de raiz, encontrar as duas raízes e resolvendo a equação.\n2. **Solução de sistemas de equações:** Determine se a equação y = 3x^2 + 5x + 4 é uma equação linear ou não. Se ela é, determine a solução para este sistema, e se ela é não, determine a solução para um sistema de equações com duas variáveis.\n3. **Solução de sistemas de equações com variáveis reais:** Determine se a equação y = 2x^2 + 3x + 4 é uma equação linear ou não. Se ela é, determine a solução para este sistema, e se ela é não, determine a solução para um sistema de equações com dois variáveis reais.\n4. **Solução de sistemas de equações com polinômios complexos:** Determine se a equação y = (x + 2)^2 + 3x + 4 é uma equação linear ou não. Se ela é, determine a solução para este sistema, e se ela é não, determine a solução para um sistema de equações com dois polinômios complexos.\n\n**Nenhuma questão será reutilizada.**\n**Questões novas, inéditas e alinhadas à habilidade EF06MA14:**\n\n1. **Solução de equações com raízes complexas utilizando fórmulas de Taylor:** Determine se a equação x^2 + 5x + 6 = 0 tem uma solução para a equação x^2 + 5x + 6 = 0 com raízes complexas (r1 = 1, r2 = -6) utilizando fórmulas de Taylor. Utilizando o método de Taylor, encontrar as duas raízes e resolvendo a equação.\n2. **Solução de sistemas de equações com raízes complexas utilizando fórmulas de Taylor:** Determine se a equação y = 3x^2 + 5x + 4 tem uma solução para o sistema de equações x^2 + 5x + 4 = 0 com raízes complexas (r1 = 1, r2 = -6) utilizando fórmulas de Taylor. Utilizando o método de Taylor, encontrar as duas raízes e resolvendo a equação.\n3. **Solução de sistemas de equações com variáveis reais utilizando fórmulas de Taylor:** Determine se a equação y = 2x^2 + 3x + 4 tem uma solução para o sistema de equações x^2 + 5x + 4 = 0 com variáveis reais (x = 1, x = -2) utilizando fórmulas de Taylor. Utilizando o método de Taylor, encontrar as duas raízes e resolvendo a equação.\n4. **Solução de sistemas de equações com polinômios complexos utilizando fórmulas de Taylor:** Determine se a equação y = (x + 2)^2 + 3x + 4 tem uma solução para o sistema de equações x^2 + 5x + 4 = 0 com polinômios complexos (x = 1, x = -2) utilizando fórmulas de Taylor. Utilizando o método de Taylor, encontrar as duas raízes e resolvendo a equação.\n\n**Resposta:**\n1. A equação x^2 + 5x + 6 = 0 tem uma solução para a equação x^2 + 5x + 6 = 0 com raízes complexas (r1 = 1, r2 = -6) utilizando fórmulas de Taylor. A solução é x = (1 + i√(3)) / 2, onde i é o índice iódico da complexidade.\n2. A equação y = 3x^2 + 5x + 4 tem uma solução para o sistema de equações x^2 + 5x + 4 = 0 com raízes complexas (r1 = 1, r2 = -",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1130,
+            "total_tokens": 1130
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.554656499996781,
+            "tempo_decode_s": 82.65134569999645,
+            "tempo_resposta_s": 87.20600219999324,
+            "tempo_total_s": 87.20600219999324,
+            "tokens_entrada": 0,
+            "tokens_saida": 1130,
+            "tps": 12.957823676041507,
+            "ram_inicio_mb": 1410.703125,
+            "ram_pico_mb": 1453.48828125,
+            "ram_usada_mb": 42.78515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questão (önhas) para habilidade EF06MA14:\n\n1. A. Qual é a fórmula para calcular o valor de x na equação x + 5 = 12?\n2. B. Se a variável x é igual a 3, qual é o valor de y que pode ser obtido multiplicando x por 2?\n3. C. Qual é a fórmula para calcular o valor de y na equação 2x = 10?\n4. D. Encontre a raiz quadrada de 2x + 3, utilizando a fórmula sqrt(x + 3).\n5. E. Determine o valor de y na equação y = 3x + 2, substituindo x por 4.\n\nResposta correta:\n\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\nC. y = 2 * 3 + 2\n    y = 6 + 2\n    y = 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\nE. y = 3 * 4 + 2\n    y = 12 + 2\n    y = 14\n\nResolução passo a passo:\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\n    Resposta correta: 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\n    Resposta correta: 6\nC. y = 2 * 3 + 2\n    y = 6 + 2\n    y = 8\n    Resposta correta: 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\n    Resposta correta: 14\nE. y = 3 * 4 + 2\n    y = 12 + 2\n    y = 14\n    Resposta correta: 14\n\nConsistência de estilo:\nA. x + 5 = 12\n    A = Fórmula\n    B = E = Especificação\nC. y = 2x\n    C = Fórmula\n    D = E = Especificação\nE. y = 3x + 2\n    E = Fórmula\n    D = E = Especificação\nResposta:\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\n    Fórmula: x + 5 = 12\n    E = x + 5 = 12\n    Resposta correta: 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\n    Fórmula: y = 2 * x\n    E = y = 2 * 3\n    Resposta correta: 6\nC. y = 2x + 2\n    y = 6 + 2\n    y = 8\n    Fórmula: y = 2 * x + 2\n    E = y = 2 * x + 2\n    Resposta correta: 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\n    Fórmula: y = 3 * 4 + 2\n    E = y = 3 * 4 + 2\n    Resposta correta: 14\nE. y = 3 * 4 + 2\n    E = y = 12 + 2\n    y = 14\n    Fórmula: y = 3 * 4 + 2\n    E = y = 3 * 4 + 2\n    Resposta correta: 14\n\nExemplo 1: A. Qual é o valor de x na equação x + 5 = 12?\nB. Se a variável x é igual a 3, qual é o valor de y que pode ser obtido multiplicando x por 2?\nC. Qual é a fórmula para calcular o valor de y na equação 2x = 10?\nD. Encontre a raiz quadrada de 2x + 3, utilizando a",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1185,
+            "total_tokens": 1185
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0809325999871362,
+            "tempo_decode_s": 99.36142179998569,
+            "tempo_resposta_s": 99.44235439997283,
+            "tempo_total_s": 99.44235439997283,
+            "tokens_entrada": 0,
+            "tokens_saida": 1185,
+            "tps": 11.91645156784747,
+            "ram_inicio_mb": 1454.12109375,
+            "ram_pico_mb": 1456.25390625,
+            "ram_usada_mb": 2.1328125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questão (önhas) para habilidade EF06MA14:\n\n1. A. Qual é a fórmula para calcular o valor de x na equação x + 5 = 12?\n2. B. Se a variável x é igual a 3, qual é o valor de y que pode ser obtido multiplicando x por 2?\n3. C. Qual é a fórmula para calcular o valor de y na equação 2x = 10?\n4. D. Encontre a raiz quadrada de 2x + 3, utilizando a fórmula sqrt(x + 3).\n5. E. Determine o valor de y na equação y = 3x + 2, substituindo x por 4.\n\nResposta correta:\n\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\nC. y = 2 * 3 + 2\n    y = 6 + 2\n    y = 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\nE. y = 3 * 4 + 2\n    y = 12 + 2\n    y = 14\n\nResolução passo a passo:\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\n    Resposta correta: 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\n    Resposta correta: 6\nC. y = 2 * 3 + 2\n    y = 6 + 2\n    y = 8\n    Resposta correta: 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\n    Resposta correta: 14\nE. y = 3 * 4 + 2\n    y = 12 + 2\n    y = 14\n    Resposta correta: 14\n\nConsistência de estilo:\nA. x + 5 = 12\n    A = Fórmula\n    B = E = Especificação\nC. y = 2x\n    C = Fórmula\n    D = E = Especificação\nE. y = 3x + 2\n    E = Fórmula\n    D = E = Especificação\nResposta:\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\n    Fórmula: x + 5 = 12\n    E = x + 5 = 12\n    Resposta correta: 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\n    Fórmula: y = 2 * x\n    E = y = 2 * 3\n    Resposta correta: 6\nC. y = 2x + 2\n    y = 6 + 2\n    y = 8\n    Fórmula: y = 2 * x + 2\n    E = y = 2 * x + 2\n    Resposta correta: 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\n    Fórmula: y = 3 * 4 + 2\n    E = y = 3 * 4 + 2\n    Resposta correta: 14\nE. y = 3 * 4 + 2\n    E = y = 12 + 2\n    y = 14\n    Fórmula: y = 3 * 4 + 2\n    E = y = 3 * 4 + 2\n    Resposta correta: 14\n\nExemplo 1: A. Qual é o valor de x na equação x + 5 = 12?\nB. Se a variável x é igual a 3, qual é o valor de y que pode ser obtido multiplicando x por 2?\nC. Qual é a fórmula para calcular o valor de y na equação 2x = 10?\nD. Encontre a raiz quadrada de 2x + 3, utilizando a",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1185,
+            "total_tokens": 1185
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.1321188999863807,
+            "tempo_decode_s": 88.89909419999458,
+            "tempo_resposta_s": 89.03121309998096,
+            "tempo_total_s": 89.03121309998096,
+            "tokens_entrada": 0,
+            "tokens_saida": 1185,
+            "tps": 13.309938826389567,
+            "ram_inicio_mb": 1399.4140625,
+            "ram_pico_mb": 1406.75,
+            "ram_usada_mb": 7.3359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questão (önhas) para habilidade EF06MA14:\n\n1. A. Qual é a fórmula para calcular o valor de x na equação x + 5 = 12?\n2. B. Se a variável x é igual a 3, qual é o valor de y que pode ser obtido multiplicando x por 2?\n3. C. Qual é a fórmula para calcular o valor de y na equação 2x = 10?\n4. D. Encontre a raiz quadrada de 2x + 3, utilizando a fórmula sqrt(x + 3).\n5. E. Determine o valor de y na equação y = 3x + 2, substituindo x por 4.\n\nResposta correta:\n\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\nC. y = 2 * 3 + 2\n    y = 6 + 2\n    y = 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\nE. y = 3 * 4 + 2\n    y = 12 + 2\n    y = 14\n\nResolução passo a passo:\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\n    Resposta correta: 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\n    Resposta correta: 6\nC. y = 2 * 3 + 2\n    y = 6 + 2\n    y = 8\n    Resposta correta: 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\n    Resposta correta: 14\nE. y = 3 * 4 + 2\n    y = 12 + 2\n    y = 14\n    Resposta correta: 14\n\nConsistência de estilo:\nA. x + 5 = 12\n    A = Fórmula\n    B = E = Especificação\nC. y = 2x\n    C = Fórmula\n    D = E = Especificação\nE. y = 3x + 2\n    E = Fórmula\n    D = E = Especificação\nResposta:\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\n    Fórmula: x + 5 = 12\n    E = x + 5 = 12\n    Resposta correta: 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\n    Fórmula: y = 2 * x\n    E = y = 2 * 3\n    Resposta correta: 6\nC. y = 2x + 2\n    y = 6 + 2\n    y = 8\n    Fórmula: y = 2 * x + 2\n    E = y = 2 * x + 2\n    Resposta correta: 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\n    Fórmula: y = 3 * 4 + 2\n    E = y = 3 * 4 + 2\n    Resposta correta: 14\nE. y = 3 * 4 + 2\n    E = y = 12 + 2\n    y = 14\n    Fórmula: y = 3 * 4 + 2\n    E = y = 3 * 4 + 2\n    Resposta correta: 14\n\nExemplo 1: A. Qual é o valor de x na equação x + 5 = 12?\nB. Se a variável x é igual a 3, qual é o valor de y que pode ser obtido multiplicando x por 2?\nC. Qual é a fórmula para calcular o valor de y na equação 2x = 10?\nD. Encontre a raiz quadrada de 2x + 3, utilizando a",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1185,
+            "total_tokens": 1185
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0885439999983646,
+            "tempo_decode_s": 81.78261900000507,
+            "tempo_resposta_s": 81.87116300000343,
+            "tempo_total_s": 81.87116300000343,
+            "tokens_entrada": 0,
+            "tokens_saida": 1185,
+            "tps": 14.473960752211989,
+            "ram_inicio_mb": 1406.68359375,
+            "ram_pico_mb": 1408.61328125,
+            "ram_usada_mb": 1.9296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questão (önhas) para habilidade EF06MA14:\n\n1. A. Qual é a fórmula para calcular o valor de x na equação x + 5 = 12?\n2. B. Se a variável x é igual a 3, qual é o valor de y que pode ser obtido multiplicando x por 2?\n3. C. Qual é a fórmula para calcular o valor de y na equação 2x = 10?\n4. D. Encontre a raiz quadrada de 2x + 3, utilizando a fórmula sqrt(x + 3).\n5. E. Determine o valor de y na equação y = 3x + 2, substituindo x por 4.\n\nResposta correta:\n\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\nC. y = 2 * 3 + 2\n    y = 6 + 2\n    y = 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\nE. y = 3 * 4 + 2\n    y = 12 + 2\n    y = 14\n\nResolução passo a passo:\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\n    Resposta correta: 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\n    Resposta correta: 6\nC. y = 2 * 3 + 2\n    y = 6 + 2\n    y = 8\n    Resposta correta: 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\n    Resposta correta: 14\nE. y = 3 * 4 + 2\n    y = 12 + 2\n    y = 14\n    Resposta correta: 14\n\nConsistência de estilo:\nA. x + 5 = 12\n    A = Fórmula\n    B = E = Especificação\nC. y = 2x\n    C = Fórmula\n    D = E = Especificação\nE. y = 3x + 2\n    E = Fórmula\n    D = E = Especificação\nResposta:\nA. x + 5 = 12\n    x = 12 - 5\n    x = 7\n    Fórmula: x + 5 = 12\n    E = x + 5 = 12\n    Resposta correta: 7\nB. y = 2x\n    y = 2 * 3\n    y = 6\n    Fórmula: y = 2 * x\n    E = y = 2 * 3\n    Resposta correta: 6\nC. y = 2x + 2\n    y = 6 + 2\n    y = 8\n    Fórmula: y = 2 * x + 2\n    E = y = 2 * x + 2\n    Resposta correta: 8\nD. y = (3 * 4) + 2\n    y = 12 + 2\n    y = 14\n    Fórmula: y = 3 * 4 + 2\n    E = y = 3 * 4 + 2\n    Resposta correta: 14\nE. y = 3 * 4 + 2\n    E = y = 12 + 2\n    y = 14\n    Fórmula: y = 3 * 4 + 2\n    E = y = 3 * 4 + 2\n    Resposta correta: 14\n\nExemplo 1: A. Qual é o valor de x na equação x + 5 = 12?\nB. Se a variável x é igual a 3, qual é o valor de y que pode ser obtido multiplicando x por 2?\nC. Qual é a fórmula para calcular o valor de y na equação 2x = 10?\nD. Encontre a raiz quadrada de 2x + 3, utilizando a",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1185,
+            "total_tokens": 1185
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.15586009999969974,
+            "tempo_decode_s": 83.6558851999871,
+            "tempo_resposta_s": 83.8117452999868,
+            "tempo_total_s": 83.8117452999868,
+            "tokens_entrada": 0,
+            "tokens_saida": 1185,
+            "tps": 14.138829775690004,
+            "ram_inicio_mb": 1408.53125,
+            "ram_pico_mb": 1410.56640625,
+            "ram_usada_mb": 2.03515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a razão para que o número 1/3 não seja representado na forma de uma fração a/3?\n  2. Qual é a razão para que o número 2/5 não seja representado na forma de uma fração a/5?\n  3. Qual é a razão para que o número 3/7 não seja representado na forma de uma fração a/7?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 93,
+            "total_tokens": 93
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.668032400019001,
+            "tempo_decode_s": 8.290428899985272,
+            "tempo_resposta_s": 12.958461300004274,
+            "tempo_total_s": 12.958461300004274,
+            "tokens_entrada": 0,
+            "tokens_saida": 93,
+            "tps": 7.176778002182198,
+            "ram_inicio_mb": 1406.2578125,
+            "ram_pico_mb": 1437.26953125,
+            "ram_usada_mb": 31.01171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questão (önhas) para habilidade EF06MA14:\n\n1. A: Qual é a fórmula para calcular o valor de x na equação x + 5 = 12?\n2. B: Se x = 3, qual é o valor de x aplicando as propriedades da igualdade? Utilize a fórmula x = 3 para resolver esta equação.\n3. C: Se x = 4, qual é o valor de x aplicando as propriedades da igualdade? Utilize a fórmula x = 4 para resolver esta equação.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 144,
+            "total_tokens": 144
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.5071611999883316,
+            "tempo_decode_s": 11.031630700017558,
+            "tempo_resposta_s": 14.53879190000589,
+            "tempo_total_s": 14.53879190000589,
+            "tokens_entrada": 0,
+            "tokens_saida": 144,
+            "tps": 9.904536841189787,
+            "ram_inicio_mb": 1436.203125,
+            "ram_pico_mb": 1439.9453125,
+            "ram_usada_mb": 3.7421875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questão (ões) de múltipla escolha para a habilidade EF06MA14:\n\n  1. A equação 3x + 5 = 12 é uma equação com um valor fixo, que é 12. Para resolver essa equação, podemos utilizar a operação de resolvção para igualdade, que é igual a igualdade da segunda variável (5) em relação ao primeiro valor fixo (3). A solução para a equação é x = 1.\n  2. Se 2x = 10, então x é igual a 5. Para verificar se essa é uma solução para a equação, podemos utilizar a operação de resolvção para igualdade, que é igual a igualdade da segunda variável (10) em relação ao primeiro valor fixo (2). A solução para a equação é x = 5.\n  3. Se a igualdade 2x + 5 = 12 não é uma solução para a equação 3x + 5 = 12, então o valor de x não é 1. Para resolver essa equação, podemos utilizar a operação de resolvção para igualdade, que é igual a igualdade da segunda variável (12) em relação ao primeiro valor fixo (3). A solução para a equação é x = 2.\n\nA resposta correta para cada questão é:\n1. x = 1\n2. x = 5\n3. x = 2\n\nA resposta correta para a habilidade EF06MA14 é:\n\n```json\n{\n    \"questoes\": [\n        {\n            \"enunciado\": \"A equação 3x + 5 = 12 é uma equação com um valor fixo, que é 12. Para resolver essa equação, podemos utilizar a operação de resolvção para igualdade, que é igual a igualdade da segunda variável (5) em relação ao primeiro valor fixo (3). A solução para a equação é x = 1.\",\n            \"alternativas\": [\n                {\n                    \"A\": \"x = 1\",\n                    \"B\": \"x = 5\",\n                    \"C\": \"x = 2\",\n                    \"D\": \"x = 0\",\n                    \"E\": \"x = -1\"\n                },\n                {\n                    \"A\": \"x = 1\",\n                    \"B\": \"x = 2\",\n                    \"C\": \"x = 5\",\n                    \"D\": \"x = -3\",\n                    \"E\": \"x = -4\"\n                },\n                {\n                    \"A\": \"x = 5\",\n                    \"B\": \"x = 1\",\n                    \"C\": \"x = 2\",\n                    \"D\": \"x = -1\",\n                    \"E\": \"x = 0\"\n                },\n                {\n                    \"A\": \"x = 5\",\n                    \"B\": \"x = 2\",\n                    \"C\": \"x = 3\",\n                    \"D\": \"x = 0\",\n                    \"E\": \"x = -1\"\n                }\n            ],\n            \"resposta_ correta\": \"A\",\n            \"resolução_ passo_ a_passo\": \"Resolvendo a equação 3x + 5 = 12 e substituindo x por 1, temos x = 1, o que é o valor fixo para a equação.\"\n        },\n        {\n            \"enunciado\": \"Se 2x = 10, então x é igual a 5. Para verificar se essa é uma solução para a equação, podemos utilizar a operação de resolvção para igualdade, que é igual a igualdade da segunda variável (10) em relação ao primeiro valor fixo (2). A solução para a equação é x = 5.\",\n            \"alternativas\": [\n                {\n                    \"A\": \"x = 5\",\n                    \"B\": \"x = 2\",\n                    \"C\": \"x = 0\",\n                    \"D\": \"x = -3\",\n                    \"E\": \"x = -4\"\n                },\n                {\n                    \"A\": \"x = 5\",\n                    \"B\": \"x = 2\",\n                    \"C\": \"x = 6\",\n                    \"D\": \"x = -1\",\n                    \"E\": \"x = 0\"\n                },\n                {\n                    \"A\": \"x = 5\",\n                    \"B\": \"x = 2\",\n                    \"C\": \"x = 7\",\n                    \"D\": \"x = 0\",\n                    \"E\": \"x = -1\"\n                },\n                {\n                    \"A\": \"x = 5\",\n                    \"B\": \"x = ",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1218,
+            "total_tokens": 1218
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08292370001436211,
+            "tempo_decode_s": 95.83036829999764,
+            "tempo_resposta_s": 95.913292000012,
+            "tempo_total_s": 95.913292000012,
+            "tokens_entrada": 0,
+            "tokens_saida": 1218,
+            "tps": 12.698969815360394,
+            "ram_inicio_mb": 1439.97265625,
+            "ram_pico_mb": 1442.375,
+            "ram_usada_mb": 2.40234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a razão para que o número 1/3 não seja representado na forma de uma fração a/3?\n  2. Qual é a razão para que o número 2/5 não seja representado na forma de uma fração a/5?\n  3. Qual é a razão para que o número 3/7 não seja representado na forma de uma fração a/7?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 93,
+            "total_tokens": 93
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.316794599988498,
+            "tempo_decode_s": 8.450745700014522,
+            "tempo_resposta_s": 11.76754030000302,
+            "tempo_total_s": 11.76754030000302,
+            "tokens_entrada": 0,
+            "tokens_saida": 93,
+            "tps": 7.903095942656439,
+            "ram_inicio_mb": 1431.80859375,
+            "ram_pico_mb": 1438.30859375,
+            "ram_usada_mb": 6.5,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "{ \n    \"questoes\": [ \n        {\n            \"enunciado\": \"Quando se usa a reta numérica para encontrar um número entre 23 e 27, qual número está entre os dois números?\",\n            \"alternativas\": [\n                {\n                    \"A\": \"24\",\n                    \"B\": \"25\",\n                    \"C\": \"26\",\n                    \"D\": \"27\",\n                    \"E\": \"28\"\n                },\n                {\n                    \"A\": \"25\",\n                    \"B\": \"26\",\n                    \"C\": \"27\",\n                    \"D\": \"28\",\n                    \"E\": \"29\"\n                },\n                {\n                    \"A\": \"26\",\n                    \"B\": \"27\",\n                    \"C\": \"28\",\n                    \"D\": \"29\",\n                    \"E\": \"30\"\n                },\n                {\n                    \"A\": \"27\",\n                    \"B\": \"28\",\n                    \"C\": \"29\",\n                    \"D\": \"30\",\n                    \"E\": \"31\"\n                }\n            ],\n            \"resposta_ correta\": \"C\", \n            \"resolução_ passo_a_passo\": \"1. Identifique a reta numérica que se utiliza para encontrar o número entre 23 e 27: 26. 2. Determine qual número está entre os dois números: 26.\n2. A resposta correta é C, pois a reta numérica que se utiliza é 26.\n3. O passo de cálculo é 1, pois a questão está sobre a reta numérica.\n4. A resposta é consistente, pois as diferentes alternativas são validas e os resultados são corretos.\n5. O estilo de resposta é consistente, pois a resposta é escrita em formato de uma questão e apresenta as informações clara e concisa.\n6. A forma de apresentação é variada, pois a resposta apresenta as informações em uma lista alternativa e inclui um resumo de cada alternativa, além de um resultado consistente.\n7. A dificuldade é baseada no conhecimento previsto pelo aluno, que deve dominar a reta numérica para identificar o número entre 23 e 27.\n8. O exemplo de questionário é relevante para a habilidade, pois o objetivo é ensinar a utilização da reta numérica para encontrar um número entre 23 e 27, que é uma habilidade importante para a prática matemática na escola.\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 612,
+            "total_tokens": 612
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.038142000004882,
+            "tempo_decode_s": 48.937553700001445,
+            "tempo_resposta_s": 54.97569570000633,
+            "tempo_total_s": 54.97569570000633,
+            "tokens_entrada": 0,
+            "tokens_saida": 612,
+            "tps": 11.132192002436625,
+            "ram_inicio_mb": 1432.4765625,
+            "ram_pico_mb": 1436.7109375,
+            "ram_usada_mb": 4.234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 10.778605,
+        "ram_media_mb": 1446.884115,
+        "ram_pico_mb": 1447.824219,
+        "tempo_medio_segundos": 16.14236,
+        "ttft_medio_segundos": 1.191129,
+        "tps": {
+          "n": 3,
+          "mediana": 10.702293,
+          "iqr": 0.395142,
+          "p25": 10.561956,
+          "p75": 10.957098,
+          "p95": 11.160942,
+          "p99": 11.201711,
+          "max": 11.211904,
+          "media": 10.778605
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.093667,
+          "iqr": 1.656248,
+          "p25": 0.08864,
+          "p75": 1.744888,
+          "p95": 3.065864,
+          "p99": 3.330059,
+          "max": 3.396108,
+          "media": 1.191129
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 15.965175,
+          "iqr": 0.494435,
+          "p25": 15.850846,
+          "p75": 16.345281,
+          "p95": 16.649366,
+          "p99": 16.710183,
+          "max": 16.725388,
+          "media": 16.14236
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1447.761719,
+          "iqr": 1.378906,
+          "p25": 1446.414062,
+          "p75": 1447.792969,
+          "p95": 1447.817969,
+          "p99": 1447.822969,
+          "max": 1447.824219,
+          "media": 1446.884115
+        },
+        "tps_por_rodada": [
+          10.421619782405736,
+          11.211903548974997,
+          10.70229301768606
+        ],
+        "ttft_por_rodada": [
+          3.3961083000176586,
+          0.08361279999371618,
+          0.09366710000904277
+        ],
+        "tempo_por_rodada": [
+          15.736517300014384,
+          15.965174799988745,
+          16.725387700018473
+        ],
+        "ram_por_rodada": [
+          1447.82421875,
+          1447.76171875,
+          1445.06640625
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1447.824219,
+        "tps_medio": 10.778605,
+        "tempo_medio_segundos": 16.14236,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a forma de escrita de 1/3 (a) e 2/3 (b) em uma fração?\n2. Qual é a forma de escrita de 1/4 (a) e 3/4 (b) em uma fração?\n3. Qual é a forma de escrita de 1/5 (a) e 4/5 (b) em uma fração?\n4. Qual é a forma de escrita de 1/6 (a) e 5/6 (b) em uma fração?\n5. Qual é a forma de escrita de 1/7 (a) e 6/7 (b) em uma fração?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 164,
+            "total_tokens": 164
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.3961083000176586,
+            "tempo_decode_s": 12.340408999996725,
+            "tempo_resposta_s": 15.736517300014384,
+            "tempo_total_s": 15.736517300014384,
+            "tokens_entrada": 0,
+            "tokens_saida": 164,
+            "tps": 10.421619782405736,
+            "ram_inicio_mb": 1440.62890625,
+            "ram_pico_mb": 1447.82421875,
+            "ram_usada_mb": 7.1953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a forma de escrita de 1/3 (a) e 2/3 (b) em uma fração a/ b?\n2. Qual é a forma de escrita de 1/4 (a) e 3/4 (b) em uma fração a/ b?\n3. Qual é a forma de escrita de 1/5 (a) e 4/5 (b) em uma fração a/ b?\n4. Qual é a forma de escrita de 1/6 (a) e 5/6 (b) em uma fração a/ b?\n5. Qual é a forma de escrita de 1/7 (a) e 6/7 (b) em uma fração a/ b?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 179,
+            "total_tokens": 179
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08361279999371618,
+            "tempo_decode_s": 15.881561999995029,
+            "tempo_resposta_s": 15.965174799988745,
+            "tempo_total_s": 15.965174799988745,
+            "tokens_entrada": 0,
+            "tokens_saida": 179,
+            "tps": 11.211903548974997,
+            "ram_inicio_mb": 1447.7421875,
+            "ram_pico_mb": 1447.76171875,
+            "ram_usada_mb": 0.01953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a forma de escrita de 1/3 (a) e 2/3 (b) em uma fração a/ b?\n2. Qual é a forma de escrita de 1/4 (a) e 3/4 (b) em uma fração a/ b?\n3. Qual é a forma de escrita de 1/5 (a) e 4/5 (b) em uma fração a/ b?\n4. Qual é a forma de escrita de 1/6 (a) e 5/6 (b) em uma fração a/ b?\n5. Qual é a forma de escrita de 1/7 (a) e 6/7 (b) em uma fração a/ b?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 179,
+            "total_tokens": 179
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.09366710000904277,
+            "tempo_decode_s": 16.63172060000943,
+            "tempo_resposta_s": 16.725387700018473,
+            "tempo_total_s": 16.725387700018473,
+            "tokens_entrada": 0,
+            "tokens_saida": 179,
+            "tps": 10.70229301768606,
+            "ram_inicio_mb": 1443.234375,
+            "ram_pico_mb": 1445.06640625,
+            "ram_usada_mb": 1.83203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 11.754589,
+        "ram_media_mb": 1413.482422,
+        "ram_pico_mb": 1415.355469,
+        "tempo_medio_segundos": 88.52083,
+        "ttft_medio_segundos": 2.535333,
+        "tps": {
+          "n": 2,
+          "mediana": 11.754589,
+          "iqr": 0.018902,
+          "p25": 11.745138,
+          "p75": 11.76404,
+          "p95": 11.771601,
+          "p99": 11.773113,
+          "max": 11.773491,
+          "media": 11.754589
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.535333,
+          "iqr": 0.466209,
+          "p25": 2.302229,
+          "p75": 2.768438,
+          "p95": 2.954922,
+          "p99": 2.992219,
+          "max": 3.001543,
+          "media": 2.535333
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 88.52083,
+          "iqr": 1.375906,
+          "p25": 87.832877,
+          "p75": 89.208783,
+          "p95": 89.759146,
+          "p99": 89.869218,
+          "max": 89.896736,
+          "media": 88.52083
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1413.482422,
+          "iqr": 1.873047,
+          "p25": 1412.545898,
+          "p75": 1414.418945,
+          "p95": 1415.168164,
+          "p99": 1415.318008,
+          "max": 1415.355469,
+          "media": 1413.482422
+        },
+        "tps_por_rodada": [
+          11.73568746314551,
+          11.77349120722177
+        ],
+        "ttft_por_rodada": [
+          3.0015428999904543,
+          2.0691239000007045
+        ],
+        "tempo_por_rodada": [
+          89.89673619999667,
+          87.14492429999518
+        ],
+        "ram_por_rodada": [
+          1411.609375,
+          1415.35546875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. **Habilidade:** EF08MA05\n**Unidade Temática:** Geometria\n**Pré-reequisitos que o aluno já deve dominar  (calibração de dificuldade):**\n\n  * A. Geometria básica, como as raízes e as tangentes, como utilizadas na resolução de equações geométricas.\n  * B. Conhecimento da geometria abstracta, como o plano, o reta, o triângulo, o quadrado e o pentágono.\n  * C. Familiaridade com a geometria de formas, como as formas de recta, esfera e circulo.\n  * D. Aprenda a representar geometrias em diferentes f"
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. Habilidade: EF06MA17\nUnidade Temática: Geometria\nPré-reequisitos que o aluno deve dominar (calibração de dificuldade):\n1. Aprenda a definir e entender as geometrias básicas, como retas, retas retas, retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, reta"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 1415.355469,
+        "tps_medio": 11.754589,
+        "tempo_medio_segundos": 88.52083,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. **Habilidade:** EF08MA05\n**Unidade Temática:** Geometria\n**Pré-reequisitos que o aluno já deve dominar  (calibração de dificuldade):**\n\n  * A. Geometria básica, como as raízes e as tangentes, como utilizadas na resolução de equações geométricas.\n  * B. Conhecimento da geometria abstracta, como o plano, o reta, o triângulo, o quadrado e o pentágono.\n  * C. Familiaridade com a geometria de formas, como as formas de recta, esfera e circulo.\n  * D. Aprenda a representar geometrias em diferentes formatos, como gráficos, cartas, diagramas, e perspectivas.\n  * E. Aprenda a lidar com problemas de geometria aplicados, como o problema de geometria para a construção de edifícios, a geometria da tradição, e a geometria da física.\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n  1. **Especificação de uma geometria:**\n    * A. Define um quadrado no plano e determinifique a raíza e a tangente no quadrado.\n    * B. Identifique o plano e o triângulo que formam o equilíbrio entre dois rectas.\n    * C. Represente o círculo em uma gráfica e determine as raízes e as tangentes.\n    * D. Descreva a reta que passa por dois pontos e determine a raíza e a tangente.\n    * E. Represente o triângulo que forma o equilíbrio entre dois rectas e determine as raízes e as tangentes.\n\n  2. **Resolução de equações geométricas:**\n    * A. Resolve um equilíbrio entre dois rectas e determinifique as raízes e as tangentes.\n    * B. Resolve um equilíbrio entre dois triângulos e determinifique as raízes e as tangentes.\n    * C. Resolve um equilíbrio entre dois círculos e determinifique as raízes e as tangentes.\n    * D. Resolve um equilíbrio entre dois polígonos e determinifique as raízes e as tangentes.\n    * E. Resolve um equilíbrio entre dois arcos e determinifique as raízes e as tangentes.\n\n  3. **Representação gráfica de geometrias:**\n    * A. Represente um quadrado no plano e determine a raíza e a tangente.\n    * B. Represente um triângulo no plano e determine as raízes e as tangentes.\n    * C. Represente um círculo em uma gráfica e determine as raízes e as tangentes.\n    * D. Represente um triângulo que forma o equilíbrio entre dois rectas e determine as raízes e as tangentes.\n    * E. Represente um triângulo que forma o equilíbrio entre dois polígonos e determine as raízes e as tangentes.\n\n  4. **Representação gráfica de geometrias em perspectivas:**\n    * A. Represente um quadrado no plano e determine a raíza e a tangente.\n    * B. Represente um triângulo no plano e determine as raízes e as tangentes.\n    * C. Represente um círculo em uma perspectiva e determine as raízes e as tangentes.\n    * D. Represente um triângulo que forma o equilíbrio entre dois rectas e determine as raízes e as tangentes.\n    * E. Represente um triângulo que forma o equilíbrio entre dois polígonos e determine as raízes e as tangentes.\n\n  5. **Problemas de geometria aplicados:**\n    * A. Descreve um problema de geometria para a construção de edifícios, como a resolução de um problema de trígono.\n    * B. Descreve um problema de geometria para a construção de arcos, como a resolução de um problema de triângulo.\n    * C. Descreve um problema de geometria para a construção de retas, como a resolução de um problema de equilíbrio.\n    * D. Descreve um problema de geometria para a construção de circulos, como a res",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1055,
+            "total_tokens": 1055
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.0015428999904543,
+            "tempo_decode_s": 86.89519330000621,
+            "tempo_resposta_s": 89.89673619999667,
+            "tempo_total_s": 89.89673619999667,
+            "tokens_entrada": 0,
+            "tokens_saida": 1055,
+            "tps": 11.73568746314551,
+            "ram_inicio_mb": 1402.4453125,
+            "ram_pico_mb": 1411.609375,
+            "ram_usada_mb": 9.1640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Habilidade: EF06MA17\nUnidade Temática: Geometria\nPré-reequisitos que o aluno deve dominar (calibração de dificuldade):\n1. Aprenda a definir e entender as geometrias básicas, como retas, retas retas, retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas retas retas, retas retas",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1026,
+            "total_tokens": 1026
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.0691239000007045,
+            "tempo_decode_s": 85.07580039999448,
+            "tempo_resposta_s": 87.14492429999518,
+            "tempo_total_s": 87.14492429999518,
+            "tokens_entrada": 0,
+            "tokens_saida": 1026,
+            "tps": 11.77349120722177,
+            "ram_inicio_mb": 1413.23046875,
+            "ram_pico_mb": 1415.35546875,
+            "ram_usada_mb": 2.125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1993.9,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 9.6,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 88.52,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 14.1,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+    "gerado_em": "2026-09-25T19:39:07.289420"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}
