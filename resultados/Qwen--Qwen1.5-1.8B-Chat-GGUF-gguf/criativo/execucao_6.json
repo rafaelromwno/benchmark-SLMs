@@ -1,0 +1,1169 @@
+{
+  "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+  "formato": "gguf",
+  "data": "25/09/2026",
+  "run_config": {
+    "modelos": [
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\Qwen--Qwen1.5-1.8B-Chat-GGUF\\qwen1_5-1_8b-chat-q4_k_m.gguf"
+    },
+    "seed": 55,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 55
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "criativo",
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 55
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 55
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.21,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": "Campo 'questoes' ausente",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 1.3667530000093393,
+        "tempo_prefill_s": 14.228354199993191,
+        "tempo_decode_s": 80.53321670001606,
+        "tempo_resposta_s": 94.76157090000925,
+        "tempo_total_s": 96.12832390001859,
+        "tokens_entrada": 0,
+        "tokens_saida": 1162,
+        "tps": 12.262354760097024,
+        "ram_inicio_mb": 30.58203125,
+        "ram_pico_mb": 1992.04296875,
+        "ram_usada_mb": 1961.4609375,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 96.12832390001859,
+        "tempo_carregamento_s": 1.3667530000093393,
+        "tempo_resposta_s": 94.76157090000925,
+        "ram_pico_mb": 1992.04296875,
+        "ram_inicio_mb": 30.58203125,
+        "ttft_segundos": 14.228354199993191,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "{  \n  \"questões\": [\n    {\n      \"enunciado\": \"Considere a fração a/1000, e determine se é uma fração composta por um número inteiro e um número décimal.\",\n      \"alternativas\": [\n        {\n          \"enunciado\": \"a = 1000\",\n          \"alternativas\": [\n            \"a = 10000\",\n            \"a = 100000\",\n            \"a = 1000000\",\n            \"a = 10000000\"\n          ]\n        },\n        {\n          \"enunciado\": \"b = 1000\",\n          \"alternativas\": [\n            \"b = 10000\",\n            \"b = 100000\",\n            \"b = 1000000\",\n            \"b = 10000000\"\n          ]\n        },\n        {\n          \"enunciado\": \"c = 100000\",\n          \"alternativas\": [\n            \"c = 100000\",\n            \"c = 1000000\",\n            \"c = 10000000\",\n            \"c = 10000000\"\n          ]\n        },\n        {\n          \"enunciado\": \"d = 10000000\",\n          \"alternativas\": [\n            \"d = 10000000\",\n            \"d = 100000000\",\n            \"d = 1000000000\",\n            \"d = 10000000000\"\n          ]\n        },\n        {\n          \"enunciado\": \"e = 10000000000\",\n          \"alternativas\": [\n            \"e = 10000000000\",\n            \"e = 100000000000\",\n            \"e = 1000000000000\",\n            \"e = 10000000000000\"\n          ]\n        }\n      ],\n      \"resposta_ correta\": \"a = 100000\",\n      \"resolução_ passo_1_ passo_2\": \"Para converter a fração a/1000 em um número inteiro, primeiro, é necessário encontrar o resto da fração a/1000. O resto é igual a \\(\\frac{a - 1000}{1000}\\), o que pode ser obtido a partir do denominator. Portanto, o número inteiro que pode ser escrito em forma de uma fração a/1000 é 1000 - 1000 = 0. Isso significa que a fração a/1000 é uma fração composta por um número inteiro e um número décimal.\"\n    },\n    {\n      \"enunciado\": \"Considere o valor de 3/5.\",\n      \"alternativas\": [\n        {\n          \"enunciado\": \"3/5 = 3\",\n          \"alternativas\": [\n            \"3/5 = 1\",\n            \"3/5 = 0.6\",\n            \"3/5 = 3.33\",\n            \"3/5 = 2.5\",\n            \"3/5 = 2.25\"\n          ]\n        },\n        {\n          \"enunciado\": \"3/5 = 0.6\",\n          \"alternativas\": [\n            \"3/5 = 1\",\n            \"3/5 = 0.666666\",\n            \"3/5 = 0.66666666\",\n            \"3/5 = 0.6666666666666666\",\n            \"3/5 = 0.66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1162,
+            "total_tokens": 1162
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.3667530000093393,
+            "tempo_prefill_s": 14.228354199993191,
+            "tempo_decode_s": 80.53321670001606,
+            "tempo_resposta_s": 94.76157090000925,
+            "tempo_total_s": 96.12832390001859,
+            "tokens_entrada": 0,
+            "tokens_saida": 1162,
+            "tps": 12.262354760097024,
+            "ram_inicio_mb": 30.58203125,
+            "ram_pico_mb": 1992.04296875,
+            "ram_usada_mb": 1961.4609375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 13.303037,
+          "iqr": 0.5236,
+          "p25": 12.996904,
+          "p75": 13.520504,
+          "p95": 14.022352,
+          "p99": 14.130345,
+          "max": 14.157343,
+          "media": 13.064425
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.68891,
+          "iqr": 0.394572,
+          "p25": 2.624469,
+          "p75": 3.01904,
+          "p95": 3.70545,
+          "p99": 4.000208,
+          "max": 4.073897,
+          "media": 2.405033
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 82.96422,
+          "iqr": 35.046244,
+          "p25": 48.683156,
+          "p75": 83.7294,
+          "p95": 87.634118,
+          "p99": 89.83092,
+          "max": 90.380121,
+          "media": 68.24427
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1976.386719,
+          "iqr": 278.052734,
+          "p25": 1717.5,
+          "p75": 1995.552734,
+          "p95": 1998.820508,
+          "p99": 1999.510977,
+          "max": 1999.683594,
+          "media": 1880.311719
+        },
+        "tps_medio": 13.064425,
+        "ttft_medio_segundos": 2.405033,
+        "tempo_medio_segundos": 68.24427,
+        "ram_pico_mb": 1999.683594
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 13.303037,
+          "iqr": 0.5236,
+          "p25": 12.996904,
+          "p75": 13.520504,
+          "p95": 14.022352,
+          "p99": 14.130345,
+          "max": 14.157343,
+          "media": 13.064425
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.68891,
+          "iqr": 0.394572,
+          "p25": 2.624469,
+          "p75": 3.01904,
+          "p95": 3.70545,
+          "p99": 4.000208,
+          "max": 4.073897,
+          "media": 2.405033
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 82.96422,
+          "iqr": 35.046244,
+          "p25": 48.683156,
+          "p75": 83.7294,
+          "p95": 87.634118,
+          "p99": 89.83092,
+          "max": 90.380121,
+          "media": 68.24427
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1976.386719,
+          "iqr": 278.052734,
+          "p25": 1717.5,
+          "p75": 1995.552734,
+          "p95": 1998.820508,
+          "p99": 1999.510977,
+          "max": 1999.683594,
+          "media": 1880.311719
+        },
+        "tps_medio": 13.064425,
+        "ttft_medio_segundos": 2.405033,
+        "tempo_medio_segundos": 68.24427,
+        "ram_pico_mb": 1999.683594,
+        "tps_por_rodada": [
+          11.241609277834014,
+          14.1573428992294,
+          13.857363755756623,
+          13.322406575509726,
+          12.992731252688626,
+          11.794629068472515,
+          13.436603809920676,
+          13.54847066303556,
+          13.283666760603175,
+          13.009422581988723
+        ],
+        "ttft_por_rodada": [
+          4.073897300026147,
+          0.08285870001418516,
+          0.08196320000570267,
+          2.6110183999990113,
+          3.2551252999983262,
+          2.674919500015676,
+          2.7029008000099566,
+          3.086665399983758,
+          2.8161656000011135,
+          2.664819700003136
+        ],
+        "tempo_por_rodada": [
+          18.324778500013053,
+          36.80069090001052,
+          37.5973387999984,
+          83.31827990000602,
+          84.27789190001204,
+          90.38012080002227,
+          82.61016070001642,
+          83.33043839997845,
+          83.86238679999951,
+          81.94060830000672
+        ],
+        "ram_por_rodada": [
+          1994.1640625,
+          1996.015625,
+          1997.765625,
+          1999.68359375,
+          1974.890625,
+          1977.8828125,
+          1712.23046875,
+          1714.3671875,
+          1716.94140625,
+          1719.17578125
+        ],
+        "ram_media_mb": 1880.311719
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. A fração 4/7 é escrita no formato a/7, mas a fração 5/8 é escrita no formato b/7. qual é a fração que é escrita no formato a/7?\n   A = 4/7\n   B = 5/8\n2. A fração 1/2 é escrita no formato a/2, mas a fração 2/3 é escrita no formato b/2. qual é a fração que é escrita no formato a/2?\n   A = 1/2\n   B = 2/3\n3. A fração 1/4 é escrita no formato a/4, mas a fração 3/5 é escrita no formato b/4. qual é a fração que é escrita no formato a/4?\n   A = 1/4\n   B = 3/5",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 206,
+            "total_tokens": 206
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.073897300026147,
+            "tempo_decode_s": 14.250881199986907,
+            "tempo_resposta_s": 18.324778500013053,
+            "tempo_total_s": 18.324778500013053,
+            "tokens_entrada": 0,
+            "tokens_saida": 206,
+            "tps": 11.241609277834014,
+            "ram_inicio_mb": 1992.20703125,
+            "ram_pico_mb": 1994.1640625,
+            "ram_usada_mb": 1.95703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Questão 1 (1/3):**\nA. Qual é a fração a/2 do número 50?\nB. Qual é a fração b/3 do número 100?\nC. Qual é a fração c/4 do número 150?\nD. Qual é a fração d/5 do número 200?\n\n**Questão 2 (1/3):**\nA. Qual é a fração a/5 do número 100?\nB. Qual é a fração b/4 do número 150?\nC. Qual é a fração c/3 do número 120?\nD. Qual é a fração d/6 do número 200?\n\n**Questão 3 (1/3):**\nA. Qual é a fração a/3 do número 100?\nB. Qual é a fração b/2 do número 150?\nC. Qual é a fração c/1 do número 120?\nD. Qual é a fração d/5 do número 200?\n\nResposta correta: C, D, A, B\n\n**Resolução passo a passo:**\n\n1. Identifique a fração a/3 do número 100. Isso pode ser feito por dividir 100 por 3, como 33.33 (3/3 + 3/3 + 3/3).\n2. Identifique a fração b/2 do número 150. Isso pode ser feito por dividir 150 por 2, como 75.00.\n3. Identifique a fração c/1 do número 120. Isso pode ser feito por dividir 120 por 1, como 120.\n4. Identifique a fração d/5 do número 200. Isso pode ser feito por dividir 200 por 5, como 40.\n\nEm resumo, a fração a/3 é 33.33, a fração b/2 é 75.00, a fração c/1 é 120, e a fração d/5 é 40.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 521,
+            "total_tokens": 521
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08285870001418516,
+            "tempo_decode_s": 36.71783219999634,
+            "tempo_resposta_s": 36.80069090001052,
+            "tempo_total_s": 36.80069090001052,
+            "tokens_entrada": 0,
+            "tokens_saida": 521,
+            "tps": 14.1573428992294,
+            "ram_inicio_mb": 1994.140625,
+            "ram_pico_mb": 1996.015625,
+            "ram_usada_mb": 1.875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Questão 1 (1/3):**\nA. Qual é a fração a/2 do número 50?\nB. Qual é a fração b/3 do número 100?\nC. Qual é a fração c/4 do número 150?\nD. Qual é a fração d/5 do número 200?\n\n**Questão 2 (1/3):**\nA. Qual é a fração a/5 do número 100?\nB. Qual é a fração b/4 do número 150?\nC. Qual é a fração c/3 do número 120?\nD. Qual é a fração d/6 do número 200?\n\n**Questão 3 (1/3):**\nA. Qual é a fração a/3 do número 100?\nB. Qual é a fração b/2 do número 150?\nC. Qual é a fração c/1 do número 120?\nD. Qual é a fração d/5 do número 200?\n\nResposta correta: C, D, A, B\n\n**Resolução passo a passo:**\n\n1. Identifique a fração a/3 do número 100. Isso pode ser feito por dividir 100 por 3, como 33.33 (3/3 + 3/3 + 3/3).\n2. Identifique a fração b/2 do número 150. Isso pode ser feito por dividir 150 por 2, como 75.00.\n3. Identifique a fração c/1 do número 120. Isso pode ser feito por dividir 120 por 1, como 120.\n4. Identifique a fração d/5 do número 200. Isso pode ser feito por dividir 200 por 5, como 40.\n\nEm resumo, a fração a/3 é 33.33, a fração b/2 é 75.00, a fração c/1 é 120, e a fração d/5 é 40.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 521,
+            "total_tokens": 521
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.08196320000570267,
+            "tempo_decode_s": 37.515375599992694,
+            "tempo_resposta_s": 37.5973387999984,
+            "tempo_total_s": 37.5973387999984,
+            "tokens_entrada": 0,
+            "tokens_saida": 521,
+            "tps": 13.857363755756623,
+            "ram_inicio_mb": 1996.00390625,
+            "ram_pico_mb": 1997.765625,
+            "ram_usada_mb": 1.76171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Questão 1 (1st attempt):**\nEstabeleça um número entre 23 e 27 utilizando a reta numérica e retorne o resultado.\nResposta: 25\nResolução: 25 = 23 + 2\nPasso 1: Cálculo numericamente\n  * 23 + 2 = 25\n  * 25 = 23 + 2\nPasso 2: Ajuste a resolução passo a passo\n  * 25 = 23 + 2\n  * 25 = 23 + 2\n\n**Questão 2 (2nd attempt):**\nIdentifique a paralela entre o número 100 e 200 utilizando a reta numérica e retorne o resultado.\nResposta: 150\nResolução: 150 = 100 + 50\nPasso 1: Cálculo numericamente\n  * 100 + 50 = 150\n  * 150 = 100 + 50\n\n**Questão 3 (3rd attempt):**\nUsando a reta numérica, qual número está entre 40 e 60? \nResposta: 50\nResolução: 50 = 40 + 10\nPasso 1: Cálculo numericamente\n  * 40 + 10 = 50\n  * 50 = 40 + 10\n\n**Questão 4 (4th attempt):**\nIdentifique a paralela entre o número 70 e 90 utilizando a reta numérica e retorne o resultado.\nResposta: 80\nResolução: 80 = 70 + 10\nPasso 1: Cálculo numericamente\n  * 70 + 10 = 80\n  * 80 = 70 + 10\n\n**Questão 5 (5th attempt):**\nUsando a reta numérica, qual número está entre 110 e 130? \nResposta: 120\nResolução: 120 = 110 + 10\nPasso 1: Cálculo numericamente\n  * 110 + 10 = 120\n  * 120 = 110 + 10\n\n**Questão 6 (6th attempt):**\nIdentifique a paralela entre o número 150 e 170 utilizando a reta numérica e retorne o resultado.\nResposta: 160\nResolução: 160 = 150 + 10\nPasso 1: Cálculo numericamente\n  * 150 + 10 = 160\n  * 160 = 150 + 10\n\n**Questão 7 (7th attempt):**\nUsando a reta numérica, qual número está entre 180 e 190? \nResposta: 180\nResolução: 180 = 180 + 10\nPasso 1: Cálculo numericamente\n  * 180 + 10 = 180\n\n**Questão 8 (8th attempt):**\nIdentifique a paralela entre o número 200 e 220 utilizando a reta numérica e retorne o resultado.\nResposta: 210\nResolução: 210 = 200 + 10\nPasso 1: Cálculo numericamente\n  * 200 + 10 = 210\n\n**Questão 9 (9th attempt):**\nIdentifique a paralela entre o número 250 e 270 utilizando a reta numérica e retorne o resultado.\nResposta: 260\nResolução: 260 = 250 + 10\nPasso 1: Cálculo numericamente\n  * 250 + 10 = 260\n\n**Questão 10 (10th attempt):**\nIdentifique a paralela entre o número 300 e 320 utilizando a reta numérica e retorne o resultado.\nResposta: 310\nResolução: 310 = 300 + 10\nPasso 1: Cálculo numericamente\n  * 300 + 10 =",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1110,
+            "total_tokens": 1110
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6110183999990113,
+            "tempo_decode_s": 80.70726150000701,
+            "tempo_resposta_s": 83.31827990000602,
+            "tempo_total_s": 83.31827990000602,
+            "tokens_entrada": 0,
+            "tokens_saida": 1110,
+            "tps": 13.322406575509726,
+            "ram_inicio_mb": 1997.66015625,
+            "ram_pico_mb": 1999.68359375,
+            "ram_usada_mb": 2.0234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Hability:** EF06MA14\n**Unidade Temática:** Álgebra\n**Pré-Requisitos que o aluno deve dominar  (calibração de dificuldade):**\n\n1. EF06MA01: Identificar e resolver equações básicas, como linear, no caso de x + 5 = 12.\n2. EF06MA02: Utilizar operações básicas de simplificação e fórmulas para resolver equações, como 2x = 10.\n3. EF06MA03: Utilizar algebras básicas de binomial, como 2x + 3 = 10.\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n1. Exemplo 1: Determine o valor de x quando x + 5 = 12.\na) Escrever a equação e mostrar o resultado na tabela.\nb) Utilizar a equação e resolver a equação, apresentando as resultados na tabela.\nc) Utilizar a equação e mostrar o resultado na função matemática.\n\n2. Exemplo 2: Determine o valor de x quando 2x = 10.\na) Escrever a equação e mostrar o resultado na tabela.\nb) Utilizar a equação e resolver a equação, apresentando as resultados na tabela.\nc) Utilizar a equação e mostrar o resultado na função matemática.\n\n3. Exemplo 3: Determine o valor de x em relação à fórmula 2x + 3 = 10.\na) Escrever a equação e mostrar o resultado na tabela.\nb) Utilizar a equação e resolver a equação, apresentando as resultados na tabela.\nc) Utilizar a equação e mostrar o resultado na função matemática.\nd) Identificar e resolver a equação de segundo grau, como 2x + 6 = 10, e apresentar as resultados na tabela.\n\n4. Exemplo 4: Determinar o valor de x em relação à fórmula 3x + 5 = 10.\na) Escrever a equação e mostrar o resultado na tabela.\nb) Utilizar a equação e resolver a equação, apresentando as resultados na tabela.\nc) Utilizar a equação e mostrar o resultado na função matemática.\nd) Identificar e resolver a equação de segundo grau, como 3x + 7 = 10, e apresentar as resultados na tabela.\n\n5. Exemplo 5: Utilizar as equações básicas de simplificação para resolver equações.\na) Escrever a equação e mostrar o resultado na tabela.\nb) Utilizar as equações básicas de simplificação e resolver a equação, apresentando as resultados na tabela.\nc) Utilizar as equações básicas de simplificação e mostrar o resultado na função matemática.\n\n6. Exemplo 6: Utilizar as operações básicas de factorização para resolver equações.\na) Escrever a equação e mostrar o resultado na tabela.\nb) Utilizar as operações básicas de factorização e resolver a equação, apresentando as resultados na tabela.\nc) Utilizar as operações básicas de factorização e mostrar o resultado na função matemática.\n\n7. Exemplo 7: Utilizar as operações básicas de potência para resolver equações.\na) Escrever a equação e mostrar o resultado na tabela.\nb) Utilizar as operações básicas de potência e resolver a equação, apresentando as resultados na tabela.\nc) Utilizar as operações básicas de potência e mostrar o resultado na função matemática.\n\n8. Exemplo 8: Utilizar as equações básicas de multiplicação e divisão para resolver equações.\na) Escrever a equação e mostrar o resultado na tabela.\nb) Utilizar as equações básicas de multiplicação e divisão e resolver a equação, apresentando as resultados na tabela.\nc) Utilizar as equações básicas de multiplicação e divisão e mostrar o resultado na função matemática.\n\n9. Exemplo 9: Utilizar as equações básicas de integração para resolver integrações.\na) Escrever a equação e mostrar o resultado na tabela.\nb) Utilizar as equações básicas de integração e resolver a integração, apresentando as resultados na tabela.\nc) Utilizar as equações básicas de integração e mostrar o resultado na função matemática.\n\n10. Exemplo 10: Utilizar as equações básicas de diferencição para resolver diferencições.\na) Escrever a equação e mostrar o resultado na tabela",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1095,
+            "total_tokens": 1095
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.2551252999983262,
+            "tempo_decode_s": 81.02276660001371,
+            "tempo_resposta_s": 84.27789190001204,
+            "tempo_total_s": 84.27789190001204,
+            "tokens_entrada": 0,
+            "tokens_saida": 1095,
+            "tps": 12.992731252688626,
+            "ram_inicio_mb": 1972.16015625,
+            "ram_pico_mb": 1974.890625,
+            "ram_usada_mb": 2.73046875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Questão 1 (10 pontos):**\nAbaixo estão alguns números que podem ser escritos em uma fração a/b, com a e b inteiros, b ≠ 0. Determine se todos esses números possuem uma fração a/b, e if so, avalie a precisão da fração. Para cada número, identifique o valor da fração a/b e avalie a precisão da fração. Qual é a maior diferença entre o valor da fração a/b e o valor da fração da fração, e qual é o valor da fração total?\n```yaml\n| Número | Fração a/bo | Fração b |\n|---------|--------------|------------|\n| 10     | 1/2          | 1          |\n| 15     | 3/5          | 1.5          |\n| 20     | 5/10         | 2.5          |\n| 25     | 7/14         | 3.5          |\n```\n**Resposta:**\nPara todos os números acima, há uma fração a/bo. O valor da fração a/bo é 1, e o valor da fração b é 1.\nPara cada número, a diferença entre o valor da fração a/bo e o valor da fração da fração é 0, pois são iguais. Por exemplo, a diferença entre 10/2 e 1/2 é 9, o que é o valor da fração total.\nO maior diferença entre o valor da fração a/bo e o valor da fração da fração é 9, e o valor da fração total é 10.\nA resposta correta é:\n\n```\nAbaixo estão alguns números que podem ser escritos em uma fração a/b, com a e b inteiros, b ≠ 0. Qualquer desses números possuem uma fração a/bo, e if so, avalie a precisão da fração. Para cada número, identifique o valor da fração a/bo e avalie a precisão da fração. Qual é a maior diferença entre o valor da fração a/bo e o valor da fração da fração, e qual é o valor da fração total? Qual é o maior diferença entre o valor da fração a/bo e o valor da fração da fração, e qual é o valor da fração total? Qual é o maior diferença entre o valor da fração a/bo e o valor da fração da fração, e qual é o valor da fração total?\n| Número | Fração a/bo | Fração b |\n|---------|--------------|------------|\n| 10     | 1/2          | 1          |\n| 15     | 3/5          | 1.5          |\n| 20     | 5/10         | 2.5          |\n| 25     | 7/14         | 3.5          |\n| 30     | 9/18         | 4.5          |\n| 35     | 11/22        | 5.5          |\n```\n**Resposta 2 (10 pontos):**\nPara todos os números acima, há uma fração b, com a e b inteiros, b ≠ 0. Qualquer desses números possuem uma fração b, e if so, avalie a precisão da fração. Para cada número, identifique o valor da fração b e avalie a precisão da fração. Qual é a diferença entre o valor da fração b e o valor da fração da fração, e qual é o valor da fração total?\n```yaml\n| Número | Fração b | Fração a |\n|---------|--------------|------------|\n| 10     | 1/2          | 1          |\n| 15     | 3/5          | 1.5          |\n| 20     | 5/10         | 2.5          |\n| 25     | 7/14         | 3.5          |\n| 30     | 9/18         | 4.5          |\n| 35     | 11/22        | 5.5          |\n```\n**Resposta:**\nPara todos os números acima, há uma fração b. O valor da fração b é 1, e o valor da fração a é 1.\nPara cada número, a diferença entre o valor da fração b e o valor da fração da fração é 0, pois são iguais. Por exemplo, a diferença",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1066,
+            "total_tokens": 1066
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.674919500015676,
+            "tempo_decode_s": 87.70520130000659,
+            "tempo_resposta_s": 90.38012080002227,
+            "tempo_total_s": 90.38012080002227,
+            "tokens_entrada": 0,
+            "tokens_saida": 1066,
+            "tps": 11.794629068472515,
+            "ram_inicio_mb": 1975.4375,
+            "ram_pico_mb": 1977.8828125,
+            "ram_usada_mb": 2.4453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Questão 1 (1st attempt):**\nEstabeleça um número entre 23 e 27 utilizando a reta numérica e retorne o resultado.\nResposta: 25\nResolução: 25 = 23 + 2\nPasso 1: Cálculo numericamente\n  * 23 + 2 = 25\n  * 25 = 23 + 2\nPasso 2: Ajuste a resolução passo a passo\n  * 25 = 23 + 2\n  * 25 = 23 + 2\n\n**Questão 2 (2nd attempt):**\nIdentifique a paralela entre o número 100 e 200 utilizando a reta numérica e retorne o resultado.\nResposta: 150\nResolução: 150 = 100 + 50\nPasso 1: Cálculo numericamente\n  * 100 + 50 = 150\n  * 150 = 100 + 50\n\n**Questão 3 (3rd attempt):**\nUsando a reta numérica, qual número está entre 40 e 60? \nResposta: 50\nResolução: 50 = 40 + 10\nPasso 1: Cálculo numericamente\n  * 40 + 10 = 50\n  * 50 = 40 + 10\n\n**Questão 4 (4th attempt):**\nIdentifique a paralela entre o número 70 e 90 utilizando a reta numérica e retorne o resultado.\nResposta: 80\nResolução: 80 = 70 + 10\nPasso 1: Cálculo numericamente\n  * 70 + 10 = 80\n  * 80 = 70 + 10\n\n**Questão 5 (5th attempt):**\nUsando a reta numérica, qual número está entre 110 e 130? \nResposta: 120\nResolução: 120 = 110 + 10\nPasso 1: Cálculo numericamente\n  * 110 + 10 = 120\n  * 120 = 110 + 10\n\n**Questão 6 (6th attempt):**\nIdentifique a paralela entre o número 150 e 170 utilizando a reta numérica e retorne o resultado.\nResposta: 160\nResolução: 160 = 150 + 10\nPasso 1: Cálculo numericamente\n  * 150 + 10 = 160\n  * 160 = 150 + 10\n\n**Questão 7 (7th attempt):**\nUsando a reta numérica, qual número está entre 180 e 190? \nResposta: 180\nResolução: 180 = 180 + 10\nPasso 1: Cálculo numericamente\n  * 180 + 10 = 180\n\n**Questão 8 (8th attempt):**\nIdentifique a paralela entre o número 200 e 220 utilizando a reta numérica e retorne o resultado.\nResposta: 210\nResolução: 210 = 200 + 10\nPasso 1: Cálculo numericamente\n  * 200 + 10 = 210\n\n**Questão 9 (9th attempt):**\nIdentifique a paralela entre o número 250 e 270 utilizando a reta numérica e retorne o resultado.\nResposta: 260\nResolução: 260 = 250 + 10\nPasso 1: Cálculo numericamente\n  * 250 + 10 = 260\n\n**Questão 10 (10th attempt):**\nIdentifique a paralela entre o número 300 e 320 utilizando a reta numérica e retorne o resultado.\nResposta: 310\nResolução: 310 = 300 + 10\nPasso 1: Cálculo numericamente\n  * 300 + 10 =",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1110,
+            "total_tokens": 1110
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.7029008000099566,
+            "tempo_decode_s": 79.90725990000647,
+            "tempo_resposta_s": 82.61016070001642,
+            "tempo_total_s": 82.61016070001642,
+            "tokens_entrada": 0,
+            "tokens_saida": 1110,
+            "tps": 13.436603809920676,
+            "ram_inicio_mb": 1709.6640625,
+            "ram_pico_mb": 1712.23046875,
+            "ram_usada_mb": 2.56640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Questão 1 (1/3):**\nA / b\n```python\n# Define the fractions as integers\nnumerator = 1\ndenominator = 2\n\n# Calculate the fraction\nfraction = numerator / denominator\n\nfraction\n```\n**Alternativa 1:**\nA / 2\n```python\n# Calculate the fraction\nfraction = numerator / denominator\n\nfraction\n```\n**Alternativa 2:**\n1 / b\n```python\n# Calculate the fraction\nfraction = 1 / denominator\n\nfraction\n```\n**Alternativa 3:**\n1 / 2b\n```python\n# Calculate the fraction\nfraction = 1 / denominator\n\nfraction\n```\n**Resposta correta:**\n1/2\n**Resolução passo a passo:**\n* O número 1 é representado no intervalo [1, 2] da unidade temática Números, por isso, é escrito na forma de uma fração a/2.\n* A divisão de 2 por 1 é o resultado de divisão de 2 por 1, que é 1, então o número 1 é representado na forma de uma fração a.\n* A fração a = 1/2 representa o número 1 dividido pelo número 2, e a fração b = 2 representa o número 2 dividido pelo número 1, então a = b/1 = 2/1.\n* Portanto, a / b é escrito na forma de uma fração a/2, representada na seguinte forma:\n```\nA / b = (1/2) / (2/1) = 1/2\n```\n\n**Questão 2 (2/3):**\nDentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a / b (com a e b inteiros, b≠0)? e como isso se relaciona com a unidade temática Números?\n```python\n# Define the fractions as integers\nnumerator = 1\ndenominator = 3\n\n# Calculate the fraction\nfraction = numerator / denominator\n\nfraction\n```\n**Alternativa 1:**\nA / 3\n```python\n# Calculate the fraction\nfraction = numerator / denominator\n\nfraction\n```\n**Alternativa 2:**\n1 / b\n```python\n# Calculate the fraction\nfraction = 1 / denominator\n\nfraction\n```\n**Alternativa 3:**\n1 / 3b\n```python\n# Calculate the fraction\nfraction = 1 / denominator\n\nfraction\n```\n**Alternativa 4:**\n3 / b\n```python\n# Calculate the fraction\nfraction = 3 / denominator\n\nfraction\n```\n**Alternativa 5:**\n3 / 3b\n```python\n# Calculate the fraction\nfraction = 3 / denominator\n\nfraction\n```\n**Resposta correta:**\n1/3\n**Resolução passo a passo:**\n* O número 1 é representado no intervalo [1, 3] da unidade temática Números, por isso, é escrito na forma de uma fração a/3.\n* A divisão de 3 por 1 é o resultado de divisão de 3 por 1, que é 3, então o número 1 é representado na forma de uma fração a.\n* A fração a = 1/3 representa o número 1 dividido pelo número 3, e a fração b = 3 representa o número 3 dividido pelo número 1, então a = b/1 = 3/1.\n* Portanto, a / b é escrito na forma de uma fração a/3, representada na seguinte forma:\n```\nA / b = (1/3) / (3/1) = 1/3\n```\n\n**Questão 3 (3/4):**\nDentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a / b (com a e b inteiros, b≠0)? e como isso se relaciona com a unidade temática Números?\n```python\n# Define the fractions as integers\nnumerator = 1\ndenominator = 4\n\n# Calculate the fraction\nfraction = numerator / denominator\n\nfraction\n```\n**Alternativa 1:**\nA / 4\n```python\n# Calculate the fraction\nfraction = numerator / denominator\n\nfraction\n```\n**Alternativa 2:**\n1 / b\n```python\n# Calculate the fraction\nfraction = 1 / denominator\n\nfraction\n```\n**Alternativa 3:**\n1 / 4b\n```python\n# Calculate the fraction\nfraction = 1 / denominator\n\nfraction\n```\n**Alternativa 4:**\n4 / b\n```",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1129,
+            "total_tokens": 1129
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.086665399983758,
+            "tempo_decode_s": 80.24377299999469,
+            "tempo_resposta_s": 83.33043839997845,
+            "tempo_total_s": 83.33043839997845,
+            "tokens_entrada": 0,
+            "tokens_saida": 1129,
+            "tps": 13.54847066303556,
+            "ram_inicio_mb": 1712.20703125,
+            "ram_pico_mb": 1714.3671875,
+            "ram_usada_mb": 2.16015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questões de múltipla escolha para a habilidade EF06MA14 daBNCC:\n\n**Habilidade:** EF06MA14\n**Unidade Temática:** Álgebra\n\n**Pré--requisitos que o aluno já deve dominar  (calibração de dificuldade):**\n\n1. **Fórmula matemática para multiplicar dois números:** A multiplicação de dois números é uma operação matemática simples que ocorre quando dois números são divididos pelo mesmo número. O resultado é o produto de cada número pelo resto da divisão. Por exemplo, se x = 5 e y = 2, o resultado da multiplicação de x e y é:\n   x * y = 5 * 2 = 10\n\n2. **Soma de duas matemáticas:** A soma de dois números é a sumada de dois valores numéricos. Se x = 5 e y = 7, o resultado da soma é:\n   x + y = 5 + 7 = 12\n\n3. **Divisão de dois números:** A divisão de dois números é uma operação matemática simples que ocorre quando dois números são divididos pelo mesmo número. O resultado é o resto da divisão. Por exemplo, se x = 5 e y = 7, o resultado da divisão de x e y é:\n   x ÷ y = 5 ÷ 7 = 0.7142857142857143\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n1. **Algoritmo para calcular o resultado da multiplicação de dois números:**\n   ```python\n   # Define os números x e y\n   x = 5\n   y = 2\n\n   # Calcula o resultado da multiplicação de x e y\n   product = x * y\n\n   # Imprime o resultado na tela\n   print(\"O produto da\", x, \"e\", y, \"é:\", product)\n   ```\n\n2. **Soma de dois números na função Python:**\n   ```python\n   # Define os números x e y\n   x = 5\n   y = 7\n\n   # Calcula o soma de x e y na função\n   sum_result = x + y\n\n   # Imprime o resultado na tela\n   print(\"O somatório de\", x, \"e\", y, \"é:\", sum_result)\n   ```\n\n3. **Divisão de dois números na função Python:**\n   ```python\n   # Define os números x e y\n   x = 5\n   y = 7\n\n   # Divisão de x e y na função\n   quotient = x / y\n\n   # Imprime o resultado na tela\n   print(\"O resultado da divisão de\", x, \"e\", y, \"é:\", quotient)\n   ```\n\n4. **Resposta ao problema de divisão de um número por outro:**\n   ```python\n   # Define um número x\n   x = 5\n\n   # Define um número y\n   y = 7\n\n   # Divisão de x por y e imprime o resultado na tela\n   print(\"O resultado da divisão de\", x, \"e\", y, \"é:\", x / y)\n   ```\n\n5. **Resposta ao problema de divisão de um número por outro em matemática com uma fração de dois números:**\n   ```python\n   # Define um número x\n   x = 5\n\n   # Define um número y\n   y = 2\n\n   # Divisão de x por y e imprime o resultado na tela\n   print(\"O resultado da divisão de\", x, \"e\", y, \"é:\", x / y * 0.5)\n   ```\n\n6. **Resposta ao problema de multiplicar uma fração por um número:**\n   ```python\n   # Define uma fração f = 2/3\n   f = 2 / 3\n\n   # Multiplicar a fração por um número e imprime o resultado na tela\n   print(\"O resultado da multiplicação de\", f, \"por\", 5, \"é:\", f * 5)\n   ```\n\n7. **Resposta ao problema de resolver uma equação matemática:**\n   ```python\n   # Define uma equação matemática:\n   y = 5 + 2x\n\n   # Resolve a equação e imprime o resultado na tela\n   print(\"O valor da solução é:\", y)\n   ```\n\n8. **Resposta ao problema de resolver uma equação matemática com um sistema de equações:**\n   ```python\n   # Define um sistema de",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1114,
+            "total_tokens": 1114
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.8161656000011135,
+            "tempo_decode_s": 81.0462211999984,
+            "tempo_resposta_s": 83.86238679999951,
+            "tempo_total_s": 83.86238679999951,
+            "tokens_entrada": 0,
+            "tokens_saida": 1114,
+            "tps": 13.283666760603175,
+            "ram_inicio_mb": 1714.60546875,
+            "ram_pico_mb": 1716.94140625,
+            "ram_usada_mb": 2.3359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Questão 1 (10 pontos):**\nAbaixo estão alguns números que podem ser escritos em uma fração a/b, com a e b inteiros, b ≠ 0. Determine se todos esses números possuem uma fração a/b, e if so, avalie a precisão da fração. Para cada número, identifique o valor da fração a/b e avalie a precisão da fração. Qual é a maior diferença entre o valor da fração a/b e o valor da fração da fração, e qual é o valor da fração total?\n```yaml\n| Número | Fração a/bo | Fração b |\n|---------|--------------|------------|\n| 10     | 1/2          | 1          |\n| 15     | 3/5          | 1.5          |\n| 20     | 5/10         | 2.5          |\n| 25     | 7/14         | 3.5          |\n```\n**Resposta:**\nPara todos os números acima, há uma fração a/bo. O valor da fração a/bo é 1, e o valor da fração b é 1.\nPara cada número, a diferença entre o valor da fração a/bo e o valor da fração da fração é 0, pois são iguais. Por exemplo, a diferença entre 10/2 e 1/2 é 9, o que é o valor da fração total.\nO maior diferença entre o valor da fração a/bo e o valor da fração da fração é 9, e o valor da fração total é 10.\nA resposta correta é:\n\n```\nAbaixo estão alguns números que podem ser escritos em uma fração a/b, com a e b inteiros, b ≠ 0. Qualquer desses números possuem uma fração a/bo, e if so, avalie a precisão da fração. Para cada número, identifique o valor da fração a/bo e avalie a precisão da fração. Qual é a maior diferença entre o valor da fração a/bo e o valor da fração da fração, e qual é o valor da fração total? Qual é o maior diferença entre o valor da fração a/bo e o valor da fração da fração, e qual é o valor da fração total? Qual é o maior diferença entre o valor da fração a/bo e o valor da fração da fração, e qual é o valor da fração total?\n| Número | Fração a/bo | Fração b |\n|---------|--------------|------------|\n| 10     | 1/2          | 1          |\n| 15     | 3/5          | 1.5          |\n| 20     | 5/10         | 2.5          |\n| 25     | 7/14         | 3.5          |\n| 30     | 9/18         | 4.5          |\n| 35     | 11/22        | 5.5          |\n```\n**Resposta 2 (10 pontos):**\nPara todos os números acima, há uma fração b, com a e b inteiros, b ≠ 0. Qualquer desses números possuem uma fração b, e if so, avalie a precisão da fração. Para cada número, identifique o valor da fração b e avalie a precisão da fração. Qual é a diferença entre o valor da fração b e o valor da fração da fração, e qual é o valor da fração total?\n```yaml\n| Número | Fração b | Fração a |\n|---------|--------------|------------|\n| 10     | 1/2          | 1          |\n| 15     | 3/5          | 1.5          |\n| 20     | 5/10         | 2.5          |\n| 25     | 7/14         | 3.5          |\n| 30     | 9/18         | 4.5          |\n| 35     | 11/22        | 5.5          |\n```\n**Resposta:**\nPara todos os números acima, há uma fração b. O valor da fração b é 1, e o valor da fração a é 1.\nPara cada número, a diferença entre o valor da fração b e o valor da fração da fração é 0, pois são iguais. Por exemplo, a diferença",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1066,
+            "total_tokens": 1066
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.664819700003136,
+            "tempo_decode_s": 79.27578860000358,
+            "tempo_resposta_s": 81.94060830000672,
+            "tempo_total_s": 81.94060830000672,
+            "tokens_entrada": 0,
+            "tokens_saida": 1066,
+            "tps": 13.009422581988723,
+            "ram_inicio_mb": 1717.3671875,
+            "ram_pico_mb": 1719.17578125,
+            "ram_usada_mb": 1.80859375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 14.079774,
+        "ram_media_mb": 1723.174479,
+        "ram_pico_mb": 1725.050781,
+        "tempo_medio_segundos": 21.049239,
+        "ttft_medio_segundos": 1.077308,
+        "tps": {
+          "n": 3,
+          "mediana": 14.458881,
+          "iqr": 1.492449,
+          "p25": 13.428326,
+          "p75": 14.920775,
+          "p95": 15.29029,
+          "p99": 15.364193,
+          "max": 15.382669,
+          "media": 14.079774
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.086822,
+          "iqr": 1.498368,
+          "p25": 0.080503,
+          "p75": 1.578871,
+          "p95": 2.77251,
+          "p99": 3.011238,
+          "max": 3.07092,
+          "media": 1.077308
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 16.460471,
+          "iqr": 7.871666,
+          "p25": 15.966214,
+          "p75": 23.83788,
+          "p95": 29.739807,
+          "p99": 30.920193,
+          "max": 31.215289,
+          "media": 21.049239
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1723.285156,
+          "iqr": 1.931641,
+          "p25": 1722.236328,
+          "p75": 1724.167969,
+          "p95": 1724.874219,
+          "p99": 1725.015469,
+          "max": 1725.050781,
+          "media": 1723.174479
+        },
+        "tps_por_rodada": [
+          12.397770769337114,
+          14.458881435052644,
+          15.38266873621907
+        ],
+        "ttft_por_rodada": [
+          3.070919799996773,
+          0.07418359999428503,
+          0.0868219000112731
+        ],
+        "tempo_por_rodada": [
+          31.215289199986728,
+          16.460471099999268,
+          15.471957700006897
+        ],
+        "ram_por_rodada": [
+          1721.1875,
+          1723.28515625,
+          1725.05078125
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1725.050781,
+        "tps_medio": 14.079774,
+        "tempo_medio_segundos": 21.049239,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Determine se o número abaixo é um número primo, um múltiplo, um múltiplo comum, um número palíndromo ou um número composto.\n2. Identifique um número que pode ser escrito na forma de uma fração a/ b, com a e b inteis, b ≠ 0, e determine se a fração é paralelála (i.e., a e b são iguais) ou não.\n3. Determinifique se um número é primo, múltiplo comum, múltiplo comum e comum comum (i.e., todos os números entre o próprio número e 1 são primo), ou um número palíndroma (i.e., um número palíndroma é único, e não é um número comum).\n4. Identifique um número que pode ser escrito na forma de uma fração a/ b, com a e b inteis, b ≠ 0, e determine se a fração é paralelála (i.e., a e b são iguais) ou não. Se a fração é paralelála, determine se o número é primo, múltiplo comum, múltiplo comum e comum comum, ou um número palíndroma.\n5. Identifique um número que pode ser escrito na forma de uma fração a/ b, com a e b inteis, b ≠ 0, e determine se a fração é paralelála (i.e., a e b são iguais) ou não. Se a fração é paralelála, determine se o número é primo, múltiplo comum, múltiplo comum e comum comum, ou um número palíndroma.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 387,
+            "total_tokens": 387
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.070919799996773,
+            "tempo_decode_s": 28.144369399989955,
+            "tempo_resposta_s": 31.215289199986728,
+            "tempo_total_s": 31.215289199986728,
+            "tokens_entrada": 0,
+            "tokens_saida": 387,
+            "tps": 12.397770769337114,
+            "ram_inicio_mb": 1719.23046875,
+            "ram_pico_mb": 1721.1875,
+            "ram_usada_mb": 1.95703125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Determine se o número abaixo é uma fração a/ b, com a e b inteiros e b ≠ 0:\n   - 1/4 = a/b\n   - 2/5 = a/b\n   - 3/6 = a/b\n   - 4/7 = a/b\n   - 5/8 = a/b\n2. Identifique e calcule o valor de c/a e c/b no número abaixo:\n   - 9/10 = c/a\n   - 8/9 = c/b\n3. Se a raiz quadrada de um número é igual a 5/24, determine o número:\n   - 49 = (5 x 7) / 24\n4. Determine se o número abaixo é um número primeiro ou não:\n   - 21 = 11 x 2\n5. Determine se o número abaixo é uma fração de 2:\n   - 16 = 8 x 2",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 238,
+            "total_tokens": 238
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07418359999428503,
+            "tempo_decode_s": 16.386287500004983,
+            "tempo_resposta_s": 16.460471099999268,
+            "tempo_total_s": 16.460471099999268,
+            "tokens_entrada": 0,
+            "tokens_saida": 238,
+            "tps": 14.458881435052644,
+            "ram_inicio_mb": 1721.25390625,
+            "ram_pico_mb": 1723.28515625,
+            "ram_usada_mb": 2.03125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Determine se o número abaixo é uma fração a/ b, com a e b inteiros e b ≠ 0:\n   - 1/4 = a/b\n   - 2/5 = a/b\n   - 3/6 = a/b\n   - 4/7 = a/b\n   - 5/8 = a/b\n2. Identifique e calcule o valor de c/a e c/b no número abaixo:\n   - 9/10 = c/a\n   - 8/9 = c/b\n3. Se a raiz quadrada de um número é igual a 5/24, determine o número:\n   - 49 = (5 x 7) / 24\n4. Determine se o número abaixo é um número primeiro ou não:\n   - 21 = 11 x 2\n5. Determine se o número abaixo é uma fração de 2:\n   - 16 = 8 x 2",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 238,
+            "total_tokens": 238
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0868219000112731,
+            "tempo_decode_s": 15.385135799995624,
+            "tempo_resposta_s": 15.471957700006897,
+            "tempo_total_s": 15.471957700006897,
+            "tokens_entrada": 0,
+            "tokens_saida": 238,
+            "tps": 15.38266873621907,
+            "ram_inicio_mb": 1723.23828125,
+            "ram_pico_mb": 1725.05078125,
+            "ram_usada_mb": 1.8125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 13.501188,
+        "ram_media_mb": 1728.050781,
+        "ram_pico_mb": 1728.953125,
+        "tempo_medio_segundos": 33.067115,
+        "ttft_medio_segundos": 2.292902,
+        "tps": {
+          "n": 2,
+          "mediana": 13.501188,
+          "iqr": 0.191172,
+          "p25": 13.405602,
+          "p75": 13.596774,
+          "p95": 13.673242,
+          "p99": 13.688536,
+          "max": 13.692359,
+          "media": 13.501188
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.292902,
+          "iqr": 0.218577,
+          "p25": 2.183614,
+          "p75": 2.402191,
+          "p95": 2.489621,
+          "p99": 2.507107,
+          "max": 2.511479,
+          "media": 2.292902
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 33.067115,
+          "iqr": 18.022228,
+          "p25": 24.056001,
+          "p75": 42.078229,
+          "p95": 49.287121,
+          "p99": 50.728899,
+          "max": 51.089344,
+          "media": 33.067115
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1728.050781,
+          "iqr": 0.902344,
+          "p25": 1727.599609,
+          "p75": 1728.501953,
+          "p95": 1728.862891,
+          "p99": 1728.935078,
+          "max": 1728.953125,
+          "media": 1728.050781
+        },
+        "tps_por_rodada": [
+          13.6923594952422,
+          13.310016376877936
+        ],
+        "ttft_por_rodada": [
+          2.511478900007205,
+          2.074325299996417
+        ],
+        "tempo_por_rodada": [
+          15.044886899995618,
+          51.08934360000421
+        ],
+        "ram_por_rodada": [
+          1727.1484375,
+          1728.953125
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. Enunciado: Qual é a raiz quadrada de a - 10?\nAlternativas:\n\n  * A - 10 = 4 (raiz quadrada de 4)\n  * A - 10 = 5 (raiz quadrada de 5)\n  * A - 10 = 6 (raiz quadrada de 6)\n  * A - 10 = 7 (raiz quadrada de 7)\n  * A - 10 = 8 (raiz quadrada de 8)\n  * A - 10 = 9 (raiz quadrada de 9)\n  * A - 10 = 10 (raiz quadrada de 10)\n\nResposta correta: A - 10 = 7."
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. Enunciado: Qual é a fórmula matemática para encontrar a área de um retângulo inscribed no círculo inscribed?\nResposta correta: A área do retângulo inscribed no círculo inscribed é igual a aforesal do retângulo, multiplicado pelo área do círculo inscribed.\nResolução passo a passo: 1. Identifique o retângulo inscribed no círculo inscribed e its aforesal (aforesal = aforesal do retângulo inscribed - area do círculo inscribed). 2. Calcula a área do retângulo inscribed.\n3. A área do retângulo insc"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 1728.953125,
+        "tps_medio": 13.501188,
+        "tempo_medio_segundos": 33.067115,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Enunciado: Qual é a raiz quadrada de a - 10?\nAlternativas:\n\n  * A - 10 = 4 (raiz quadrada de 4)\n  * A - 10 = 5 (raiz quadrada de 5)\n  * A - 10 = 6 (raiz quadrada de 6)\n  * A - 10 = 7 (raiz quadrada de 7)\n  * A - 10 = 8 (raiz quadrada de 8)\n  * A - 10 = 9 (raiz quadrada de 9)\n  * A - 10 = 10 (raiz quadrada de 10)\n\nResposta correta: A - 10 = 7.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 206,
+            "total_tokens": 206
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.511478900007205,
+            "tempo_decode_s": 12.533407999988412,
+            "tempo_resposta_s": 15.044886899995618,
+            "tempo_total_s": 15.044886899995618,
+            "tokens_entrada": 0,
+            "tokens_saida": 206,
+            "tps": 13.6923594952422,
+            "ram_inicio_mb": 1725.13671875,
+            "ram_pico_mb": 1727.1484375,
+            "ram_usada_mb": 2.01171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Enunciado: Qual é a fórmula matemática para encontrar a área de um retângulo inscribed no círculo inscribed?\nResposta correta: A área do retângulo inscribed no círculo inscribed é igual a aforesal do retângulo, multiplicado pelo área do círculo inscribed.\nResolução passo a passo: 1. Identifique o retângulo inscribed no círculo inscribed e its aforesal (aforesal = aforesal do retângulo inscribed - area do círculo inscribed). 2. Calcula a área do retângulo inscribed.\n3. A área do retângulo inscribed é igual a aforesal * área do círculo inscribed.\nAgora, escreva a resposta correta para a aforesal do retângulo inscribed e o retângulo inscribed, garantindo que eles sejam no formato da seguinte fórmula:\nA área do retângulo inscribed no círculo inscribed = aforesal * área do círculo inscribed\nResposta: A área do retângulo inscribed no círculo inscribed é igual a aforesal * área do círculo inscribed = 3/4 de um retângulo inscribed 2. Calcule a área do retângulo inscribed.\n3. A área do retângulo inscribed é igual a aforesal * área do círculo inscribed = 3/4 de um retângulo inscribed = 9/16 de um retângulo inscribed.\nResolução passo a passo: 4. Determine o retângulo inscribed e its aforesal.\n5. A área do retângulo inscribed é igual a aforesal * área do círculo inscribed = aforesal * aforesal.\n6. A área do retângulo inscribed é igual a aforesal * aforesal = aforesal * 3/4 = 9/16 de um retângulo inscribed.\nResposta: O retângulo inscribed é 9/16 de um retângulo inscribed. A área do retângulo inscribed é igual a aforesal * aforesal = 9/16 de um retângulo inscribed = 9/16 de um retângulo inscribed.\nEm resumo, o retângulo inscribed no círculo inscribed é igual a 9/16 de um retângulo inscribed, e o retângulo inscribed é 9/16 de um retângulo inscribed, com a área igual a 9/16 de um retângulo inscribed.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 680,
+            "total_tokens": 680
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.074325299996417,
+            "tempo_decode_s": 49.015018300007796,
+            "tempo_resposta_s": 51.08934360000421,
+            "tempo_total_s": 51.08934360000421,
+            "tokens_entrada": 0,
+            "tokens_saida": 680,
+            "tps": 13.310016376877936,
+            "ram_inicio_mb": 1727.0625,
+            "ram_pico_mb": 1728.953125,
+            "ram_usada_mb": 1.890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 1999.7,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 12.26,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 68.24,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -15.7,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+    "gerado_em": "2026-09-25T08:15:03.253556"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}

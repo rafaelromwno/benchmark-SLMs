@@ -1,0 +1,1169 @@
+{
+  "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+  "formato": "gguf",
+  "data": "25/09/2026",
+  "run_config": {
+    "modelos": [
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\Qwen--Qwen1.5-1.8B-Chat-GGUF\\qwen1_5-1_8b-chat-q4_k_m.gguf"
+    },
+    "seed": 123,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 123
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "criativo",
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 123
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 123
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.73,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": "Campo 'questoes' ausente",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 1.005422099988209,
+        "tempo_prefill_s": 13.758276600012323,
+        "tempo_decode_s": 79.52159209997626,
+        "tempo_resposta_s": 93.27986869998858,
+        "tempo_total_s": 94.28529079997679,
+        "tokens_entrada": 0,
+        "tokens_saida": 1196,
+        "tps": 12.821630397515197,
+        "ram_inicio_mb": 50.33984375,
+        "ram_pico_mb": 2021.03125,
+        "ram_usada_mb": 1970.69140625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 94.28529079997679,
+        "tempo_carregamento_s": 1.005422099988209,
+        "tempo_resposta_s": 93.27986869998858,
+        "ram_pico_mb": 2021.03125,
+        "ram_inicio_mb": 50.33984375,
+        "ttft_segundos": 13.758276600012323,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "{\n  \"questões\": [\n    {\n      \"enunciado\": \"Identifique todos os números abaixo que não podem ser escritos na forma de uma fração a/ b\",\n      \"alternativas\": [\n        {\n          \"enunciado\": \"100\",\n          \"alternativas_1\": {\n            \"A\": \"100\",\n            \"B\": \"100\",\n            \"C\": \"100\",\n            \"D\": \"100\",\n            \"E\": \"100\"\n          },\n          \"resposta_ correta\": \"A\",\n          \"resolução_ passo_a_passo\": \"Identifique todos os números abaixo que não podem ser escritos na forma de uma fração a/ b\"\n        },\n        {\n          \"enunciado\": \"3/4\",\n          \"alternativas_2\": {\n            \"A\": \"3/4\",\n            \"B\": \"3/4\",\n            \"C\": \"3/4\",\n            \"D\": \"3/4\",\n            \"E\": \"3/4\"\n          },\n          \"resposta_ correta\": \"A\",\n          \"resolução_ passo_a_passo\": \"Identifique todos os números abaixo que não podem ser escritos na forma de uma fração a/ b\"\n        },\n        {\n          \"enunciado\": \"1/2\",\n          \"alternativas_3\": {\n            \"A\": \"1/2\",\n            \"B\": \"1/2\",\n            \"C\": \"1/2\",\n            \"D\": \"1/2\",\n            \"E\": \"1/2\"\n          },\n          \"resposta_ correta\": \"B\",\n          \"resolução_ passo_arestado\": \"Identifique todos os números abaixo que não podem ser escritos na forma de uma fração a/ b\"\n        },\n        {\n          \"enunciado\": \"7/8\",\n          \"alternativas_4\": {\n            \"A\": \"7/8\",\n            \"B\": \"7/8\",\n            \"C\": \"7/8\",\n            \"D\": \"7/8\",\n            \"E\": \"7/8\"\n          },\n          \"resposta_ correta\": \"A\",\n          \"resolução_ passo_arestado\": \"Identifique todos os números abaixo que não podem ser escritos na forma de uma fração a/ b\"\n        },\n        {\n          \"enunciado\": \"5/6\",\n          \"alternativas_5\": {\n            \"A\": \"5/6\",\n            \"B\": \"5/6\",\n            \"C\": \"5/6\",\n            \"D\": \"5/6\",\n            \"E\": \"5/6\"\n          },\n          \"resposta_ correta\": \"C\",\n          \"resolução_ passo_arestado\": \"Identifique todos os números abaixo que não podem ser escritos na forma de uma fração a/ b\"\n        },\n        {\n          \"enunciado\": \"9/10\",\n          \"alternativas_6\": {\n            \"A\": \"9/10\",\n            \"B\": \"9/10\",\n            \"C\": \"9/10\",\n            \"D\": \"9/10\",\n            \"E\": \"9/10\"\n          },\n          \"resposta_ correta\": \"A\",\n          \"resolução_ passo_arestado\": \"Identifique todos os números abaixo que não podem ser escritos na forma de uma fração a/ b\"\n        }\n      ]\n    },\n    {\n      \"enunciado\": \"Exemplo 2: Identifique todos os números abaixo que podem ser escritos na forma de uma fração a/ b\",\n      \"alternativas\": [\n        {\n          \"enunciado\": \"45\",\n          \"alternativas_1\": {\n            \"A\": \"45\",\n            \"B\": \"45\",\n            \"C\": \"45\",\n            \"D\": \"45\",\n            \"E\": \"45\"\n          },\n          \"resposta_ correta\": \"B\",\n          \"resolução_ passo_arestado\": \"Identifique todos os números abaixo que podem ser escritos na forma de uma fração a/ b\"\n        },\n        {\n          \"enunciado\": \"11/12\",\n          \"alternativas_2\": {\n            \"A\": \"11/12\",\n            \"B\": \"11/12\",\n            \"C\": \"11/12\",\n            \"D\": \"11/12\",\n            \"E\": \"11/12\"\n          },\n          \"resposta_ correta\": \"A\",\n          \"resolução_ passo_arestado\": \"Identifique todos os números abaixo que",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1196,
+            "total_tokens": 1196
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.005422099988209,
+            "tempo_prefill_s": 13.758276600012323,
+            "tempo_decode_s": 79.52159209997626,
+            "tempo_resposta_s": 93.27986869998858,
+            "tempo_total_s": 94.28529079997679,
+            "tokens_entrada": 0,
+            "tokens_saida": 1196,
+            "tps": 12.821630397515197,
+            "ram_inicio_mb": 50.33984375,
+            "ram_pico_mb": 2021.03125,
+            "ram_usada_mb": 1970.69140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 12.93577,
+          "iqr": 2.702582,
+          "p25": 11.178049,
+          "p75": 13.88063,
+          "p95": 15.035487,
+          "p99": 15.330417,
+          "max": 15.40415,
+          "media": 12.803167
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.539147,
+          "iqr": 2.022939,
+          "p25": 0.689074,
+          "p75": 2.712012,
+          "p95": 3.355828,
+          "p99": 3.775112,
+          "max": 3.879933,
+          "media": 1.983961
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 29.540167,
+          "iqr": 52.059053,
+          "p25": 13.199294,
+          "p75": 65.258348,
+          "p95": 81.851187,
+          "p99": 82.884823,
+          "max": 83.143232,
+          "media": 40.513693
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2011.986328,
+          "iqr": 27.222656,
+          "p25": 1999.135742,
+          "p75": 2026.358398,
+          "p95": 2029.656836,
+          "p99": 2030.321992,
+          "max": 2030.488281,
+          "media": 2012.793359
+        },
+        "tps_medio": 12.803167,
+        "ttft_medio_segundos": 1.983961,
+        "tempo_medio_segundos": 40.513693,
+        "ram_pico_mb": 2030.488281
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 12.93577,
+          "iqr": 2.702582,
+          "p25": 11.178049,
+          "p75": 13.88063,
+          "p95": 15.035487,
+          "p99": 15.330417,
+          "max": 15.40415,
+          "media": 12.803167
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.539147,
+          "iqr": 2.022939,
+          "p25": 0.689074,
+          "p75": 2.712012,
+          "p95": 3.355828,
+          "p99": 3.775112,
+          "max": 3.879933,
+          "media": 1.983961
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 29.540167,
+          "iqr": 52.059053,
+          "p25": 13.199294,
+          "p75": 65.258348,
+          "p95": 81.851187,
+          "p99": 82.884823,
+          "max": 83.143232,
+          "media": 40.513693
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2011.986328,
+          "iqr": 27.222656,
+          "p25": 1999.135742,
+          "p75": 2026.358398,
+          "p95": 2029.656836,
+          "p99": 2030.321992,
+          "max": 2030.488281,
+          "media": 2012.793359
+        },
+        "tps_medio": 12.803167,
+        "ttft_medio_segundos": 1.983961,
+        "tempo_medio_segundos": 40.513693,
+        "ram_pico_mb": 2030.488281,
+        "tps_por_rodada": [
+          12.905440080912637,
+          10.35136741265097,
+          12.881523100035526,
+          10.610223650352507,
+          13.88572207924346,
+          12.96610077474914,
+          13.865354225303774,
+          10.57688894848169,
+          14.584897862328402,
+          15.404150169380241
+        ],
+        "ttft_por_rodada": [
+          3.87993270001607,
+          2.7091597000253387,
+          2.5356557999912184,
+          2.7152558999950998,
+          0.07981429999927059,
+          2.5426376000104938,
+          0.07486220001010224,
+          2.712963400001172,
+          2.516852300002938,
+          0.07247459999052808
+        ],
+        "tempo_por_rodada": [
+          83.14323210000293,
+          10.04698179999832,
+          65.36494119997951,
+          9.801866900001187,
+          26.718092000024626,
+          64.93856670000241,
+          80.27202060000855,
+          9.832758999982616,
+          32.362242400005925,
+          22.656231999979354
+        ],
+        "ram_por_rodada": [
+          2023.109375,
+          2025.01953125,
+          2026.8046875,
+          2028.640625,
+          2030.48828125,
+          1997.4296875,
+          1999.37890625,
+          1997.14453125,
+          1999.0546875,
+          2000.86328125
+        ],
+        "ram_media_mb": 2012.793359
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF09MA01\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno deve dominar  (calibração de dificuldade):**\n\n1. EF08MA01: Identificar e manipular números de base com base 10\n2. EF07MA01: Identificar e manipular números de base com base 11\n3. EF06MA01: Identificar e manipular números de base com base 12\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n**Question 1:** Qual é a fração a/5? Qual é a fração b/3?\n**Question 2:** Qual é a fração a/17? Qual é a fração b/7?\n**Question 3:** Qual é a fração a/12? Qual é a fração b/4?\n\n**Resposta correta:** A fração a/5 é 1/5. A fração b/3 é 2/3.\n**Resposta errónea:** A fração a/17 é 17/17, não é uma fração.\n**Resposta inédita:** A fração a/12 é 12/12.\n**Resposta razoável:** A fração b/4 é 4/4.\n\n**Passo a passo de forma didática:** (1) Identificar o número a (2) Manipular o número a com base 10 (3) Identificar o número b (4) Manipular o número b com base 11 (5) Identificar o número c (6) Manipular o número c com base 12 (7) Identificar o resultado da divisão a/5 (8) Identificar o resultado da divisão a/17 (9) Identificar o resultado da divisão a/12 (10) Diferenciar a fração a/5 e a fração b/3 (11) Diferenciar a fração a/17 e a fração b/7 (12) Diferenciar a fração a/12 e a fração b/4 (13) Definir a fração a/5 como uma fração a (14) Definir a fração b/3 como uma fração b (15) Definir a fração a/17 como uma fração a (16) Definir a fração b/7 como uma fração b (17) Definir a fração a/12 como uma fração a (18) Definir a fração b/4 como uma fração b (19) Definir a fração a/12 como uma fração a (20) Comparar as frações a/5 e a/17 e a fração b/3 e a fração b (21) Comparar as frações a/12 e a/17 e a fração b/4 e a fração b (22) Diferenciar a fração a/5 como uma fração a (23) Diferenciar a fração b/3 como uma fração b (24) Diferenciar a fração a/17 como uma fração a (25) Diferenciar a fração b/7 como uma fração b (26) Diferenciar a fração a/12 como uma fração a (27) Diferenciar a fração b/4 como uma fração b (28) Diferenciar a fração a/12 como uma fração a (29) Comparar as frações a/5 e a/17 e a fração b/3 e a fração b (30) Diferenciar a fração a/12 como uma fração a (31) Diferenciar a fração b/4 como uma fração b (32) Diferenciar a fração a/12 como uma fração a (33) Diferenciar a fração a/17 como uma fração a (34) Diferenciar a fração b/7 como uma fração b (35) Diferenciar a fração a/12 como uma fração a (36) Diferenciar a fração b/4 como uma fração b (37) Diferenciar a fração a/12 como uma fração a (38) Diferenciar a fração b/4 as (39) Definir a fração a/1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1073,
+            "total_tokens": 1073
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.87993270001607,
+            "tempo_decode_s": 79.26329939998686,
+            "tempo_resposta_s": 83.14323210000293,
+            "tempo_total_s": 83.14323210000293,
+            "tokens_entrada": 0,
+            "tokens_saida": 1073,
+            "tps": 12.905440080912637,
+            "ram_inicio_mb": 2020.98828125,
+            "ram_pico_mb": 2023.109375,
+            "ram_usada_mb": 2.12109375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questão para habilidade EF06MA14: Álgebra\n1. A equação x  + 5 = 12 possui um valor fixo, então qual é o valor de x?\n2. Se a multiplicação de 2x = 10, qual é o valor de x?\n3. Qual é a solução para o problema x  + 5 = 12 utilizando a equação x  + 5 = 12?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 104,
+            "total_tokens": 104
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.7091597000253387,
+            "tempo_decode_s": 7.337822099972982,
+            "tempo_resposta_s": 10.04698179999832,
+            "tempo_total_s": 10.04698179999832,
+            "tokens_entrada": 0,
+            "tokens_saida": 104,
+            "tps": 10.35136741265097,
+            "ram_inicio_mb": 2023.06640625,
+            "ram_pico_mb": 2025.01953125,
+            "ram_usada_mb": 1.953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF09MA01\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno deve dominar  (calibração de dificuldade):**\n\n1. EF08MA01: Definir a fração a/ b como a fração que é escrita em forma de uma fração para a inteira inteira b, e escrever o número em forma de uma fração para a inteira inteira a.\n2. EF07MA01: Definir a fração b/ a como a fração que é escrita em forma de uma fração para a inteira inteira a, e escrever o número em forma de uma fração para a inteira inteira b.\n3. EF08MA01: Identificar e resolver a fração a/ b que não pode ser escrito em forma de uma fração a/ b.\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\nExemplo 1: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 1/2\n- 3/5\n- 4/7\n- 5/8\n- 7/10\n\nExemplo 2: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 3/4\n- 5/6\n- 6/7\n- 7/8\n- 8/9\n\nExemplo 3: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 4/5\n- 6/7\n- 7/8\n- 8/9\n- 9/10\n\nExemplo 4: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 1/2\n- 2/3\n- 3/4\n- 4/5\n- 5/6\n\nExemplo 5: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 1/4\n- 2/5\n- 3/6\n- 4/7\n- 5/8\n\nExemplo 6: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 3/4\n- 4/5\n- 5/6\n- 6/7\n- 7/8\n\nExemplo 7: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 4/5\n- 5/6\n- 6/7\n- 7/8\n- 9/10\n\nExemplo 8: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 1/2\n- 3/4\n- 4/5\n- 5/6\n- 6/7\n\nExemplo 9: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 1/2\n- 2/3\n- 3/4\n- 4/5\n- 5/6\n- 7/8\n\nExemplo 10: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 3/4\n- 4/5\n- 5/6\n- 6/7\n- 7/8\n- 9/10",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 842,
+            "total_tokens": 842
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.5356557999912184,
+            "tempo_decode_s": 62.829285399988294,
+            "tempo_resposta_s": 65.36494119997951,
+            "tempo_total_s": 65.36494119997951,
+            "tokens_entrada": 0,
+            "tokens_saida": 842,
+            "tps": 12.881523100035526,
+            "ram_inicio_mb": 2024.92578125,
+            "ram_pico_mb": 2026.8046875,
+            "ram_usada_mb": 1.87890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questão para habilidade EF06MA14: Álgebra\n1. A equação x  + 5 = 12 possui um valor fixo, então qual é o valor de x?\n2. Se a multiplicação de 2x = 10, qual é o valor de x?\n3. Qual é a solução para o problema x  + 5 = 12 utilizando a equação x  + 5 = 12?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 104,
+            "total_tokens": 104
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.7152558999950998,
+            "tempo_decode_s": 7.086611000006087,
+            "tempo_resposta_s": 9.801866900001187,
+            "tempo_total_s": 9.801866900001187,
+            "tokens_entrada": 0,
+            "tokens_saida": 104,
+            "tps": 10.610223650352507,
+            "ram_inicio_mb": 2026.72265625,
+            "ram_pico_mb": 2028.640625,
+            "ram_usada_mb": 1.91796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questão para habilidade EF06MA14: Álgebra\n1. A equação x  + 5  = 12 é uma equação linear, onde o valor de x é o intercepto da reta que passa pelo eixo x e a relação da variável x com o valor de x é o coeficiente. A resposta correta é 7, pois o intercepto é 7 e o coeficiente é 1 (x = 7).\n2. A equação 2x  = 10 é uma equação linear, onde o valor de x é o intercepto da reta que passa pelo eixo x e a relação da variável x com o valor de x é o coeficiente. A resposta correta é 5, pois o intercepto é 5 e o coeficiente é 2 (x = 5).\n3. A equação 2x  - 3y  = 5 é uma equação binária, onde o valor de x é o coeficiente e o valor de y é o valor de y no eixo y. A resposta correta é 5, pois o coeficiente é 5 e o valor de y é 3 (x = 5, y = 3). A equação também é uma equação linear, onde o valor de x é o intercepto da reta que passa pelo eixo x e a relação da variável x com o valor de x é o coeficiente e o valor de y é o valor de y no eixo y. A resposta correta é 3, pois o intercepto é 3 e o coeficiente é 1 (x = 3, y = 1).",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 371,
+            "total_tokens": 371
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07981429999927059,
+            "tempo_decode_s": 26.638277700025355,
+            "tempo_resposta_s": 26.718092000024626,
+            "tempo_total_s": 26.718092000024626,
+            "tokens_entrada": 0,
+            "tokens_saida": 371,
+            "tps": 13.88572207924346,
+            "ram_inicio_mb": 2028.5546875,
+            "ram_pico_mb": 2030.48828125,
+            "ram_usada_mb": 1.93359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF09MA01\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno deve dominar  (calibração de dificuldade):**\n\n1. EF08MA01: Definir a fração a/ b como a fração que é escrita em forma de uma fração para a inteira inteira b, e escrever o número em forma de uma fração para a inteira inteira a.\n2. EF07MA01: Definir a fração b/ a como a fração que é escrita em forma de uma fração para a inteira inteira a, e escrever o número em forma de uma fração para a inteira inteira b.\n3. EF08MA01: Identificar e resolver a fração a/ b que não pode ser escrito em forma de uma fração a/ b.\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\nExemplo 1: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 1/2\n- 3/5\n- 4/7\n- 5/8\n- 7/10\n\nExemplo 2: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 3/4\n- 5/6\n- 6/7\n- 7/8\n- 8/9\n\nExemplo 3: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 4/5\n- 6/7\n- 7/8\n- 8/9\n- 9/10\n\nExemplo 4: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 1/2\n- 2/3\n- 3/4\n- 4/5\n- 5/6\n\nExemplo 5: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 1/4\n- 2/5\n- 3/6\n- 4/7\n- 5/8\n\nExemplo 6: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 3/4\n- 4/5\n- 5/6\n- 6/7\n- 7/8\n\nExemplo 7: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 4/5\n- 5/6\n- 6/7\n- 7/8\n- 9/10\n\nExemplo 8: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 1/2\n- 3/4\n- 4/5\n- 5/6\n- 6/7\n\nExemplo 9: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 1/2\n- 2/3\n- 3/4\n- 4/5\n- 5/6\n- 7/8\n\nExemplo 10: Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b?\n- 3/4\n- 4/5\n- 5/6\n- 6/7\n- 7/8\n- 9/10",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 842,
+            "total_tokens": 842
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.5426376000104938,
+            "tempo_decode_s": 62.39592909999192,
+            "tempo_resposta_s": 64.93856670000241,
+            "tempo_total_s": 64.93856670000241,
+            "tokens_entrada": 0,
+            "tokens_saida": 842,
+            "tps": 12.96610077474914,
+            "ram_inicio_mb": 1995.55859375,
+            "ram_pico_mb": 1997.4296875,
+            "ram_usada_mb": 1.87109375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF09MA01\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno deve dominar  (calibração de dificuldade):**\n\n1. EF08MA01: Identificar e manipular números de base base 10 e base 16.\n2. EF07MA01: Criar e manipular divisões básicas, incluindo divisões múltiplas e divisões com divisores específicos.\n3. EF08MA01: Utilizar divisões para resolver problemas com números complexos, como encontrar raízes e palavras-chave.\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n1. **Quão maior é 9 dividido por 2?**\n2. **Cálculo de 24 divisíveis com 3 como raízes e palavras-chave**\n3. **Identificar e resolvendo o problema de divisão com números complexos em uma equação linear**\n\n1. **Determine a fração que divide 14400 com 40000?**\n2. **Escala de divisão de 16 para 24 usando divisores específicos e números primos**\n3. **Resolve a equação linear de 2x + 3y = 6000 utilizando divisões múltiplas e divisores específicos**\n\n1. **Determine a fração que divide 12800 com 40000?**\n2. **Escala de divisão de 16 para 24 usando divisores específicos e números primos**\n3. **Resolve a equação linear de 2x + 3y = 6000 utilizando divisões múltiplas e divisores específicos**\n\n1. **Determine a fração que divide 100000 com 40000?**\n2. **Escala de divisão de 16 para 24 usando divisores específicos e números primos**\n3. **Resolve a equação linear de 2x + 3y = 6000 utilizando divisões múltiplas e divisores específicos**\n\n1. **Identificar e resolvendo o problema de divisão com números complexos em uma equação quadrática**\n2. **Escala de divisão de 16 para 24 usando divisores específicos e números primos**\n3. **Resolve a equação linear de 2x + 3y = 6000 utilizando divisões múltiplas e divisores específicos**\n\n1. **Determine a fração que divide 240000 com 40000?**\n2. **Escala de divisão de 16 para 24 usando divisores específicos e números primos**\n3. **Resolve a equação linear de 2x + 3y = 6000 utilizando divisões múltiplas e divisores específicos**\n\n1. **Identificar e resolvendo o problema de divisão com números complexos em uma equação trigonômica**\n2. **Escala de divisão de 16 para 24 usando divisores específicos e números primos**\n3. **Resolve a equação linear de 2x + 3y = 6000 utilizando divisões múltiplas e divisores específicos**\n\n1. **Identificar e resolvendo o problema de divisão com números complexos em uma equação diferencial**\n2. **Escala de divisão de 16 para 24 usando divisores específicos e números primos**\n3. **Resolve a equação linear de 2x + 3y = 6000 utilizando divisões múltiplas e divisores específicos**\n\n1. **Determine a fração que divide 2000000 com 40000?**\n2. **Escala de divisão de 16 para 24 usando divisores específicos e números primos**\n3. **Resolve a equação linear de 2x + 3y = 6000 utilizando divisões múltiplas e divisores específicos**\n\n1. **Identificar e resolvendo o problema de divisão com números complexos em uma equação diferencial em três pontos**\n2. **Escala de divisão de 16 para 24 usando divisores específicos e números primos**\n3. **Resolve a equação linear de 2x + 3y = 6000 utilizando divisões múltiplas e divisores específicos**\n\n1. **D",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1113,
+            "total_tokens": 1113
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07486220001010224,
+            "tempo_decode_s": 80.19715839999844,
+            "tempo_resposta_s": 80.27202060000855,
+            "tempo_total_s": 80.27202060000855,
+            "tokens_entrada": 0,
+            "tokens_saida": 1113,
+            "tps": 13.865354225303774,
+            "ram_inicio_mb": 1997.36328125,
+            "ram_pico_mb": 1999.37890625,
+            "ram_usada_mb": 2.015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3 questão para habilidade EF06MA14: Álgebra\n1. A equação x  + 5 = 12 possui um valor fixo, então qual é o valor de x?\n2. Se a multiplicação de 2x = 10, qual é o valor de x?\n3. Qual é a solução para o problema x  + 5 = 12 utilizando a equação x  + 5 = 12?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 104,
+            "total_tokens": 104
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.712963400001172,
+            "tempo_decode_s": 7.119795599981444,
+            "tempo_resposta_s": 9.832758999982616,
+            "tempo_total_s": 9.832758999982616,
+            "tokens_entrada": 0,
+            "tokens_saida": 104,
+            "tps": 10.57688894848169,
+            "ram_inicio_mb": 1994.76953125,
+            "ram_pico_mb": 1997.14453125,
+            "ram_usada_mb": 2.375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "{ \n    \"questões\": [\n        {\n            \"enunciado\": \"Quando é o número mais próximo de 23 e 27?\", \n            \"alternativas\": [\n                {\n                    \"A\": \"24\",\n                    \"B\": \"25\",\n                    \"C\": \"26\",\n                    \"D\": \"27\",\n                    \"E\": \"28\"\n                },\n                {\n                    \"A\": \"24\",\n                    \"B\": \"26\",\n                    \"C\": \"27\",\n                    \"D\": \"28\",\n                    \"E\": \"29\"\n                }\n            ],\n            \"resposta_ correta\": \"B\", \n            \"resolução_ passo_ a_passo\": \"É o número 26, pois ele é o mais próximo de 23 e 27. A diferença entre cada valor é 1, e o menor número entre 23 e 27 é 26.\"\n        },\n        {\n            \"enunciado\": \"Como calcular o valor absoluto de 50\", \n            \"alternativas\": [\n                {\n                    \"A\": \"100\",\n                    \"B\": \"50\",\n                    \"C\": \"51\",\n                    \"D\": \"52\",\n                    \"E\": \"53\"\n                },\n                {\n                    \"A\": \"100\",\n                    \"B\": \"51\",\n                    \"C\": \"52\",\n                    \"D\": \"53\",\n                    \"E\": \"54\"\n                }\n            ],\n            \"resposta_ correta\": \"100\", \n            \"resolução_ passo_ a_passo\": \"Para calcular o valor absoluto de 50, basta realizar a operação de divisão com 100, que resulta em 100. O resultado é 100.\"\n        }\n    ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 472,
+            "total_tokens": 472
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.516852300002938,
+            "tempo_decode_s": 29.845390100002987,
+            "tempo_resposta_s": 32.362242400005925,
+            "tempo_total_s": 32.362242400005925,
+            "tokens_entrada": 0,
+            "tokens_saida": 472,
+            "tps": 14.584897862328402,
+            "ram_inicio_mb": 1997.109375,
+            "ram_pico_mb": 1999.0546875,
+            "ram_usada_mb": 1.9453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "{ \n  \"questões\": [\n    {\n      \"enunciado\": \"Um número é maior que outro numérico se ele é maior que ou igual a seu valor absoluto.\",\n      \"alternativas\": [\n        \"24\",\n        \"25\",\n        \"26\",\n        \"27\",\n        \"28\",\n        \"29\",\n        \"30\"\n      ],\n      \"resposta_correta\": \"A\", \n      \"resolução_passo_ao_passo\": \"O número 24 é maior que o número 27, pois é maior que seu valor absoluto, que é 27. No entanto, não é igual a seu valor absoluto, que é 24.\"\n    },\n    {\n      \"enunciado\": \"Um número é menor que outro numérico se ele é menor que ou igual a seu valor absoluto.\",\n      \"alternativas\": [\n        \"25\",\n        \"26\",\n        \"27\",\n        \"28\",\n        \"29\",\n        \"30\",\n        \"31\"\n      ],\n      \"resposta_correta\": \"A\", \n      \"resolução_passo_ao_passo\": \"O número 25 é menor que o número 27, pois é menor que seu valor absoluto, que é 27. No entanto, é igual a seu valor absoluto, que é 25.\"\n    }\n  ]\n}",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 349,
+            "total_tokens": 349
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07247459999052808,
+            "tempo_decode_s": 22.583757399988826,
+            "tempo_resposta_s": 22.656231999979354,
+            "tempo_total_s": 22.656231999979354,
+            "tokens_entrada": 0,
+            "tokens_saida": 349,
+            "tps": 15.404150169380241,
+            "ram_inicio_mb": 1998.9609375,
+            "ram_pico_mb": 2000.86328125,
+            "ram_usada_mb": 1.90234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 12.904404,
+        "ram_media_mb": 2004.457031,
+        "ram_pico_mb": 2006.210938,
+        "tempo_medio_segundos": 14.790513,
+        "ttft_medio_segundos": 1.067498,
+        "tps": {
+          "n": 3,
+          "mediana": 13.978531,
+          "iqr": 1.896632,
+          "p25": 12.22462,
+          "p75": 14.121252,
+          "p95": 14.235428,
+          "p99": 14.258263,
+          "max": 14.263972,
+          "media": 12.904404
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.078352,
+          "iqr": 1.489465,
+          "p25": 0.07548,
+          "p75": 1.564944,
+          "p95": 2.754218,
+          "p99": 2.992073,
+          "max": 3.051536,
+          "media": 1.067498
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 16.194647,
+          "iqr": 2.436895,
+          "p25": 13.923099,
+          "p75": 16.359995,
+          "p95": 16.492272,
+          "p99": 16.518728,
+          "max": 16.525342,
+          "media": 14.790513
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 2004.460938,
+          "iqr": 1.755859,
+          "p25": 2003.580078,
+          "p75": 2005.335938,
+          "p95": 2006.035938,
+          "p99": 2006.175938,
+          "max": 2006.210938,
+          "media": 2004.457031
+        },
+        "tps_por_rodada": [
+          10.470708917013791,
+          14.2639722694063,
+          13.978530840427647
+        ],
+        "ttft_por_rodada": [
+          3.05153640001663,
+          0.07260740001220256,
+          0.0783516000083182
+        ],
+        "tempo_por_rodada": [
+          11.651551100017969,
+          16.194647299998906,
+          16.525341800006572
+        ],
+        "ram_por_rodada": [
+          2002.69921875,
+          2004.4609375,
+          2006.2109375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 2006.210938,
+        "tps_medio": 12.904404,
+        "tempo_medio_segundos": 14.790513,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a diferença entre a fração de 3/4 e a fração de 2/3?\n2. Quais são as três formas diferentes de escrever a fração de 7/11?\n3. Em que número de digitos será necessário para escrever a fração de 12/16?\n4. Quais são as três formas diferentes de escrever a fração de 9/11?\n5. Qual é a diferença entre a fração de 5/6 e a fração de 6/5?",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 122,
+            "total_tokens": 122
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.05153640001663,
+            "tempo_decode_s": 8.600014700001338,
+            "tempo_resposta_s": 11.651551100017969,
+            "tempo_total_s": 11.651551100017969,
+            "tokens_entrada": 0,
+            "tokens_saida": 122,
+            "tps": 10.470708917013791,
+            "ram_inicio_mb": 2000.78125,
+            "ram_pico_mb": 2002.69921875,
+            "ram_usada_mb": 1.91796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é o número de números primeiros na lista abaixo que não podem ser escritos a/bo (com a e b inteiros, b ≠ 0)?\n2. Quais são os números primos com base na forma 2x + 1 (entre os números primos entre 10 e 1000)? Utilize o conjunto de números primos.\n3. Qual é a fração de 37/41 que não pode ser escrita a/bo (com a e b inteiros, b ≠ 0)? Utilize o conjunto de números frações.\n4. Qual é a fração de 150/161 que não pode ser escrita a/bo (com a e b inteiros, b ≠ 0)? Utilize o conjunto de números frações.\n5. Qual é a fração de 27/39 que não pode ser escrita a/bo (com a e b inteiros, b ≠ 0)? Utilize o conjunto de números frações.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 231,
+            "total_tokens": 231
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07260740001220256,
+            "tempo_decode_s": 16.122039899986703,
+            "tempo_resposta_s": 16.194647299998906,
+            "tempo_total_s": 16.194647299998906,
+            "tokens_entrada": 0,
+            "tokens_saida": 231,
+            "tps": 14.2639722694063,
+            "ram_inicio_mb": 2002.609375,
+            "ram_pico_mb": 2004.4609375,
+            "ram_usada_mb": 1.8515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é o número de números primeiros na lista abaixo que não podem ser escritos a/bo (com a e b inteiros, b ≠ 0)?\n2. Quais são os números primos com base na forma 2x + 1 (entre os números primos entre 10 e 1000)? Utilize o conjunto de números primos.\n3. Qual é a fração de 37/41 que não pode ser escrita a/bo (com a e b inteiros, b ≠ 0)? Utilize o conjunto de números frações.\n4. Qual é a fração de 150/161 que não pode ser escrita a/bo (com a e b inteiros, b ≠ 0)? Utilize o conjunto de números frações.\n5. Qual é a fração de 27/39 que não pode ser escrita a/bo (com a e b inteiros, b ≠ 0)? Utilize o conjunto de números frações.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 231,
+            "total_tokens": 231
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0783516000083182,
+            "tempo_decode_s": 16.446990199998254,
+            "tempo_resposta_s": 16.525341800006572,
+            "tempo_total_s": 16.525341800006572,
+            "tokens_entrada": 0,
+            "tokens_saida": 231,
+            "tps": 13.978530840427647,
+            "ram_inicio_mb": 2004.39453125,
+            "ram_pico_mb": 2006.2109375,
+            "ram_usada_mb": 1.81640625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 12.595895,
+        "ram_media_mb": 2009.724609,
+        "ram_pico_mb": 2010.886719,
+        "tempo_medio_segundos": 83.201771,
+        "ttft_medio_segundos": 2.381215,
+        "tps": {
+          "n": 2,
+          "mediana": 12.595895,
+          "iqr": 0.006218,
+          "p25": 12.592786,
+          "p75": 12.599004,
+          "p95": 12.601491,
+          "p99": 12.601988,
+          "max": 12.602112,
+          "media": 12.595895
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.381215,
+          "iqr": 0.29902,
+          "p25": 2.231705,
+          "p75": 2.530725,
+          "p95": 2.650333,
+          "p99": 2.674255,
+          "max": 2.680235,
+          "media": 2.381215
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 83.201771,
+          "iqr": 0.120461,
+          "p25": 83.14154,
+          "p75": 83.262001,
+          "p95": 83.310186,
+          "p99": 83.319823,
+          "max": 83.322232,
+          "media": 83.201771
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2009.724609,
+          "iqr": 1.162109,
+          "p25": 2009.143555,
+          "p75": 2010.305664,
+          "p95": 2010.770508,
+          "p99": 2010.863477,
+          "max": 2010.886719,
+          "media": 2009.724609
+        },
+        "tps_por_rodada": [
+          12.589677161539589,
+          12.602112437582623
+        ],
+        "ttft_por_rodada": [
+          2.6802351999795064,
+          2.0821953999984544
+        ],
+        "tempo_por_rodada": [
+          83.32223190000514,
+          83.08130920000258
+        ],
+        "ram_por_rodada": [
+          2008.5625,
+          2010.88671875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. Habilidade: EF08MA05\nUnidade Temática: Geometria\nPré- requisitos que o aluno já deve dominar (calibração de dificuldade):\n- Familiaridade com a estrutura da matemática, incluindo conceitos básicos de planejamento, gráficos, andeiros, e dimensionalidade.\n- Conhecimento da teoria do espaço e do tempo, como os conceptos de origem, direção, distância, e velocidade.\n- Entendimento de conceitos como pontos, retângulos, retângulos e retângulos, como eles são utilizados na planejamento geométrico.\n- "
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. Habilidade: EF06MA17\nUnidade Temática: Geometria\nPré--Requisitos:\n- É necessário dominar o conceito de geometria para entender e utilizar as ferramentas e técnicas básicas do sistema de gráficos matemático. Em particular, o aluno deve entender a estrutura dos pontos, linhas, triângulos e retângulos geométricos, bem como a propriedade de suas unidades.\n- É importante familiarizar com a base de coordenadas e o sistema de coordenadas cartesígenas, que são fundamentais na manipulação de pontos e "
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 2010.886719,
+        "tps_medio": 12.595895,
+        "tempo_medio_segundos": 83.201771,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Habilidade: EF08MA05\nUnidade Temática: Geometria\nPré- requisitos que o aluno já deve dominar (calibração de dificuldade):\n- Familiaridade com a estrutura da matemática, incluindo conceitos básicos de planejamento, gráficos, andeiros, e dimensionalidade.\n- Conhecimento da teoria do espaço e do tempo, como os conceptos de origem, direção, distância, e velocidade.\n- Entendimento de conceitos como pontos, retângulos, retângulos e retângulos, como eles são utilizados na planejamento geométrico.\n- Familiaridade com as regiões do espaço, como o plano cartesiano e o plano trigonômico.\n- Conhecimento das funções geométricas e de suas respectivas rotas, como as transformações e as rotas de Euler.\n- Entendimento da teoria do sistema de equações, como as equações de Euler e as equações de Bézier.\n- Aprenda a resolver problemas de geometria aplicados a situações realisadas, como construir estruturas físicas, projetar edifícios, ou avaliar desempenho em situações geológicas.\nExemplos de questões existentes para esta habilidade (mantenha consistência de estilo):\n1. Calcula a distância de um ponto a um retângulo, com um tamanho e orientação variados.\n2. Determine a retângulo que se encontra ao redor do círculo com centro (center) e a distância entre a retângulo e o centro.\n3. Encontre a retângulo que se encontra ao redor de uma retângulo e uma retângulo com uma distância variada.\n4. Calcula a retângulo que se encontra ao redor de uma retângulo e uma retângulo com um tamanho e orientação aleatória.\n5. Determina a retângulo que se encontra ao redor de um retângulo e um retângulo com uma distância equilibrada.\n6. Encontre a retângulo que se encontra ao redor de um retângulo e uma retângulo com uma distância equilibrada entre um andeiro e um eixo.\n7. Cálculo a distância entre um eixo e um retângulo, com um tamanho e orientação variados.\n8. Determine a retângulo que se encontra ao redor de um retângulo e uma retângulo com um tamanho e orientação aleatória.\n9. Encontre a retângulo que se encontra ao redor de um retângulo e uma retângulo com uma distância equilibrada entre um andeiro e um eixo.\n10. Cálculo a distância entre um eixo e um retângulo, com um tamanho e orientação aleatória e um andeiro no eixo oposto à retângulo.\n11. Determine a retângulo que se encontra ao redor de um retângulo e uma retângulo com uma distância equilibrada entre um andeiro e um eixo do mesmo eixo.\n12. Cálculo a distância entre um eixo e um retângulo, com um tamanho e orientação aleatória e um eixo do mesmo eixo na direção oposta à retângulo.\n13. Cálculo a distância entre um eixo e um retângulo, com um tamanho e orientação aleatória e um eixo do mesmo eixo em um eixo diferente do eixo oposto à retângulo.\n14. Determine a retângulo que se encontra ao redor de um retângulo e uma retângulo com uma distância equilibrada entre um andeiro e um eixo do mesmo eixo e uma retângulo.\n15. Cálculo a distância entre um eixo e um retângulo, com um tamanho e orientação aleatória e um eixo do mesmo eixo em um eixo diferente do eixo oposto à retângulo e um andeiro no eixo oposto à retângulo.\n\nNote: Nenhuma das questões acima apresenta uma solução que se encontra no espaço real, como o plano cartesiano ou o plano trigonômico, pois as regiões do espaço estão limitadas a estadios geométricos e estabelecidos no planejamento geométrico. Em vez disso, as questões apresentam problemas de geometria aplicados a situa",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1049,
+            "total_tokens": 1049
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.6802351999795064,
+            "tempo_decode_s": 80.64199670002563,
+            "tempo_resposta_s": 83.32223190000514,
+            "tempo_total_s": 83.32223190000514,
+            "tokens_entrada": 0,
+            "tokens_saida": 1049,
+            "tps": 12.589677161539589,
+            "ram_inicio_mb": 2006.15234375,
+            "ram_pico_mb": 2008.5625,
+            "ram_usada_mb": 2.41015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Habilidade: EF06MA17\nUnidade Temática: Geometria\nPré--Requisitos:\n- É necessário dominar o conceito de geometria para entender e utilizar as ferramentas e técnicas básicas do sistema de gráficos matemático. Em particular, o aluno deve entender a estrutura dos pontos, linhas, triângulos e retângulos geométricos, bem como a propriedade de suas unidades.\n- É importante familiarizar com a base de coordenadas e o sistema de coordenadas cartesígenas, que são fundamentais na manipulação de pontos e figuras geométricas.\n- É necessária compreender as operações básicas de gráficos, como multiplicação, divisão, exponenciación, normalização, permutação, e transformação.\n- É necessário entender e aplicar técnicas matemáticas como retógrado, integração, integração paralela, resolução de problemas, e equações.\n- É necessário familiarizar com a geometria aplicada a diferentes problemas, como planejamento, geometria estética, geometria aplicada a dados, e geometria aplicada a problemas de engenharia.\n- É importante compreender e aplicar as técnicas de visualização geométrica, como diagramas, gráficos, e mapas, para apresentar e interpretar informações geométricas.\n- É necessário conhecer a geometria aplicada à física, como geometria dos objetos em movimento, geometria dos elementos físicos, e geometria das redes físicas.\n- É necessário compreender e aplicar as técnicas de analise de dados, como gráficos de dispersão, análise de distribuição, e análise de variância.\n- É necessário compreender e aplicar as técnicas de transformação, como transformação euclidiana, transformação tridimensional, e transformação de coordenadas.\n- É necessário entender e aplicar as técnicas de geometria aplicada a ciência, como geometria de sistemas de ecossistema, geometria de ecossistema complexo, geometria de ecossistema em movimento, e geometria de ecossistema em estado.\n- É necessário compreender e aplicar as técnicas de geometria aplicada a biologia, como geometria de células e organismos, geometria de redes moleculares, geometria de células e organismos em movimento, e geometria de células e organismos em estado.\n- É necessário compreender e aplicar as técnicas de geometria aplicada a geologia, como geometria de sedimentos, geometria de rocha, geometria de estradas, e geometria de geologia em movimento.\n- É necessário compreender e aplicar as técnicas de geometria aplicada a geofísica, como geometria de geofísica geográfica, geometria de geofísica geológica, geometria de geofísica geoelectrica, geometria de geofísica geosistémica, e geometria de geofísica geotérmica.\n\nExemplos de questões:\n\n  1. Cada ponto de um triângulo ou retângulo geométrico é um vértice e um extremidade, e o vértice interior é o ponto que é igual a cada extremidade.\n  2. O sistema de coordenadas cartesígenas é uma forma de representar os pontos e linhas geométricas em um quadro planejado.\n  3. A função de quadratura é uma função que representa o ângulo em um quadrado.\n  4. O cálculo de uma equação matemática é a processa de resolver um sistema de ecossistema de uma forma matemática.\n  5. O cálculo de uma variância é a processa de calcular a variação dos valores de uma distribuição.\n  6. O cálculo de uma integração é a processa de encontrar o valor da integral de uma função em um intervalo.\n  7. O cálculo de uma integração paralela é a processa de encontrar o valor da integral de uma função no intervalo em que a primeira e a segunda integração são conhecidas.\n  8. O cálculo de uma transformação é a processa de transformar uma função em um sistema de coordenadas.\n  9. O cálculo de uma transformação euclidiana é a processa de transformar uma função em um sistema de coordenadas que é um conjunto de pontos equidistantes.\n  10. O cálculo de uma transformação tridimensional é a processa de transformar uma função em um sistema de coordenadas",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1047,
+            "total_tokens": 1047
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.0821953999984544,
+            "tempo_decode_s": 80.99911380000412,
+            "tempo_resposta_s": 83.08130920000258,
+            "tempo_total_s": 83.08130920000258,
+            "tokens_entrada": 0,
+            "tokens_saida": 1047,
+            "tps": 12.602112437582623,
+            "ram_inicio_mb": 2008.46875,
+            "ram_pico_mb": 2010.88671875,
+            "ram_usada_mb": 2.41796875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 2030.5,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 12.6,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 83.2,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -19.4,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+    "gerado_em": "2026-09-25T08:41:27.585194"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}

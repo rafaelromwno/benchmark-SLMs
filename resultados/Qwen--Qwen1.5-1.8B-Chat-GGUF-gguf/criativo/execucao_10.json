@@ -1,0 +1,1169 @@
+{
+  "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+  "formato": "gguf",
+  "data": "25/09/2026",
+  "run_config": {
+    "modelos": [
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "Qwen/Qwen1.5-1.8B-Chat-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\Qwen--Qwen1.5-1.8B-Chat-GGUF\\qwen1_5-1_8b-chat-q4_k_m.gguf"
+    },
+    "seed": 777,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 777
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "criativo",
+      "temperature": 1.3,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 777
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 1.3,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 777
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 1.12,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": "Campo 'questoes' ausente",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 0.9926317000063136,
+        "tempo_prefill_s": 13.882902600016678,
+        "tempo_decode_s": 80.56404559998191,
+        "tempo_resposta_s": 94.44694819999859,
+        "tempo_total_s": 95.4395799000049,
+        "tokens_entrada": 0,
+        "tokens_saida": 1122,
+        "tps": 11.879685065356265,
+        "ram_inicio_mb": 35.21875,
+        "ram_pico_mb": 2002.6015625,
+        "ram_usada_mb": 1967.3828125,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 95.4395799000049,
+        "tempo_carregamento_s": 0.9926317000063136,
+        "tempo_resposta_s": 94.44694819999859,
+        "ram_pico_mb": 2002.6015625,
+        "ram_inicio_mb": 35.21875,
+        "ttft_segundos": 13.882902600016678,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "json_invalido"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "{ \"questoes\": [ \n    {\n      \"enunciado\": \"Dentre os números abaixo, qual NÃO pode ser escrito na forma de uma fração a/ b\", \n      \"alternativas\": [\n        {\n          \"enunciado\": \"1.00\",\n          \"alternativas_cada\": [\"0.00\", \"1.00\", \"2.00\", \"3.00\", \"4.00\"],\n          \"resposta_erro\": \"Deseja usar a fração decimal a, no entanto, a fração de fração é um formato exatamente diferente, pois é um número de fração e não um número inteiro.\",\n          \"resolução_erro\": \"Para escrita a fração a, é necessário que o número seja escrito com base decimal, com base a ser o número da fração. A solução para a questão é 0.10, que é a fração de fração a em base decimal.\"\n        },\n        {\n          \"enunciado\": \"2.00\",\n          \"alternativas_cada\": [\"0.00\", \"1.00\", \"2.00\", \"3.00\", \"4.00\"],\n          \"resposta_erro\": \"Deseja usar a fração decimal a, no entanto, a fração de fração é um formato exatamente diferente, pois é um número de fração e não um número inteiro.\",\n          \"resolução_erro\": \"Para escrita a fração a, é necessário que o número seja escrito com base decimal, com base a ser o número da fração. A solução para a questão é 0.20, que é a fração de fração a em base decimal.\"\n        },\n        {\n          \"enunciado\": \"3.00\",\n          \"alternativas_cada\": [\"0.00\", \"1.00\", \"2.00\", \"3.00\", \"4.00\"],\n          \"resposta_erro\": \"Deseja usar a fração decimal a, no entanto, a fração de fração é um formato exatamente diferente, pois é um número de fração e não um número inteiro.\",\n          \"resolução_erro\": \"Para escrever a fração a, é necessário que o número seja escrito com base decimal, com base a ser o número da fração. A solução para a questão é 0.30, que é a fração de fração a em base decimal.\"\n        },\n        {\n          \"enunciado\": \"4.00\",\n          \"alternativas_cada\": [\"0.00\", \"1.00\", \"2.00\", \"3.00\", \"4.00\"],\n          \"resposta_erro\": \"Deseja usar a fração decimal a, no entanto, a fração de fração é um formato exatamente diferente, pois é um número de fração e não um número inteiro.\",\n          \"resolução_erro\": \"Para escrever a fração a, é necessário que o número seja escrito com base decimal, com base a ser o número da fração. A solução para a questão é 0.40, que é a fração de fração a em base decimal.\"\n      ]\n    },\n    {\n      \"enunciado\": \"O valor de um número não é igual ao número de uma fração a e b\", \n      \"alternativas\": [\n        {\n          \"enunciado\": \"1.00\",\n          \"alternativas_cada\": [\"0.00\", \"1.00\", \"2.00\", \"3.00\", \"4.00\"],\n          \"resposta_erro\": \"Deseja usar a fração decimal a, no entanto, o valor de um número não é igual ao número de uma fração a e b\",\n          \"resolução_erro\": \"Para escrever o valor de um número, é necessário que o número seja escrito com base decimal, com base a ser o número da fração. O valor do número 4, por exemplo, é igual a 4, no entanto, o número de uma fração a e b é 1.00, que é uma fração inteira e não um número decimal.\"\n        },\n        {\n          \"enunciado\": \"2.00\",\n          \"alternativas_cada\": [\"0.00\", \"1.00\", \"2.00\", \"3.00\", \"4.00\"],\n          \"resposta_erro\": \"Deseja usar a fração decimal a, no entanto, o valor de um número não é igual ao número de uma fração a e b\",\n         ",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1122,
+            "total_tokens": 1122
+          },
+          "metrics": {
+            "tempo_carregamento_s": 0.9926317000063136,
+            "tempo_prefill_s": 13.882902600016678,
+            "tempo_decode_s": 80.56404559998191,
+            "tempo_resposta_s": 94.44694819999859,
+            "tempo_total_s": 95.4395799000049,
+            "tokens_entrada": 0,
+            "tokens_saida": 1122,
+            "tps": 11.879685065356265,
+            "ram_inicio_mb": 35.21875,
+            "ram_pico_mb": 2002.6015625,
+            "ram_usada_mb": 1967.3828125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 13.25514,
+          "iqr": 0.398296,
+          "p25": 13.207982,
+          "p75": 13.606278,
+          "p95": 14.06728,
+          "p99": 14.149138,
+          "max": 14.169602,
+          "media": 13.172932
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.628638,
+          "iqr": 2.295121,
+          "p25": 0.68818,
+          "p75": 2.983302,
+          "p95": 3.717843,
+          "p99": 4.065557,
+          "max": 4.152486,
+          "media": 2.115105
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 81.840313,
+          "iqr": 47.80349,
+          "p25": 34.614357,
+          "p75": 82.417848,
+          "p95": 83.079742,
+          "p99": 83.329459,
+          "max": 83.391889,
+          "media": 61.140242
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1979.585938,
+          "iqr": 8.186523,
+          "p25": 1974.686523,
+          "p75": 1982.873047,
+          "p95": 1984.875781,
+          "p99": 1985.190781,
+          "max": 1985.269531,
+          "media": 1978.609766
+        },
+        "tps_medio": 13.172932,
+        "ttft_medio_segundos": 2.115105,
+        "tempo_medio_segundos": 61.140242,
+        "ram_pico_mb": 1985.269531
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 10,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 10
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 13.25514,
+          "iqr": 0.398296,
+          "p25": 13.207982,
+          "p75": 13.606278,
+          "p95": 14.06728,
+          "p99": 14.149138,
+          "max": 14.169602,
+          "media": 13.172932
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 2.628638,
+          "iqr": 2.295121,
+          "p25": 0.68818,
+          "p75": 2.983302,
+          "p95": 3.717843,
+          "p99": 4.065557,
+          "max": 4.152486,
+          "media": 2.115105
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 81.840313,
+          "iqr": 47.80349,
+          "p25": 34.614357,
+          "p75": 82.417848,
+          "p95": 83.079742,
+          "p99": 83.329459,
+          "max": 83.391889,
+          "media": 61.140242
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 1979.585938,
+          "iqr": 8.186523,
+          "p25": 1974.686523,
+          "p75": 1982.873047,
+          "p95": 1984.875781,
+          "p99": 1985.190781,
+          "max": 1985.269531,
+          "media": 1978.609766
+        },
+        "tps_medio": 13.172932,
+        "ttft_medio_segundos": 2.115105,
+        "tempo_medio_segundos": 61.140242,
+        "ram_pico_mb": 1985.269531,
+        "tps_por_rodada": [
+          10.873524152472807,
+          13.223759171982444,
+          13.942218346345506,
+          14.169602375924232,
+          13.231691717546736,
+          13.202722884960629,
+          13.705699240913129,
+          13.308015687193995,
+          12.79350263032672,
+          13.27858853243873
+        ],
+        "ttft_por_rodada": [
+          4.152485999977216,
+          2.747981799999252,
+          0.07293319999007508,
+          0.07348200000706129,
+          2.5214479000132997,
+          3.186613199999556,
+          0.07709090001299046,
+          2.5257656000030693,
+          3.061741499986965,
+          2.731510599987814
+        ],
+        "tempo_por_rodada": [
+          19.49689879998914,
+          82.50301489999401,
+          8.82212550000986,
+          8.680554100021254,
+          82.0756728000124,
+          83.39188889999059,
+          79.96673360001296,
+          81.60495340000489,
+          82.69822819999536,
+          82.16234709997661
+        ],
+        "ram_por_rodada": [
+          1980.14453125,
+          1969.77734375,
+          1972.13671875,
+          1974.09375,
+          1976.46484375,
+          1979.02734375,
+          1981.4375,
+          1983.3515625,
+          1985.26953125,
+          1984.39453125
+        ],
+        "ram_media_mb": 1978.609766
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fórmula para encontrar o valor de um número no sistema decimal a/b e b ≠ 0? Explicando o processo de divisão e o exemplo de valor de um número específico.\n2. Dada uma lista de números em formato binário (base 2), escreva um programa em Python para encontrar a fórmula para encontrar a raiz quadrada da sequência de binários (base 2). Explaining the process of finding the square root of a binary sequence and providing a Python code example.\n3. O cálculo da raiz quadrada de uma sequência binária é um dos problemas mais complexos de matemática para alunos. Utilize a biblioteca `math` da biblioteca Python para encontrar a raiz quadrada da sequência de binários a base 2. Explanando o processo e provide a Python code example that demonstrates how to calculate the square root of a binary sequence and explain how to handle exceptions and edge cases.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 212,
+            "total_tokens": 212
+          },
+          "metrics": {
+            "tempo_prefill_s": 4.152485999977216,
+            "tempo_decode_s": 15.344412800011924,
+            "tempo_resposta_s": 19.49689879998914,
+            "tempo_total_s": 19.49689879998914,
+            "tokens_entrada": 0,
+            "tokens_saida": 212,
+            "tps": 10.873524152472807,
+            "ram_inicio_mb": 1976.765625,
+            "ram_pico_mb": 1980.14453125,
+            "ram_usada_mb": 3.37890625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3. Questões de múltipla escolha para habilidade EF06MA14, Unidade Temática: Álgebra\n\n1. Qual é a função matemática para encontrar o valor de y (x + 5) / 2?\na) Exemplo\nb) Utilização de um calculator\nc) Descreção no código\nd) Resposta em uma frase\n\n2. Se u = (2x + 5) / 3, determine se u é uma variável ou uma parámetro do problema.\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n3. Qual é a diferença entre a multiplicação de dois números e a soma dos dois números?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n4. Qual é o fatorial de 4?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n5. Qual é a fração entre o resultado de 3x + 5 e 7?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n6. Qual é o valor de y = (x^2 + 3x + 2) / 3?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n7. Qual é o valor de u = 5 / x?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n8. Qual é a função de determinação da paridade no número 11?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n9. Qual é a função de determinação do multiplo da fração 4/3?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n10. Qual é a função de determinação do produto de duas números?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\nResposta:\n\n1. Qual é a função matemática para encontrar o valor de y (x + 5) / 2?\na) Exemplo\nc) Descrição no código\nd) Resposta em uma frase\n2. Se u = (2x + 5) / 3, determine se u é uma variável ou uma parámetro do problema.\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n3. Qual é a diferença entre a multiplicação de dois números e a soma dos dois números?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n4. Qual é o fatorial de 4?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n5. Qual é o valor de y = (x^2 + 3x + 2) / 3?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n6. Qual é o valor de u = 5 / x?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n7. Qual é o valor de u = 5 / 11?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n8. Qual é a função de determinação da paridade no número 11?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n9. Qual é a função de determinação do multiplo da fração 4/3?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n10. Qual é a função de determinação do produto de duas números?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\nRegras absolutas:\n\n1. Nenhuma resposta deve ser substituída por mais de uma questão",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1091,
+            "total_tokens": 1091
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.747981799999252,
+            "tempo_decode_s": 79.75503309999476,
+            "tempo_resposta_s": 82.50301489999401,
+            "tempo_total_s": 82.50301489999401,
+            "tokens_entrada": 0,
+            "tokens_saida": 1091,
+            "tps": 13.223759171982444,
+            "ram_inicio_mb": 1967.265625,
+            "ram_pico_mb": 1969.77734375,
+            "ram_usada_mb": 2.51171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3. Questões para habilidade EF06MA14:\n  1. Qual é a fórmula para calcular a parte superior da divisão entre dois números enteros (x e y)?\n  2. Se a soma de 5x e 3y é igual a 21, determine as raízes das duas variáveis x e y.\n  3. Encontre a área de um triângulo hipotenusa, base é 6 cm e altura é 4 cm, usando a fórmula para calcular a área.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 123,
+            "total_tokens": 123
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07293319999007508,
+            "tempo_decode_s": 8.749192300019786,
+            "tempo_resposta_s": 8.82212550000986,
+            "tempo_total_s": 8.82212550000986,
+            "tokens_entrada": 0,
+            "tokens_saida": 123,
+            "tps": 13.942218346345506,
+            "ram_inicio_mb": 1970.20703125,
+            "ram_pico_mb": 1972.13671875,
+            "ram_usada_mb": 1.9296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3. Questões para habilidade EF06MA14:\n  1. Qual é a fórmula para calcular a parte superior da divisão entre dois números enteros (x e y)?\n  2. Se a soma de 5x e 3y é igual a 21, determine as raízes das duas variáveis x e y.\n  3. Encontre a área de um triângulo hipotenusa, base é 6 cm e altura é 4 cm, usando a fórmula para calcular a área.",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 123,
+            "total_tokens": 123
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07348200000706129,
+            "tempo_decode_s": 8.607072100014193,
+            "tempo_resposta_s": 8.680554100021254,
+            "tempo_total_s": 8.680554100021254,
+            "tokens_entrada": 0,
+            "tokens_saida": 123,
+            "tps": 14.169602375924232,
+            "ram_inicio_mb": 1972.28125,
+            "ram_pico_mb": 1974.09375,
+            "ram_usada_mb": 1.8125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF02MA01\n**Unidade Temática:** Números\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\n- Familiaridade com a base de divisão e regmulas de números\n- Compreensão de operações com números básicos (multiplicação, divisão, addição e subtração)\n- Criar e interpretar equações numéricas\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\n\n1. Determine o valor de 6/7, usando apenas operações com números básicos.\n2. Encontre o valor de 100/200, usando apenas operações com números básicos.\n3. Calcular o valor de 10/5, usando apenas operações com números básicos.\n4. Determine a raíz quadrada de 200, usando apenas operações com números básicos.\n5. Calcula o valor de 1/3, usando apenas operações com números básicos.\n6. Determine o valor de 15/25, usando apenas operações com números básicos.\n\n**Questões (novas e inéditas)**:\n\n1. Determine se o número 176 é um número ímpares ou par, usando apenas operações com números básicos.\n2. Determine o valor de 23/13, usando apenas operações com números básicos.\n3. Determine o valor de 5/2, usando apenas operações com números básicos.\n4. Determine a raíz quadrada de 500, usando apenas operações com números básicos.\n5. Calcula o valor de 3/7, usando apenas operações com números básicos.\n6. Determine o valor de 4/5, usando apenas operações com números básicos.\n7. Determine se o número 315 é um número par ou ímpares, usando apenas operações com números básicos.\n8. Determine o valor de 25/9, usando apenas operações com números básicos.\n9. Determine o valor de 5/1, usando apenas operações com números básicos.\n10. Determine a raíz quadrada de 1500, usando apenas operações com números básicos.\n11. Determine o valor de 2/1, usando apenas operações com números básicos.\n12. Determine o valor de 4/3, usando apenas operações com números básicos.\n13. Determine o valor de 1/2, usando apenas operações com números básicos.\n14. Determine se o número 289 é um número ímpares ou par, usando apenas operações com números básicos.\n15. Determine o valor de 10/4, usando apenas operações com números básicos.\n16. Determine o valor de 3/5, usando apenas operações com números básicos.\n17. Determine o valor de 2/3, usando apenas operações com números básicos.\n18. Determine o valor de 3/7, usando apenas operações com números básicos.\n19. Determine o valor de 4/5, usando apenas operações com números básicos.\n20. Determine se o número 500 é um número par ou ímpares, usando apenas operações com números básicos.\n\n**Resposta:** A, B, C, D, E\n\n**Resolução:** A\n1. O número 176 é um número ímpareiro, pois 176 é divisível por 2 (176 ÷ 2 = 88) e não é divisível por 3 (176 ÷ 3 = 62), enquanto 176 é divisível por 4 (176 ÷ 4 = 43) e não é divisível por 5 (176 ÷ 5 = 35).\n2. O número 23/13 é um número par, pois 23 é divisível por 13 (23 ÷ 13 = 1) e não é divisível por 3 (23 ÷ 3 = 8) e por 5 (23 ÷ 5 = 4), enquanto 23 é divisível por 6 (23 ÷ 6 = 3) e não é divisível por 7 (23 ÷ 7 = 3) e por 9 (23 ÷ 9 = 2), mas não é divisível por 11 (23 ÷ 11 = 2).\n3. O valor de 5/2 é 5 (divisível por 2).\n4. A ra",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1086,
+            "total_tokens": 1086
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.5214479000132997,
+            "tempo_decode_s": 79.5542248999991,
+            "tempo_resposta_s": 82.0756728000124,
+            "tempo_total_s": 82.0756728000124,
+            "tokens_entrada": 0,
+            "tokens_saida": 1086,
+            "tps": 13.231691717546736,
+            "ram_inicio_mb": 1974.03125,
+            "ram_pico_mb": 1976.46484375,
+            "ram_usada_mb": 2.43359375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF06MA14\n**Unidade Temática:** Álgebra\n**Pré--requisitos que o aluno já deve dominar  (calibração de dificuldade):**\nEF06MA01\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n1. **Multiplicação em binaria**\n   - Define a operação de multiplicação em binária (x * y), e seja explicito na sua definição, com o operador da forma base e base x.\n   - Exemplo: 5 * 6 =?\n   - Resposta: 30\n   - Dificuldade: Complexidade 2: O número binário é representado por uma série de dígitos e é mais difícil de ser compreendido para os alunos com baixa compreensão de matemática.\n2. **Subtrução em binária**\n   - Defina a operação de subtruição em binária (x - y), e seja explicito na sua definição, com o operador da forma base e base x.\n   - Exemplo: 10 - 3 =?\n   - Resposta: 7\n   - Dificuldade: Complexidade 2: O número binário é representado por uma série de dígitos e é mais difícil de ser compreendido para os alunos com baixa compreensão de matemática.\n3. **Multiplicação em escalar**\n   - Define a operação de multiplicação em escalar (x * y), e seja explicito na sua definição, com o operador da forma base e base y.\n   - Exemplo: 5 * 6 =?\n   - Resposta: 30\n   - Dificuldade: Complexidade 2: O número escalar é representado por um número complexo e é mais difícil de ser compreendido para os alunos com baixa compreensão de matemática.\n4. **Divisão em escalar**\n   - Define a operação de divisão em escalar (x / y), e seja explicito na sua definição, com o operador da forma base e base y.\n   - Exemplo: 5 / 3 =?\n   - Resposta: 1.6666666666666668\n   - Dificuldade: Complexidade 2: O número escalar é representado por um número complexo e é mais difícil de ser compreendido para os alunos com baixa compreensão de matemática.\n\n**3 new questions (inéditas and alinhadas à habilidade EF06MA14):**\n\n1. **Divisão em escalar**\n   - Define a operação de divisão em escalar (x / y), e seja explicito na sua definição, com o operador da forma base e base y.\n   - Define a função `divisão_base工夫aria` que converte um escalar (x) em base y, e é implementada na seguinte forma:\n     ```python\n     def divisão_base工夫aria(x, y):\n         return x // y\n     ```\n   - Exemplo: 5 / 3 =?\n   - Resposta: 1.6666666666666668\n   - Dificuldade: Complexidade 2: O número escalar é representado por um número complexo e é mais difícil de ser compreendido para os alunos com baixa compreensão de matemática.\n2. **Divisão em binário**\n   - Define a operação de divisão em binário (x / y), e seja explicito na sua definição, com o operador da forma base e base y.\n   - Define a função `divisão_base_binaria` que converte um binário (x) em base y, e é implementada na seguinte forma:\n     ```python\n     def divisão_base_binaria(x, y):\n         return x // y\n     ```\n   - Exemplo: 20 / 10 =?\n   - Resposta: 2\n   - Dificuldade: Complexidade 2: O número binário é representado por uma série de dígitos e é mais difícil de ser compreendido para os alunos com baixa compreensão de matemática.\n3. **Multiplicação em escalar**\n   - Define a operação de multiplicação em escalar (x * y), e seja explicito na sua definição, com o operador da forma base e base y.\n   - Define a função `multiplicação",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1101,
+            "total_tokens": 1101
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.186613199999556,
+            "tempo_decode_s": 80.20527569999103,
+            "tempo_resposta_s": 83.39188889999059,
+            "tempo_total_s": 83.39188889999059,
+            "tokens_entrada": 0,
+            "tokens_saida": 1101,
+            "tps": 13.202722884960629,
+            "ram_inicio_mb": 1976.75390625,
+            "ram_pico_mb": 1979.02734375,
+            "ram_usada_mb": 2.2734375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3. Problemas de Matemática noalfabetico (EF06MA14) - Nível de A:\n\n1. Aproximativa de valores de números com base em operações com múltiplas casas.\n   a) Cálculo da raiz de um número (ésse caso: 2^4 = 16)\n   b) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 2 e divididos por 3.\n   c) Cálculo da raiz de um número (ésse caso: 3^2 = 9)\n   d) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 4 e divididos por 5.\n\n2. Aproximativa de valores de números com base em operações com operações com múltiplas casas.\n   a) Cálculo da raiz de um número (ésse caso: 4^2 = 16)\n   b) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 5 e divididos por 3.\n   c) Cálculo da raiz de um número (ésse caso: 3^2 = 9)\n   d) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 6 e dividido por 5.\n\n3. Aproximativa de valores de números com base em operações com operações com múltiplas casas em que os números são multiplicados por 2 e divididos por 3 e 4.\n   a) Cálculo da raiz de um número (ésse caso: (2 * 3)^(2/3) = 4)\n   b) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 4 e dividido por 3 e 5.\n   c) Cálculo da raiz de um número (ésse caso: (2 * 5)^(2/3) = 4)\n   d) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 6 e dividido por 5.\n\n4. Aproximativa de valores de números com base em operações com operações com múltiplas casas em que os números são multiplicados por 5 e dividido por 2 e 3.\n   a) Cálculo da raiz de um número (ésse caso: (5 * 3)^(2/3) = 5)\n   b) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 5 e dividido por 2 e 4.\n   c) Cálculo da raiz de um número (ésse caso: (5 * 2)^(2/3) = 5)\n   d) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 6 e dividido por 2.\n\n5. Aproximativa de valores de números com base em operações com operações com múltiplas casas em que os números são multiplicados por 3 e dividido por 4.\n   a) Cálculo da raiz de um número (ésse caso: (3 * 4)^(2/3) = 12)\n   b) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 4 e dividido por 3 e 5.\n   c) Cálculo da raiz de um número (ésse caso: (3 * 5)^(2/3) = 12)\n   d) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 6 e dividido por 3.\n\n6. Aproximativa de valores de números com base em operações com operações com múltiplas casas em que os números são multiplicados por 3 e dividido por 2 e 4.\n   a) Cálculo da raiz de um número (ésse caso: (3 * 4)^(2/3) = 12)\n   b) Aproximativa de valores de números com base em operações com múltiplas casas em que os números são multiplicados por 5 e",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1096,
+            "total_tokens": 1096
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07709090001299046,
+            "tempo_decode_s": 79.88964269999997,
+            "tempo_resposta_s": 79.96673360001296,
+            "tempo_total_s": 79.96673360001296,
+            "tokens_entrada": 0,
+            "tokens_saida": 1096,
+            "tps": 13.705699240913129,
+            "ram_inicio_mb": 1979.46484375,
+            "ram_pico_mb": 1981.4375,
+            "ram_usada_mb": 1.97265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF02MA01\n**Unidade Temática:** Números\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\n- Familiaridade com a base de divisão e regmulas de números\n- Compreensão de operações com números básicos (multiplicação, divisão, addição e subtração)\n- Criar e interpretar equações numéricas\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\n\n1. Determine o valor de 6/7, usando apenas operações com números básicos.\n2. Encontre o valor de 100/200, usando apenas operações com números básicos.\n3. Calcular o valor de 10/5, usando apenas operações com números básicos.\n4. Determine a raíz quadrada de 200, usando apenas operações com números básicos.\n5. Calcula o valor de 1/3, usando apenas operações com números básicos.\n6. Determine o valor de 15/25, usando apenas operações com números básicos.\n\n**Questões (novas e inéditas)**:\n\n1. Determine se o número 176 é um número ímpares ou par, usando apenas operações com números básicos.\n2. Determine o valor de 23/13, usando apenas operações com números básicos.\n3. Determine o valor de 5/2, usando apenas operações com números básicos.\n4. Determine a raíz quadrada de 500, usando apenas operações com números básicos.\n5. Calcula o valor de 3/7, usando apenas operações com números básicos.\n6. Determine o valor de 4/5, usando apenas operações com números básicos.\n7. Determine se o número 315 é um número par ou ímpares, usando apenas operações com números básicos.\n8. Determine o valor de 25/9, usando apenas operações com números básicos.\n9. Determine o valor de 5/1, usando apenas operações com números básicos.\n10. Determine a raíz quadrada de 1500, usando apenas operações com números básicos.\n11. Determine o valor de 2/1, usando apenas operações com números básicos.\n12. Determine o valor de 4/3, usando apenas operações com números básicos.\n13. Determine o valor de 1/2, usando apenas operações com números básicos.\n14. Determine se o número 289 é um número ímpares ou par, usando apenas operações com números básicos.\n15. Determine o valor de 10/4, usando apenas operações com números básicos.\n16. Determine o valor de 3/5, usando apenas operações com números básicos.\n17. Determine o valor de 2/3, usando apenas operações com números básicos.\n18. Determine o valor de 3/7, usando apenas operações com números básicos.\n19. Determine o valor de 4/5, usando apenas operações com números básicos.\n20. Determine se o número 500 é um número par ou ímpares, usando apenas operações com números básicos.\n\n**Resposta:** A, B, C, D, E\n\n**Resolução:** A\n1. O número 176 é um número ímpareiro, pois 176 é divisível por 2 (176 ÷ 2 = 88) e não é divisível por 3 (176 ÷ 3 = 62), enquanto 176 é divisível por 4 (176 ÷ 4 = 43) e não é divisível por 5 (176 ÷ 5 = 35).\n2. O número 23/13 é um número par, pois 23 é divisível por 13 (23 ÷ 13 = 1) e não é divisível por 3 (23 ÷ 3 = 8) e por 5 (23 ÷ 5 = 4), enquanto 23 é divisível por 6 (23 ÷ 6 = 3) e não é divisível por 7 (23 ÷ 7 = 3) e por 9 (23 ÷ 9 = 2), mas não é divisível por 11 (23 ÷ 11 = 2).\n3. O valor de 5/2 é 5 (divisível por 2).\n4. A ra",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1086,
+            "total_tokens": 1086
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.5257656000030693,
+            "tempo_decode_s": 79.07918780000182,
+            "tempo_resposta_s": 81.60495340000489,
+            "tempo_total_s": 81.60495340000489,
+            "tokens_entrada": 0,
+            "tokens_saida": 1086,
+            "tps": 13.308015687193995,
+            "ram_inicio_mb": 1981.5,
+            "ram_pico_mb": 1983.3515625,
+            "ram_usada_mb": 1.8515625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "**Habilidade:** EF09MA01\n**Unidade Temática:** Números\n**Pré-requisitos que o aluno já deve dominar (calibração de dificuldade):**\nEF08MA01, EF07MA01\n\n**Exemplos de questões existentes para esta habilidade (mantenha consistência de estilo):**\n\n1. Qual é a diferença entre 4 e 7, em base à forma em que é escrita?\n2. Em que conjunto de números devem ser representados em uma fração de 3: 1/2, 3/4, 5/8, 7/16?\n3. Para identificar um número que não é divisível por outro número, como 4/5 ou 9/11, qual é o seu primeiro passo?\n4. Quais são as principais formas de representar a fração 1/2, e em que consiste? (com números reais, imaginários, complexos, etc.)\n5. Qual é a diferença entre a fração 2/3 e a fração 3/4, em base à forma em que é escrita?\n6. Qual é a diferença entre a fração 1/2 e a fração 1/3, em base à forma em que é escrita?\n7. Em que conjunto de números devem ser representados em uma fração de 4: 1/2, 1/4, 2/4, 3/4?\n8. Para identificar um número que não é divisível por outro número, como 1/2 e 2/3, qual é o seu primeiro passo?\n9. Qual é a diferença entre a fração 2/3 e a fração 3/4, em base à forma em que é escrita?\n10. Qual é a diferença entre a fração 1/2 e a fração 1/3, em base à forma em que é escrita?\n11. Qual é a diferença entre a fração 1/4 e a fração 1/6, em base à forma em que é escrita?\n12. Qual é a diferença entre a fração 1/4 e a fração 1/8, em base à forma em que é escrita?\n13. Qual é a diferença entre a fração 1/6 e a fração 1/9, em base à forma em que é escrita?\n14. Qual é a diferença entre a fração 1/6 e a fração 1/11, em base à forma em que é escrita?\n15. Qual é a diferença entre a fração 1/6 e a fração 1/13, em base à forma em que é escrita?\n16. Qual é a diferença entre a fração 1/6 e a fração 1/15, em base à forma em que é escrita?\n17. Qual é a diferença entre a fração 1/8 e a fração 1/16, em base à forma em que é escrita?\n18. Qual é a diferença entre a fração 1/8 e a fração 1/18, em base à forma em que é escrita?\n19. Qual é a diferença entre a fração 1/8 e a fração 1/19, em base à forma em que é escrita?\n20. Qual é a diferença entre a fração 1/10 e a fração 1/12, em base à forma em que é escrita?\n\n1. Qual é a diferença entre a fração 1/10 e a fração 1/14, em base à forma em que é escrita?\n2. Qual é a diferença entre a fração 1/11 e a fração 1/12, em base à forma em que é escrita?\n3. Qual é a diferença entre a fração 1/11 e a fração 1/13, em base à forma em que é escrita?\n4. Qual é a diferença entre a fração 1/12 e a fração 1/14, em base à forma em que é escrita?\n5. Qual é a diferença entre a fração 1/13 e a fração 1/14, em base à forma em que é escrita?\n6. Qual é a diferença entre a fração 1/14 e a fração 1/15, em base à forma em que é escrita?\n7. Qual é a diferença entre a fração 1/14 e a fração 1/17, em base à forma em que é escrita?\n8. Qual",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1058,
+            "total_tokens": 1058
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.061741499986965,
+            "tempo_decode_s": 79.63648670000839,
+            "tempo_resposta_s": 82.69822819999536,
+            "tempo_total_s": 82.69822819999536,
+            "tokens_entrada": 0,
+            "tokens_saida": 1058,
+            "tps": 12.79350263032672,
+            "ram_inicio_mb": 1983.2578125,
+            "ram_pico_mb": 1985.26953125,
+            "ram_usada_mb": 2.01171875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "3. Questões de múltipla escolha para habilidade EF06MA14, Unidade Temática: Álgebra\n\n1. Qual é a função matemática para encontrar o valor de y (x + 5) / 2?\na) Exemplo\nb) Utilização de um calculator\nc) Descreção no código\nd) Resposta em uma frase\n\n2. Se u = (2x + 5) / 3, determine se u é uma variável ou uma parámetro do problema.\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n3. Qual é a diferença entre a multiplicação de dois números e a soma dos dois números?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n4. Qual é o fatorial de 4?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n5. Qual é a fração entre o resultado de 3x + 5 e 7?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n6. Qual é o valor de y = (x^2 + 3x + 2) / 3?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n7. Qual é o valor de u = 5 / x?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n8. Qual é a função de determinação da paridade no número 11?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n9. Qual é a função de determinação do multiplo da fração 4/3?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\n10. Qual é a função de determinação do produto de duas números?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\nResposta:\n\n1. Qual é a função matemática para encontrar o valor de y (x + 5) / 2?\na) Exemplo\nc) Descrição no código\nd) Resposta em uma frase\n2. Se u = (2x + 5) / 3, determine se u é uma variável ou uma parámetro do problema.\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n3. Qual é a diferença entre a multiplicação de dois números e a soma dos dois números?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n4. Qual é o fatorial de 4?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n5. Qual é o valor de y = (x^2 + 3x + 2) / 3?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n6. Qual é o valor de u = 5 / x?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n7. Qual é o valor de u = 5 / 11?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n8. Qual é a função de determinação da paridade no número 11?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n9. Qual é a função de determinação do multiplo da fração 4/3?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n10. Qual é a função de determinação do produto de duas números?\na) Exemplo\nb) Utilização de um calculator\nc) Descrição no código\nd) Resposta em uma frase\n\nRegras absolutas:\n\n1. Nenhuma resposta deve ser substituída por mais de uma questão",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1091,
+            "total_tokens": 1091
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.731510599987814,
+            "tempo_decode_s": 79.4308364999888,
+            "tempo_resposta_s": 82.16234709997661,
+            "tempo_total_s": 82.16234709997661,
+            "tokens_entrada": 0,
+            "tokens_saida": 1091,
+            "tps": 13.27858853243873,
+            "ram_inicio_mb": 1981.98828125,
+            "ram_pico_mb": 1984.39453125,
+            "ram_usada_mb": 2.40625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 13.895026,
+        "ram_media_mb": 1886.35026,
+        "ram_pico_mb": 1986.503906,
+        "tempo_medio_segundos": 81.10013,
+        "ttft_medio_segundos": 1.107701,
+        "tps": {
+          "n": 3,
+          "mediana": 14.224205,
+          "iqr": 0.596454,
+          "p25": 13.679094,
+          "p75": 14.275548,
+          "p95": 14.316622,
+          "p99": 14.324837,
+          "max": 14.32689,
+          "media": 13.895026
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.081401,
+          "iqr": 1.545909,
+          "p25": 0.078172,
+          "p75": 1.624081,
+          "p95": 2.858224,
+          "p99": 3.105053,
+          "max": 3.16676,
+          "media": 1.107701
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 79.793561,
+          "iqr": 2.531756,
+          "p25": 79.507609,
+          "p75": 82.039366,
+          "p95": 83.836009,
+          "p99": 84.195338,
+          "max": 84.28517,
+          "media": 81.10013
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 1860.535156,
+          "iqr": 87.246094,
+          "p25": 1836.273438,
+          "p75": 1923.519531,
+          "p95": 1973.907031,
+          "p99": 1983.984531,
+          "max": 1986.503906,
+          "media": 1886.35026
+        },
+        "tps_por_rodada": [
+          13.133983088286318,
+          14.224205366365197,
+          14.326890291357858
+        ],
+        "ttft_por_rodada": [
+          3.1667603999958374,
+          0.07494280001264997,
+          0.0814012999762781
+        ],
+        "tempo_por_rodada": [
+          84.2851701999898,
+          79.79356109999935,
+          79.22165779999341
+        ],
+        "ram_por_rodada": [
+          1986.50390625,
+          1860.53515625,
+          1812.01171875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 3
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 1986.503906,
+        "tps_medio": 13.895026,
+        "tempo_medio_segundos": 81.10013,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 3
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração de 3 e 6 que pode ser escrita em forma de um número e no número 7?\n  * A = 3/6\n  * B = 3/7\n  * C = 6/7\n  * D = 6/6\n  * E = 7/7\n\n2. Qual é a fração de 5 e 11 que pode ser escrita em forma de um número e no número 12?\n  * A = 5/11\n  * B = 5/12\n  * C = 6/12\n  * D = 6/11\n  * E = 11/12\n\n3. Qual é a fração de 13 e 15 que pode ser escrita em forma de um número e no número 16?\n  * A = 13/15\n  * B = 13/16\n  * C = 15/16\n  * D = 14/15\n  * E = 16/15\n\n4. Qual é a fração de 17 e 21 que pode ser escrita em forma de um número e no número 22?\n  * A = 17/21\n  * B = 17/22\n  * C = 18/22\n  * D = 16/21\n  * E = 19/21\n\n5. Qual é a fração de 19 e 23 que pode ser escrita em forma de um número e no número 24?\n  * A = 19/23\n  * B = 19/24\n  * C = 20/24\n  * D = 18/23\n  * E = 21/23\n\n6. Qual é a fração de 25 e 27 que pode ser escrita em forma de um número e no número 28?\n  * A = 25/27\n  * B = 25/28\n  * C = 26/28\n  * D = 24/27\n  * E = 25/27\n\n7. Qual é a fração de 29 e 31 que pode ser escrita em forma de um número e no número 32?\n  * A = 29/31\n  * B = 29/32\n  * C = 30/32\n  * D = 28/31\n  * E = 31/32\n\n8. Qual é a fração de 33 e 35 que pode ser escrita em forma de um número e no número 36?\n  * A = 33/35\n  * B = 33/36\n  * C = 34/36\n  * D = 32/35\n  * E = 35/35\n\n9. Qual é a fração de 37 e 39 que pode ser escrita em forma de um número e no número 40?\n  * A = 37/39\n  * B = 37/40\n  * C = 38/40\n  * D = 36/39\n  * E = 39/39\n\n10. Qual é a fração de 41 e 43 que pode ser escrita em forma de um número e no número 44?\n  * A = 41/43\n  * B = 41/44\n  * C = 42/44\n  * D = 40/41\n  * E = 42/41\n\n11. Qual é a fração de 45 e 47 que pode ser escrita em forma de um número e no número 48?\n  * A = 45/47\n  * B = 45/48\n  * C = 46/48\n  * D = 44/45\n  * E = 45/47\n\n12. Qual é a fração de 49 e 51 que pode ser escrita em forma de um número e no número 52?\n  * A = 49/51\n  * B = 49/52\n  * C = 50/52\n  * D = 51/52\n  * E = 5",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1107,
+            "total_tokens": 1107
+          },
+          "metrics": {
+            "tempo_prefill_s": 3.1667603999958374,
+            "tempo_decode_s": 81.11840979999397,
+            "tempo_resposta_s": 84.2851701999898,
+            "tempo_total_s": 84.2851701999898,
+            "tokens_entrada": 0,
+            "tokens_saida": 1107,
+            "tps": 13.133983088286318,
+            "ram_inicio_mb": 1984.55078125,
+            "ram_pico_mb": 1986.50390625,
+            "ram_usada_mb": 1.953125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração de 25 que pode ser escrita em base a e b (com a e b inteis, b ≠ 0)?\n   E = 25/5 = 5\n   B = 25 - 5 = 20\n\n2. Qual é a fração de 40 que pode ser escrita em base a e b (com a e b inteis, b ≠ 0)?\n   E = 40/7 = 5.4589 (com a e b inteis, b ≠ 0)\n   B = 40 - 5.4589 = 34.5411\n\n3. Qual é a fração de 36 que pode ser escrita em base a e b (com a e b inteis, b ≠ 0)?\n   E = 36/5 = 7.2\n   B = 36 - 7.2 = 28.8\n\n4. Qual é a fração de 100 que pode ser escrita em base a e b (com a e b inteis, b ≠ 0)?\n   E = 100/11 = 9.0909 (com a e b inteis, b ≠ 0)\n   B = 100 - 9.0909 = 90.9091\n\n5. Qual é a fração de 60 que pode ser escrita em base a e b (com a e b inteis, b ≠ 0)?\n   E = 60/8 = 7.5\n   B = 60 - 7.5 = 52.5\n\nAgora, para cada questão, temos as seguintes alternativas:\n\nA: 5/5\nB: 5.4589\nC: 7.2\nD: 9.0909\nE: 90.9091\n\nPara cada alternativa, escreva uma resposta correta:\n\n1. Resposta correta: A\n   E = 25/5 = 5\n   B = 25 - 5 = 20\n   Resposta correta: 5/5\n\n2. Resposta correta: B\n   E = 40/7 = 5.4589 (com a e b inteis, b ≠ 0)\n   B = 40 - 5.4589 = 34.5411\n   Resposta correta: 5.4589\n\n3. Resposta correta: C\n   E = 36/5 = 7.2\n   B = 36 - 7.2 = 28.8\n   Resposta correta: 7.2\n\n4. Resposta correta: D\n   E = 100/11 = 9.0909 (com a e b inteis, b ≠ 0)\n   B = 100 - 9.0909 = 90.9091\n   Resposta correta: 9.0909\n\n5. Resposta correta: E\n   E = 60/8 = 7.5\n   B = 60 - 7.5 = 52.5\n   Resposta correta: 7.5\n\nAgora, para cada questão, temos a seguinte alternativa:\n\nA: 5/5\nB: 5.4589\nC: 7.2\nD: 9.0909\nE: 90.9091\n\nPara cada alternativa, escreva uma resposta correta:\n\n1. Resposta correta: A\n   E = 25/5 = 5\n   B = 25 - 5 = 20\n   Resposta correta: 5/5\n\n2. Resposta correta: B\n   E = 40/7 = 5.4589 (com a e b inteis, b ≠ 0)\n   B = 40 - 5.4589 = 34.5411\n   Resposta correta: 5.4589\n\n3. Resposta correta: C\n   E = 36/5 = 7.2\n   B = 36 - 7.2 = 28.8\n   Resposta correta: 7.2\n\n4. Resposta correta: D\n   E = 100/11 = 9.0909 (com",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1135,
+            "total_tokens": 1135
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.07494280001264997,
+            "tempo_decode_s": 79.7186182999867,
+            "tempo_resposta_s": 79.79356109999935,
+            "tempo_total_s": 79.79356109999935,
+            "tokens_entrada": 0,
+            "tokens_saida": 1135,
+            "tps": 14.224205366365197,
+            "ram_inicio_mb": 1858.6328125,
+            "ram_pico_mb": 1860.53515625,
+            "ram_usada_mb": 1.90234375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. Qual é a fração de 25 que pode ser escrita em base a e b (com a e b inteis, b ≠ 0)?\n   E = 25/5 = 5\n   B = 25 - 5 = 20\n\n2. Qual é a fração de 40 que pode ser escrita em base a e b (com a e b inteis, b ≠ 0)?\n   E = 40/7 = 5.4589 (com a e b inteis, b ≠ 0)\n   B = 40 - 5.4589 = 34.5411\n\n3. Qual é a fração de 36 que pode ser escrita em base a e b (com a e b inteis, b ≠ 0)?\n   E = 36/5 = 7.2\n   B = 36 - 7.2 = 28.8\n\n4. Qual é a fração de 100 que pode ser escrita em base a e b (com a e b inteis, b ≠ 0)?\n   E = 100/11 = 9.0909 (com a e b inteis, b ≠ 0)\n   B = 100 - 9.0909 = 90.9091\n\n5. Qual é a fração de 60 que pode ser escrita em base a e b (com a e b inteis, b ≠ 0)?\n   E = 60/8 = 7.5\n   B = 60 - 7.5 = 52.5\n\nAgora, para cada questão, temos as seguintes alternativas:\n\nA: 5/5\nB: 5.4589\nC: 7.2\nD: 9.0909\nE: 90.9091\n\nPara cada alternativa, escreva uma resposta correta:\n\n1. Resposta correta: A\n   E = 25/5 = 5\n   B = 25 - 5 = 20\n   Resposta correta: 5/5\n\n2. Resposta correta: B\n   E = 40/7 = 5.4589 (com a e b inteis, b ≠ 0)\n   B = 40 - 5.4589 = 34.5411\n   Resposta correta: 5.4589\n\n3. Resposta correta: C\n   E = 36/5 = 7.2\n   B = 36 - 7.2 = 28.8\n   Resposta correta: 7.2\n\n4. Resposta correta: D\n   E = 100/11 = 9.0909 (com a e b inteis, b ≠ 0)\n   B = 100 - 9.0909 = 90.9091\n   Resposta correta: 9.0909\n\n5. Resposta correta: E\n   E = 60/8 = 7.5\n   B = 60 - 7.5 = 52.5\n   Resposta correta: 7.5\n\nAgora, para cada questão, temos a seguinte alternativa:\n\nA: 5/5\nB: 5.4589\nC: 7.2\nD: 9.0909\nE: 90.9091\n\nPara cada alternativa, escreva uma resposta correta:\n\n1. Resposta correta: A\n   E = 25/5 = 5\n   B = 25 - 5 = 20\n   Resposta correta: 5/5\n\n2. Resposta correta: B\n   E = 40/7 = 5.4589 (com a e b inteis, b ≠ 0)\n   B = 40 - 5.4589 = 34.5411\n   Resposta correta: 5.4589\n\n3. Resposta correta: C\n   E = 36/5 = 7.2\n   B = 36 - 7.2 = 28.8\n   Resposta correta: 7.2\n\n4. Resposta correta: D\n   E = 100/11 = 9.0909 (com",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1135,
+            "total_tokens": 1135
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.0814012999762781,
+            "tempo_decode_s": 79.14025650001713,
+            "tempo_resposta_s": 79.22165779999341,
+            "tempo_total_s": 79.22165779999341,
+            "tokens_entrada": 0,
+            "tokens_saida": 1135,
+            "tps": 14.326890291357858,
+            "ram_inicio_mb": 1810.13671875,
+            "ram_pico_mb": 1812.01171875,
+            "ram_usada_mb": 1.875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 12.602224,
+        "ram_media_mb": 1792.308594,
+        "ram_pico_mb": 1814.667969,
+        "tempo_medio_segundos": 83.271178,
+        "ttft_medio_segundos": 2.278093,
+        "tps": {
+          "n": 2,
+          "mediana": 12.602224,
+          "iqr": 0.258977,
+          "p25": 12.472736,
+          "p75": 12.731713,
+          "p95": 12.835303,
+          "p99": 12.856021,
+          "max": 12.861201,
+          "media": 12.602224
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 2.278093,
+          "iqr": 0.201689,
+          "p25": 2.177248,
+          "p75": 2.378937,
+          "p95": 2.459612,
+          "p99": 2.475747,
+          "max": 2.479781,
+          "media": 2.278093
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 83.271178,
+          "iqr": 1.552526,
+          "p25": 82.494915,
+          "p75": 84.047441,
+          "p95": 84.668452,
+          "p99": 84.792654,
+          "max": 84.823704,
+          "media": 83.271178
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 1792.308594,
+          "iqr": 22.359375,
+          "p25": 1781.128906,
+          "p75": 1803.488281,
+          "p95": 1812.432031,
+          "p99": 1814.220781,
+          "max": 1814.667969,
+          "media": 1792.308594
+        },
+        "tps_por_rodada": [
+          12.343247797002288,
+          12.861200907792693
+        ],
+        "ttft_por_rodada": [
+          2.4797812000033446,
+          2.0764040000212844
+        ],
+        "tempo_por_rodada": [
+          84.82370419998188,
+          81.71865190000972
+        ],
+        "ram_por_rodada": [
+          1814.66796875,
+          1769.94921875
+        ],
+        "contagem_falhas": {
+          "json_invalido": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 0
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. **Habilidade:** EF08MA05\n  * Unidade Temática:** Geometria\n  * Pré-requisitos: **EF08MA05**\n    * Conhecimento básico do cálculo e das operações matemáticas com base em geometria, como raiz e raio, lógica matemática, trigonomorfia, e ecossistemas.\n    * Familiaridade com o estereoscópia e o geometria lineal, bem como a utilização de matemática para determinar a direção, a localização, e a estabilidade de objetos em relativa à planeta.\n    * Comunicação eficiente com as pessoas da equipe e de "
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "1. **Habilidade:** EF06MA17\n**Unidade Temática:** Geometria\n**Pré-requisitos que o aluno deve dominar  (calibração de dificuldade):**\n\n  * Definição e utilização da reta euclidiana (Euclidean)\n  * Identificação e manipulação de pontos e retas\n  * Manipulação de retas de retas (Euclidean e geocêntricas)\n  * Identificação e resolução de equações de segundo grau (Euclidean)\n  * Manipulação de equações de primeira grau (Euclidean e geocêntricas)\n  * Identificação e resolução de equações complexas (E"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 1814.667969,
+        "tps_medio": 12.602224,
+        "tempo_medio_segundos": 83.271178,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "json_invalido": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. **Habilidade:** EF08MA05\n  * Unidade Temática:** Geometria\n  * Pré-requisitos: **EF08MA05**\n    * Conhecimento básico do cálculo e das operações matemáticas com base em geometria, como raiz e raio, lógica matemática, trigonomorfia, e ecossistemas.\n    * Familiaridade com o estereoscópia e o geometria lineal, bem como a utilização de matemática para determinar a direção, a localização, e a estabilidade de objetos em relativa à planeta.\n    * Comunicação eficiente com as pessoas da equipe e de outras partes interessadas, incluindo o professor, a equipe de estudo, e o profissional da área.\n    * Capaz de analisar e resolver problemas complexos relacionados à geometria, como projetos topográficos, geometria espacial, e geometria geográfica.\n  * Exemplos de questões existentes para esta habilidade:\n\n    1. Determinar o raio de uma geometria de forma aberta e encontrar a distância entre dois pontos no cálculo do raio.\n    2. Realizar a raiz quadrática de uma geometria no cálculo, identificar o eixo principal e a direção, e calcular a distância e a orientação entre as两点.\n    3. Descrever o eixo e o centro de uma geometria no cálculo, incluindo o raio e a localização.\n    4. Analisar a estabilidade de um modelo geométrico e encontrar um plano que mantenha a equação de Euler.\n    5. Descrever a geometria de forma plana e determinar a localização e a orientação de um objeto em um eixo e um polígono.\n    6. Realizar o cálculo do eixo e da direção do caminho de uma rota geográfica e determinar o caminho para um punto no centro do eixo.\n    7. Analisar e resolver problemas relacionados à geometria espacial, como determinar o eixo e a direção de um objeto no espaço, como uma forma geométrica e uma forma topográfica.\n    8. Descrever a geometria de forma plana e determinar a localização e a orientação de um objeto no espaço, incluindo o raio e a localização em relação a um eixo.\n    9. Realizar o cálculo do raio e da direção do caminho de um rota geográfica e determinar o caminho para um ponto no centro do eixo, considerando a variedade de caminhos.\n    10. Descrever a geometria de forma plana e determinar a localização e a orientação de um objeto no espaço, incluindo o raio e a localização em relação a um eixo e ao polígono.\n  * Exemplos de questões existentes para esta habilidade:\n\n    1. Determinar a área do eixo principal em uma geometria aberta e calcular a área do eixo principal e da superfície da geometria.\n    2. Realizar o cálculo do área do eixo principal em uma geometria aberta e calcular a área do eixo principal e da superfície da geometria, considerando a variedade de eixos e a superfície.\n    3. Descrever a geometria de forma plana e determinar a área do eixo principal em uma geometria aberta e calcular a área do eixo principal e da superfície da geometria, considerando a variedade de raízes e a superfície.\n    4. Realizar o cálculo do área do eixo principal em uma geometria aberta e calcular a área do eixo principal e da superfície da geometria, considerando a variedade de eixos, raízes, e superfície, e aplicar a teorema da área da circunferência.\n    5. Realizar o cálculo do área do eixo principal em uma geometria aberta e calcular a área do eixo principal e da superfície da geometria, considerando a variedade de eixos, raízes, e superfície, e aplicar a geometria do raio e da circunferência.\n    6. Descrever a geometria de forma plana e determinar a área do eixo principal em uma geometria aberta e calcular a área do eixo principal e da superfície da geometria, considerando a variedade de eixos, raízes, e superfície, e",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1047,
+            "total_tokens": 1047
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.4797812000033446,
+            "tempo_decode_s": 82.34392299997853,
+            "tempo_resposta_s": 84.82370419998188,
+            "tempo_total_s": 84.82370419998188,
+            "tokens_entrada": 0,
+            "tokens_saida": 1047,
+            "tps": 12.343247797002288,
+            "ram_inicio_mb": 1812.10546875,
+            "ram_pico_mb": 1814.66796875,
+            "ram_usada_mb": 2.5625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+          "raw_output": "1. **Habilidade:** EF06MA17\n**Unidade Temática:** Geometria\n**Pré-requisitos que o aluno deve dominar  (calibração de dificuldade):**\n\n  * Definição e utilização da reta euclidiana (Euclidean)\n  * Identificação e manipulação de pontos e retas\n  * Manipulação de retas de retas (Euclidean e geocêntricas)\n  * Identificação e resolução de equações de segundo grau (Euclidean)\n  * Manipulação de equações de primeira grau (Euclidean e geocêntricas)\n  * Identificação e resolução de equações complexas (Euclidean e geocêntricas)\n  * Manipulação de matrizes e sistemas de ecuaciones (Euclidean)\n  * Identificação e resolução de sistemas de ecuaciones lineares e polares\n  * Identificação e resolução de sistemas de ecuaciones de funções (Euclidean)\n\n**Exemplos de questões existentes para esta habilidade  (mantenha consistência de estilo):**\n\n  1. Definição de retas euclidianas:\n    a. Cima a leste, em um plano retangular\n    b. Cima a leste, em um plano retangular horizontal\n    c. Cima a leste, em um plano retangular vertical\n    d. Cima a leste, em um plano retangular retangular\n    e. Cima a leste, em um plano retangular paralelo\n  2. Manipulação de pontos e retas:\n    a. Definição de pontos no plano retangular\n    b. Manipulação de pontos e retas para definir retas retulares\n    c. Manipulação de pontos e retas para definir retas de retas\n    d. Manipulação de pontos e retas para definir retas retangulars\n    e. Manipulação de pontos e retas para definir retas de retas retangulars paralelo\n  3. Manipulação de retas de retas (Euclidean):\n    a. Definição de retas euclidianas\n    b. Manipulação de retas euclidianas para definir retas de retas\n    c. Manipulação de retas euclidianas para definir retas de retas paralelo\n    d. Manipulação de retas euclidianas para definir retas de retas paralelo em um plano retangular\n    e. Manipulação de retas euclidianas para definir retas de retas paralelo em um plano retangular horizontal\n    f. Manipulação de retas euclidianas para definir retas de retas paralelo em um plano retangular vertical\n    g. Manipulação de retas euclidianas para definir retas de retas paralelo em um plano retangular retangular\n    h. Manipulação de retas euclidianas para definir retas de retas paralelo em um plano retangular paralelo retangular\n  4. Manipulação de retas de retas (geocêntricas):\n    a. Definição de retas geocêntricas\n    b. Manipulação de retas geocêntricas para definir retas de retas\n    c. Manipulação de retas geocêntricas para definir retas de retas paralelo\n    d. Manipulação de retas geocêntricas para definir retas de retas paralelo em um plano retangular\n    e. Manipulação de retas geocêntricas para definir retas de retas paralelo em um plano retangular horizontal\n    f. Manipulação de retas geocêntricas para definir retas de retas paralelo em um plano retangular vertical\n    g. Manipulação de retas geocêntricas para definir retas de retas paralelo em um plano retangular retangular\n    h. Manipulação de retas geocêntricas para definir retas de retas paralelo em um plano retangular paralelo retangular\n  5. Manipulação de equações de segundo grau (Euclidean):\n    a. Definição de equações de segundo grau (Euclidean)\n    b. Manipulação de equações de segundo grau para definir retas de retas\n    c. Manipulação de equações de segundo grau para definir retas de retas paralelo\n    d. Manipulação de equações de segundo grau para definir retas de retas paralelo em um plano retangular\n   ",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1051,
+            "total_tokens": 1051
+          },
+          "metrics": {
+            "tempo_prefill_s": 2.0764040000212844,
+            "tempo_decode_s": 79.64224789998843,
+            "tempo_resposta_s": 81.71865190000972,
+            "tempo_total_s": 81.71865190000972,
+            "tokens_entrada": 0,
+            "tokens_saida": 1051,
+            "tps": 12.861200907792693,
+            "ram_inicio_mb": 1767.74609375,
+            "ram_pico_mb": 1769.94921875,
+            "ram_usada_mb": 2.203125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 2002.6,
+        "limite": 2048.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 11.88,
+        "limite": 5.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": true,
+        "valor": 0,
+        "limite": 0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": true,
+        "valor": 83.27,
+        "limite": 90.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": true,
+        "valor": -22.1,
+        "limite": 40.0,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "Taxa JSON válido 0.0% abaixo de 60.0%"
+    ],
+    "categoria_falha": "formato",
+    "categorias_falha": [
+      "formato"
+    ],
+    "modelo": "Qwen/Qwen1.5-1.8B-Chat-GGUF",
+    "gerado_em": "2026-09-25T09:15:48.346959"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; Taxa JSON válido 0.0% abaixo de 60.0%"
+}
