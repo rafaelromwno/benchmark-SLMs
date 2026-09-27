@@ -1,0 +1,1181 @@
+{
+  "modelo": "TheBloke/phi-2-GGUF",
+  "formato": "gguf",
+  "data": "26/09/2026",
+  "run_config": {
+    "modelos": [
+      "TheBloke/phi-2-GGUF"
+    ],
+    "tasks": [
+      "cenario_a",
+      "cenario_b",
+      "cenario_c",
+      "cenario_d"
+    ],
+    "modo": "benchmark",
+    "backend": "gguf",
+    "modelo_paths": {
+      "TheBloke/phi-2-GGUF": "C:\\Users\\henri\\MeusProjetos_github\\Protocolo_Experimental\\modelos_local_gguf\\TheBloke--phi-2-GGUF\\phi-2.Q4_K_M.gguf"
+    },
+    "seed": 13,
+    "multi_seed": true,
+    "n_ctx": 2048,
+    "n_threads": 8,
+    "n_gpu_layers": 0,
+    "timeout_s": null,
+    "generation_overrides": {
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "enable_thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "seed": 13
+    },
+    "resultados_dir": "resultados",
+    "logs_dir": "logs",
+    "offline": true,
+    "quantizacao": null,
+    "versao_protocolo": "0.2.0",
+    "timeouts_por_cenario_s": {
+      "cenario_a": 180.0,
+      "cenario_b": 120.0,
+      "cenario_c": 120.0,
+      "cenario_d": 120.0
+    },
+    "timeout_default_s": 120.0
+  },
+  "inferencia": {
+    "perfil": {
+      "name": "balanceado",
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "repeat_penalty": 1.0,
+      "top_k": 20,
+      "exploratory": false
+    },
+    "backend": {
+      "n_ctx": 2048,
+      "n_threads": 8,
+      "n_gpu_layers": 0,
+      "quantizacao": null,
+      "seed": 13
+    },
+    "protocolo": {
+      "unidade_replicacao": "modelo × perfil × seed",
+      "unidade_analise": "execucao",
+      "seeds_protocolo": [
+        42,
+        7,
+        13,
+        21,
+        33,
+        55,
+        89,
+        123,
+        256,
+        777
+      ],
+      "amostragem_congelada": {
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false
+      },
+      "timeouts_s": {
+        "cenario_a": 180.0,
+        "cenario_b": 120.0,
+        "cenario_c": 120.0,
+        "cenario_d": 120.0
+      },
+      "timeout_default_s": 120.0
+    },
+    "por_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      },
+      "cenario_b": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      },
+      "cenario_c": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      },
+      "cenario_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "repeat_penalty": 1.0,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "enable_thinking": false,
+        "seed": 13
+      }
+    },
+    "defaults_cenario": {
+      "cenario_a": {
+        "max_tokens": 1024,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "repeat_penalty": 1.1
+      },
+      "cenario_b_c_d": {
+        "max_tokens": 1024,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "repeat_penalty": 1.1
+      }
+    }
+  },
+  "ambiente": {
+    "hostname": "DESKTOP-GDIR107",
+    "sistema": "Windows",
+    "versao_sistema": "10.0.26200",
+    "release": "11",
+    "arquitetura": "AMD64",
+    "cpu_modelo": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "cpu_fisicos": 10,
+    "cpu_logicos": 12,
+    "ram_total_gb": 7.74,
+    "ram_disponivel_gb": 0.41,
+    "python": "3.12.2",
+    "plataforma_python": "Windows-11-10.0.26200-SP0"
+  },
+  "tasks": {
+    "cenario_a": {
+      "task_id": "cenario_a",
+      "modelo": "TheBloke/phi-2-GGUF",
+      "json_valido": false,
+      "json_erro": "timeout: excedeu 180.0s",
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "timeout",
+      "parsed": null,
+      "viabilidade": {
+        "tempo_carregamento_s": 1.6227369999978691,
+        "tempo_prefill_s": 44.147921900002984,
+        "tempo_decode_s": 151.9441371000139,
+        "tempo_resposta_s": 196.0920590000169,
+        "tempo_total_s": 197.71479600001476,
+        "tokens_entrada": 0,
+        "tokens_saida": 0,
+        "tps": 0.0,
+        "ram_inicio_mb": 19.3828125,
+        "ram_pico_mb": 2624.35546875,
+        "ram_usada_mb": 2604.97265625,
+        "crash": false,
+        "crash_motivo": null,
+        "codigo_falha": "ok"
+      },
+      "agregado": {
+        "cold_start_segundos": 197.71479600001476,
+        "tempo_carregamento_s": 1.6227369999978691,
+        "tempo_resposta_s": 196.0920590000169,
+        "ram_pico_mb": 2624.35546875,
+        "ram_inicio_mb": 19.3828125,
+        "ttft_segundos": 44.147921900002984,
+        "rodadas": 1,
+        "utilizaveis": 0,
+        "json_validos": 0,
+        "contagem_falhas": {
+          "timeout": 1
+        },
+        "crashes_oom": 0,
+        "codigo_falha": "timeout"
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-cold",
+          "task_id": "cenario_a",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_carregamento_s": 1.6227369999978691,
+            "tempo_prefill_s": 44.147921900002984,
+            "tempo_decode_s": 151.9441371000139,
+            "tempo_resposta_s": 196.0920590000169,
+            "tempo_total_s": 197.71479600001476,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 19.3828125,
+            "ram_pico_mb": 2624.35546875,
+            "ram_usada_mb": 2604.97265625,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 180.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": null
+        }
+      ]
+    },
+    "cenario_b": {
+      "task_id": "cenario_b",
+      "modelo": "TheBloke/phi-2-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "json_invalido",
+      "parsed": null,
+      "viabilidade": {
+        "tps": {
+          "n": 10,
+          "mediana": 5.549039,
+          "iqr": 5.859019,
+          "p25": 0.0,
+          "p75": 5.859019,
+          "p95": 7.188188,
+          "p99": 7.290587,
+          "max": 7.316186,
+          "media": 3.713522
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 8.70927,
+          "iqr": 7.678748,
+          "p25": 2.171296,
+          "p75": 9.850044,
+          "p95": 11.48686,
+          "p99": 12.474047,
+          "max": 12.720844,
+          "media": 6.841989
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 67.74522,
+          "iqr": 109.607747,
+          "p25": 51.396588,
+          "p75": 161.004335,
+          "p95": 166.684176,
+          "p99": 169.348744,
+          "max": 170.014886,
+          "media": 95.592813
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2374.515625,
+          "iqr": 70.402344,
+          "p25": 2373.792969,
+          "p75": 2444.195312,
+          "p95": 2585.154687,
+          "p99": 2608.346562,
+          "max": 2614.144531,
+          "media": 2417.622656
+        },
+        "tps_medio": 3.713522,
+        "ttft_medio_segundos": 6.841989,
+        "tempo_medio_segundos": 95.592813,
+        "ram_pico_mb": 2614.144531
+      },
+      "agregado": {
+        "rodadas": 10,
+        "json_validos": 0,
+        "json_invalidos": 6,
+        "taxa_json_valido_percent": 0.0,
+        "json_valido_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "gabarito_ok": 0,
+        "gabarito_avaliados": 0,
+        "taxa_gabarito_percent": null,
+        "gabarito_ic95": null,
+        "utilizaveis": 0,
+        "taxa_utilizavel_percent": 0.0,
+        "utilizavel_ic95": {
+          "numerador": 0,
+          "denominador": 10,
+          "ponto": 0.0,
+          "ic95": [
+            0.0,
+            0.277533
+          ],
+          "formato": "0.0% [0.0–27.8]",
+          "unidade_analise": "execucao"
+        },
+        "contagem_falhas": {
+          "json_invalido": 6,
+          "timeout": 4
+        },
+        "crashes_oom": 0,
+        "tps": {
+          "n": 10,
+          "mediana": 5.549039,
+          "iqr": 5.859019,
+          "p25": 0.0,
+          "p75": 5.859019,
+          "p95": 7.188188,
+          "p99": 7.290587,
+          "max": 7.316186,
+          "media": 3.713522
+        },
+        "ttft": {
+          "n": 10,
+          "mediana": 8.70927,
+          "iqr": 7.678748,
+          "p25": 2.171296,
+          "p75": 9.850044,
+          "p95": 11.48686,
+          "p99": 12.474047,
+          "max": 12.720844,
+          "media": 6.841989
+        },
+        "tempo": {
+          "n": 10,
+          "mediana": 67.74522,
+          "iqr": 109.607747,
+          "p25": 51.396588,
+          "p75": 161.004335,
+          "p95": 166.684176,
+          "p99": 169.348744,
+          "max": 170.014886,
+          "media": 95.592813
+        },
+        "ram_pico": {
+          "n": 10,
+          "mediana": 2374.515625,
+          "iqr": 70.402344,
+          "p25": 2373.792969,
+          "p75": 2444.195312,
+          "p95": 2585.154687,
+          "p99": 2608.346562,
+          "max": 2614.144531,
+          "media": 2417.622656
+        },
+        "tps_medio": 3.713522,
+        "ttft_medio_segundos": 6.841989,
+        "tempo_medio_segundos": 95.592813,
+        "ram_pico_mb": 2614.144531,
+        "tps_por_rodada": [
+          5.428234706215936,
+          7.031746275671335,
+          5.873432814856181,
+          7.316186233349168,
+          0.0,
+          5.669842407760374,
+          0.0,
+          5.815777151873077,
+          0.0,
+          0.0
+        ],
+        "ttft_por_rodada": [
+          12.720844099996611,
+          0.14246359997196123,
+          8.45442920003552,
+          0.14110010000877082,
+          9.884036500006914,
+          8.96410990000004,
+          9.748065000050701,
+          8.236679700028617,
+          9.978656799998134,
+          0.14950160001171753
+        ],
+        "tempo_por_rodada": [
+          54.71392010001,
+          80.77652089996263,
+          50.566680400050245,
+          13.39495700004045,
+          170.01488600001903,
+          52.38240830000723,
+          161.80993560003117,
+          51.06798150000395,
+          162.61330770002678,
+          158.58753299998352
+        ],
+        "ram_por_rodada": [
+          2614.14453125,
+          2549.72265625,
+          2466.49609375,
+          2304.08984375,
+          2377.29296875,
+          2367.51171875,
+          2373.6171875,
+          2374.3203125,
+          2374.4453125,
+          2374.5859375
+        ],
+        "ram_media_mb": 2417.622656
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informado: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão — use-os como base para atingir a habilidade-alvo.\n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos \n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 297,
+            "total_tokens": 297
+          },
+          "metrics": {
+            "tempo_prefill_s": 12.720844099996611,
+            "tempo_decode_s": 41.99307600001339,
+            "tempo_resposta_s": 54.71392010001,
+            "tempo_total_s": 54.71392010001,
+            "tokens_entrada": 0,
+            "tokens_saida": 297,
+            "tps": 5.428234706215936,
+            "ram_inicio_mb": 2608.0,
+            "ram_pico_mb": 2614.14453125,
+            "ram_usada_mb": 6.14453125,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma14-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados \n(erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informado: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão \n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos \n(few-shot).\n\nRegras absolutas:\n- Retorne SOMENTE o JSON estruturado solicitado, sem texto adicional, markdown ou explicações fora do JSON.\n- Todas as questões devem ser inéditas entre si na mesma resposta.\n- A resposta correta deve ser distribuída de forma variada entre A, B, C, D e E ao longo das questões.\n\nRetorne SOMENTE um JSON com esta estrutura exata:\n{\n    \"questoes\": \n    [\n        {\n            \"enunciado\": \n            \"...\",\n            \"alternativas\": \n            {\n                \"A\": \n                \"...\",\n                \"B\": \n                \"...\",\n                \"C\": \n                \"...\",\n                \"D\": \n                \"...\",\n                \"E\": \n                \"...\"\n            },\n            \"resposta_correta\": \n            \"A\",\n            \"resolucao_passo_a_passo\": \n            \"...\"\n        }\n    ]\n}\n\nO campo \n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 568,
+            "total_tokens": 568
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.14246359997196123,
+            "tempo_decode_s": 80.63405729999067,
+            "tempo_resposta_s": 80.77652089996263,
+            "tempo_total_s": 80.77652089996263,
+            "tokens_entrada": 0,
+            "tokens_saida": 568,
+            "tps": 7.031746275671335,
+            "ram_inicio_mb": 2548.70703125,
+            "ram_pico_mb": 2549.72265625,
+            "ram_usada_mb": 1.015625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão — use-os como base para atingir a habilidade-alvo.\n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos \n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 297,
+            "total_tokens": 297
+          },
+          "metrics": {
+            "tempo_prefill_s": 8.45442920003552,
+            "tempo_decode_s": 42.112251200014725,
+            "tempo_resposta_s": 50.566680400050245,
+            "tempo_total_s": 50.566680400050245,
+            "tokens_entrada": 0,
+            "tokens_saida": 297,
+            "tps": 5.873432814856181,
+            "ram_inicio_mb": 2465.65234375,
+            "ram_pico_mb": 2466.49609375,
+            "ram_usada_mb": 0.84375,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 2
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "\n\nPara cada questão, selecione um aluno e ou mais de 10 alunos, que ou mais de um aluno, devem responder a cada questão. \n\n**Habilidade:** EF02MA01\n**Unidade Temática:** Números\n\n**Pré-requisitos que o aluno já deve dominar \n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 98,
+            "total_tokens": 98
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.14110010000877082,
+            "tempo_decode_s": 13.253856900031678,
+            "tempo_resposta_s": 13.39495700004045,
+            "tempo_total_s": 13.39495700004045,
+            "tokens_entrada": 0,
+            "tokens_saida": 98,
+            "tps": 7.316186233349168,
+            "ram_inicio_mb": 2298.58984375,
+            "ram_pico_mb": 2304.08984375,
+            "ram_usada_mb": 5.5,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 3
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 9.884036500006914,
+            "tempo_decode_s": 160.13084950001212,
+            "tempo_resposta_s": 170.01488600001903,
+            "tempo_total_s": 170.01488600001903,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2280.8359375,
+            "ram_pico_mb": 2377.29296875,
+            "ram_usada_mb": 96.45703125,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 4
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão — use-os como base para atingir a habilidade-alvo.\n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos \n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 297,
+            "total_tokens": 297
+          },
+          "metrics": {
+            "tempo_prefill_s": 8.96410990000004,
+            "tempo_decode_s": 43.41829840000719,
+            "tempo_resposta_s": 52.38240830000723,
+            "tempo_total_s": 52.38240830000723,
+            "tokens_entrada": 0,
+            "tokens_saida": 297,
+            "tps": 5.669842407760374,
+            "ram_inicio_mb": 2298.09765625,
+            "ram_pico_mb": 2367.51171875,
+            "ram_usada_mb": 69.4140625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 5
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 9.748065000050701,
+            "tempo_decode_s": 152.06187059998047,
+            "tempo_resposta_s": 161.80993560003117,
+            "tempo_total_s": 161.80993560003117,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2366.65234375,
+            "ram_pico_mb": 2373.6171875,
+            "ram_usada_mb": 6.96484375,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 6
+        },
+        {
+          "sample_id": "bncc-ef02ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "\n\nSuas responsabilidades:\n- Criar questões de múltipla escolha (5 alternativas: A, B, C, D, E) rigorosamente alinhadas à habilidade da BNCC solicitada.\n- Garantir que o enunciado seja claro, contextualizado e adequado à faixa etária do estudante.\n- Produzir alternativas plausíveis e com distratores pedagogicamente fundamentados (erros comuns dos alunos, não respostas absurdas).\n- Redigir a resolução passo a passo de forma didática, como faria um professor explicando para o aluno.\n- Calibrar a dificuldade respeitando os pré-requisitos informados: os conceitos listados em pré-requisitos devem ser dominados pelo aluno, e NÃO devem ser o foco central da questão — use-os como base para atingir a habilidade-alvo.\n- Manter consistência de estilo, formato e nível de abstração com os exemplos fornecidos \n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 297,
+            "total_tokens": 297
+          },
+          "metrics": {
+            "tempo_prefill_s": 8.236679700028617,
+            "tempo_decode_s": 42.831301799975336,
+            "tempo_resposta_s": 51.06798150000395,
+            "tempo_total_s": 51.06798150000395,
+            "tokens_entrada": 0,
+            "tokens_saida": 297,
+            "tps": 5.815777151873077,
+            "ram_inicio_mb": 2373.52734375,
+            "ram_pico_mb": 2374.3203125,
+            "ram_usada_mb": 0.79296875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 7
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 9.978656799998134,
+            "tempo_decode_s": 152.63465090002865,
+            "tempo_resposta_s": 162.61330770002678,
+            "tempo_total_s": 162.61330770002678,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2374.23046875,
+            "ram_pico_mb": 2374.4453125,
+            "ram_usada_mb": 0.21484375,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 8
+        },
+        {
+          "sample_id": "bncc-ef09ma01-serie",
+          "task_id": "cenario_b",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.14950160001171753,
+            "tempo_decode_s": 158.4380313999718,
+            "tempo_resposta_s": 158.58753299998352,
+            "tempo_total_s": 158.58753299998352,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2373.0078125,
+            "ram_pico_mb": 2374.5859375,
+            "ram_usada_mb": 1.578125,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 9
+        }
+      ]
+    },
+    "cenario_c": {
+      "task_id": "cenario_c",
+      "modelo": "TheBloke/phi-2-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "timeout",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 0.921393,
+        "ram_media_mb": 2379.036458,
+        "ram_pico_mb": 2379.777344,
+        "tempo_medio_segundos": 109.483744,
+        "ttft_medio_segundos": 3.514738,
+        "tps": {
+          "n": 3,
+          "mediana": 0.0,
+          "iqr": 1.38209,
+          "p25": 0.0,
+          "p75": 1.38209,
+          "p95": 2.487762,
+          "p99": 2.708897,
+          "max": 2.76418,
+          "media": 0.921393
+        },
+        "ttft": {
+          "n": 3,
+          "mediana": 0.140141,
+          "iqr": 5.068551,
+          "p25": 0.136813,
+          "p75": 5.205364,
+          "p95": 9.257542,
+          "p99": 10.067978,
+          "max": 10.270587,
+          "media": 3.514738
+        },
+        "tempo": {
+          "n": 3,
+          "mediana": 153.154686,
+          "iqr": 70.64504,
+          "p25": 85.078959,
+          "p75": 155.723999,
+          "p95": 157.77945,
+          "p99": 158.19054,
+          "max": 158.293312,
+          "media": 109.483744
+        },
+        "ram_pico": {
+          "n": 3,
+          "mediana": 2379.140625,
+          "iqr": 0.792969,
+          "p25": 2378.666016,
+          "p75": 2379.458984,
+          "p95": 2379.713672,
+          "p99": 2379.764609,
+          "max": 2379.777344,
+          "media": 2379.036458
+        },
+        "tps_por_rodada": [
+          2.7641802816036356,
+          0.0,
+          0.0
+        ],
+        "ttft_por_rodada": [
+          10.270587000006344,
+          0.14014070003759116,
+          0.13348560000304133
+        ],
+        "tempo_por_rodada": [
+          17.00323249999201,
+          153.15468570002122,
+          158.29331239999738
+        ],
+        "ram_por_rodada": [
+          2378.19140625,
+          2379.140625,
+          2379.77734375
+        ],
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "timeout": 2
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 2
+      },
+      "agregado": {
+        "execucoes": 3,
+        "quantidade_de_questoes": 5,
+        "tentativas": 3,
+        "valido_primeira_tentativa": false,
+        "precisou_retry": false,
+        "falhou_com_3_tentativas": true,
+        "aprovado": false,
+        "ram_pico_mb": 2379.777344,
+        "tps_medio": 0.921393,
+        "tempo_medio_segundos": 109.483744,
+        "crashes_oom": 0,
+        "contagem_falhas": {
+          "json_invalido": 1,
+          "timeout": 2
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "\n\nVocê é um especialista sênior em elaboração de itens avaliativos de Matemática para o Ensino Fundamental \n(1º ao \n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 47,
+            "total_tokens": 47
+          },
+          "metrics": {
+            "tempo_prefill_s": 10.270587000006344,
+            "tempo_decode_s": 6.732645499985665,
+            "tempo_resposta_s": 17.00323249999201,
+            "tempo_total_s": 17.00323249999201,
+            "tokens_entrada": 0,
+            "tokens_saida": 47,
+            "tps": 2.7641802816036356,
+            "ram_inicio_mb": 2313.71875,
+            "ram_pico_mb": 2378.19140625,
+            "ram_usada_mb": 64.47265625,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.14014070003759116,
+            "tempo_decode_s": 153.01454499998363,
+            "tempo_resposta_s": 153.15468570002122,
+            "tempo_total_s": 153.15468570002122,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2378.13671875,
+            "ram_pico_mb": 2379.140625,
+            "ram_usada_mb": 1.00390625,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 1
+        },
+        {
+          "sample_id": "bncc-ef09ma01-json",
+          "task_id": "cenario_c",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 0.13348560000304133,
+            "tempo_decode_s": 158.15982679999433,
+            "tempo_resposta_s": 158.29331239999738,
+            "tempo_total_s": 158.29331239999738,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2379.05859375,
+            "ram_pico_mb": 2379.77734375,
+            "ram_usada_mb": 0.71875,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 2
+        }
+      ]
+    },
+    "cenario_d": {
+      "task_id": "cenario_d",
+      "modelo": "TheBloke/phi-2-GGUF",
+      "json_valido": false,
+      "json_erro": null,
+      "quantidade_ok": true,
+      "quantidade_erro": null,
+      "gabarito_ok": null,
+      "utilizavel": false,
+      "codigo_falha": "timeout",
+      "parsed": null,
+      "viabilidade": {
+        "tps_medio": 2.765576,
+        "ram_media_mb": 2371.220703,
+        "ram_pico_mb": 2371.71875,
+        "tempo_medio_segundos": 94.306455,
+        "ttft_medio_segundos": 7.931717,
+        "tps": {
+          "n": 2,
+          "mediana": 2.765576,
+          "iqr": 2.765576,
+          "p25": 1.382788,
+          "p75": 4.148363,
+          "p95": 5.254594,
+          "p99": 5.47584,
+          "max": 5.531151,
+          "media": 2.765576
+        },
+        "ttft": {
+          "n": 2,
+          "mediana": 7.931717,
+          "iqr": 1.075972,
+          "p25": 7.393731,
+          "p75": 8.469704,
+          "p95": 8.900093,
+          "p99": 8.98617,
+          "max": 9.00769,
+          "media": 7.931717
+        },
+        "tempo": {
+          "n": 2,
+          "mediana": 94.306455,
+          "iqr": 65.921766,
+          "p25": 61.345571,
+          "p75": 127.267338,
+          "p95": 153.636044,
+          "p99": 158.909786,
+          "max": 160.228221,
+          "media": 94.306455
+        },
+        "ram_pico": {
+          "n": 2,
+          "mediana": 2371.220703,
+          "iqr": 0.498047,
+          "p25": 2370.97168,
+          "p75": 2371.469727,
+          "p95": 2371.668945,
+          "p99": 2371.708789,
+          "max": 2371.71875,
+          "media": 2371.220703
+        },
+        "tps_por_rodada": [
+          0.0,
+          5.531151103047276
+        ],
+        "ttft_por_rodada": [
+          9.007689899997786,
+          6.855745000008028
+        ],
+        "tempo_por_rodada": [
+          160.2282208999968,
+          28.384688299964182
+        ],
+        "ram_por_rodada": [
+          2370.72265625,
+          2371.71875
+        ],
+        "contagem_falhas": {
+          "timeout": 1,
+          "json_invalido": 1
+        },
+        "crashes_oom": 0,
+        "falhas_infra": 1
+      },
+      "agregado": {
+        "habilidades_testadas": [
+          "EF08MA05",
+          "EF06MA17"
+        ],
+        "outputs": {
+          "EF08MA05": {
+            "erro": "timeout: excedeu 120.0s",
+            "output_bruto": ""
+          },
+          "EF06MA17": {
+            "erro": "JSON não encontrado na resposta",
+            "output_bruto": "\n\n# **Exercise 1.1**\n\n- **Habilidade:** EF06MA18\n**Unidade Temática:** Geometria\n\n**Pré-requisitos que o aluno já deve dominar \n(calibração de dificuldade):**\nNão especificado.\n\n**Exemplos de questões existentes para esta habilidade \n(mantenha consistência de estilo):**\nNenhum exemplo disponível — crie questões seguindo as diretrizes gerais da BNCC.\n\nGere \n"
+          }
+        },
+        "json_valido_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "utilizavel_por_habilidade": {
+          "EF08MA05": false,
+          "EF06MA17": false
+        },
+        "ram_pico_mb": 2371.71875,
+        "tps_medio": 2.765576,
+        "tempo_medio_segundos": 94.306455,
+        "crashes_oom": 0,
+        "taxa_json_valido_percent": 0.0,
+        "taxa_utilizavel_percent": 0.0,
+        "contagem_falhas": {
+          "timeout": 1,
+          "json_invalido": 1
+        }
+      },
+      "predictions": [
+        {
+          "sample_id": "bncc-ef08ma05-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "metrics": {
+            "tempo_prefill_s": 9.007689899997786,
+            "tempo_decode_s": 151.22053099999903,
+            "tempo_resposta_s": 160.2282208999968,
+            "tempo_total_s": 160.2282208999968,
+            "tokens_entrada": 0,
+            "tokens_saida": 0,
+            "tps": 0.0,
+            "ram_inicio_mb": 2305.1796875,
+            "ram_pico_mb": 2370.72265625,
+            "ram_usada_mb": 65.54296875,
+            "crash": true,
+            "crash_motivo": "timeout: excedeu 120.0s",
+            "codigo_falha": "timeout"
+          },
+          "rodada": 0
+        },
+        {
+          "sample_id": "bncc-ef06ma17-sem-contexto",
+          "task_id": "cenario_d",
+          "modelo": "TheBloke/phi-2-GGUF",
+          "raw_output": "\n\n# **Exercise 1.1**\n\n- **Habilidade:** EF06MA18\n**Unidade Temática:** Geometria\n\n**Pré-requisitos que o aluno já deve dominar \n(calibração de dificuldade):**\nNão especificado.\n\n**Exemplos de questões existentes para esta habilidade \n(mantenha consistência de estilo):**\nNenhum exemplo disponível — crie questões seguindo as diretrizes gerais da BNCC.\n\nGere \n",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 157,
+            "total_tokens": 157
+          },
+          "metrics": {
+            "tempo_prefill_s": 6.855745000008028,
+            "tempo_decode_s": 21.528943299956154,
+            "tempo_resposta_s": 28.384688299964182,
+            "tempo_total_s": 28.384688299964182,
+            "tokens_entrada": 0,
+            "tokens_saida": 157,
+            "tps": 5.531151103047276,
+            "ram_inicio_mb": 2370.73828125,
+            "ram_pico_mb": 2371.71875,
+            "ram_usada_mb": 0.98046875,
+            "crash": false,
+            "crash_motivo": null,
+            "codigo_falha": "json_invalido"
+          },
+          "rodada": 1
+        }
+      ]
+    }
+  },
+  "veredito": {
+    "apto_mathia": false,
+    "criterios": [
+      {
+        "nome": "offline",
+        "tipo": "hard",
+        "passou": true,
+        "valor": true,
+        "limite": true,
+        "motivo": null,
+        "categoria_falha": "nenhuma"
+      },
+      {
+        "nome": "json_retry_cenario_c",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 3,
+        "limite": 3,
+        "motivo": "Falha de JSON recorrente — 3 tentativas",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "ram_pico_mb",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 2624.4,
+        "limite": 2048.0,
+        "motivo": "RAM pico 2624.4 MB — limite 2048.0 MB",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "tps_min",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 5.0,
+        "motivo": "TPS 0.00 abaixo do mínimo 5.0",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "crashes_oom",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 8,
+        "limite": 0,
+        "motivo": "Crash/OOM detectado — 8 ocorrência(s)",
+        "categoria_falha": "hardware"
+      },
+      {
+        "nome": "taxa_json_valido",
+        "tipo": "hard",
+        "passou": false,
+        "valor": 0.0,
+        "limite": 60.0,
+        "motivo": "Taxa JSON válido 0.0% abaixo de 60.0%",
+        "categoria_falha": "formato"
+      },
+      {
+        "nome": "tempo_medio_rodada",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 109.48,
+        "limite": 90.0,
+        "motivo": "Tempo médio 109.5s acima de 90.0s",
+        "categoria_falha": "performance"
+      },
+      {
+        "nome": "degradacao_tps",
+        "tipo": "soft",
+        "passou": false,
+        "valor": 100.0,
+        "limite": 40.0,
+        "motivo": "Degradação TPS 100.0% entre 1ª e última geração",
+        "categoria_falha": "performance"
+      }
+    ],
+    "motivos_reprovacao": [
+      "Falha de JSON recorrente — 3 tentativas",
+      "RAM pico 2624.4 MB — limite 2048.0 MB",
+      "TPS 0.00 abaixo do mínimo 5.0",
+      "Crash/OOM detectado — 8 ocorrência(s)",
+      "Taxa JSON válido 0.0% abaixo de 60.0%",
+      "Tempo médio 109.5s acima de 90.0s",
+      "Degradação TPS 100.0% entre 1ª e última geração"
+    ],
+    "categoria_falha": "hardware",
+    "categorias_falha": [
+      "formato",
+      "hardware",
+      "performance"
+    ],
+    "modelo": "TheBloke/phi-2-GGUF",
+    "gerado_em": "2026-09-26T16:18:22.647567"
+  },
+  "eliminado": true,
+  "motivo_eliminacao": "Falha de JSON recorrente — 3 tentativas; RAM pico 2624.4 MB — limite 2048.0 MB; TPS 0.00 abaixo do mínimo 5.0; Crash/OOM detectado — 8 ocorrência(s); Taxa JSON válido 0.0% abaixo de 60.0%; Tempo médio 109.5s acima de 90.0s; Degradação TPS 100.0% entre 1ª e última geração"
+}
