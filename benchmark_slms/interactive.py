@@ -440,7 +440,7 @@ def menu_interativo(models_dir: Path | None = None) -> int:
 
     while True:
         print("\n" + "=" * 52)
-        print("       benchmark-SLMs-INCT")
+        print("       benchmark-SLMs")
         print("=" * 52)
         print("  1  Listar catálogo de modelos")
         print("  2  Baixar modelo GGUF (Hugging Face)")

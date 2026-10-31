@@ -135,7 +135,7 @@ def classificar_erro_execucao(exc: Exception) -> ErroOperacao:
             detalhe=str(exc),
             dicas=[
                 "pip install pydantic psutil huggingface_hub llama-cpp-python",
-                "Use opção 10 do menu para verificar o ambiente",
+                "Use opção 11 do menu para verificar o ambiente",
             ],
         )
 
