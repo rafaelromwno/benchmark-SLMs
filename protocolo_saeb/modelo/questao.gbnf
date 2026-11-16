@@ -1,0 +1,36 @@
+# Grammar GBNF (llama.cpp) que restringe a decodificação ao contrato fixo
+# exigido pelo app mobile (schema definido pelos envolvidos, sem exceção):
+# wrapper {"questoes": [...]} com 1+ questões, cada uma com 5 alternativas
+# (A-E), resposta_correta (LETRA) e difficulty em {EASY, MEDIUM, HARD}.
+#
+# Ordem das chaves dentro de cada questão: enunciado, alternativas,
+# resolucao_passo_a_passo, resposta_correta, difficulty — o modelo "mostra o
+# trabalho" (resolucao_passo_a_passo) ANTES de se comprometer com a letra
+# (resposta_correta). JSON não garante ordem para quem consome por nome, mas
+# a ordem de EMISSÃO importa para a geração autorregressiva: evita reintroduzir
+# o problema descrito no README ("Gabarito inconsistente com a justificativa",
+# causa 1) de comprometer a letra antes do raciocínio.
+#
+# Garante por construção: JSON válido, wrapper "questoes" como lista, todas as
+# chaves presentes em cada questão, 5 alternativas (A-E), resposta_correta em
+# {A,B,C,D,E}, difficulty em {EASY,MEDIUM,HARD}. NÃO garante consistência
+# lógica (letra certa) — isso é papel de check_consistency()/fix_gabarito() no
+# pós-processamento (ver schema_utils.py).
+#
+# Uso: llama-cli ... --grammar-file grammars/questao.gbnf
+
+root ::= "{" ws "\"questoes\"" ws ":" ws "[" ws questao (ws "," ws questao)* ws "]" ws "}"
+
+questao ::= "{" ws "\"enunciado\"" ws ":" ws string ws "," ws "\"alternativas\"" ws ":" ws alts ws "," ws "\"resolucao_passo_a_passo\"" ws ":" ws string ws "," ws "\"resposta_correta\"" ws ":" ws letra ws "," ws "\"difficulty\"" ws ":" ws difficulty ws "}"
+
+alts ::= "{" ws "\"A\"" ws ":" ws string ws "," ws "\"B\"" ws ":" ws string ws "," ws "\"C\"" ws ":" ws string ws "," ws "\"D\"" ws ":" ws string ws "," ws "\"E\"" ws ":" ws string ws "}"
+
+letra ::= "\"A\"" | "\"B\"" | "\"C\"" | "\"D\"" | "\"E\""
+
+difficulty ::= "\"EASY\"" | "\"MEDIUM\"" | "\"HARD\""
+
+string ::= "\"" char* "\""
+
+char ::= [^"\\\x7F\x00-\x1F] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F])
+
+ws ::= [ \t\n]*

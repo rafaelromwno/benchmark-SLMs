@@ -1,0 +1,5557 @@
+{
+ "versao": 1,
+ "fonte": "DB/questoes.db (disciplina=Matemática)",
+ "nota": "Regex em texto normalizado (minúsculas, sem acentos). Chave = 'ano|habilidade'.",
+ "contextos": [
+  {
+   "id": "feira",
+   "rotulo": "feira livre",
+   "palavras_chave": "feira|barraca|feirante"
+  },
+  {
+   "id": "esporte",
+   "rotulo": "campeonato esportivo",
+   "palavras_chave": "futebol|campeonato|\\btime\\b|\\bgols?\\b|partida|corrida|atleta|quadra|basquete|volei"
+  },
+  {
+   "id": "culinaria",
+   "rotulo": "receita de bolo",
+   "palavras_chave": "receita|\\bbolo|cozinh|ingrediente|xicara|farinha"
+  },
+  {
+   "id": "viagem",
+   "rotulo": "viagem de ônibus",
+   "palavras_chave": "onibus|viagem|\\bcarro|estrada|\\btrem\\b|passageir|rodoviaria"
+  },
+  {
+   "id": "biblioteca",
+   "rotulo": "biblioteca da escola",
+   "palavras_chave": "biblioteca|\\blivros?\\b|leitura|paginas?"
+  },
+  {
+   "id": "horta",
+   "rotulo": "horta comunitária",
+   "palavras_chave": "horta|canteiro|semente|jardim"
+  },
+  {
+   "id": "festa",
+   "rotulo": "festa junina",
+   "palavras_chave": "festa|junina|aniversario|convidad|balao|baloes"
+  },
+  {
+   "id": "mesada",
+   "rotulo": "mesada e cofrinho",
+   "palavras_chave": "mesada|cofrinho|economiz|poupanc|guardou"
+  },
+  {
+   "id": "loja",
+   "rotulo": "loja de brinquedos",
+   "palavras_chave": "\\bloja|brinquedo|desconto|pagou|\\bpreco|r\\$|vendeu|comprou"
+  },
+  {
+   "id": "reciclagem",
+   "rotulo": "campanha de reciclagem",
+   "palavras_chave": "recicla|\\blixo|garrafa|latinha|meio ambiente"
+  },
+  {
+   "id": "padaria",
+   "rotulo": "padaria",
+   "palavras_chave": "padaria|\\bpao\\b|\\bpaes\\b|padeiro"
+  },
+  {
+   "id": "parque",
+   "rotulo": "passeio ao parque",
+   "palavras_chave": "parque|\\bpraca\\b|passeio|piquenique"
+  },
+  {
+   "id": "colecao",
+   "rotulo": "coleção de figurinhas",
+   "palavras_chave": "figurinha|colec|album"
+  },
+  {
+   "id": "mercado",
+   "rotulo": "mercado do bairro",
+   "palavras_chave": "mercado|supermercado|mercearia"
+  },
+  {
+   "id": "escola",
+   "rotulo": "gincana escolar",
+   "palavras_chave": "gincana|escola|\\bturma|alunos?\\b|professora?\\b|sala de aula"
+  },
+  {
+   "id": "construcao",
+   "rotulo": "reforma de uma casa",
+   "palavras_chave": "terreno|constru|\\bobra\\b|parede|\\bpiso\\b|calcada|\\bmuro\\b|reforma|pedreiro"
+  }
+ ],
+ "estruturas": [
+  {
+   "id": "verdadeiro_falso_implicito",
+   "rotulo": "julgamento de afirmações",
+   "palavras_chave": "afirma|\\bcorreta\\b|incorreta|verdadeir|\\bfals[ao]\\b"
+  },
+  {
+   "id": "identificacao_propriedade",
+   "rotulo": "identificação de propriedade",
+   "palavras_chave": "classific|chamad|recebe o nome|propriedade|qual (e|das|dos) .{0,20}(tipo|nome)|pode ser"
+  },
+  {
+   "id": "comparacao",
+   "rotulo": "comparação",
+   "palavras_chave": "\\bmaior\\b|\\bmenor\\b|compar|mais .{0,20}do que"
+  },
+  {
+   "id": "problema_contextualizado",
+   "rotulo": "problema contextualizado",
+   "palavras_chave": null,
+   "requer_contexto": true
+  },
+  {
+   "id": "calculo",
+   "rotulo": "cálculo",
+   "palavras_chave": "calcul|resultado|quant[oa]s?\\b|valor",
+   "procedimental": true
+  },
+  {
+   "id": "pergunta_direta",
+   "rotulo": "pergunta direta",
+   "palavras_chave": null
+  }
+ ],
+ "sem_contexto": {
+  "id": "sem_contexto",
+  "rotulo": "sem contexto narrativo"
+ },
+ "tipos_raciocinio": [
+  {
+   "id": "identificacao",
+   "rotulo": "identificação/reconhecimento",
+   "palavras_chave": "identifi|reconhec|chamad|qual (figura|objeto|solido)|qual (e|das|dos) .{0,20}(nome|representa)"
+  },
+  {
+   "id": "classificacao_lados",
+   "rotulo": "classificação quanto aos lados",
+   "palavras_chave": "quanto aos lados|lados? (iguais|diferentes|congruentes)|isosceles|escaleno|equilater",
+   "aplica_a": "triangul",
+   "instrucao": " Eixo: pergunte quanto aos lados e dê a medida dos três lados; a resposta é a classe mais específica.",
+   "exige_dados": true
+  },
+  {
+   "id": "classificacao_angulos",
+   "rotulo": "classificação quanto aos ângulos",
+   "palavras_chave": "quanto aos angulos|angulos? (reto|agudo|obtuso)s?|acutangul|obtusangul|angulos? internos",
+   "aplica_a": "triangul",
+   "instrucao": " Eixo: pergunte quanto aos ângulos e dê a medida dos três ângulos, somando 180°; só uma alternativa pode servir.",
+   "exige_dados": true
+  },
+  {
+   "id": "classificacao_atributos",
+   "rotulo": "classificação por atributos",
+   "palavras_chave": "classific|grupo|mesma (cor|forma)|atribut"
+  },
+  {
+   "id": "calculo_medida",
+   "rotulo": "cálculo de medida ou valor",
+   "palavras_chave": "calcul|quanto mede|qual (e|sera|foi) (o|a) (valor|resultado|medida|area|perimetro|volume|total)|resultado"
+  },
+  {
+   "id": "resolucao_problema",
+   "rotulo": "resolução de problema",
+   "palavras_chave": "quant[oa]s?\\b"
+  },
+  {
+   "id": "problema_inverso",
+   "rotulo": "problema inverso (descobrir o dado inicial)",
+   "palavras_chave": "(original|inicial|antes|no inicio)\\b|qual (era|foi) o (preco|valor|numero)|descubr"
+  },
+  {
+   "id": "multiplas_etapas",
+   "rotulo": "problema de múltiplas etapas",
+   "palavras_chave": "(depois|em seguida|restante|sobrou|ainda).{0,120}(depois|em seguida|restante|sobrou|total|ainda)"
+  },
+  {
+   "id": "comparacao",
+   "rotulo": "comparação/ordenação",
+   "palavras_chave": "\\bmaior\\b|\\bmenor\\b|mais .{0,20}(que|do que)|compar|ordem (crescente|decrescente)"
+  },
+  {
+   "id": "conversao_representacao",
+   "rotulo": "conversão entre representações",
+   "palavras_chave": "equivale|correspond|convert|represent|por extenso|forma (decimal|fracionaria|percentual)|planifica"
+  },
+  {
+   "id": "estimativa",
+   "rotulo": "estimativa/aproximação",
+   "palavras_chave": "aproximad|estim|cerca de|mais proximo"
+  },
+  {
+   "id": "inferencia_padrao",
+   "rotulo": "inferência de padrão",
+   "palavras_chave": "padrao|proximo (numero|termo)|sequencia|regra|segue"
+  },
+  {
+   "id": "verificacao_propriedade",
+   "rotulo": "verificação de propriedade",
+   "palavras_chave": "possivel|verdadeir|corret[ao]|afirma|sempre|propriedade"
+  },
+  {
+   "id": "localizacao_trajeto",
+   "rotulo": "localização e trajeto",
+   "palavras_chave": "direita|esquerda|caminho|localiz|\\bonde\\b"
+  },
+  {
+   "id": "leitura_dados",
+   "rotulo": "leitura e interpretação de dados",
+   "palavras_chave": "tabela|grafico|dados|pesquisa"
+  },
+  {
+   "id": "classificacao_propriedades",
+   "rotulo": "classificação por lados, paralelismo e ângulos retos",
+   "palavras_chave": "paralel|lados opostos|angulos? retos|todos os lados|pares? de lados",
+   "aplica_a": "quadrilater|paralelogram|trapezi|losang|retangulo_quadrado",
+   "instrucao": " Eixo: informe os lados iguais, os lados paralelos e os ângulos retos; a resposta é o nome mais específico garantido por eles.",
+   "exige_dados": true
+  }
+ ],
+ "habilidades": {
+  "1º|EF01MA02": {
+   "ano": "1º",
+   "habilidade": "EF01MA02",
+   "descricoes": [
+    "Contar de maneira exata ou aproximada, utilizando diferentes estratégias como o pareamento e outros agrupamentos."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "estimativa",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "geral",
+     "rotulo": "contar de maneira exata ou aproximada, utilizando diferentes estrategias como o pareamento e outros agrupamentos",
+     "palavras_chave": [
+      "."
+     ],
+     "origem": "descricao",
+     "tipos_raciocinio": [
+      "estimativa",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 50
+    }
+   ],
+   "n_itens_db": 50,
+   "n_sem_subtema_db": 0
+  },
+  "1º|EF01MA06": {
+   "ano": "1º",
+   "habilidade": "EF01MA06",
+   "descricoes": [
+    "Construir fatos fundamentais da adição e utilizá-los em procedimentos de cálculo para resolver problemas."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 35
+    }
+   ],
+   "n_itens_db": 50,
+   "n_sem_subtema_db": 15
+  },
+  "1º|EF01MA08": {
+   "ano": "1º",
+   "habilidade": "EF01MA08",
+   "descricoes": [
+    "Resolver e elaborar problemas de adição e de subtração, envolvendo números de até dois algarismos, com os significados de juntar, acrescentar, separar e retirar, com o suporte de imagens e/ou material manipulável, utilizando estratégias e formas de registro pessoais."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 12
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 18
+    },
+    {
+     "id": "sig_juntar",
+     "rotulo": "significado de juntar",
+     "palavras_chave": [
+      "junt|ao todo|total"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "sig_acrescentar",
+     "rotulo": "significado de acrescentar",
+     "palavras_chave": [
+      "acrescent|ganhou|mais \\d|chegaram"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "sig_separar",
+     "rotulo": "significado de separar",
+     "palavras_chave": [
+      "separ"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "sig_retirar",
+     "rotulo": "significado de retirar",
+     "palavras_chave": [
+      "retir|tirou|perdeu|gastou|deu \\d|comeu|vendeu"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 3
+    }
+   ],
+   "n_itens_db": 50,
+   "n_sem_subtema_db": 14
+  },
+  "2º|EF02MA03": {
+   "ano": "2º",
+   "habilidade": "EF02MA03",
+   "descricoes": [
+    "Comparar quantidades de objetos de dois conjuntos, por estimativa e/ou por correspondência (um a um, dois a dois, entre outros), para indicar “tem mais”, “tem menos” ou “tem a mesma quantidade”, indicando, quando for o caso, quantos a mais e quantos a menos."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "comparacao",
+    "estimativa"
+   ],
+   "subtemas": [
+    {
+     "id": "geral",
+     "rotulo": "comparar quantidades de objetos de dois conjuntos, por estimativa e/ou por correspondencia (um a um, dois a dois, entre outros), para indicar tem mais, tem menos ou tem a mesma quantidade, indicando, quando for o caso, quantos a mais e quantos a menos",
+     "palavras_chave": [
+      "."
+     ],
+     "origem": "descricao",
+     "tipos_raciocinio": [
+      "comparacao",
+      "estimativa"
+     ],
+     "n_exemplos_db": 50
+    }
+   ],
+   "n_itens_db": 50,
+   "n_sem_subtema_db": 0
+  },
+  "2º|EF02MA05": {
+   "ano": "2º",
+   "habilidade": "EF02MA05",
+   "descricoes": [
+    "Construir fatos básicos da adição e subtração e utilizá-los no cálculo mental ou escrito."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 18
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 12
+    }
+   ],
+   "n_itens_db": 50,
+   "n_sem_subtema_db": 20
+  },
+  "2º|EF02MA06": {
+   "ano": "2º",
+   "habilidade": "EF02MA06",
+   "descricoes": [
+    "Resolver e elaborar problemas de adição e de subtração, envolvendo números de até três ordens, com os significados de juntar, acrescentar, separar, retirar, utilizando estratégias pessoais ou convencionais."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 15
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 10
+    },
+    {
+     "id": "sig_juntar",
+     "rotulo": "significado de juntar",
+     "palavras_chave": [
+      "junt|ao todo|total"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "sig_acrescentar",
+     "rotulo": "significado de acrescentar",
+     "palavras_chave": [
+      "acrescent|ganhou|mais \\d|chegaram"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "sig_separar",
+     "rotulo": "significado de separar",
+     "palavras_chave": [
+      "separ"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "sig_retirar",
+     "rotulo": "significado de retirar",
+     "palavras_chave": [
+      "retir|tirou|perdeu|gastou|deu \\d|comeu|vendeu"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 5
+    }
+   ],
+   "n_itens_db": 49,
+   "n_sem_subtema_db": 14
+  },
+  "2º|H01": {
+   "ano": "2º",
+   "habilidade": "H01",
+   "descricoes": [
+    "Reconhecer o que os números naturais indicam em diferentes situações: quantidade, ordem, medida ou código de identificação."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "calculo_medida"
+   ],
+   "subtemas": [
+    {
+     "id": "geral",
+     "rotulo": "reconhecer o que os numeros naturais indicam em diferentes situacoes: quantidade, ordem, medida ou codigo de identificacao",
+     "palavras_chave": [
+      "."
+     ],
+     "origem": "descricao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "calculo_medida"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "2º|H02": {
+   "ano": "2º",
+   "habilidade": "H02",
+   "descricoes": [
+    "Identificar a posição ordinal de um objeto ou termo em uma sequência (1º, 2º etc.)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "inferencia_padrao"
+   ],
+   "subtemas": [
+    {
+     "id": "geral",
+     "rotulo": "identificar a posicao ordinal de um objeto ou termo em uma sequencia (1o, 2o etc.)",
+     "palavras_chave": [
+      "."
+     ],
+     "origem": "descricao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "2º|H03": {
+   "ano": "2º",
+   "habilidade": "H03",
+   "descricoes": [
+    "Escrever números naturais de até 3 ordens em sua representação por algarismos ou em língua materna OU Associar o registro numérico de números naturais de até 3 ordens ao registro em língua materna.",
+    "Escrever números naturais de até 3 ordens em sua representação por algarismos ou em língua materna. OU Associar o registro numérico de números naturais de até 3 ordens ao registro em língua materna."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "conversao_representacao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "registro_algarismos",
+     "rotulo": "registro por algarismos",
+     "palavras_chave": [
+      "algarismo|\\d"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 7
+    },
+    {
+     "id": "registro_lingua_materna",
+     "rotulo": "registro por extenso",
+     "palavras_chave": [
+      "por extenso|escrito|escreve|le-se"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "2º|H04": {
+   "ano": "2º",
+   "habilidade": "H04",
+   "descricoes": [
+    "Comparar OU Ordenar quantidades de objetos (até 2 ordens)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "comparacao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "geral",
+     "rotulo": "comparar ou ordenar quantidades de objetos (ate 2 ordens)",
+     "palavras_chave": [
+      "."
+     ],
+     "origem": "descricao",
+     "tipos_raciocinio": [
+      "comparacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "2º|H05": {
+   "ano": "2º",
+   "habilidade": "H05",
+   "descricoes": [
+    "Comparar OU Ordenar números naturais, de até 3 ordens, com ou sem suporte da reta numérica."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "comparacao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "geral",
+     "rotulo": "comparar ou ordenar numeros naturais, de ate 3 ordens, com ou sem suporte da reta numerica",
+     "palavras_chave": [
+      "."
+     ],
+     "origem": "descricao",
+     "tipos_raciocinio": [
+      "comparacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "2º|H06": {
+   "ano": "2º",
+   "habilidade": "H06",
+   "descricoes": [
+    "Calcular o resultado de adições ou subtrações, envolvendo números naturais de até 3 ordens."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 4
+  },
+  "2º|H07": {
+   "ano": "2º",
+   "habilidade": "H07",
+   "descricoes": [
+    "Compor OU Decompor números naturais de até 3 ordens por meio de diferentes adições."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 7
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 1
+  },
+  "2º|H08": {
+   "ano": "2º",
+   "habilidade": "H08",
+   "descricoes": [
+    "Resolver problemas de adição ou de subtração, envolvendo números naturais de até 3 ordens, com os significados de juntar, acrescentar, separar ou retirar."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "sig_juntar",
+     "rotulo": "significado de juntar",
+     "palavras_chave": [
+      "junt|ao todo|total"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "sig_acrescentar",
+     "rotulo": "significado de acrescentar",
+     "palavras_chave": [
+      "acrescent|ganhou|mais \\d|chegaram"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "sig_separar",
+     "rotulo": "significado de separar",
+     "palavras_chave": [
+      "separ"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "sig_retirar",
+     "rotulo": "significado de retirar",
+     "palavras_chave": [
+      "retir|tirou|perdeu|gastou|deu \\d|comeu|vendeu"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "2º|H09": {
+   "ano": "2º",
+   "habilidade": "H09",
+   "descricoes": [
+    "Identificar a classificação OU Classificar objetos ou representações por figuras, por meio de atributos, tais como cor, forma e medida."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "classificacao_atributos",
+    "calculo_medida",
+    "conversao_representacao"
+   ],
+   "subtemas": [
+    {
+     "id": "geral",
+     "rotulo": "identificar a classificacao ou classificar objetos ou representacoes por figuras, por meio de atributos, tais como cor, forma e medida",
+     "palavras_chave": [
+      "."
+     ],
+     "origem": "descricao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "classificacao_atributos",
+      "calculo_medida",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "2º|H10": {
+   "ano": "2º",
+   "habilidade": "H10",
+   "descricoes": [
+    "Inferir os elementos ausentes em uma sequência de números naturais ordenados, de objetos ou de figuras."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "inferencia_padrao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "seq_numerica",
+     "rotulo": "sequências numéricas",
+     "palavras_chave": [
+      "sequencia|\\d+\\s*,\\s*\\d+\\s*,\\s*\\d+"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "inferencia_padrao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 5
+    },
+    {
+     "id": "seq_figuras",
+     "rotulo": "sequências de figuras/objetos",
+     "palavras_chave": [
+      "figura|objeto|desenho"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "inferencia_padrao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 2
+  },
+  "2º|H11": {
+   "ano": "2º",
+   "habilidade": "H11",
+   "descricoes": [
+    "Reconhecer/nomear figuras geométricas planas (círculo, quadrado, retângulo e triângulo)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "circulo",
+     "rotulo": "círculo e circunferência",
+     "palavras_chave": [
+      "circul|circunferen|\\braio\\b|diametro"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "retangulo_quadrado",
+     "rotulo": "retângulos e quadrados",
+     "palavras_chave": [
+      "retangul|quadrado|comprimento e .{0,30}largura"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 6
+    },
+    {
+     "id": "triangulo",
+     "rotulo": "triângulos",
+     "palavras_chave": [
+      "triangul|isosceles|escaleno|equilater|acutangul|obtusangul"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "trapezio",
+     "rotulo": "trapézios",
+     "palavras_chave": [
+      "trapezi"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "poligono",
+     "rotulo": "polígonos",
+     "palavras_chave": [
+      "poligon|pentagon|hexagon|octogon"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "conceitual": true,
+   "estruturas": [
+    "verdadeiro_falso_implicito",
+    "identificacao_propriedade",
+    "comparacao",
+    "problema_contextualizado",
+    "pergunta_direta"
+   ],
+   "n_sem_subtema_db": 0
+  },
+  "2º|H12": {
+   "ano": "2º",
+   "habilidade": "H12",
+   "descricoes": [
+    "Reconhecer/nomear figuras geométricas espaciais (cubo, bloco retangular, pirâmide, cone, cilindro e esfera), relacionando-as com objetos do mundo físico."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "prisma",
+     "rotulo": "prismas e blocos retangulares",
+     "palavras_chave": [
+      "prisma|bloco|paralelepiped|\\bcubo|caixa"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "piramide",
+     "rotulo": "pirâmides",
+     "palavras_chave": [
+      "piramide"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "cone",
+     "rotulo": "cones",
+     "palavras_chave": [
+      "\\bcone"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "cilindro",
+     "rotulo": "cilindros",
+     "palavras_chave": [
+      "cilindr|lata|tambor|cano"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "esfera",
+     "rotulo": "esferas",
+     "palavras_chave": [
+      "esfera|bola"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "conceitual": true,
+   "estruturas": [
+    "verdadeiro_falso_implicito",
+    "identificacao_propriedade",
+    "comparacao",
+    "problema_contextualizado",
+    "pergunta_direta"
+   ],
+   "n_sem_subtema_db": 1
+  },
+  "2º|H13": {
+   "ano": "2º",
+   "habilidade": "H13",
+   "descricoes": [
+    "Identificar a localização OU a descrição/esboço do deslocamento de pessoas e/ou de objetos em representações bidimensionais (mapas, croquis etc.)",
+    "Identificar a localização OU a descrição/esboço do deslocamento de pessoas e/ou de objetos em representações bidimensionais (mapas, croquis etc.)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "conversao_representacao",
+    "localizacao_trajeto"
+   ],
+   "subtemas": [
+    {
+     "id": "mapas_croquis",
+     "rotulo": "mapas e croquis",
+     "palavras_chave": [
+      "mapa|croqui|rua|quarteirao"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao",
+      "localizacao_trajeto"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "localizacao",
+     "rotulo": "localização",
+     "palavras_chave": [
+      "localiz|onde (esta|fica)|entre|ao lado|a direita|a esquerda"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao",
+      "localizacao_trajeto"
+     ],
+     "n_exemplos_db": 5
+    },
+    {
+     "id": "deslocamento",
+     "rotulo": "deslocamento",
+     "palavras_chave": [
+      "desloc|caminho|trajeto|vire|siga|andou"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao",
+      "localizacao_trajeto"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 3
+  },
+  "2º|H14": {
+   "ano": "2º",
+   "habilidade": "H14",
+   "descricoes": [
+    "Comparar comprimentos, capacidades ou massas OU Ordenar imagens de objetos com base na comparação visual de seus comprimentos, capacidades ou massas."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "comparacao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "comprimento",
+     "rotulo": "medidas de comprimento",
+     "palavras_chave": [
+      "\\d\\s*(km|cm|mm|m)\\b|metro|centimetro|comprimento|altura|distancia"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "comparacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "massa",
+     "rotulo": "medidas de massa",
+     "palavras_chave": [
+      "\\d\\s*(kg|g|mg|t)\\b|quilo|grama|massa|pes[ao]"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "comparacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "capacidade",
+     "rotulo": "medidas de capacidade",
+     "palavras_chave": [
+      "\\d\\s*(l|ml)\\b|litro|mililitro|capacidade"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "comparacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 5
+  },
+  "2º|H15": {
+   "ano": "2º",
+   "habilidade": "H15",
+   "descricoes": [
+    "Relacionar valores de moedas e/ou cédulas do sistema monetário brasileiro, com base nas imagens desses objetos."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "multiplas_etapas",
+    "conversao_representacao"
+   ],
+   "subtemas": [
+    {
+     "id": "moedas",
+     "rotulo": "moedas",
+     "palavras_chave": [
+      "moeda|centavo"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "cedulas",
+     "rotulo": "cédulas",
+     "palavras_chave": [
+      "cedula|nota de|notas de"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 4
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 1
+  },
+  "2º|H16": {
+   "ano": "2º",
+   "habilidade": "H16",
+   "descricoes": [
+    "Estimar/Inferir medida de comprimento, capacidade ou massa de objetos, utilizando unidades de medida convencionais ou não OU Medir comprimento, capacidade ou massa de objetos."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "estimativa",
+    "inferencia_padrao"
+   ],
+   "subtemas": [
+    {
+     "id": "comprimento",
+     "rotulo": "medidas de comprimento",
+     "palavras_chave": [
+      "\\d\\s*(km|cm|mm|m)\\b|metro|centimetro|comprimento|altura|distancia"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "estimativa",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "massa",
+     "rotulo": "medidas de massa",
+     "palavras_chave": [
+      "\\d\\s*(kg|g|mg|t)\\b|quilo|grama|massa|pes[ao]"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "estimativa",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "capacidade",
+     "rotulo": "medidas de capacidade",
+     "palavras_chave": [
+      "\\d\\s*(l|ml)\\b|litro|mililitro|capacidade"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "estimativa",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 3
+  },
+  "2º|H17": {
+   "ano": "2º",
+   "habilidade": "H17",
+   "descricoes": [
+    "Identificar sequência de acontecimentos relativos a um dia."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "inferencia_padrao"
+   ],
+   "subtemas": [
+    {
+     "id": "geral",
+     "rotulo": "identificar sequencia de acontecimentos relativos a um dia",
+     "palavras_chave": [
+      "."
+     ],
+     "origem": "descricao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "2º|H18": {
+   "ano": "2º",
+   "habilidade": "H18",
+   "descricoes": [
+    "Identificar datas, dias da semana, ou meses do ano em calendário OU Escrever uma data, apresentando o dia, o mês e o ano."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "conversao_representacao"
+   ],
+   "subtemas": [
+    {
+     "id": "datas",
+     "rotulo": "datas",
+     "palavras_chave": [
+      "\\bdata\\b|/\\d{2}/|\\bdia \\d"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "dias_semana",
+     "rotulo": "dias da semana",
+     "palavras_chave": [
+      "segunda|terca|quarta|quinta|sexta|sabado|domingo|dia da semana"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "meses",
+     "rotulo": "meses do ano",
+     "palavras_chave": [
+      "janeiro|fevereiro|marco|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro|\\bmes\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 6
+    },
+    {
+     "id": "calendario",
+     "rotulo": "calendário",
+     "palavras_chave": [
+      "calendario"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "2º|H19": {
+   "ano": "2º",
+   "habilidade": "H19",
+   "descricoes": [
+    "Ler/Identificar OU Comparar dados estatísticos ou informações expressos em tabelas (simples ou de dupla entrada)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "comparacao",
+    "leitura_dados"
+   ],
+   "subtemas": [
+    {
+     "id": "tabela_dupla",
+     "rotulo": "tabela de dupla entrada",
+     "palavras_chave": [
+      "dupla entrada|linhas? e colunas?"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "tabela_simples",
+     "rotulo": "tabela simples",
+     "palavras_chave": [
+      "tabela"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "2º|H20": {
+   "ano": "2º",
+   "habilidade": "H20",
+   "descricoes": [
+    "Ler/Identificar OU Comparar dados estatísticos expressos em gráficos (barras simples, colunas simples ou pictóricos)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "comparacao",
+    "leitura_dados"
+   ],
+   "subtemas": [
+    {
+     "id": "grafico_barras",
+     "rotulo": "gráfico de barras",
+     "palavras_chave": [
+      "barra"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "grafico_colunas",
+     "rotulo": "gráfico de colunas",
+     "palavras_chave": [
+      "coluna"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "grafico_pictorico",
+     "rotulo": "gráfico pictórico",
+     "palavras_chave": [
+      "pictoric|cada (simbolo|figura|desenho) (vale|representa)"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 7,
+   "n_sem_subtema_db": 5
+  },
+  "2º|H21": {
+   "ano": "2º",
+   "habilidade": "H21",
+   "descricoes": [
+    "Ler/Identificar OU Comparar dados estatísticos expressos em gráficos (barras simples, colunas simples ou pictóricos)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "comparacao",
+    "leitura_dados"
+   ],
+   "subtemas": [
+    {
+     "id": "grafico_barras",
+     "rotulo": "gráfico de barras",
+     "palavras_chave": [
+      "barra"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "grafico_colunas",
+     "rotulo": "gráfico de colunas",
+     "palavras_chave": [
+      "coluna"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_pictorico",
+     "rotulo": "gráfico pictórico",
+     "palavras_chave": [
+      "pictoric|cada (simbolo|figura|desenho) (vale|representa)"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 1,
+   "n_sem_subtema_db": 0
+  },
+  "3º|EF03MA01": {
+   "ano": "3º",
+   "habilidade": "EF03MA01",
+   "descricoes": [
+    "Ler, escrever e comparar números naturais de até a ordem de unidade de milhar, estabelecendo relações entre os registros numéricos e em língua materna."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "comparacao",
+    "conversao_representacao",
+    "verificacao_propriedade"
+   ],
+   "subtemas": [
+    {
+     "id": "registro_lingua_materna",
+     "rotulo": "registro por extenso",
+     "palavras_chave": [
+      "por extenso|escrito|escreve|le-se"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "conversao_representacao",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 4
+    }
+   ],
+   "n_itens_db": 37,
+   "n_sem_subtema_db": 33
+  },
+  "3º|EF03MA03": {
+   "ano": "3º",
+   "habilidade": "EF03MA03",
+   "descricoes": [
+    "Construir e utilizar fatos básicos da adição e da multiplicação para o cálculo mental ou escrito."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 19
+    },
+    {
+     "id": "multiplicacao",
+     "rotulo": "multiplicação",
+     "palavras_chave": [
+      "multiplic|vezes|produto|\\bx\\b|×|\\bcada\\b[^?]*\\b(ao todo|no total|total)\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 9
+    }
+   ],
+   "n_itens_db": 50,
+   "n_sem_subtema_db": 22
+  },
+  "3º|EF03MA07": {
+   "ano": "3º",
+   "habilidade": "EF03MA07",
+   "descricoes": [
+    "Resolver e elaborar problemas de multiplicação (por 2, 3, 4, 5 e 10) com os significados de adição de parcelas iguais e elementos apresentados em disposição retangular, utilizando diferentes estratégias de cálculo e registros."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 10
+    },
+    {
+     "id": "multiplicacao",
+     "rotulo": "multiplicação",
+     "palavras_chave": [
+      "multiplic|vezes|produto|\\bx\\b|×|\\bcada\\b[^?]*\\b(ao todo|no total|total)\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 12
+    },
+    {
+     "id": "disposicao_retangular",
+     "rotulo": "disposição retangular",
+     "palavras_chave": [
+      "fileira|linhas? e colunas?|disposicao"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 6
+    }
+   ],
+   "n_itens_db": 50,
+   "n_sem_subtema_db": 22
+  },
+  "4º|EF04MA04": {
+   "ano": "4º",
+   "habilidade": "EF04MA04",
+   "descricoes": [
+    "Utilizar as relações entre adição e subtração, bem como entre multiplicação e divisão, para ampliar as estratégias de cálculo."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "verificacao_propriedade"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 15
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 9
+    },
+    {
+     "id": "multiplicacao",
+     "rotulo": "multiplicação",
+     "palavras_chave": [
+      "multiplic|vezes|produto|\\bx\\b|×|\\bcada\\b[^?]*\\b(ao todo|no total|total)\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "divisao",
+     "rotulo": "divisão",
+     "palavras_chave": [
+      "divi|reparti|÷|igualmente|\\bcada\\b[^\\d.?!]*\\?"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 5
+    }
+   ],
+   "n_itens_db": 50,
+   "n_sem_subtema_db": 19
+  },
+  "5º|H01": {
+   "ano": "5º",
+   "habilidade": "H01",
+   "descricoes": [
+    "Escrever números racionais (naturais de até 6 ordens, representação fracionária ou decimal finita até a ordem dos milésimos) em sua representação por algarismos ou em língua materna OU Associar o registro numérico ao registro em língua materna",
+    "Escrever números racionais (naturais de até 6 ordens, representação fracionária ou decimal finita até a ordem dos milésimos) em sua representação por algarismos ou em língua materna OU Associar o registro numérico ao registro em língua materna."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "conversao_representacao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "naturais_6_ordens",
+     "rotulo": "naturais de ate 6 ordens",
+     "palavras_chave": [
+      "natur|orden"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "fracao",
+     "rotulo": "frações",
+     "palavras_chave": [
+      "frac|/\\d|metade|terco|quarto|partes iguais"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "decimal",
+     "rotulo": "números decimais",
+     "palavras_chave": [
+      "\\d,\\d|decima"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "registro_algarismos",
+     "rotulo": "registro por algarismos",
+     "palavras_chave": [
+      "algarismo|\\d"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 8
+    },
+    {
+     "id": "registro_lingua_materna",
+     "rotulo": "registro por extenso",
+     "palavras_chave": [
+      "por extenso|escrito|escreve|le-se"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "5º|H02": {
+   "ano": "5º",
+   "habilidade": "H02",
+   "descricoes": [
+    "Identificar a ordem ocupada por um algarismo OU seu valor posicional (ou valor relativo) em um número natural de até 6 ordens.",
+    "Identificar a ordem ocupada por um algarismo ou o algarismo que ocupa uma determinada ordem, em um número natural formado por até cinco algarismos."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "valor_posicional",
+     "rotulo": "valor posicional",
+     "palavras_chave": [
+      "ordem|posicional|unidade|dezena|centena|milhar"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "5º|H03": {
+   "ano": "5º",
+   "habilidade": "H03",
+   "descricoes": [
+    "Calcular o resultado de adições ou subtrações envolvendo números naturais de até 6 ordens.",
+    "Utilizar a operação de adição entre números naturais, formados por até quatro algarismos, envolvendo o significado de juntar ou de acrescentar, na resolução de problema."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "sig_juntar",
+     "rotulo": "significado de juntar",
+     "palavras_chave": [
+      "junt|ao todo|total"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "sig_acrescentar",
+     "rotulo": "significado de acrescentar",
+     "palavras_chave": [
+      "acrescent|ganhou|mais \\d|chegaram"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 2
+  },
+  "5º|H04": {
+   "ano": "5º",
+   "habilidade": "H04",
+   "descricoes": [
+    "Calcular o resultado de multiplicações ou divisões envolvendo números naturais de até 6 ordens",
+    "Calcular o resultado de multiplicações ou divisões envolvendo números naturais de até 6 ordens."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "multiplicacao",
+     "rotulo": "multiplicação",
+     "palavras_chave": [
+      "multiplic|vezes|produto|\\bx\\b|×|\\bcada\\b[^?]*\\b(ao todo|no total|total)\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 4
+    },
+    {
+     "id": "divisao",
+     "rotulo": "divisão",
+     "palavras_chave": [
+      "divi|reparti|÷|igualmente|\\bcada\\b[^\\d.?!]*\\?"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 3
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 1
+  },
+  "5º|H05": {
+   "ano": "5º",
+   "habilidade": "H05",
+   "descricoes": [
+    "Resolver problemas de adição ou de subtração, envolvendo números naturais de até 6 ordens, com os significados de juntar, acrescentar, separar, retirar, comparar ou completar."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas",
+    "comparacao"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "comparacao"
+     ],
+     "n_exemplos_db": 4
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "comparacao"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "sig_juntar",
+     "rotulo": "significado de juntar",
+     "palavras_chave": [
+      "junt|ao todo|total"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "comparacao"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "sig_acrescentar",
+     "rotulo": "significado de acrescentar",
+     "palavras_chave": [
+      "acrescent|ganhou|mais \\d|chegaram"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "comparacao"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "sig_separar",
+     "rotulo": "significado de separar",
+     "palavras_chave": [
+      "separ"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "comparacao"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "sig_retirar",
+     "rotulo": "significado de retirar",
+     "palavras_chave": [
+      "retir|tirou|perdeu|gastou|deu \\d|comeu|vendeu"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "comparacao"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "sig_comparar",
+     "rotulo": "significado de comparar",
+     "palavras_chave": [
+      "a mais que|a menos que|diferenca|quantos? a mais|quantos? a menos"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "comparacao"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "sig_completar",
+     "rotulo": "significado de completar",
+     "palavras_chave": [
+      "falta|completar|faltam"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "comparacao"
+     ],
+     "n_exemplos_db": 2
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "5º|H06": {
+   "ano": "5º",
+   "habilidade": "H06",
+   "descricoes": [
+    "Resolver problemas de multiplicação ou de divisão, envolvendo números naturais de até 6 ordens, com os significados de formação de grupos iguais (incluindo repartição equitativa e medida), proporcionalidade ou disposição retangular",
+    "Resolver problemas de multiplicação ou de divisão, envolvendo números naturais de até 6 ordens, com os significados de formação de grupos iguais (incluindo repartição equitativa e medida), proporcionalidade ou disposição retangular."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "grupos_iguais",
+     "rotulo": "grupos iguais / repartição",
+     "palavras_chave": [
+      "grupo|cada|reparti|igualmente"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 5
+    },
+    {
+     "id": "multiplicacao",
+     "rotulo": "multiplicação",
+     "palavras_chave": [
+      "multiplic|vezes|produto|\\bx\\b|×|\\bcada\\b[^?]*\\b(ao todo|no total|total)\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "divisao",
+     "rotulo": "divisão",
+     "palavras_chave": [
+      "divi|reparti|÷|igualmente|\\bcada\\b[^\\d.?!]*\\?"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "proporcionalidade",
+     "rotulo": "proporcionalidade",
+     "palavras_chave": [
+      "proporc|dobro|triplo|cada \\d"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "disposicao_retangular",
+     "rotulo": "disposição retangular",
+     "palavras_chave": [
+      "fileira|linhas? e colunas?|disposicao"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 2
+  },
+  "5º|H07": {
+   "ano": "5º",
+   "habilidade": "H07",
+   "descricoes": [
+    "Inferir OU Descrever atributos ou propriedades comuns que os elementos que constituem uma Sequência recursiva de números naturais apresentam.",
+    "Inferir OU Descrever atributos ou propriedades comuns que os elementos que constituem uma sequência recursiva de números naturais apresentam."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "conversao_representacao",
+    "inferencia_padrao",
+    "verificacao_propriedade"
+   ],
+   "subtemas": [
+    {
+     "id": "seq_numerica",
+     "rotulo": "sequências numéricas",
+     "palavras_chave": [
+      "sequencia|\\d+\\s*,\\s*\\d+\\s*,\\s*\\d+"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "inferencia_padrao",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "5º|H08": {
+   "ano": "5º",
+   "habilidade": "H08",
+   "descricoes": [
+    "Inferir o padrão ou a regularidade de uma sequência de números naturais ordenados, objetos ou figuras."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "inferencia_padrao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "seq_numerica",
+     "rotulo": "sequências numéricas",
+     "palavras_chave": [
+      "sequencia|\\d+\\s*,\\s*\\d+\\s*,\\s*\\d+"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "inferencia_padrao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 7
+    },
+    {
+     "id": "seq_figuras",
+     "rotulo": "sequências de figuras/objetos",
+     "palavras_chave": [
+      "figura|objeto|desenho"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "inferencia_padrao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 1
+  },
+  "5º|H09": {
+   "ano": "5º",
+   "habilidade": "H09",
+   "descricoes": [
+    "Determinar termos ausentes em Sequências de números naturais, formados por até quatro algarismos, resultantes de adições ou de subtrações sucessivas por um mesmo número.",
+    "Inferir os elementos ausentes em uma sequência de números naturais ordenados, objetos ou figuras."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "multiplas_etapas",
+    "inferencia_padrao"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "multiplas_etapas",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "multiplas_etapas",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "seq_numerica",
+     "rotulo": "sequências numéricas",
+     "palavras_chave": [
+      "sequencia|\\d+\\s*,\\s*\\d+\\s*,\\s*\\d+"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "multiplas_etapas",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "seq_figuras",
+     "rotulo": "sequências de figuras/objetos",
+     "palavras_chave": [
+      "figura|objeto|desenho"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "multiplas_etapas",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 3
+  },
+  "5º|H10": {
+   "ano": "5º",
+   "habilidade": "H10",
+   "descricoes": [
+    "Identificar a localização OU a descrição/esboço do deslocamento de pessoas e/ou de objetos em representações bidimensionais (mapas, croquis etc.)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "conversao_representacao",
+    "localizacao_trajeto"
+   ],
+   "subtemas": [
+    {
+     "id": "mapas_croquis",
+     "rotulo": "mapas e croquis",
+     "palavras_chave": [
+      "mapa|croqui|rua|quarteirao"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao",
+      "localizacao_trajeto"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "localizacao",
+     "rotulo": "localização",
+     "palavras_chave": [
+      "localiz|onde (esta|fica)|entre|ao lado|a direita|a esquerda"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao",
+      "localizacao_trajeto"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "deslocamento",
+     "rotulo": "deslocamento",
+     "palavras_chave": [
+      "desloc|caminho|trajeto|vire|siga|andou"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao",
+      "localizacao_trajeto"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 3
+  },
+  "5º|H11": {
+   "ano": "5º",
+   "habilidade": "H11",
+   "descricoes": [
+    "Descrever OU Esboçar o deslocamento de pessoas e/ou objetos em representações bidimensionais (mapas, croquis etc.) ou plantas de ambientes, de acordo com condições dadas."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "conversao_representacao",
+    "localizacao_trajeto"
+   ],
+   "subtemas": [
+    {
+     "id": "mapas_croquis",
+     "rotulo": "mapas e croquis",
+     "palavras_chave": [
+      "mapa|croqui|rua|quarteirao"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "localizacao_trajeto"
+     ],
+     "n_exemplos_db": 4
+    },
+    {
+     "id": "plantas",
+     "rotulo": "plantas de ambientes",
+     "palavras_chave": [
+      "planta"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "localizacao_trajeto"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "deslocamento",
+     "rotulo": "deslocamento",
+     "palavras_chave": [
+      "desloc|caminho|trajeto|vire|siga|andou"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "localizacao_trajeto"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 1
+  },
+  "5º|H12": {
+   "ano": "5º",
+   "habilidade": "H12",
+   "descricoes": [
+    "Reconhecer/nomear figuras geométricas espaciais (prismas, pirâmides, cilindros, cones ou esferas)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "prisma",
+     "rotulo": "prismas e blocos retangulares",
+     "palavras_chave": [
+      "prisma|bloco|paralelepiped|\\bcubo|caixa"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 4
+    },
+    {
+     "id": "piramide",
+     "rotulo": "pirâmides",
+     "palavras_chave": [
+      "piramide"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "cilindro",
+     "rotulo": "cilindros",
+     "palavras_chave": [
+      "cilindr|lata|tambor|cano"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "cone",
+     "rotulo": "cones",
+     "palavras_chave": [
+      "\\bcone"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "esfera",
+     "rotulo": "esferas",
+     "palavras_chave": [
+      "esfera|bola"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 3
+    }
+   ],
+   "n_itens_db": 8,
+   "conceitual": true,
+   "estruturas": [
+    "verdadeiro_falso_implicito",
+    "identificacao_propriedade",
+    "comparacao",
+    "problema_contextualizado",
+    "pergunta_direta"
+   ],
+   "n_sem_subtema_db": 0
+  },
+  "5º|H13": {
+   "ano": "5º",
+   "habilidade": "H13",
+   "descricoes": [
+    "Relacionar figuras geométricas espaciais (prismas retos, pirâmides retas, cilindros retos ou cones retos) a suas planificações."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "conversao_representacao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "prisma",
+     "rotulo": "prismas e blocos retangulares",
+     "palavras_chave": [
+      "prisma|bloco|paralelepiped|\\bcubo|caixa"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 7
+    },
+    {
+     "id": "piramide",
+     "rotulo": "pirâmides",
+     "palavras_chave": [
+      "piramide"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "cilindro",
+     "rotulo": "cilindros",
+     "palavras_chave": [
+      "cilindr|lata|tambor|cano"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "cone",
+     "rotulo": "cones",
+     "palavras_chave": [
+      "\\bcone"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "planificacao",
+     "rotulo": "planificações",
+     "palavras_chave": [
+      "planifica|molde"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "esfera",
+     "rotulo": "esferas",
+     "palavras_chave": [
+      "esfera|bola"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "conceitual": true,
+   "estruturas": [
+    "verdadeiro_falso_implicito",
+    "identificacao_propriedade",
+    "comparacao",
+    "problema_contextualizado",
+    "pergunta_direta"
+   ],
+   "n_sem_subtema_db": 0
+  },
+  "5º|H14": {
+   "ano": "5º",
+   "habilidade": "H14",
+   "descricoes": [
+    "Reconhecer/nomear figuras geométricas planas (polígonos, circunferência ou círculo)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "poligono",
+     "rotulo": "polígonos",
+     "palavras_chave": [
+      "poligon|pentagon|hexagon|octogon"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "circulo",
+     "rotulo": "círculo e circunferência",
+     "palavras_chave": [
+      "circul|circunferen|\\braio\\b|diametro"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "retangulo_quadrado",
+     "rotulo": "retângulos e quadrados",
+     "palavras_chave": [
+      "retangul|quadrado|comprimento e .{0,30}largura"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 5
+    },
+    {
+     "id": "triangulo",
+     "rotulo": "triângulos",
+     "palavras_chave": [
+      "triangul|isosceles|escaleno|equilater|acutangul|obtusangul"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "trapezio",
+     "rotulo": "trapézios",
+     "palavras_chave": [
+      "trapezi"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "conceitual": true,
+   "estruturas": [
+    "verdadeiro_falso_implicito",
+    "identificacao_propriedade",
+    "comparacao",
+    "problema_contextualizado",
+    "pergunta_direta"
+   ],
+   "n_sem_subtema_db": 0
+  },
+  "5º|H15": {
+   "ano": "5º",
+   "habilidade": "H15",
+   "descricoes": [
+    "Medir OU Comparar perímetro de figuras planas desenhadas em malha quadriculada."
+   ],
+   "objetos_portadores": [
+    "perímetro"
+   ],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "comparacao"
+   ],
+   "subtemas": [
+    {
+     "id": "retangulo_quadrado",
+     "rotulo": "retângulos e quadrados",
+     "palavras_chave": [
+      "retangul|quadrado|comprimento e .{0,30}largura"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "comparacao"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "triangulo",
+     "rotulo": "triângulos",
+     "palavras_chave": [
+      "triangul|isosceles|escaleno|equilater|acutangul|obtusangul"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "comparacao"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "trapezio",
+     "rotulo": "trapézios",
+     "palavras_chave": [
+      "trapezi"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "comparacao"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 6
+  },
+  "5º|H16": {
+   "ano": "5º",
+   "habilidade": "H16",
+   "descricoes": [
+    "Medir OU Comparar área de figuras planas desenhadas em malha quadriculada."
+   ],
+   "objetos_portadores": [
+    "área"
+   ],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "comparacao"
+   ],
+   "subtemas": [
+    {
+     "id": "retangulo_quadrado",
+     "rotulo": "retângulos e quadrados",
+     "palavras_chave": [
+      "retangul|quadrado|comprimento e .{0,30}largura"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "comparacao"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "triangulo",
+     "rotulo": "triângulos",
+     "palavras_chave": [
+      "triangul|isosceles|escaleno|equilater|acutangul|obtusangul"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "comparacao"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "trapezio",
+     "rotulo": "trapézios",
+     "palavras_chave": [
+      "trapezi"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "comparacao"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 6
+  },
+  "5º|H17": {
+   "ano": "5º",
+   "habilidade": "H17",
+   "descricoes": [
+    "Identificar horas em relógios analógicos OU Associar horas em relógios analógicos e digitais."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "conversao_representacao"
+   ],
+   "subtemas": [
+    {
+     "id": "relogio_analogico",
+     "rotulo": "horas em relógio analógico",
+     "palavras_chave": [
+      "analogic|ponteiro"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "relogio_digital",
+     "rotulo": "horas em relógio digital",
+     "palavras_chave": [
+      "digital|\\d{1,2}:\\d{2}|\\d{1,2}h\\d{2}"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 4
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 3
+  },
+  "5º|H18": {
+   "ano": "5º",
+   "habilidade": "H18",
+   "descricoes": [
+    "Determinar o horário de início, o horário de término ou a duração de um acontecimento."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "horario_inicio",
+     "rotulo": "horário de início",
+     "palavras_chave": [
+      "comec|inici|saiu|partiu"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 5
+    },
+    {
+     "id": "horario_termino",
+     "rotulo": "horário de término",
+     "palavras_chave": [
+      "termin|acab|chegou|fim"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "duracao",
+     "rotulo": "duração",
+     "palavras_chave": [
+      "dur(ou|a|acao)|quanto tempo|levou"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 1
+  },
+  "5º|H19": {
+   "ano": "5º",
+   "habilidade": "H19",
+   "descricoes": [
+    "Relacionar valores de moedas e/ou cédulas do sistema monetário brasileiro, com base nas imagens desses objetos."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "multiplas_etapas",
+    "conversao_representacao"
+   ],
+   "subtemas": [
+    {
+     "id": "moedas",
+     "rotulo": "moedas",
+     "palavras_chave": [
+      "moeda|centavo"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "cedulas",
+     "rotulo": "cédulas",
+     "palavras_chave": [
+      "cedula|nota de|notas de"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 2
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 3
+  },
+  "5º|H20": {
+   "ano": "5º",
+   "habilidade": "H20",
+   "descricoes": [
+    "Identificar, entre eventos aleatórios, aqueles que têm menor, maior ou iguais chances de ocorrência, sem utilizar frações."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "comparacao"
+   ],
+   "subtemas": [
+    {
+     "id": "chance_maior_menor",
+     "rotulo": "eventos com maior/menor chance",
+     "palavras_chave": [
+      "mais (chance|provavel)|menos (chance|provavel)|maior chance|menor chance|qual (e )?a chance|chance de"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao"
+     ],
+     "n_exemplos_db": 7
+    },
+    {
+     "id": "chance_igual",
+     "rotulo": "eventos com chances iguais",
+     "palavras_chave": [
+      "mesma chance|iguais chances|igualmente|equiprovav"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 1
+  },
+  "5º|H21": {
+   "ano": "5º",
+   "habilidade": "H21",
+   "descricoes": [
+    "Ler/Identificar OU Comparar dados estatísticos expressos em tabelas (simples ou de dupla entrada)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "comparacao",
+    "leitura_dados"
+   ],
+   "subtemas": [
+    {
+     "id": "tabela_dupla",
+     "rotulo": "tabela de dupla entrada",
+     "palavras_chave": [
+      "dupla entrada|linhas? e colunas?"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "tabela_simples",
+     "rotulo": "tabela simples",
+     "palavras_chave": [
+      "tabela"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 6
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 2
+  },
+  "5º|H22": {
+   "ano": "5º",
+   "habilidade": "H22",
+   "descricoes": [
+    "Ler/Identificar OU Comparar dados estatísticos expressos em gráficos (barras simples ou agrupadas, colunas simples ou agrupadas, pictóricos, ou de linhas)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "comparacao",
+    "leitura_dados"
+   ],
+   "subtemas": [
+    {
+     "id": "grafico_barras",
+     "rotulo": "gráfico de barras",
+     "palavras_chave": [
+      "barra"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_colunas",
+     "rotulo": "gráfico de colunas",
+     "palavras_chave": [
+      "coluna"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_pictorico",
+     "rotulo": "gráfico pictórico",
+     "palavras_chave": [
+      "pictoric|cada (simbolo|figura|desenho) (vale|representa)"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_linhas",
+     "rotulo": "gráfico de linhas",
+     "palavras_chave": [
+      "grafico de linha|linha"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "comparacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 8
+  },
+  "9º|H01": {
+   "ano": "9º",
+   "habilidade": "H01",
+   "descricoes": [
+    "Escrever números racionais (representação fracionária ou decimal finita) em sua representação por algarismos ou em língua materna OU Associar o registro numérico ao registro em língua materna."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "conversao_representacao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "fracao",
+     "rotulo": "frações",
+     "palavras_chave": [
+      "frac|/\\d|metade|terco|quarto|partes iguais"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "decimal",
+     "rotulo": "números decimais",
+     "palavras_chave": [
+      "\\d,\\d|decima"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "registro_algarismos",
+     "rotulo": "registro por algarismos",
+     "palavras_chave": [
+      "algarismo|\\d"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 8
+    },
+    {
+     "id": "registro_lingua_materna",
+     "rotulo": "registro por extenso",
+     "palavras_chave": [
+      "por extenso|escrito|escreve|le-se"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H02": {
+   "ano": "9º",
+   "habilidade": "H02",
+   "descricoes": [
+    "Resolver problemas de adição, subtração, multiplicação, divisão, potenciação ou radiciação envolvendo números reais, inclusive notação científica."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 5
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "multiplicacao",
+     "rotulo": "multiplicação",
+     "palavras_chave": [
+      "multiplic|vezes|produto|\\bx\\b|×|\\bcada\\b[^?]*\\b(ao todo|no total|total)\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "divisao",
+     "rotulo": "divisão",
+     "palavras_chave": [
+      "divi|reparti|÷|igualmente|\\bcada\\b[^\\d.?!]*\\?"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "potenciacao",
+     "rotulo": "potenciação",
+     "palavras_chave": [
+      "potencia|\\^|ao quadrado|ao cubo|expoente"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "radiciacao",
+     "rotulo": "radiciação",
+     "palavras_chave": [
+      "raiz|radic|√"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "notacao_cientifica",
+     "rotulo": "notação científica",
+     "palavras_chave": [
+      "notacao cientifica|x ?10\\^|10 elevado"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H03": {
+   "ano": "9º",
+   "habilidade": "H03",
+   "descricoes": [
+    "Porcentagem, acréscimos, decréscimos e taxas sucessivas.",
+    "Resolver problemas que envolvam porcentagens, incluindo os que lidam com acréscimos e decréscimos simples, aplicação de percentuais sucessivos e a determinação das taxas percentuais"
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "porcentagem",
+     "rotulo": "porcentagem",
+     "palavras_chave": [
+      "%|porcent|por cento"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 4
+    },
+    {
+     "id": "acrescimo",
+     "rotulo": "acréscimos",
+     "palavras_chave": [
+      "acrescim|aument|reajust|juros"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "decrescimo",
+     "rotulo": "decréscimos (descontos)",
+     "palavras_chave": [
+      "desconto|reduc|diminu|decresc"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "taxas_sucessivas",
+     "rotulo": "percentuais sucessivos",
+     "palavras_chave": [
+      "sucessiv|depois .*%|em seguida.*%"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "taxa_percentual",
+     "rotulo": "determinação de taxa percentual",
+     "palavras_chave": [
+      "qual (foi )?(a )?(taxa|porcentagem|percentual)"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H04": {
+   "ano": "9º",
+   "habilidade": "H04",
+   "descricoes": [
+    "Comparar OU Ordenar números reais, com ou sem suporte da reta numérica ou Aproximar números reais para múltiplos da potência de 10 mais próxima.",
+    "Comparar, ordenar ou aproximar números reais."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "comparacao",
+    "estimativa"
+   ],
+   "subtemas": [
+    {
+     "id": "geral",
+     "rotulo": "comparar ou ordenar numeros reais, com ou sem suporte da reta numerica ou aproximar numeros reais para multiplos da potencia de 10 mais proxima",
+     "palavras_chave": [
+      "."
+     ],
+     "origem": "descricao",
+     "tipos_raciocinio": [
+      "comparacao",
+      "estimativa"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H05": {
+   "ano": "9º",
+   "habilidade": "H05",
+   "descricoes": [
+    "Múltiplos, divisores, MDC e MMC.",
+    "Resolver problemas que envolvam as ideias de múltiplo, divisor, máximo divisor comum ou mínimo múltiplo comum."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "multiplo",
+     "rotulo": "múltiplos",
+     "palavras_chave": [
+      "multiplo"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "divisor",
+     "rotulo": "divisores",
+     "palavras_chave": [
+      "divisor|divisivel"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "mdc",
+     "rotulo": "máximo divisor comum",
+     "palavras_chave": [
+      "mdc|maior divisor|maximo divisor|maior numero possivel|mesmo tamanho"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "mmc",
+     "rotulo": "mínimo múltiplo comum",
+     "palavras_chave": [
+      "mmc|menor multiplo|minimo multiplo|novamente juntos|ao mesmo tempo"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 5
+  },
+  "9º|H06": {
+   "ano": "9º",
+   "habilidade": "H06",
+   "descricoes": [
+    "Calcular o resultado de adições, subtrações, multiplicações ou divisões envolvendo números reais.",
+    "Cálculo com números reais: adição, subtração, multiplicação e divisão."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "adicao",
+     "rotulo": "adição",
+     "palavras_chave": [
+      "adic|som[ae]|\\+|mais|total|junt"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "subtracao",
+     "rotulo": "subtração",
+     "palavras_chave": [
+      "subtra|diferen|\\-|menos|rest|sobr"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 4
+    },
+    {
+     "id": "multiplicacao",
+     "rotulo": "multiplicação",
+     "palavras_chave": [
+      "multiplic|vezes|produto|\\bx\\b|×|\\bcada\\b[^?]*\\b(ao todo|no total|total)\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "divisao",
+     "rotulo": "divisão",
+     "palavras_chave": [
+      "divi|reparti|÷|igualmente|\\bcada\\b[^\\d.?!]*\\?"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H07": {
+   "ano": "9º",
+   "habilidade": "H07",
+   "descricoes": [
+    "Representar frações menores ou maiores que a unidade por meio de representações pictóricas OU Associar frações a representações pictóricas.",
+    "Representar ou associar frações a representações pictóricas."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "comparacao",
+    "conversao_representacao"
+   ],
+   "subtemas": [
+    {
+     "id": "fracao",
+     "rotulo": "frações",
+     "palavras_chave": [
+      "frac|/\\d|metade|terco|quarto|partes iguais"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "comparacao",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H08": {
+   "ano": "9º",
+   "habilidade": "H08",
+   "descricoes": [
+    "Identificar frações equivalentes."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "fracao",
+     "rotulo": "frações",
+     "palavras_chave": [
+      "frac|/\\d|metade|terco|quarto|partes iguais"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H09": {
+   "ano": "9º",
+   "habilidade": "H09",
+   "descricoes": [
+    "Converter entre representações de números racionais positivos (frações, decimais, porcentagens)",
+    "Converter uma representação de um número racional positivo para outra representação."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "conversao_representacao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "fracao",
+     "rotulo": "frações",
+     "palavras_chave": [
+      "frac|/\\d|metade|terco|quarto|partes iguais"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 6
+    },
+    {
+     "id": "decimal",
+     "rotulo": "números decimais",
+     "palavras_chave": [
+      "\\d,\\d|decima"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "porcentagem",
+     "rotulo": "porcentagem",
+     "palavras_chave": [
+      "%|porcent|por cento"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H10": {
+   "ano": "9º",
+   "habilidade": "H10",
+   "descricoes": [
+    "Resolver uma equação polinomial de 1º grau."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso"
+   ],
+   "subtemas": [
+    {
+     "id": "equacao",
+     "rotulo": "equações de 1º grau",
+     "palavras_chave": [
+      "equac|=|incognita|\\bx\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso"
+     ],
+     "n_exemplos_db": 6
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 2
+  },
+  "9º|H11": {
+   "ano": "9º",
+   "habilidade": "H11",
+   "descricoes": [
+    "Inferir equações, inequações ou sistemas de 1º grau que representam situações-problema",
+    "Inferir uma equação, inequação polinomial de 1º grau ou um sistema de equações de 1º grau com duas incógnitas que modela um problema."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas",
+    "conversao_representacao",
+    "inferencia_padrao"
+   ],
+   "subtemas": [
+    {
+     "id": "equacao",
+     "rotulo": "equações de 1º grau",
+     "palavras_chave": [
+      "equac|=|incognita|\\bx\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 8
+    },
+    {
+     "id": "inequacao",
+     "rotulo": "inequações de 1º grau",
+     "palavras_chave": [
+      "inequac|<|>|no minimo|no maximo|pelo menos"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "sistema",
+     "rotulo": "sistemas de equações",
+     "palavras_chave": [
+      "sistema|duas incognitas|\\bx\\b.*\\by\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao",
+      "inferencia_padrao"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H12": {
+   "ano": "9º",
+   "habilidade": "H12",
+   "descricoes": [
+    "Cálculo do valor numérico de expressões algébricas",
+    "Resolver problemas que envolvam cálculo do valor numérico de expressões algébricas."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "geral",
+     "rotulo": "calculo do valor numerico de expressoes algebricas",
+     "palavras_chave": [
+      "."
+     ],
+     "origem": "descricao",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 8
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H13": {
+   "ano": "9º",
+   "habilidade": "H13",
+   "descricoes": [
+    "Resolver problemas com sistemas de equações de 1º grau (duas incógnitas)",
+    "Resolver problemas que possam ser representados por sistema de equações de 1º grau com duas incógnitas."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas",
+    "conversao_representacao"
+   ],
+   "subtemas": [
+    {
+     "id": "equacao",
+     "rotulo": "equações de 1º grau",
+     "palavras_chave": [
+      "equac|=|incognita|\\bx\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "sistema",
+     "rotulo": "sistemas de equações",
+     "palavras_chave": [
+      "sistema|duas incognitas|\\bx\\b.*\\by\\b"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 7
+  },
+  "9º|H14": {
+   "ano": "9º",
+   "habilidade": "H14",
+   "descricoes": [
+    "Relacionar objetos tridimensionais às suas planificações ou vistas."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "conversao_representacao",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "planificacao",
+     "rotulo": "planificações",
+     "palavras_chave": [
+      "planifica|molde"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "vistas",
+     "rotulo": "vistas",
+     "palavras_chave": [
+      "vista (frontal|lateral|superior|de cima)"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "prisma",
+     "rotulo": "prismas e blocos retangulares",
+     "palavras_chave": [
+      "prisma|bloco|paralelepiped|\\bcubo|caixa"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "piramide",
+     "rotulo": "pirâmides",
+     "palavras_chave": [
+      "piramide"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "cilindro",
+     "rotulo": "cilindros",
+     "palavras_chave": [
+      "cilindr|lata|tambor|cano"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "cone",
+     "rotulo": "cones",
+     "palavras_chave": [
+      "\\bcone"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "esfera",
+     "rotulo": "esferas",
+     "palavras_chave": [
+      "esfera|bola"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 5,
+   "conceitual": true,
+   "estruturas": [
+    "verdadeiro_falso_implicito",
+    "identificacao_propriedade",
+    "comparacao",
+    "problema_contextualizado",
+    "pergunta_direta"
+   ],
+   "n_sem_subtema_db": 0
+  },
+  "9º|H15": {
+   "ano": "9º",
+   "habilidade": "H15",
+   "descricoes": [
+    "Ângulos em polígonos, retas paralelas e elementos notáveis (cevianas)."
+   ],
+   "objetos_portadores": [
+    "polígonos"
+   ],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "angulos_poligonos",
+     "rotulo": "ângulos em polígonos",
+     "palavras_chave": [
+      "angul.*poligon|poligon.*angul"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "retas_paralelas",
+     "rotulo": "retas paralelas e transversal",
+     "palavras_chave": [
+      "paralel|transversal"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "cevianas",
+     "rotulo": "elementos notáveis (cevianas)",
+     "palavras_chave": [
+      "mediana|bissetriz|altura|ceviana"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    }
+   ],
+   "n_itens_db": 5,
+   "n_sem_subtema_db": 2
+  },
+  "9º|H16": {
+   "ano": "9º",
+   "habilidade": "H16",
+   "descricoes": [
+    "Identificar propriedades e relações existentes entre os elementos de um triângulo (condição de existência, relações de ordem entre as medidas dos lados e as medidas dos ângulos internos, soma dos ângulos internos, determinar medida de um ângulo interno ou externo).",
+    "Propriedades dos triângulos."
+   ],
+   "objetos_portadores": [
+    "triângulos"
+   ],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "identificacao",
+    "calculo_medida",
+    "verificacao_propriedade"
+   ],
+   "subtemas": [
+    {
+     "id": "condicao_existencia",
+     "rotulo": "condição de existência do triângulo",
+     "palavras_chave": [
+      "exist|possivel (formar|construir|montar)|desigualdade triangular|nao (e possivel|forma)|possa(m)? ser (construid|formad|montad)|pode(m)? (formar|construir|montar)"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "calculo_medida",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "relacao_lados_angulos",
+     "rotulo": "relação entre lados e ângulos opostos",
+     "palavras_chave": [
+      "maior lado|menor lado|oposto|maior angulo|menor angulo"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "calculo_medida",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "soma_angulos_internos",
+     "rotulo": "soma dos ângulos internos",
+     "palavras_chave": [
+      "soma dos angulos|180|terceiro angulo"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "calculo_medida",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "angulo_interno_medida",
+     "rotulo": "medida de ângulo interno",
+     "palavras_chave": [
+      "medida do angulo|quanto mede|valor de x|angulo \\w+ mede"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "calculo_medida",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "angulo_externo",
+     "rotulo": "ângulo externo",
+     "palavras_chave": [
+      "extern"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "identificacao",
+      "calculo_medida",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 3
+  },
+  "9º|H17": {
+   "ano": "9º",
+   "habilidade": "H17",
+   "descricoes": [
+    "Classificar triângulos ou quadriláteros em relação aos lados ou aos ângulos internos.",
+    "Classificação de triângulos e quadriláteros quanto aos lados ou ângulos."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "classificacao_lados",
+    "classificacao_angulos",
+    "classificacao_propriedades"
+   ],
+   "subtemas": [
+    {
+     "id": "triangulo",
+     "rotulo": "triângulos",
+     "palavras_chave": [
+      "triangul|isosceles|escaleno|equilater|acutangul|obtusangul"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "classificacao_lados",
+      "classificacao_angulos"
+     ],
+     "n_exemplos_db": 4
+    },
+    {
+     "id": "quadrilatero",
+     "rotulo": "quadriláteros",
+     "palavras_chave": [
+      "quadrilater|quadrado|retangul|losango|trapezio|paralelogramo"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "classificacao_propriedades"
+     ],
+     "n_exemplos_db": 3
+    }
+   ],
+   "n_itens_db": 7,
+   "conceitual": true,
+   "estruturas": [
+    "verdadeiro_falso_implicito",
+    "identificacao_propriedade",
+    "comparacao",
+    "problema_contextualizado",
+    "pergunta_direta"
+   ],
+   "n_sem_subtema_db": 0
+  },
+  "9º|H18": {
+   "ano": "9º",
+   "habilidade": "H18",
+   "descricoes": [
+    "Elementos da circunferência e do círculo",
+    "Resolver problemas que envolvam relações entre os elementos de uma circunferência/círculo (raio, diâmetro, corda, arco, ângulo central, ângulo inscrito)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas",
+    "verificacao_propriedade"
+   ],
+   "subtemas": [
+    {
+     "id": "raio_diametro",
+     "rotulo": "raio e diâmetro",
+     "palavras_chave": [
+      "\\braio\\b|diametro"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 6
+    },
+    {
+     "id": "corda",
+     "rotulo": "corda",
+     "palavras_chave": [
+      "\\bcorda"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "arco",
+     "rotulo": "arco",
+     "palavras_chave": [
+      "\\barco"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "angulo_central_inscrito",
+     "rotulo": "ângulo central e ângulo inscrito",
+     "palavras_chave": [
+      "angulo (central|inscrito)"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "verificacao_propriedade"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 7,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H19": {
+   "ano": "9º",
+   "habilidade": "H19",
+   "descricoes": [
+    "Medidas e conversão de unidades",
+    "Resolver problemas que envolvam medidas de grandezas (comprimento, massa, tempo, temperatura, capacidade ou volume) em que haja conversões entre unidades mais usuais."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas",
+    "conversao_representacao"
+   ],
+   "subtemas": [
+    {
+     "id": "comprimento",
+     "rotulo": "medidas de comprimento",
+     "palavras_chave": [
+      "\\d\\s*(km|cm|mm|m)\\b|metro|centimetro|comprimento|altura|distancia"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "massa",
+     "rotulo": "medidas de massa",
+     "palavras_chave": [
+      "\\d\\s*(kg|g|mg|t)\\b|quilo|grama|massa|pes[ao]"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "capacidade",
+     "rotulo": "medidas de capacidade",
+     "palavras_chave": [
+      "\\d\\s*(l|ml)\\b|litro|mililitro|capacidade"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "tempo_medida",
+     "rotulo": "medidas de tempo",
+     "palavras_chave": [
+      "hora|minuto|segundo|\\bdias?\\b|semana"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "temperatura",
+     "rotulo": "temperatura",
+     "palavras_chave": [
+      "temperatura|grau"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "volume_medida",
+     "rotulo": "volume",
+     "palavras_chave": [
+      "volume|cm3|m3|cubic"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "conversao_representacao"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H20": {
+   "ano": "9º",
+   "habilidade": "H20",
+   "descricoes": [
+    "Perímetro de figuras planas.",
+    "Resolver problemas que envolvam perímetro de figuras planas."
+   ],
+   "objetos_portadores": [
+    "perímetro"
+   ],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "retangulo_quadrado",
+     "rotulo": "retângulos e quadrados",
+     "palavras_chave": [
+      "retangul|quadrado|comprimento e .{0,30}largura"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "triangulo",
+     "rotulo": "triângulos",
+     "palavras_chave": [
+      "triangul|isosceles|escaleno|equilater|acutangul|obtusangul"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "trapezio",
+     "rotulo": "trapézios",
+     "palavras_chave": [
+      "trapezi"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "circulo",
+     "rotulo": "círculo e circunferência",
+     "palavras_chave": [
+      "circul|circunferen|\\braio\\b|diametro"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "poligono",
+     "rotulo": "polígonos",
+     "palavras_chave": [
+      "poligon|pentagon|hexagon|octogon"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H21": {
+   "ano": "9º",
+   "habilidade": "H21",
+   "descricoes": [
+    "Resolver problemas que envolvam área de figuras planas.",
+    "Área de figuras planas"
+   ],
+   "objetos_portadores": [
+    "área"
+   ],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "retangulo_quadrado",
+     "rotulo": "retângulos e quadrados",
+     "palavras_chave": [
+      "retangul|quadrado|comprimento e .{0,30}largura"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "triangulo",
+     "rotulo": "triângulos",
+     "palavras_chave": [
+      "triangul|isosceles|escaleno|equilater|acutangul|obtusangul"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "trapezio",
+     "rotulo": "trapézios",
+     "palavras_chave": [
+      "trapezi"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "circulo",
+     "rotulo": "círculo e circunferência",
+     "palavras_chave": [
+      "circul|circunferen|\\braio\\b|diametro"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "poligono",
+     "rotulo": "polígonos",
+     "palavras_chave": [
+      "poligon|pentagon|hexagon|octogon"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 1
+  },
+  "9º|H22": {
+   "ano": "9º",
+   "habilidade": "H22",
+   "descricoes": [
+    "Resolver problemas que envolvam volume de prismas retos ou cilindros retos.",
+    "Volume de prismas retos e cilindros retos"
+   ],
+   "objetos_portadores": [
+    "volume"
+   ],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "prisma",
+     "rotulo": "prismas e blocos retangulares",
+     "palavras_chave": [
+      "prisma|bloco|paralelepiped|\\bcubo|caixa"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 7
+    },
+    {
+     "id": "cilindro",
+     "rotulo": "cilindros",
+     "palavras_chave": [
+      "cilindr|lata|tambor|cano"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H23": {
+   "ano": "9º",
+   "habilidade": "H23",
+   "descricoes": [
+    "Leitura e interpretação de tabelas e gráficos.",
+    "Resolver problemas que envolvam dados estatísticos apresentados em tabelas (simples ou de dupla entrada) ou gráficos (barras simples ou agrupadas, colunas simples ou agrupadas, pictóricos, de linhas, de setores ou em histograma)."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas",
+    "leitura_dados"
+   ],
+   "subtemas": [
+    {
+     "id": "tabela_simples",
+     "rotulo": "tabela simples",
+     "palavras_chave": [
+      "tabela"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 4
+    },
+    {
+     "id": "grafico_barras",
+     "rotulo": "gráfico de barras",
+     "palavras_chave": [
+      "barra"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_colunas",
+     "rotulo": "gráfico de colunas",
+     "palavras_chave": [
+      "coluna"
+     ],
+     "origem": "hiperonimo",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "tabela_dupla",
+     "rotulo": "tabela de dupla entrada",
+     "palavras_chave": [
+      "dupla entrada|linhas? e colunas?"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_pictorico",
+     "rotulo": "gráfico pictórico",
+     "palavras_chave": [
+      "pictoric|cada (simbolo|figura|desenho) (vale|representa)"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_linhas",
+     "rotulo": "gráfico de linhas",
+     "palavras_chave": [
+      "grafico de linha|linha"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_setores",
+     "rotulo": "gráfico de setores",
+     "palavras_chave": [
+      "setor|pizza"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "histograma",
+     "rotulo": "histograma",
+     "palavras_chave": [
+      "histograma|intervalo|classe"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    }
+   ],
+   "n_itens_db": 7,
+   "n_sem_subtema_db": 2
+  },
+  "9º|H24": {
+   "ano": "9º",
+   "habilidade": "H24",
+   "descricoes": [
+    "Representar OU Associar os dados de uma pesquisa estatística ou de um levantamento em listas, tabelas (simples ou de dupla entrada) ou gráficos (barras simples ou agrupadas, colunas simples ou agrupadas, pictóricos, de linhas, de setores, ou em histograma).",
+    "Representar dados em listas, tabelas ou gráficos."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "conversao_representacao",
+    "leitura_dados"
+   ],
+   "subtemas": [
+    {
+     "id": "tabela_dupla",
+     "rotulo": "tabela de dupla entrada",
+     "palavras_chave": [
+      "dupla entrada|linhas? e colunas?"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_barras",
+     "rotulo": "gráfico de barras",
+     "palavras_chave": [
+      "barra"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 1
+    },
+    {
+     "id": "grafico_colunas",
+     "rotulo": "gráfico de colunas",
+     "palavras_chave": [
+      "coluna"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "grafico_pictorico",
+     "rotulo": "gráfico pictórico",
+     "palavras_chave": [
+      "pictoric|cada (simbolo|figura|desenho) (vale|representa)"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_linhas",
+     "rotulo": "gráfico de linhas",
+     "palavras_chave": [
+      "grafico de linha|linha"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "grafico_setores",
+     "rotulo": "gráfico de setores",
+     "palavras_chave": [
+      "setor|pizza"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "histograma",
+     "rotulo": "histograma",
+     "palavras_chave": [
+      "histograma|intervalo|classe"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "tabela_simples",
+     "rotulo": "tabela simples",
+     "palavras_chave": [
+      "tabela"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "listas",
+     "rotulo": "listas",
+     "palavras_chave": [
+      "lista"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "conversao_representacao",
+      "leitura_dados"
+     ],
+     "n_exemplos_db": 2
+    }
+   ],
+   "n_itens_db": 7,
+   "n_sem_subtema_db": 0
+  },
+  "9º|H25": {
+   "ano": "9º",
+   "habilidade": "H25",
+   "descricoes": [
+    "Probabilidade de eventos aleatórios equiprováveis",
+    "Resolver problemas que envolvam a probabilidade de ocorrência de um resultado em eventos aleatórios equiprováveis independentes ou dependentes"
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "resolucao_problema",
+    "problema_inverso",
+    "multiplas_etapas"
+   ],
+   "subtemas": [
+    {
+     "id": "eventos_independentes",
+     "rotulo": "eventos independentes",
+     "palavras_chave": [
+      "independen|com reposicao|lanca.*e.*lanca"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 0
+    },
+    {
+     "id": "eventos_dependentes",
+     "rotulo": "eventos dependentes",
+     "palavras_chave": [
+      "\\bdependen|sem reposicao|retira.*depois"
+     ],
+     "origem": "lexico",
+     "tipos_raciocinio": [
+      "resolucao_problema",
+      "problema_inverso",
+      "multiplas_etapas"
+     ],
+     "n_exemplos_db": 1
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 7
+  },
+  "9º|H26": {
+   "ano": "9º",
+   "habilidade": "H26",
+   "descricoes": [
+    "Calcular os valores de medidas de tendência central de uma pesquisa estatística (média aritmética simples, moda ou mediana).",
+    "Média, moda e mediana."
+   ],
+   "objetos_portadores": [],
+   "graus_resolucao": [
+    "Difícil",
+    "Fácil",
+    "Moderado"
+   ],
+   "tipos_raciocinio": [
+    "calculo_medida",
+    "identificacao",
+    "resolucao_problema"
+   ],
+   "subtemas": [
+    {
+     "id": "media",
+     "rotulo": "média aritmética",
+     "palavras_chave": [
+      "\\bmedia\\b"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 3
+    },
+    {
+     "id": "moda",
+     "rotulo": "moda",
+     "palavras_chave": [
+      "\\bmoda\\b|mais frequente"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 2
+    },
+    {
+     "id": "mediana",
+     "rotulo": "mediana",
+     "palavras_chave": [
+      "mediana|valor central"
+     ],
+     "origem": "enumeracao",
+     "tipos_raciocinio": [
+      "calculo_medida",
+      "identificacao",
+      "resolucao_problema"
+     ],
+     "n_exemplos_db": 3
+    }
+   ],
+   "n_itens_db": 8,
+   "n_sem_subtema_db": 0
+  }
+ }
+}

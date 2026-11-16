@@ -1,0 +1,68 @@
+{
+  "nota": "Os mesmos 5 criterios sao usados pelo G-Eval e pelos professores, com a mesma redacao. Todos avaliam o item como o professor o veria: enunciado, alternativas, resolucao e gabarito.",
+  "criterios": [
+    {
+      "id": "intencao_uso",
+      "tipo": "likert_1a5",
+      "principal": true,
+      "pergunta_professor": "Eu usaria esta questao em sala de aula, no maximo com pequenos ajustes. (1 = discordo totalmente, 5 = concordo totalmente)",
+      "criterio_geval": "Avalie se um professor de matematica do ano indicado usaria esta questao em sala de aula, no maximo com pequenos ajustes. Considere: a matematica esta correta e o gabarito confere; ha uma unica alternativa correta; o enunciado traz todos os dados necessarios e a linguagem e clara e adequada a idade; a questao trabalha a habilidade pedida; o contexto e plausivel. Erro matematico, gabarito errado ou mais de uma alternativa correta tornam a questao inutilizavel (nota baixa).",
+      "passos_geval": [
+        "Leia o enunciado e resolva a questão você mesmo, sem olhar a resolução.",
+        "Compare com a resolução e o gabarito. Se houver erro matemático, se o gabarito não for a alternativa com o resultado correto ou se o resultado correto não estiver entre as alternativas, a nota deve ser no máximo 2.",
+        "Verifique se existe mais de uma alternativa correta ou nenhuma. Em qualquer dos casos, a nota deve ser no máximo 2.",
+        "Verifique se o enunciado traz todos os dados, com linguagem clara e adequada ao ano, e se o contexto é plausível. Problemas leves de clareza reduzem a nota; falta de dados essenciais limita a nota a no máximo 4.",
+        "Dê nota 9 ou 10 apenas se um professor usaria a questão em sala sem alterações; 7 ou 8 se usaria com pequenos ajustes."
+      ]
+    },
+    {
+      "id": "correcao_matematica",
+      "tipo": "binario",
+      "pergunta_professor": "A matematica da resolucao esta correta e o gabarito confere com ela? (s/n)",
+      "criterio_geval": "Refaca voce mesmo o calculo do enunciado. A resolucao esta matematicamente correta, a alternativa indicada como gabarito corresponde ao resultado correto e esse resultado aparece entre as alternativas? Nota alta somente se tudo confere.",
+      "passos_geval": [
+        "Recalcule você mesmo o resultado correto a partir do enunciado, sem olhar a resolução.",
+        "Compare com a resolução. Se houver erro de cálculo ou de raciocínio, a nota deve ser no máximo 2.",
+        "Verifique se o resultado correto aparece entre as alternativas A a E. Se não aparecer, a nota deve ser no máximo 2.",
+        "Verifique se a letra do Gabarito é a da alternativa com o resultado correto. Se for outra letra, a nota deve ser no máximo 2.",
+        "Dê nota 9 ou 10 somente se todas as verificações acima conferem."
+      ]
+    },
+    {
+      "id": "resposta_unica",
+      "tipo": "binario",
+      "pergunta_professor": "Existe exatamente uma alternativa correta? (s/n)",
+      "criterio_geval": "Verifique cada alternativa A a E. Existe exatamente uma alternativa correta? Nota alta somente se uma, e apenas uma, alternativa responde corretamente ao enunciado; nota baixa se nenhuma ou mais de uma servir.",
+      "passos_geval": [
+        "Resolva a questão você mesmo e identifique o resultado correto.",
+        "Examine cada alternativa de A a E e conte quantas respondem corretamente ao enunciado.",
+        "Se nenhuma ou mais de uma alternativa estiver correta, a nota deve ser no máximo 2.",
+        "Dê nota 9 ou 10 somente se exatamente uma alternativa estiver correta."
+      ]
+    },
+    {
+      "id": "dados_suficientes",
+      "tipo": "binario",
+      "pergunta_professor": "O enunciado traz todos os dados necessarios, sem depender de figura, grafico ou imagem ausente? (s/n)",
+      "criterio_geval": "O enunciado contem todos os dados necessarios para resolver a questao, sem depender de figura, grafico ou imagem que nao esta no texto, e sem ambiguidade que impeca a resolucao? Nota alta somente se a questao e resolvivel apenas com o texto.",
+      "passos_geval": [
+        "Liste os dados de que a resolução precisa.",
+        "Verifique se cada dado aparece no enunciado em texto. Se algum dado essencial faltar, ou depender de figura, gráfico ou imagem não presente, a nota deve ser no máximo 2.",
+        "Verifique se há ambiguidade que impeça uma resolução única. Se houver, a nota deve ser no máximo 4.",
+        "Dê nota 9 ou 10 somente se a questão é resolvível apenas com o texto fornecido."
+      ]
+    },
+    {
+      "id": "aderencia_ano_habilidade",
+      "tipo": "binario",
+      "pergunta_professor": "A questao trabalha a habilidade indicada e e adequada ao ano indicado? (s/n)",
+      "criterio_geval": "A questao exige a habilidade descrita na entrada e o nivel de vocabulario, numeros e raciocinio e adequado ao ano escolar indicado? Nota alta somente se a habilidade pedida e a efetivamente exigida e o nivel condiz com o ano.",
+      "passos_geval": [
+        "Identifique qual habilidade a questão realmente exige para ser resolvida.",
+        "Compare com a habilidade descrita na entrada. Se a questão exigir outra habilidade ou operação diferente da descrita, a nota deve ser no máximo 2.",
+        "Verifique se números, vocabulário e raciocínio são adequados ao ano escolar indicado. Se estiverem claramente acima ou abaixo, a nota deve ser no máximo 4.",
+        "Dê nota 9 ou 10 somente se a habilidade exigida é a pedida e o nível condiz com o ano."
+      ]
+    }
+  ]
+}
