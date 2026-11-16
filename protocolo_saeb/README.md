@@ -1,6 +1,6 @@
 # Protocolo de avaliação de questões geradas (SAEB, 1º/5º/9º ano)
 
-Gera **20 questões por célula (ano × habilidade de operação; 8 células = 160 questões)** com o modelo do repositório `qwen3-4b-questoes-matematica`, avalia com **G-Eval (DeepEval)**
+Gera **40 questões por ano (1º, 5º e 9º; 8 células de ano × habilidade de operação = 120 questões)** com o modelo do repositório `qwen3-4b-questoes-matematica`, avalia com **G-Eval (DeepEval)**
 e prepara a **revisão por professores**. Desenho e justificativas: [PROTOCOLO.md](PROTOCOLO.md).
 
 ```
@@ -12,6 +12,7 @@ scripts/02_checar_estrutura.py   checagens determinísticas (sem LLM)
 scripts/03_geval.py          G-Eval, um metric por critério → dados/avaliacao_auto/geval.jsonl
 scripts/04_amostra_humana.py amostra cega + planilhas dos professores → dados/humana/
 scripts/05_analisar.py       estatísticas → resultados/resumo.{json,md}
+scripts/06_composicao.py     proporção por ano/habilidade → dados/geracoes/COMPOSICAO.md
 modelo/                  cópia fixa de prompt, gramática e taxonomia do app (ver ORIGEM.md)
 ```
 
@@ -49,4 +50,4 @@ make analisar                          # depois que as folhas voltarem preenchid
 ```
 
 Todos os passos retomam de onde pararam. `dados/humana/chave.csv` liga o código da planilha ao item e **não vai
-para os professores**. `00_verificar_ambiente.py` e `00_testar_juiz.py` não geram nem avaliam as 160 questões.
+para os professores**. `00_verificar_ambiente.py` e `00_testar_juiz.py` não geram nem avaliam as 120 questões.

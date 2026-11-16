@@ -30,7 +30,7 @@ test:             ## testes unitários
 servidor-gerador: ## llama-server com base + LoRA (fica em primeiro plano)
 	llama-server -m $(GGUF) --lora $(LORA) -c 2048 --port 8080 --threads 8
 
-gerar:            ## 160 questões (retoma se interrompido)
+gerar:            ## 120 questões (retoma se interrompido)
 	cd scripts && ../$(PY) 01_gerar.py --url $(GEN_URL) --modelo-info "$(MODELO_INFO)"
 
 estrutura:

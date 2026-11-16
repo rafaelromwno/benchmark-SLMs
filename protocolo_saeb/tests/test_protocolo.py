@@ -26,7 +26,10 @@ def test_faixas_do_artigo(score, nota):
 def test_config_consistente():
     assert len(CELULAS) == 8 and len(CRITERIOS) == 5
     assert [c["id"] for c in CRITERIOS if c.get("principal")] == ["intencao_uso"]
-    assert CONFIG["geracao"]["questoes_por_celula"] == 20
+    por_ano = {}
+    for c in CELULAS:
+        por_ano[c["ano"]] = por_ano.get(c["ano"], 0) + c["n"]
+    assert por_ano == {"1º": 40, "5º": 40, "9º": 40} and CONFIG["geracao"]["questoes_por_ano"] == 40
 
 
 def test_texto_item_traz_gabarito_e_alternativas():
@@ -44,10 +47,10 @@ def test_estrutura_valida_e_sinalizadores():
 
 def test_amostra_cobre_todas_as_celulas_sem_repetir():
     regs = [{"item_id": f"{c['ano']}-{c['habilidade']}-{i}", "ano": c["ano"], "habilidade": c["habilidade"]}
-            for c in CELULAS for i in range(20)]
+            for c in CELULAS for i in range(c["n"])]
     sel = amostra.sortear(regs, 20, random.Random(1))
-    assert len(sel) == 160 and len({r["item_id"] for r in sel}) == 160
-    assert len(amostra.sortear(regs, 5, random.Random(1))) == 40
+    assert len(sel) == 120 and len({r["item_id"] for r in sel}) == 120
+    assert len(amostra.sortear(regs, 5, random.Random(1))) == 40  # 8 células x 5
 
 
 def test_estatisticas_conhecidas():
@@ -70,7 +73,7 @@ def test_gerar_importa_e_usa_prompt_de_producao():
     tax = json.loads((gerar.APP / "taxonomia_subtemas.json").read_text(encoding="utf-8"))
     cels = list(gerar.celulas(tax))
     assert len(cels) == 8
-    ano, hab, desc, op = cels[0]
+    ano, hab, desc, op, n_celula = cels[0]
     slot = gerar.app.sortear_slot(tax, ano, hab, [], random.Random(1))
     prompt = gerar.app.montar_prompt(tax, ano, hab, desc, "Fácil", slot)
     assert prompt.startswith("Gere 1 questão(ões) de matemática. Ano: 1º ano. Habilidade: EF01MA06")

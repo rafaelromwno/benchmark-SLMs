@@ -10,7 +10,7 @@ Human-Automated Evaluation of Competency-Based Questions* (AIED 2026, CCIS 3032,
 |---|---|---|
 | 1 avaliador humano | **≥ 3 professores, cada item avaliado por 2** | O artigo lista isso como sua principal limitação (sem confiabilidade entre avaliadores, o r = 0,31 não se interpreta). Aqui o κ entre professores vira o teto de referência para o G-Eval. |
 | Só intenção de uso (Likert 1–5) | Intenção de uso **+ 4 critérios binários** (correção, resposta única, dados suficientes, aderência ano/habilidade) | O artigo mostra que o G-Eval erra justamente em correção e alinhamento de competência. Com critérios separados dá para dizer *onde* ele diverge. Intenção de uso continua o desfecho principal, para comparar com o artigo. |
-| 160 itens, 20–60 por competência | **8 células de operações × 20 = 160 itens, todos avaliados por professores**; inferência por ano e por grupo de operação, célula só descritiva | Mesmo tamanho do artigo, escopo igual (operações) e dupla avaliação. O artigo pede ≥ 50 por código; com 20 não há poder por célula e isso é declarado. |
+| 160 itens, 20–60 por competência | **120 itens (40 por ano), todos avaliados por professores**; inferência por ano e por grupo de operação, célula só descritiva | Mesmo tamanho do artigo, escopo igual (operações) e dupla avaliação. O artigo pede ≥ 50 por código; com 20 não há poder por célula e isso é declarado. |
 | Prompts empíricos escritos à mão | **Prompt de produção do app, sem alteração** (`modelo/cliente_llama_server.py`) | Mede o que o app entrega. Reprodutível por construção. |
 | Critério G-Eval diferente do que o professor vê | **Mesmo texto de critério, mesma entrada** para G-Eval e professores | Elimina a explicação "avaliaram coisas diferentes". |
 | Juiz em nuvem | Juiz **configurável**, versão registrada em cada linha | Ollama local, vLLM ou nuvem; o que importa é declarar e fixar. |
@@ -36,7 +36,7 @@ Spearman, κ de Cohen, matriz de confusão, sensibilidade/especificidade, análi
   | 5º | H03, H05 / H04, H06 | adição/subtração (cálculo, problemas) / multiplicação/divisão (cálculo, problemas) |
   | 9º | H02, H06 | quatro operações com números reais (problemas, cálculo) |
 
-  **8 células × 20 = 160 questões.** 2º, 3º e 4º anos ficam fora do escopo; EF01MA02 (contagem) fica fora por não ser operação.
+  **40 questões por ano, 120 no total**: 1º e 9º ano com 2 células × 20, 5º ano com 4 células × 10, para que os três anos pesem igual. No 5º ano ficam as 10 primeiras de cada célula (índices 00–09 da rotação), sem escolha; as demais estão em `dados/geracoes/excedente_5ano.jsonl` e não entram na análise. 2º, 3º e 4º anos ficam fora do escopo; EF01MA02 (contagem) fica fora por não ser operação.
 - Uma chamada = uma questão. Dificuldade rotaciona Fácil → Moderado → Difícil (7/7/6 por célula). Subtema, tipo de
   raciocínio e contexto vêm do sorteio do app, semeado por célula e índice.
 - Inferência: `temperature` 0,7, `top_p` 0,8, `max_tokens` 512, gramática `modelo/questao.gbnf`, seed
@@ -66,21 +66,21 @@ Os três primeiros binários reproduzem o "núcleo de validade" já usado nas re
 - Os critérios viram **passos de avaliação fixos** (`passos_geval` em `config/criterios.json`, `evaluation_steps` do DeepEval) com tetos explícitos (erro matemático, gabarito errado ou resposta não única → nota ≤ 2).
   Motivo: na primeira versão (critério em texto livre), o gpt-oss:20b apontou o gabarito errado de uma questão-sonda
   mas ainda deu nota 4. Os passos foram ajustados só com **2 questões-sonda sintéticas** (`00_testar_juiz.py`), nunca
-  com as 160 geradas, e ficam congelados antes de `make geval`. Com os passos, a sonda ruim recebeu 2 e a boa, 5.
+  com as 120 geradas, e ficam congelados antes de `make geval`. Com os passos, a sonda ruim recebeu 2 e a boa, 5.
 - `reasoning_effort` do juiz = `low` (~22 s por chamada no hardware de referência, ~16 GB de RAM). Declarar no artigo como desvio do juiz
   padrão do artigo-base.
 - Temperatura do juiz 0. **Juiz ≠ gerador.** Prefira juiz de família diferente de Qwen e dos modelos que
   produziram a base de treino , para não avaliar o modelo com seus próprios vieses.
 - Desvio a declarar: com juiz via API genérica não há ponderação por log-probabilidade do G-Eval original.
-- Roda nas **160** questões estruturalmente válidas. Checagens determinísticas (`02_`) complementam, não
+- Roda nas **120** questões estruturalmente válidas. Checagens determinísticas (`02_`) complementam, não
   substituem.
 
 ## 6. Avaliação humana
 
-- Amostra = **todas as 160 questões estruturalmente válidas** (`amostra_por_celula: 20`); reduza em `config/protocolo.json` se faltar tempo dos professores. Seed fixa.
+- Amostra = **todas as 120 questões estruturalmente válidas** (`amostra_por_celula: 20`); reduza em `config/protocolo.json` se faltar tempo dos professores. Seed fixa.
 - Só questões estruturalmente válidas entram na amostra (as inválidas já são falha medida em §3).
 - **Cego**: planilha sem nota do G-Eval, sem dificuldade pedida, sem subtema, em ordem aleatória, códigos anônimos.
-- Cada item vai a 2 professores (rodízio balanceado). Com 3 professores: ~107 itens cada, ~2 min por item.
+- Cada item vai a 2 professores (rodízio balanceado). Com 3 professores: ~80 itens cada, ~2 min por item.
 - Professores: licenciatura em Matemática + experiência no ano. Registrar formação/experiência (sem nome) no artigo.
 - Antes de começar, **calibração**: 10 itens fora da amostra, discutidos juntos. Depois, sem conversa.
 - Referência humana por item: média das 2 notas Likert (aprovado se ≥ 4); binário = "s" apenas se ambos disseram "s".
@@ -100,7 +100,7 @@ de qualquer conclusão sobre o juiz.
 
 - Um único modelo, um único treino (seed 44), um único juiz.
 - Gerador e juiz podem compartilhar vieses de dados sintéticos.
-- 20 por célula: sem poder estatístico por célula.
+- 10 a 20 por célula: sem poder estatístico por célula; a inferência é por ano (n = 40).
 - Professores avaliam texto; não há teste com alunos nem com figuras (itens são autocontidos).
 - A rubrica é própria deste protocolo, não validada psicometricamente além do TAM da escala principal.
 

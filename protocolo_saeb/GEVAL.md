@@ -1,7 +1,7 @@
 # Como rodar o G-Eval
 
-Avalia as 160 questões geradas com o juiz `gpt-oss:20b` (Ollama), nos 5 critérios de `config/criterios.json`:
-**160 × 5 = 800 chamadas, ~22 s cada, cerca de 5 horas** no hardware de referência (~16 GB de RAM; o tempo varia com CPU/GPU). Os resultados vão para
+Avalia as 120 questões geradas com o juiz `gpt-oss:20b` (Ollama), nos 5 critérios de `config/criterios.json`:
+**120 × 5 = 600 chamadas, ~22 s cada, cerca de 3,7 horas** no hardware de referência (~16 GB de RAM; o tempo varia com CPU/GPU). Os resultados vão para
 `dados/avaliacao_auto/geval.jsonl` (uma linha por questão e critério). O script **retoma de onde parou**.
 
 ## O que é o G-Eval aqui
@@ -28,7 +28,7 @@ Aprovado = nota ≥ 4. Detalhes e desvios declarados: `PROTOCOLO.md`, §5.
    make juiz-iniciar   # ollama serve, modelo fica 30 min na memória entre chamadas
    ```
    Se for a primeira vez: `ollama pull gpt-oss:20b` (~13 GB).
-4. **Impeça o computador de suspender** durante as ~5 h (macOS: `caffeinate -i`; Linux: `systemd-inhibit`; Windows: plano de energia "nunca suspender").
+4. **Impeça o computador de suspender** durante as ~4 h (macOS: `caffeinate -i`; Linux: `systemd-inhibit`; Windows: plano de energia "nunca suspender").
 
 ## Passo a passo
 
@@ -41,7 +41,7 @@ make juiz-testar
 Manda duas questões-sonda (uma correta, outra com gabarito errado) e exige que a boa tire nota ≥ 4 e a ruim ≤ 2.
 Deve terminar com `JUIZ OK`. Se terminar com `JUIZ NÃO DISCRIMINA`, **não rode o G-Eval**: veja "Problemas".
 
-### 6. Rodar o G-Eval nas 160 questões
+### 6. Rodar o G-Eval nas 120 questões
 
 Em segundo plano, com log (prefixe com o inibidor de suspensão do passo 4, ex. `caffeinate -i`):
 
@@ -57,7 +57,7 @@ registre no artigo e **não misture** notas de esforços diferentes no mesmo arq
 ### 7. Acompanhar
 
 ```bash
-wc -l dados/avaliacao_auto/geval.jsonl     # chega a 800
+wc -l dados/avaliacao_auto/geval.jsonl     # chega a 600
 tail -3 logs/geval.log                      # imprime o item_id de cada questão concluída
 ```
 
@@ -74,7 +74,7 @@ import sys; sys.path.insert(0, "scripts")
 from comum import *
 from collections import Counter
 rs = ler_jsonl(DADOS / "avaliacao_auto" / "geval.jsonl")
-print(len(rs), "linhas (esperado 800)")
+print(len(rs), "linhas (esperado 600)")
 for c in CRITERIOS:
     notas = Counter(r["nota_1a5"] for r in rs if r["criterio"] == c["id"])
     print(c["id"], dict(sorted(notas.items())))
@@ -87,7 +87,7 @@ Leia algumas justificativas, principalmente de notas altas em questões sabidame
 
 ## Rodar só parte dos critérios
 
-Útil para um primeiro passe mais rápido (2 critérios = 320 chamadas, ~2 h):
+Útil para um primeiro passe mais rápido (2 critérios = 240 chamadas, ~1,5 h):
 
 ```bash
 cd scripts && ../.venv/bin/python 03_geval.py --juiz-url http://localhost:11434/v1 \
@@ -103,7 +103,7 @@ Depois rode `make geval` normalmente para completar os outros três.
 | `Connection refused` em `localhost:11434` | Ollama não está no ar | `make juiz-iniciar` em outro terminal |
 | `model 'gpt-oss:20b' not found` | modelo não baixado | `ollama pull gpt-oss:20b` |
 | Muito lento ou máquina travando | `llama-server` ainda no ar, pouca RAM livre | `pkill -f llama-server`, feche apps pesados |
-| `JUIZ NÃO DISCRIMINA` | juiz muito leniente ou outro modelo/esforço | não avalie; revise `passos_geval` **usando só as sondas** de `00_testar_juiz.py`, nunca as 160 questões |
+| `JUIZ NÃO DISCRIMINA` | juiz muito leniente ou outro modelo/esforço | não avalie; revise `passos_geval` **usando só as sondas** de `00_testar_juiz.py`, nunca as 120 questões |
 | Erro de validação JSON do DeepEval | o juiz não devolveu o JSON pedido | rode de novo (retoma); se repetir no mesmo item, anote o `item_id` e veja o log |
 | Notas todas 5 ou todas 1 | juiz não está seguindo os passos | olhe as justificativas de 5 itens e revise antes de continuar |
 
