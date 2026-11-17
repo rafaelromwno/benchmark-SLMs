@@ -84,7 +84,11 @@ def main():
         for cid, metrica in metricas.items():
             if (r["item_id"], cid) in feitos:
                 continue
-            metrica.measure(caso)
+            try:
+                metrica.measure(caso)
+            except Exception as erro:
+                print(f"FALHA {r['item_id']} {cid}: {type(erro).__name__}", flush=True)
+                continue
             score10 = round(metrica.score * 10, 2)
             anexar_jsonl(SAIDA, {"item_id": r["item_id"], "criterio": cid, "score_0a10": score10,
                                  "nota_1a5": nota_1a5(score10), "justificativa": metrica.reason,

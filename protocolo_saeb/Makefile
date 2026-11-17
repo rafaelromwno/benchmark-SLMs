@@ -37,7 +37,7 @@ estrutura:
 	cd scripts && ../$(PY) 02_checar_estrutura.py
 
 juiz-iniciar:     ## sobe o Ollama (feche o servidor-gerador antes)
-	OLLAMA_KEEP_ALIVE=30m ollama serve
+	OLLAMA_KEEP_ALIVE=30m OLLAMA_CONTEXT_LENGTH=8192 ollama serve
 
 juiz-testar:      ## sanidade: questão boa x ruim
 	cd scripts && ../$(PY) 00_testar_juiz.py --juiz-url $(JUIZ_URL) --juiz-modelo $(JUIZ_MODELO) --esforco $(ESFORCO)
