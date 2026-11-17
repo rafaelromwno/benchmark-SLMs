@@ -1,6 +1,6 @@
 """Teste de sanidade do juiz: 1 questão boa e 1 ruim devem receber notas bem diferentes em `intencao_uso`.
 
-Roda poucas chamadas ao juiz. Use antes de avaliar as 120 questões.
+Roda poucas chamadas ao juiz. Use antes de avaliar as 160 questões.
   python 00_testar_juiz.py --juiz-url http://localhost:11434/v1 --juiz-modelo gpt-oss:20b
 """
 import argparse

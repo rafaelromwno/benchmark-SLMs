@@ -1,7 +1,7 @@
 # Como rodar o G-Eval
 
-Avalia as 120 questões geradas com o juiz `gpt-oss:20b` (Ollama), nos 5 critérios de `config/criterios.json`:
-**120 × 5 = 600 chamadas, ~22 s cada, cerca de 3,7 horas** no hardware de referência (~16 GB de RAM; o tempo varia com CPU/GPU). Os resultados vão para
+Avalia as 160 questões geradas com o juiz `gpt-oss:20b` (Ollama), nos 5 critérios de `config/criterios.json`:
+**160 × 5 = 800 chamadas, ~22 s cada, cerca de 4,9 horas** no hardware de referência (~16 GB de RAM; o tempo varia com CPU/GPU). Os resultados vão para
 `dados/avaliacao_auto/geval.jsonl` (uma linha por questão e critério). O script **retoma de onde parou**.
 
 ## O que é o G-Eval aqui
@@ -44,7 +44,7 @@ make juiz-testar
 Manda duas questões-sonda (uma correta, outra com gabarito errado) e exige que a boa tire nota ≥ 4 e a ruim ≤ 2.
 Deve terminar com `JUIZ OK`. Se terminar com `JUIZ NÃO DISCRIMINA`, **não rode o G-Eval**: veja "Problemas".
 
-### 6. Rodar o G-Eval nas 120 questões
+### 6. Rodar o G-Eval nas 160 questões
 
 Em segundo plano, com log (prefixe com o inibidor de suspensão do passo 4, ex. `caffeinate -i`):
 
@@ -60,7 +60,7 @@ registre no artigo e **não misture** notas de esforços diferentes no mesmo arq
 ### 7. Acompanhar
 
 ```bash
-wc -l dados/avaliacao_auto/geval.jsonl     # chega a 600
+wc -l dados/avaliacao_auto/geval.jsonl     # chega a 800
 tail -3 logs/geval.log                      # imprime o item_id de cada questão concluída
 ```
 
@@ -77,7 +77,7 @@ import sys; sys.path.insert(0, "scripts")
 from comum import *
 from collections import Counter
 rs = ler_jsonl(DADOS / "avaliacao_auto" / "geval.jsonl")
-print(len(rs), "linhas (esperado 600)")
+print(len(rs), "linhas (esperado 800)")
 for c in CRITERIOS:
     notas = Counter(r["nota_1a5"] for r in rs if r["criterio"] == c["id"])
     print(c["id"], dict(sorted(notas.items())))
@@ -117,5 +117,6 @@ Depois rode `make geval` normalmente para completar os outros três.
   deixam de ser comparáveis. Se precisar mudar, apague `dados/avaliacao_auto/geval.jsonl` e recomece.
 - Registre no artigo: modelo e versão do juiz (`ollama show gpt-oss:20b`), `reasoning_effort`, temperatura 0 e que
   não há ponderação por log-probabilidade (desvio do G-Eval original).
-- O loop completo já foi executado: 600 pares (120 questões × 5 critérios), sem falhas. A rodada foi retomada uma
-  vez (370 pares com contexto de 4096, 230 com 8192); ver `PROTOCOLO.md`, §5.
+- O loop completo já foi executado: 800 pares (160 questões × 5 critérios), sem falhas. A primeira rodada (120
+  questões, 600 pares) foi retomada uma vez (370 pares com contexto de 4096, 230 com 8192); o 2º ano (200 pares)
+  rodou depois, com 8192. Ver `PROTOCOLO.md`, §3 e §5.
