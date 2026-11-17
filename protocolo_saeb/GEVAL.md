@@ -25,8 +25,11 @@ Aprovado = nota ≥ 4. Detalhes e desvios declarados: `PROTOCOLO.md`, §5.
    ```
 3. **Ollama no ar** com o modelo baixado. Em um terminal separado, deixe aberto:
    ```bash
-   make juiz-iniciar   # ollama serve, modelo fica 30 min na memória entre chamadas
+   make juiz-iniciar   # ollama serve, modelo fica 30 min na memória entre chamadas, contexto de 8192 tokens
    ```
+   O contexto de 8192 tokens (`OLLAMA_CONTEXT_LENGTH`) é necessário: com o padrão de 4096, o juiz pode estourar a
+   janela em itens que o fazem raciocinar muito, devolver resposta vazia e abortar a rodada. Alguns itens levam
+   mais de 3 minutos por chamada.
    Se for a primeira vez: `ollama pull gpt-oss:20b` (~13 GB).
 4. **Impeça o computador de suspender** durante as ~4 h (macOS: `caffeinate -i`; Linux: `systemd-inhibit`; Windows: plano de energia "nunca suspender").
 
@@ -104,7 +107,8 @@ Depois rode `make geval` normalmente para completar os outros três.
 | `model 'gpt-oss:20b' not found` | modelo não baixado | `ollama pull gpt-oss:20b` |
 | Muito lento ou máquina travando | `llama-server` ainda no ar, pouca RAM livre | `pkill -f llama-server`, feche apps pesados |
 | `JUIZ NÃO DISCRIMINA` | juiz muito leniente ou outro modelo/esforço | não avalie; revise `passos_geval` **usando só as sondas** de `00_testar_juiz.py`, nunca as 120 questões |
-| Erro de validação JSON do DeepEval | o juiz não devolveu o JSON pedido | rode de novo (retoma); se repetir no mesmo item, anote o `item_id` e veja o log |
+| Erro de validação JSON do DeepEval | o juiz não devolveu o JSON pedido (em geral, contexto de 4096 estourado) | suba o Ollama com `make juiz-iniciar` (8192) e rode de novo (retoma) |
+| `FALHA <item> <critério>` no log | o par foi pulado e não tem linha em `geval.jsonl` | rode `make geval` de novo; só os pares faltantes são refeitos |
 | Notas todas 5 ou todas 1 | juiz não está seguindo os passos | olhe as justificativas de 5 itens e revise antes de continuar |
 
 ## Importante
@@ -113,5 +117,5 @@ Depois rode `make geval` normalmente para completar os outros três.
   deixam de ser comparáveis. Se precisar mudar, apague `dados/avaliacao_auto/geval.jsonl` e recomece.
 - Registre no artigo: modelo e versão do juiz (`ollama show gpt-oss:20b`), `reasoning_effort`, temperatura 0 e que
   não há ponderação por log-probabilidade (desvio do G-Eval original).
-- O loop completo do `03_geval.py` ainda **não foi executado**; só o teste de sanidade passou por essa via.
-  Confira as primeiras linhas do `geval.jsonl` logo no início da rodada (passo 7).
+- O loop completo já foi executado: 600 pares (120 questões × 5 critérios), sem falhas. A rodada foi retomada uma
+  vez (370 pares com contexto de 4096, 230 com 8192); ver `PROTOCOLO.md`, §5.

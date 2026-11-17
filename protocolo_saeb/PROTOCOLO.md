@@ -72,6 +72,8 @@ Os três primeiros binários reproduzem o "núcleo de validade" já usado nas re
 - Temperatura do juiz 0. **Juiz ≠ gerador.** Prefira juiz de família diferente de Qwen e dos modelos que
   produziram a base de treino , para não avaliar o modelo com seus próprios vieses.
 - Desvio a declarar: com juiz via API genérica não há ponderação por log-probabilidade do G-Eval original.
+- **Janela de contexto do juiz.** A rodada começou com o contexto padrão do Ollama (4096 tokens). Em um item (5º ano, H06, `5-H06-03`) o juiz raciocinou além desse limite, a resposta veio truncada e vazia e a execução abortou com 370 de 600 pares gravados. O contexto foi elevado para 8192 tokens (`OLLAMA_CONTEXT_LENGTH`) e a rodada foi retomada; os 230 pares restantes (incluindo esse item) usaram 8192. Os 370 primeiros foram gerados com 4096 e nenhum deles falhou, mas o contexto não é idêntico ao longo do arquivo: declarar no artigo.
+- **Falhas do juiz.** Um par (questão, critério) em que o juiz não devolve JSON válido é registrado como `FALHA` no log e fica sem linha em `geval.jsonl`, para ser refeito ao reexecutar `make geval`. Nesta rodada não houve nenhum.
 - Roda nas **120** questões estruturalmente válidas. Checagens determinísticas (`02_`) complementam, não
   substituem.
 
@@ -99,6 +101,8 @@ de qualquer conclusão sobre o juiz.
 ## 8. Ameaças à validade (declarar no artigo)
 
 - Um único modelo, um único treino (seed 44), um único juiz.
+- Notas do juiz concentradas nos extremos: nos 600 pares, só 10 notas 3 e 1 nota 4; as outras 589 são 1, 2 ou 5. A escala de 5 pontos se comporta quase como binária, o que limita Pearson, Spearman e κ ponderado contra a escala Likert dos professores.
+- Em `intencao_uso`, o juiz foi mais leniente que nos critérios objetivos (ex.: `1-EF01MA06-00` recebeu nota 5 mesmo com a divisão fora da habilidade, que o critério de aderência penalizou com 2). Isso reforça comparar cada critério com os professores separadamente.
 - Gerador e juiz podem compartilhar vieses de dados sintéticos.
 - 10 a 20 por célula: sem poder estatístico por célula; a inferência é por ano (n = 40).
 - Professores avaliam texto; não há teste com alunos nem com figuras (itens são autocontidos).
