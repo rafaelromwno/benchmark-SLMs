@@ -55,7 +55,31 @@
   },
   "avaliacao_humana": {
     "amostra_por_celula": 20,
-    "avaliacoes_por_item": 2,
+    "todos_avaliam_todos": true,
+    "professores_minimos": 3,
+    "itens_por_bloco": 40,
+    "ancoras_por_bloco": 2,
+    "calibracao_itens": 10,
+    "referencia_humana": "maioria",
     "seed_amostra": 7
+  },
+  "contaminacao": {
+    "nota": "Limiar definido ANTES de olhar qualquer resultado. Similaridade = Jaccard de trigramas de palavras do enunciado normalizado (minusculas, sem acentos). 'exata' compara o texto como esta; 'molde' troca todos os numeros por #, para pegar o mesmo problema com numeros trocados.",
+    "tamanho_ngrama": 3,
+    "limiar_jaccard": 0.8
+  },
+  "taxonomia": {
+    "dupla_codificacao": 0.3,
+    "seed_dupla_codificacao": 11
+  },
+  "derivacao_4_alternativas": {
+    "nota": "O Saeb usa 4 alternativas (A-D); o gerador produz 5. A versao saeb4 remove uma alternativa sem tocar na chave nem no resultado da resolucao e balanceia a letra do gabarito por ano. As notas do juiz que nao dependem das alternativas (dados_suficientes, aderencia_ano_habilidade) sao reaproveitadas da versao de origem (5alt); as demais sao recalculadas na versao avaliada.",
+    "seed": 20260402,
+    "versao_avaliada": "saeb4",
+    "versao_origem": "5alt",
+    "criterios_reaproveitados_da_origem": [
+      "dados_suficientes",
+      "aderencia_ano_habilidade"
+    ]
   }
 }

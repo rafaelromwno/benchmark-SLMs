@@ -19,6 +19,7 @@ sys.path.insert(0, str(APP))
 import cliente_llama_server as app  # noqa: E402
 
 SAIDA = DADOS / "geracoes" / "questoes.jsonl"
+MATRIZ = {(c["ano"], c["habilidade"]): c.get("codigo_matriz_saeb") for c in CELULAS}
 
 
 def celulas(tax):
@@ -65,7 +66,7 @@ def main():
                 falha = "estrutura_invalida"
             anexar_jsonl(SAIDA, {
                 "item_id": item_id, "ano": ano, "habilidade": hab, "descricao_habilidade": descricao, "operacao": operacao,
-                "dificuldade_pedida": dificuldade, "slot": slot, "prompt": prompt, "seed": seed,
+                "codigo_matriz_saeb": MATRIZ[(ano, hab)], "dificuldade_pedida": dificuldade, "slot": slot, "prompt": prompt, "seed": seed,
                 "tentativas": tentativa, "falha": falha, "questao": questao,
                 "modelo_info": a.modelo_info, "gerado_em": time.strftime("%Y-%m-%dT%H:%M:%S"),
             })

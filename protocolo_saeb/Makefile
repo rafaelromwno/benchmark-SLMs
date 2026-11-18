@@ -1,7 +1,8 @@
 # Ordem de execução. Nada roda sozinho: cada alvo é um passo explícito.
 # Com ~16 GB de RAM: gerador (Qwen, ~3 GB) e juiz (gpt-oss:20b, ~13 GB) NÃO ficam no ar ao mesmo tempo.
 #   make servidor-gerador   (terminal 1)   ->   make gerar estrutura   ->   Ctrl+C no servidor
-#   make juiz-iniciar   ->   make juiz-testar geval
+#   make aritmetica contaminacao TREINO=...   (sem modelo, rodam a qualquer momento)
+#   make juiz-iniciar   ->   make juiz-testar geval   ->   make congelar (sela o juiz antes da coleta humana)
 SHELL := /bin/bash
 PY ?= .venv/bin/python
 GGUF ?= modelos/Qwen3-4B-Q4_K_M.gguf
@@ -11,9 +12,10 @@ JUIZ_MODELO ?= gpt-oss:20b
 JUIZ_URL ?= http://localhost:11434/v1
 ESFORCO ?= low
 PROFESSORES ?= P1 P2 P3
+TREINO ?=
 MODELO_INFO ?= Qwen3-4B-Q4_K_M + lora_4b_v7b_s44 (sha256 no model card)
 
-.PHONY: setup baixar-qwen verificar test servidor-gerador gerar estrutura juiz-iniciar juiz-testar geval amostra analisar
+.PHONY: setup baixar-qwen verificar test servidor-gerador gerar estrutura aritmetica contaminacao derivar juiz-iniciar juiz-testar geval congelar amostra analisar taxonomia
 
 setup:            ## cria .venv e instala dependências
 	./setup.sh
@@ -36,17 +38,32 @@ gerar:            ## 160 questões (retoma se interrompido)
 estrutura:
 	cd scripts && ../$(PY) 02_checar_estrutura.py
 
+aritmetica:       ## verificação aritmética determinística (reporta a cobertura)
+	cd scripts && ../$(PY) 02b_verificar_aritmetica.py
+
+derivar:          ## versão de 4 alternativas (A-D), balanceada; precisa de `make aritmetica` antes
+	cd scripts && ../$(PY) 09_derivar_4_alternativas.py
+
+contaminacao:     ## similaridade com o treino e entre as questões (TREINO=arquivo.jsonl [outro.jsonl])
+	cd scripts && ../$(PY) 02c_contaminacao.py $(if $(TREINO),--referencia $(TREINO),)
+
 juiz-iniciar:     ## sobe o Ollama (feche o servidor-gerador antes)
 	OLLAMA_KEEP_ALIVE=30m OLLAMA_CONTEXT_LENGTH=8192 ollama serve
 
-juiz-testar:      ## sanidade: questão boa x ruim
+juiz-testar:      ## sanidade: sondas sintéticas (boa, gabarito errado, conta errada)
 	cd scripts && ../$(PY) 00_testar_juiz.py --juiz-url $(JUIZ_URL) --juiz-modelo $(JUIZ_MODELO) --esforco $(ESFORCO)
 
-geval:            ## G-Eval nas questões estruturalmente válidas (retoma)
+geval:            ## G-Eval nas questões estruturalmente válidas (retoma; só calcula pares que faltam)
 	cd scripts && ../$(PY) 03_geval.py --juiz-url $(JUIZ_URL) --juiz-modelo $(JUIZ_MODELO) --esforco $(ESFORCO)
+
+congelar:         ## grava config/CONGELADO.json (hashes e versões; sela o resultado do juiz)
+	cd scripts && ../$(PY) 07_congelar.py --juiz-modelo $(JUIZ_MODELO) $(if $(wildcard $(GGUF)),--gguf $(abspath $(GGUF)),) $(if $(wildcard $(LORA)),--lora $(abspath $(LORA)),)
 
 amostra:          ## planilhas cegas dos professores
 	cd scripts && ../$(PY) 04_amostra_humana.py --professores $(PROFESSORES)
 
 analisar:
 	cd scripts && ../$(PY) 05_analisar.py
+
+taxonomia:        ## causas de reprovação do juiz e dos professores (planilha de codificação)
+	cd scripts && ../$(PY) 08_taxonomia.py

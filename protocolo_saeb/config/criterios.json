@@ -1,6 +1,72 @@
 {
-  "nota": "Os mesmos 5 criterios sao usados pelo G-Eval e pelos professores, com a mesma redacao. Todos avaliam o item como o professor o veria: enunciado, alternativas, resolucao e gabarito.",
+  "nota": "Os mesmos 6 criterios sao usados pelo G-Eval e pelos professores, com a mesma redacao. Todos avaliam o item como o professor o veria: enunciado, alternativas, resolucao e gabarito. Os quatro marcados com nucleo=true formam o desfecho nucleo (resolucao correta, gabarito coerente, resposta unica, dados suficientes). Um motivo em texto livre (Q7) e pedido ao professor apenas nas reprovacoes.",
   "criterios": [
+    {
+      "id": "resolucao_correta",
+      "tipo": "binario",
+      "nucleo": true,
+      "pergunta_professor": "A resolucao esta matematicamente correta? (s/n)",
+      "criterio_geval": "Refaca voce mesmo o calculo do enunciado. A resolucao apresentada esta matematicamente correta, do raciocinio ao resultado final? Nao avalie a letra do gabarito aqui, apenas a matematica da resolucao. Nota alta somente se a resolucao esta correta.",
+      "passos_geval": [
+        "Recalcule você mesmo o resultado correto a partir do enunciado, sem olhar a resolução.",
+        "Compare com a resolução passo a passo. Se houver erro de cálculo, de raciocínio ou de interpretação do enunciado, a nota deve ser no máximo 2.",
+        "Verifique se o resultado final da resolução é o resultado correto. Se não for, a nota deve ser no máximo 2.",
+        "Ignore a letra do Gabarito: esta avaliação trata apenas da matemática da resolução.",
+        "Dê nota 9 ou 10 somente se a resolução está correta do início ao fim."
+      ]
+    },
+    {
+      "id": "gabarito_coerente",
+      "tipo": "binario",
+      "nucleo": true,
+      "pergunta_professor": "O gabarito corresponde ao resultado da resolucao? (s/n)",
+      "criterio_geval": "Compare o resultado final apresentado na resolucao com a alternativa indicada como gabarito. A letra do gabarito corresponde a alternativa que traz esse resultado? Nao avalie se a conta esta certa, apenas a coerencia entre resolucao e gabarito. Nota alta somente se a letra do gabarito bate com o resultado da resolucao.",
+      "passos_geval": [
+        "Identifique o resultado final que a resolução apresenta.",
+        "Encontre, entre as alternativas A a E, a que traz esse resultado. Se nenhuma alternativa traz esse resultado, a nota deve ser no máximo 2.",
+        "Compare a letra dessa alternativa com a letra do Gabarito. Se forem letras diferentes, a nota deve ser no máximo 2.",
+        "Não avalie se a conta está certa: considere apenas se resolução e gabarito dizem a mesma coisa.",
+        "Dê nota 9 ou 10 somente se a letra do Gabarito é a da alternativa que traz o resultado da resolução."
+      ]
+    },
+    {
+      "id": "resposta_unica",
+      "tipo": "binario",
+      "pergunta_professor": "Existe exatamente uma alternativa correta? (s/n)",
+      "criterio_geval": "Verifique cada alternativa A a E. Existe exatamente uma alternativa correta? Nota alta somente se uma, e apenas uma, alternativa responde corretamente ao enunciado; nota baixa se nenhuma ou mais de uma servir.",
+      "passos_geval": [
+        "Resolva a questão você mesmo e identifique o resultado correto.",
+        "Examine cada alternativa de A a E e conte quantas respondem corretamente ao enunciado.",
+        "Se nenhuma ou mais de uma alternativa estiver correta, a nota deve ser no máximo 2.",
+        "Dê nota 9 ou 10 somente se exatamente uma alternativa estiver correta."
+      ],
+      "nucleo": true
+    },
+    {
+      "id": "dados_suficientes",
+      "tipo": "binario",
+      "pergunta_professor": "O enunciado traz todos os dados necessarios, sem depender de figura, grafico ou imagem ausente? (s/n)",
+      "criterio_geval": "O enunciado contem todos os dados necessarios para resolver a questao, sem depender de figura, grafico ou imagem que nao esta no texto, e sem ambiguidade que impeca a resolucao? Nota alta somente se a questao e resolvivel apenas com o texto.",
+      "passos_geval": [
+        "Liste os dados de que a resolução precisa.",
+        "Verifique se cada dado aparece no enunciado em texto. Se algum dado essencial faltar, ou depender de figura, gráfico ou imagem não presente, a nota deve ser no máximo 2.",
+        "Verifique se há ambiguidade que impeça uma resolução única. Se houver, a nota deve ser no máximo 4.",
+        "Dê nota 9 ou 10 somente se a questão é resolvível apenas com o texto fornecido."
+      ],
+      "nucleo": true
+    },
+    {
+      "id": "aderencia_ano_habilidade",
+      "tipo": "binario",
+      "pergunta_professor": "A questao trabalha a habilidade indicada e e adequada ao ano indicado? (s/n)",
+      "criterio_geval": "A questao exige a habilidade descrita na entrada e o nivel de vocabulario, numeros e raciocinio e adequado ao ano escolar indicado? Nota alta somente se a habilidade pedida e a efetivamente exigida e o nivel condiz com o ano.",
+      "passos_geval": [
+        "Identifique qual habilidade a questão realmente exige para ser resolvida.",
+        "Compare com a habilidade descrita na entrada. Se a questão exigir outra habilidade ou operação diferente da descrita, a nota deve ser no máximo 2.",
+        "Verifique se números, vocabulário e raciocínio são adequados ao ano escolar indicado. Se estiverem claramente acima ou abaixo, a nota deve ser no máximo 4.",
+        "Dê nota 9 ou 10 somente se a habilidade exigida é a pedida e o nível condiz com o ano."
+      ]
+    },
     {
       "id": "intencao_uso",
       "tipo": "likert_1a5",
@@ -14,7 +80,9 @@
         "Verifique se o enunciado traz todos os dados, com linguagem clara e adequada ao ano, e se o contexto é plausível. Problemas leves de clareza reduzem a nota; falta de dados essenciais limita a nota a no máximo 4.",
         "Dê nota 9 ou 10 apenas se um professor usaria a questão em sala sem alterações; 7 ou 8 se usaria com pequenos ajustes."
       ]
-    },
+    }
+  ],
+  "legado": [
     {
       "id": "correcao_matematica",
       "tipo": "binario",
@@ -26,43 +94,8 @@
         "Verifique se o resultado correto aparece entre as alternativas A a E. Se não aparecer, a nota deve ser no máximo 2.",
         "Verifique se a letra do Gabarito é a da alternativa com o resultado correto. Se for outra letra, a nota deve ser no máximo 2.",
         "Dê nota 9 ou 10 somente se todas as verificações acima conferem."
-      ]
-    },
-    {
-      "id": "resposta_unica",
-      "tipo": "binario",
-      "pergunta_professor": "Existe exatamente uma alternativa correta? (s/n)",
-      "criterio_geval": "Verifique cada alternativa A a E. Existe exatamente uma alternativa correta? Nota alta somente se uma, e apenas uma, alternativa responde corretamente ao enunciado; nota baixa se nenhuma ou mais de uma servir.",
-      "passos_geval": [
-        "Resolva a questão você mesmo e identifique o resultado correto.",
-        "Examine cada alternativa de A a E e conte quantas respondem corretamente ao enunciado.",
-        "Se nenhuma ou mais de uma alternativa estiver correta, a nota deve ser no máximo 2.",
-        "Dê nota 9 ou 10 somente se exatamente uma alternativa estiver correta."
-      ]
-    },
-    {
-      "id": "dados_suficientes",
-      "tipo": "binario",
-      "pergunta_professor": "O enunciado traz todos os dados necessarios, sem depender de figura, grafico ou imagem ausente? (s/n)",
-      "criterio_geval": "O enunciado contem todos os dados necessarios para resolver a questao, sem depender de figura, grafico ou imagem que nao esta no texto, e sem ambiguidade que impeca a resolucao? Nota alta somente se a questao e resolvivel apenas com o texto.",
-      "passos_geval": [
-        "Liste os dados de que a resolução precisa.",
-        "Verifique se cada dado aparece no enunciado em texto. Se algum dado essencial faltar, ou depender de figura, gráfico ou imagem não presente, a nota deve ser no máximo 2.",
-        "Verifique se há ambiguidade que impeça uma resolução única. Se houver, a nota deve ser no máximo 4.",
-        "Dê nota 9 ou 10 somente se a questão é resolvível apenas com o texto fornecido."
-      ]
-    },
-    {
-      "id": "aderencia_ano_habilidade",
-      "tipo": "binario",
-      "pergunta_professor": "A questao trabalha a habilidade indicada e e adequada ao ano indicado? (s/n)",
-      "criterio_geval": "A questao exige a habilidade descrita na entrada e o nivel de vocabulario, numeros e raciocinio e adequado ao ano escolar indicado? Nota alta somente se a habilidade pedida e a efetivamente exigida e o nivel condiz com o ano.",
-      "passos_geval": [
-        "Identifique qual habilidade a questão realmente exige para ser resolvida.",
-        "Compare com a habilidade descrita na entrada. Se a questão exigir outra habilidade ou operação diferente da descrita, a nota deve ser no máximo 2.",
-        "Verifique se números, vocabulário e raciocínio são adequados ao ano escolar indicado. Se estiverem claramente acima ou abaixo, a nota deve ser no máximo 4.",
-        "Dê nota 9 ou 10 somente se a habilidade exigida é a pedida e o nível condiz com o ano."
-      ]
+      ],
+      "nota": "Substituido por resolucao_correta e gabarito_coerente. As notas ja coletadas ficam em dados/avaliacao_auto/geval.jsonl e so entram na analise como resultado legado."
     }
   ]
 }

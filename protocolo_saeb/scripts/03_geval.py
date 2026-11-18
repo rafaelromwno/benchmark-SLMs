@@ -20,7 +20,8 @@ from deepeval.metrics import GEval
 from deepeval.models import DeepEvalBaseLLM
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
 
-from comum import CONFIG, CRITERIOS, DADOS, anexar_jsonl, entrada_item, ler_jsonl, nota_1a5, texto_item  # noqa
+from comum import (CONFIG, CRITERIOS, DADOS, QUESTOES, VERSAO, anexar_jsonl, entrada_item, ler_jsonl, nota_1a5,  # noqa
+                   notas_do_juiz, texto_item)
 
 SAIDA = DADOS / "avaliacao_auto" / "geval.jsonl"
 
@@ -75,9 +76,9 @@ def main():
     juiz = JuizOpenAICompat(a.juiz_url, a.juiz_modelo, a.juiz_chave, a.esforco)
     metricas = {c["id"]: montar_metrica(c, juiz) for c in CRITERIOS if c["id"] in a.criterios}
     estrutura = {r["item_id"]: r for r in ler_jsonl(DADOS / "avaliacao_auto" / "estrutura.jsonl")}
-    feitos = {(r["item_id"], r["criterio"]) for r in ler_jsonl(SAIDA)}
+    feitos = set(notas_do_juiz(ler_jsonl(SAIDA)))
 
-    for r in ler_jsonl(DADOS / "geracoes" / "questoes.jsonl"):
+    for r in ler_jsonl(QUESTOES):
         if not estrutura[r["item_id"]]["estrutura_ok"]:
             continue
         caso = LLMTestCase(input=entrada_item(r), actual_output=texto_item(r["questao"]))
@@ -92,7 +93,7 @@ def main():
             score10 = round(metrica.score * 10, 2)
             anexar_jsonl(SAIDA, {"item_id": r["item_id"], "criterio": cid, "score_0a10": score10,
                                  "nota_1a5": nota_1a5(score10), "justificativa": metrica.reason,
-                                 "juiz": a.juiz_modelo})
+                                 "juiz": a.juiz_modelo, "versao": VERSAO})
         print(r["item_id"])
 
 
