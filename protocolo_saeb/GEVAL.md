@@ -1,7 +1,7 @@
 # Como rodar o G-Eval
 
-Avalia as 160 questões geradas com o juiz `gpt-oss:20b` (Ollama), nos 5 critérios de `config/criterios.json`:
-**160 × 5 = 800 chamadas, ~22 s cada, cerca de 4,9 horas** no hardware de referência (~16 GB de RAM; o tempo varia com CPU/GPU). Os resultados vão para
+Avalia as 160 questões geradas com o juiz `gpt-oss:20b` (Ollama), (versão de 4 alternativas, `questoes_saeb4.jsonl`) nos 6 critérios de `config/criterios.json`:
+**160 × 6 = 960 pares, ~22 s cada, cerca de 5,9 horas do zero** no hardware de referência (~16 GB de RAM; o tempo varia com CPU/GPU). Se `geval.jsonl` já traz as notas de `dados_suficientes` e `aderencia_ano_habilidade` da versão de 5 alternativas, elas são reaproveitadas e a rodada faz **640 chamadas, cerca de 3,9 horas** (`PROTOCOLO.md`, §5). Os resultados vão para
 `dados/avaliacao_auto/geval.jsonl` (uma linha por questão e critério). O script **retoma de onde parou**.
 
 ## O que é o G-Eval aqui
@@ -41,7 +41,7 @@ Aprovado = nota ≥ 4. Detalhes e desvios declarados: `PROTOCOLO.md`, §5.
 make juiz-testar
 ```
 
-Manda duas questões-sonda (uma correta, outra com gabarito errado) e exige que a boa tire nota ≥ 4 e a ruim ≤ 2.
+Manda quatro sondas sintéticas: a boa deve tirar nota ≥ 4 em `resolucao_correta` e em `gabarito_coerente`; a de gabarito errado, ≤ 2 em `gabarito_coerente`; a de conta errada, ≤ 2 em `resolucao_correta`.
 Deve terminar com `JUIZ OK`. Se terminar com `JUIZ NÃO DISCRIMINA`, **não rode o G-Eval**: veja "Problemas".
 
 ### 6. Rodar o G-Eval nas 160 questões
@@ -60,7 +60,7 @@ registre no artigo e **não misture** notas de esforços diferentes no mesmo arq
 ### 7. Acompanhar
 
 ```bash
-wc -l dados/avaliacao_auto/geval.jsonl     # chega a 800
+wc -l dados/avaliacao_auto/geval.jsonl     # 960 pares válidos ao fim (mais as linhas antigas: o arquivo passa disso)
 tail -3 logs/geval.log                      # imprime o item_id de cada questão concluída
 ```
 
@@ -77,7 +77,7 @@ import sys; sys.path.insert(0, "scripts")
 from comum import *
 from collections import Counter
 rs = ler_jsonl(DADOS / "avaliacao_auto" / "geval.jsonl")
-print(len(rs), "linhas (esperado 800)")
+print(len(rs), "linhas (esperado 960 ao fim, mais as linhas antigas da versão de 5 alternativas e as legadas)")
 for c in CRITERIOS:
     notas = Counter(r["nota_1a5"] for r in rs if r["criterio"] == c["id"])
     print(c["id"], dict(sorted(notas.items())))
@@ -85,7 +85,7 @@ E
 make analisar        # aprovação por ano, operação e célula (a parte humana só aparece depois dos professores)
 ```
 
-Cada linha do `geval.jsonl` tem: `item_id`, `criterio`, `score_0a10`, `nota_1a5`, `justificativa`, `juiz`.
+Cada linha do `geval.jsonl` tem: `item_id`, `criterio`, `score_0a10`, `nota_1a5`, `justificativa`, `juiz` e `versao` (linhas antigas, sem `versao`, são da versão de 5 alternativas).
 Leia algumas justificativas, principalmente de notas altas em questões sabidamente erradas.
 
 ## Rodar só parte dos critérios
@@ -94,7 +94,7 @@ Leia algumas justificativas, principalmente de notas altas em questões sabidame
 
 ```bash
 cd scripts && ../.venv/bin/python 03_geval.py --juiz-url http://localhost:11434/v1 \
-  --juiz-modelo gpt-oss:20b --esforco low --criterios intencao_uso correcao_matematica
+  --juiz-modelo gpt-oss:20b --esforco low --criterios resolucao_correta gabarito_coerente
 ```
 
 Depois rode `make geval` normalmente para completar os outros três.
@@ -117,6 +117,7 @@ Depois rode `make geval` normalmente para completar os outros três.
   deixam de ser comparáveis. Se precisar mudar, apague `dados/avaliacao_auto/geval.jsonl` e recomece.
 - Registre no artigo: modelo e versão do juiz (`ollama show gpt-oss:20b`), `reasoning_effort`, temperatura 0 e que
   não há ponderação por log-probabilidade (desvio do G-Eval original).
-- O loop completo já foi executado: 800 pares (160 questões × 5 critérios), sem falhas. A primeira rodada (120
-  questões, 600 pares) foi retomada uma vez (370 pares com contexto de 4096, 230 com 8192); o 2º ano (200 pares)
-  rodou depois, com 8192. Ver `PROTOCOLO.md`, §3 e §5.
+- Histórico: a primeira rodada (800 pares, versão de 5 alternativas) foi retomada uma vez (370 pares com contexto de
+  4096, o resto com 8192). Na versão de 4 alternativas só foram recalculados os critérios que dependem das
+  alternativas, com 8192; os demais foram reaproveitados. Ver `PROTOCOLO.md`, §5. Depois do G-Eval, rode `make congelar`
+  para selar o resultado antes de qualquer professor abrir uma folha.

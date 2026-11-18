@@ -6,13 +6,18 @@ e prepara a **revisão por professores**. Desenho e justificativas: [PROTOCOLO.m
 ```
 config/celulas.json      as 10 células (ano, habilidade, operação)
 config/protocolo.json    parâmetros fixos (seeds, N por célula, limiar, tamanho da amostra humana)
-config/criterios.json    os 5 critérios, com a mesma redação para G-Eval e professores
-scripts/01_gerar.py          questões → dados/geracoes/questoes.jsonl
+config/criterios.json    os 6 critérios (núcleo + aderência + intenção de uso), com a mesma redação para G-Eval e professores
+scripts/01_gerar.py          questões (5 alternativas, como geradas) → dados/geracoes/questoes.jsonl
 scripts/02_checar_estrutura.py   checagens determinísticas (sem LLM)
+scripts/02b_verificar_aritmetica.py  confere as contas da resolução e o gabarito, com cobertura → dados/avaliacao_auto/aritmetica.jsonl
+scripts/02c_contaminacao.py  similaridade com o treino e entre as questões → dados/avaliacao_auto/contaminacao*.json*
+scripts/09_derivar_4_alternativas.py  versão A–D balanceada, sem descartar questões → dados/geracoes/questoes_saeb4.jsonl
 scripts/03_geval.py          G-Eval, um metric por critério → dados/avaliacao_auto/geval.jsonl
 scripts/04_amostra_humana.py amostra cega + planilhas dos professores → dados/humana/
 scripts/05_analisar.py       estatísticas → resultados/resumo.{json,md}
 scripts/06_composicao.py     proporção por ano/habilidade → dados/geracoes/COMPOSICAO.md
+scripts/07_congelar.py       hashes e versões; sela o resultado do juiz → config/CONGELADO.json
+scripts/08_taxonomia.py      causas de reprovação (juiz e professores) → dados/taxonomia/
 modelo/                  cópia fixa de prompt, gramática e taxonomia do app (ver ORIGEM.md)
 ```
 
@@ -38,15 +43,18 @@ make setup test verificar          # prepara e confere; não gera nada
 
 # fase 1 — geração (terminal 1: make servidor-gerador)
 make gerar estrutura               # encerre o servidor com Ctrl+C
+make aritmetica derivar            # verificação aritmética e versão de 4 alternativas (A-D) balanceada
+make contaminacao TREINO=arquivo.jsonl   # similaridade com o treino (opcional)
 
 # fase 2 — juiz
 make juiz-iniciar                  # terminal 1
-make juiz-testar                   # confirma que o juiz distingue questão boa de ruim
+make juiz-testar                   # confirma que o juiz distingue as sondas boa, gabarito errado e conta errada
 make geval
+make congelar                      # sela o resultado do juiz antes da coleta humana
 
 # fase 3 — professores
-make amostra PROFESSORES="P1 P2 P3"   # entregar só dados/humana/folha_*.csv
-make analisar                          # depois que as folhas voltarem preenchidas
+make amostra PROFESSORES="P1 P2 P3"   # todos avaliam todos os itens; entregar só dados/humana/folha_*.csv
+make analisar taxonomia                # depois que as folhas voltarem preenchidas
 ```
 
 Todos os passos retomam de onde pararam. `dados/humana/chave.csv` liga o código da planilha ao item e **não vai
