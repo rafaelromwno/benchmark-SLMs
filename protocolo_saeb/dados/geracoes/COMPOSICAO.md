@@ -34,3 +34,15 @@ Total: 160 questões, 40 por ano. Estruturalmente válidas: 160.
 | adicao_subtracao | 80 | 50.0% |
 | multiplicacao_divisao | 20 | 12.5% |
 | quatro_operacoes_reais | 40 | 25.0% |
+
+## Indicadores de formato (todas as questões)
+
+Número de alternativas por questão: {5: 160}. Esperado por letra com 5 alternativas: 20%.
+
+| Ano | Gabarito A | B | C | D | E | "Nenhuma das alternativas" (alt. E) | Questões com alternativas repetidas |
+|---|---|---|---|---|---|---|---|
+| 1º | 35.0% | 25.0% | 7.5% | 20.0% | 12.5% | 13 (32.5%) | 0 |
+| 2º | 35.0% | 17.5% | 30.0% | 15.0% | 2.5% | 2 (5.0%) | 1 |
+| 5º | 37.5% | 20.0% | 20.0% | 7.5% | 15.0% | 5 (12.5%) | 2 |
+| 9º | 40.0% | 17.5% | 5.0% | 22.5% | 15.0% | 4 (10.0%) | 0 |
+| Todos | 36.9% | 20.0% | 15.6% | 16.2% | 11.2% | 24 (15.0%) | 3 |

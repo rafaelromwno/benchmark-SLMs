@@ -29,6 +29,18 @@ def main():
     L += ["", "## Por grupo de operação", "", "| Operação | Questões | % |", "|---|---|---|"]
     for o, k in sorted(Counter(r["operacao"] for r in rs).items()):
         L.append(f"| {o} | {k} | {100 * k / n:.1f}% |")
+    L += ["", "## Indicadores de formato (todas as questões)", "",
+          f"Número de alternativas por questão: {dict(Counter(len(r['questao']['alternativas']) for r in rs))}. "
+          f"Esperado por letra com 5 alternativas: 20%.", "",
+          "| Ano | Gabarito A | B | C | D | E | \"Nenhuma das alternativas\" (alt. E) | Questões com alternativas repetidas |",
+          "|---|---|---|---|---|---|---|---|"]
+    for ano in [*CONFIG["geracao"]["anos"], "Todos"]:
+        g = [r for r in rs if ano == "Todos" or r["ano"] == ano]
+        a = Counter(r["questao"]["resposta_correta"] for r in g)
+        nenhuma = sum("nenhuma d" in r["questao"]["alternativas"]["E"].lower() for r in g)
+        rep = sum(len({str(v).lower() for v in r["questao"]["alternativas"].values()}) < 5 for r in g)
+        L.append(f"| {ano} | " + " | ".join(f"{100 * a[l] / len(g):.1f}%" for l in LETRAS)
+                 + f" | {nenhuma} ({100 * nenhuma / len(g):.1f}%) | {rep} |")
     (DADOS / "geracoes" / "COMPOSICAO.md").write_text("\n".join(L) + "\n", encoding="utf-8")
     print("\n".join(L))
 
