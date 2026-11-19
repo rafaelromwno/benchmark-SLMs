@@ -42,7 +42,7 @@ operação/habilidade. Pearson, Spearman e κ de Cohen continuam sendo reportado
   | 9º | H02, H06 | 9N2.1, 9N1.5 | quatro operações com números reais (problemas, cálculo) |
 
   **40 questões por ano, 160 no total**: 1º, 2º e 9º ano com 2 células × 20, 5º ano com 4 células × 10, para que os quatro anos pesem igual. No 5º ano ficam as 10 primeiras de cada célula (índices 00–09 da rotação), sem escolha; as demais estão em `dados/geracoes/excedente_5ano.jsonl` e não entram na análise (10 delas servem de calibração dos professores). 3º e 4º anos ficam fora do escopo; EF01MA02 (contagem) fica fora por não ser operação.
-- **Códigos.** Os H** são as habilidades da Matriz Saeb–BNCC numeradas em sequência dentro de cada ano. O campo `codigo_matriz_saeb` está em `config/celulas.json` e em cada registro de `questoes.jsonl`; a tabela com a verificação é `config/equivalencia_habilidades.csv`. A correspondência foi **informada na revisão do protocolo** (Jaccard entre descrições) e deve ser conferida contra o texto oficial da matriz antes da publicação. O **Saeb não avalia o 1º ano**: esse bloco é alinhado só à BNCC e, no texto do artigo, deve ser descrito como "questões alinhadas à BNCC e, nas etapas de 2º, 5º e 9º anos, às habilidades da Matriz de Referência de Matemática do Saeb", nunca como "itens do Saeb".
+- **Códigos.** Os H** são as habilidades da Matriz Saeb–BNCC numeradas em sequência dentro de cada ano. O campo `codigo_matriz_saeb` está em `config/celulas.json` e em cada registro de `questoes.jsonl`; a tabela com a verificação é `config/equivalencia_habilidades.csv`. Os oito códigos foram **conferidos contra a Matriz de Referência de Matemática do Saeb (Inep, 2022)**: código e texto coincidem. O **Saeb não avalia o 1º ano**: esse bloco é alinhado só à BNCC e, no texto do artigo, deve ser descrito como "questões alinhadas à BNCC e, nas etapas de 2º, 5º e 9º anos, às habilidades da Matriz de Referência de Matemática do Saeb", nunca como "itens do Saeb".
 - Uma chamada = uma questão. Dificuldade rotaciona Fácil → Moderado → Difícil (7/7/6 por célula). Subtema, tipo de
   raciocínio e contexto vêm do sorteio do app, semeado por célula e índice.
 - Inferência: `temperature` 0,7, `top_p` 0,8, `max_tokens` 512, gramática `modelo/questao.gbnf`, seed
@@ -105,15 +105,17 @@ pós-processamento determinístico, erro de conta não é. As notas coletadas de
 - DeepEval `GEval`, um metric por critério, entrada = ano + habilidade + descrição; saída avaliada = enunciado,
   alternativas, resolução e gabarito (o que o professor vê).
 - Escala nativa 0–1 → ×10 → faixas do artigo-base: [0,1]→1, (1,3]→2, (3,5]→3, (5,7]→4, (7,10]→5. Binário = nota ≥ 4.
-- Os critérios viram **passos de avaliação fixos** (`passos_geval` em `config/criterios.json`, `evaluation_steps` do DeepEval) com tetos explícitos (erro matemático, gabarito errado ou resposta não única → nota ≤ 2).
+- Os critérios viram **passos de avaliação fixos** (`passos_geval` em `config/criterios.json`, `evaluation_steps` do DeepEval) com tetos explícitos de nota nos critérios binários (erro matemático, gabarito errado ou resposta não única → nota ≤ 2); `intencao_uso` não tem tetos nos passos.
   Motivo: na primeira versão (critério em texto livre), o gpt-oss:20b apontou o gabarito errado de uma questão-sonda
   mas ainda deu nota 4. Os passos foram ajustados só com **questões-sonda sintéticas** (`00_testar_juiz.py`), nunca
   com as questões geradas, e ficam congelados antes de `make geval`. As quatro sondas são: boa (alta em resolução e
   gabarito), gabarito errado (baixa em `gabarito_coerente`) e conta errada (baixa em `resolucao_correta`).
 - **Teto de `intencao_uso` aplicado em código.** Se qualquer critério do núcleo for reprovado, `intencao_uso` fica em
-  no máximo 2 (`comum.intencao_com_teto`); a nota bruta do juiz é guardada. *Limitação:* os passos de `intencao_uso`
-  ainda trazem tetos internos, e com eles cerca de três quartos das notas saem exatamente 5; remover esses tetos para o
-  juiz usar a escala inteira exige recalcular `intencao_uso` e fica registrado como melhoria futura.
+  no máximo 2 (`comum.intencao_com_teto`); a nota bruta do juiz é guardada. Os passos de `intencao_uso` **não trazem tetos
+  duros**: erro, gabarito incoerente e resposta não única "pesam muito" e a escala de 0 a 10 é descrita por faixas.
+  Resultado: mesmo sem tetos, as notas continuaram em 1, 2 e 5 (10, 32, 1, 1 e 116 nos 160 itens). A escala estreita é
+  comportamento do juiz (`gpt-oss:20b`, esforço `low`), não efeito dos tetos; declarar no artigo e usar a binarização
+  (nota ≥ 4) como análise principal, com Spearman apenas descritivo.
 - `reasoning_effort` do juiz = `low` (~22 s por chamada no hardware de referência, ~16 GB de RAM). Declarar no artigo como desvio do juiz
   padrão do artigo-base.
 - Temperatura do juiz 0. **Juiz ≠ gerador.** Prefira juiz de família diferente de Qwen e dos modelos que
@@ -123,7 +125,7 @@ pós-processamento determinístico, erro de conta não é. As notas coletadas de
   substituídos por 6) foi feita sobre a versão de 5 alternativas. Como `dados_suficientes` e `aderencia_ano_habilidade`
   não dependem das alternativas, as notas dessa rodada são **reaproveitadas** na versão avaliada (`comum.notas_do_juiz`).
   Os demais critérios (`resolucao_correta`, `gabarito_coerente`, `resposta_unica`, `intencao_uso`) foram recalculados
-  sobre a versão de 4 alternativas (640 chamadas), cada linha marcada com `"versao": "saeb4"`; as notas antigas desses
+  sobre a versão de 4 alternativas (640 chamadas), cada linha marcada com `"versao": "saeb4"`; depois, `gabarito_coerente`, `resposta_unica` e `intencao_uso` foram recalculados mais uma vez (480 chamadas) porque seus passos mudaram ("A a E" virou "A a D"; tetos internos de `intencao_uso` removidos), e só a última rodada está em `geval.jsonl`; as notas antigas desses
   critérios e `correcao_matematica` ficam no arquivo como legado e **não entram** na análise.
 - **Janela de contexto do juiz.** A primeira rodada começou com o contexto padrão do Ollama (4096 tokens). Em um item (5º ano, H06, `5-H06-03`) o juiz raciocinou além desse limite, a resposta veio truncada e vazia e a execução abortou com 370 de 600 pares gravados. O contexto foi elevado para 8192 tokens (`OLLAMA_CONTEXT_LENGTH`) e a rodada foi retomada. As notas reaproveitadas, portanto, vieram de contextos de 4096 (370 pares) e 8192; as recalculadas usam 8192. Declarar no artigo.
 - **Falhas do juiz.** Um par (questão, critério) em que o juiz não devolve JSON válido é registrado como `FALHA` no log e fica sem linha em `geval.jsonl`, para ser refeito ao reexecutar `make geval`.

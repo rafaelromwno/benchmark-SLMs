@@ -119,5 +119,5 @@ Depois rode `make geval` normalmente para completar os outros três.
   não há ponderação por log-probabilidade (desvio do G-Eval original).
 - Histórico: a primeira rodada (800 pares, versão de 5 alternativas) foi retomada uma vez (370 pares com contexto de
   4096, o resto com 8192). Na versão de 4 alternativas só foram recalculados os critérios que dependem das
-  alternativas, com 8192; os demais foram reaproveitados. Ver `PROTOCOLO.md`, §5. Depois do G-Eval, rode `make congelar`
+  alternativas, com 8192; os demais foram reaproveitados. Em seguida, `gabarito_coerente`, `resposta_unica` e `intencao_uso` foram refeitos com os passos finais (A–D; sem tetos em `intencao_uso`); só essa rodada está no arquivo. Ver `PROTOCOLO.md`, §5. Depois do G-Eval, rode `make congelar`
   para selar o resultado antes de qualquer professor abrir uma folha.
