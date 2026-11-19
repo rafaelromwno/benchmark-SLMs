@@ -7,6 +7,21 @@
 | 5º | 60.0% (24/40) | [44.6, 73.7] | 100.0% |
 | 9º | 45.0% (18/40) | [30.7, 60.2] | 100.0% |
 
+## Aprovação por célula (ano e habilidade)
+
+| Ano | Habilidade | Código Matriz Saeb | G-Eval aprova intenção de uso (≥4) |
+|---|---|---|---|
+| 1º | EF01MA06 | sem código (Saeb não avalia o 1º ano) | 90.0% (18/20) |
+| 1º | EF01MA08 | sem código (Saeb não avalia o 1º ano) | 85.0% (17/20) |
+| 5º | H03 | 5N1.5 | 60.0% (6/10) |
+| 5º | H04 | 5N1.6 | 70.0% (7/10) |
+| 5º | H05 | 5N2.1 | 60.0% (6/10) |
+| 5º | H06 | 5N2.2 | 50.0% (5/10) |
+| 9º | H02 | 9N2.1 | 25.0% (5/20) |
+| 9º | H06 | 9N1.5 | 65.0% (13/20) |
+| 2º | H06 | 2N1.7 | 80.0% (16/20) |
+| 2º | H08 | 2N2.1 | 90.0% (18/20) |
+
 ## Distribuição das notas do juiz
 
 | Critério | Contagem por nota | % em 1, 2 ou 5 |

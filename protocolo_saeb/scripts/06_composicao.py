@@ -15,14 +15,14 @@ def main():
         k = sum(r["ano"] == ano for r in rs)
         L.append(f"| {ano} | {k} | {100 * k / n:.1f}% |")
     L += ["", "## Por ano e habilidade", "",
-          "| Ano | Habilidade | Operação | Questões | % do ano | % do total | Fácil/Mod./Difícil | Gabarito A/B/C/D/E | Alt. E \"Nenhuma\" | 2+ tentativas |",
-          "|---|---|---|---|---|---|---|---|---|---|"]
+          "| Ano | Habilidade | Código Matriz Saeb | Operação | Questões | % do ano | % do total | Fácil/Mod./Difícil | Gabarito A/B/C/D/E | Alt. E \"Nenhuma\" | 2+ tentativas |",
+          "|---|---|---|---|---|---|---|---|---|---|---|"]
     for c in CELULAS:
         g = [r for r in rs if r["ano"] == c["ano"] and r["habilidade"] == c["habilidade"]]
         ano_n = sum(r["ano"] == c["ano"] for r in rs)
         d = Counter(r["dificuldade_pedida"] for r in g)
         a = Counter(r["questao"]["resposta_correta"] for r in g)
-        L.append(f"| {c['ano']} | {c['habilidade']} | {c['operacao']} | {len(g)} | {100 * len(g) / ano_n:.1f}% | "
+        L.append(f"| {c['ano']} | {c['habilidade']} | {c.get('codigo_matriz_saeb') or '-'} | {c['operacao']} | {len(g)} | {100 * len(g) / ano_n:.1f}% | "
                  f"{100 * len(g) / n:.1f}% | {d['Fácil']}/{d['Moderado']}/{d['Difícil']} | "
                  f"{'/'.join(str(a[l]) for l in LETRAS)} | {sum(est[r['item_id']]['alternativa_e_nenhuma'] for r in g)} | "
                  f"{sum(r['tentativas'] > 1 for r in g)} |")

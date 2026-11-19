@@ -15,7 +15,7 @@ import random
 from collections import Counter, defaultdict
 from itertools import combinations
 
-from comum import (CONFIG, CRITERIOS, DADOS, LEGADO, LIMIAR, NUCLEO, RAIZ, intencao_com_teto, ler_jsonl,
+from comum import (CELULAS, CONFIG, CRITERIOS, DADOS, LEGADO, LIMIAR, NUCLEO, RAIZ, intencao_com_teto, ler_jsonl,
                    notas_do_juiz, nucleo_aprovado)
 
 BINARIOS = [c["id"] for c in CRITERIOS if c["tipo"] == "binario"]
@@ -437,6 +437,13 @@ def main():
     for ano in anos:
         a, g = res["geval_aprovacao_por_ano"][ano], res["geracao"][ano]
         linhas.append(f"| {ano} | {a['pct']}% ({a['s']}/{a['n']}) | {a['ic95_pct']} | {g['pct']}% |")
+    linhas += ["", "## Aprovação por célula (ano e habilidade)", "",
+               "| Ano | Habilidade | Código Matriz Saeb | G-Eval aprova intenção de uso (≥4) |", "|---|---|---|---|"]
+    for c in CELULAS:
+        t = res["geval_aprovacao_por_celula"].get(f"{c['ano']}|{c['habilidade']}")
+        if t:
+            linhas.append(f"| {c['ano']} | {c['habilidade']} | {c.get('codigo_matriz_saeb') or 'sem código (Saeb não avalia o 1º ano)'} "
+                          f"| {t['pct']}% ({t['s']}/{t['n']}) |")
     linhas += ["", "## Distribuição das notas do juiz", "", "| Critério | Contagem por nota | % em 1, 2 ou 5 |", "|---|---|---|"]
     for c, d in res["distribuicao_notas_juiz"].items():
         linhas.append(f"| {c} | {d['contagem']} | {d['pct_extremos_1_2_5']}% |")
